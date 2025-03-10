@@ -5,13 +5,16 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Resources;
 
 use Filament\Forms\Components\TextInput;
-use Modules\User\Filament\Resources\FeatureResource\Pages;
+use Filament\Forms\Components\Toggle;
+use Modules\User\Filament\Resources\FeatureResource\Pages\CreateFeature;
+use Modules\User\Filament\Resources\FeatureResource\Pages\EditFeature;
+use Modules\User\Filament\Resources\FeatureResource\Pages\ListFeatures;
 use Modules\User\Models\Feature;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
 
 /**
  * @property Feature $record
- *                           -------
  */
 class FeatureResource extends XotBaseResource
 {
@@ -22,36 +25,26 @@ class FeatureResource extends XotBaseResource
         return [
             TextInput::make('name')
                 ->required()
-                ->maxLength(255)
-                ->placeholder(static::trans('fields.name.placeholder'))
-                ->helperText(static::trans('fields.name.helper_text')),
-
-            TextInput::make('scope')
+                ->maxLength(255),
+            TextInput::make('type')
                 ->required()
-                ->maxLength(255)
-                ->placeholder(static::trans('fields.scope.placeholder'))
-                ->helperText(static::trans('fields.scope.helper_text')),
-
-            TextInput::make('value')
-                ->required()
-                ->maxLength(255)
-                ->placeholder(static::trans('fields.value.placeholder'))
-                ->helperText(static::trans('fields.value.helper_text')),
+                ->maxLength(255),
+            Toggle::make('active')
+                ->required(),
         ];
     }
 
     public static function getRelations(): array
     {
-        return [
-        ];
+        return [];
     }
 
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListFeatures::route('/'),
-            'create' => Pages\CreateFeature::route('/create'),
-            'edit' => Pages\EditFeature::route('/{record}/edit'),
+            'index' => ListFeatures::route('/'),
+            'create' => CreateFeature::route('/create'),
+            'edit' => EditFeature::route('/{record}/edit'),
         ];
     }
 }

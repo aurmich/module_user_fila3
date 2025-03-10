@@ -9,7 +9,15 @@ use Filament\Forms\Form;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Modules\User\Filament\Resources\DeviceResource;
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
+
+
+
+
+
+
+
 
 class DevicesRelationManager extends XotBaseRelationManager
 {
@@ -23,17 +31,18 @@ class DevicesRelationManager extends XotBaseRelationManager
         ];
     }
 
-    public function form(Form $form): Form
-    {
-        return $form
-            ->schema(
-                [
+    public function getFormSchema(): array
+{
+    
+        
+    return [
+              
                     TextInput::make('device')
                         ->required()
                         ->maxLength(255),
-                ]
-            );
-    }
+                
+      ];
+}
 
     public function table(Table $table): Table
     {

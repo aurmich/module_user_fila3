@@ -16,6 +16,7 @@ use Filament\Notifications\Notification;
 use Filament\Pages\Concerns\InteractsWithFormActions;
 use Filament\Widgets\Widget;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Validation\Rules\Password as PasswordRule;
@@ -151,7 +152,7 @@ class PasswordExpiredWidget extends Widget implements HasForms
         $passwordExpiryDateTime = now()->addDays($pwd_data->expires_in);
 
         // set password expiry date and time
-        $user = tap($user)->update([
+        $user->update([
             'password_expires_at' => $passwordExpiryDateTime,
             'is_otp' => false,
             'password' => Hash::make($password),
@@ -170,12 +171,9 @@ class PasswordExpiredWidget extends Widget implements HasForms
     protected function getCurrentPasswordFormComponent(): Component
     {
         return TextInput::make('current_password')
-
             ->password()
-            // ->revealable(filament()->arePasswordsRevealable())
             ->revealable()
             ->required()
-            // ->rule(PasswordRule::default())
             ->rule(new CheckOtpExpiredRule())
             ->validationAttribute(static::trans('fields.current_password.validation_attribute'));
     }

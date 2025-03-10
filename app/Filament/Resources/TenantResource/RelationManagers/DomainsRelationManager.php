@@ -11,25 +11,34 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
+
+
+
+
+
+
+
 
 class DomainsRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'domains';
 
-    public function form(Form $form): Form
-    {
-        return $form
-            ->schema(
-                [
+    public function getFormSchema(): array
+{
+    
+        
+    return [
+              
                     Forms\Components\TextInput::make('domain')
                         ->required()
                         ->prefix('http(s)://')
                         ->suffix('.'.request()->getHost())
                         ->maxLength(255),
-                ]
-            );
-    }
+                
+      ];
+}
 
     public function table(Table $table): Table
     {

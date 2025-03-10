@@ -15,6 +15,7 @@ use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
 
 class ListUsers extends XotBaseListRecords
 {
@@ -58,7 +59,6 @@ class ListUsers extends XotBaseListRecords
     {
         return [
             ChangePasswordAction::make()
-                ->label('')
                 ->tooltip('Cambio Password')
                 ->iconButton(),
             ...parent::getTableActions(),

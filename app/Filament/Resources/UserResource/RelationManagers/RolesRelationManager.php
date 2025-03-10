@@ -14,7 +14,15 @@ use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Modules\Xot\Datas\XotData;
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
+
+
+
+
+
+
+
 
 class RolesRelationManager extends XotBaseRelationManager
 {
@@ -29,11 +37,12 @@ class RolesRelationManager extends XotBaseRelationManager
     //
     // }
 
-    public function form(Form $form): Form
-    {
-        return $form
-            ->schema(
-                [
+    public function getFormSchema(): array
+{
+    
+        
+    return [
+              
                     TextInput::make('name')
                         ->required()
                         ->maxLength(255),
@@ -41,9 +50,9 @@ class RolesRelationManager extends XotBaseRelationManager
                 Forms\Components\Select::make('team_id')
                     ->relationship('teams', 'name'),
                 */
-                ]
-            );
-    }
+                
+      ];
+}
 
     public function table(Table $table): Table
     {

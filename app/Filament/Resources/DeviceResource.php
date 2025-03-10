@@ -13,6 +13,7 @@ use Modules\User\Filament\Resources\DeviceResource\Pages\ListDevices;
 use Modules\User\Filament\Resources\DeviceResource\RelationManagers\UsersRelationManager;
 use Modules\User\Models\Device;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
 
 class DeviceResource extends XotBaseResource
 {
@@ -65,19 +66,5 @@ class DeviceResource extends XotBaseResource
         ];
     }
 
-    public static function getRelations(): array
-    {
-        return [
-            UsersRelationManager::class,
-        ];
-    }
-
-    public static function getPages(): array
-    {
-        return [
-            'index' => ListDevices::route('/'),
-            'create' => CreateDevice::route('/create'),
-            'edit' => EditDevice::route('/{record}/edit'),
-        ];
-    }
+    
 }

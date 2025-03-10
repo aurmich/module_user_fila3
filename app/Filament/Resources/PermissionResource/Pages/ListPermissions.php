@@ -9,11 +9,14 @@ use Filament\Forms\Components\Select;
 use Filament\Tables;
 use Filament\Tables\Actions\BulkAction;
 use Filament\Tables\Actions\DeleteBulkAction;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Collection;
 use Modules\User\Filament\Resources\PermissionResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Webmozart\Assert\Assert;
+
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 
 class ListPermissions extends XotBaseListRecords
 {
@@ -25,20 +28,14 @@ class ListPermissions extends XotBaseListRecords
     public function getListTableColumns(): array
     {
         return [
-            'id' => TextColumn::make('id')
-                ->searchable()
-                ->sortable(),
             'name' => TextColumn::make('name')
                 ->searchable()
-                ->sortable()
-                ->wrap(),
+                ->sortable(),
             'guard_name' => TextColumn::make('guard_name')
                 ->searchable()
                 ->sortable(),
-            'roles_count' => TextColumn::make('roles_count')
-                ->counts('roles')
-                ->numeric()
-                ->sortable(),
+            'active' => IconColumn::make('active')
+                ->boolean(),
             'created_at' => TextColumn::make('created_at')
                 ->dateTime()
                 ->sortable(),

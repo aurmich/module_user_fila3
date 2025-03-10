@@ -15,6 +15,7 @@ use Filament\Notifications\Notification;
 use Filament\Pages\Concerns\InteractsWithFormActions;
 use Filament\Pages\Page;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Validation\Rules\Password as PasswordRule;
@@ -47,17 +48,12 @@ class PasswordExpired extends Page implements HasForms
 
     protected static bool $shouldRegisterNavigation = false;
 
-    public function form(Form $form): Form
+    public function getFormSchema(): array
     {
-        return $form
-            ->schema([
-                $this->getCurrentPasswordFormComponent(),
-                /*
-                $this->getPasswordFormComponent(),
-                $this->getPasswordConfirmationFormComponent(),
-                */
-                ...PasswordData::make()->getPasswordFormComponents('password'),
-            ]);
+        return [
+            $this->getCurrentPasswordFormComponent(),
+            ...PasswordData::make()->getPasswordFormComponents('password'),
+        ];
     }
 
     public function getResetPasswordFormAction(): Action
@@ -123,7 +119,7 @@ class PasswordExpired extends Page implements HasForms
         $passwordExpiryDateTime = now()->addDays($pwd->expires_in);
 
         // set password expiry date and time
-        $user = tap($user)->update([
+        $user->update([
             'password_expires_at' => $passwordExpiryDateTime,
             'is_otp' => false,
             'password' => Hash::make($password),
@@ -143,36 +139,11 @@ class PasswordExpired extends Page implements HasForms
     {
         return TextInput::make('current_password')
             ->password()
-            // ->revealable(filament()->arePasswordsRevealable())
             ->revealable()
             ->required()
-            // ->rule(PasswordRule::default())
             ->validationAttribute(static::trans('fields.current_password.validation_attribute'));
     }
 
-    /*
-    protected function getPasswordFormComponent(): Component
-    {
-        return TextInput::make('password')
-            ->password()
-            // ->revealable(filament()->arePasswordsRevealable())
-            ->revealable()
-            ->required()
-            ->rule(PasswordRule::default())
-            ->same('passwordConfirmation')
-            ->validationAttribute(static::trans('fields.password.validation_attribute'));
-    }
-
-    protected function getPasswordConfirmationFormComponent(): Component
-    {
-        return TextInput::make('passwordConfirmation')
-            ->password()
-            // ->revealable(filament()->arePasswordsRevealable())
-            ->revealable()
-            ->required()
-            ->dehydrated(false);
-    }
-    */
     /**
      * @return array<Action|ActionGroup>
      */

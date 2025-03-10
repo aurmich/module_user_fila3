@@ -8,7 +8,8 @@ use Filament\Forms\Form;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Modules\User\Filament\Resources\UserResource;
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+use Filament\Tables;
 
 class UsersRelationManager extends XotBaseRelationManager
 {
@@ -18,52 +19,40 @@ class UsersRelationManager extends XotBaseRelationManager
 
     protected static ?string $recordTitleAttribute = 'name';
 
-    public function form(Form $form): Form
+    /**
+     * @return array<string, \Filament\Tables\Columns\Column>
+     */
+    public function getTableColumns(): array
     {
-        return UserResource::form($form);
-        /*
-        return $form
-            ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->maxLength(255),
-            ]);
-        */
+        return [
+            'name' => TextColumn::make('name'),
+            'email' => TextColumn::make('email'),
+            'role' => TextColumn::make('role'),
+        ];
     }
-
-    public function table(Table $table): Table
+    
+    public function getTableHeaderActions(): array
     {
-        $table = UserResource::table($table);
-        $columns = $table->getColumns();
-        $columns = collect($columns)->except(['teams.name', 'role.name', 'roles.name'])->all();
-        $columns['role'] = TextColumn::make('role');
-        $table->columns($columns);
-        $headerActions = $table->getHeaderActions();
-        // $headerActions['attach']=Tables\Actions\AttachAction::make();
-        $table->headerActions($headerActions);
-
-        return $table;
-        /*
-        return $table
-            ->columns([
-                Tables\Columns\TextColumn::make('name'),
-            ])
-            ->filters([
-            ])
-            ->headerActions([
-                Tables\Actions\CreateAction::make(),
-                Tables\Actions\AttachAction::make(),
-            ])
-            ->actions([
-                Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DetachAction::make(),
-                Tables\Actions\DeleteAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\DetachBulkAction::make(),
-                Tables\Actions\DeleteBulkAction::make(),
-            ]);
-        */
+        return [
+            Tables\Actions\AttachAction::make(),
+        ];
+    }
+    
+    public function getTableActions(): array
+    {
+        return [
+            Tables\Actions\ViewAction::make(),
+            Tables\Actions\EditAction::make(),
+            Tables\Actions\DetachAction::make(),
+            Tables\Actions\DeleteAction::make(),
+        ];
+    }
+    
+    public function getTableBulkActions(): array
+    {
+        return [
+            Tables\Actions\DetachBulkAction::make(),
+            Tables\Actions\DeleteBulkAction::make(),
+        ];
     }
 }

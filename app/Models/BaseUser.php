@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
@@ -32,13 +33,16 @@ use Spatie\Permission\Traits\HasRoles;
 /**
  * Modules\User\Models\User.
  *
+ * @template TModel of \Illuminate\Database\Eloquent\Model
+ * @template TRelatedModel of \Illuminate\Database\Eloquent\Model
+ *
  * @property Collection<int, OauthClient> $clients
  * @property int|null $clients_count
  * @property Team|null $currentTeam
  * @property Collection<int, Device> $devices
  * @property int|null $devices_count
  * @property string|null $full_name
- * @property DatabaseNotificationCollection<int, Notification> $notifications
+ * @property DatabaseNotificationCollection<int, DatabaseNotification> $notifications
  * @property int|null $notifications_count
  * @property Collection<int, Team> $ownedTeams
  * @property int|null $owned_teams_count
@@ -49,35 +53,22 @@ use Spatie\Permission\Traits\HasRoles;
  * @property int|null $roles_count
  * @property Collection<int, Team> $teams
  * @property int|null $teams_count
+ * @property Collection<int, Tenant> $tenants
+ * @property int|null $tenants_count
  * @property Collection<int, OauthAccessToken> $tokens
  * @property int|null $tokens_count
  *
  * @method static \Modules\User\Database\Factories\UserFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|User permission($permissions)
+ * @method static \Illuminate\Database\Eloquent\Builder|User permission($permissions, $without = false)
  * @method static \Illuminate\Database\Eloquent\Builder|User query()
- * @method static \Illuminate\Database\Eloquent\Builder|User role($roles, $guard = null)
- *
- * @property string $id
- * @property string $name
- * @property string $first_name
- * @property string $last_name
- * @property string $email
- * @property \Illuminate\Support\Carbon|null $email_verified_at
- * @property string $password
- * @property string|null $remember_token
- * @property int|null $current_team_id
- * @property string|null $profile_photo_path
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property string|null $deleted_at
- * @property string|null $lang
- * @property bool $is_active
- *
+ * @method static \Illuminate\Database\Eloquent\Builder|User role($roles, $guard = null, $without = false)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereCurrentTeamId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereDeletedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereEmailVerifiedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereFirstName($value)
@@ -90,37 +81,20 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereProfilePhotoPath($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereRememberToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
- *
- * @mixin Eloquent
- *
- * @property Collection<int, Tenant> $tenants
- * @property int|null $tenants_count
- *
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User withoutPermission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|User withoutRole($roles, $guard = null)
  *
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property string|null $deleted_by
- *
- * @method static \Illuminate\Database\Eloquent\Builder|User whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereDeletedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedBy($value)
- *
  * @property string $surname
- *
- * @method static \Illuminate\Database\Eloquent\Builder|User whereSurname($value)
- *
  * @property string|null $facebook_id
  *
  * @method static \Illuminate\Database\Eloquent\Builder|User whereFacebookId($value)
- * @method bool canAccessSocialite()
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereIsOtp($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User wherePasswordExpiresAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereSurname($value)
  *
- * @property TenantUser $pivot
- * @property Membership $membership
- * @property Collection<int, AuthenticationLog> $authentications
- * @property int|null $authentications_count
- * @property AuthenticationLog|null $latestAuthentication
+ * @property Collection<int, SocialiteUser> $socialiteUsers
+ * @property int|null $socialite_users_count
  *
  * @mixin \Eloquent
  */
@@ -258,7 +232,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
 
     public function treeLabel(): string
     {
-        return $this->name ?? $this->email;
+        return strval($this->name ?? $this->email);
     }
 
     public function treeSons(): Collection
@@ -304,9 +278,9 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     }
 
     /**
-     * Get all of the user's notifications.
+     * Get the entity's notifications.
      *
-     * @return MorphMany<Notification, static>
+     * @return MorphMany<Notification, static|$this>
      */
     public function notifications(): MorphMany
     {
@@ -336,7 +310,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         if ($value !== null || $this->getKey() === null) {
             return $value;
         }
-        $name = Str::of($this->email)->before('@')->toString();
+        $name = Str::of((string)$this->email)->before('@')->toString();
         $i = 1;
         $value = $name.'-'.$i;
         while (self::firstWhere(['name' => $value]) !== null) {

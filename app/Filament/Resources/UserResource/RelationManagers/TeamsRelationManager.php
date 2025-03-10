@@ -13,21 +13,26 @@ use Filament\Tables\Enums\ActionsPosition;
 use Filament\Tables\Enums\FiltersLayout;
 use Filament\Tables\Table;
 use Modules\User\Filament\Resources\TeamResource;
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 use Modules\Xot\Filament\Traits\HasXotTable;
+
+
+
+
+
+
+
+
 
 class TeamsRelationManager extends XotBaseRelationManager
 {
-    use HasXotTable;
+    
 
     protected static string $relationship = 'teams';
 
     protected static ?string $recordTitleAttribute = 'name';
 
-    public function form(Form $form): Form
-    {
-        return TeamResource::form($form);
-    }
+    
 
     public function getColumns(Table $table): array
     {
@@ -59,10 +64,10 @@ class TeamsRelationManager extends XotBaseRelationManager
     {
         $actions = [
             Actions\DetachAction::make()
-                ->label('')
+                
                 ->tooltip(__('filament-actions::detach.single.label')),
             Actions\Action::make('make_current')
-                ->label('')
+                
                 ->tooltip('set current')
                 ->icon('heroicon-o-user-plus')
                 ->action(function ($record, $livewire) {

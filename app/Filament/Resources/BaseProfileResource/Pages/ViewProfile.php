@@ -4,14 +4,16 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources\BaseProfileResource\Pages;
 
-use Filament\Actions;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\EditAction;
 use Filament\Infolists\Components;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Infolist;
-use Filament\Resources\Pages\ViewRecord;
 use Modules\User\Filament\Resources\BaseProfileResource;
+use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
-class ViewProfile extends ViewRecord
+class ViewProfile extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
 {
     protected static string $resource = BaseProfileResource::class;
 
@@ -25,10 +27,13 @@ class ViewProfile extends ViewRecord
     }
     */
 
-    public function infolist(Infolist $infolist): Infolist
+    public function getInfolistSchema(): array 
     {
-        return $infolist
-            ->schema([
+       
+                
+        
+          return [
+              
                 Components\Section::make()
                     ->schema([
                         Components\Split::make([
@@ -66,6 +71,7 @@ class ViewProfile extends ViewRecord
                             ->hiddenLabel(),
                     ])
                     ->collapsible(),
-            ]);
-    }
+            
+              ];
+        }
 }

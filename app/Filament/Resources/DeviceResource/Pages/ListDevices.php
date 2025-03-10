@@ -24,53 +24,39 @@ class ListDevices extends XotBaseListRecords
     public function getListTableColumns(): array
     {
         return [
-            'id' => TextColumn::make('id'),
-            'name' => TextColumn::make('name'),
-            'type' => TextColumn::make('type'),
-            'active' => IconColumn::make('active')
+            'uuid' => TextColumn::make('uuid')
+                ->searchable()
+                ->sortable(),
+            'mobile_id' => TextColumn::make('mobile_id')
+                ->searchable()
+                ->sortable(),
+            'device' => TextColumn::make('device')
+                ->searchable()
+                ->sortable(),
+            'platform' => TextColumn::make('platform')
+                ->searchable()
+                ->sortable(),
+            'browser' => TextColumn::make('browser')
+                ->searchable()
+                ->sortable(),
+            'version' => TextColumn::make('version')
+                ->searchable()
+                ->sortable(),
+            'is_robot' => IconColumn::make('is_robot')
                 ->boolean(),
+            'is_desktop' => IconColumn::make('is_desktop')
+                ->boolean(),
+            'is_mobile' => IconColumn::make('is_mobile')
+                ->boolean(),
+            'is_tablet' => IconColumn::make('is_tablet')
+                ->boolean(),
+            'is_phone' => IconColumn::make('is_phone')
+                ->boolean(),
+            'created_at' => TextColumn::make('created_at')
+                ->dateTime()
+                ->sortable(),
         ];
     }
 
-    /**
-     * @return array<\Filament\Tables\Filters\BaseFilter>
-     */
-    public function getTableFilters(): array
-    {
-        return [
-        ];
-    }
-
-    /**
-     * @return array<\Filament\Tables\Actions\Action|\Filament\Tables\Actions\ActionGroup>
-     */
-    public function getTableActions(): array
-    {
-        return [
-            ViewAction::make()
-                ->label(''),
-            EditAction::make()
-                ->label(''),
-            DeleteAction::make()
-                ->label('')
-                ->requiresConfirmation(),
-        ];
-    }
-
-    /**
-     * @return array<string, \Filament\Tables\Actions\BulkAction>
-     */
-    public function getTableBulkActions(): array
-    {
-        return [
-            'delete' => DeleteBulkAction::make(),
-        ];
-    }
-
-    protected function getHeaderActions(): array
-    {
-        return [
-            CreateAction::make(),
-        ];
-    }
+    
 }
