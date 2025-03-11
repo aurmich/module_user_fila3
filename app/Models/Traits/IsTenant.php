@@ -15,6 +15,11 @@ use Modules\Xot\Datas\XotData;
  */
 trait IsTenant
 {
+    /**
+     * Get all users associated with this tenant.
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Modules\Xot\Contracts\UserContract>
+     */
     public function users(): BelongsToMany
     {
         $xot = XotData::make();

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * ---.
+ * Classe per la gestione delle configurazioni delle password.
  */
 
 declare(strict_types=1);
@@ -18,7 +18,7 @@ use Modules\Tenant\Services\TenantService;
 use Spatie\LaravelData\Data;
 
 /**
- * Undocumented class.
+ * Classe per la gestione dei dati relativi alle password.
  */
 class PasswordData extends Data
 {
@@ -48,9 +48,15 @@ class PasswordData extends Data
 
     private string $field_name = 'new_password';
 
+    /**
+     * Crea un'istanza della classe PasswordData.
+     *
+     * @return self
+     */
     public static function make(): self
     {
         if (! self::$instance) {
+            /** @var array<string, mixed> $data */
             $data = TenantService::getConfig('password');
             self::$instance = self::from($data);
         }
@@ -58,6 +64,11 @@ class PasswordData extends Data
         return self::$instance;
     }
 
+    /**
+     * Restituisce la regola di validazione per la password.
+     *
+     * @return Password
+     */
     public function getPasswordRule(): Password
     {
         $pwd = Password::min($this->min);
@@ -84,6 +95,11 @@ class PasswordData extends Data
         return $pwd;
     }
 
+    /**
+     * Converte l'oggetto in un array.
+     *
+     * @return array<string, int|bool|string|null>
+     */
     public function toArray(): array
     {
         return [
@@ -101,6 +117,11 @@ class PasswordData extends Data
         ];
     }
 
+    /**
+     * Restituisce il testo di aiuto per la password.
+     *
+     * @return string
+     */
     public function getHelperText(): string
     {
         $msg = 'La password deve essere composta da minimo '.$this->min.' caratteri';
@@ -112,13 +133,25 @@ class PasswordData extends Data
         return $msg;
     }
 
+    /**
+     * Restituisce i messaggi di validazione.
+     *
+     * @return array<string, string>
+     */
     public function getValidationMessages(): array
     {
+        /** @var array<string, string> $messages */
         $messages = __('user::validation');
 
         return $messages;
     }
 
+    /**
+     * Restituisce il componente del form per la password.
+     *
+     * @param string $field_name Nome del campo
+     * @return Component
+     */
     public function getPasswordFormComponent(string $field_name = 'new_password'): Component
     {
         $this->field_name = $field_name;
@@ -140,6 +173,11 @@ class PasswordData extends Data
         return $field;
     }
 
+    /**
+     * Restituisce il componente del form per la conferma della password.
+     *
+     * @return Component
+     */
     public function getPasswordConfirmationFormComponent(): Component
     {
         return TextInput::make('passwordConfirmation')
@@ -155,6 +193,9 @@ class PasswordData extends Data
     }
 
     /**
+     * Restituisce i componenti del form per la password.
+     *
+     * @param string $field_name Nome del campo
      * @return array<Component>
      */
     public function getPasswordFormComponents(string $field_name = 'new_password'): array
