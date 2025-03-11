@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 Tracker gathers a lot of information from your requests to identify and store:
 - Sessions
@@ -21,11 +20,3 @@ Tracker gathers a lot of information from your requests to identify and store:
 https://github.com/antonioribeiro/tracker
 
 ---
-=======
-https://github.com/visualbuilder/email-templates
-
-https://github.com/codedor/filament-mail-templates/
-
-
-https://www.mailcoach.app/resources/blog/using-the-mailcoach-markdown-editor-in-filament
->>>>>>> 946fdba366 (Squashed 'laravel/Modules/Notify/' content from commit 6aac1e028)
