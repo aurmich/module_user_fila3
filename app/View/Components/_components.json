@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [
     {
         "name": "mail.message",
@@ -8,6 +7,3 @@
         "ns": "Modules\\User\\View\\Components\\Mail\\Message"
     }
 ]
-=======
-[]
->>>>>>> 3c26b81 (.)

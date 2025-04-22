@@ -296,11 +296,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
      *
      * @return MorphMany<Notification, static|$this>
      */
-<<<<<<< HEAD
     public function notifications()
-=======
-    public function notifications(): MorphMany
->>>>>>> 3c26b81 (.)
     {
         // @phpstan-ignore return.type
         return $this->morphMany(Notification::class, 'notifiable');
@@ -417,7 +413,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
      */
     /**
      * Get all role names associated with the user.
-     * 
+     *
      * @return array<int, string>
      */
     public function getRoleNames(): array
@@ -559,10 +555,14 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         return $this->belongsTo(Team::class, 'current_team_id');
     }
 
+    /*
+     * to HasTenants trait
+
     public function tenants(): BelongsToMany
     {
         return $this->belongsToMany(Tenant::class, 'tenant_user');
     }
+    */
 
     public function authentications(): MorphMany
     {
