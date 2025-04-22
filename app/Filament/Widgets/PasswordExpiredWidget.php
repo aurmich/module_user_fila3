@@ -168,6 +168,10 @@ class PasswordExpiredWidget extends Widget implements HasForms
         if (!$user instanceof \Modules\Xot\Contracts\UserContract) {
             throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia UserContract');
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3c26b81 (.)
         event(new NewPasswordSet($user));
 
         Notification::make()
