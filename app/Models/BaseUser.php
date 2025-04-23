@@ -297,10 +297,21 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
      * @return MorphMany<Notification, static|$this>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function notifications()
 =======
     public function notifications(): MorphMany
 >>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
+=======
+    public function notifications(): MorphMany
+=======
+<<<<<<< HEAD
+    public function notifications()
+=======
+    public function notifications(): MorphMany
+>>>>>>> 3c26b81 (.)
+>>>>>>> af1243b (.)
+>>>>>>> 5c568f2 (fix: auto resolve conflict)
     {
         // @phpstan-ignore return.type
         return $this->morphMany(Notification::class, 'notifiable');
