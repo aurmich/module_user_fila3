@@ -11,9 +11,13 @@
             */
         @endphp
 <<<<<<< HEAD
+<<<<<<< HEAD
         {{ $record }}
 =======
         {{ $record-> }}
 >>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
+=======
+        {{ $record }}
+>>>>>>> 890be7f (fix: auto resolve conflict)
     </x-filament::card>
 </x-filament::widget>

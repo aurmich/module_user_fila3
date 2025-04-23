@@ -17,10 +17,14 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Webmozart\Assert\Assert;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
 =======
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 >>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+>>>>>>> 890be7f (fix: auto resolve conflict)
 
 class ListPermissions extends XotBaseListRecords
 {
@@ -97,10 +101,14 @@ class ListPermissions extends XotBaseListRecords
                             // Verifichiamo che $record sia un'istanza di Model prima di procedere
                             Assert::isInstanceOf($record, \Illuminate\Database\Eloquent\Model::class, '['.__LINE__.']['.__CLASS__.']');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                             
 >>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
+=======
+
+>>>>>>> 890be7f (fix: auto resolve conflict)
                             // Poi verifichiamo che il modello abbia il metodo roles() prima di chiamarlo
                             if (method_exists($record, 'roles')) {
                                 $record->roles()->sync($data['role']);

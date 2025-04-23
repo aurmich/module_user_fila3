@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 890be7f (fix: auto resolve conflict)
 return array (
   'navigation' => 
   array (
@@ -117,6 +120,7 @@ return array (
     'label' => 'tenant.model',
   ),
 );
+<<<<<<< HEAD
 =======
 declare(strict_types=1);
 
@@ -177,3 +181,5 @@ return [
     ],
 ];
 >>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
+=======
+>>>>>>> 890be7f (fix: auto resolve conflict)

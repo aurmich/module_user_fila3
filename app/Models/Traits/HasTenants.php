@@ -36,10 +36,14 @@ trait HasTenants
     /**
      * Get all of the tenants the user belongs to.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
+=======
+     *
+>>>>>>> 890be7f (fix: auto resolve conflict)
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Illuminate\Database\Eloquent\Model>
      */
     public function tenants(): BelongsToMany
@@ -48,9 +52,12 @@ trait HasTenants
         /** @var class-string<Model> */
         $tenant_class = $xot->getTenantClass();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
+=======
+>>>>>>> 890be7f (fix: auto resolve conflict)
         // $this->setConnection('mysql');
         return $this->belongsToManyX($tenant_class, null, null, 'tenant_id');
         // ->as('membership')

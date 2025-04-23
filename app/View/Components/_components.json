@@ -1,10 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 []
 =======
 <<<<<<< HEAD
 >>>>>>> 5c568f2 (fix: auto resolve conflict)
+=======
+[]
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> dd498ab (.)
+>>>>>>> 890be7f (fix: auto resolve conflict)
 [
     {
         "name": "mail.message",
@@ -14,6 +22,7 @@
         "ns": "Modules\\User\\View\\Components\\Mail\\Message"
     }
 ]
+<<<<<<< HEAD
 =======
 []
 <<<<<<< HEAD
@@ -21,4 +30,9 @@
 =======
 >>>>>>> 3c26b81 (.)
 >>>>>>> af1243b (.)
+<<<<<<< HEAD
 >>>>>>> 5c568f2 (fix: auto resolve conflict)
+=======
+=======
+>>>>>>> dd498ab (.)
+>>>>>>> 890be7f (fix: auto resolve conflict)

@@ -25,10 +25,14 @@ use Filament\Tables\Table;
 use Modules\Xot\Services\XotService;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
 =======
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 >>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+>>>>>>> 890be7f (fix: auto resolve conflict)
 
 class TenantResource extends XotBaseResource
 {
@@ -42,15 +46,21 @@ class TenantResource extends XotBaseResource
     public static function getModel(): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 890be7f (fix: auto resolve conflict)
 
         $xot = XotData::make();
         $res = $xot->getTenantClass();
 
         return $res;
+<<<<<<< HEAD
 =======
         $xot = app(XotService::class);
         return $xot->getTenantClass();
 >>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
+=======
+>>>>>>> 890be7f (fix: auto resolve conflict)
     }
 
     public static function getFormSchema(): array

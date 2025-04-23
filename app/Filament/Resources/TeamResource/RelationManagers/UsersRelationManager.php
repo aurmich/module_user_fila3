@@ -9,10 +9,14 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Modules\User\Filament\Resources\UserResource;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
 =======
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 >>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+>>>>>>> 890be7f (fix: auto resolve conflict)
 use Filament\Tables;
 
 class UsersRelationManager extends XotBaseRelationManager
@@ -35,10 +39,14 @@ class UsersRelationManager extends XotBaseRelationManager
         ];
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
+=======
+
+>>>>>>> 890be7f (fix: auto resolve conflict)
     /**
      * @return array<string, \Filament\Tables\Actions\Action>
      */
@@ -49,10 +57,14 @@ class UsersRelationManager extends XotBaseRelationManager
         ];
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
+=======
+
+>>>>>>> 890be7f (fix: auto resolve conflict)
     /**
      * @return array<string, \Filament\Tables\Actions\Action|\Filament\Tables\Actions\ActionGroup>
      */
@@ -66,10 +78,14 @@ class UsersRelationManager extends XotBaseRelationManager
         ];
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
+=======
+
+>>>>>>> 890be7f (fix: auto resolve conflict)
     /**
      * @return array<string, \Filament\Tables\Actions\BulkAction>
      */

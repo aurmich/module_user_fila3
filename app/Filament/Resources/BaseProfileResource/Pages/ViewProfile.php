@@ -12,10 +12,14 @@ use Filament\Infolists\Infolist;
 use Modules\User\Filament\Resources\BaseProfileResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
 =======
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 >>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+>>>>>>> 890be7f (fix: auto resolve conflict)
 
 class ViewProfile extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
 {
@@ -35,10 +39,14 @@ class ViewProfile extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecor
      * @return array<string, \Filament\Infolists\Components\Component>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getInfolistSchema(): array
 =======
     public function getInfolistSchema(): array 
 >>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
+=======
+    public function getInfolistSchema(): array
+>>>>>>> 890be7f (fix: auto resolve conflict)
     {
         return [
             'profile_info' => Components\Section::make()
