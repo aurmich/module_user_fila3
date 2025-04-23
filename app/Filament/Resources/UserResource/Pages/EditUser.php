@@ -16,15 +16,7 @@ use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Models\User;
 use Webmozart\Assert\Assert;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
-=======
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
->>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
->>>>>>> 890be7f (fix: auto resolve conflict)
 
 /**
  * Pagina per la modifica degli utenti con particolare gestione della password.
@@ -44,24 +36,10 @@ class EditUser extends EditRecord
         // Verifichiamo che record sia un'istanza valida di User
         Assert::notNull($this->record);
         Assert::isInstanceOf($this->record, User::class);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         // Gestione sicura del tipo di password per evitare errori di cast
         $newPassword = $data['new_password'];
 
-=======
-        
-        // Gestione sicura del tipo di password per evitare errori di cast
-        $newPassword = $data['new_password'];
-        
->>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-
-        // Gestione sicura del tipo di password per evitare errori di cast
-        $newPassword = $data['new_password'];
-
->>>>>>> 890be7f (fix: auto resolve conflict)
         // Verifichiamo il tipo e convertiamo in modo sicuro
         if (!is_string($newPassword)) {
             if (!is_scalar($newPassword)) {
@@ -69,15 +47,7 @@ class EditUser extends EditRecord
             }
             $newPassword = (string) $newPassword;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-
->>>>>>> 890be7f (fix: auto resolve conflict)
         $this->record->update(['password' => Hash::make($newPassword)]);
         return $data;
     }

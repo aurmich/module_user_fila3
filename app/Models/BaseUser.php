@@ -296,35 +296,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
      *
      * @return MorphMany<Notification, static|$this>
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public function notifications()
-=======
     public function notifications(): MorphMany
->>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-=======
->>>>>>> 890be7f (fix: auto resolve conflict)
-    public function notifications(): MorphMany
-=======
-<<<<<<< HEAD
-    public function notifications()
-=======
-    public function notifications(): MorphMany
->>>>>>> 3c26b81 (.)
->>>>>>> af1243b (.)
-<<<<<<< HEAD
->>>>>>> 5c568f2 (fix: auto resolve conflict)
-=======
-=======
-    public function notifications()
->>>>>>> dd498ab (.)
->>>>>>> 890be7f (fix: auto resolve conflict)
-=======
-    public function notifications(): MorphMany
->>>>>>> d948eb0 (.)
     {
         // @phpstan-ignore return.type
         return $this->morphMany(Notification::class, 'notifiable');
@@ -441,15 +413,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
      */
     /**
      * Get all role names associated with the user.
-<<<<<<< HEAD
-<<<<<<< HEAD
      *
-=======
-     * 
->>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-     *
->>>>>>> 890be7f (fix: auto resolve conflict)
      * @return array<int, string>
      */
     public function getRoleNames(): array
@@ -591,30 +555,14 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         return $this->belongsTo(Team::class, 'current_team_id');
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /*
      * to HasTenants trait
 
-=======
->>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-    /*
-     * to HasTenants trait
-
->>>>>>> 890be7f (fix: auto resolve conflict)
     public function tenants(): BelongsToMany
     {
         return $this->belongsToMany(Tenant::class, 'tenant_user');
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
     */
-=======
->>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-    */
->>>>>>> 890be7f (fix: auto resolve conflict)
 
     public function authentications(): MorphMany
     {

@@ -13,15 +13,7 @@ use Modules\User\Filament\Resources\DeviceResource\Pages\ListDevices;
 use Modules\User\Filament\Resources\DeviceResource\RelationManagers\UsersRelationManager;
 use Modules\User\Models\Device;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
-=======
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
->>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
->>>>>>> 890be7f (fix: auto resolve conflict)
 
 class DeviceResource extends XotBaseResource
 {
@@ -74,13 +66,5 @@ class DeviceResource extends XotBaseResource
         ];
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-
->>>>>>> 890be7f (fix: auto resolve conflict)
 }

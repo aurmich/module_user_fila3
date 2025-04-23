@@ -11,15 +11,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\Filter;
 use Illuminate\Database\Eloquent\Builder;
 use Modules\UI\Enums\TableLayoutEnum;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
-=======
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
->>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
->>>>>>> 890be7f (fix: auto resolve conflict)
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Modules\Xot\Filament\Traits\TransTrait;
 
@@ -39,34 +31,14 @@ use Modules\Xot\Filament\Traits\TransTrait;
  */
 final class UsersRelationManager extends XotBaseRelationManager
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-
->>>>>>> 890be7f (fix: auto resolve conflict)
     protected static string $relationship = 'users';
 
     protected static ?string $inverseRelationship = 'roles';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
-=======
-    
-
-    
->>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-
-
-
->>>>>>> 890be7f (fix: auto resolve conflict)
 
 
     /**
@@ -146,25 +118,9 @@ final class UsersRelationManager extends XotBaseRelationManager
         ];
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
 
 
-=======
-    
-=======
->>>>>>> 890be7f (fix: auto resolve conflict)
-
-
-<<<<<<< HEAD
-   
->>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
-=======
-
-
-
->>>>>>> 890be7f (fix: auto resolve conflict)
 }
