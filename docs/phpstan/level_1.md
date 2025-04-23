@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> aurmich/dev
+=======
+
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 # Rapporto PHPStan Livello 1 per il modulo User
 
 Data analisi: 2025-04-15 21:57:11
@@ -544,4 +555,15 @@ Trovati 64 errori al livello 1.
 - [Documentazione PHPStan](https://phpstan.org/user-guide/getting-started)
 - [Tipi in PHP](https://www.php.net/manual/en/language.types.declarations.php)
 - [PSR-12: Standard di codifica](https://www.php-fig.org/psr/psr-12/)
+<<<<<<< HEAD
 aurmich/dev
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+aurmich/dev
+>>>>>>> aurmich/dev
+=======
+aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
