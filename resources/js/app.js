@@ -2,6 +2,7 @@ import './bootstrap';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -31,3 +32,6 @@ import './flowbite';
 =======
 >>>>>>> dd498ab (.)
 >>>>>>> 890be7f (fix: auto resolve conflict)
+=======
+import './flowbite';
+>>>>>>> d948eb0 (.)

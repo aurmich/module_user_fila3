@@ -26,4 +26,9 @@
 =======
 📆 2025-04-22 21:09:27 - 🔧 Configurazione git di base...
 📆 2025-04-22 21:09:27 - ✅ Configurazione git completata
+<<<<<<< HEAD
 >>>>>>> e7cc34a (.)
+=======
+[0;34mℹ️ [2025-04-23 08:29:36] Configurazione avanzata git...[0m
+[0;32m✅ [2025-04-23 08:29:36] Configurazione git completata con successo[0m
+>>>>>>> d948eb0 (.)

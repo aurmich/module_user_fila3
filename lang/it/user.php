@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> af1243b (.)
 <?php
 
 <<<<<<< HEAD
@@ -284,17 +279,18 @@ return [
     ],
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
 =======
 <<<<<<< HEAD
 =======
 =======
-<?php return array (
 =======
+>>>>>>> d948eb0 (.)
+<?php return array (
 <?php
 
 return array (
->>>>>>> dd498ab (.)
   'navigation' => 
   array (
     'name' => 'Utenti',
@@ -453,18 +449,23 @@ return array (
     'impersonate_users' => 'Impersona utenti',
     'manage_roles' => 'Gestisci ruoli',
   ),
-<<<<<<< HEAD
 );
+<<<<<<< HEAD
 >>>>>>> 3c26b81 (.)
 >>>>>>> af1243b (.)
 <<<<<<< HEAD
 >>>>>>> 5c568f2 (fix: auto resolve conflict)
 =======
 =======
+=======
+>>>>>>> d948eb0 (.)
   'model' => 
   array (
     'label' => 'user.model',
   ),
 );
+<<<<<<< HEAD
 >>>>>>> dd498ab (.)
 >>>>>>> 890be7f (fix: auto resolve conflict)
+=======
+>>>>>>> d948eb0 (.)

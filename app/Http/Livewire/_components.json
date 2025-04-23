@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 [{"name":"auth.login","class":"Auth\\Login","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Auth\\Login"},{"name":"auth.passwords.confirm","class":"Auth\\Passwords\\Confirm","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Auth\\Passwords\\Confirm"},{"name":"auth.passwords.email","class":"Auth\\Passwords\\Email","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Auth\\Passwords\\Email"},{"name":"auth.passwords.reset","class":"Auth\\Passwords\\Reset","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Auth\\Passwords\\Reset"},{"name":"auth.register","class":"Auth\\Register","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Auth\\Register"},{"name":"auth.verify","class":"Auth\\Verify","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Auth\\Verify"},{"name":"modals.users-overview","class":"Modals\\UsersOverview","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Modals\\UsersOverview"},{"name":"privacy-policy","class":"PrivacyPolicy","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\PrivacyPolicy"},{"name":"profile.super-admin","class":"Profile\\SuperAdmin","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Profile\\SuperAdmin"},{"name":"socialite.buttons","class":"Socialite\\Buttons","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Socialite\\Buttons"},{"name":"team.change","class":"Team\\Change","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Team\\Change"},{"name":"terms-of-service","class":"TermsOfService","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\TermsOfService"}]
 =======
@@ -13,6 +14,9 @@
 =======
 >>>>>>> dd498ab (.)
 >>>>>>> 890be7f (fix: auto resolve conflict)
+=======
+[{"name":"auth.login","class":"Auth\\Login","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Auth\\Login"},{"name":"auth.passwords.confirm","class":"Auth\\Passwords\\Confirm","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Auth\\Passwords\\Confirm"},{"name":"auth.passwords.email","class":"Auth\\Passwords\\Email","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Auth\\Passwords\\Email"},{"name":"auth.passwords.reset","class":"Auth\\Passwords\\Reset","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Auth\\Passwords\\Reset"},{"name":"auth.register","class":"Auth\\Register","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Auth\\Register"},{"name":"auth.verify","class":"Auth\\Verify","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Auth\\Verify"},{"name":"modals.users-overview","class":"Modals\\UsersOverview","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Modals\\UsersOverview"},{"name":"privacy-policy","class":"PrivacyPolicy","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\PrivacyPolicy"},{"name":"profile.super-admin","class":"Profile\\SuperAdmin","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Profile\\SuperAdmin"},{"name":"socialite.buttons","class":"Socialite\\Buttons","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Socialite\\Buttons"},{"name":"team.change","class":"Team\\Change","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Team\\Change"},{"name":"terms-of-service","class":"TermsOfService","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\TermsOfService"}]
+>>>>>>> d948eb0 (.)
 [
     {
         "name": "auth.login",
@@ -92,9 +96,8 @@
         "ns": "Modules\\User\\Http\\Livewire\\TermsOfService"
     }
 ]
-<<<<<<< HEAD
-=======
 [{"name":"auth.login","class":"Auth\\Login","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Auth\\Login"},{"name":"auth.passwords.confirm","class":"Auth\\Passwords\\Confirm","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Auth\\Passwords\\Confirm"},{"name":"auth.passwords.email","class":"Auth\\Passwords\\Email","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Auth\\Passwords\\Email"},{"name":"auth.passwords.reset","class":"Auth\\Passwords\\Reset","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Auth\\Passwords\\Reset"},{"name":"auth.register","class":"Auth\\Register","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Auth\\Register"},{"name":"auth.verify","class":"Auth\\Verify","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Auth\\Verify"},{"name":"modals.users-overview","class":"Modals\\UsersOverview","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Modals\\UsersOverview"},{"name":"privacy-policy","class":"PrivacyPolicy","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\PrivacyPolicy"},{"name":"profile.super-admin","class":"Profile\\SuperAdmin","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Profile\\SuperAdmin"},{"name":"socialite.buttons","class":"Socialite\\Buttons","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Socialite\\Buttons"},{"name":"team.change","class":"Team\\Change","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\Team\\Change"},{"name":"terms-of-service","class":"TermsOfService","module":null,"path":null,"ns":"Modules\\User\\Http\\Livewire\\TermsOfService"}]
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
 =======
@@ -106,3 +109,5 @@
 =======
 >>>>>>> dd498ab (.)
 >>>>>>> 890be7f (fix: auto resolve conflict)
+=======
+>>>>>>> d948eb0 (.)
