@@ -11,7 +11,11 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\Filter;
 use Illuminate\Database\Eloquent\Builder;
 use Modules\UI\Enums\TableLayoutEnum;
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Modules\Xot\Filament\Traits\TransTrait;
 
@@ -31,14 +35,24 @@ use Modules\Xot\Filament\Traits\TransTrait;
  */
 final class UsersRelationManager extends XotBaseRelationManager
 {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
     protected static string $relationship = 'users';
 
     protected static ?string $inverseRelationship = 'roles';
 
+<<<<<<< HEAD
 
 
 
+=======
+    
+
+    
+>>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
 
 
     /**
@@ -118,9 +132,17 @@ final class UsersRelationManager extends XotBaseRelationManager
         ];
     }
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+    
+
+   
+
+   
+>>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
 }

@@ -22,7 +22,11 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 
 
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
 
 
 
@@ -70,7 +74,20 @@ class UserResource extends XotBaseResource
         ];
     }
 
+<<<<<<< HEAD
 
+=======
+    /**
+     * ---.
+     */
+    public static function getRelations(): array
+    {
+        return [
+            'teams' => RelationManagers\TeamsRelationManager::class,
+            'tenants' => RelationManagers\TenantsRelationManager::class,
+        ];
+    }
+>>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
 
     // public static function enablePasswordUpdates(bool|Closure $condition = true): void
     // {

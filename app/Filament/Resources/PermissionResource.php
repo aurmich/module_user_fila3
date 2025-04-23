@@ -16,7 +16,11 @@ use Modules\User\Filament\Resources\PermissionResource\Pages\EditPermission;
 use Modules\User\Filament\Resources\PermissionResource\Pages\ListPermissions;
 use Modules\User\Models\Permission;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> 40b5428 (Merge remote-tracking branch 'origin/dev' into dev)
 
 class PermissionResource extends XotBaseResource
 {
