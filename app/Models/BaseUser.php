@@ -297,7 +297,11 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
      * @return MorphMany<Notification, static|$this>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function notifications()
+=======
+    public function notifications(): MorphMany
+>>>>>>> aurmich/dev
 =======
     public function notifications(): MorphMany
 >>>>>>> aurmich/dev
@@ -418,11 +422,15 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     /**
      * Get all role names associated with the user.
 <<<<<<< HEAD
+<<<<<<< HEAD
      * 
 =======
 
      * 
 aurmich/dev
+>>>>>>> aurmich/dev
+=======
+     *
 >>>>>>> aurmich/dev
      * @return array<int, string>
      */
@@ -566,9 +574,12 @@ aurmich/dev
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 aurmich/dev
+>>>>>>> aurmich/dev
+=======
 >>>>>>> aurmich/dev
     public function tenants(): BelongsToMany
     {
@@ -576,9 +587,12 @@ aurmich/dev
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 aurmich/dev
+>>>>>>> aurmich/dev
+=======
 >>>>>>> aurmich/dev
     public function authentications(): MorphMany
     {
