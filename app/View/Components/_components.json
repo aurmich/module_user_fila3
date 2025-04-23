@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [
     {
         "name": "mail.message",
@@ -7,3 +8,6 @@
         "ns": "Modules\\User\\View\\Components\\Mail\\Message"
     }
 ]
+=======
+[]
+>>>>>>> aurmich/dev

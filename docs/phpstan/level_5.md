@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> aurmich/dev
 # Rapporto PHPStan Livello 5 per il modulo User
 
 Data analisi: 2025-04-15 21:58:39
@@ -579,3 +583,7 @@ Trovati 68 errori al livello 5.
 - [Documentazione PHPStan](https://phpstan.org/user-guide/getting-started)
 - [Tipi in PHP](https://www.php.net/manual/en/language.types.declarations.php)
 - [PSR-12: Standard di codifica](https://www.php-fig.org/psr/psr-12/)
+<<<<<<< HEAD
+=======
+aurmich/dev
+>>>>>>> aurmich/dev

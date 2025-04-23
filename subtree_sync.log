@@ -1,2 +1,49 @@
+<<<<<<< HEAD
 📆 2025-04-23 16:53:44 - 🔧 Configurazione git di base...
 📆 2025-04-23 16:53:44 - ✅ Configurazione git completata
+=======
+
+[0;34mℹ️ [2025-04-23 14:58:13] Configurazione avanzata git...[0m
+[0;31m❌ [2025-04-23 14:58:13] Errore durante configurazione: Errore impostazione ignorecase[0m
+[1;33m⚠️ [2025-04-23 14:58:13] Tentativo di ripetere l'operazione (3 tentativi rimasti)[0m
+[0;31m❌ [2025-04-23 14:58:13] Errore durante configurazione: Errore impostazione fileMode[0m
+[1;33m⚠️ [2025-04-23 14:58:13] Tentativo di ripetere l'operazione (3 tentativi rimasti)[0m
+[0;31m❌ [2025-04-23 14:58:13] Errore durante configurazione: Errore impostazione autocrlf[0m
+[1;33m⚠️ [2025-04-23 14:58:13] Tentativo di ripetere l'operazione (3 tentativi rimasti)[0m
+[0;31m❌ [2025-04-23 14:58:13] Errore durante configurazione: Errore impostazione eol[0m
+[1;33m⚠️ [2025-04-23 14:58:13] Tentativo di ripetere l'operazione (3 tentativi rimasti)[0m
+[0;31m❌ [2025-04-23 14:58:13] Errore durante configurazione: Errore impostazione symlinks[0m
+[1;33m⚠️ [2025-04-23 14:58:13] Tentativo di ripetere l'operazione (3 tentativi rimasti)[0m
+[0;31m❌ [2025-04-23 14:58:13] Errore durante configurazione: Errore impostazione longpaths[0m
+[1;33m⚠️ [2025-04-23 14:58:13] Tentativo di ripetere l'operazione (3 tentativi rimasti)[0m
+[0;31m❌ [2025-04-23 14:58:13] Errore durante configurazione: Errore impostazione pull.rebase[0m
+[1;33m⚠️ [2025-04-23 14:58:13] Tentativo di ripetere l'operazione (3 tentativi rimasti)[0m
+[0;31m❌ [2025-04-23 14:58:13] Errore durante configurazione: Errore impostazione fetch.prune[0m
+[1;33m⚠️ [2025-04-23 14:58:13] Tentativo di ripetere l'operazione (3 tentativi rimasti)[0m
+[0;32m✅ [2025-04-23 14:58:13] Configurazione git completata con successo[0m
+[0;34mℹ️ [2025-04-23 14:59:05] Configurazione avanzata git...[0m
+[0;31m❌ [2025-04-23 14:59:05] Errore durante configurazione: Errore impostazione ignorecase[0m
+[1;33m⚠️ [2025-04-23 14:59:05] Tentativo di ripetere l'operazione (3 tentativi rimasti)[0m
+[0;31m❌ [2025-04-23 14:59:05] Errore durante configurazione: Errore impostazione fileMode[0m
+[1;33m⚠️ [2025-04-23 14:59:05] Tentativo di ripetere l'operazione (3 tentativi rimasti)[0m
+[0;31m❌ [2025-04-23 14:59:05] Errore durante configurazione: Errore impostazione autocrlf[0m
+[1;33m⚠️ [2025-04-23 14:59:05] Tentativo di ripetere l'operazione (3 tentativi rimasti)[0m
+[0;31m❌ [2025-04-23 14:59:05] Errore durante configurazione: Errore impostazione eol[0m
+[1;33m⚠️ [2025-04-23 14:59:05] Tentativo di ripetere l'operazione (3 tentativi rimasti)[0m
+[0;31m❌ [2025-04-23 14:59:05] Errore durante configurazione: Errore impostazione symlinks[0m
+[1;33m⚠️ [2025-04-23 14:59:05] Tentativo di ripetere l'operazione (3 tentativi rimasti)[0m
+[0;31m❌ [2025-04-23 14:59:05] Errore durante configurazione: Errore impostazione longpaths[0m
+[1;33m⚠️ [2025-04-23 14:59:05] Tentativo di ripetere l'operazione (3 tentativi rimasti)[0m
+[0;31m❌ [2025-04-23 14:59:05] Errore durante configurazione: Errore impostazione pull.rebase[0m
+[1;33m⚠️ [2025-04-23 14:59:05] Tentativo di ripetere l'operazione (3 tentativi rimasti)[0m
+[0;31m❌ [2025-04-23 14:59:05] Errore durante configurazione: Errore impostazione fetch.prune[0m
+[1;33m⚠️ [2025-04-23 14:59:05] Tentativo di ripetere l'operazione (3 tentativi rimasti)[0m
+[0;32m✅ [2025-04-23 14:59:05] Configurazione git completata con successo[0m
+[0;34mℹ️ [2025-04-23 15:01:49] Configurazione avanzata git...[0m
+[0;32m✅ [2025-04-23 15:01:49] Configurazione git completata con successo[0m
+[0;34mℹ️ [2025-04-23 15:03:16] Configurazione avanzata git...[0m
+[0;32m✅ [2025-04-23 15:03:16] Configurazione git completata con successo[0m
+aurmich/dev
+📆 2025-04-23 15:41:57 - 🔧 Configurazione git di base...
+📆 2025-04-23 15:41:57 - ✅ Configurazione git completata
+>>>>>>> aurmich/dev
