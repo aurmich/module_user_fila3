@@ -14,6 +14,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 
+<<<<<<< HEAD
 
 
 
@@ -22,12 +23,15 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 
 
 
+=======
+>>>>>>> 67cd443 (.)
 class RoleRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'roles';
 
     protected static ?string $recordTitleAttribute = 'name';
 
+<<<<<<< HEAD
     /**
      * @return array<string, \Filament\Forms\Components\Component>
      */
@@ -37,6 +41,17 @@ class RoleRelationManager extends XotBaseRelationManager
             'name' => TextInput::make('name'),
             'guard_name' => TextInput::make('guard_name'),
         ];
+=======
+    public function form(Form $form): Form
+    {
+        return $form
+            ->schema(
+                [
+                    TextInput::make('name'),
+                    TextInput::make('guard_name'),
+                ]
+            );
+>>>>>>> 67cd443 (.)
     }
 
     public function table(Table $table): Table

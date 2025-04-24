@@ -15,6 +15,7 @@ class EditTeamProfile extends EditTenantProfile
         return 'Team profile';
     }
 
+<<<<<<< HEAD
     public function getFormSchema(): array
 {
     
@@ -26,4 +27,16 @@ class EditTeamProfile extends EditTenantProfile
                 
       ];
 }
+=======
+    public function form(Form $form): Form
+    {
+        return $form
+            ->schema(
+                [
+                    TextInput::make('name'),
+                    // ...
+                ]
+            );
+    }
+>>>>>>> 67cd443 (.)
 }

@@ -8,11 +8,15 @@ use Filament\Facades\Filament;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Scope;
+<<<<<<< HEAD
 use Modules\User\Models\Tenant;
 
 /**
  * Scope che limita le query ai record associati al tenant corrente.
  */
+=======
+
+>>>>>>> 67cd443 (.)
 class TenantScope implements Scope
 {
     /**

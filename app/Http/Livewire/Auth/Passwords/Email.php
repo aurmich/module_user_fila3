@@ -9,24 +9,40 @@ use Livewire\Component;
 
 class Email extends Component
 {
+<<<<<<< HEAD
     public string $email = '';
 
     public ?string $emailSentMessage = null;
 
     /**
      * Invia il link per il reset della password.
+=======
+    public string $email;
+
+    public ?string $emailSentMessage = null; // was false
+
+    /**
+     * Undocumented function.
+>>>>>>> 67cd443 (.)
      */
     public function sendResetPasswordLink(): void
     {
         $this->validate([
             'email' => ['required', 'email'],
         ]);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 67cd443 (.)
         $broker = $this->broker();
         $response = $broker->sendResetLink(['email' => $this->email]);
 
         if ($response === Password::RESET_LINK_SENT) {
             $this->emailSentMessage = trans('user::'.$response);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 67cd443 (.)
             return;
         }
 
@@ -52,8 +68,13 @@ class Email extends Component
          */
         $view = 'pub_theme::livewire.auth.passwords.email';
 
+<<<<<<< HEAD
         return view($view, [
             'layout' => 'pub_theme::layouts.auth'
         ]);
+=======
+        return view($view)
+            ->extends('pub_theme::layouts.auth');
+>>>>>>> 67cd443 (.)
     }
 }

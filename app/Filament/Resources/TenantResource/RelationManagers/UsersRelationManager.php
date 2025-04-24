@@ -18,6 +18,14 @@ class UsersRelationManager extends XotBaseRelationManager
 
     protected static ?string $recordTitleAttribute = 'name';
 
+<<<<<<< HEAD
+=======
+    public function form(Form $form): Form
+    {
+        return $form->schema($this->getFormSchema());
+    }
+
+>>>>>>> 67cd443 (.)
     /**
      * @return array<Forms\Components\Component>
      */
@@ -25,19 +33,35 @@ class UsersRelationManager extends XotBaseRelationManager
     {
         return [
             Forms\Components\TextInput::make('name')
+<<<<<<< HEAD
+=======
+
+>>>>>>> 67cd443 (.)
                 ->required()
                 ->maxLength(255),
 
             Forms\Components\TextInput::make('email')
+<<<<<<< HEAD
+=======
+
+>>>>>>> 67cd443 (.)
                 ->email()
                 ->required()
                 ->unique(ignoreRecord: true)
                 ->maxLength(255),
 
             Forms\Components\DateTimePicker::make('email_verified_at')
+<<<<<<< HEAD
                 ->nullable(),
 
             Forms\Components\TextInput::make('password')
+=======
+
+                ->nullable(),
+
+            Forms\Components\TextInput::make('password')
+
+>>>>>>> 67cd443 (.)
                 ->password()
                 ->required(fn ($context) => $context === 'create')
                 ->minLength(8)
@@ -46,12 +70,17 @@ class UsersRelationManager extends XotBaseRelationManager
                 ->dehydrateStateUsing(fn ($state) => bcrypt($state)),
 
             Forms\Components\TextInput::make('password_confirmation')
+<<<<<<< HEAD
+=======
+
+>>>>>>> 67cd443 (.)
                 ->password()
                 ->required(fn ($context) => $context === 'create')
                 ->minLength(8),
         ];
     }
 
+<<<<<<< HEAD
     /**
      * @return array<string, \Filament\Tables\Columns\Column>
      */
@@ -63,26 +92,58 @@ class UsersRelationManager extends XotBaseRelationManager
                 ->toggleable(),
 
             'name' => TextColumn::make('name')
+=======
+    public function getListTableColumns(): array
+    {
+        return [
+            TextColumn::make('id')
+
+                ->sortable()
+                ->toggleable(),
+
+            TextColumn::make('name')
+
+>>>>>>> 67cd443 (.)
                 ->searchable()
                 ->sortable()
                 ->toggleable(),
 
+<<<<<<< HEAD
             'email' => TextColumn::make('email')
+=======
+            TextColumn::make('email')
+
+>>>>>>> 67cd443 (.)
                 ->searchable()
                 ->sortable()
                 ->toggleable(),
 
+<<<<<<< HEAD
             'email_verified_at' => TextColumn::make('email_verified_at')
+=======
+            TextColumn::make('email_verified_at')
+
+>>>>>>> 67cd443 (.)
                 ->dateTime()
                 ->sortable()
                 ->toggleable(),
 
+<<<<<<< HEAD
             'created_at' => TextColumn::make('created_at')
+=======
+            TextColumn::make('created_at')
+
+>>>>>>> 67cd443 (.)
                 ->dateTime()
                 ->sortable()
                 ->toggleable(),
 
+<<<<<<< HEAD
             'updated_at' => TextColumn::make('updated_at')
+=======
+            TextColumn::make('updated_at')
+
+>>>>>>> 67cd443 (.)
                 ->dateTime()
                 ->sortable()
                 ->toggleable(),

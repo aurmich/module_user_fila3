@@ -27,7 +27,11 @@ class ChangeProfilePasswordAction extends Action
     {
         parent::setUp();
         $this->translateLabel()
+<<<<<<< HEAD
 
+=======
+            ->label('')
+>>>>>>> 67cd443 (.)
             ->tooltip(__('user::user.actions.change_password'))
             ->icon('heroicon-o-key')
             ->action(static function (ProfileContract $record, array $data): void {
@@ -56,7 +60,11 @@ class ChangeProfilePasswordAction extends Action
                         ->required()
                         ->rule(Password::default()),
                     */
+<<<<<<< HEAD
                 PasswordData::make()->getPasswordFormComponent('new_password'),
+=======
+                PasswordData::make()->getPasswordFormComponent(),
+>>>>>>> 67cd443 (.)
                 TextInput::make('new_password_confirmation')
                     ->password()
                     ->rule('required', static fn ($get): bool => (bool) $get('new_password'))

@@ -20,8 +20,11 @@ use Modules\User\Datas\PasswordData;
 use Modules\Xot\Filament\Traits\TransTrait;
 
 /**
+<<<<<<< HEAD
  * Pagina per la gestione delle impostazioni delle password.
  *
+=======
+>>>>>>> 67cd443 (.)
  * @property Forms\ComponentContainer $form
  */
 class Password extends Page implements HasForms
@@ -29,6 +32,7 @@ class Password extends Page implements HasForms
     use InteractsWithForms;
     use TransTrait;
 
+<<<<<<< HEAD
     /**
      * Dati del form per la gestione delle password.
      *
@@ -60,17 +64,30 @@ class Password extends Page implements HasForms
     /**
      * Inizializza la pagina.
      */
+=======
+    public ?array $formData = [];
+
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+
+    protected static string $view = 'user::filament.pages.password';
+
+    protected static ?int $navigationSort = 1;
+
+>>>>>>> 67cd443 (.)
     public function mount(): void
     {
         $this->fillForms();
     }
 
+<<<<<<< HEAD
     /**
      * Definisce la struttura del form.
      *
      * @param Form $form Il form da configurare
      * @return Form Il form configurato
      */
+=======
+>>>>>>> 67cd443 (.)
     public function form(Form $form): Form
     {
         return $form
@@ -107,6 +124,7 @@ class Password extends Page implements HasForms
             ->statePath('formData');
     }
 
+<<<<<<< HEAD
     /**
      * Aggiorna i dati delle impostazioni delle password.
      *
@@ -116,6 +134,11 @@ class Password extends Page implements HasForms
     {
         try {
             /** @var array<string, mixed> $data */
+=======
+    public function updateData(): void
+    {
+        try {
+>>>>>>> 67cd443 (.)
             $data = $this->form->getState();
             TenantService::saveConfig('password', $data);
             // $this->handleRecordUpdate($this->getUser(), $data);
@@ -130,11 +153,14 @@ class Password extends Page implements HasForms
             ->send();
     }
 
+<<<<<<< HEAD
     /**
      * Riempie i form con i dati esistenti.
      *
      * @return void
      */
+=======
+>>>>>>> 67cd443 (.)
     protected function fillForms(): void
     {
         $data = PasswordData::make()->toArray();
@@ -142,19 +168,27 @@ class Password extends Page implements HasForms
         $this->form->fill($data);
     }
 
+<<<<<<< HEAD
     /**
      * Restituisce le azioni per il form di aggiornamento.
      *
      * @return array<Action>
      */
+=======
+>>>>>>> 67cd443 (.)
     protected function getUpdateFormActions(): array
     {
         return [
             Action::make('updateDataAction')
+<<<<<<< HEAD
+=======
+
+>>>>>>> 67cd443 (.)
                 ->submit('editDataForm'),
         ];
     }
 
+<<<<<<< HEAD
     /**
      * Gestisce l'aggiornamento del record.
      *
@@ -162,6 +196,8 @@ class Password extends Page implements HasForms
      * @param array<string, mixed> $data I dati per l'aggiornamento
      * @return Model Il record aggiornato
      */
+=======
+>>>>>>> 67cd443 (.)
     protected function handleRecordUpdate(Model $record, array $data): Model
     {
         $record->update($data);

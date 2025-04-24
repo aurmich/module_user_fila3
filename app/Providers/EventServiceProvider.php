@@ -21,11 +21,19 @@ class EventServiceProvider extends ServiceProvider
     /**
      * The event to listener mappings for the application.
      *
+<<<<<<< HEAD
      * @var array<class-string, array<int, class-string>>
      */
     protected $listen = [
         SocialiteWasCalled::class => [
             Auth0ExtendSocialite::class,
+=======
+     * @var array<string, array<int, string>>
+     */
+    protected $listen = [
+        SocialiteWasCalled::class => [
+            Auth0ExtendSocialite::class.'@handle',
+>>>>>>> 67cd443 (.)
         ],
         Login::class => [
             LoginListener::class,

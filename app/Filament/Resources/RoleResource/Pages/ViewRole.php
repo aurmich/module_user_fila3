@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources\RoleResource\Pages;
 
+<<<<<<< HEAD
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Components\Section;
 use Filament\Pages\Actions\EditAction;
@@ -30,6 +31,21 @@ class ViewRole extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
                     TextEntry::make('created_at'),
                     TextEntry::make('updated_at'),
                 ])
+=======
+use Filament\Pages\Actions\EditAction;
+use Filament\Resources\Pages\ViewRecord;
+use Modules\User\Filament\Resources\RoleResource;
+
+class ViewRole extends ViewRecord
+{
+    // //
+    protected static string $resource = RoleResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            EditAction::make(),
+>>>>>>> 67cd443 (.)
         ];
     }
 }

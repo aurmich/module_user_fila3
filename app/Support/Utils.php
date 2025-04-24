@@ -12,7 +12,10 @@ use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Traits\HasRoles;
 use Webmozart\Assert\Assert;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\File;
+=======
+>>>>>>> 67cd443 (.)
 
 use function Safe\class_implements;
 use function Safe\class_uses;
@@ -270,6 +273,7 @@ class Utils
 
         return $res;
     }
+<<<<<<< HEAD
 
     /**
      * Check if the role resource exists.
@@ -279,4 +283,6 @@ class Utils
         $roleResourcePath = base_path('Modules/User/app/Filament/Resources/RoleResource.php');
         return File::exists($roleResourcePath);
     }
+=======
+>>>>>>> 67cd443 (.)
 }

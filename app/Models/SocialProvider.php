@@ -12,8 +12,11 @@ use Modules\Tenant\Models\Traits\SushiToPhpArray;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
+<<<<<<< HEAD
  * 
  *
+=======
+>>>>>>> 67cd443 (.)
  * @property int|null $id
  * @property string|null $name
  * @property array|null $scopes
@@ -26,6 +29,10 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $client_secret
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 67cd443 (.)
  * @method static \Modules\User\Database\Factories\SocialProviderFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider newQuery()
@@ -40,14 +47,26 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereSocialite($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereStateless($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereSvg($value)
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 67cd443 (.)
  * @property string|null $created_at
  * @property string|null $updated_at
  * @property string|null $created_by
  * @property string|null $updated_by
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 67cd443 (.)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereUpdatedBy($value)
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 67cd443 (.)
  * @mixin \Eloquent
  */
 class SocialProvider extends BaseModel

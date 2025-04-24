@@ -11,21 +11,37 @@ use Laravel\Passport\AuthCode as PassportAuthCode;
  * Modules\User\Models\OauthAuthCode.
  *
  * @property OauthClient|null $client
+<<<<<<< HEAD
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode query()
+=======
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode query()
+ *
+>>>>>>> 67cd443 (.)
  * @property string $id
  * @property string|null $user_id
  * @property string|null $client_id
  * @property string|null $scopes
  * @property bool $revoked
  * @property Carbon|null $expires_at
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 67cd443 (.)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode whereClientId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode whereExpiresAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode whereRevoked($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode whereScopes($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode whereUserId($value)
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 67cd443 (.)
  * @mixin \Eloquent
  */
 class OauthAuthCode extends PassportAuthCode

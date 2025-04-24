@@ -12,9 +12,12 @@ use Symfony\Component\Console\Input\InputOption;
 use function Laravel\Prompts\select;
 use function Laravel\Prompts\text;
 
+<<<<<<< HEAD
 /**
  * Comando per impostare il team corrente per un utente.
  */
+=======
+>>>>>>> 67cd443 (.)
 class SetCurrentTeamCommand extends Command
 {
     /**
@@ -32,11 +35,25 @@ class SetCurrentTeamCommand extends Command
     protected $description = 'Assign current team to user';
 
     /**
+<<<<<<< HEAD
+=======
+     * Create a new command instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    /**
+>>>>>>> 67cd443 (.)
      * Execute the console command.
      */
     public function handle(): void
     {
         $email = text('email ?');
+<<<<<<< HEAD
         if (empty($email)) {
             $this->error('Email non valida!');
             return;
@@ -66,11 +83,25 @@ class SetCurrentTeamCommand extends Command
 
         $team_id = select(
             label: 'Quale team?',
+=======
+        $user_class = XotData::make()->getUserClass();
+        /** @var UserContract */
+        $user = XotData::make()->getUserByEmail($email);
+        $xot = XotData::make();
+        $teamClass = $xot->getTeamClass();
+        /** @var array<int|string, string>|\Illuminate\Support\Collection<int|string, string> */
+        $opts = $teamClass::pluck('name', 'id')
+            ->toArray();
+
+        $team_id = select(
+            label: 'What team?',
+>>>>>>> 67cd443 (.)
             options: $opts,
             required: true,
             scroll: 10,
         );
 
+<<<<<<< HEAD
         if (!is_numeric($team_id)) {
             $this->error('ID team non valido!');
             return;
@@ -83,6 +114,12 @@ class SetCurrentTeamCommand extends Command
         } catch (\Exception $e) {
             $this->error('Errore durante il salvataggio: ' . $e->getMessage());
         }
+=======
+        $user->current_team_id = (int) $team_id;
+        $user->save();
+
+        $this->info('OK');
+>>>>>>> 67cd443 (.)
     }
 
     /**

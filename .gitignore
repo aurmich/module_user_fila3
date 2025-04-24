@@ -28,8 +28,11 @@ build
 *.exe
 *:Zone.Identifier
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 # File di log
 *.log
 >>>>>>> aurmich/dev
+=======
+>>>>>>> 67cd443 (.)

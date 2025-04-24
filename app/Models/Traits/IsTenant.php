@@ -6,9 +6,13 @@ namespace Modules\User\Models\Traits;
 
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Modules\User\Contracts\TeamContract;
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Illuminate\Database\Eloquent\Model;
+=======
+use Modules\Xot\Datas\XotData;
+>>>>>>> 67cd443 (.)
 
 /**
  * Undocumented trait.
@@ -17,17 +21,21 @@ use Illuminate\Database\Eloquent\Model;
  */
 trait IsTenant
 {
+<<<<<<< HEAD
     /**
      * Get all users associated with this tenant.
      * 
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Illuminate\Database\Eloquent\Model&\Modules\Xot\Contracts\UserContract, static>
      */
+=======
+>>>>>>> 67cd443 (.)
     public function users(): BelongsToMany
     {
         $xot = XotData::make();
         $userClass = $xot->getUserClass();
 
         // $this->setConnection('mysql');
+<<<<<<< HEAD
         /** @var class-string<\Illuminate\Database\Eloquent\Model&\Modules\Xot\Contracts\UserContract> $userClass */
         return $this->belongsToManyX($userClass, null, 'tenant_id', 'user_id');
         // ->as('membership')
@@ -60,4 +68,9 @@ trait IsTenant
         return $this->belongsToMany($related, $table, $foreignPivotKey, $relatedPivotKey, $parentKey, $relatedKey, $relation);
     }
         */
+=======
+        return $this->belongsToManyX($userClass, null, 'tenant_id', 'user_id');
+        // ->as('membership')
+    }
+>>>>>>> 67cd443 (.)
 }

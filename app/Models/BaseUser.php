@@ -13,13 +13,19 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+=======
+>>>>>>> 67cd443 (.)
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+<<<<<<< HEAD
 use Illuminate\Notifications\DatabaseNotification;
+=======
+>>>>>>> 67cd443 (.)
 use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
@@ -30,20 +36,32 @@ use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Traits\RelationX;
 use Spatie\Permission\Traits\HasRoles;
+<<<<<<< HEAD
+=======
+use Modules\User\Models\AuthenticationLog;
+use Modules\User\Models\Notification;
+>>>>>>> 67cd443 (.)
 
 /**
  * Modules\User\Models\User.
  *
+<<<<<<< HEAD
  * @template TModel of \Illuminate\Database\Eloquent\Model
  * @template TRelatedModel of \Illuminate\Database\Eloquent\Model
  *
+=======
+>>>>>>> 67cd443 (.)
  * @property Collection<int, OauthClient> $clients
  * @property int|null $clients_count
  * @property Team|null $currentTeam
  * @property Collection<int, Device> $devices
  * @property int|null $devices_count
  * @property string|null $full_name
+<<<<<<< HEAD
  * @property DatabaseNotificationCollection<int, DatabaseNotification> $notifications
+=======
+ * @property DatabaseNotificationCollection<int, Notification> $notifications
+>>>>>>> 67cd443 (.)
  * @property int|null $notifications_count
  * @property Collection<int, Team> $ownedTeams
  * @property int|null $owned_teams_count
@@ -54,6 +72,7 @@ use Spatie\Permission\Traits\HasRoles;
  * @property int|null $roles_count
  * @property Collection<int, Team> $teams
  * @property int|null $teams_count
+<<<<<<< HEAD
  * @property Collection<int, Tenant> $tenants
  * @property int|null $tenants_count
  * @property Collection<int, OauthAccessToken> $tokens
@@ -82,10 +101,15 @@ use Spatie\Permission\Traits\HasRoles;
  * @property string|null $deleted_by
  * @property string|null $profile_photo_path
  * @property \Illuminate\Database\Eloquent\Relations\Pivot|null $pivot
+=======
+ * @property Collection<int, OauthAccessToken> $tokens
+ * @property int|null $tokens_count
+>>>>>>> 67cd443 (.)
  *
  * @method static \Modules\User\Database\Factories\UserFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()
+<<<<<<< HEAD
  * @method static \Illuminate\Database\Eloquent\Builder|User permission($permissions, $without = false)
  * @method static \Illuminate\Database\Eloquent\Builder|User query()
  * @method static \Illuminate\Database\Eloquent\Builder|User role($roles, $guard = null, $without = false)
@@ -94,6 +118,31 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereCurrentTeamId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereDeletedBy($value)
+=======
+ * @method static \Illuminate\Database\Eloquent\Builder|User permission($permissions)
+ * @method static \Illuminate\Database\Eloquent\Builder|User query()
+ * @method static \Illuminate\Database\Eloquent\Builder|User role($roles, $guard = null)
+ *
+ * @property string $id
+ * @property string $name
+ * @property string $first_name
+ * @property string $last_name
+ * @property string $email
+ * @property \Illuminate\Support\Carbon|null $email_verified_at
+ * @property string $password
+ * @property string|null $remember_token
+ * @property int|null $current_team_id
+ * @property string|null $profile_photo_path
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null $deleted_at
+ * @property string|null $lang
+ * @property bool $is_active
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereCurrentTeamId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereDeletedAt($value)
+>>>>>>> 67cd443 (.)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereEmailVerifiedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereFirstName($value)
@@ -106,6 +155,7 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereProfilePhotoPath($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereRememberToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
+<<<<<<< HEAD
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User withoutPermission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|User withoutRole($roles, $guard = null)
@@ -114,15 +164,67 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePasswordExpiresAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereSurname($value)
  *
+=======
+ *
+ * @mixin Eloquent
+ *
+ * @property Collection<int, Tenant> $tenants
+ * @property int|null $tenants_count
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|User withoutPermission($permissions)
+ * @method static \Illuminate\Database\Eloquent\Builder|User withoutRole($roles, $guard = null)
+ *
+ * @property string|null $updated_by
+ * @property string|null $created_by
+ * @property string|null $deleted_by
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereDeletedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedBy($value)
+ *
+ * @property string $surname
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereSurname($value)
+ *
+ * @property string|null $facebook_id
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereFacebookId($value)
+ * @method bool canAccessSocialite()
+ *
+ * @property TenantUser $pivot
+ * @property Membership $membership
+ * @property Collection<int, AuthenticationLog> $authentications
+ * @property int|null $authentications_count
+ * @property AuthenticationLog|null $latestAuthentication
+ *
+>>>>>>> 67cd443 (.)
  * @mixin \Eloquent
  */
 abstract class BaseUser extends Authenticatable implements HasName, HasTenants, UserContract
 {
+<<<<<<< HEAD
     use HasApiTokens;
     use HasFactory;
     use HasRoles;
     use HasTeams;
     use HasUuids;
+=======
+    /* , HasAvatar, UserJetContract, ExportsPersonalData */
+    /* , HasTeamsContract */
+    use HasApiTokens;
+    use HasFactory;
+
+    // use TwoFactorAuthenticatable; //ArtMin96
+    // use CanExportPersonalData; //ArtMin96
+    use HasRoles;
+
+    // use HasProfilePhoto; //ArtMin96
+    // use HasTeams; //ArtMin96
+    use HasTeams;
+    use HasUuids;
+
+    // use Traits\HasProfilePhoto;
+>>>>>>> 67cd443 (.)
     use Notifiable;
     use RelationX;
     use Traits\HasAuthenticationLogTrait;
@@ -172,15 +274,19 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         // 'profile_photo_url',
     ];
 
+<<<<<<< HEAD
     /** @var \Illuminate\Database\Eloquent\Relations\Pivot|null */
     public $pivot;
 
+=======
+>>>>>>> 67cd443 (.)
     public function canAccessFilament(?Panel $panel = null): bool
     {
         // return $this->role_id === Role::ROLE_ADMINISTRATOR;
         return true;
     }
 
+<<<<<<< HEAD
     /**
      * Get the user's name for Filament.
      *
@@ -203,6 +309,16 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
             $firstName ?? '',
             $lastName ?? '',
         ));
+=======
+    public function getFilamentName(): string
+    {
+        return sprintf(
+            '%s %s %s',
+            $this->name,
+            $this->first_name,
+            $this->last_name,
+        );
+>>>>>>> 67cd443 (.)
     }
 
     public function profile(): HasOne
@@ -257,17 +373,37 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
 
     public function treeLabel(): string
     {
+<<<<<<< HEAD
         return strval($this->name ?? $this->email);
+=======
+        return $this->name ?? $this->email;
+>>>>>>> 67cd443 (.)
     }
 
     public function treeSons(): Collection
     {
+<<<<<<< HEAD
         return $this->teams ?? new Collection();
     }
 
     /**
      * @return BelongsToMany<Device, static|$this>
      */
+=======
+        return $this->teams ?? new Collection;
+    }
+
+    public function treeSonsCount(): int
+    {
+        return $this->teams()->count();
+    }
+
+    public function user(): UserContract
+    {
+        return $this;
+    }
+
+>>>>>>> 67cd443 (.)
     public function devices(): BelongsToMany
     {
         return $this
@@ -288,6 +424,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         }
 
         $res = $socialiteUser->{$field};
+<<<<<<< HEAD
         return (string) $res;
     }
 
@@ -295,6 +432,19 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
      * Get the entity's notifications.
      *
      * @return MorphMany<Notification, static|$this>
+=======
+        if (is_string($res)) {
+            return $res;
+        }
+        dddx($socialiteUser);
+        throw new \Exception('SocialiteUser field ['.$field.'] not found');
+    }
+
+    /**
+     * Get all of the user's notifications.
+     *
+     * @return MorphMany<Notification, static>
+>>>>>>> 67cd443 (.)
      */
     public function notifications()
     {
@@ -316,7 +466,11 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
 
     public function getFullNameAttribute(?string $value): ?string
     {
+<<<<<<< HEAD
         return $value ?? $this->first_name . ' ' . $this->last_name;
+=======
+        return $value ?? $this->first_name.' '.$this->last_name;
+>>>>>>> 67cd443 (.)
     }
 
     public function getNameAttribute(?string $value): ?string
@@ -324,12 +478,21 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         if ($value !== null || $this->getKey() === null) {
             return $value;
         }
+<<<<<<< HEAD
         $name = Str::of((string) $this->email)->before('@')->toString();
         $i = 1;
         $value = $name . '-' . $i;
         while (self::firstWhere(['name' => $value]) !== null) {
             $i++;
             $value = $name . '-' . $i;
+=======
+        $name = Str::of($this->email)->before('@')->toString();
+        $i = 1;
+        $value = $name.'-'.$i;
+        while (self::firstWhere(['name' => $value]) !== null) {
+            $i++;
+            $value = $name.'-'.$i;
+>>>>>>> 67cd443 (.)
         }
         $this->update(['name' => $value]);
 
@@ -386,6 +549,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     {
         return true;
     }
+<<<<<<< HEAD
 
 
     /**
@@ -616,4 +780,6 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         /** @var array<int, string> */
         return $permissions->pluck('name')->values()->toArray();
     }
+=======
+>>>>>>> 67cd443 (.)
 }

@@ -11,6 +11,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Modules\User\Filament\Resources\RoleResource;
 
+<<<<<<< HEAD
 
 
 
@@ -20,6 +21,8 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 
 
 
+=======
+>>>>>>> 67cd443 (.)
 class ManageRolePermissions extends ManageRelatedRecords
 {
     protected static string $resource = RoleResource::class;
@@ -33,6 +36,7 @@ class ManageRolePermissions extends ManageRelatedRecords
         return 'Permissions';
     }
 
+<<<<<<< HEAD
     public function getFormSchema(): array
 {
     
@@ -45,6 +49,17 @@ class ManageRolePermissions extends ManageRelatedRecords
             
       ];
 }
+=======
+    public function form(Form $form): Form
+    {
+        return $form
+            ->schema([
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
+            ]);
+    }
+>>>>>>> 67cd443 (.)
 
     public function table(Table $table): Table
     {

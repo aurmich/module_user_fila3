@@ -20,6 +20,7 @@ class SocialProviderResource extends XotBaseResource
 {
     protected static ?string $model = SocialProvider::class;
 
+<<<<<<< HEAD
     /**
      * @return array<string, \Filament\Forms\Components\Component>
      */
@@ -27,11 +28,18 @@ class SocialProviderResource extends XotBaseResource
     {
         return [
             'name' => TextInput::make('name')
+=======
+    public static function getFormSchema(): array
+    {
+        return [
+            TextInput::make('name')
+>>>>>>> 67cd443 (.)
                 ->required()
                 ->maxLength(255)
                 ->placeholder(static::trans('fields.name.placeholder'))
                 ->helperText(static::trans('fields.name.helper_text')),
 
+<<<<<<< HEAD
             'scopes' => KeyValue::make('scopes')
                 // ->placeholder(static::trans('fields.scopes.placeholder'))
                 ->helperText(static::trans('fields.scopes.helper_text')),
@@ -72,6 +80,26 @@ class SocialProviderResource extends XotBaseResource
             'enabled' => Toggle::make('enabled'),
 
             'svg' => Textarea::make('svg')
+=======
+            KeyValue::make('scopes')
+                //->placeholder(static::trans('fields.scopes.placeholder'))
+                ->helperText(static::trans('fields.scopes.helper_text')),
+
+            KeyValue::make('parameters')
+                //->placeholder(static::trans('fields.parameters.placeholder'))
+                ->helperText(static::trans('fields.parameters.helper_text')),
+
+            Toggle::make('stateless')
+                ->helperText(static::trans('fields.stateless.helper_text')),
+
+            Toggle::make('active')
+                ->helperText(static::trans('fields.active.helper_text')),
+
+            Toggle::make('socialite')
+                ->helperText(static::trans('fields.socialite.helper_text')),
+
+            Textarea::make('svg')
+>>>>>>> 67cd443 (.)
                 ->columnSpanFull()
                 ->placeholder(static::trans('fields.svg.placeholder'))
                 ->helperText(static::trans('fields.svg.helper_text')),

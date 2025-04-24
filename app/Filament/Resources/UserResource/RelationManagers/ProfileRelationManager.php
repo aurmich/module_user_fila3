@@ -15,6 +15,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 
+<<<<<<< HEAD
 
 
 
@@ -23,12 +24,15 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 
 
 
+=======
+>>>>>>> 67cd443 (.)
 class ProfileRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'profile';
 
     protected static ?string $recordTitleAttribute = 'first_name';
 
+<<<<<<< HEAD
     /**
      * @return array<string, \Filament\Forms\Components\Component>
      */
@@ -42,6 +46,21 @@ class ProfileRelationManager extends XotBaseRelationManager
                 ->maxLength(255),
             'last_name' => TextInput::make('last_name'),
         ];
+=======
+    public function form(Form $form): Form
+    {
+        return $form
+            ->schema(
+                [
+                    TextInput::make('ente'),
+                    TextInput::make('matr'),
+                    TextInput::make('first_name')
+                        ->required()
+                        ->maxLength(255),
+                    TextInput::make('last_name'),
+                ]
+            );
+>>>>>>> 67cd443 (.)
     }
 
     public function table(Table $table): Table

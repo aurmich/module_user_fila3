@@ -15,6 +15,7 @@ class EditProfile extends BaseEditProfile
     /**
      * Costruisce il form schema per la pagina di modifica profilo.
      */
+<<<<<<< HEAD
     public function getFormSchema(): array
 {
     
@@ -27,4 +28,15 @@ class EditProfile extends BaseEditProfile
             
       ];
 }
+=======
+    public function form(Form $form): Form
+    {
+        return $form
+            ->schema([
+                $this->getNameFormComponent(),
+                $this->getEmailFormComponent(),
+                ...PasswordData::make()->getPasswordFormComponents('new_password'),
+            ]);
+    }
+>>>>>>> 67cd443 (.)
 }

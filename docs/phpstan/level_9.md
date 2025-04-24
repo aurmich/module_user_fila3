@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -16,6 +17,8 @@
 =======
 >>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
+=======
+>>>>>>> 67cd443 (.)
 # Rapporto PHPStan Livello 9 per il modulo User
 
 Data analisi: 2025-04-15 22:00:11
@@ -625,6 +628,7 @@ Trovati 71 errori al livello 9.
 - [PSR-12: Standard di codifica](https://www.php-fig.org/psr/psr-12/)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 aurmich/dev
 =======
@@ -641,3 +645,5 @@ aurmich/dev
 =======
 >>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
+=======
+>>>>>>> 67cd443 (.)

@@ -16,6 +16,7 @@ use Webmozart\Assert\Assert;
 
 class Reset extends Component
 {
+<<<<<<< HEAD
     public string $token = '';
 
     public string $email = '';
@@ -24,6 +25,17 @@ class Reset extends Component
 
     public string $passwordConfirmation = '';
 
+=======
+    public string $token;
+
+    public string $email;
+
+    public string $password;
+
+    public string $passwordConfirmation;
+
+    // ricordarsi di configurare il file auth.php
+>>>>>>> 67cd443 (.)
     public function mount(string $token): void
     {
         Assert::string($email = request()->query('email', ''));
@@ -32,10 +44,18 @@ class Reset extends Component
     }
 
     /**
+<<<<<<< HEAD
      * Reimposta la password dell'utente.
      */
     public function resetPassword(): \Livewire\Features\SupportRedirects\Redirector|RedirectResponse|null
     {
+=======
+     * Undocumented function.
+     */
+    public function resetPassword(): \Livewire\Features\SupportRedirects\Redirector|RedirectResponse|null
+    {
+        // $messages = __('xot::validation');
+>>>>>>> 67cd443 (.)
         $messages = __('user::validation');
 
         $this->validate([
@@ -52,7 +72,13 @@ class Reset extends Component
             ],
             function ($user, $password): void {
                 $user->password = Hash::make($password);
+<<<<<<< HEAD
                 $user->setRememberToken(Str::random(60));
+=======
+
+                $user->setRememberToken(Str::random(60));
+
+>>>>>>> 67cd443 (.)
                 $user->save();
 
                 event(new PasswordReset($user));
@@ -66,10 +92,18 @@ class Reset extends Component
 
         if ($response === Password::PASSWORD_RESET) {
             session()->flash($response_lang);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 67cd443 (.)
             return redirect(route('home'));
         }
 
         $this->addError('email', $response_lang);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 67cd443 (.)
         return null;
     }
 
@@ -92,9 +126,14 @@ class Reset extends Component
          */
         $view = 'pub_theme::livewire.auth.passwords.reset';
 
+<<<<<<< HEAD
         return view($view, [
             'layout' => 'pub_theme::layouts.auth'
         ]);
+=======
+        return view($view)
+            ->extends('pub_theme::layouts.auth');
+>>>>>>> 67cd443 (.)
     }
 
     /**

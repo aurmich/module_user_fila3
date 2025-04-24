@@ -5,6 +5,12 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Resources\RoleResource\Pages;
 
 use Filament\Tables;
+<<<<<<< HEAD
+=======
+use Filament\Tables\Actions\DeleteAction;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\ViewAction;
+>>>>>>> 67cd443 (.)
 use Filament\Tables\Columns\TextColumn;
 use Modules\User\Filament\Resources\RoleResource;
 use Modules\User\Models\Role;
@@ -43,4 +49,8 @@ class ListRoles extends XotBaseListRecords
                 ->multiple(),
         ];
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 67cd443 (.)
 }

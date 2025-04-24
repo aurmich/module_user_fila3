@@ -5,12 +5,18 @@ declare(strict_types=1);
 namespace Modules\User\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+<<<<<<< HEAD
 use Filament\Facades\Filament;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
+=======
+use Illuminate\Auth\Events\Verified;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\RedirectResponse;
+>>>>>>> 67cd443 (.)
 
 class VerifyEmailController extends Controller
 {
@@ -19,6 +25,7 @@ class VerifyEmailController extends Controller
      */
     public function __invoke(EmailVerificationRequest $request): RedirectResponse
     {
+<<<<<<< HEAD
         $user = Auth::user();
         if ($user === null) {
             return redirect()->route('filament.user.auth.login');
@@ -57,6 +64,16 @@ class VerifyEmailController extends Controller
         }
 
         event(new Verified($user));
+=======
+        $user = $request->user();
+        if ($user?->hasVerifiedEmail()) {
+            return redirect()->intended(route('dashboard', absolute: false).'?verified=1');
+        }
+
+        if ($user !== null && $user->markEmailAsVerified()) {
+            event(new Verified($user));
+        }
+>>>>>>> 67cd443 (.)
 
         return redirect()->intended(route('dashboard', absolute: false).'?verified=1');
     }

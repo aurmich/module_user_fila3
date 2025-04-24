@@ -28,7 +28,13 @@ use SocialiteProviders\Manager\ServiceProvider as SocialiteServiceProvider;
 class UserServiceProvider extends XotBaseServiceProvider
 {
     public string $name = 'User';
+<<<<<<< HEAD
     protected string $module_dir = __DIR__;
+=======
+
+    protected string $module_dir = __DIR__;
+
+>>>>>>> 67cd443 (.)
     protected string $module_ns = __NAMESPACE__;
 
     public function boot(): void
@@ -47,7 +53,11 @@ class UserServiceProvider extends XotBaseServiceProvider
         if (! is_string($app_name)) {
             $app_name = '';
         }
+<<<<<<< HEAD
 
+=======
+        // $url = url(route('password.reset', ['token' => $token, 'email' => $notifiable->getEmailForPasswordReset()]));
+>>>>>>> 67cd443 (.)
         ResetPassword::toMailUsing(function ($notifiable, string $token): MailMessage {
             return (new MailMessage)
                 ->template('user::notifications.email')
@@ -58,7 +68,10 @@ class UserServiceProvider extends XotBaseServiceProvider
                 ->line(__('user::reset_password.thank_you_for_using_app'))
                 ->salutation(__('user::reset_password.regards'));
         });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 67cd443 (.)
         $salutation = __('user::verify_email.salutation', ['app_name' => $app_name]);
         VerifyEmail::toMailUsing(function (object $notifiable, string $url) use ($salutation): MailMessage {
             return (new MailMessage)
@@ -84,8 +97,17 @@ class UserServiceProvider extends XotBaseServiceProvider
     {
         Password::defaults(function (): Password {
             $pwd = PasswordData::make();
+<<<<<<< HEAD
             return $pwd->getPasswordRule();
         });
+=======
+
+            return $pwd->getPasswordRule();
+        });
+        // $request->validate([
+        //     'password' => ['required', Password::defaults()],
+        // ]);
+>>>>>>> 67cd443 (.)
     }
 
     protected function registerAuthenticationProviders(): void
@@ -118,9 +140,18 @@ class UserServiceProvider extends XotBaseServiceProvider
         Passport::tokensExpireIn(now()->addDays(1));
         Passport::refreshTokensExpireIn(now()->addDays(30));
         Passport::personalAccessTokensExpireIn(now()->addMonths(6));
+<<<<<<< HEAD
         Passport::tokensCan([
             'view-user' => 'View user information',
             'core-technicians' => 'the technicians can ',
         ]);
+=======
+        Passport::tokensCan(
+            [
+                'view-user' => 'View user information',
+                'core-technicians' => 'the technicians can ',
+            ]
+        );
+>>>>>>> 67cd443 (.)
     }
 }

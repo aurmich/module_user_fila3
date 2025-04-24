@@ -7,16 +7,23 @@ namespace Modules\User\Listeners;
 use Illuminate\Auth\Events\OtherDeviceLogout;
 use Illuminate\Http\Request;
 use Modules\User\Models\AuthenticationLog;
+<<<<<<< HEAD
 use Illuminate\Auth\Events\Login;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Facades\Auth;
 use Modules\User\Contracts\HasAuthentications;
+=======
+>>>>>>> 67cd443 (.)
 
 // use Rappasoft\LaravelAuthenticationLog\Traits\AuthenticationLoggable;
 
 class OtherDeviceLogoutListener
 {
+<<<<<<< HEAD
     protected Request $request;
+=======
+    public Request $request;
+>>>>>>> 67cd443 (.)
 
     public function __construct(Request $request)
     {
@@ -25,7 +32,11 @@ class OtherDeviceLogoutListener
 
     public function handle(OtherDeviceLogout $event): void
     {
+<<<<<<< HEAD
         if ($event->user && $event->user instanceof HasAuthentications) {
+=======
+        if ($event->user) {
+>>>>>>> 67cd443 (.)
             $user = $event->user;
             $ip = $this->request->ip();
 
@@ -49,6 +60,7 @@ class OtherDeviceLogoutListener
             }
         }
     }
+<<<<<<< HEAD
 
     /**
      * Handle the event.
@@ -76,4 +88,6 @@ class OtherDeviceLogoutListener
             ->where('login_successful', true)
             ->get();
     }
+=======
+>>>>>>> 67cd443 (.)
 }

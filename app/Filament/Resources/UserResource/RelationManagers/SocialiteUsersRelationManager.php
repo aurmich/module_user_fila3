@@ -15,6 +15,7 @@ use Modules\User\Models\SocialiteUser;
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 use Modules\Xot\Filament\Traits\HasXotTable;
 
+<<<<<<< HEAD
 
 
 
@@ -23,6 +24,8 @@ use Modules\Xot\Filament\Traits\HasXotTable;
 
 
 
+=======
+>>>>>>> 67cd443 (.)
 /**
  * Class Modules\User\Filament\Resources\UserResource\RelationManagers\SocialiteUsersRelationManager.
  */
@@ -35,7 +38,14 @@ class SocialiteUsersRelationManager extends XotBaseRelationManager
     /**
      * Configure the form schema for managing Socialite User data.
      */
+<<<<<<< HEAD
 
+=======
+    public function form(Form $form): Form
+    {
+        return $form->schema($this->getFormSchema());
+    }
+>>>>>>> 67cd443 (.)
 
     /**
      * Define form fields in a dedicated method for reusability.

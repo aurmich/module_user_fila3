@@ -24,6 +24,7 @@ class GetUserModelAttributesFromSocialiteAction
         private readonly string $provider,
         private readonly SocialiteUserContract $oauthUser,
     ) {
+<<<<<<< HEAD
         if (empty($provider)) {
             throw new \InvalidArgumentException('Il provider non può essere vuoto');
         }
@@ -49,6 +50,13 @@ class GetUserModelAttributesFromSocialiteAction
             throw new \RuntimeException('L\'email deve essere una stringa non vuota');
         }
         $this->email = $email;
+=======
+        $nameFieldsResolver = app(UserNameFieldsResolver::class, ['user' => $this->oauthUser]);
+        $this->name = $nameFieldsResolver->name;
+        $this->first_name = $nameFieldsResolver->name;
+        $this->last_name = $nameFieldsResolver->last_name;
+        $this->email = (string) $this->oauthUser->getEmail();
+>>>>>>> 67cd443 (.)
     }
 
     public function getProvider(): string

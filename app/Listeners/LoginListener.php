@@ -8,7 +8,10 @@ use Illuminate\Auth\Events\Login;
 use Illuminate\Http\Request;
 use Modules\User\Actions\GetCurrentDeviceAction;
 use Modules\User\Models\DeviceUser;
+<<<<<<< HEAD
 use Modules\User\Contracts\HasAuthentications;
+=======
+>>>>>>> 67cd443 (.)
 
 class LoginListener
 {
@@ -32,12 +35,18 @@ class LoginListener
         // Session::flash('login-success', 'Hello ' . $event->user->name . ', welcome back!');
         $device = app(GetCurrentDeviceAction::class)->execute();
         $user = $event->user;
+<<<<<<< HEAD
         // $user->devices()->syncWithoutDetaching($device->,['login_at'=>now(),'logout_at'=>null]);
         // $res= $user->devices()->syncWithPivotValues($device->,['login_at'=>now(),'logout_at'=>null]);
+=======
+        // $user->devices()->syncWithoutDetaching($device->id,['login_at'=>now(),'logout_at'=>null]);
+        // $res= $user->devices()->syncWithPivotValues($device->id,['login_at'=>now(),'logout_at'=>null]);
+>>>>>>> 67cd443 (.)
         $pivot = DeviceUser::firstOrCreate(['user_id' => $user->getAuthIdentifier(), 'device_id' => $device->id]);
         $pivot->update(['login_at' => now(), 'logout_at' => null]);
 
         // -----
+<<<<<<< HEAD
         if ($user && $user instanceof HasAuthentications) {
             $ip = $this->request->ip();
             $userAgent = $this->request->userAgent();
@@ -52,5 +61,18 @@ class LoginListener
                 'location' => $location,
             ]);
         }
+=======
+        $userAgent = $this->request->userAgent();
+        $ip = $this->request->ip();
+        // $location = optional(geoip()->getLocation($ip))->toArray();
+        $location = [];
+        $log = $user->authentications()->create([
+            'ip_address' => $ip,
+            'user_agent' => $userAgent,
+            'login_at' => now(),
+            'login_successful' => true,
+            'location' => $location,
+        ]);
+>>>>>>> 67cd443 (.)
     }
 }

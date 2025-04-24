@@ -7,7 +7,10 @@ namespace Modules\User\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 use Modules\User\Models\Role;
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
+=======
+>>>>>>> 67cd443 (.)
 use Modules\Xot\Datas\XotData;
 use Nwidart\Modules\Facades\Module;
 use Symfony\Component\Console\Input\InputOption;
@@ -47,9 +50,12 @@ class AssignModuleCommand extends Command
     public function handle(): void
     {
         $email = text('email ?');
+<<<<<<< HEAD
         /**
          * @var UserContract $user
          */
+=======
+>>>>>>> 67cd443 (.)
         $user = XotData::make()->getUserByEmail($email);
         /*
         $modules = collect(Module::all())->map(function ($module) {
@@ -72,7 +78,11 @@ class AssignModuleCommand extends Command
         );
 
         foreach ($modules as $module) {
+<<<<<<< HEAD
             $module_low = Str::lower(is_string($module) ? $module : (string) $module);
+=======
+            $module_low = Str::lower((string) $module);
+>>>>>>> 67cd443 (.)
             $role = $module_low.'::admin';
             $role = Role::firstOrCreate(['name' => $role]);
             $user->assignRole($role);

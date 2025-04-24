@@ -5,11 +5,17 @@ declare(strict_types=1);
 namespace Modules\User\Models\Traits;
 
 use Filament\Facades\Filament;
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Modules\User\Contracts\TeamContract;
 use Modules\User\Models\Scopes\TenantScope;
 use Modules\User\Models\Tenant;
+=======
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Modules\User\Contracts\TeamContract;
+use Modules\User\Models\Scopes\TenantScope;
+>>>>>>> 67cd443 (.)
 use Modules\Xot\Datas\XotData;
 
 /**
@@ -17,6 +23,7 @@ use Modules\Xot\Datas\XotData;
  */
 trait InteractsWithTenant
 {
+<<<<<<< HEAD
     /**
      * Tenant corrente.
      *
@@ -67,6 +74,13 @@ trait InteractsWithTenant
             // Se Filament non è disponibile, lascia il tenant come null
             $this->currentTenant = null;
         }
+=======
+    public function tenant(): BelongsTo
+    {
+        $class = XotData::make()->getTenantClass();
+
+        return $this->belongsTo($class);
+>>>>>>> 67cd443 (.)
     }
 
     /**
@@ -78,12 +92,16 @@ trait InteractsWithTenant
 
         static::creating(
             static function ($model): void {
+<<<<<<< HEAD
                 if ($model !== null) {
                     $tenant = Filament::getTenant();
                     if ($tenant !== null) {
                         $model->tenant_id = $tenant->getKey();
                     }
                 }
+=======
+                $model->tenant_id = Filament::getTenant()?->getKey();
+>>>>>>> 67cd443 (.)
             }
         );
     }
@@ -93,6 +111,7 @@ trait InteractsWithTenant
      */
     protected function setTenantIdAttribute(?int $value): void
     {
+<<<<<<< HEAD
         $tenant = Filament::getTenant();
         if ($value === null && $tenant !== null) {
             $tenantId = $tenant->getKey();
@@ -123,5 +142,11 @@ trait InteractsWithTenant
                 static::addGlobalScope(new TenantScope());
             }
         }
+=======
+        if ($value === null) {
+            $value = Filament::getTenant()?->getKey();
+        }
+        $this->attributes['tenant_id'] = $value;
+>>>>>>> 67cd443 (.)
     }
 }

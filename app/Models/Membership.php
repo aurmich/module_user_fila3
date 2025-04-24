@@ -10,9 +10,17 @@ use Illuminate\Support\Carbon;
  * Modules\User\Models\Membership.
  *
  * @property string $role
+<<<<<<< HEAD
  * @method static \Illuminate\Database\Eloquent\Builder|Membership newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Membership newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Membership query()
+=======
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|Membership newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Membership newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Membership query()
+ *
+>>>>>>> 67cd443 (.)
  * @property int $id
  * @property string $uuid
  * @property string|null $team_id
@@ -22,6 +30,10 @@ use Illuminate\Support\Carbon;
  * @property string|null $created_by
  * @property string|null $updated_by
  * @property string|null $customer_id
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 67cd443 (.)
  * @method static \Illuminate\Database\Eloquent\Builder|Membership whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Membership whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Membership whereCustomerId($value)
@@ -32,12 +44,25 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|Membership whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Membership whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Membership whereUuid($value)
+<<<<<<< HEAD
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
  * @method static \Illuminate\Database\Eloquent\Builder|Membership whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Membership whereDeletedBy($value)
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+=======
+ *
+ * @property Carbon|null $deleted_at
+ * @property string|null $deleted_by
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|Membership whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Membership whereDeletedBy($value)
+ *
+ * @property \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+ *
+>>>>>>> 67cd443 (.)
  * @mixin \Eloquent
  */
 class Membership extends BasePivot
