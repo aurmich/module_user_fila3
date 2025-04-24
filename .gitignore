@@ -27,3 +27,6 @@ cache/
 build
 *.exe
 *:Zone.Identifier
+
+# File di log
+*.log
