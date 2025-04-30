@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\User\App\Filament\Widgets\Auth;
+namespace Modules\User\Filament\Widgets\Auth;
 
 use Filament\Widgets\Widget;
 use Filament\Forms\Components\TextInput;
