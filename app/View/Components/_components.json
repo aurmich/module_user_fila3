@@ -1,0 +1,21 @@
+<<<<<<< HEAD
+[]
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+[
+    {
+        "name": "mail.message",
+        "class": "Mail\\Message",
+        "module": null,
+        "path": null,
+        "ns": "Modules\\User\\View\\Components\\Mail\\Message"
+    }
+]
+=======
+[]
+>>>>>>> aurmich/dev
+=======
+[]
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev

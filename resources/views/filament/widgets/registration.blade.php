@@ -1,0 +1,36 @@
+<div class="min-h-screen flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div class="sm:mx-auto sm:w-full sm:max-w-md">
+        {{-- Intestazione form --}}
+        <div class="flex items-center justify-center mb-4">
+            <div class="w-12 h-1 bg-blue-900 rounded-full mr-2"></div>
+            <h2 class="text-xl font-medium text-blue-900">Crea il tuo account</h2>
+            <div class="w-12 h-1 bg-blue-900 rounded-full ml-2"></div>
+        </div>
+        <p class="text-center text-gray-500 text-sm">Compila il form per accedere a tutti i servizi di SaluteOra</p>
+    </div>
+
+    <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+        <!-- Form di registrazione -->
+        <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+            <form wire:submit.prevent="register" class="space-y-6">
+                {{ $this->form }}
+            </form>
+        </div>
+
+        <!-- Footer con link di accesso -->
+        <div class="text-sm text-center text-gray-600 mt-6 flex items-center justify-center space-x-2">
+            <span>Hai già un account?</span>
+            <a href="{{ route('login') }}" class="inline-flex items-center text-blue-800 hover:text-blue-600 transition-colors duration-200">
+                <span>Accedi</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- Informazioni aggiuntive -->
+        <div class="mt-8 text-xs text-center text-gray-500 px-4">
+            <p>Registrandoti, accetti i <a href="#" class="text-blue-800 hover:underline">Termini di Servizio</a> e l'<a href="#" class="text-blue-800 hover:underline">Informativa sulla Privacy</a> di SaluteOra</p>
+        </div>
+    </div>
+</div>
