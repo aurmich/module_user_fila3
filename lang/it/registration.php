@@ -15,6 +15,7 @@ return array (
     array (
       'label' => 'Privacy',
     ),
+<<<<<<< HEAD
     'Contatti' => 
     array (
       'label' => 'Contatti',
@@ -39,6 +40,8 @@ return array (
     array (
       'label' => 'Informazioni di Contatto',
     ),
+=======
+>>>>>>> aurmich/dev
   ),
   'fields' => 
   array (
@@ -70,6 +73,7 @@ return array (
     array (
       'label' => 'newsletter',
     ),
+<<<<<<< HEAD
     'notes' => 
     array (
       'label' => 'notes',
@@ -154,5 +158,7 @@ return array (
     array (
       'label' => 'last_dentist_visit',
     ),
+=======
+>>>>>>> aurmich/dev
   ),
 );

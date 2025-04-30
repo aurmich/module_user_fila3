@@ -6,17 +6,37 @@ namespace Modules\User\Filament\Resources\PermissionResource\Pages;
 
 use Filament\Actions\CreateAction;
 use Filament\Forms\Components\Select;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 use Filament\Tables;
 use Filament\Tables\Actions\BulkAction;
 use Filament\Tables\Actions\DeleteBulkAction;
 use Filament\Tables\Columns\IconColumn;
+<<<<<<< HEAD
+=======
+=======
+use Filament\Tables\Actions\BulkAction;
+use Filament\Tables\Actions\DeleteBulkAction;
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Collection;
 use Modules\User\Filament\Resources\PermissionResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Webmozart\Assert\Assert;
+<<<<<<< HEAD
 
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+=======
+<<<<<<< HEAD
+
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+=======
+use Filament\Tables;
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
 
 class ListPermissions extends XotBaseListRecords
 {
@@ -28,6 +48,10 @@ class ListPermissions extends XotBaseListRecords
     public function getListTableColumns(): array
     {
         return [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
             'name' => TextColumn::make('name')
                 ->searchable()
                 ->sortable(),
@@ -37,6 +61,26 @@ class ListPermissions extends XotBaseListRecords
             'active' => IconColumn::make('active')
                 ->boolean(),
             'created_at' => TextColumn::make('created_at')
+<<<<<<< HEAD
+=======
+=======
+            'id' => Tables\Columns\TextColumn::make('id')
+                ->searchable()
+                ->sortable(),
+            'name' => Tables\Columns\TextColumn::make('name')
+                ->searchable()
+                ->sortable()
+                ->wrap(),
+            'guard_name' => Tables\Columns\TextColumn::make('guard_name')
+                ->searchable()
+                ->sortable(),
+            'roles_count' => Tables\Columns\TextColumn::make('roles_count')
+                ->counts('roles')
+                ->numeric()
+                ->sortable(),
+            'created_at' => Tables\Columns\TextColumn::make('created_at')
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
                 ->dateTime()
                 ->sortable(),
         ];
@@ -78,13 +122,25 @@ class ListPermissions extends XotBaseListRecords
     }
 
     /**
+<<<<<<< HEAD
      * @return array<string, BulkAction>
+=======
+<<<<<<< HEAD
+     * @return array<string, BulkAction>
+=======
+     * @return array<string, Tables\Actions\BulkAction>
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
      */
     public function getTableBulkActions(): array
     {
         Assert::classExists($roleModel = config('permission.models.role'));
 
         return [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
             'delete' => DeleteBulkAction::make(),
             'attach_role' => BulkAction::make('Attach Role')
                 ->action(
@@ -98,6 +154,19 @@ class ListPermissions extends XotBaseListRecords
                                 $record->roles()->sync($data['role']);
                                 $record->save();
                             }
+<<<<<<< HEAD
+=======
+=======
+            'delete' => Tables\Actions\DeleteBulkAction::make(),
+            'attach_role' => Tables\Actions\BulkAction::make('Attach Role')
+                ->action(
+                    static function (Collection $collection, array $data): void {
+                        foreach ($collection as $record) {
+                            Assert::isInstanceOf($record, \Modules\Xot\Datas\XotData::make()->getUserClass(), '['.__LINE__.']['.__CLASS__.']');
+                            $record->roles()->sync($data['role']);
+                            $record->save();
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
                         }
                     }
                 )

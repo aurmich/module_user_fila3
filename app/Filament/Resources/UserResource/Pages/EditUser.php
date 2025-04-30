@@ -2,7 +2,14 @@
 
 /**
  * @see https://github.com/ryangjchandler/filament-user-resource/blob/main/src/resources/UserResource/Pages/EditUser.php
+<<<<<<< HEAD
  * Pagina di modifica utente per Filament.
+=======
+<<<<<<< HEAD
+ * Pagina di modifica utente per Filament.
+=======
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
  */
 
 declare(strict_types=1);
@@ -11,6 +18,10 @@ namespace Modules\User\Filament\Resources\UserResource\Pages;
 
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 use Illuminate\Support\Facades\Hash;
 use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Models\User;
@@ -21,11 +32,22 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 /**
  * Pagina per la modifica degli utenti con particolare gestione della password.
  */
+<<<<<<< HEAD
+=======
+=======
+use Modules\User\Filament\Resources\UserResource;
+
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
 class EditUser extends EditRecord
 {
     // //
     protected static string $resource = UserResource::class;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
     protected function mutateFormDataBeforeSave(array $data): array
     {
         Assert::isArray($data);
@@ -52,6 +74,22 @@ class EditUser extends EditRecord
         return $data;
     }
 
+<<<<<<< HEAD
+=======
+=======
+    /* --- dovrebbe fare il mutator da controllare
+    public function beforeSave(): void
+    {
+        Assert::isArray($this->data);
+        if (! array_key_exists('new_password', $this->data) || ! filled($this->data['new_password'])) {
+            return;
+        }
+
+        $this->record->password = Hash::make($this->data['new_password']);
+    }
+    */
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
     protected function getHeaderActions(): array
     {
         return [

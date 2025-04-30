@@ -20,8 +20,16 @@ use Modules\User\Datas\PasswordData;
 use Modules\Xot\Filament\Traits\TransTrait;
 
 /**
+<<<<<<< HEAD
  * Pagina per la gestione delle impostazioni delle password.
  *
+=======
+<<<<<<< HEAD
+ * Pagina per la gestione delle impostazioni delle password.
+ *
+=======
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
  * @property Forms\ComponentContainer $form
  */
 class Password extends Page implements HasForms
@@ -29,6 +37,10 @@ class Password extends Page implements HasForms
     use InteractsWithForms;
     use TransTrait;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
     /**
      * Dati del form per la gestione delle password.
      *
@@ -60,17 +72,39 @@ class Password extends Page implements HasForms
     /**
      * Inizializza la pagina.
      */
+<<<<<<< HEAD
+=======
+=======
+    public ?array $formData = [];
+
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+
+    protected static string $view = 'user::filament.pages.password';
+
+    protected static ?int $navigationSort = 1;
+
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
     public function mount(): void
     {
         $this->fillForms();
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
     /**
      * Definisce la struttura del form.
      *
      * @param Form $form Il form da configurare
      * @return Form Il form configurato
      */
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
     public function form(Form $form): Form
     {
         return $form
@@ -107,6 +141,10 @@ class Password extends Page implements HasForms
             ->statePath('formData');
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
     /**
      * Aggiorna i dati delle impostazioni delle password.
      *
@@ -116,6 +154,14 @@ class Password extends Page implements HasForms
     {
         try {
             /** @var array<string, mixed> $data */
+<<<<<<< HEAD
+=======
+=======
+    public function updateData(): void
+    {
+        try {
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
             $data = $this->form->getState();
             TenantService::saveConfig('password', $data);
             // $this->handleRecordUpdate($this->getUser(), $data);
@@ -130,11 +176,20 @@ class Password extends Page implements HasForms
             ->send();
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
     /**
      * Riempie i form con i dati esistenti.
      *
      * @return void
      */
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
     protected function fillForms(): void
     {
         $data = PasswordData::make()->toArray();
@@ -142,19 +197,39 @@ class Password extends Page implements HasForms
         $this->form->fill($data);
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
     /**
      * Restituisce le azioni per il form di aggiornamento.
      *
      * @return array<Action>
      */
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
     protected function getUpdateFormActions(): array
     {
         return [
             Action::make('updateDataAction')
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
                 ->submit('editDataForm'),
         ];
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
     /**
      * Gestisce l'aggiornamento del record.
      *
@@ -162,6 +237,11 @@ class Password extends Page implements HasForms
      * @param array<string, mixed> $data I dati per l'aggiornamento
      * @return Model Il record aggiornato
      */
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
     protected function handleRecordUpdate(Model $record, array $data): Model
     {
         $record->update($data);

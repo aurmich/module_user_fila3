@@ -9,24 +9,53 @@ use Livewire\Component;
 
 class Email extends Component
 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
     public string $email = '';
 
     public ?string $emailSentMessage = null;
 
     /**
      * Invia il link per il reset della password.
+<<<<<<< HEAD
+=======
+=======
+    public string $email;
+
+    public ?string $emailSentMessage = null; // was false
+
+    /**
+     * Undocumented function.
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
      */
     public function sendResetPasswordLink(): void
     {
         $this->validate([
             'email' => ['required', 'email'],
         ]);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
         $broker = $this->broker();
         $response = $broker->sendResetLink(['email' => $this->email]);
 
         if ($response === Password::RESET_LINK_SENT) {
             $this->emailSentMessage = trans('user::'.$response);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
             return;
         }
 
@@ -52,8 +81,19 @@ class Email extends Component
          */
         $view = 'pub_theme::livewire.auth.passwords.email';
 
+<<<<<<< HEAD
         return view($view, [
             'layout' => 'pub_theme::layouts.auth'
         ]);
+=======
+<<<<<<< HEAD
+        return view($view, [
+            'layout' => 'pub_theme::layouts.auth'
+        ]);
+=======
+        return view($view)
+            ->extends('pub_theme::layouts.auth');
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
     }
 }

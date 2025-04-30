@@ -15,23 +15,51 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class TeamResource extends XotBaseResource
 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
     
     /**
      * Get the model class name for this resource.
      *
      * @return class-string<\Illuminate\Database\Eloquent\Model>
      */
+<<<<<<< HEAD
+=======
+=======
+    protected static ?string $navigationIcon = 'heroicon-o-users';
+
+    protected static ?string $navigationLabel = 'Teams';
+
+    protected static ?string $slug = 'teams';
+
+    protected static ?string $navigationGroup = 'Admin';
+
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
     public static function getModel(): string
     {
         $xot = XotData::make();
 
+<<<<<<< HEAD
         /** @var class-string<\Illuminate\Database\Eloquent\Model> */
+=======
+<<<<<<< HEAD
+        /** @var class-string<\Illuminate\Database\Eloquent\Model> */
+=======
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
         return $xot->getTeamClass();
     }
 
     public static function getFormSchema(): array
     {
         return [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
             'name' => TextInput::make('name')
                 ->required()
                 ->maxLength(255),
@@ -43,4 +71,40 @@ class TeamResource extends XotBaseResource
     }
 
    
+<<<<<<< HEAD
+=======
+=======
+            TextInput::make('name')
+                ->required()
+                ->maxLength(255),
+            TextInput::make('display_name')
+                ->maxLength(255),
+            TextInput::make('description')
+                ->maxLength(255),
+            \Filament\Forms\Components\Select::make('owner_id')
+                ->relationship('owner', 'name')
+                ->searchable()
+                ->preload()
+                ->required(),
+        ];
+    }
+
+    public static function getRelations(): array
+    {
+        return [
+            UsersRelationManager::class,
+        ];
+    }
+
+    public static function getPages(): array
+    {
+        return [
+            'index' => ListTeams::route('/'),
+            'create' => CreateTeam::route('/create'),
+            'view' => ViewTeam::route('/{record}'),
+            'edit' => EditTeam::route('/{record}/edit'),
+        ];
+    }
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
 }

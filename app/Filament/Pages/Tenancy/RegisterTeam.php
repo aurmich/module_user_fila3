@@ -18,6 +18,10 @@ class RegisterTeam extends RegisterTenant
         return 'Register team';
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
     public function getFormSchema(): array
 {
     
@@ -29,6 +33,21 @@ class RegisterTeam extends RegisterTenant
                 
       ];
 }
+<<<<<<< HEAD
+=======
+=======
+    public function form(Form $form): Form
+    {
+        return $form
+            ->schema(
+                [
+                    TextInput::make('name'),
+                    // ...
+                ]
+            );
+    }
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
 
     /**
      * @param  array<string, mixed>  $data

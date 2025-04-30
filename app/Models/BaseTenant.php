@@ -60,6 +60,10 @@ abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia, Tena
             ->saveSlugsTo('slug');
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
     /**
      * Ottiene tutti i membri associati al tenant.
      *
@@ -68,11 +72,22 @@ abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia, Tena
     public function members(): BelongsToMany
     {
         /** @var class-string<\Illuminate\Database\Eloquent\Model> $user_class */
+<<<<<<< HEAD
+=======
+=======
+    public function members(): BelongsToMany
+    {
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
         $user_class = XotData::make()->getUserClass();
 
         return $this->belongsToManyX($user_class);
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
     /**
      * Ottiene tutti gli utenti associati al tenant.
      *
@@ -82,6 +97,15 @@ abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia, Tena
     {
         $xot = XotData::make();
         /** @var class-string<\Illuminate\Database\Eloquent\Model> $userClass */
+<<<<<<< HEAD
+=======
+=======
+    public function users(): BelongsToMany
+    {
+        $xot = XotData::make();
+
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
         $userClass = $xot->getUserClass();
 
         // $this->setConnection('mysql');
@@ -89,11 +113,20 @@ abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia, Tena
         // ->as('membership')
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
     /**
      * Ottiene l'URL dell'avatar del tenant per Filament.
      *
      * @return string|null URL dell'avatar o null se non presente
      */
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
     public function getFilamentAvatarUrl(): ?string
     {
         // return $this->avatar_url;

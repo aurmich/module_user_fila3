@@ -48,12 +48,32 @@ class PasswordExpired extends Page implements HasForms
 
     protected static bool $shouldRegisterNavigation = false;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
     public function getFormSchema(): array
     {
         return [
             $this->getCurrentPasswordFormComponent(),
             ...PasswordData::make()->getPasswordFormComponents('password'),
         ];
+<<<<<<< HEAD
+=======
+=======
+    public function form(Form $form): Form
+    {
+        return $form
+            ->schema([
+                $this->getCurrentPasswordFormComponent(),
+                /*
+                $this->getPasswordFormComponent(),
+                $this->getPasswordConfirmationFormComponent(),
+                */
+                ...PasswordData::make()->getPasswordFormComponents('password'),
+            ]);
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
     }
 
     public function getResetPasswordFormAction(): Action
@@ -118,6 +138,10 @@ class PasswordExpired extends Page implements HasForms
         // get password expiry date and time
         $passwordExpiryDateTime = now()->addDays($pwd->expires_in);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
         // Verificare che l'utente esistante e che sia un modello Eloquent
         if (!($user instanceof \Illuminate\Database\Eloquent\Model)) {
             throw new \InvalidArgumentException('L\'utente deve essere un modello Eloquent con il metodo update');
@@ -125,16 +149,32 @@ class PasswordExpired extends Page implements HasForms
 
         // set password expiry date and time
         $user->update([
+<<<<<<< HEAD
+=======
+=======
+        // set password expiry date and time
+        $user = tap($user)->update([
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
             'password_expires_at' => $passwordExpiryDateTime,
             'is_otp' => false,
             'password' => Hash::make($password),
         ]);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
         // Verificare che l'utente implementi l'interfaccia UserContract prima di passarlo all'evento
         if (!$user instanceof \Modules\Xot\Contracts\UserContract) {
             throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia UserContract');
         }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
         event(new NewPasswordSet($user));
 
         Notification::make()
@@ -142,18 +182,65 @@ class PasswordExpired extends Page implements HasForms
             ->success()
             ->send();
 
+<<<<<<< HEAD
         return new PasswordResetResponse();
+=======
+<<<<<<< HEAD
+        return new PasswordResetResponse();
+=======
+        return new PasswordResetResponse;
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
     }
 
     protected function getCurrentPasswordFormComponent(): Component
     {
         return TextInput::make('current_password')
             ->password()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
             ->revealable()
             ->required()
             ->validationAttribute(static::trans('fields.current_password.validation_attribute'));
     }
 
+<<<<<<< HEAD
+=======
+=======
+            // ->revealable(filament()->arePasswordsRevealable())
+            ->revealable()
+            ->required()
+            // ->rule(PasswordRule::default())
+            ->validationAttribute(static::trans('fields.current_password.validation_attribute'));
+    }
+
+    /*
+    protected function getPasswordFormComponent(): Component
+    {
+        return TextInput::make('password')
+            ->password()
+            // ->revealable(filament()->arePasswordsRevealable())
+            ->revealable()
+            ->required()
+            ->rule(PasswordRule::default())
+            ->same('passwordConfirmation')
+            ->validationAttribute(static::trans('fields.password.validation_attribute'));
+    }
+
+    protected function getPasswordConfirmationFormComponent(): Component
+    {
+        return TextInput::make('passwordConfirmation')
+            ->password()
+            // ->revealable(filament()->arePasswordsRevealable())
+            ->revealable()
+            ->required()
+            ->dehydrated(false);
+    }
+    */
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
     /**
      * @return array<Action|ActionGroup>
      */

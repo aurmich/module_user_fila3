@@ -5,12 +5,24 @@ declare(strict_types=1);
 namespace Modules\User\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 use Filament\Facades\Filament;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
+<<<<<<< HEAD
+=======
+=======
+use Illuminate\Auth\Events\Verified;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\RedirectResponse;
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
 
 class VerifyEmailController extends Controller
 {
@@ -19,6 +31,10 @@ class VerifyEmailController extends Controller
      */
     public function __invoke(EmailVerificationRequest $request): RedirectResponse
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
         $user = Auth::user();
         if ($user === null) {
             return redirect()->route('filament.user.auth.login');
@@ -57,6 +73,19 @@ class VerifyEmailController extends Controller
         }
 
         event(new Verified($user));
+<<<<<<< HEAD
+=======
+=======
+        $user = $request->user();
+        if ($user?->hasVerifiedEmail()) {
+            return redirect()->intended(route('dashboard', absolute: false).'?verified=1');
+        }
+
+        if ($user !== null && $user->markEmailAsVerified()) {
+            event(new Verified($user));
+        }
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
 
         return redirect()->intended(route('dashboard', absolute: false).'?verified=1');
     }

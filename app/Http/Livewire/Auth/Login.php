@@ -4,7 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\User\Http\Livewire\Auth;
 
+<<<<<<< HEAD
 use Filament\Forms\ComponentContainer;
+=======
+<<<<<<< HEAD
+use Filament\Forms\ComponentContainer;
+=======
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Concerns\InteractsWithForms;
@@ -14,10 +21,22 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Modules\Xot\Actions\File\ViewCopyAction;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 
 /**
  * Componente Livewire per la gestione del login.
  *
+<<<<<<< HEAD
+=======
+=======
+use Filament\Forms\ComponentContainer;
+
+/**
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
  * @property ComponentContainer $form
  */
 class Login extends Component implements HasForms
@@ -25,16 +44,32 @@ class Login extends Component implements HasForms
     use InteractsWithForms;
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
      * Regole di validazione.
      *
      * @var array<string, array<string|object>>
      */
     protected array $rules = [
+<<<<<<< HEAD
+=======
+=======
+     * @var array<string, mixed>
+     */
+    protected $rules = [
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
         'email' => ['required', 'email'],
         'password' => ['required'],
         'remember' => ['boolean'],
     ];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
     /**
      * Email dell'utente.
      */
@@ -53,16 +88,36 @@ class Login extends Component implements HasForms
     /**
      * Inizializza il componente.
      */
+<<<<<<< HEAD
+=======
+=======
+    public string $email = '';
+
+    public string $password = '';
+
+    public bool $remember = false;
+
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
     public function mount(): void
     {
         $this->form = $this->form();
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
     /**
      * Definisce lo schema del form.
      *
      * @return array<TextInput|Checkbox>
      */
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
     protected function getFormSchema(): array
     {
         return [
@@ -85,9 +140,18 @@ class Login extends Component implements HasForms
         ];
     }
 
+<<<<<<< HEAD
     /**
      * Crea il form.
      */
+=======
+<<<<<<< HEAD
+    /**
+     * Crea il form.
+     */
+=======
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
     public function form(): Form
     {
         return $this->makeForm()
@@ -95,12 +159,24 @@ class Login extends Component implements HasForms
     }
 
     /**
+<<<<<<< HEAD
      * Esegue l'autenticazione dell'utente.
+=======
+<<<<<<< HEAD
+     * Esegue l'autenticazione dell'utente.
+=======
+     * Execute the action.
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
      *
      * @return RedirectResponse|void
      */
     public function authenticate()
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
         /** @var array{email: string, password: string, remember?: bool} $data */
         $data = $this->validate();
 
@@ -108,6 +184,15 @@ class Login extends Component implements HasForms
         $remember = $data['remember'] ?? false;
         // Converto esplicitamente a bool per PHPStan livello 10
         $remember = (bool) $remember;
+<<<<<<< HEAD
+=======
+=======
+        $data = $this->validate();
+
+        // Estrai remember dal data array
+        $remember = $data['remember'] ?? false;
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
         unset($data['remember']);
 
         if (Auth::attempt($data, $remember)) {
@@ -119,11 +204,20 @@ class Login extends Component implements HasForms
         $this->addError('email', __('Le credenziali fornite non sono corrette.'));
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
     /**
      * Renderizza il componente.
      *
      * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
      */
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
     public function render(): \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
     {
         app(ViewCopyAction::class)->execute('user::livewire.auth.login', 'pub_theme::livewire.auth.login');
@@ -135,8 +229,19 @@ class Login extends Component implements HasForms
          */
         $view = 'pub_theme::livewire.auth.login';
 
+<<<<<<< HEAD
         return view($view, [
             'layout' => 'pub_theme::layouts.auth'
         ]);
+=======
+<<<<<<< HEAD
+        return view($view, [
+            'layout' => 'pub_theme::layouts.auth'
+        ]);
+=======
+        return view($view)
+            ->extends('pub_theme::layouts.auth');
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
     }
 }

@@ -4,6 +4,16 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources\TeamResource\Pages;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+use Filament\Actions\CreateAction;
+use Filament\Tables\Actions\DeleteAction;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\ViewAction;
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
 use Filament\Tables\Columns\TextColumn;
 use Modules\User\Filament\Resources\TeamResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
@@ -32,4 +42,12 @@ class ListTeams extends XotBaseListRecords
                 ->sortable(),
         ];
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+   
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
 }

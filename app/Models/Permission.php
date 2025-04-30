@@ -16,7 +16,15 @@ use Webmozart\Assert\Assert;
 
 /**
  * Class Permission.
+<<<<<<< HEAD
  * 
+=======
+<<<<<<< HEAD
+ * 
+=======
+ *
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
  * Extends Spatie's Permission model to interact with the permission system.
  *
  * @property string $id
@@ -30,6 +38,13 @@ use Webmozart\Assert\Assert;
  * @property int|null $roles_count
  * @property EloquentCollection<int, \Illuminate\Database\Eloquent\Model&UserContract> $users
  * @property int|null $users_count
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
  * @method static \Illuminate\Database\Eloquent\Builder|Permission newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Permission newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Permission query()
@@ -42,11 +57,29 @@ use Webmozart\Assert\Assert;
  * @method static \Illuminate\Database\Eloquent\Builder|Permission whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Permission role($roles, $guard = null)
  * @method static \Illuminate\Database\Eloquent\Builder|Permission permission($permissions)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
  * @property EloquentCollection<int, Permission> $permissions
  * @property int|null $permissions_count
  * @method static \Illuminate\Database\Eloquent\Builder|Permission withoutPermission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|Permission withoutRole($roles, $guard = null)
  * @property PermissionRole|null $pivot
+<<<<<<< HEAD
+=======
+=======
+ *
+ * @property EloquentCollection<int, Permission> $permissions
+ * @property int|null $permissions_count
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|Permission withoutPermission($permissions)
+ * @method static \Illuminate\Database\Eloquent\Builder|Permission withoutRole($roles, $guard = null)
+ *
+ * @property PermissionRole|null $pivot
+ *
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
  * @mixin \Eloquent
  */
 class Permission extends SpatiePermission

@@ -11,8 +11,16 @@ namespace Modules\User\Models;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 /**
+<<<<<<< HEAD
  * 
  *
+=======
+<<<<<<< HEAD
+ * 
+ *
+=======
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
  * @property int $id
  * @property string $authenticatable_type
  * @property int $authenticatable_id
@@ -30,6 +38,13 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
  * @property \Illuminate\Database\Eloquent\Model|\Eloquent $authenticatable
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
  * @method static \Modules\User\Database\Factories\AuthenticationLogFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|AuthenticationLog newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|AuthenticationLog newQuery()
@@ -48,6 +63,13 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
  * @method static \Illuminate\Database\Eloquent\Builder|AuthenticationLog whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|AuthenticationLog whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|AuthenticationLog whereUserAgent($value)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
  * @mixin \Eloquent
  */
 class AuthenticationLog extends BaseModel

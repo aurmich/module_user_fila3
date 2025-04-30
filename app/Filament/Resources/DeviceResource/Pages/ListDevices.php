@@ -10,6 +10,13 @@ use Filament\Tables\Actions\DeleteBulkAction;
 use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Columns\IconColumn;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+use Filament\Tables\Columns\Layout\Stack;
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
 use Filament\Tables\Columns\TextColumn;
 use Modules\User\Filament\Resources\DeviceResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
@@ -18,12 +25,23 @@ class ListDevices extends XotBaseListRecords
 {
     protected static string $resource = DeviceResource::class;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+   
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
     /**
      * @return array<string, \Filament\Tables\Columns\Column>
      */
     public function getListTableColumns(): array
     {
         return [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
             'uuid' => TextColumn::make('uuid')
                 ->searchable()
                 ->sortable(),
@@ -59,4 +77,58 @@ class ListDevices extends XotBaseListRecords
     }
 
     
+<<<<<<< HEAD
+=======
+=======
+            'id' => TextColumn::make('id'),
+            'name' => TextColumn::make('name'),
+            'type' => TextColumn::make('type'),
+            'active' => IconColumn::make('active')
+                ->boolean(),
+        ];
+    }
+
+    /**
+     * @return array<\Filament\Tables\Filters\BaseFilter>
+     */
+    public function getTableFilters(): array
+    {
+        return [
+        ];
+    }
+
+    /**
+     * @return array<\Filament\Tables\Actions\Action|\Filament\Tables\Actions\ActionGroup>
+     */
+    public function getTableActions(): array
+    {
+        return [
+            ViewAction::make()
+                ->label(''),
+            EditAction::make()
+                ->label(''),
+            DeleteAction::make()
+                ->label('')
+                ->requiresConfirmation(),
+        ];
+    }
+
+    /**
+     * @return array<string, \Filament\Tables\Actions\BulkAction>
+     */
+    public function getTableBulkActions(): array
+    {
+        return [
+            'delete' => DeleteBulkAction::make(),
+        ];
+    }
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            CreateAction::make(),
+        ];
+    }
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
 }

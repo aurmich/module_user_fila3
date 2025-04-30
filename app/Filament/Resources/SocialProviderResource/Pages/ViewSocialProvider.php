@@ -5,6 +5,10 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Resources\SocialProviderResource\Pages;
 
 use Filament\Actions;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Components\Section;
 use Modules\User\Filament\Resources\SocialProviderResource;
@@ -57,4 +61,22 @@ class ViewSocialProvider extends \Modules\Xot\Filament\Resources\Pages\XotBaseVi
     }
 
     
+<<<<<<< HEAD
+=======
+=======
+use Filament\Resources\Pages\ViewRecord;
+use Modules\User\Filament\Resources\SocialProviderResource;
+
+class ViewSocialProvider extends ViewRecord
+{
+    protected static string $resource = SocialProviderResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            Actions\EditAction::make(),
+        ];
+    }
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
 }

@@ -29,6 +29,13 @@ use Laravel\Passport\Client as PassportClient;
  * @property \Illuminate\Database\Eloquent\Collection<int, OauthAccessToken> $tokens
  * @property int|null $tokens_count
  * @property \Modules\Xot\Contracts\UserContract|null $user
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
  * @method static \Laravel\Passport\Database\Factories\ClientFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|OauthClient newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|OauthClient newQuery()
@@ -44,10 +51,26 @@ use Laravel\Passport\Client as PassportClient;
  * @method static \Illuminate\Database\Eloquent\Builder|OauthClient whereSecret($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthClient whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthClient whereUserId($value)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
  * @property string|null $updated_by
  * @property string|null $created_by
  * @method static \Illuminate\Database\Eloquent\Builder|OauthClient whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthClient whereUpdatedBy($value)
+<<<<<<< HEAD
+=======
+=======
+ *
+ * @property string|null $updated_by
+ * @property string|null $created_by
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|OauthClient whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OauthClient whereUpdatedBy($value)
+ *
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
  * @mixin \Eloquent
  */
 class OauthClient extends PassportClient

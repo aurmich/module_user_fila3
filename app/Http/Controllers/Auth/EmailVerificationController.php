@@ -9,8 +9,18 @@
  * and that the email has not already been verified. If the verification is
  * successful, it marks the email as verified and dispatches a Verified event.
  *
+<<<<<<< HEAD
  * @param  string $id  the ID of the user to be verified
  * @param  string $hash  the hash of the user's email address
+=======
+<<<<<<< HEAD
+ * @param  string $id  the ID of the user to be verified
+ * @param  string $hash  the hash of the user's email address
+=======
+ * @param  string  $id  the ID of the user to be verified
+ * @param  string  $hash  the hash of the user's email address
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
  * @return \Illuminate\Http\RedirectResponse a redirect response to the home page
  *
  * @throws \Illuminate\Auth\Access\AuthorizationException if the verification fails
@@ -34,12 +44,27 @@ class EmailVerificationController extends Controller
         if ($user === null) {
             throw new AuthorizationException;
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 
         if (! hash_equals($id, (string) Auth::id())) {
             throw new AuthorizationException;
         }
 
         if (! hash_equals($hash, sha1($user->getEmailForVerification()))) {
+<<<<<<< HEAD
+=======
+=======
+        // if (! hash_equals((string) $id, (string) Auth::user()->getKey())) {
+        if (! hash_equals((string) $id, (string) Auth::id())) {
+            throw new AuthorizationException;
+        }
+
+        if (! hash_equals((string) $hash, sha1($user->getEmailForVerification()))) {
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
             throw new AuthorizationException;
         }
 
@@ -47,6 +72,10 @@ class EmailVerificationController extends Controller
             return redirect(route('home'));
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
         $user->markEmailAsVerified();
 
         // Verificare che l'utente implementi l'interfaccia MustVerifyEmail
@@ -56,6 +85,15 @@ class EmailVerificationController extends Controller
 
         event(new Verified($user));
 
+<<<<<<< HEAD
+=======
+=======
+        if ($user->markEmailAsVerified()) {
+            event(new Verified($user));
+        }
+
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
         return redirect(route('home'));
     }
 }

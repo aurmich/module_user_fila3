@@ -12,22 +12,55 @@ use Illuminate\Support\Carbon;
  * @property int $id
  * @property int $permission_id
  * @property int $role_id
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission query()
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission wherePermissionId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission whereRoleId($value)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission whereUpdatedBy($value)
+<<<<<<< HEAD
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+=======
+<<<<<<< HEAD
+ * @property \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+=======
+ *
+ * @property \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+ *
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
  * @mixin \Eloquent
  */
 class RoleHasPermission extends BasePivot

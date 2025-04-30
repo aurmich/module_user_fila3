@@ -11,6 +11,10 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Modules\User\Filament\Resources\RoleResource;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 
 
 
@@ -20,6 +24,11 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
 class ManageRolePermissions extends ManageRelatedRecords
 {
     protected static string $resource = RoleResource::class;
@@ -33,6 +42,10 @@ class ManageRolePermissions extends ManageRelatedRecords
         return 'Permissions';
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
     public function getFormSchema(): array
 {
     
@@ -45,6 +58,20 @@ class ManageRolePermissions extends ManageRelatedRecords
             
       ];
 }
+<<<<<<< HEAD
+=======
+=======
+    public function form(Form $form): Form
+    {
+        return $form
+            ->schema([
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
+            ]);
+    }
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
 
     public function table(Table $table): Table
     {

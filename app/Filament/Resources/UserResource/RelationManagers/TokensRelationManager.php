@@ -15,6 +15,10 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 
 
 
@@ -23,10 +27,19 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
 class TokensRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'tokens';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
     /**
      * @return array<string, \Filament\Forms\Components\Component>
      */
@@ -37,6 +50,21 @@ class TokensRelationManager extends XotBaseRelationManager
                 ->required()
                 ->maxLength(255),
         ];
+<<<<<<< HEAD
+=======
+=======
+    public function form(Form $form): Form
+    {
+        return $form
+            ->schema(
+                [
+                    TextInput::make('name')
+                        ->required()
+                        ->maxLength(255),
+                ]
+            );
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
     }
 
     public function table(Table $table): Table

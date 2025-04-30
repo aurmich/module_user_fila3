@@ -1,7 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 <<<<<<< HEAD
 =======
 
@@ -9,6 +19,15 @@
 =======
 
 >>>>>>> aurmich/dev
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+=======
+>>>>>>> 67cd443 (.)
 >>>>>>> aurmich/dev
 # Rapporto PHPStan Livello 9 per il modulo User
 
@@ -618,9 +637,19 @@ Trovati 71 errori al livello 9.
 - [Tipi in PHP](https://www.php.net/manual/en/language.types.declarations.php)
 - [PSR-12: Standard di codifica](https://www.php-fig.org/psr/psr-12/)
 <<<<<<< HEAD
+<<<<<<< HEAD
 aurmich/dev
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+aurmich/dev
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 <<<<<<< HEAD
 =======
 aurmich/dev
@@ -628,4 +657,13 @@ aurmich/dev
 =======
 aurmich/dev
 >>>>>>> aurmich/dev
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+=======
+>>>>>>> 67cd443 (.)
 >>>>>>> aurmich/dev

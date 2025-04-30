@@ -22,6 +22,10 @@ class GetCurrentDeviceAction
      */
     public function execute(?string $mobile_id = null): Device
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
         $agent = new Agent();
 
         $device = $agent->device();
@@ -32,11 +36,27 @@ class GetCurrentDeviceAction
             'device' => is_string($device) ? $device : 'unknown',
             'platform' => is_string($platform) ? $platform : 'unknown',
             'browser' => is_string($browser) ? $browser : 'unknown',
+<<<<<<< HEAD
+=======
+=======
+        $agent = new Agent;
+
+        $data = [
+            'device' => $agent->device(),
+            'platform' => $agent->platform(),
+            'browser' => $agent->browser(),
+            // 'version' => $agent->version($agent->browser()),
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
             'is_desktop' => $agent->isDesktop(),
             'is_mobile' => $agent->isMobile(),
             'is_tablet' => $agent->isTablet(),
             'is_phone' => $agent->isPhone(),
             'is_robot' => $agent->isRobot(),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
         ];
 
         $up = [
@@ -53,15 +73,37 @@ class GetCurrentDeviceAction
             if ($device === null) {
                 throw new \RuntimeException('Impossibile creare o trovare il dispositivo');
             }
+<<<<<<< HEAD
+=======
+=======
+            // 'robot' => $agent->robot(),
+        ];
+        $up = [
+            'version' => $agent->version((string) $agent->browser()),
+            'robot' => $agent->robot(),
+        ];
+        if ($mobile_id !== null) {
+            $device = Device::firstOrCreate(['mobile_id' => $mobile_id]);
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
             $device->update([...$data, ...$up]);
 
             return $device;
         }
 
         $device = Device::firstOrCreate($data);
+<<<<<<< HEAD
         if ($device === null) {
             throw new \RuntimeException('Impossibile creare o trovare il dispositivo');
         }
+=======
+<<<<<<< HEAD
+        if ($device === null) {
+            throw new \RuntimeException('Impossibile creare o trovare il dispositivo');
+        }
+=======
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
         $device->update($up);
 
         return $device;

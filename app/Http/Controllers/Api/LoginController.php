@@ -10,8 +10,16 @@ namespace Modules\User\Http\Controllers\Api;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
 use Modules\Xot\Contracts\PassportHasApiTokensContract;
+=======
+<<<<<<< HEAD
+use Illuminate\Support\Facades\Auth;
+use Modules\Xot\Contracts\PassportHasApiTokensContract;
+=======
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
 use Modules\Xot\Http\Controllers\XotBaseController;
 use Webmozart\Assert\Assert;
 
@@ -22,6 +30,10 @@ class LoginController extends XotBaseController
      */
     public function __invoke(Request $request): JsonResponse
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             Assert::notNull($user = Auth::user(), '['.__LINE__.']['.class_basename($this).']');
             
@@ -30,6 +42,13 @@ class LoginController extends XotBaseController
                 return $this->sendError('User model must implement PassportHasApiTokensContract interface', ['error' => 'Configuration Error']);
             }
             
+<<<<<<< HEAD
+=======
+=======
+        if (auth()->attempt(['email' => $request->email, 'password' => $request->password])) {
+            Assert::notNull($user = auth()->user(), '['.__LINE__.']['.class_basename($this).']');
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
             $success = [];
             $success['token'] = $user->createToken('MyApp')->accessToken;
             $success['name'] = $user->name;

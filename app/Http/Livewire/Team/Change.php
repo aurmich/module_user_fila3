@@ -25,13 +25,26 @@ class Change extends Component
 
     public XotData $xot;
 
+<<<<<<< HEAD
     /** @var \Modules\Xot\Contracts\UserContract */
     public $user;
+=======
+<<<<<<< HEAD
+    /** @var \Modules\Xot\Contracts\UserContract */
+    public $user;
+=======
+    public UserContract $user;
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
 
     public function mount(): void
     {
         $this->xot = XotData::make();
         Assert::notNull(Filament::auth()->user(), '['.__LINE__.']['.class_basename($this).']');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
         
         $authUser = Filament::auth()->user();
         
@@ -41,6 +54,12 @@ class Change extends Component
         }
         
         $this->user = $authUser;
+<<<<<<< HEAD
+=======
+=======
+        $this->user = Filament::auth()->user();
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
         $this->teams = $this->user->allTeams()->toArray();
     }
 

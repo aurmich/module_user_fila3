@@ -12,6 +12,13 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser query()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
  * @property int $id
  * @property string|null $tenant_id
  * @property string|null $user_id
@@ -19,6 +26,13 @@ use Illuminate\Support\Carbon;
  * @property Carbon|null $updated_at
  * @property string|null $created_by
  * @property string|null $updated_by
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereCustomerId($value)
@@ -29,6 +43,10 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereUuid($value)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
  * @property string|null $deleted_at
  * @property string|null $deleted_by
  * @method static \Illuminate\Database\Eloquent\Builder|TenantUser whereDeletedAt($value)
@@ -36,6 +54,22 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|TenantUser whereTenantId($value)
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+<<<<<<< HEAD
+=======
+=======
+ *
+ * @property string|null $deleted_at
+ * @property string|null $deleted_by
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|TenantUser whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TenantUser whereDeletedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TenantUser whereTenantId($value)
+ *
+ * @property \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+ *
+>>>>>>> 67cd443 (.)
+>>>>>>> aurmich/dev
  * @mixin \Eloquent
  */
 class TenantUser extends BasePivot
