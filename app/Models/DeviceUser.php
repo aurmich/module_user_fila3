@@ -15,23 +15,9 @@ use Modules\Xot\Datas\XotData;
  * Modules\User\Models\DeviceUser.
  *
  * @property Device|null $device
-<<<<<<< HEAD
  * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser query()
-=======
-<<<<<<< HEAD
- * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser query()
-=======
- *
- * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser query()
- *
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
  * @property string $id
  * @property string $device_id
  * @property string $user_id
@@ -43,13 +29,6 @@ use Modules\Xot\Datas\XotData;
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
- *
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
  * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser whereDeviceId($value)
@@ -61,24 +40,10 @@ use Modules\Xot\Datas\XotData;
  * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser whereUserId($value)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
- *
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
  * @property ProfileContract|null $profile
  * @property UserContract|null $user
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
- *
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
  * @mixin \Eloquent
  */
 class DeviceUser extends BasePivot

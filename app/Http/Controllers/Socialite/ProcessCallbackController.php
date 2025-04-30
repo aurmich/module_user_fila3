@@ -26,14 +26,7 @@ use Modules\User\Events\RegistrationNotEnabled;
 use Modules\User\Events\UserNotAllowed;
 use Modules\User\Exceptions\ProviderNotConfigured;
 use Modules\Xot\Datas\XotData;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
-=======
-<<<<<<< HEAD
-use Illuminate\Support\Facades\Auth;
-=======
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 
 class ProcessCallbackController extends Controller
 {
@@ -64,17 +57,8 @@ class ProcessCallbackController extends Controller
         // Try to find a socialite user
         $socialiteUser = app(RetrieveSocialiteUserAction::class)->execute($provider, $oauthUser);
         if ($socialiteUser) {
-<<<<<<< HEAD
             $socialiteUserObj = $socialiteUser->user;
             if ($socialiteUserObj === null || !$socialiteUserObj->canAccessSocialite()) {
-=======
-<<<<<<< HEAD
-            $socialiteUserObj = $socialiteUser->user;
-            if ($socialiteUserObj === null || !$socialiteUserObj->canAccessSocialite()) {
-=======
-            if (! $socialiteUser->user?->canAccessSocialite()) {
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
                 return app(RedirectToLoginAction::class)->execute('auth.user-not-allowed');
             }
             // Associate default roles to the existing "real" user, if needed
@@ -83,15 +67,7 @@ class ProcessCallbackController extends Controller
                 [
                     'provider' => $provider,
                 ]
-<<<<<<< HEAD
             )->execute($socialiteUserObj, $oauthUser);
-=======
-<<<<<<< HEAD
-            )->execute($socialiteUserObj, $oauthUser);
-=======
-            )->execute($socialiteUser->user, $oauthUser);
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 
             return app(LoginUserAction::class)->execute($socialiteUser);
         }
@@ -106,15 +82,7 @@ class ProcessCallbackController extends Controller
         $user_class = XotData::make()->getUserClass();
         // See if a user already exists, but not for this socialite provider
         // $user = app()->call($this->socialite->getUserResolver(), ['provider' => $provider, 'oauthUser' => $oauthUser, 'socialite' => $this->socialite]);
-<<<<<<< HEAD
         /** @var \Modules\Xot\Contracts\UserContract|null */
-=======
-<<<<<<< HEAD
-        /** @var \Modules\Xot\Contracts\UserContract|null */
-=======
-        /** @var \Modules\Xot\Contracts\UserContract */
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
         $user = $user_class::query()->firstWhere(['email' => $oauthUser->getEmail()]);
 
         // Handle registration
@@ -124,10 +92,6 @@ class ProcessCallbackController extends Controller
             $socialiteUser = app(RegisterOauthUserAction::class)->execute($provider, $oauthUser);
         }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
         $socialiteUserObj = $socialiteUser->user;
         if ($socialiteUserObj === null || !$socialiteUserObj->canAccessSocialite()) {
             return app(RedirectToLoginAction::class)->execute('auth.user-not-allowed');
@@ -142,15 +106,6 @@ class ProcessCallbackController extends Controller
             );
         }
 
-<<<<<<< HEAD
-=======
-=======
-        if (! $socialiteUser->user?->canAccessSocialite()) {
-            return app(RedirectToLoginAction::class)->execute('auth.user-not-allowed');
-        }
-
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
         return app(LoginUserAction::class)->execute($socialiteUser);
     }
 }

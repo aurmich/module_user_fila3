@@ -16,10 +16,6 @@ use Webmozart\Assert\Assert;
 
 class Reset extends Component
 {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
     public string $token = '';
 
     public string $email = '';
@@ -28,20 +24,6 @@ class Reset extends Component
 
     public string $passwordConfirmation = '';
 
-<<<<<<< HEAD
-=======
-=======
-    public string $token;
-
-    public string $email;
-
-    public string $password;
-
-    public string $passwordConfirmation;
-
-    // ricordarsi di configurare il file auth.php
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
     public function mount(string $token): void
     {
         Assert::string($email = request()->query('email', ''));
@@ -50,24 +32,10 @@ class Reset extends Component
     }
 
     /**
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
      * Reimposta la password dell'utente.
      */
     public function resetPassword(): \Livewire\Features\SupportRedirects\Redirector|RedirectResponse|null
     {
-<<<<<<< HEAD
-=======
-=======
-     * Undocumented function.
-     */
-    public function resetPassword(): \Livewire\Features\SupportRedirects\Redirector|RedirectResponse|null
-    {
-        // $messages = __('xot::validation');
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
         $messages = __('user::validation');
 
         $this->validate([
@@ -84,17 +52,7 @@ class Reset extends Component
             ],
             function ($user, $password): void {
                 $user->password = Hash::make($password);
-<<<<<<< HEAD
                 $user->setRememberToken(Str::random(60));
-=======
-<<<<<<< HEAD
-                $user->setRememberToken(Str::random(60));
-=======
-
-                $user->setRememberToken(Str::random(60));
-
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
                 $user->save();
 
                 event(new PasswordReset($user));
@@ -108,24 +66,10 @@ class Reset extends Component
 
         if ($response === Password::PASSWORD_RESET) {
             session()->flash($response_lang);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
             return redirect(route('home'));
         }
 
         $this->addError('email', $response_lang);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
         return null;
     }
 
@@ -148,20 +92,9 @@ class Reset extends Component
          */
         $view = 'pub_theme::livewire.auth.passwords.reset';
 
-<<<<<<< HEAD
         return view($view, [
             'layout' => 'pub_theme::layouts.auth'
         ]);
-=======
-<<<<<<< HEAD
-        return view($view, [
-            'layout' => 'pub_theme::layouts.auth'
-        ]);
-=======
-        return view($view)
-            ->extends('pub_theme::layouts.auth');
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
     }
 
     /**

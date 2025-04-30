@@ -5,23 +5,11 @@ declare(strict_types=1);
 namespace Modules\User\Models\Traits;
 
 use Filament\Facades\Filament;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Modules\User\Contracts\TeamContract;
 use Modules\User\Models\Scopes\TenantScope;
 use Modules\User\Models\Tenant;
-<<<<<<< HEAD
-=======
-=======
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Modules\User\Contracts\TeamContract;
-use Modules\User\Models\Scopes\TenantScope;
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 use Modules\Xot\Datas\XotData;
 
 /**
@@ -29,10 +17,6 @@ use Modules\Xot\Datas\XotData;
  */
 trait InteractsWithTenant
 {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
     /**
      * Tenant corrente.
      *
@@ -83,16 +67,6 @@ trait InteractsWithTenant
             // Se Filament non è disponibile, lascia il tenant come null
             $this->currentTenant = null;
         }
-<<<<<<< HEAD
-=======
-=======
-    public function tenant(): BelongsTo
-    {
-        $class = XotData::make()->getTenantClass();
-
-        return $this->belongsTo($class);
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
     }
 
     /**
@@ -104,22 +78,12 @@ trait InteractsWithTenant
 
         static::creating(
             static function ($model): void {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
                 if ($model !== null) {
                     $tenant = Filament::getTenant();
                     if ($tenant !== null) {
                         $model->tenant_id = $tenant->getKey();
                     }
                 }
-<<<<<<< HEAD
-=======
-=======
-                $model->tenant_id = Filament::getTenant()?->getKey();
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
             }
         );
     }
@@ -129,10 +93,6 @@ trait InteractsWithTenant
      */
     protected function setTenantIdAttribute(?int $value): void
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
         $tenant = Filament::getTenant();
         if ($value === null && $tenant !== null) {
             $tenantId = $tenant->getKey();
@@ -163,14 +123,5 @@ trait InteractsWithTenant
                 static::addGlobalScope(new TenantScope());
             }
         }
-<<<<<<< HEAD
-=======
-=======
-        if ($value === null) {
-            $value = Filament::getTenant()?->getKey();
-        }
-        $this->attributes['tenant_id'] = $value;
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
     }
 }

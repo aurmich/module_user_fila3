@@ -31,7 +31,6 @@ return [
         'updated_at' => 'Updated At',
         'role' => 'Role',
         'active' => 'Active',
-<<<<<<< HEAD
         'id' => [
             'label' => 'ID',
             'placeholder' => 'User ID',
@@ -42,12 +41,6 @@ return [
             'label' => 'Email Verified At',
             'placeholder' => 'Email Verification Date',
         ],
-=======
-        'id' => 'ID',
-        'password' => 'Password',
-        'password_confirmation' => 'Confirm Password',
-        'email_verified_at' => 'Email Verified At',
->>>>>>> aurmich/dev
     ],
     'filters' => [
         'active_users' => 'Active Users',

@@ -19,10 +19,6 @@ use Modules\User\Filament\Resources\TenantResource\Pages\ViewTenant;
 use Modules\User\Filament\Resources\TenantResource\RelationManagers;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables\Table;
@@ -42,22 +38,6 @@ class TenantResource extends XotBaseResource
     public static function getModel(): string
     {
         $xot = app(XotService::class);
-<<<<<<< HEAD
-=======
-=======
-
-class TenantResource extends XotBaseResource
-{
-    // protected static ?string $model = Tenant::class;
-
-    protected static ?string $navigationIcon = 'heroicon-o-user-group';
-
-    public static function getModel(): string
-    {
-        $xot = XotData::make();
-
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
         return $xot->getTenantClass();
     }
 
@@ -66,10 +46,6 @@ class TenantResource extends XotBaseResource
         return [
             Section::make()
                 ->schema([
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
                         TextInput::make('name')
                             ->required()
                             ->unique(table: 'tenants', ignoreRecord: true)
@@ -143,67 +119,6 @@ class TenantResource extends XotBaseResource
             ]);
     }
 
-<<<<<<< HEAD
-=======
-=======
-                    TextInput::make('name')
-                        ->required()
-                        ->unique(table: 'tenants', ignoreRecord: true)
-                        ->live(onBlur: true)
-                        ->afterStateUpdated(function (callable $set, $state) {
-                            $set('slug', Str::slug($state));
-                            $set('domain', Str::slug($state));
-                        })
-                        ->columnSpanFull()
-                        ->placeholder(static::trans('fields.name.placeholder'))
-                        ->helperText(static::trans('fields.name.helper_text')),
-
-                    TextInput::make('slug')
-                        ->required()
-                        ->disabled(fn ($context) => $context !== 'create')
-                        ->unique(table: 'tenants', ignoreRecord: true)
-                        ->helperText(static::trans('fields.slug.helper_text')),
-
-                    TextInput::make('domain')
-                        ->required()
-                        ->visible(fn ($context) => $context === 'create')
-                        ->unique(table: 'domains', ignoreRecord: true)
-                        ->prefix('https://')
-                        ->suffix('.'.request()->getHost())
-                        ->placeholder(static::trans('fields.domain.placeholder'))
-                        ->helperText(static::trans('fields.domain.helper_text')),
-
-                    TextInput::make('email_address')
-                        ->email()
-                        ->placeholder(static::trans('fields.email_address.placeholder'))
-                        ->helperText(static::trans('fields.email_address.helper_text')),
-
-                    TextInput::make('phone')
-                        ->tel()
-                        ->placeholder(static::trans('fields.phone.placeholder'))
-                        ->helperText(static::trans('fields.phone.helper_text')),
-
-                    TextInput::make('mobile')
-                        ->tel()
-                        ->placeholder(static::trans('fields.mobile.placeholder'))
-                        ->helperText(static::trans('fields.mobile.helper_text')),
-
-                    TextInput::make('address')
-                        ->placeholder(static::trans('fields.address.placeholder'))
-                        ->helperText(static::trans('fields.address.helper_text')),
-
-                    ColorPicker::make('primary_color')
-                        ->helperText(static::trans('fields.primary_color.helper_text')),
-
-                    ColorPicker::make('secondary_color')
-                        ->helperText(static::trans('fields.secondary_color.helper_text')),
-                ])
-                ->columns(2),
-        ];
-    }
-
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
     public static function getRelations(): array
     {
         return [

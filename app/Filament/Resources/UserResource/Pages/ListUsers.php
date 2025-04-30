@@ -6,36 +6,16 @@ namespace Modules\User\Filament\Resources\UserResource\Pages;
 
 use Filament\Tables;
 use Filament\Tables\Actions\Action;
-<<<<<<< HEAD
 use Filament\Tables\Actions\ExportBulkAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\Filter;
-=======
-<<<<<<< HEAD
-use Filament\Tables\Actions\ExportBulkAction;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Filters\Filter;
-=======
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Filters\Filter;
-use Illuminate\Database\Eloquent\Collection;
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 use Illuminate\Database\Query\Builder;
 use Modules\User\Filament\Actions\ChangePasswordAction;
 use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
-=======
-<<<<<<< HEAD
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
-=======
-use Filament\Tables\Actions\ExportBulkAction;
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 
 class ListUsers extends XotBaseListRecords
 {
@@ -79,13 +59,6 @@ class ListUsers extends XotBaseListRecords
     {
         return [
             ChangePasswordAction::make()
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-                ->label('')
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
                 ->tooltip('Cambio Password')
                 ->iconButton(),
             ...parent::getTableActions(),

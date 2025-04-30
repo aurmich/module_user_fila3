@@ -16,10 +16,6 @@ use Filament\Tables\Table;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
 
 
 
@@ -28,11 +24,6 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 class RolesRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'roles';
@@ -46,10 +37,6 @@ class RolesRelationManager extends XotBaseRelationManager
     //
     // }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
     /**
      * @return array<string, \Filament\Forms\Components\Component>
      */
@@ -64,25 +51,6 @@ class RolesRelationManager extends XotBaseRelationManager
                 ->relationship('teams', 'name'),
             */
         ];
-<<<<<<< HEAD
-=======
-=======
-    public function form(Form $form): Form
-    {
-        return $form
-            ->schema(
-                [
-                    TextInput::make('name')
-                        ->required()
-                        ->maxLength(255),
-                    /*
-                Forms\Components\Select::make('team_id')
-                    ->relationship('teams', 'name'),
-                */
-                ]
-            );
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
     }
 
     public function table(Table $table): Table

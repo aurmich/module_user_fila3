@@ -15,10 +15,6 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Modules\Xot\Filament\Traits\TransTrait;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
 
 
 
@@ -27,11 +23,6 @@ use Modules\Xot\Filament\Traits\TransTrait;
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 /**
  * UsersRelationManager.
  *
@@ -40,45 +31,15 @@ use Modules\Xot\Filament\Traits\TransTrait;
  */
 final class UsersRelationManager extends XotBaseRelationManager
 {
-<<<<<<< HEAD
     
-=======
-<<<<<<< HEAD
-    
-=======
-    use HasXotTable;
-    use TransTrait;
-
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
     protected static string $relationship = 'users';
 
     protected static ?string $inverseRelationship = 'roles';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
     
 
     
 
-<<<<<<< HEAD
-=======
-=======
-    protected static ?string $recordTitleAttribute = 'name';
-
-    public TableLayoutEnum $layoutView = TableLayoutEnum::LIST;
-
-    /**
-     * Defines the form schema for creating or editing a user within this relation.
-     */
-    public function form(Form $form): Form
-    {
-        return $form->schema($this->getFormSchema());
-    }
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 
     /**
      * Returns the form schema structure, defining the input fields for user data.
@@ -157,74 +118,9 @@ final class UsersRelationManager extends XotBaseRelationManager
         ];
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
     
 
    
 
    
-<<<<<<< HEAD
-=======
-=======
-    /**
-     * Defines header actions for the table, typically used for adding or associating records.
-     *
-     * @return array the header actions configuration array
-     */
-    protected function getHeaderActions(): array
-    {
-        return [
-            Tables\Actions\CreateAction::make()
-                ->label('')
-                ->tooltip(__('Create User')),
-
-            Tables\Actions\AssociateAction::make()
-                ->label('')
-                ->tooltip(__('Associate User')),
-        ];
-    }
-
-    /**
-     * Configures individual record actions, enabling view, edit, and detach functionality.
-     *
-     * @return array the actions configuration array
-     */
-    public function getTableActions(): array
-    {
-        return [
-            Tables\Actions\ViewAction::make()
-                ->label('')
-                ->tooltip(__('role.view_user'))
-                ->icon('heroicon-o-eye'),
-
-            Tables\Actions\EditAction::make()
-                ->label('')
-                ->tooltip(__('role.edit_user'))
-                ->icon('heroicon-o-pencil'),
-
-            Tables\Actions\DetachAction::make()
-                ->label('')
-                ->tooltip(__('role.detach_user'))
-                ->icon('heroicon-o-link-slash'),
-        ];
-    }
-
-    /**
-     * Defines bulk actions that can be performed on multiple records simultaneously.
-     *
-     * @return array the bulk actions configuration array
-     */
-    protected function getBulkActions(): array
-    {
-        return [
-            Tables\Actions\DeleteBulkAction::make()
-                ->label('')
-                ->tooltip(__('Delete Selected')),
-        ];
-    }
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 }

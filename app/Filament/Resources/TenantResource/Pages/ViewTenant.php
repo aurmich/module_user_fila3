@@ -8,10 +8,6 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Resources\TenantResource\Pages;
 
 use Filament\Actions;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
 use Filament\Infolists\Components\Section;
 use Filament\Infolists\Components\TextEntry;
 use Modules\User\Filament\Resources\TenantResource;
@@ -41,22 +37,4 @@ class ViewTenant extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
     }
 
     
-<<<<<<< HEAD
-=======
-=======
-use Filament\Resources\Pages\ViewRecord;
-use Modules\User\Filament\Resources\TenantResource;
-
-class ViewTenant extends ViewRecord
-{
-    protected static string $resource = TenantResource::class;
-
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\EditAction::make(),
-        ];
-    }
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 }

@@ -12,13 +12,6 @@ namespace Modules\User\Filament\Resources;
 use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-use Filament\Resources\RelationManagers\RelationGroup;
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\HtmlString;
 use Modules\User\Filament\Resources\UserResource\Pages;
@@ -26,10 +19,6 @@ use Modules\User\Filament\Resources\UserResource\RelationManagers;
 use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
 
 
 
@@ -39,11 +28,6 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 class UserResource extends XotBaseResource
 {
     // protected static ?string $model = \Modules\Xot\Datas\XotData::make()->getUserClass();
@@ -68,10 +52,6 @@ class UserResource extends XotBaseResource
     public static function getFormSchema(): array
     {
         return [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
             'section01' => Section::make([
                 'name' => TextInput::make('name')
                     ->required(),
@@ -79,65 +59,18 @@ class UserResource extends XotBaseResource
                     ->required()
                     ->unique(ignoreRecord: true),
                 'password' => TextInput::make('password')
-<<<<<<< HEAD
-=======
-=======
-            'section01'=>Section::make([
-                'name'=>TextInput::make('name')
-                    ->required(),
-                'email'=>TextInput::make('email')
-                    ->required()
-                    ->unique(ignoreRecord: true),
-                'password'=>TextInput::make('password')
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
                     ->password()
                     ->dehydrateStateUsing(fn ($state) => ! empty($state) ? Hash::make($state) : null)
                     ->required(fn ($livewire) => $livewire instanceof Pages\CreateUser),
             ])->columnSpan(8),
-<<<<<<< HEAD
             'section02' => Section::make([
                 'created_at' => Placeholder::make('created_at')
                     ->content(static fn ($record) => $record->created_at->diffForHumans() ?? new HtmlString('&mdash;')),
-=======
-<<<<<<< HEAD
-            'section02' => Section::make([
-                'created_at' => Placeholder::make('created_at')
-                    ->content(static fn ($record) => $record->created_at->diffForHumans() ?? new HtmlString('&mdash;')),
-=======
-            'section02'=>Section::make([
-                'created_at'=>Placeholder::make('created_at')
-                    ->content(static fn ($record) => $record?->created_at?->diffForHumans() ?? new HtmlString('&mdash;')),
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
             ])->columnSpan(4),
         ];
     }
 
-<<<<<<< HEAD
    
-=======
-    /**
-<<<<<<< HEAD
-     * ---.
-=======
-     * ---
->>>>>>> 67cd443 (.)
-     */
-    public static function getRelations(): array
-    {
-        return [
-            'teams' => RelationManagers\TeamsRelationManager::class,
-            'tenants' => RelationManagers\TenantsRelationManager::class,
-        ];
-    }
-
-<<<<<<< HEAD
-=======
-    
-
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
     // public static function enablePasswordUpdates(bool|Closure $condition = true): void
     // {
     //     static::$enablePasswordUpdates = $condition;

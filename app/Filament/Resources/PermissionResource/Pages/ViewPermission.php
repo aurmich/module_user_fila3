@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources\PermissionResource\Pages;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
 use Filament\Infolists\Components\TextEntry;
@@ -34,24 +30,6 @@ class ViewPermission extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRe
             'created_at' => TextEntry::make('created_at')
                 ->label('Created At')
                 ->dateTime(),
-<<<<<<< HEAD
-=======
-=======
-use Filament\Actions\EditAction;
-use Filament\Resources\Pages\ViewRecord;
-use Modules\User\Filament\Resources\PermissionResource;
-
-class ViewPermission extends ViewRecord
-{
-    // //
-    protected static string $resource = PermissionResource::class;
-
-    protected function getHeaderActions(): array
-    {
-        return [
-            EditAction::make(),
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
         ];
     }
 }

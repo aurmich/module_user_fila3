@@ -11,10 +11,6 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Tables;
 use Filament\Tables\Table;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
 use Illuminate\Support\Str;
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 
@@ -26,21 +22,10 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 
 
 
-<<<<<<< HEAD
-=======
-=======
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
-
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 class DomainsRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'domains';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
     /**
      * @return array<string, \Filament\Forms\Components\Component>
      */
@@ -53,23 +38,6 @@ class DomainsRelationManager extends XotBaseRelationManager
                 ->suffix('.'.request()->getHost())
                 ->maxLength(255),
         ];
-<<<<<<< HEAD
-=======
-=======
-    public function form(Form $form): Form
-    {
-        return $form
-            ->schema(
-                [
-                    Forms\Components\TextInput::make('domain')
-                        ->required()
-                        ->prefix('http(s)://')
-                        ->suffix('.'.request()->getHost())
-                        ->maxLength(255),
-                ]
-            );
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
     }
 
     public function table(Table $table): Table
@@ -79,15 +47,7 @@ class DomainsRelationManager extends XotBaseRelationManager
             ->columns(
                 [
                     Tables\Columns\TextColumn::make('domain'),
-<<<<<<< HEAD
                     Tables\Columns\TextColumn::make('full-domain')->getStateUsing(static fn ($record) => Str::of($record->domain)->append('.')->append(request()->getHost())),
-=======
-<<<<<<< HEAD
-                    Tables\Columns\TextColumn::make('full-domain')->getStateUsing(static fn ($record) => Str::of($record->domain)->append('.')->append(request()->getHost())),
-=======
-                    Tables\Columns\TextColumn::make('full-domain')->getStateUsing(static fn ($record) => \Str::of($record->domain)->append('.')->append(request()->getHost())),
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
                 ]
             )
             ->filters(

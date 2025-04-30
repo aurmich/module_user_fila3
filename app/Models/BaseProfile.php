@@ -25,14 +25,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait;
  * @property string|null $first_name
  * @property string|null $full_name
  * @property string|null $last_name
-<<<<<<< HEAD
  * @property string|null $lang
-=======
-<<<<<<< HEAD
- * @property string|null $lang
-=======
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
  * @property \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Modules\Media\Models\Media> $media
  * @property int|null $media_count
  * @property \Illuminate\Database\Eloquent\Collection<int, DeviceUser> $mobileDeviceUsers
@@ -109,10 +102,6 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         return $this->extra->modelScope();
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
     /**
      * Ottiene l'URL dell'avatar dell'utente.
      * 
@@ -126,34 +115,12 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         }
 
         // Corretto il controllo errato su $this
-<<<<<<< HEAD
-=======
-=======
-    public function getAvatarUrl(): string
-    {
-        // return filament()->getUserAvatarUrl($this);
-        $avatar = $this->getFirstMediaUrl();
-
-        if (mb_strlen($avatar) > 5) {
-            return $avatar;
-        }
-
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
         $email = trim((string) $this->email);
         // 'MyEmailAddress@example.com'
         $email = mb_strtolower($email);
         // 'myemailaddress@example.com'
         $hash = hash('sha256', $email);
-<<<<<<< HEAD
         $avatar = 'https://gravatar.com/avatar/' . $hash . '?s=64';
-=======
-<<<<<<< HEAD
-        $avatar = 'https://gravatar.com/avatar/' . $hash . '?s=64';
-=======
-        $avatar = 'https://gravatar.com/avatar/'.$hash.'?s=64';
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 
         return $avatar;
 
@@ -168,10 +135,6 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         // return $this->getFirstMediaUrl();
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
     /**
      * Ottiene la lingua dell'utente.
      * 
@@ -195,11 +158,6 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         return $userLang;
     }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
     /** @return array<string, string> */
     protected function casts(): array
     {

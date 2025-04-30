@@ -36,13 +36,6 @@ use Webmozart\Assert\Assert;
  * @property Team|null $team
  * @property EloquentCollection<int, Model&UserContract> $users
  * @property int|null $users_count
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
- *
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
  * @method static \Illuminate\Database\Eloquent\Builder|Role newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Role newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Role permission($permissions)
@@ -53,10 +46,6 @@ use Webmozart\Assert\Assert;
  * @method static \Illuminate\Database\Eloquent\Builder|Role whereTeamId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Role whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Role whereUuid($value)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
  * @property int $id
  * @method static \Illuminate\Database\Eloquent\Builder|Role whereId($value)
  * @property string|null $updated_by
@@ -66,28 +55,6 @@ use Webmozart\Assert\Assert;
  * @mixin Eloquent
  * @method static \Illuminate\Database\Eloquent\Builder|Role withoutPermission($permissions)
  * @property PermissionRole|null $pivot
-<<<<<<< HEAD
-=======
-=======
- *
- * @property int $id
- *
- * @method static \Illuminate\Database\Eloquent\Builder|Role whereId($value)
- *
- * @property string|null $updated_by
- * @property string|null $created_by
- *
- * @method static \Illuminate\Database\Eloquent\Builder|Role whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Role whereUpdatedBy($value)
- *
- * @mixin Eloquent
- *
- * @method static \Illuminate\Database\Eloquent\Builder|Role withoutPermission($permissions)
- *
- * @property PermissionRole|null $pivot
- *
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
  * @mixin \Eloquent
  */
 class Role extends SpatieRole

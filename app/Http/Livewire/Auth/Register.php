@@ -27,22 +27,10 @@ class Register extends Component
     public string $passwordConfirmation = '';
 
     /**
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
      * Execute the action.
      *
      * @return RedirectResponse|\Livewire\Features\SupportRedirects\Redirector
      */
-<<<<<<< HEAD
-=======
-=======
-     * Execute the action..
-     */
-    // public function register(): \Livewire\Features\SupportRedirects\Redirector
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
     public function register(): RedirectResponse|\Livewire\Features\SupportRedirects\Redirector
     {
         $messages = __('user::validation');
@@ -67,10 +55,6 @@ class Register extends Component
         return redirect()->intended(route('home'));
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
     /**
      * Render the component.
      *
@@ -86,29 +70,12 @@ class Register extends Component
         app(\Modules\Xot\Actions\File\ViewCopyAction::class)->execute('user::layouts.auth', 'pub_theme::layouts.auth');
         app(\Modules\Xot\Actions\File\ViewCopyAction::class)->execute('user::layouts.base', 'pub_theme::layouts.base');
         
-<<<<<<< HEAD
-=======
-=======
-    public function render(): \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
-    {
-        app(\Modules\Xot\Actions\File\ViewCopyAction::class)->execute('user::livewire.auth.register', 'pub_theme::livewire.auth.register');
-        app(\Modules\Xot\Actions\File\ViewCopyAction::class)->execute('user::layouts.auth', 'pub_theme::layouts.auth');
-        app(\Modules\Xot\Actions\File\ViewCopyAction::class)->execute('user::layouts.base', 'pub_theme::layouts.base');
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
         /**
          * @phpstan-var view-string
          */
         $view = 'pub_theme::livewire.auth.register';
 
-<<<<<<< HEAD
         // Return view with layout - Livewire specific implementation
-=======
-<<<<<<< HEAD
-        // Return view with layout - Livewire specific implementation
-=======
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
         return view($view)
             ->extends('pub_theme::layouts.auth');
     }

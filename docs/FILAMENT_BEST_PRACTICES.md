@@ -2,7 +2,6 @@
 
 Questo documento descrive le best practices da seguire quando si creano o modificano risorse Filament nel modulo User.
 
-<<<<<<< HEAD
 ## Struttura Corretta dei File e Namespace
 
 ### Posizionamento dei File
@@ -27,8 +26,6 @@ namespace Modules\User\Filament\Widgets;
 namespace Modules\User\App\Filament\Widgets;
 ```
 
-=======
->>>>>>> aurmich/dev
 ## Rimozione del metodo `getPages()`
 
 Quando una risorsa estende `XotBaseResource`, il metodo `getPages()` può essere completamente rimosso se:
@@ -95,7 +92,6 @@ public static function getFormSchema(): array
 }
 ```
 
-<<<<<<< HEAD
 ## Mai Usare `->label()` nei Componenti Filament
 
 - Le etichette sono gestite automaticamente dal LangServiceProvider
@@ -139,8 +135,6 @@ public static function getFormSchema(): array
 }
 ```
 
-=======
->>>>>>> aurmich/dev
 ## Integrazione con PHPStan
 
 Questa best practice risolve anche errori PHPStan di livello 9 e superiore relativi al tipo di ritorno del metodo `getFormSchema()`:
@@ -149,7 +143,6 @@ Questa best practice risolve anche errori PHPStan di livello 9 e superiore relat
 Method Resource::getFormSchema() should return array<string, Filament\Forms\Components\Component> but returns array<int, Component>
 ```
 
-<<<<<<< HEAD
 Seguendo queste best practices si assicura che il codice passi i controlli statici di PHPStan e sia più facile da mantenere.
 
 ## Traits con Namespace Completo
@@ -188,6 +181,3 @@ use InteractsWithForms;
 - [README del modulo User](./README.md) - Indice principale del modulo User
 - [Filament Widgets](./best-practices/filament-widgets.md) - Best practices per i widget Filament
 - [Filament Components](./best-practices/filament-components.md) - Best practices per i componenti Filament 
-=======
-Seguendo queste best practices si assicura che il codice passi i controlli statici di PHPStan e sia più facile da mantenere. 
->>>>>>> aurmich/dev

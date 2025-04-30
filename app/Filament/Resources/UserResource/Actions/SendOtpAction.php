@@ -7,21 +7,11 @@ namespace Modules\User\Filament\Resources\UserResource\Actions;
 use Filament\Tables\Actions\Action;
 use Modules\User\Actions\Otp\SendOtpByUserAction;
 use Modules\User\Models\User;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
 use Modules\Xot\Contracts\UserContract;
 
 /**
  * Azione Filament per l'invio di un OTP all'utente.
  */
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 class SendOtpAction extends Action
 {
     protected function setUp(): void
@@ -29,10 +19,6 @@ class SendOtpAction extends Action
         parent::setUp();
 
         $this
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
             ->tooltip(trans('user::otp.actions.send_otp'))
             ->icon('heroicon-o-key')
             ->action(function (User $record) {
@@ -42,16 +28,6 @@ class SendOtpAction extends Action
                     throw new \RuntimeException('Impossibile istanziare SendOtpByUserAction');
                 }
                 $action->execute($record);
-<<<<<<< HEAD
-=======
-=======
-            ->label('')
-            ->tooltip(trans('user::otp.actions.send_otp'))
-            ->icon('heroicon-o-key')
-            ->action(function (User $record) {
-                app(SendOtpByUserAction::class)->execute($record);
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
             })
             ->requiresConfirmation()
             ->modalHeading(trans('user::otp.actions.send_otp'))

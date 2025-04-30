@@ -4,21 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources\RoleResource\Pages;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-use Filament\Resources\Pages\CreateRecord;
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Modules\User\Filament\Resources\RoleResource;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
 use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 
 
@@ -31,13 +20,6 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 
 
 class CreateRole extends \Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord
-<<<<<<< HEAD
-=======
-=======
-
-class CreateRole extends CreateRecord
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 {
     // //
     public Collection $permissions;

@@ -5,10 +5,6 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Resources\SocialProviderResource\Pages;
 
 use Filament\Actions;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
 use Modules\User\Filament\Resources\SocialProviderResource;
 
 
@@ -21,15 +17,6 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 
 
 class EditSocialProvider extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord
-<<<<<<< HEAD
-=======
-=======
-use Filament\Resources\Pages\EditRecord;
-use Modules\User\Filament\Resources\SocialProviderResource;
-
-class EditSocialProvider extends EditRecord
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 {
     protected static string $resource = SocialProviderResource::class;
 

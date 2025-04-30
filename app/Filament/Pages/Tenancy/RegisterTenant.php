@@ -19,26 +19,12 @@ class RegisterTenant extends BaseRegisterTenant
         return __('user::tenancy.navigation.register');
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
     public function getFormSchema(): array
 {
     
         
     return [
               
-<<<<<<< HEAD
-=======
-=======
-    public function form(Form $form): Form
-    {
-        return $form
-            ->schema(
-                [
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
                     TextInput::make('name')
                         ->required()
                         ->translateLabel(),
@@ -51,21 +37,9 @@ class RegisterTenant extends BaseRegisterTenant
                         ->required()
                         ->email()
                         ->translateLabel(),
-<<<<<<< HEAD
                 
       ];
 }
-=======
-<<<<<<< HEAD
-                
-      ];
-}
-=======
-                ]
-            );
-    }
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 
     /**
      * @param  array<string, mixed>  $data

@@ -10,10 +10,6 @@ use Filament\Tables\Table;
 use Modules\User\Filament\Resources\UserResource;
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
 
 
 
@@ -22,19 +18,10 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 class UsersRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'users';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
     /**
      * @return array<string, \Filament\Forms\Components\Component>
      */
@@ -45,21 +32,6 @@ class UsersRelationManager extends XotBaseRelationManager
                 ->required()
                 ->maxLength(255),
         ];
-<<<<<<< HEAD
-=======
-=======
-    public function form(Form $form): Form
-    {
-        return $form
-            ->schema(
-                [
-                    TextInput::make('device')
-                        ->required()
-                        ->maxLength(255),
-                ]
-            );
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
     }
 
     public function table(Table $table): Table

@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources\BaseProfileResource\Pages;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
 use Illuminate\Support\Arr;
 use Modules\User\Filament\Resources\BaseProfileResource;
 use Modules\Xot\Datas\XotData;
@@ -16,17 +12,6 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
 
 class CreateProfile extends \Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord
-<<<<<<< HEAD
-=======
-=======
-use Filament\Resources\Pages\CreateRecord;
-use Illuminate\Support\Arr;
-use Modules\User\Filament\Resources\BaseProfileResource;
-use Modules\Xot\Datas\XotData;
-
-class CreateProfile extends CreateRecord
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 {
     protected static string $resource = BaseProfileResource::class;
 

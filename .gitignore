@@ -27,18 +27,6 @@ cache/
 build
 *.exe
 *:Zone.Identifier
-<<<<<<< HEAD
 
 # File di log
 *.log
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-# File di log
-*.log
->>>>>>> aurmich/dev
-=======
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev

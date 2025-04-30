@@ -14,7 +14,6 @@
 ## Struttura
 ```
 app/
-<<<<<<< HEAD
 ├── Filament/           # Componenti Filament
 │   ├── Pages/         # Pagine Filament
 │   ├── Resources/     # Risorse Filament
@@ -23,13 +22,6 @@ app/
 ├── Models/            # Modelli del dominio
 ├── Providers/         # Service Providers
 └── Services/          # Servizi utente
-=======
-├── Filament/       # Componenti Filament
-├── Http/           # Controllers e Middleware
-├── Models/         # Modelli del dominio
-├── Providers/      # Service Providers
-└── Services/       # Servizi utente
->>>>>>> aurmich/dev
 ```
 
 ## Dipendenze
@@ -91,7 +83,6 @@ composer format        # Formatta il codice
 7. Gestire correttamente le password
 8. Proteggere i dati sensibili
 
-<<<<<<< HEAD
 ### Filament
 1. Tutti i componenti Filament devono essere nella directory `app/Filament`
 2. I widget devono essere nella directory `app/Filament/Widgets`
@@ -102,8 +93,6 @@ composer format        # Formatta il codice
 7. Gestire correttamente gli stati dei form
 8. Implementare la validazione dei dati
 
-=======
->>>>>>> aurmich/dev
 ## Troubleshooting
 ### Problemi Comuni
 1. **Errori di Autenticazione**
@@ -116,7 +105,6 @@ composer format        # Formatta il codice
    - Verificare la configurazione delle code
    - Controllare lo spazio disco
 
-<<<<<<< HEAD
 3. **Problemi con i Widget Filament**
    - Verificare il namespace corretto
    - Controllare la posizione del file nella struttura
@@ -125,7 +113,3 @@ composer format        # Formatta il codice
 
 ## Changelog
 Le modifiche vengono tracciate nel repository GitHub. 
-=======
-## Changelog
-Le modifiche vengono tracciate nel repository GitHub. 
->>>>>>> aurmich/dev

@@ -5,14 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Console\Commands;
 
 use Illuminate\Console\Command;
-<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
-=======
-<<<<<<< HEAD
-use Modules\Xot\Contracts\UserContract;
-=======
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 use Modules\Xot\Datas\XotData;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -51,18 +44,9 @@ class RemoveRoleCommand extends Command
     public function handle(): void
     {
         $email = text('email ?');
-<<<<<<< HEAD
         /**
          * @var UserContract $user
          */
-=======
-<<<<<<< HEAD
-        /**
-         * @var UserContract $user
-         */
-=======
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
         $user = XotData::make()->getUserByEmail($email);
         /**
          * @var array<string, string>

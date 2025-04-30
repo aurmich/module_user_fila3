@@ -30,34 +30,17 @@ class LogoutController extends XotBaseController
     public function __invoke(Request $request): JsonResponse
     {
         Assert::notNull($user = $request->user(), '['.__LINE__.']['.class_basename($this).']');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
         
         // Verificare che l'utente implementi l'interfaccia UserContract
         if (!($user instanceof \Modules\Xot\Contracts\UserContract)) {
             throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia UserContract');
         }
         
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
         app(LogoutUserAction::class)->execute($user);
 
         // TODO: Implement token cleanup logic here
         // DB::table('oauth_refresh_tokens')
-<<<<<<< HEAD
         //     ->where('access_token_id', $accessToken->)
-=======
-<<<<<<< HEAD
-        //     ->where('access_token_id', $accessToken->)
-=======
-        //     ->where('access_token_id', $accessToken->id)
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
         //     ->delete();
 
         // TODO: Implement token cleanup logic here
@@ -70,15 +53,7 @@ class LogoutController extends XotBaseController
         // }
 
         // TODO: Implement mobile device user logout logic here
-<<<<<<< HEAD
         // MobileDeviceUser::where('user_id', $user->)->update(['logout_at' => now()]);
-=======
-<<<<<<< HEAD
-        // MobileDeviceUser::where('user_id', $user->)->update(['logout_at' => now()]);
-=======
-        // MobileDeviceUser::where('user_id', $user->id)->update(['logout_at' => now()]);
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 
         // TODO: Implement response logic here
         // return response()->json([

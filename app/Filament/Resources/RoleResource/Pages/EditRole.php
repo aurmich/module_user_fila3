@@ -6,13 +6,6 @@ namespace Modules\User\Filament\Resources\RoleResource\Pages;
 
 use Filament\Actions\DeleteAction;
 use Filament\Pages\Actions\ViewAction;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-use Filament\Resources\Pages\EditRecord;
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
@@ -21,10 +14,6 @@ use Modules\User\Models\Role;
 use Modules\User\Support\Utils;
 use Webmozart\Assert\Assert;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
 
 
 
@@ -35,12 +24,6 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 
 
 class EditRole extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord
-<<<<<<< HEAD
-=======
-=======
-class EditRole extends EditRecord
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 {
     // //
     public Collection $permissions;

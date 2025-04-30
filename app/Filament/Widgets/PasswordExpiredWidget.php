@@ -26,14 +26,7 @@ use Modules\User\Http\Response\PasswordResetResponse;
 use Modules\User\Rules\CheckOtpExpiredRule;
 use Modules\Xot\Filament\Traits\TransTrait;
 use Webmozart\Assert\Assert;
-<<<<<<< HEAD
 use Filament\Facades\Filament;
-=======
-<<<<<<< HEAD
-use Filament\Facades\Filament;
-=======
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
 
 /**
  * @property ComponentContainer $form
@@ -159,10 +152,6 @@ class PasswordExpiredWidget extends Widget implements HasForms
         // get password expiry date and time
         $passwordExpiryDateTime = now()->addDays($pwd_data->expires_in);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
         // Verificare che l'utente esistante e che sia un modello Eloquent
         if (!($user instanceof \Illuminate\Database\Eloquent\Model)) {
             throw new \InvalidArgumentException('L\'utente deve essere un modello Eloquent con il metodo update');
@@ -170,31 +159,15 @@ class PasswordExpiredWidget extends Widget implements HasForms
 
         // set password expiry date and time
         $user->update([
-<<<<<<< HEAD
-=======
-=======
-        // set password expiry date and time
-        $user = tap($user)->update([
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
             'password_expires_at' => $passwordExpiryDateTime,
             'is_otp' => false,
             'password' => Hash::make($password),
         ]);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
         // Verificare che l'utente implementi l'interfaccia UserContract prima di passarlo all'evento
         if (!$user instanceof \Modules\Xot\Contracts\UserContract) {
             throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia UserContract');
         }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
         event(new NewPasswordSet($user));
 
         Notification::make()
@@ -202,23 +175,11 @@ class PasswordExpiredWidget extends Widget implements HasForms
             ->success()
             ->send();
 
-<<<<<<< HEAD
         return new PasswordResetResponse();
-=======
-<<<<<<< HEAD
-        return new PasswordResetResponse();
-=======
-        return new PasswordResetResponse;
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
     }
 
     protected function getCurrentPasswordFormComponent(): Component
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
         $authUser = Filament::auth()->user();
 
         if ($authUser instanceof \Modules\User\Models\User) {
@@ -235,19 +196,6 @@ class PasswordExpiredWidget extends Widget implements HasForms
             ->password()
             ->revealable()
             ->required()
-<<<<<<< HEAD
-=======
-=======
-        return TextInput::make('current_password')
-
-            ->password()
-            // ->revealable(filament()->arePasswordsRevealable())
-            ->revealable()
-            ->required()
-            // ->rule(PasswordRule::default())
-            ->rule(new CheckOtpExpiredRule)
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
             ->validationAttribute(static::trans('fields.current_password.validation_attribute'));
     }
 

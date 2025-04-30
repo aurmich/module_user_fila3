@@ -12,16 +12,8 @@ use Modules\Tenant\Models\Traits\SushiToPhpArray;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
-<<<<<<< HEAD
  * 
  *
-=======
-<<<<<<< HEAD
- * 
- *
-=======
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
  * @property int|null $id
  * @property string|null $name
  * @property array|null $scopes
@@ -34,13 +26,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $client_secret
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
- *
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
  * @method static \Modules\User\Database\Factories\SocialProviderFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider newQuery()
@@ -55,35 +40,14 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereSocialite($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereStateless($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereSvg($value)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
- *
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
  * @property string|null $created_at
  * @property string|null $updated_at
  * @property string|null $created_by
  * @property string|null $updated_by
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
- *
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereUpdatedBy($value)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
- *
->>>>>>> 67cd443 (.)
->>>>>>> aurmich/dev
  * @mixin \Eloquent
  */
 class SocialProvider extends BaseModel
