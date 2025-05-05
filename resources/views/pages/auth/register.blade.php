@@ -60,7 +60,7 @@ new class extends Component
                 <div class="flex justify-center mb-4">
                     <x-ui.logo class="h-12 text-blue-900" />
                 </div>
-                <h1 class="text-3xl font-light text-blue-900">Benvenuto in <span class="font-bold">SaluteOra</span></h1>
+                <h1 class="text-3xl font-light text-blue-900">Benvenuto in <span class="font-bold">il progetto</span></h1>
                 <p class="text-gray-600 mt-2">Crea il tuo account per accedere a tutti i servizi</p>
             </div>
 

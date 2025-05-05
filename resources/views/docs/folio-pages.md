@@ -91,7 +91,7 @@ render(function (View $view) {
 
 ### Prefissi di Lingua negli URL
 
-SaluteOra utilizza prefissi di lingua negli URL. Tutti i link devono includere la locale corrente:
+il progetto utilizza prefissi di lingua negli URL. Tutti i link devono includere la locale corrente:
 
 ```
 /{locale}/percorso/pagina
@@ -148,3 +148,9 @@ Per creare una nuova pagina nel tema One:
 - Verificare che il modello `Page` contenga lo slug corretto
 - Controllare i logs per eventuali errori
 - Se i link non funzionano, assicurarsi che includano la locale corrente (ad es. `/it/pages/pagina`)
+
+## Collegamenti tra versioni di folio-pages.md
+* [folio-pages.md](laravel/Modules/User/resources/views/docs/folio-pages.md)
+* [folio-pages.md](laravel/Modules/Cms/docs/folio-pages.md)
+* [folio-pages.md](laravel/Themes/One/docs/folio-pages.md)
+

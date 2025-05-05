@@ -1,3 +1,41 @@
+> **Collegamenti correlati**
+> - [README.md documentazione generale SaluteOra](../../../../docs/README.md)
+> - [README.md toolkit bashscripts](../../../../bashscripts/docs/README.md)
+> - [README.md modulo CMS](../../../../laravel/Modules/Cms/docs/README.md)
+> - [README.md modulo Dental](../../../../laravel/Modules/Dental/docs/README.md)
+> - [README.md modulo GDPR](../../../../laravel/Modules/Gdpr/docs/README.md)
+> - [README.md modulo User](../../../../laravel/Modules/User/docs/README.md)
+> - [README.md modulo Lang](../../../../laravel/Modules/Lang/docs/README.md)
+> - [README.md modulo Patient](../../../../laravel/Modules/Patient/docs/README.md)
+> - [README.md modulo Activity](../../../../laravel/Modules/Activity/docs/README.md)
+> - [README.md modulo Media](../../../../laravel/Modules/Media/docs/README.md)
+> - [README.md modulo Notify](../../../../laravel/Modules/Notify/docs/README.md)
+> - [README.md modulo Reporting](../../../../laravel/Modules/Reporting/docs/README.md)
+> - [README.md modulo Tenant](../../../../laravel/Modules/Tenant/docs/README.md)
+> - [README.md modulo UI](../../../../laravel/Modules/UI/docs/README.md)
+> - [README.md modulo Xot](../../../../laravel/Modules/Xot/docs/README.md)
+> - [README.md modulo Chart](../../../../laravel/Modules/Chart/docs/README.md)
+> - [README.md tema One](../../../../laravel/Themes/One/docs/README.md)
+> - [README.md tema Two](../../../../laravel/Themes/Two/docs/README.md)
+> - [Collegamenti documentazione centrale](../../../../docs/collegamenti-documentazione.md)
+
+> - [README.md documentazione generale SaluteOra](../../../../docs/README.md)
+> - [README.md toolkit bashscripts](../../../../bashscripts/docs/README.md)
+> - [README.md modulo CMS](../../../../laravel/Modules/Cms/docs/README.md)
+> - [README.md modulo Dental](../../../../laravel/Modules/Dental/docs/README.md)
+> - [README.md modulo GDPR](../../../../laravel/Modules/Gdpr/docs/README.md)
+> - [README.md modulo User](../../../../laravel/Modules/User/docs/README.md)
+> - [README.md modulo Lang](../../../../laravel/Modules/Lang/docs/README.md)
+> - [README.md modulo Media](../../../../laravel/Modules/Media/docs/README.md)
+> - [README.md modulo Notify](../../../../laravel/Modules/Notify/docs/README.md)
+> - [README.md modulo Reporting](../../../../laravel/Modules/Reporting/docs/README.md)
+> - [README.md modulo Tenant](../../../../laravel/Modules/Tenant/docs/README.md)
+> - [README.md modulo UI](../../../../laravel/Modules/UI/docs/README.md)
+> - [README.md modulo Xot](../../../../laravel/Modules/Xot/docs/README.md)
+> - [README.md modulo Chart](../../../../laravel/Modules/Chart/docs/README.md)
+> - [README.md tema One](../../../../laravel/Themes/One/docs/README.md)
+> - [Collegamenti documentazione centrale](../../../../docs/collegamenti-documentazione.md)
+
 # Modulo User
 
 ## Introduzione
@@ -17,12 +55,20 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e i profili utente de
 - [User Permissions](user_permissions.md) - Sistema permessi
 
 ### Filament e UI
+<<<<<<< HEAD
 - [Filament Best Practices](FILAMENT_BEST-PRACTICES.md) - Best practices Filament
+=======
+- [Filament Best Practices](filament-best-practices.md) - Best practices Filament
+>>>>>>> de10520 (.)
 - [Login Widget](login_widget.md) - Widget login personalizzato
 - [User Interface](user_interface.md) - Interfaccia utente
 
 ### Best Practices e Convenzioni
+<<<<<<< HEAD
 - [Best Practices](BEST-PRACTICES.md) - Linee guida generali
+=======
+- [Best Practices](best-practices.md) - Linee guida generali
+>>>>>>> de10520 (.)
 - [Testing](testing.md) - Testing e quality assurance
 - [Security](security.md) - Sicurezza e hardening
 
@@ -93,6 +139,7 @@ Il modulo User fornisce funzionalità di autenticazione e autorizzazione attrave
 ## Panoramica
 Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli utenti nell'applicazione. È strettamente integrato con altri moduli come Xot, Lang, e Notify.
 
+<<<<<<< HEAD
 ## Collegamenti Principali
 
 ### Documentazione Core
@@ -120,6 +167,28 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli u
 - [Gestione Ruoli](repositories.md)
 - [Team e Collaborazioni](teams.md)
 
+=======
+## Collegamenti Bidirezionali
+
+- [Architettura del Modulo](structure.md) - Struttura e organizzazione del modulo
+- [Configurazione Passport](passport.md) - Integrazione con OAuth2
+- [Gestione Profili](user_profile_models.md) - Modelli per i profili utente
+- [Best Practices Filament](filament-best-practices.md) - Linee guida per Filament
+- [Roadmap](roadmap.md) - Piano di sviluppo futuro
+- [Bottlenecks](bottlenecks.md) - Analisi performance e ottimizzazioni
+- [Login Personalizzato](custom_login.md) - Implementazione login personalizzata
+- [Ruoli Utente](user_roles.md) - Sistema di ruoli
+- [Permessi Utente](user_permissions.md) - Sistema di permessi
+
+## Vedi Anche
+
+- [Modulo Xot](../Xot/docs/README.md) - Modulo base e linee guida generali
+- [Modulo Lang](../Lang/docs/README.md) - Gestione traduzioni
+- [Modulo Notify](../Notify/docs/README.md) - Sistema di notifiche
+- [Modulo Activity](../Activity/docs/README.md) - Logging e audit trail
+- [Convenzioni di Naming](../../../docs/standards/file_naming_conventions.md) - Standard per la nomenclatura dei file
+
+>>>>>>> de10520 (.)
 ### Profili e GDPR
 - [Modelli Profilo](user_profile_models.md)
 - [Separazione Profili](user_profile_separation.md)
@@ -316,4 +385,91 @@ class UserServiceProvider extends XotBaseServiceProvider
 #### Fixed
 - Bug autenticazione
 - Problemi di configurazione
+<<<<<<< HEAD
 - Errori di traduzione 
+=======
+- Errori di traduzione 
+## Collegamenti
+- [Indice Documentazione](../../../docs/INDEX.md)
+- [README Principale](../../../README.md)
+- [API Reference](../docs/api.md)
+- [Changelog](../docs/CHANGELOG.md) 
+## Collegamenti tra versioni di README.md
+* [README.md](bashscripts/docs/README.md)
+* [README.md](bashscripts/docs/it/README.md)
+* [README.md](docs/laravel-app/phpstan/README.md)
+* [README.md](docs/laravel-app/README.md)
+* [README.md](docs/moduli/struttura/README.md)
+* [README.md](docs/moduli/README.md)
+* [README.md](docs/moduli/manutenzione/README.md)
+* [README.md](docs/moduli/core/README.md)
+* [README.md](docs/moduli/installati/README.md)
+* [README.md](docs/moduli/comandi/README.md)
+* [README.md](docs/phpstan/README.md)
+* [README.md](docs/README.md)
+* [README.md](docs/module-links/README.md)
+* [README.md](docs/troubleshooting/git-conflicts/README.md)
+* [README.md](docs/tecnico/laraxot/README.md)
+* [README.md](docs/modules/README.md)
+* [README.md](docs/conventions/README.md)
+* [README.md](docs/amministrazione/backup/README.md)
+* [README.md](docs/amministrazione/monitoraggio/README.md)
+* [README.md](docs/amministrazione/deployment/README.md)
+* [README.md](docs/translations/README.md)
+* [README.md](docs/roadmap/README.md)
+* [README.md](docs/ide/cursor/README.md)
+* [README.md](docs/implementazione/api/README.md)
+* [README.md](docs/implementazione/testing/README.md)
+* [README.md](docs/implementazione/pazienti/README.md)
+* [README.md](docs/implementazione/ui/README.md)
+* [README.md](docs/implementazione/dental/README.md)
+* [README.md](docs/implementazione/core/README.md)
+* [README.md](docs/implementazione/reporting/README.md)
+* [README.md](docs/implementazione/isee/README.md)
+* [README.md](docs/it/README.md)
+* [README.md](laravel/vendor/mockery/mockery/docs/README.md)
+* [README.md](laravel/Modules/Chart/docs/README.md)
+* [README.md](laravel/Modules/Reporting/docs/README.md)
+* [README.md](laravel/Modules/Gdpr/docs/phpstan/README.md)
+* [README.md](laravel/Modules/Gdpr/docs/README.md)
+* [README.md](laravel/Modules/Notify/docs/phpstan/README.md)
+* [README.md](laravel/Modules/Notify/docs/README.md)
+* [README.md](laravel/Modules/Xot/docs/filament/README.md)
+* [README.md](laravel/Modules/Xot/docs/phpstan/README.md)
+* [README.md](laravel/Modules/Xot/docs/exceptions/README.md)
+* [README.md](laravel/Modules/Xot/docs/README.md)
+* [README.md](laravel/Modules/Xot/docs/standards/README.md)
+* [README.md](laravel/Modules/Xot/docs/conventions/README.md)
+* [README.md](laravel/Modules/Xot/docs/development/README.md)
+* [README.md](laravel/Modules/Dental/docs/README.md)
+* [README.md](laravel/Modules/User/docs/phpstan/README.md)
+* [README.md](laravel/Modules/User/docs/README.md)
+* [README.md](laravel/Modules/User/resources/views/docs/README.md)
+* [README.md](laravel/Modules/UI/docs/phpstan/README.md)
+* [README.md](laravel/Modules/UI/docs/README.md)
+* [README.md](laravel/Modules/UI/docs/standards/README.md)
+* [README.md](laravel/Modules/UI/docs/themes/README.md)
+* [README.md](laravel/Modules/UI/docs/components/README.md)
+* [README.md](laravel/Modules/Lang/docs/phpstan/README.md)
+* [README.md](laravel/Modules/Lang/docs/README.md)
+* [README.md](laravel/Modules/Job/docs/phpstan/README.md)
+* [README.md](laravel/Modules/Job/docs/README.md)
+* [README.md](laravel/Modules/Media/docs/phpstan/README.md)
+* [README.md](laravel/Modules/Media/docs/README.md)
+* [README.md](laravel/Modules/Tenant/docs/phpstan/README.md)
+* [README.md](laravel/Modules/Tenant/docs/README.md)
+* [README.md](laravel/Modules/Activity/docs/phpstan/README.md)
+* [README.md](laravel/Modules/Activity/docs/README.md)
+* [README.md](laravel/Modules/Patient/docs/README.md)
+* [README.md](laravel/Modules/Patient/docs/standards/README.md)
+* [README.md](laravel/Modules/Patient/docs/value-objects/README.md)
+* [README.md](laravel/Modules/Cms/docs/blocks/README.md)
+* [README.md](laravel/Modules/Cms/docs/README.md)
+* [README.md](laravel/Modules/Cms/docs/standards/README.md)
+* [README.md](laravel/Modules/Cms/docs/content/README.md)
+* [README.md](laravel/Modules/Cms/docs/frontoffice/README.md)
+* [README.md](laravel/Modules/Cms/docs/components/README.md)
+* [README.md](laravel/Themes/Two/docs/README.md)
+* [README.md](laravel/Themes/One/docs/README.md)
+
+>>>>>>> de10520 (.)

@@ -9,46 +9,62 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources;
 
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Toggle;
-use Modules\User\Filament\Resources\PermissionResource\Pages\CreatePermission;
-use Modules\User\Filament\Resources\PermissionResource\Pages\EditPermission;
-use Modules\User\Filament\Resources\PermissionResource\Pages\ListPermissions;
+use Filament\Forms;
+use Filament\Forms\Form;
+use Filament\Tables;
+use Filament\Tables\Table;
 use Modules\User\Models\Permission;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+use Modules\User\Filament\Resources\PermissionResource\Pages;
 
 class PermissionResource extends XotBaseResource
 {
-    protected static ?string $navigationIcon = 'heroicon-o-lock-closed';
-
     protected static ?string $model = Permission::class;
+
+    protected static ?string $navigationIcon = 'heroicon-o-key';
+
+    protected static ?string $navigationGroup = 'Admin';
 
     public static function getFormSchema(): array
     {
         return [
-            'name' => TextInput::make('name')
+            Forms\Components\TextInput::make('name')
                 ->required()
                 ->maxLength(255),
-            'guard_name' => TextInput::make('guard_name')
+            Forms\Components\TextInput::make('guard_name')
                 ->required()
                 ->maxLength(255),
-            'active' => Toggle::make('active')
-                ->required(),
+            Forms\Components\TextInput::make('description')
+                ->maxLength(255),
         ];
     }
 
-    public static function getRelations(): array
+    public static function getListTableColumns(): array
     {
-        return [];
+        return [
+            Tables\Columns\TextColumn::make('name')
+                ->searchable(),
+            Tables\Columns\TextColumn::make('guard_name')
+                ->searchable(),
+            Tables\Columns\TextColumn::make('description')
+                ->searchable(),
+            Tables\Columns\TextColumn::make('created_at')
+                ->dateTime()
+                ->sortable()
+                ->toggleable(isToggledHiddenByDefault: true),
+            Tables\Columns\TextColumn::make('updated_at')
+                ->dateTime()
+                ->sortable()
+                ->toggleable(isToggledHiddenByDefault: true),
+        ];
     }
 
     public static function getPages(): array
     {
         return [
-            'index' => ListPermissions::route('/'),
-            'create' => CreatePermission::route('/create'),
-            'edit' => EditPermission::route('/{record}/edit'),
+            'index' => Pages\ListPermissions::route('/'),
+            'create' => Pages\CreatePermission::route('/create'),
+            'edit' => Pages\EditPermission::route('/{record}/edit'),
         ];
     }
 }

@@ -1639,4 +1639,11 @@ trait HasPassportConfiguration
    - Monitoraggio delle performance
    - Ottimizzazione del codice
 
+<<<<<<< HEAD
 // ... existing code ...
+=======
+// ... existing code ...
+## Collegamenti tra versioni di passport.md
+* [passport.md](../../Tenant/docs/it/config/passport.md)
+
+>>>>>>> de10520 (.)

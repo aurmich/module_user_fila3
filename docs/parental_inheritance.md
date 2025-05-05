@@ -1,9 +1,9 @@
-# Parental: Ereditarietà a Tabella Singola in SaluteOra
+# Parental: Ereditarietà a Tabella Singola in il progetto
 
 ## Indice
 - [Introduzione](#introduzione)
 - [Concetti Fondamentali](#concetti-fondamentali)
-- [Implementazione in SaluteOra](#implementazione-in-saluteora)
+- [Implementazione in il progetto](#implementazione-in-saluteora)
 - [Casi d'Uso nel Modulo User](#casi-duso-nel-modulo-user)
 - [Best Practices](#best-practices)
 - [Troubleshooting](#troubleshooting)
@@ -11,7 +11,7 @@
 
 ## Introduzione
 
-Parental è una libreria sviluppata da Tighten che implementa il pattern di **Single Table Inheritance (STI)** in Laravel. Questo documento analizza in dettaglio come utilizzare Parental nel contesto del modulo User di SaluteOra per gestire diversi tipi di utenti mantenendo un'architettura pulita e performante.
+Parental è una libreria sviluppata da Tighten che implementa il pattern di **Single Table Inheritance (STI)** in Laravel. Questo documento analizza in dettaglio come utilizzare Parental nel contesto del modulo User di il progetto per gestire diversi tipi di utenti mantenendo un'architettura pulita e performante.
 
 ### Cos'è la Single Table Inheritance?
 
@@ -42,7 +42,7 @@ Per distinguere tra i diversi tipi di entità nella stessa tabella, Parental uti
 - Il nome completo della classe del modello figlio, oppure
 - Un alias configurabile più leggibile
 
-## Implementazione in SaluteOra
+## Implementazione in il progetto
 
 ### Configurazione Base
 
@@ -139,7 +139,7 @@ class User extends Authenticatable
 
 ### 1. Gestione Utenti con Ruoli Diversi
 
-In SaluteOra, possiamo utilizzare Parental per implementare diversi tipi di utenti con comportamenti specifici:
+In il progetto, possiamo utilizzare Parental per implementare diversi tipi di utenti con comportamenti specifici:
 
 ```php
 // Creazione di utenti specializzati

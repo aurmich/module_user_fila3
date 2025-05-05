@@ -1,6 +1,6 @@
 {
-    "name": "saluteora/theme-one",
-    "description": "Tema One per SaluteOra",
+    "name": "laraxot/theme-one",
+    "description": "Tema One",
     "type": "library",
     "license": "MIT",
     "autoload": {

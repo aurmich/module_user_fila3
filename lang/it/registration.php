@@ -39,6 +39,22 @@ return array (
     array (
       'label' => 'Informazioni di Contatto',
     ),
+    'personal_info' => 
+    array (
+      'label' => 'personal_info',
+    ),
+    'contacts' => 
+    array (
+      'label' => 'contacts',
+    ),
+    'availability' => 
+    array (
+      'label' => 'availability',
+    ),
+    'professional' => 
+    array (
+      'label' => 'professional',
+    ),
   ),
   'fields' => 
   array (
@@ -153,6 +169,70 @@ return array (
     'last_dentist_visit' => 
     array (
       'label' => 'last_dentist_visit',
+    ),
+    'available_for_emergencies' => 
+    array (
+      'label' => 'available_for_emergencies',
+      'placeholder' => 
+      array (
+        'label' => 'available_for_emergencies',
+      ),
+    ),
+    'data_processing' => 
+    array (
+      'label' => 'data_processing',
+    ),
+    'terms_of_service' => 
+    array (
+      'label' => 'terms_of_service',
+    ),
+    'certification' => 
+    array (
+      'label' => 'certification',
+    ),
+    'end_time' => 
+    array (
+      'label' => 'end_time',
+      'placeholder' => 
+      array (
+        'label' => 'end_time',
+      ),
+    ),
+    'certifications' => 
+    array (
+      'label' => 'certifications',
+    ),
+    'specialties' => 
+    array (
+      'label' => 'specialties',
+    ),
+    'registration_number' => 
+    array (
+      'label' => 'registration_number',
+    ),
+    'start_time' => 
+    array (
+      'label' => 'start_time',
+      'placeholder' => 
+      array (
+        'label' => 'start_time',
+      ),
+    ),
+    'day' => 
+    array (
+      'label' => 'day',
+    ),
+    'availability' => 
+    array (
+      'label' => 'availability',
+      'placeholder' => 
+      array (
+        'label' => 'availability',
+      ),
+    ),
+    'full_name' => 
+    array (
+      'label' => 'full_name',
     ),
   ),
 );

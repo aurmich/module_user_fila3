@@ -62,3 +62,9 @@ Quando crei nuovi componenti Filament, assicurati sempre di:
 1. Utilizzare il namespace corretto `Modules\User\Filament`
 2. NON includere `App` nel namespace
 3. Seguire le convenzioni di naming e struttura del modulo
+
+## Collegamenti tra versioni di namespace-conventions.md
+* [namespace-conventions.md](laravel/Modules/Xot/docs/namespace-conventions.md)
+* [namespace-conventions.md](laravel/Modules/User/docs/namespace-conventions.md)
+* [namespace-conventions.md](laravel/Modules/Cms/docs/best-practices/namespace-conventions.md)
+

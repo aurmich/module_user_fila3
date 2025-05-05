@@ -226,3 +226,12 @@ Assicurarsi che i nomi dei parametri nel database corrispondano a quelli attesi 
 
 - Il blocco `feature_sections` utilizza il parametro `sections` invece di `features`
 - Il blocco `stats` utilizza il parametro `number` invece di `value` per i valori delle statistiche
+
+## Collegamenti tra versioni di blocks.md
+* [blocks.md](laravel/Modules/Xot/docs/blocks.md)
+* [blocks.md](laravel/Modules/User/resources/views/docs/blocks.md)
+* [blocks.md](laravel/Modules/UI/docs/blocks.md)
+* [blocks.md](laravel/Modules/Cms/docs/blocks.md)
+* [blocks.md](laravel/Themes/One/docs/blocks.md)
+* [blocks.md](laravel/Themes/One/docs/components/blocks.md)
+

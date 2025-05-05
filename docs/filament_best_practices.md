@@ -181,3 +181,16 @@ use InteractsWithForms;
 - [README del modulo User](./README.md) - Indice principale del modulo User
 - [Filament Widgets](./best-practices/filament-widgets.md) - Best practices per i widget Filament
 - [Filament Components](./best-practices/filament-components.md) - Best practices per i componenti Filament 
+## Collegamenti tra versioni di FILAMENT_BEST_PRACTICES.md
+* [FILAMENT_BEST_PRACTICES.md](laravel/Modules/Xot/docs/filament/FILAMENT_BEST_PRACTICES.md)
+* [FILAMENT_BEST_PRACTICES.md](laravel/Modules/Xot/docs/FILAMENT_BEST_PRACTICES.md)
+* [FILAMENT_BEST_PRACTICES.md](laravel/Modules/User/docs/FILAMENT_BEST_PRACTICES.md)
+* [FILAMENT_BEST_PRACTICES.md](laravel/Modules/Job/docs/FILAMENT_BEST_PRACTICES.md)
+
+
+## Collegamenti tra versioni di filament_best_practices.md
+* [filament_best_practices.md](../../../../docs/rules/filament_best_practices.md)
+* [filament_best_practices.md](../../Xot/docs/filament/filament_best_practices.md)
+* [filament_best_practices.md](../../Xot/docs/filament_best_practices.md)
+* [filament_best_practices.md](../../Job/docs/filament_best_practices.md)
+

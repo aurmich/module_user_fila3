@@ -152,3 +152,8 @@ Le pagine Folio si integrano con il modulo CMS attraverso:
 Per assistenza tecnica, contattare:
 - Email: support@saluteora.com
 - Documentazione: https://docs.saluteora.com 
+
+## Collegamenti tra versioni di folio.md
+* [folio.md](laravel/Modules/User/resources/views/docs/folio.md)
+* [folio.md](laravel/Themes/One/docs/folio.md)
+

@@ -13,6 +13,7 @@ use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Traits\RelationX;
 use Spatie\Permission\Models\Permission as SpatiePermission;
 use Webmozart\Assert\Assert;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * Class Permission.
@@ -51,6 +52,7 @@ use Webmozart\Assert\Assert;
  */
 class Permission extends SpatiePermission
 {
+    use HasFactory;
     use RelationX;
 
     /** @var string */
@@ -59,15 +61,11 @@ class Permission extends SpatiePermission
     /** @var string */
     protected $keyType = 'string';
 
-    /** @var list<string> */
+    /** @var array<string> */
     protected $fillable = [
-        'id',
         'name',
         'guard_name',
-        'created_at',
-        'updated_at',
-        'created_by',
-        'updated_by',
+        'description',
     ];
 
     /** @return array<string, string> */
@@ -78,6 +76,7 @@ class Permission extends SpatiePermission
             'uuid' => 'string',
             'name' => 'string',
             'guard_name' => 'string',
+            'description' => 'string',
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
         ];

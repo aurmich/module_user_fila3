@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources\PermissionResource\Pages;
 
-use Filament\Actions\CreateAction;
+use Filament\Actions;
 use Filament\Forms\Components\Select;
 use Filament\Tables;
 use Filament\Tables\Actions\BulkAction;
@@ -73,7 +73,7 @@ class ListPermissions extends XotBaseListRecords
     protected function getHeaderActions(): array
     {
         return [
-            CreateAction::make(),
+            Actions\CreateAction::make(),
         ];
     }
 

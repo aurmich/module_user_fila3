@@ -11,7 +11,7 @@ Manage users, roles, and permissions with lightning speed ⚡ through this Larav
 - **Create Super Admin in Seconds**: Instantly make any user a super admin with `php artisan user:super-admin`. 🛡️
 - **Dynamic Module Assignment**: Control user access to specific modules through `php artisan user:assign-module`. 🎯
 - **Complete Team Management**: Manage teams with simple commands like `php artisan team:create` and `php artisan team:assign-user`. 👥
-- **Permissions that Fit**: Set flexible roles and permissions to fit your app’s unique needs! 🔑
+- **Permissions that Fit**: Set flexible roles and permissions to fit your app's unique needs! 🔑
 
 ---
 
@@ -41,7 +41,7 @@ Manage users, roles, and permissions with lightning speed ⚡ through this Larav
 
 ### Supercharged Console Commands 🚀
 
-Leverage powerful artisan commands to boost your app’s user management capabilities:
+Leverage powerful artisan commands to boost your app's user management capabilities:
 
 - **Create Super Admin:**
     ```bash
@@ -161,3 +161,72 @@ php artisan user:assign-module
 L'account potrà accedere al modulo assegnato.
 
 ## [Gestione dei Team](docs/teams.md)
+
+# User Module
+
+## Description
+
+This module handles user management, authentication, and authorization.
+
+## Installation
+
+1. Install the module via composer:
+```bash
+composer require laraxot/module-user
+```
+
+2. Run migrations:
+```bash
+php artisan migrate --path=database/migrations
+```
+
+3. Run seeders:
+```bash
+php artisan db:seed --class=\\Modules\\User\\Database\\Seeders\\UserDatabaseSeeder
+```
+
+## Features
+
+- User authentication
+- Role-based authorization
+- Permission management
+- Social authentication
+- API authentication
+- Multi-tenancy support
+
+## Permissions
+
+The module defines the following permissions:
+
+- `moderate_doctors`: Can moderate doctor registrations
+- `view_doctors`: Can view doctors
+- `create_doctors`: Can create doctors
+- `edit_doctors`: Can edit doctors
+- `delete_doctors`: Can delete doctors
+
+## Roles
+
+The module defines the following roles:
+
+- `moderator`: Has permissions to moderate doctor registrations and view doctors
+
+## Configuration
+
+The module can be configured via the following environment variables:
+
+```env
+USER_CONNECTION=user
+USER_GUARD=web
+USER_PROVIDER=users
+```
+
+## Dependencies
+
+- `laravel/passport`: API authentication
+- `laravel/socialite`: Social authentication
+- `spatie/laravel-permission`: Role and permission management
+- `spatie/laravel-queueable-action`: Action pattern implementation
+
+## License
+
+The module is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

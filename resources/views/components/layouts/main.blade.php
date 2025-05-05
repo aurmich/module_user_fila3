@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="- La piattaforma per la gestione della tua salute">
         <meta name="keywords" content="salute, medici, studi, appuntamenti, prenotazioni">
-        <meta name="author" content="SaluteOra">
+        <meta name="author" content="il progetto">
 
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
@@ -45,7 +45,7 @@
                         <div class="flex flex-col space-y-4">
                             <div class="flex items-center">
                                 <x-ui.logo class="block w-auto fill-current h-8 text-white" />
-                                <span class="ml-2 font-semibold text-lg">SaluteOra</span>
+                                <span class="ml-2 font-semibold text-lg">il progetto</span>
                             </div>
                             <p class="text-sm text-blue-200">La piattaforma innovativa per la gestione della tua salute, sempre a portata di mano.</p>
                         </div>
@@ -86,7 +86,7 @@
 
                     <!-- Copyright -->
                     <div class="mt-8 pt-4 border-t border-blue-800 text-center text-sm text-blue-300">
-                        <p>&copy; {{ date('Y') }} SaluteOra. Tutti i diritti riservati.</p>
+                        <p>&copy; {{ date('Y') }} il progetto. Tutti i diritti riservati.</p>
                     </div>
                 </div>
             </footer>

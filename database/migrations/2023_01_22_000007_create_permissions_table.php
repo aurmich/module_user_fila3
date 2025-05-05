@@ -19,20 +19,19 @@ return new class extends XotBaseMigration
         // -- CREATE --
         $this->tableCreate(
             static function (Blueprint $table): void {
-                $table->bigIncrements('id');
-                // permission id
+                $table->id();
                 $table->string('name');
-                // For MySQL 8.0 use string('name', 125);
                 $table->string('guard_name');
-                // For MySQL 8.0 use string('guard_name', 125);
-                $table->unique(['name', 'guard_name']);
+                $table->string('description')->nullable();
+                $table->timestamps();
             }
         );
         // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table): void {
-                // $this->updateUser($table);
-                $this->updateTimestamps($table);
+                if (!$this->hasColumn('description')) {
+                    $table->string('description')->nullable();
+                }
             }
         );
     }

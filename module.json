@@ -8,10 +8,12 @@
         "Modules\\User\\Providers\\UserServiceProvider",
         "Modules\\User\\Providers\\Filament\\AdminPanelProvider"
     ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
     "migration": {
         "seeds": [
-            "Modules\\User\\Database\\Seeders\\RolesSeeder"
+            "Modules\\User\\Database\\Seeders\\UserDatabaseSeeder"
         ]
-    },
-    "files": []
+    }
 }

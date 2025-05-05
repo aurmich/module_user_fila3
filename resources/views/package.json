@@ -1,8 +1,8 @@
 {
-    "name": "saluteora/theme-one",
+    "name": "laraxot/theme-one",
     "private": true,
     "version": "1.0.0",
-    "description": "Tema One per SaluteOra",
+    "description": "Tema One",
     "type": "module",
     "scripts": {
         "dev": "vite",

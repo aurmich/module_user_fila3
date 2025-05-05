@@ -11,7 +11,7 @@ return [
     */
 
     'name' => 'One',
-    'description' => 'Tema predefinito per SaluteOra',
+    'description' => 'Tema predefinito per il progetto',
     'version' => '1.0.0',
 
     /*
