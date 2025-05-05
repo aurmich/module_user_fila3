@@ -49,6 +49,11 @@ class User extends Authenticatable
   - `ip_address`
   - `user_agent`
   - `login_at`
+
+## Documentazione Correlata
+
+- [Integrazione Laravel Passport](../passport.md) - Configurazione e utilizzo di OAuth2 con Laravel Passport
+- [Modello BaseUser](../BaseUser.md) - Modello utente che utilizza questo trait
   - `login_successful`
   - `created_at`
   - `updated_at`

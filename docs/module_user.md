@@ -72,6 +72,7 @@ composer format        # Formatta il codice
   AUTH0_CLIENT_ID=
   AUTH0_CLIENT_SECRET=
   ```
+- Per dettagli completi sull'integrazione di Laravel Passport, vedere [documentazione dedicata](./passport.md)
 
 ## Best Practices
 1. Seguire le convenzioni di naming Laravel

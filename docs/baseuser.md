@@ -50,6 +50,11 @@ La classe `BaseUser` è una classe astratta che implementa le interfacce `UserCo
 - Supporta l'autenticazione social attraverso la relazione `socialiteUsers`
 - Gestisce i log di autenticazione attraverso la relazione `authentications`
 
+## Documentazione Correlata
+
+- [Integrazione Laravel Passport](./passport.md) - Configurazione e utilizzo di OAuth2 con Laravel Passport
+- [Trait HasAuthenticationLog](./traits/has_authentication_log.md) - Dettagli sul logging degli eventi di autenticazione
+
 ## Collegamenti Correlati
 
 - [[HasTeamsContract]]

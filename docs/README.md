@@ -1,307 +1,319 @@
 # Modulo User
 
 ## Introduzione
-Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli utenti.
+Il modulo User gestisce l'autenticazione, l'autorizzazione e i profili utente del sistema. Fornisce un sistema completo per la gestione degli utenti, integrando OAuth2 con Passport, social login con Socialite, e un sistema avanzato di ruoli e permessi.
 
 ## Indice
 
-### Autenticazione
-- [Login](auth/LOGIN.md)
-- [Registrazione](auth/REGISTRATION.md)
-- [Reset Password](auth/PASSWORD_RESET.md)
-- [2FA](auth/TWO_FACTOR.md)
+### Autenticazione e Autorizzazione
+- [Passport Integration](passport.md) - Integrazione OAuth2
+- [Socialite Integration](socialite.txt) - Login social
+- [Two Factor Authentication](two_factor.txt) - Autenticazione a due fattori
+- [Custom Login](custom_login.md) - Implementazione login personalizzata
 
-### Autorizzazione
-- [Ruoli](authorization/ROLES.md)
-- [Permessi](authorization/PERMISSIONS.md)
-- [Policies](authorization/POLICIES.md)
-- [Gates](authorization/GATES.md)
+### Modelli e Profili
+- [User Profile Models](user_profile_models.md) - Modelli profilo utente
+- [User Roles](user_roles.md) - Sistema ruoli
+- [User Permissions](user_permissions.md) - Sistema permessi
 
-### Profilo Utente
-- [Gestione Profilo](profile/MANAGEMENT.md)
-- [Preferenze](profile/PREFERENCES.md)
-- [Notifiche](profile/NOTIFICATIONS.md)
+### Filament e UI
+- [Filament Best Practices](FILAMENT_BEST-PRACTICES.md) - Best practices Filament
+- [Login Widget](login_widget.md) - Widget login personalizzato
+- [User Interface](user_interface.md) - Interfaccia utente
 
-### Framework
-- [Laravel 12.x](../../../docs/framework/LARAVEL.md)
-- [Filament](../../../docs/framework/FILAMENT.md)
-- [Livewire](../../../docs/framework/LIVEWIRE.md)
-- [Folio & Volt](../../../docs/framework/FOLIO_VOLT.md)
+### Best Practices e Convenzioni
+- [Best Practices](BEST-PRACTICES.md) - Linee guida generali
+- [Testing](testing.md) - Testing e quality assurance
+- [Security](security.md) - Sicurezza e hardening
 
-### Sviluppo
-- [Setup](development/SETUP.md)
-- [Workflow](development/WORKFLOW.md)
-- [Testing](development/TESTING.md)
+### Documentazione Tecnica
+- [Roadmap](roadmap.md) - Piano di sviluppo futuro
+- [Bottlenecks](bottlenecks.md) - Analisi performance e ottimizzazioni
+- [Architecture](architecture.md) - Architettura del modulo
 
-### Collegamenti ad Altri Moduli
-- [Xot Module](../../Xot/docs/README.md)
-- [UI Module](../../UI/docs/README.md)
-- [Tenant Module](../../Tenant/docs/README.md)
-- [Notify Module](../../Notify/docs/README.md)
+### Link Esterni
+- [Laravel Authentication](https://laravel.com/docs/12.x/authentication)
+- [Laravel Authorization](https://laravel.com/docs/12.x/authorization)
+- [Filament Documentation](https://filamentphp.com/docs)
 
-### Collegamenti Esterni
-- [Documentazione Principale](../../../docs/README.md)
-- [Standards](../../../docs/standards/CODING.md)
-- [Best Practices](../../../docs/standards/DOCUMENTATION.md)
-- [Security](../../../docs/standards/SECURITY.md)
+## Note Importanti
 
-## Funzionalità Principali
+### Estensione Classi
+- Non estendere mai direttamente le classi di Filament
+- Utilizzare sempre le classi base di Xot con prefisso XotBase
+- Seguire le convenzioni di naming del modulo
 
-### Autenticazione
+### Trait e Service Provider
+- I trait per i provider devono essere in `Providers/Traits/`
+- Seguire la struttura esistente per nuovi trait
+- Documentare sempre l'uso dei trait
+
+### Traduzioni
+- Utilizzare il LangServiceProvider per le traduzioni
+- Non usare ->label() direttamente
+- Struttura corretta: 'source' => ['label'=>'Sorgente']
+
+## Esempi
+
+### Service Provider
 ```php
-class LoginController extends Controller
+use Xot\XotBaseServiceProvider;
+
+class UserServiceProvider extends XotBaseServiceProvider
 {
-    use AuthenticatesUsers;
-    
-    protected function authenticated(Request $request, User $user): RedirectResponse
-    {
-        if ($user->isTwoFactorEnabled()) {
-            return redirect()->route('2fa.verify');
-        }
-        
-        return redirect()->intended($this->redirectPath());
-    }
+    // Implementazione
 }
 ```
 
-### Autorizzazione
+### Widget Base
 ```php
-class UserPolicy
+use Xot\Filament\Widgets\XotBaseWidget;
+
+class LoginWidget extends XotBaseWidget
 {
-    public function update(User $user, User $model): bool
-    {
-        return $user->hasRole('admin') || $user->id === $model->id;
-    }
-    
-    public function delete(User $user, User $model): bool
-    {
-        return $user->hasRole('admin');
-    }
+    // Implementazione
 }
 ```
-
-### Profilo
-```php
-class ProfileController extends Controller
-{
-    public function update(UpdateProfileRequest $request): RedirectResponse
-    {
-        $user = $request->user();
-        
-        $user->update($request->validated());
-        
-        if ($request->hasFile('avatar')) {
-            $user->updateAvatar($request->file('avatar'));
-        }
-        
-        return redirect()
-            ->route('profile.show')
-            ->with('status', 'profile-updated');
-    }
-}
-```
-
-## Best Practices
-
-### 1. Autenticazione
-- Usare guard personalizzati per contesti diversi
-- Implementare 2FA dove necessario
-- Gestire correttamente le sessioni
-- Logging degli accessi
-
-### 2. Autorizzazione
-- Definire ruoli chiari
-- Usare permessi granulari
-- Implementare policies
-- Documentare le regole
-
-### 3. Performance
-- Caching dei ruoli/permessi
-- Eager loading delle relazioni
-- Ottimizzazione delle query
-- Gestione efficiente delle sessioni
-
-## Collegamenti Rapidi
-- [Torna alla Documentazione Principale](../../../docs/README.md)
-- [Standards di Codifica](../../../docs/standards/CODING.md)
-- [Autenticazione](auth/LOGIN.md)
-- [Sviluppo](development/SETUP.md)
-
-## Panoramica
-Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli utenti del sistema.
-
-## Caratteristiche Principali
-
-### Architettura
-- Autenticazione con Folio
-- Componenti Volt per i form
-- Gestione ruoli e permessi
-- Profili utente
-- Integrazione con Filament
-
-### Struttura
-```
-User/
-├── app/
-│   ├── Filament/
-│   │   ├── Resources/
-│   │   │   ├── Pages/
-│   │   │   └── Widgets/
-│   │   ├── Http/
-│   │   │   ├── Controllers/
-│   │   │   └── Middleware/
-│   │   ├── Models/
-│   │   └── Services/
-│   ├── resources/
-│   │   ├── views/
-│   │   │   ├── pages/      # Pagine Folio
-│   │   │   │   ├── auth/
-│   │   │   │   │   ├── login.blade.php
-│   │   │   │   │   ├── register.blade.php
-│   │   │   │   │   └── logout.blade.php
-│   │   │   │   └── profile/
-│   │   │   └── components/ # Componenti Volt
-│   │   │       ├── auth/
-│   │   │       └── profile/
-│   │   ├── lang/
-│   │   └── ...
-│   └── docs/
-```
-
-## Funzionalità Principali
-- Gestione utenti e profili
-- Sistema di permessi e ruoli
-- Autenticazione e autorizzazione
-- Integrazione con altri moduli
-
-## Collegamenti Bidirezionali
-
-### Modulo Xot
-- [Linee Guida Base](../../Xot/docs/README.md) - Convenzioni generali
-- [Best Practices](../../Xot/docs/best-practices.md) - Linee guida sviluppo
-- [Struttura Moduli](../../Xot/docs/structure.md) - Organizzazione moduli
-
-### Modulo Lang
-- [Traduzioni Interfaccia](../../Lang/docs/translations.md) - Traduzioni UI
-- [Messaggi Sistema](../../Lang/docs/messages.md) - Messaggi di sistema
-- [Notifiche](../../Lang/docs/notifications.md) - Notifiche tradotte
-
-### Modulo UI
-- [Componenti Utente](../../UI/docs/user-components.md) - Componenti per utenti
-- [Profilo](../../UI/docs/profile.md) - Interfaccia profilo
-- [Form Autenticazione](../../UI/docs/auth-forms.md) - Form di login/registrazione
-
-### Modulo Cms
-- [Contenuti Utente](../../Cms/docs/user-content.md) - Gestione contenuti utente
-- [Widget Profilo](../../Cms/docs/profile-widgets.md) - Widget per profili
-- [SEO Utente](../../Cms/docs/user-seo.md) - Ottimizzazione SEO profili
-
-## Documentazione
-
-### Guide
-- [Autenticazione](auth.md)
-- [Autorizzazione](authorization.md)
-- [Profilo Utente](profile.md)
-- [Ruoli e Permessi](roles.md)
-
-### Esempi
-- [Login](auth-pages.md)
-- [Registrazione](registration.md)
-- [Recupero Password](password-reset.md)
-- [Gestione Profilo](profile-management.md)
 
 ## Dipendenze
-- Laravel Sanctum
+- Laravel Framework
 - Filament
 - Livewire
 - Volt
 - Folio
 
 ## Utilizzo
+Il modulo User fornisce funzionalità di autenticazione e autorizzazione attraverso:
+- OAuth2 con Passport
+- Social login con Socialite
+- Sistema ruoli e permessi
+- Profili utente personalizzabili
+- Interfaccia Filament
 
-### Autenticazione con Folio
-```php
-// resources/views/pages/auth/login.blade.php
-<?php
+## Panoramica
+Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli utenti nell'applicazione. È strettamente integrato con altri moduli come Xot, Lang, e Notify.
 
-use function Livewire\Volt\{state, mount};
+## Collegamenti Principali
 
-state([
-    'email' => '',
-    'password' => '',
-    'remember' => false,
-]);
+### Documentazione Core
+- [Architettura del Modulo](structure.md)
+- [Configurazione Passport](passport.md)
+- [Integrazione Socialite](socialite.txt)
+- [Gestione Profili](user_profile_models.md)
+- [Best Practices Filament](FILAMENT_BEST_PRACTICES.md)
+- [Roadmap](roadmap.md)
+- [Bottlenecks](bottlenecks.md)
 
-$login = function() {
-    if (auth()->attempt([
-        'email' => $this->email,
-        'password' => $this->password,
-    ], $this->remember)) {
-        return redirect()->intended('/dashboard');
-    }
+### Integrazioni
+- [Integrazione con Xot](../Xot/docs/README.md)
+- [Integrazione con Lang](../Lang/docs/README.md)
+- [Integrazione con Notify](../Notify/docs/README.md)
 
-    $this->addError('email', 'Credenziali non valide');
-};
+### Autenticazione
+- [Login Personalizzato](custom_login.md)
+- [Autenticazione a Due Fattori](two_factor.txt)
+- [Single Sign-On](sso.txt)
+- [Gestione Password](password.md)
 
-?>
+### Autorizzazione
+- [Permessi Spatie](spatie_permissions.txt)
+- [Gestione Ruoli](repositories.md)
+- [Team e Collaborazioni](teams.md)
+
+### Profili e GDPR
+- [Modelli Profilo](user_profile_models.md)
+- [Separazione Profili](user_profile_separation.md)
+- [Conformità GDPR](gdpr.txt)
+
+### UI/UX
+- [Metriche Dashboard](metrics-dashboard.md)
+- [Conflitti JS](js_conflicts.md)
+- [Best Practices Tailwind](tailwind.txt)
+
+### Sviluppo
+- [Convenzioni Namespace](namespace-conventions.md)
+- [Struttura Repository](repos.txt)
+- [Analisi Performance](BOTTLENECKS.md)
+
+### Testing e Qualità
+- [PHPStan Fixes](phpstan_fixes.md)
+- [PHPStan Level 9](PHPSTAN_LEVEL9_FIXES.md)
+- [PHPStan Level 10](PHPSTAN_LEVEL10_FIXES.md)
+
+## Struttura del Modulo
+
+```
+Modules/User/
+├── app/
+│   ├── Models/
+│   │   ├── User.php
+│   │   ├── OauthAccessToken.php
+│   │   ├── OauthAuthCode.php
+│   │   ├── OauthClient.php
+│   │   ├── OauthPersonalAccessClient.php
+│   │   └── OauthRefreshToken.php
+│   ├── Providers/
+│   │   ├── Traits/
+│   │   │   ├── HasPassportConfiguration.php
+│   │   │   └── HasSocialiteConfiguration.php
+│   │   ├── UserServiceProvider.php
+│   │   ├── EventServiceProvider.php
+│   │   ├── RouteServiceProvider.php
+│   │   └── Filament/
+│   │       └── AdminPanelProvider.php
+│   ├── Filament/
+│   │   ├── Resources/
+│   │   │   └── UserResource.php
+│   │   ├── Widgets/
+│   │   │   ├── Auth/
+│   │   │   │   ├── LoginWidget.php
+│   │   │   │   ├── RegisterWidget.php
+│   │   │   │   └── SocialLoginWidget.php
+│   │   │   └── User/
+│   │   │       ├── UserStatsWidget.php
+│   │   │       └── UserActivityWidget.php
+│   │   └── Pages/
+│   │       └── Auth/
+│   │           ├── LoginPage.php
+│   │           └── RegisterPage.php
+│   └── Http/
+│       └── Controllers/
+│           └── Auth/
+├── config/
+│   └── auth.php
+├── database/
+│   └── migrations/
+└── resources/
+    └── views/
+        └── pages/
+            └── auth/
 ```
 
-### Componenti Volt
+## Dipendenze Principali
+
+### Moduli
+- **Xot**: Fornisce le classi base e l'infrastruttura core
+- **Lang**: Gestione delle traduzioni
+- **Notify**: Sistema di notifiche
+- **UI**: Componenti di interfaccia utente
+
+### Pacchetti
+- Laravel Passport
+- Laravel Socialite
+- Spatie Permission
+- Filament
+
+## Best Practices
+
+### 1. Estensione delle Classi
 ```php
-// resources/views/components/auth/login-form.blade.php
-<?php
+// ❌ NON FARE QUESTO
+use Filament\Widgets\Widget;
+class LoginForm extends Widget { ... }
 
-use function Livewire\Volt\{state, mount};
+// ✅ FARE QUESTO
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
+class LoginWidget extends XotBaseWidget { ... }
+```
 
-state([
-    'email' => '',
-    'password' => '',
-    'remember' => false,
-]);
+### 2. Gestione delle Traduzioni
+```php
+// ❌ NON FARE QUESTO
+->label('Sorgente')
 
-$submit = function() {
-    $this->validate([
-        'email' => 'required|email',
-        'password' => 'required',
-    ]);
+// ✅ FARE QUESTO
+->label(['label' => 'Sorgente'])
+```
 
-    if (auth()->attempt([
-        'email' => $this->email,
-        'password' => $this->password,
-    ], $this->remember)) {
-        return redirect()->intended('/dashboard');
+### 3. Configurazione dei Provider
+```php
+// In Modules/User/app/Providers/UserServiceProvider.php
+use Modules\User\Providers\Traits\HasPassportConfiguration;
+
+class UserServiceProvider extends XotBaseServiceProvider
+{
+    use HasPassportConfiguration;
+
+    public function boot(): void
+    {
+        $this->configurePassport();
     }
+}
+```
 
-    $this->addError('email', 'Credenziali non valide');
-};
+## Roadmap
 
-?>
+### Prossime Feature
+1. Miglioramento della gestione dei token OAuth
+2. Integrazione con nuovi provider social
+3. Ottimizzazione delle performance
 
-<form wire:submit="submit">
-    <div>
-        <label for="email">Email</label>
-        <input type="email" wire:model="email" id="email">
-        @error('email') <span>{{ $message }}</span> @enderror
-    </div>
+### Miglioramenti Pianificati
+1. Refactoring del sistema di autenticazione
+2. Miglioramento della gestione dei profili
+3. Ottimizzazione delle query
 
-    <div>
-        <label for="password">Password</label>
-        <input type="password" wire:model="password" id="password">
-        @error('password') <span>{{ $message }}</span> @enderror
-    </div>
+## Contribuire
 
-    <div>
-        <label>
-            <input type="checkbox" wire:model="remember">
-            Ricordami
-        </label>
-    </div>
+### Setup Sviluppo
+1. Clona il repository
+2. Installa le dipendenze
+3. Configura l'ambiente
+4. Esegui i test
 
-    <button type="submit">Accedi</button>
-</form>
+### Convenzioni di Codice
+- Seguire PSR-12
+- Utilizzare type hints
+- Documentare il codice
+- Scrivere test unitari
 
-## Collegamenti
-- [Indice Documentazione](../../../docs/INDEX.md)
-- [README Principale](../../../README.md)
-- [API Reference](../docs/api.md)
-- [Changelog](../docs/CHANGELOG.md) 
+### Processo di Pull Request
+1. Crea un branch feature
+2. Implementa le modifiche
+3. Aggiungi i test
+4. Aggiorna la documentazione
+5. Crea la PR
+
+## Troubleshooting
+
+### Problemi Comuni
+1. Conflitti di autenticazione
+2. Problemi di performance
+3. Errori di configurazione
+
+### Soluzioni
+1. Verifica la configurazione
+2. Controlla i log
+3. Consulta la documentazione
+
+## Riferimenti
+
+### Documentazione
+- [Laravel Passport](https://laravel.com/docs/12.x/passport)
+- [Laravel Socialite](https://laravel.com/docs/12.x/socialite)
+- [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel)
+- [Filament](https://filamentphp.com/docs)
+
+### Collegamenti Interni
+- [Xot Base Classes](../Xot/docs/base-classes.md)
+- [Lang Integration](../Lang/docs/lang-link.md)
+- [Notify Setup](../Notify/docs/README.md)
+
+## Changelog
+
+### [1.0.0] - 2024-03-20
+#### Added
+- Implementazione iniziale
+- Supporto OAuth2
+- Integrazione Socialite
+- Sistema di autorizzazione
+
+#### Changed
+- Miglioramento performance
+- Ottimizzazione query
+- Refactoring codice
+
+#### Fixed
+- Bug autenticazione
+- Problemi di configurazione
+- Errori di traduzione 

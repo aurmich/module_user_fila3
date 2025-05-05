@@ -1,78 +1,156 @@
 # Roadmap Modulo User
 
-## Panoramica
-Questo documento descrive la roadmap di sviluppo del modulo User, con percentuali di completamento e dettagli sui passi da compiere.
+## Funzionalità Future
 
-## Stato Attuale
-- **Completamento Generale**: 82%
-- **Ultimo Aggiornamento**: 30 Aprile 2024
-- **Priorità Attuale**: Implementazione 2FA e miglioramento social auth
+### Autenticazione
+1. **Miglioramento OAuth**
+   - Implementazione refresh token automatico
+   - Supporto per più provider social
+   - Gestione avanzata scadenza token
 
-### Autenticazione [92%]
-- [✓] Login Base [100%](roadmap/login.md) - Completamente implementato
-- [✓] Registrazione [98%](roadmap/registration.md) - Ottimizzato con validazione
-- [✓] Reset Password [95%](roadmap/password-reset.md) - Funzionale con notifiche
-- [-] 2FA [75%](roadmap/2fa.md) - In fase di implementazione
+2. **Two Factor Authentication**
+   - Supporto per app authenticator
+   - Backup codes
+   - Remember device
 
-### Autorizzazione [85%]
-- [✓] Ruoli [100%](roadmap/roles.md)
-- [✓] Permessi [95%](roadmap/permissions.md)
-- [-] Policies [75%](roadmap/policies.md)
-- [-] Gates [70%](roadmap/gates.md)
+3. **Single Sign-On**
+   - Integrazione con SAML
+   - Supporto per OpenID Connect
+   - Gestione sessioni cross-domain
 
-### Profilo Utente [75%]
-- [✓] Dati Base [90%](roadmap/profile-base.md)
-- [-] Avatar [70%](roadmap/avatar.md)
-- [-] Preferenze [65%](roadmap/preferences.md)
-- [-] Notifiche [75%](roadmap/notifications.md)
+### Autorizzazione
+1. **Ruoli e Permessi**
+   - Sistema di ereditarietà ruoli
+   - Permessi dinamici
+   - Audit log autorizzazioni
 
-### Social Auth [68%]
-- [✓] Google [90%](roadmap/google-auth.md) - Integrazione completa con OAuth 2.0
-- [-] Facebook [65%](roadmap/facebook-auth.md) - Implementazione base completata
-- [-] Twitter [50%](roadmap/twitter-auth.md) - Iniziata integrazione API v2
+2. **Policy Management**
+   - Editor visuale policy
+   - Testing policy
+   - Documentazione automatica
 
-### API [70%]
-- [✓] Autenticazione [90%](roadmap/api-auth.md)
-- [-] Endpoints [65%](roadmap/api-endpoints.md)
-- [-] Documentazione [55%](roadmap/api-docs.md)
+3. **Access Control**
+   - IP whitelisting
+   - Geolocation based access
+   - Time-based restrictions
 
-### Testing [75%]
-- [✓] Unit Tests [85%](roadmap/unit-tests.md)
-- [-] Feature Tests [70%](roadmap/feature-tests.md)
-- [-] Integration Tests [70%](roadmap/integration-tests.md)
+### Profili Utente
+1. **Gestione Profili**
+   - Profili multipli per utente
+   - Custom fields
+   - Import/Export dati
 
-## Prossimi Passi
+2. **Preferenze**
+   - UI customization
+   - Notification preferences
+   - Language preferences
+
+3. **Privacy**
+   - GDPR compliance
+   - Data retention
+   - Privacy settings
+
+## Miglioramenti Pianificati
+
+### Performance
+1. **Ottimizzazione Database**
+   - Query optimization
+   - Indexing strategy
+   - Caching layer
+
+2. **API Performance**
+   - Response compression
+   - Batch operations
+   - Rate limiting
+
+3. **UI Performance**
+   - Lazy loading
+   - Code splitting
+   - Asset optimization
+
+### Sicurezza
+1. **Hardening**
+   - Security headers
+   - CSRF protection
+   - XSS prevention
+
+2. **Monitoring**
+   - Security logging
+   - Alert system
+   - Audit trail
+
+3. **Compliance**
+   - GDPR updates
+   - Privacy laws
+   - Security standards
+
+### UX/UI
+1. **Interface**
+   - Dark mode
+   - Responsive design
+   - Accessibility
+
+2. **Workflow**
+   - Onboarding flow
+   - Error handling
+   - Success feedback
+
+3. **Documentation**
+   - User guides
+   - API documentation
+   - Code examples
+
+## Timeline
+
+### Q1 2024
+- Implementazione refresh token
+- Sistema di ereditarietà ruoli
+- Ottimizzazione query database
 
 ### Q2 2024
-1. Completare 2FA [75% → 95%]
-2. Migliorare social auth [68% → 85%]
-3. Espandere API [70% → 85%]
+- Supporto SAML
+- Editor policy visuale
+- Security hardening
 
 ### Q3 2024
-1. Ottimizzare profilo utente [75% → 90%]
-2. Completare testing [75% → 90%]
-3. Migliorare documentazione API [55% → 80%]
+- Profili multipli
+- GDPR compliance
+- UI improvements
 
 ### Q4 2024
-1. Rilascio versione 2.0
-2. Integrazione con Folio + Volt
-3. Miglioramento UX/UI
+- Geolocation access
+- Performance optimization
+- Documentation updates
 
-## Collegamenti Bidirezionali
+## Contribuire
 
-### Collegamenti ad Altri Moduli
-- [Roadmap Modulo Xot](../../Xot/docs/roadmap.md) - Modulo base
-- [Architettura Folio + Volt](../../Xot/docs/FOLIO_VOLT_ARCHITECTURE.md) - Integrazione Folio e Volt
-- [Struttura dei Moduli](../../Xot/docs/MODULE_STRUCTURE.md) - Convenzioni di naming e struttura
+### Come Contribuire
+1. Fork repository
+2. Crea branch feature
+3. Commit changes
+4. Push branch
+5. Crea Pull Request
+
+### Standard di Codice
+- PSR-12 compliance
+- PHPDoc comments
+- Unit tests
+- Integration tests
+
+### Processo di Review
+1. Code review
+2. Test automation
+3. Documentation
+4. Merge approval
+
+## Riferimenti
+
+### Documentazione
+- [Laravel Authentication](https://laravel.com/docs/12.x/authentication)
+- [Laravel Authorization](https://laravel.com/docs/12.x/authorization)
+- [Laravel Security](https://laravel.com/docs/12.x/security)
 
 ### Collegamenti Interni
-- [Documentazione Autenticazione](./authentication.md) - Guida all'autenticazione
-- [Documentazione API](./api.md) - Guida alle API
-- [Integrazione Social](./social-auth.md) - Guida all'integrazione social
-2. Implementazione SSO
-3. Nuove integrazioni social
-
-## Note
-- Priorità alta: 2FA e Testing
-- Focus su sicurezza
-- Mantenere compatibilità con OAuth2
+- [Bottlenecks](bottlenecks.md)
+- [Best Practices](BEST-PRACTICES.md)
+- [Testing](testing.md)

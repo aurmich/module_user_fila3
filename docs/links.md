@@ -6,6 +6,9 @@
 - [Gestione Utenti](./users.md)
 - [Autorizzazioni](./permissions.md)
 - [Profili](./profiles.md)
+- [Laravel Passport](./passport.md)
+- [Autenticazione Social](./socialite.txt)
+- [OAuth GitHub](./OAuth/github.md)
 
 ## Collegamenti in Entrata
 - [Modulo Xot](../Xot/docs/LINKS.md)
