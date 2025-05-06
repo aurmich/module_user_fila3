@@ -28,10 +28,10 @@ build
 *.exe
 *:Zone.Identifier
 
-<<<<<<< HEAD
 # Backup files
 *.bak
-=======
 # File di log
 *.log
->>>>>>> 3a17e19 (.)
+-e 
+# PHPStan documentation
+docs/phpstan/
