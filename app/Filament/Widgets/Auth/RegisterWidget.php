@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<< HEAD
-namespace Modules\User\Filament\Widgets\Auth;
-=======
 namespace Modules\User\App\Filament\Widgets\Auth;
->>>>>>> db74942 (.)
 
 use Filament\Widgets\Widget;
 use Filament\Forms\Components\TextInput;

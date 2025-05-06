@@ -14,11 +14,7 @@ use Modules\User\Filament\Resources\RoleResource;
 
 
 
-<<<<<<< HEAD
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
-=======
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
->>>>>>> db74942 (.)
 
 
 

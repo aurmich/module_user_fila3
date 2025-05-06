@@ -55,7 +55,7 @@ return [
     */
 
     'cms' => [
-        'content_path' => 'laravel/config/local/saluteora/database/content/pages',
+        'content_path' => 'laravel/config/local/<nome progetto>/database/content/pages',
     ],
 
     /*

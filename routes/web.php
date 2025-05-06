@@ -27,10 +27,6 @@ Route::prefix('user')->group(function() {
 
 // Route::domain(config('filament.domain'))
 //    ->middleware(config('filament.middleware.base'))
-<<<<<<< HEAD
-/*
-=======
->>>>>>> db74942 (.)
 Route::namespace('Socialite')
     ->name('socialite.')
     ->group(
@@ -48,11 +44,6 @@ Route::namespace('Socialite')
                 ->name('oauth.callback');
         }
     );
-<<<<<<< HEAD
-*/
-require 'socialite.php';
-=======
->>>>>>> db74942 (.)
 
 /*
  * ..
@@ -73,11 +64,6 @@ Route::namespace('\\')
     );
 */
 
-<<<<<<< HEAD
-
-/*
-=======
->>>>>>> db74942 (.)
 if (XotData::make()->register_pub_theme) {
     require 'web_tall.php';
 } else {
@@ -85,7 +71,3 @@ if (XotData::make()->register_pub_theme) {
 }
 
 Route::get('/upgrade', 'UpgradeController');
-<<<<<<< HEAD
-*/
-=======
->>>>>>> db74942 (.)

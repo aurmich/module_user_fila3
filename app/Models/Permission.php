@@ -13,10 +13,6 @@ use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Traits\RelationX;
 use Spatie\Permission\Models\Permission as SpatiePermission;
 use Webmozart\Assert\Assert;
-<<<<<<< HEAD
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-=======
->>>>>>> db74942 (.)
 
 /**
  * Class Permission.
@@ -55,10 +51,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  */
 class Permission extends SpatiePermission
 {
-<<<<<<< HEAD
-    use HasFactory;
-=======
->>>>>>> db74942 (.)
     use RelationX;
 
     /** @var string */
@@ -67,13 +59,6 @@ class Permission extends SpatiePermission
     /** @var string */
     protected $keyType = 'string';
 
-<<<<<<< HEAD
-    /** @var array<string> */
-    protected $fillable = [
-        'name',
-        'guard_name',
-        'description',
-=======
     /** @var list<string> */
     protected $fillable = [
         'id',
@@ -83,7 +68,6 @@ class Permission extends SpatiePermission
         'updated_at',
         'created_by',
         'updated_by',
->>>>>>> db74942 (.)
     ];
 
     /** @return array<string, string> */
@@ -94,10 +78,6 @@ class Permission extends SpatiePermission
             'uuid' => 'string',
             'name' => 'string',
             'guard_name' => 'string',
-<<<<<<< HEAD
-            'description' => 'string',
-=======
->>>>>>> db74942 (.)
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
         ];

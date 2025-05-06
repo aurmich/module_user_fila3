@@ -16,11 +16,7 @@ use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Models\User;
 use Webmozart\Assert\Assert;
 
-<<<<<<< HEAD
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
-=======
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
->>>>>>> db74942 (.)
 
 /**
  * Pagina per la modifica degli utenti con particolare gestione della password.

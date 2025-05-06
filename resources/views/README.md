@@ -19,7 +19,7 @@ Tema One è il tema predefinito per il progetto, basato su Filament 3.3. Offre u
 ```json
 {
     "require": {
-        "saluteora/theme-one": "^1.0"
+        "<nome progetto>/theme-one": "^1.0"
     }
 }
 ```
@@ -81,7 +81,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
     content: [
         './resources/views/**/*.blade.php',
-        './vendor/saluteora/theme-one/resources/views/**/*.blade.php',
+        './vendor/<nome progetto>/theme-one/resources/views/**/*.blade.php',
     ],
     theme: {
         extend: {
@@ -204,5 +204,5 @@ Assicurati che i nomi dei parametri nel database corrispondano a quelli attesi d
 ## Supporto
 
 Per assistenza tecnica, contattare:
-- Email: support@saluteora.com
-- Documentazione: https://docs.saluteora.com 
+- Email: support@<nome progetto>.com
+- Documentazione: https://docs.<nome progetto>.com 

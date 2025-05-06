@@ -5,10 +5,6 @@ declare(strict_types=1);
 namespace Modules\User\Models;
 
 use Modules\Xot\Contracts\ProfileContract;
-<<<<<<< HEAD
-use Spatie\Permission\Traits\HasRoles;
-=======
->>>>>>> db74942 (.)
 
 /**
  * Class Modules\User\Models\User.

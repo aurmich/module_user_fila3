@@ -82,13 +82,10 @@ return array (
     array (
       'label' => 'personal_team',
     ),
-<<<<<<< HEAD
-=======
     'role' => 
     array (
       'label' => 'role',
     ),
->>>>>>> db74942 (.)
   ),
   'actions' => 
   array (

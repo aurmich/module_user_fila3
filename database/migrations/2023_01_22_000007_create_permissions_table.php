@@ -19,13 +19,6 @@ return new class extends XotBaseMigration
         // -- CREATE --
         $this->tableCreate(
             static function (Blueprint $table): void {
-<<<<<<< HEAD
-                $table->id();
-                $table->string('name');
-                $table->string('guard_name');
-                $table->string('description')->nullable();
-                $table->timestamps();
-=======
                 $table->bigIncrements('id');
                 // permission id
                 $table->string('name');
@@ -33,20 +26,13 @@ return new class extends XotBaseMigration
                 $table->string('guard_name');
                 // For MySQL 8.0 use string('guard_name', 125);
                 $table->unique(['name', 'guard_name']);
->>>>>>> db74942 (.)
             }
         );
         // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table): void {
-<<<<<<< HEAD
-                if (!$this->hasColumn('description')) {
-                    $table->string('description')->nullable();
-                }
-=======
                 // $this->updateUser($table);
                 $this->updateTimestamps($table);
->>>>>>> db74942 (.)
             }
         );
     }
