@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+=======
+
+
+=======
+
+=======
+
+>>>>>>> aurmich/dev
+
+=======
+
+>>>>>>> aurmich/dev
+=======
+
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 3a17e19 (.)
 # Rapporto PHPStan Livello 1 per il modulo User
 
 Data analisi: 2025-04-15 21:57:11
@@ -544,6 +565,7 @@ Trovati 64 errori al livello 1.
 - [Tipi in PHP](https://www.php.net/manual/en/language.types.declarations.php)
 - [PSR-12: Standard di codifica](https://www.php-fig.org/psr/psr-12/)
 
+<<<<<<< HEAD
 ## Collegamenti tra versioni di level_1.md
 * [level_1.md](../../../Chart/docs/phpstan/level_1.md)
 * [level_1.md](../../../Reporting/docs/phpstan/level_1.md)
@@ -561,3 +583,22 @@ Trovati 64 errori al livello 1.
 * [level_1.md](../../../Patient/docs/phpstan/level_1.md)
 * [level_1.md](../../../Cms/docs/phpstan/level_1.md)
 
+=======
+
+=======
+aurmich/dev
+=======
+
+>>>>>>> aurmich/dev
+
+=======
+aurmich/dev
+>>>>>>> aurmich/dev
+=======
+aurmich/dev
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 3a17e19 (.)

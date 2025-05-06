@@ -1,6 +1,26 @@
+<<<<<<< HEAD
+
+=======
 
 
+=======
 
+=======
+
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> 3a17e19 (.)
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 3a17e19 (.)
 # Rapporto PHPStan Livello 8 per il modulo User
 
 Data analisi: 2025-04-15 21:59:49
@@ -592,9 +612,22 @@ Trovati 69 errori al livello 8.
 - [Documentazione PHPStan](https://phpstan.org/user-guide/getting-started)
 - [Tipi in PHP](https://www.php.net/manual/en/language.types.declarations.php)
 - [PSR-12: Standard di codifica](https://www.php-fig.org/psr/psr-12/)
+<<<<<<< HEAD
+aurmich/dev
+=======
+
+
+=======
+aurmich/dev
+=======
+
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> 3a17e19 (.)
 aurmich/dev
 aurmich/dev
-aurmich/dev
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di level_8.md
 * [level_8.md](../../../Chart/docs/phpstan/level_8.md)
@@ -613,3 +646,10 @@ aurmich/dev
 * [level_8.md](../../../Patient/docs/phpstan/level_8.md)
 * [level_8.md](../../../Cms/docs/phpstan/level_8.md)
 
+=======
+>>>>>>> aurmich/dev
+
+=======
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
+>>>>>>> 3a17e19 (.)

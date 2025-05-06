@@ -106,7 +106,7 @@ class UserServiceProvider extends XotBaseServiceProvider
 
     private function registerPassport(): void
     {
-        Passport::usePersonalAccessClientModel(OauthPersonalAccessClient::class);
+        
         Passport::useTokenModel(OauthAccessToken::class);
         Passport::useRefreshTokenModel(OauthRefreshToken::class);
         Passport::useAuthCodeModel(OauthAuthCode::class);
