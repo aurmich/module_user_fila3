@@ -67,8 +67,8 @@ La classe `BaseUser` è una classe astratta che implementa le interfacce `UserCo
 - [[AuthenticationLog]] 
 
 ## Collegamenti tra versioni di BaseUser.md
-* [BaseUser.md](laravel/Modules/User/docs/BaseUser.md)
-* [BaseUser.md](laravel/Modules/User/docs/Models/BaseUser.md)
+* [BaseUser.md](../../../User/docs/BaseUser.md)
+* [BaseUser.md](../../../User/docs/Models/BaseUser.md)
 
 
 ## Collegamenti tra versioni di baseuser.md

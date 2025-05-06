@@ -56,7 +56,7 @@ Trovati 64 errori al livello 1.
 
 ### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Filament/Widgets/Auth/RegisterWidget.php`
 
-#### Linea 22: Access to an undefined property Modules\User\App\Filament\Widgets\Auth\RegisterWidget::$form.
+#### Linea 22: Access to an undefined property Modules\User\Filament\Widgets\RegistrationWidget::$form.
 
 **Suggerimento**: Questa proprietà non esiste o non è accessibile. Verifica:
 - Se la proprietà è definita nella classe
@@ -64,7 +64,7 @@ Trovati 64 errori al livello 1.
 - Se stai usando un trait che definisce questa proprietà
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
-#### Linea 69: Access to an undefined property Modules\User\App\Filament\Widgets\Auth\RegisterWidget::$form.
+#### Linea 69: Access to an undefined property Modules\User\Filament\Widgets\RegistrationWidget::$form.
 
 **Suggerimento**: Questa proprietà non esiste o non è accessibile. Verifica:
 - Se la proprietà è definita nella classe
@@ -545,19 +545,19 @@ Trovati 64 errori al livello 1.
 - [PSR-12: Standard di codifica](https://www.php-fig.org/psr/psr-12/)
 
 ## Collegamenti tra versioni di level_1.md
-* [level_1.md](laravel/Modules/Chart/docs/phpstan/level_1.md)
-* [level_1.md](laravel/Modules/Reporting/docs/phpstan/level_1.md)
-* [level_1.md](laravel/Modules/Gdpr/docs/phpstan/level_1.md)
-* [level_1.md](laravel/Modules/Notify/docs/phpstan/level_1.md)
-* [level_1.md](laravel/Modules/Xot/docs/phpstan/level_1.md)
-* [level_1.md](laravel/Modules/Dental/docs/phpstan/level_1.md)
-* [level_1.md](laravel/Modules/User/docs/phpstan/level_1.md)
-* [level_1.md](laravel/Modules/UI/docs/phpstan/level_1.md)
-* [level_1.md](laravel/Modules/Lang/docs/phpstan/level_1.md)
-* [level_1.md](laravel/Modules/Job/docs/phpstan/level_1.md)
-* [level_1.md](laravel/Modules/Media/docs/phpstan/level_1.md)
-* [level_1.md](laravel/Modules/Tenant/docs/phpstan/level_1.md)
-* [level_1.md](laravel/Modules/Activity/docs/phpstan/level_1.md)
-* [level_1.md](laravel/Modules/Patient/docs/phpstan/level_1.md)
-* [level_1.md](laravel/Modules/Cms/docs/phpstan/level_1.md)
+* [level_1.md](../../../Chart/docs/phpstan/level_1.md)
+* [level_1.md](../../../Reporting/docs/phpstan/level_1.md)
+* [level_1.md](../../../Gdpr/docs/phpstan/level_1.md)
+* [level_1.md](../../../Notify/docs/phpstan/level_1.md)
+* [level_1.md](../../../Xot/docs/phpstan/level_1.md)
+* [level_1.md](../../../Dental/docs/phpstan/level_1.md)
+* [level_1.md](../../../User/docs/phpstan/level_1.md)
+* [level_1.md](../../../UI/docs/phpstan/level_1.md)
+* [level_1.md](../../../Lang/docs/phpstan/level_1.md)
+* [level_1.md](../../../Job/docs/phpstan/level_1.md)
+* [level_1.md](../../../Media/docs/phpstan/level_1.md)
+* [level_1.md](../../../Tenant/docs/phpstan/level_1.md)
+* [level_1.md](../../../Activity/docs/phpstan/level_1.md)
+* [level_1.md](../../../Patient/docs/phpstan/level_1.md)
+* [level_1.md](../../../Cms/docs/phpstan/level_1.md)
 

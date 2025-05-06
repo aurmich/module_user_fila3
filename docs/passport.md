@@ -57,7 +57,7 @@ Modules/User/
 │   │   ├── Widgets/
 │   │   │   ├── Auth/
 │   │   │   │   ├── LoginWidget.php
-│   │   │   │   ├── RegisterWidget.php
+
 │   │   │   │   └── SocialLoginWidget.php
 │   │   │   └── User/
 │   │   │       ├── UserStatsWidget.php

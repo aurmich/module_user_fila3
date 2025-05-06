@@ -64,7 +64,7 @@ Quando crei nuovi componenti Filament, assicurati sempre di:
 3. Seguire le convenzioni di naming e struttura del modulo
 
 ## Collegamenti tra versioni di namespace-conventions.md
-* [namespace-conventions.md](laravel/Modules/Xot/docs/namespace-conventions.md)
-* [namespace-conventions.md](laravel/Modules/User/docs/namespace-conventions.md)
-* [namespace-conventions.md](laravel/Modules/Cms/docs/best-practices/namespace-conventions.md)
+* [namespace-conventions.md](../../../Xot/docs/namespace-conventions.md)
+* [namespace-conventions.md](../../../User/docs/namespace-conventions.md)
+* [namespace-conventions.md](../../../Cms/docs/best-practices/namespace-conventions.md)
 

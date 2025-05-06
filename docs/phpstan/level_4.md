@@ -59,7 +59,7 @@ Trovati 67 errori al livello 4.
 
 ### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Filament/Widgets/Auth/RegisterWidget.php`
 
-#### Linea 22: Access to an undefined property Modules\User\App\Filament\Widgets\Auth\RegisterWidget::$form.
+#### Linea 22: Access to an undefined property Modules\User\Filament\Widgets\RegistrationWidget::$form.
 
 **Suggerimento**: Questa proprietà non esiste o non è accessibile. Verifica:
 - Se la proprietà è definita nella classe
@@ -67,7 +67,7 @@ Trovati 67 errori al livello 4.
 - Se stai usando un trait che definisce questa proprietà
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
-#### Linea 69: Access to an undefined property Modules\User\App\Filament\Widgets\Auth\RegisterWidget::$form.
+#### Linea 69: Access to an undefined property Modules\User\Filament\Widgets\RegistrationWidget::$form.
 
 **Suggerimento**: Questa proprietà non esiste o non è accessibile. Verifica:
 - Se la proprietà è definita nella classe
@@ -577,19 +577,19 @@ aurmich/dev
 aurmich/dev
 
 ## Collegamenti tra versioni di level_4.md
-* [level_4.md](laravel/Modules/Chart/docs/phpstan/level_4.md)
-* [level_4.md](laravel/Modules/Reporting/docs/phpstan/level_4.md)
-* [level_4.md](laravel/Modules/Gdpr/docs/phpstan/level_4.md)
-* [level_4.md](laravel/Modules/Notify/docs/phpstan/level_4.md)
-* [level_4.md](laravel/Modules/Xot/docs/phpstan/level_4.md)
-* [level_4.md](laravel/Modules/Dental/docs/phpstan/level_4.md)
-* [level_4.md](laravel/Modules/User/docs/phpstan/level_4.md)
-* [level_4.md](laravel/Modules/UI/docs/phpstan/level_4.md)
-* [level_4.md](laravel/Modules/Lang/docs/phpstan/level_4.md)
-* [level_4.md](laravel/Modules/Job/docs/phpstan/level_4.md)
-* [level_4.md](laravel/Modules/Media/docs/phpstan/level_4.md)
-* [level_4.md](laravel/Modules/Tenant/docs/phpstan/level_4.md)
-* [level_4.md](laravel/Modules/Activity/docs/phpstan/level_4.md)
-* [level_4.md](laravel/Modules/Patient/docs/phpstan/level_4.md)
-* [level_4.md](laravel/Modules/Cms/docs/phpstan/level_4.md)
+* [level_4.md](../../../Chart/docs/phpstan/level_4.md)
+* [level_4.md](../../../Reporting/docs/phpstan/level_4.md)
+* [level_4.md](../../../Gdpr/docs/phpstan/level_4.md)
+* [level_4.md](../../../Notify/docs/phpstan/level_4.md)
+* [level_4.md](../../../Xot/docs/phpstan/level_4.md)
+* [level_4.md](../../../Dental/docs/phpstan/level_4.md)
+* [level_4.md](../../../User/docs/phpstan/level_4.md)
+* [level_4.md](../../../UI/docs/phpstan/level_4.md)
+* [level_4.md](../../../Lang/docs/phpstan/level_4.md)
+* [level_4.md](../../../Job/docs/phpstan/level_4.md)
+* [level_4.md](../../../Media/docs/phpstan/level_4.md)
+* [level_4.md](../../../Tenant/docs/phpstan/level_4.md)
+* [level_4.md](../../../Activity/docs/phpstan/level_4.md)
+* [level_4.md](../../../Patient/docs/phpstan/level_4.md)
+* [level_4.md](../../../Cms/docs/phpstan/level_4.md)
 

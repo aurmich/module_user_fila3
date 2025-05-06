@@ -37,8 +37,8 @@ Il modello `Team` accede direttamente a proprietà che potrebbero non essere dis
 - [Interfacce e Contratti](/docs/modules/xot/contracts.md) 
 
 ## Collegamenti tra versioni di phpstan_fixes.md
-* [phpstan_fixes.md](laravel/Modules/Xot/docs/phpstan_fixes.md)
-* [phpstan_fixes.md](laravel/Modules/User/docs/phpstan_fixes.md)
-* [phpstan_fixes.md](laravel/Modules/User/docs/fixes/phpstan_fixes.md)
-* [phpstan_fixes.md](laravel/Modules/Activity/docs/phpstan_fixes.md)
+* [phpstan_fixes.md](../../../Xot/docs/phpstan_fixes.md)
+* [phpstan_fixes.md](../../../User/docs/phpstan_fixes.md)
+* [phpstan_fixes.md](../../../User/docs/fixes/phpstan_fixes.md)
+* [phpstan_fixes.md](../../../Activity/docs/phpstan_fixes.md)
 

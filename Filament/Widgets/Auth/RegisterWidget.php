@@ -1,15 +1,17 @@
 <?php
 
-namespace Modules\User\App\Filament\Widgets\Auth;
+declare(strict_types=1);
 
-use Filament\Widgets\Widget;
-use Filament\Forms\Components\TextInput;
+namespace Modules\User\Filament\Widgets\Auth;
+
 use Filament\Forms\Components\Section;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
-use Modules\User\Models\User;
+use Filament\Widgets\Widget;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
-use Illuminate\Support\Facades\Auth;
+use Modules\User\Models\User;
 
 class RegisterWidget extends Widget
 {

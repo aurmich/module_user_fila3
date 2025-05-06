@@ -10,9 +10,9 @@ enum LanguageEnum: string implements HasLabel
 {
     case ITALIAN = 'it';
     case ENGLISH = 'en';
-    case SPANISH = 'es';
     case FRENCH = 'fr';
     case GERMAN = 'de';
+    case SPANISH = 'es';
 
     public function getLabel(): string
     {

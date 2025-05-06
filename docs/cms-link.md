@@ -33,8 +33,8 @@ Quando aggiungi nuovi componenti Filament nel modulo User, assicurati di:
 3. Seguire le convenzioni di stile condivise con il modulo Cms
 
 ## Collegamenti tra versioni di cms-link.md
-* [cms-link.md](laravel/Modules/Xot/docs/cms-link.md)
-* [cms-link.md](laravel/Modules/User/docs/cms-link.md)
-* [cms-link.md](laravel/Modules/UI/docs/cms-link.md)
-* [cms-link.md](laravel/Modules/Lang/docs/cms-link.md)
+* [cms-link.md](../../../Xot/docs/cms-link.md)
+* [cms-link.md](../../../User/docs/cms-link.md)
+* [cms-link.md](../../../UI/docs/cms-link.md)
+* [cms-link.md](../../../Lang/docs/cms-link.md)
 

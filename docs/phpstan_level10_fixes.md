@@ -257,11 +257,11 @@ public function handle(Failed $event): void
 4. Utilizza strumenti di analisi automatica come PHPStan regolarmente per verificare che il codice rimanga conforme. 
 ## Collegamenti tra versioni di PHPSTAN_LEVEL10_FIXES.md
 * [PHPSTAN_LEVEL10_FIXES.md](docs/PHPSTAN_LEVEL10_FIXES.md)
-* [PHPSTAN_LEVEL10_FIXES.md](laravel/Modules/Notify/docs/PHPSTAN_LEVEL10_FIXES.md)
-* [PHPSTAN_LEVEL10_FIXES.md](laravel/Modules/User/docs/PHPSTAN_LEVEL10_FIXES.md)
-* [PHPSTAN_LEVEL10_FIXES.md](laravel/Modules/Lang/docs/PHPSTAN_LEVEL10_FIXES.md)
-* [PHPSTAN_LEVEL10_FIXES.md](laravel/Modules/Job/docs/PHPSTAN_LEVEL10_FIXES.md)
-* [PHPSTAN_LEVEL10_FIXES.md](laravel/Modules/Media/docs/PHPSTAN_LEVEL10_FIXES.md)
+* [PHPSTAN_LEVEL10_FIXES.md](../../../Notify/docs/PHPSTAN_LEVEL10_FIXES.md)
+* [PHPSTAN_LEVEL10_FIXES.md](../../../User/docs/PHPSTAN_LEVEL10_FIXES.md)
+* [PHPSTAN_LEVEL10_FIXES.md](../../../Lang/docs/PHPSTAN_LEVEL10_FIXES.md)
+* [PHPSTAN_LEVEL10_FIXES.md](../../../Job/docs/PHPSTAN_LEVEL10_FIXES.md)
+* [PHPSTAN_LEVEL10_FIXES.md](../../../Media/docs/PHPSTAN_LEVEL10_FIXES.md)
 
 
 ## Collegamenti tra versioni di phpstan_level10_fixes.md

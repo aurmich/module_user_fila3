@@ -182,10 +182,10 @@ use InteractsWithForms;
 - [Filament Widgets](./best-practices/filament-widgets.md) - Best practices per i widget Filament
 - [Filament Components](./best-practices/filament-components.md) - Best practices per i componenti Filament 
 ## Collegamenti tra versioni di FILAMENT_BEST_PRACTICES.md
-* [FILAMENT_BEST_PRACTICES.md](laravel/Modules/Xot/docs/filament/FILAMENT_BEST_PRACTICES.md)
-* [FILAMENT_BEST_PRACTICES.md](laravel/Modules/Xot/docs/FILAMENT_BEST_PRACTICES.md)
-* [FILAMENT_BEST_PRACTICES.md](laravel/Modules/User/docs/FILAMENT_BEST_PRACTICES.md)
-* [FILAMENT_BEST_PRACTICES.md](laravel/Modules/Job/docs/FILAMENT_BEST_PRACTICES.md)
+* [FILAMENT_BEST_PRACTICES.md](../../../Xot/docs/filament/FILAMENT_BEST_PRACTICES.md)
+* [FILAMENT_BEST_PRACTICES.md](../../../Xot/docs/FILAMENT_BEST_PRACTICES.md)
+* [FILAMENT_BEST_PRACTICES.md](../../../User/docs/FILAMENT_BEST_PRACTICES.md)
+* [FILAMENT_BEST_PRACTICES.md](../../../Job/docs/FILAMENT_BEST_PRACTICES.md)
 
 
 ## Collegamenti tra versioni di filament_best_practices.md

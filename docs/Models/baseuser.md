@@ -88,8 +88,8 @@ Classe base per il modello User che implementa le interfacce `UserContract` e `H
 - [Best Practices per i Modelli](/docs/modules/user/models.md) 
 
 ## Collegamenti tra versioni di BaseUser.md
-* [BaseUser.md](laravel/Modules/User/docs/BaseUser.md)
-* [BaseUser.md](laravel/Modules/User/docs/Models/BaseUser.md)
+* [BaseUser.md](../../../User/docs/BaseUser.md)
+* [BaseUser.md](../../../User/docs/Models/BaseUser.md)
 
 
 ## Collegamenti tra versioni di baseuser.md
