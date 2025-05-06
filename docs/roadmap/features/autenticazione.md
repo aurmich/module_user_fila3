@@ -74,9 +74,13 @@ Sistema di autenticazione completo con supporto per multiple strategie di login,
 
 ## Related Features
 - [Gestione Utenti](./gestione-utenti.md)
+<<<<<<< HEAD
 - [Autorizzazione](./autorizzazione.md) 
 ## Collegamenti tra versioni di autenticazione.md
 * [autenticazione.md](docs/regole/autenticazione.md)
 * [autenticazione.md](docs/roadmap/core/autenticazione.md)
 * [autenticazione.md](laravel/Modules/User/docs/roadmap/features/autenticazione.md)
 
+=======
+- [Autorizzazione](./autorizzazione.md) 
+>>>>>>> db74942 (.)

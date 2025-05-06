@@ -1,5 +1,6 @@
 <x-filament::widget>
     <x-filament::card>
+<<<<<<< HEAD
         @if($record)
             <div class="space-y-4">
                 <div class="flex items-center space-x-4">
@@ -55,5 +56,17 @@
                 <p class="mt-1 text-sm text-gray-500">Seleziona un utente per visualizzare i dettagli</p>
             </div>
         @endif
+=======
+        {{-- Widget content --}}
+        @php
+            // Debug information if needed
+            // dddx([
+            //     'get_defined_vars()' => get_defined_vars(),
+            //     '$this' => $this,
+            //     'get_class_methods' => get_class_methods($this),
+            // ]);
+        @endphp
+        {{ $record->name ?? 'Utente' }}
+>>>>>>> db74942 (.)
     </x-filament::card>
 </x-filament::widget>

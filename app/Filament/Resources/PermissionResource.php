@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources;
 
+<<<<<<< HEAD
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Tables;
@@ -57,14 +58,54 @@ class PermissionResource extends XotBaseResource
                 ->sortable()
                 ->toggleable(isToggledHiddenByDefault: true),
         ];
+=======
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
+use Modules\User\Filament\Resources\PermissionResource\Pages\CreatePermission;
+use Modules\User\Filament\Resources\PermissionResource\Pages\EditPermission;
+use Modules\User\Filament\Resources\PermissionResource\Pages\ListPermissions;
+use Modules\User\Models\Permission;
+use Modules\Xot\Filament\Resources\XotBaseResource;
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+
+class PermissionResource extends XotBaseResource
+{
+    protected static ?string $navigationIcon = 'heroicon-o-lock-closed';
+
+    protected static ?string $model = Permission::class;
+
+    public static function getFormSchema(): array
+    {
+        return [
+            'name' => TextInput::make('name')
+                ->required()
+                ->maxLength(255),
+            'guard_name' => TextInput::make('guard_name')
+                ->required()
+                ->maxLength(255),
+            'active' => Toggle::make('active')
+                ->required(),
+        ];
+    }
+
+    public static function getRelations(): array
+    {
+        return [];
+>>>>>>> db74942 (.)
     }
 
     public static function getPages(): array
     {
         return [
+<<<<<<< HEAD
             'index' => Pages\ListPermissions::route('/'),
             'create' => Pages\CreatePermission::route('/create'),
             'edit' => Pages\EditPermission::route('/{record}/edit'),
+=======
+            'index' => ListPermissions::route('/'),
+            'create' => CreatePermission::route('/create'),
+            'edit' => EditPermission::route('/{record}/edit'),
+>>>>>>> db74942 (.)
         ];
     }
 }

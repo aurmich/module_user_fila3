@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources\PermissionResource\Pages;
 
+<<<<<<< HEAD
 use Filament\Actions;
+=======
+use Filament\Actions\CreateAction;
+>>>>>>> db74942 (.)
 use Filament\Forms\Components\Select;
 use Filament\Tables;
 use Filament\Tables\Actions\BulkAction;
@@ -16,7 +20,11 @@ use Modules\User\Filament\Resources\PermissionResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Webmozart\Assert\Assert;
 
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+>>>>>>> db74942 (.)
 
 class ListPermissions extends XotBaseListRecords
 {
@@ -73,7 +81,11 @@ class ListPermissions extends XotBaseListRecords
     protected function getHeaderActions(): array
     {
         return [
+<<<<<<< HEAD
             Actions\CreateAction::make(),
+=======
+            CreateAction::make(),
+>>>>>>> db74942 (.)
         ];
     }
 

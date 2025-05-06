@@ -33,6 +33,7 @@ Il problema è che i tag PHPDoc facevano riferimento a una classe `Builder` nel 
  */
 ```
 
+<<<<<<< HEAD
 Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` utilizzando il namespace completo `\Illuminate\Database\Eloquent\Builder`. 
 ## Collegamenti tra versioni di PHPSTAN_FIXES.md
 * [PHPSTAN_FIXES.md](laravel/Modules/Xot/docs/phpstan/PHPSTAN_FIXES.md)
@@ -41,3 +42,6 @@ Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` ut
 * [PHPSTAN_FIXES.md](laravel/Modules/UI/docs/PHPSTAN_FIXES.md)
 * [PHPSTAN_FIXES.md](laravel/Modules/Media/docs/PHPSTAN_FIXES.md)
 
+=======
+Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` utilizzando il namespace completo `\Illuminate\Database\Eloquent\Builder`. 
+>>>>>>> db74942 (.)

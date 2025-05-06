@@ -16,9 +16,13 @@ class UserDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
+<<<<<<< HEAD
         $this->call([
             RolesSeeder::class,
             PermissionsSeeder::class,
         ]);
+=======
+        // $this->call("OthersTableSeeder");
+>>>>>>> db74942 (.)
     }
 }

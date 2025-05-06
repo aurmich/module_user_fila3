@@ -56,6 +56,7 @@ Modules/User/
 - Unit tests for models
 - Feature tests for authentication
 - Integration tests for user flows
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di analysis.md
 * [analysis.md](laravel/Modules/Notify/docs/analysis.md)
@@ -72,3 +73,5 @@ Modules/User/
 * [analysis.md](laravel/Modules/Media/docs/phpstan/analysis.md)
 * [analysis.md](laravel/Themes/One/docs/analysis.md)
 
+=======
+>>>>>>> db74942 (.)

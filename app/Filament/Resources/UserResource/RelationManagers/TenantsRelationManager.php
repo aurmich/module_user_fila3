@@ -8,7 +8,11 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Modules\User\Filament\Resources\TenantResource\Pages\ListTenants;
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+>>>>>>> db74942 (.)
 use Modules\Xot\Filament\Traits\HasXotTable;
 
 /**
@@ -19,7 +23,11 @@ use Modules\Xot\Filament\Traits\HasXotTable;
  */
 class TenantsRelationManager extends XotBaseRelationManager
 {
+<<<<<<< HEAD
     use HasXotTable;
+=======
+   
+>>>>>>> db74942 (.)
 
     protected static string $relationship = 'tenants';
 

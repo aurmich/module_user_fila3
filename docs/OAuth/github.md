@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Configurazione OAuth con GitHub
 
 ## Prerequisiti
@@ -31,3 +32,11 @@ GITHUB_REDIRECT_URI=https://saluteora.it/{locale}/auth/callback/github
 
 - [Integrazione Laravel Passport](../passport.md) - Configurazione completa di OAuth2
 - [Autenticazione Social](../socialite.txt) - Integrazione con altri provider OAuth
+=======
+Go to GitHub Developer Settings.(https://github.com/settings/developers)
+Click on "New OAuth App".
+Fill in the required details:
+Application Name: Your app's name.
+Homepage URL: Your app's URL.
+Authorization callback URL: http://your-app-url.com/callback/github.
+>>>>>>> db74942 (.)

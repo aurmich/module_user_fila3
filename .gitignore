@@ -27,6 +27,9 @@ cache/
 build
 *.exe
 *:Zone.Identifier
+<<<<<<< HEAD
 
 # File di log
 *.log
+=======
+>>>>>>> db74942 (.)

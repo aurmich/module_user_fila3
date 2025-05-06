@@ -15,6 +15,7 @@ use Filament\Forms\Components\TextInput;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\HtmlString;
 use Modules\User\Filament\Resources\UserResource\Pages;
+<<<<<<< HEAD
 use Modules\User\Filament\Resources\UserResource\RelationManagers;
 use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
 use Modules\Xot\Filament\Resources\XotBaseResource;
@@ -28,6 +29,11 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 
 
 
+=======
+use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
+use Modules\Xot\Filament\Resources\XotBaseResource;
+
+>>>>>>> db74942 (.)
 class UserResource extends XotBaseResource
 {
     // protected static ?string $model = \Modules\Xot\Datas\XotData::make()->getUserClass();
@@ -65,12 +71,25 @@ class UserResource extends XotBaseResource
             ])->columnSpan(8),
             'section02' => Section::make([
                 'created_at' => Placeholder::make('created_at')
+<<<<<<< HEAD
                     ->content(static fn ($record) => $record->created_at->diffForHumans() ?? new HtmlString('&mdash;')),
+=======
+                    ->content(static function ($record) {
+                        if ($record === null || $record->created_at === null) {
+                            return new HtmlString('&mdash;');
+                        }
+                        
+                        return $record->created_at->diffForHumans();
+                    }),
+>>>>>>> db74942 (.)
             ])->columnSpan(4),
         ];
     }
 
+<<<<<<< HEAD
    
+=======
+>>>>>>> db74942 (.)
     // public static function enablePasswordUpdates(bool|Closure $condition = true): void
     // {
     //     static::$enablePasswordUpdates = $condition;

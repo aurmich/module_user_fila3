@@ -20,9 +20,12 @@ Tracker gathers a lot of information from your requests to identify and store:
 https://github.com/antonioribeiro/tracker
 
 ---
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di repositories.md
 * [repositories.md](docs/repositories.md)
 * [repositories.md](laravel/Modules/Notify/docs/repositories.md)
 * [repositories.md](laravel/Modules/User/docs/repositories.md)
 
+=======
+>>>>>>> db74942 (.)

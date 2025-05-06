@@ -8,6 +8,7 @@
         "Modules\\User\\Providers\\UserServiceProvider",
         "Modules\\User\\Providers\\Filament\\AdminPanelProvider"
     ],
+<<<<<<< HEAD
     "aliases": {},
     "files": [],
     "requires": [],
@@ -16,4 +17,12 @@
             "Modules\\User\\Database\\Seeders\\UserDatabaseSeeder"
         ]
     }
+=======
+    "migration": {
+        "seeds": [
+            "Modules\\User\\Database\\Seeders\\RolesSeeder"
+        ]
+    },
+    "files": []
+>>>>>>> db74942 (.)
 }

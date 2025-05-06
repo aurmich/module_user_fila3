@@ -10,7 +10,11 @@ use Illuminate\Database\Eloquent\Model;
 
 
 
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+>>>>>>> db74942 (.)
 
 
 

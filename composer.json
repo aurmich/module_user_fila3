@@ -40,12 +40,18 @@
     "require": {
         "flowframe/laravel-trend": "*",
         "jenssegers/agent": "*",
+<<<<<<< HEAD
         "laravel/passport": "^12.4",
         "socialiteproviders/auth0": "*",
         "spatie/laravel-personal-data-export": "*",
         "laravel/socialite": "^5.0",
         "spatie/laravel-permission": "^6.0",
         "spatie/laravel-queueable-action": "^2.0"
+=======
+        "laravel/passport": "*",
+        "socialiteproviders/auth0": "*",
+        "spatie/laravel-personal-data-export": "*"
+>>>>>>> db74942 (.)
     },
     "require-dev": {},
     "repositories": [
@@ -72,11 +78,15 @@
         "analyse": "vendor/bin/phpstan analyse",
         "test": "./vendor/bin/pest --no-coverage",
         "test-coverage": "vendor/bin/pest --coverage-html coverage",
+<<<<<<< HEAD
         "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes",
         "post-install-cmd": [
             "@php artisan migrate --path=database/migrations",
             "@php artisan db:seed --class=\\Modules\\User\\Database\\Seeders\\UserDatabaseSeeder"
         ]
+=======
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+>>>>>>> db74942 (.)
     },
     "config": {
         "sort-packages": true,
