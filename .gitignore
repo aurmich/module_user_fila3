@@ -27,3 +27,6 @@ cache/
 build
 *.exe
 *:Zone.Identifier
+
+# Backup files
+*.bak

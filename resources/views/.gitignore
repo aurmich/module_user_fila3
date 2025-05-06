@@ -3,3 +3,6 @@
 **/*.Zone.Identifier
 
 
+
+# Backup files
+*.bak
