@@ -73,17 +73,23 @@ class Login extends Component implements HasForms
                 ->placeholder(__('Inserisci la tua email'))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1f6ff45 (.)
                 ->suffixIcon('heroicon-m-envelope')
                 ->autofocus()
                 ->live()
                 ->afterStateUpdated(fn ($state) => $this->validateEmail($state))
                 ->dehydrated(),
+<<<<<<< HEAD
 =======
                 ->suffixIcon('heroicon-m-envelope'),
 >>>>>>> 867b3bd (.)
 =======
                 ->suffixIcon('heroicon-m-envelope'),
 >>>>>>> 2c9cce9 (.)
+=======
+>>>>>>> 1f6ff45 (.)
 
             TextInput::make('password')
                 ->password()
@@ -92,6 +98,9 @@ class Login extends Component implements HasForms
                 ->placeholder(__('Inserisci la tua password'))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1f6ff45 (.)
                 ->suffixIcon('heroicon-m-key')
                 ->revealable()
                 ->minLength(8)
@@ -102,6 +111,7 @@ class Login extends Component implements HasForms
                 ->label(__('Ricordami'))
                 ->default(false)
                 ->dehydrated(),
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 2c9cce9 (.)
@@ -113,6 +123,8 @@ class Login extends Component implements HasForms
 >>>>>>> 867b3bd (.)
 =======
 >>>>>>> 2c9cce9 (.)
+=======
+>>>>>>> 1f6ff45 (.)
         ];
     }
 
@@ -134,6 +146,9 @@ class Login extends Component implements HasForms
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1f6ff45 (.)
         try {
             /** @var array{email: string, password: string, remember?: bool} $data */
             $data = $this->validate();
@@ -155,6 +170,7 @@ class Login extends Component implements HasForms
             $this->addError('email', __('Si è verificato un errore durante il login. Riprova più tardi.'));
             report($e);
         }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 2c9cce9 (.)
@@ -178,6 +194,8 @@ class Login extends Component implements HasForms
 >>>>>>> 867b3bd (.)
 =======
 >>>>>>> 2c9cce9 (.)
+=======
+>>>>>>> 1f6ff45 (.)
     }
 
     /**
@@ -185,6 +203,7 @@ class Login extends Component implements HasForms
      *
      * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public function render()
@@ -215,3 +234,11 @@ class Login extends Component implements HasForms
 >>>>>>> 867b3bd (.)
 =======
 >>>>>>> 2c9cce9 (.)
+=======
+    public function render(): \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
+    {
+        app(ViewCopyAction::class)->execute('user::livewire.auth.login', 'pub_theme::livewire.auth.login');
+        return view('user::livewire.auth.login');
+    }
+}
+>>>>>>> 1f6ff45 (.)

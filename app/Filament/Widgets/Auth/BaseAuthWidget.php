@@ -18,6 +18,7 @@ abstract class BaseAuthWidget extends Widget
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 
     /**
@@ -32,6 +33,8 @@ abstract class BaseAuthWidget extends Widget
 =======
 =======
 >>>>>>> 2c9cce9 (.)
+=======
+>>>>>>> 1f6ff45 (.)
 
         $this->form->fill();
     }
@@ -46,9 +49,12 @@ abstract class BaseAuthWidget extends Widget
         return [
             'form' => $this->form,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/dev
 =======
 >>>>>>> 2c9cce9 (.)
+=======
+>>>>>>> 1f6ff45 (.)
         ];
     }
 }
