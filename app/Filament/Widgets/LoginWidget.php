@@ -36,6 +36,7 @@ class LoginWidget extends XotBaseWidget
     protected static string $view = 'user::filament.widgets.login';
     
     protected int | string | array $columnSpan = 'full';
+<<<<<<< HEAD
     
     /**
      * Dati del form per il login
@@ -55,6 +56,9 @@ class LoginWidget extends XotBaseWidget
     /**
      * Definisce lo schema del form con i suoi campi.
      */
+=======
+
+>>>>>>> 1db86dc (.)
     public function getFormSchema(): array
     {
         return [
@@ -63,13 +67,22 @@ class LoginWidget extends XotBaseWidget
                 ->required()
                 ->label(__('Email'))
                 ->placeholder(__('Inserisci la tua email'))
+<<<<<<< HEAD
                 ->suffixIcon('heroicon-m-envelope'),
+=======
+                ->suffixIcon('heroicon-m-envelope')
+                ->autofocus()
+                ->live()
+                ->afterStateUpdated(fn ($state) => $this->validateEmail($state))
+                ->dehydrated(),
+>>>>>>> 1db86dc (.)
 
             TextInput::make('password')
                 ->password()
                 ->required()
                 ->label(__('Password'))
                 ->placeholder(__('Inserisci la tua password'))
+<<<<<<< HEAD
                 ->suffixIcon('heroicon-m-key'),
 
             Checkbox::make('remember')
@@ -83,11 +96,34 @@ class LoginWidget extends XotBaseWidget
         try {
             $data = $this->form->getState();
             
+=======
+                ->suffixIcon('heroicon-m-key')
+                ->revealable()
+                ->minLength(8)
+                ->maxLength(255)
+                ->dehydrated(),
+
+            Checkbox::make('remember')
+                ->label(__('Ricordami'))
+                ->default(false)
+                ->dehydrated(),
+        ];
+    }
+
+    public function authenticate(): void
+    {
+        try {
+            $this->validate();
+            $this->rateLimit(5);
+            
+            $data = $this->form->getState();
+>>>>>>> 1db86dc (.)
             if (!Auth::attempt([
                 'email' => $data['email'],
                 'password' => $data['password']
             ], $data['remember'] ?? false)) {
                 throw ValidationException::withMessages([
+<<<<<<< HEAD
                     'email' => [__('Le credenziali fornite non sono corrette.')],
                 ]);
             }
@@ -102,4 +138,30 @@ class LoginWidget extends XotBaseWidget
             $this->addError('email', __('Si è verificato un errore durante il login. Riprova più tardi.'));
         }
     }
+=======
+                    'email' => [__('Credenziali non valide.')],
+                ]);
+            }
+            
+            redirect(route('filament.admin.pages.dashboard'))->send();
+        } catch (ValidationException $e) {
+            $this->addError('email', $e->getMessage());
+        } catch (Exception $e) {
+            $this->addError('email', __('Si è verificato un errore. Riprova più tardi.'));
+            report($e);
+        }
+    }
+
+    protected function validateEmail(string $email): void
+    {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $this->addError('email', __('Inserisci un indirizzo email valido.'));
+        }
+    }
+
+    public function save(): void
+    {
+        $this->authenticate();
+    }
+>>>>>>> 1db86dc (.)
 }

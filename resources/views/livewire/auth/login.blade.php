@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 @section('title', __('Accedi al tuo account'))
 
 <div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -47,6 +48,8 @@
                         {{ __('Accedi') }}
                     </button>
 =======
+=======
+>>>>>>> 1db86dc (.)
 @section('title', 'Sign in to your account')
 
 <div>
@@ -123,7 +126,10 @@
                             Sign in
                         </button>
                     </span>
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> 1db86dc (.)
                 </div>
             </form>
         </div>
