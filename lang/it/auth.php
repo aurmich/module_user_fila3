@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 return [
-<<<<<<< HEAD
     // Messaggi generali di autenticazione
     'failed' => 'Credenziali non valide.',
     'password' => 'La password inserita non è corretta.',
@@ -12,7 +11,6 @@ return [
     'unauthorized' => 'Non hai i permessi necessari per questa operazione.',
 
     // Login
-=======
     'login-via' => 'Accedi con',
 
     'login-failed' => 'Login fallito, riprova.',
@@ -103,7 +101,6 @@ return [
     'Verify Your Email Address' => 'Verifica la tua email',
     'A fresh verification link has been sent to your email address.' => 'Un nuovo link di verifica è stato inviato al tuo indirizzo email.',
 
->>>>>>> 1db86dc (.)
     'login' => [
         'title' => 'Accedi al tuo account',
         'subtitle' => 'Inserisci le tue credenziali per accedere',
@@ -116,7 +113,6 @@ return [
         'forgot_password' => 'Password dimenticata?',
         'no_account' => 'Non hai un account?',
         'register' => 'Registrati',
-<<<<<<< HEAD
         'success' => 'Accesso effettuato con successo.',
         'failed' => 'Credenziali non valide.',
         'logout_success' => 'Logout effettuato con successo.',
@@ -137,10 +133,8 @@ return [
     ],
 
     // Registrazione
-=======
     ],
 
->>>>>>> 1db86dc (.)
     'register' => [
         'title' => 'Crea un nuovo account',
         'subtitle' => 'Inserisci i tuoi dati per registrarti',
@@ -154,7 +148,6 @@ return [
         'password_confirmation_placeholder' => '••••••••',
         'submit' => 'Registrati',
         'already_registered' => 'Hai già un account? Accedi',
-<<<<<<< HEAD
         'success' => 'Registrazione completata con successo.',
         'failed' => 'Impossibile completare la registrazione.',
     ],
@@ -183,7 +176,6 @@ return [
     // Reset Password
     'reset-password' => [
         'title' => 'Reimposta password',
-=======
     ],
 
     'forgot-password' => [
@@ -197,7 +189,6 @@ return [
 
     'reset-password' => [
         'title' => 'Reimposta la password',
->>>>>>> 1db86dc (.)
         'subtitle' => 'Inserisci la nuova password',
         'email' => 'Indirizzo email',
         'email_placeholder' => 'esempio@email.com',
@@ -206,7 +197,6 @@ return [
         'password_confirmation' => 'Conferma password',
         'password_confirmation_placeholder' => '••••••••',
         'submit' => 'Reimposta password',
-<<<<<<< HEAD
         'success' => 'Password reimpostata con successo.',
         'failed' => 'Impossibile reimpostare la password.',
     ],
@@ -237,7 +227,6 @@ return [
         'account_blocked' => 'Account bloccato. Contatta l\'assistenza.',
         'too_many_attempts' => 'Troppi tentativi. Riprova più tardi.',
         'session_expired' => 'Sessione scaduta. Effettua nuovamente il login.',
-=======
     ],
 
     'passwords' => [
@@ -246,6 +235,5 @@ return [
         'throttled' => 'Per favore attendi prima di riprovare.',
         'token' => 'Il token di reset password non è valido.',
         'user' => 'Non riusciamo a trovare un utente con questo indirizzo email.',
->>>>>>> 1db86dc (.)
     ],
 ];

@@ -1,16 +1,11 @@
 {{--
-<<<<<<< HEAD
-    View: filament.widgets.auth.login
-=======
     View: user::filament.widgets.auth.login
->>>>>>> 1db86dc (.)
     Scopo: Widget di login Filament conforme a Windsurf/Xot
     Modifica liberamente questa struttura per UX custom
 --}}
 <div class="filament-widget-login space-y-6">
     <form wire:submit.prevent="save" class="space-y-4">
         {{ $this->form }}
-<<<<<<< HEAD
         
         <div class="flex items-center justify-between mt-3">
             <div class="flex items-center">
@@ -32,13 +27,6 @@
     <div class="text-center text-sm text-gray-600 mt-2">
         @if (Route::has('password.request'))
             <a href="{{ route('password.request') }}" class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200">{{ __('Password dimenticata?') }}</a>
-=======
-        <button type="submit" class="w-full py-3 rounded bg-blue-600 text-white font-bold hover:bg-blue-700 transition">{{ __('Accedi') }}</button>
-    </form>
-    <div class="text-center text-sm text-gray-500 mt-2">
-        @if (Route::has('password.request'))
-            <a href="{{ route('password.request') }}" class="underline hover:text-blue-700">{{ __('Password dimenticata?') }}</a>
->>>>>>> 1db86dc (.)
         @endif
     </div>
 </div>
