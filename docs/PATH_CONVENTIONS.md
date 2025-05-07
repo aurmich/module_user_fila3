@@ -4,20 +4,20 @@
 
 ### Views
 ```bash
-# ✅ CORRETTO
-laravel/Modules/User/resources/views/filament/widgets/auth/login.blade.php
-
 # ❌ ERRATO
 laravel/Modules/User/Resources/views/filament/widgets/auth/login.blade.php
+
+# ✅ CORRETTO
+laravel/Modules/User/resources/views/filament/widgets/auth/login.blade.php
 ```
 
 ### Actions
 ```bash
-# ✅ CORRETTO
-laravel/Modules/User/app/Actions/User/DeleteUserAction.php
-
 # ❌ ERRATO
 laravel/Modules/User/Actions/User/DeleteUserAction.php
+
+# ✅ CORRETTO
+laravel/Modules/User/app/Actions/User/DeleteUserAction.php
 ```
 
 ### Controllers
