@@ -1,5 +1,11 @@
 # Convenzioni Path nei Moduli Laravel
 
+## Collegamenti correlati
+- [Documentazione centrale](../../../docs/README.md)
+- [Collegamenti documentazione](../../../docs/collegamenti-documentazione.md)
+- [README modulo User](./README.md)
+- [Struttura moduli](../../../docs/architecture/modules-structure.md)
+
 ## ✅ Path Corretti vs ❌ Path Errati
 
 ### Views
@@ -8,31 +14,31 @@
 laravel/Modules/User/Resources/views/filament/widgets/auth/login.blade.php
 
 # ✅ CORRETTO
-laravel/Modules/User/resources/views/filament/widgets/auth/login.blade.php
+Modules/User/resources/views/filament/widgets/auth/login.blade.php
 ```
 
 ### Actions
 ```bash
-# ❌ ERRATO
-laravel/Modules/User/Actions/User/DeleteUserAction.php
-
 # ✅ CORRETTO
-laravel/Modules/User/app/Actions/User/DeleteUserAction.php
+Modules/User/app/Actions/User/DeleteUserAction.php
+
+# ❌ ERRATO
+Modules/User/Actions/User/DeleteUserAction.php
 ```
 
 ### Controllers
 ```bash
 # ✅ CORRETTO
-laravel/Modules/User/app/Http/Controllers/UserController.php
+Modules/User/app/Http/Controllers/UserController.php
 
 # ❌ ERRATO
-laravel/Modules/User/Http/Controllers/UserController.php
+Modules/User/Http/Controllers/UserController.php
 ```
 
 ## Struttura Standard delle Cartelle
 
 ```bash
-laravel/Modules/User/
+Modules/User/
 ├── app/                    # Tutto il codice PHP va qui
 │   ├── Actions/           # Actions
 │   ├── Http/             # Controllers, Middleware, etc.
@@ -56,10 +62,10 @@ laravel/Modules/User/
 2. **Namespace Mapping**
    ```php
    // ✅ CORRETTO
-   namespace Modules\User\App\Actions;
+   namespace Modules\User\Actions;
    
    // ❌ ERRATO
-   namespace Modules\User\Actions;
+   namespace Modules\User\App\Actions;
    ```
 
 3. **Codice PHP**

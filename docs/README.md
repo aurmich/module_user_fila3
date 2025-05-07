@@ -48,6 +48,9 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e i profili utente de
 ### Versione HEAD
 
 - [Best Practices](./BEST-PRACTICES.md) - Linee guida generali
+- [Convenzioni Path Actions](./ACTIONS_PATH_CONVENTION.md) - Convenzioni per i percorsi delle Actions
+- [Convenzioni Path](./PATH_CONVENTIONS.md) - Convenzioni generali per i percorsi nei moduli
+- [Checklist Struttura Directory](./DIRECTORY_STRUCTURE_CHECKLIST.md) - Checklist per la struttura delle directory
 
 ### Versione Incoming
 

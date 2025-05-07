@@ -1,5 +1,12 @@
 # Struttura Standard dei Moduli Laravel
 
+## Collegamenti correlati
+- [Documentazione centrale](../../../docs/README.md)
+- [Collegamenti documentazione](../../../docs/collegamenti-documentazione.md)
+- [README modulo User](./README.md)
+- [Convenzioni Path](./PATH_CONVENTIONS.md)
+- [Struttura moduli](../../../docs/architecture/modules-structure.md)
+
 ## Struttura Base Corretta
 ```
 laravel/Modules/ModuleName/
@@ -26,7 +33,7 @@ laravel/Modules/ModuleName/
 laravel/Modules/ModuleName/
 ├── Resources/                # ERRATO: R maiuscola
 ├── Lang/                     # ERRATO: L maiuscola
-├── Actions/                  # ERRATO: dovrebbe essere in app/Actions
+├── app/Actions/              # ERRATO: dovrebbe essere Actions/ a livello root
 └── Http/                     # ERRATO: dovrebbe essere in app/Http
 ```
 
@@ -35,7 +42,7 @@ laravel/Modules/ModuleName/
 laravel/Modules/ModuleName/
 ├── resources/               # CORRETTO: r minuscola
 ├── lang/                    # CORRETTO: l minuscola
-├── app/Actions/            # CORRETTO: sotto app/
+├── Actions/                 # CORRETTO: a livello root
 └── app/Http/               # CORRETTO: sotto app/
 ```
 
@@ -43,8 +50,8 @@ laravel/Modules/ModuleName/
 
 1. **Namespace PSR-4**
    ```php
-   namespace Modules\ModuleName\App\Actions;  // CORRETTO
-   namespace Modules\ModuleName\Actions;      // ERRATO
+   namespace Modules\ModuleName\Actions;      // CORRETTO
+   namespace Modules\ModuleName\App\Actions;  // ERRATO
    ```
 
 2. **Case Sensitivity**
@@ -68,37 +75,37 @@ laravel/Modules/ModuleName/
 ### Controllers
 ```php
 // CORRETTO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/app/Http/Controllers/
+laravel/Modules/User/app/Http/Controllers/
 
 // ERRATO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Http/Controllers/
+laravel/Modules/User/Http/Controllers/
 ```
 
 ### Actions
 ```php
 // CORRETTO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/app/Actions/
+laravel/Modules/User/Actions/User/DeleteUserAction.php
 
 // ERRATO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Actions/
+laravel/Modules/User/app/Actions/User/DeleteUserAction.php
 ```
 
 ### Views
 ```php
 // CORRETTO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/resources/views/
+laravel/Modules/User/resources/views/
 
 // ERRATO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Resources/views/
+laravel/Modules/User/Resources/views/
 ```
 
 ### Translations
 ```php
 // CORRETTO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/lang/it/
+laravel/Modules/User/lang/it/
 
 // ERRATO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Lang/it/
+laravel/Modules/User/Lang/it/
 ```
 
 ## Best Practices
@@ -113,26 +120,8 @@ laravel/Modules/ModuleName/
 2. **Namespace Check**
    ```php
    // Verifica sempre il namespace corrisponda al path
-   namespace Modules\User\App\Http\Controllers;  // CORRETTO
-   namespace Modules\User\Http\Controllers;      // ERRATO
-   ```
-
-3. **Case Sensitivity**
-   ```bash
-   # Usa sempre lowercase per le cartelle standard Laravel
-   mkdir -p resources/views
-   mkdir -p lang/it
-   
-   # NON usare mai
-   mkdir -p Resources/views  # ERRATO
-   mkdir -p Lang/it         # ERRATO
-   ```
-
-4. **Struttura Moduli**
-   ```bash
-   # Crea sempre la struttura base completa
-   mkdir -p app/{Actions,Http,Models,Providers,Services}
-   mkdir -p {config,database,docs,lang,resources,routes,tests}
+   namespace Modules\User\Http\Controllers;  // CORRETTO
+   namespace Modules\User\App\Http\Controllers;      // ERRATO
    ```
 
 ## Checklist di Validazione

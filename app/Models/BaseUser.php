@@ -30,6 +30,7 @@ use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Traits\RelationX;
 use Spatie\Permission\Traits\HasRoles;
+use Parental\HasChildren;
 
 /**
  * Modules\User\Models\User.
@@ -127,6 +128,8 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     use RelationX;
     use Traits\HasAuthenticationLogTrait;
     use Traits\HasTenants;
+    use HasChildren;
+
 
     public $incrementing = false;
 
@@ -138,6 +141,9 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
 
     /** @var string */
     protected $keyType = 'string';
+
+    /** @var string */
+    protected $childColumn = 'type';
 
     /** @var list<string> */
     protected $fillable = [
@@ -152,6 +158,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         'is_active',
         'is_otp', // is One Time Password
         'password_expires_at',
+        'type',
     ];
 
     /** @var list<string> */
@@ -170,6 +177,11 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     /** @var list<string> */
     protected $appends = [
         // 'profile_photo_url',
+    ];
+
+    /** @var array<string, class-string> */
+    protected $childTypes = [
+
     ];
 
     /** @var \Illuminate\Database\Eloquent\Relations\Pivot|null */
@@ -424,7 +436,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
      */
     /**
      * Get all role names associated with the user.
-     * 
+     *
      * @return array<int, string>
      */
     public function getRoleNames(): array
