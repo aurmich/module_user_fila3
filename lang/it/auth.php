@@ -123,7 +123,11 @@ return [
     ],
 
     'forgot-password' => [
+<<<<<<< HEAD
         'title' => 'Reimposta la tua password',
+=======
+        'title' => 'Recupera la password',
+>>>>>>> aurmich/dev
         'subtitle' => 'Inserisci la tua email per ricevere il link di reset',
         'email' => 'Indirizzo email',
         'email_placeholder' => 'esempio@email.com',
@@ -132,8 +136,13 @@ return [
     ],
 
     'reset-password' => [
+<<<<<<< HEAD
         'title' => 'Reimposta password',
         'subtitle' => 'Inserisci la tua nuova password',
+=======
+        'title' => 'Reimposta la password',
+        'subtitle' => 'Inserisci la nuova password',
+>>>>>>> aurmich/dev
         'email' => 'Indirizzo email',
         'email_placeholder' => 'esempio@email.com',
         'password' => 'Nuova password',
