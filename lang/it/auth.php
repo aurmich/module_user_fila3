@@ -123,7 +123,7 @@ return [
     ],
 
     'forgot-password' => [
-        'title' => 'Recupera la password',
+        'title' => 'Reimposta la tua password',
         'subtitle' => 'Inserisci la tua email per ricevere il link di reset',
         'email' => 'Indirizzo email',
         'email_placeholder' => 'esempio@email.com',
@@ -132,8 +132,8 @@ return [
     ],
 
     'reset-password' => [
-        'title' => 'Reimposta la password',
-        'subtitle' => 'Inserisci la nuova password',
+        'title' => 'Reimposta password',
+        'subtitle' => 'Inserisci la tua nuova password',
         'email' => 'Indirizzo email',
         'email_placeholder' => 'esempio@email.com',
         'password' => 'Nuova password',
