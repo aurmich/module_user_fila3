@@ -72,6 +72,7 @@ class Login extends Component implements HasForms
                 ->label(__('Email'))
                 ->placeholder(__('Inserisci la tua email'))
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ->suffixIcon('heroicon-m-envelope')
                 ->autofocus()
                 ->live()
@@ -80,12 +81,16 @@ class Login extends Component implements HasForms
 =======
                 ->suffixIcon('heroicon-m-envelope'),
 >>>>>>> 867b3bd (.)
+=======
+                ->suffixIcon('heroicon-m-envelope'),
+>>>>>>> 2c9cce9 (.)
 
             TextInput::make('password')
                 ->password()
                 ->required()
                 ->label(__('Password'))
                 ->placeholder(__('Inserisci la tua password'))
+<<<<<<< HEAD
 <<<<<<< HEAD
                 ->suffixIcon('heroicon-m-key')
                 ->revealable()
@@ -98,11 +103,16 @@ class Login extends Component implements HasForms
                 ->default(false)
                 ->dehydrated(),
 =======
+=======
+>>>>>>> 2c9cce9 (.)
                 ->suffixIcon('heroicon-m-key'),
 
             Checkbox::make('remember')
                 ->label(__('Ricordami')),
+<<<<<<< HEAD
 >>>>>>> 867b3bd (.)
+=======
+>>>>>>> 2c9cce9 (.)
         ];
     }
 
@@ -122,6 +132,7 @@ class Login extends Component implements HasForms
      */
     public function authenticate()
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         try {
             /** @var array{email: string, password: string, remember?: bool} $data */
@@ -145,6 +156,8 @@ class Login extends Component implements HasForms
             report($e);
         }
 =======
+=======
+>>>>>>> 2c9cce9 (.)
         /** @var array{email: string, password: string, remember?: bool} $data */
         $data = $this->validate();
 
@@ -161,7 +174,10 @@ class Login extends Component implements HasForms
         }
 
         $this->addError('email', __('Le credenziali fornite non sono corrette.'));
+<<<<<<< HEAD
 >>>>>>> 867b3bd (.)
+=======
+>>>>>>> 2c9cce9 (.)
     }
 
     /**
@@ -170,12 +186,15 @@ class Login extends Component implements HasForms
      * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function render()
     {
         return view('user::livewire.auth.login');
     }
 } 
 =======
+=======
+>>>>>>> 2c9cce9 (.)
     public function render(): \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
     {
         app(ViewCopyAction::class)->execute('user::livewire.auth.login', 'pub_theme::livewire.auth.login');
@@ -192,4 +211,7 @@ class Login extends Component implements HasForms
         ]);
     }
 }
+<<<<<<< HEAD
 >>>>>>> 867b3bd (.)
+=======
+>>>>>>> 2c9cce9 (.)

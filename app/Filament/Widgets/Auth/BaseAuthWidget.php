@@ -17,6 +17,7 @@ abstract class BaseAuthWidget extends Widget
             redirect()->intended(route('dashboard'));
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 
     /**
@@ -29,6 +30,8 @@ abstract class BaseAuthWidget extends Widget
         return [
             'form' => $this->getFormSchema(),
 =======
+=======
+>>>>>>> 2c9cce9 (.)
 
         $this->form->fill();
     }
@@ -42,7 +45,10 @@ abstract class BaseAuthWidget extends Widget
     {
         return [
             'form' => $this->form,
+<<<<<<< HEAD
 >>>>>>> origin/dev
+=======
+>>>>>>> 2c9cce9 (.)
         ];
     }
 }
