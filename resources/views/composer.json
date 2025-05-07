@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
     "name": "laraxot/theme-one",
     "description": "Tema One",
-=======
-    "name": "saluteora/theme-one",
-    "description": "Tema One per SaluteOra",
->>>>>>> 867b3bd (.)
     "type": "library",
     "license": "MIT",
     "autoload": {

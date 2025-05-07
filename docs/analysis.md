@@ -56,13 +56,6 @@ Modules/User/
 - Unit tests for models
 - Feature tests for authentication
 - Integration tests for user flows
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 5a344fb (.)
 ### Versione HEAD
 
 
@@ -87,14 +80,3 @@ Modules/User/
 
 ---
 
-<<<<<<< HEAD
-=======
->>>>>>> 867b3bd (.)
-=======
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 5a344fb (.)

@@ -27,29 +27,11 @@ cache/
 build
 *.exe
 *:Zone.Identifier
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 5a344fb (.)
 
 # Backup files
 *.bak
 # File di log
 *.log
+-e 
 # PHPStan documentation
 docs/phpstan/
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-# File di log
-*.log
->>>>>>> origin/dev
-=======
-
-
-# File di log
-*.log
->>>>>>> 5a344fb (.)
->>>>>>> 867b3bd (.)

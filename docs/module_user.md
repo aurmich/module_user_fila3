@@ -14,13 +14,6 @@
 ## Struttura
 ```
 app/
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 5a344fb (.)
 ### Versione HEAD
 
 ├── Filament/           # Componenti Filament
@@ -34,43 +27,14 @@ app/
 
 ### Versione Incoming
 
-<<<<<<< HEAD
-=======
->>>>>>> 867b3bd (.)
-=======
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 5a344fb (.)
 ├── Filament/       # Componenti Filament
 ├── Http/           # Controllers e Middleware
 ├── Models/         # Modelli del dominio
 ├── Providers/      # Service Providers
 └── Services/       # Servizi utente
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ---
 
-=======
->>>>>>> 867b3bd (.)
-=======
-
-### Versione HEAD
-
-
----
-
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 5a344fb (.)
 ```
 
 ## Dipendenze
@@ -121,32 +85,11 @@ composer format        # Formatta il codice
   AUTH0_CLIENT_ID=
   AUTH0_CLIENT_SECRET=
   ```
-<<<<<<< HEAD
 ### Versione HEAD
 
 - Per dettagli completi sull'integrazione di Laravel Passport, vedere [documentazione dedicata](./passport.md)
 
 ### Versione Incoming
-
-
----
-
-=======
->>>>>>> 867b3bd (.)
-
-### Versione HEAD
-
-### Versione HEAD
-
-- Per dettagli completi sull'integrazione di Laravel Passport, vedere [documentazione dedicata](./passport.md)
-
-### Versione Incoming
-
-
----
-
-
-### Versione Alternativa
 
 
 ---
@@ -162,13 +105,6 @@ composer format        # Formatta il codice
 7. Gestire correttamente le password
 8. Proteggere i dati sensibili
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 5a344fb (.)
 ### Versione HEAD
 
 ### Filament
@@ -187,17 +123,6 @@ composer format        # Formatta il codice
 
 ---
 
-<<<<<<< HEAD
-=======
->>>>>>> 867b3bd (.)
-=======
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 5a344fb (.)
 ## Troubleshooting
 ### Problemi Comuni
 1. **Errori di Autenticazione**
@@ -210,13 +135,6 @@ composer format        # Formatta il codice
    - Verificare la configurazione delle code
    - Controllare lo spazio disco
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 5a344fb (.)
 ### Versione HEAD
 
 3. **Problemi con i Widget Filament**
@@ -235,18 +153,3 @@ Le modifiche vengono tracciate nel repository GitHub.
 
 ---
 
-<<<<<<< HEAD
-=======
-## Changelog
-Le modifiche vengono tracciate nel repository GitHub. 
->>>>>>> 867b3bd (.)
-=======
-
-### Versione Alternativa
-
-## Changelog
-Le modifiche vengono tracciate nel repository GitHub. 
-
----
-
->>>>>>> 5a344fb (.)

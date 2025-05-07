@@ -25,17 +25,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 use Laravel\Passport\HasApiTokens;
 use Modules\User\Database\Factories\UserFactory;
-<<<<<<< HEAD
 use Modules\User\Models\Traits\HasTeams;
-=======
-<<<<<<< HEAD
-use Modules\User\Models\Traits\HasAuthenticationLogTrait;
-use Modules\User\Models\Traits\HasTeams;
-use Modules\User\Models\Traits\HasTenants as HasTenantsRelation;
-=======
-use Modules\User\Models\Traits\HasTeams;
->>>>>>> origin/dev
->>>>>>> 867b3bd (.)
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Traits\RelationX;
@@ -133,23 +123,10 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     use HasRoles;
     use HasTeams;
     use HasUuids;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    use HasAuthenticationLogTrait;
-    use HasTenantsRelation;
-    use Notifiable;
-    use RelationX;
-=======
->>>>>>> 867b3bd (.)
     use Notifiable;
     use RelationX;
     use Traits\HasAuthenticationLogTrait;
     use Traits\HasTenants;
-<<<<<<< HEAD
-=======
->>>>>>> origin/dev
->>>>>>> 867b3bd (.)
 
     public $incrementing = false;
 
@@ -200,41 +177,42 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
 
     public function canAccessFilament(?Panel $panel = null): bool
     {
+        // return $this->role_id === Role::ROLE_ADMINISTRATOR;
         return true;
     }
 
     /**
      * Get the user's name for Filament.
+     *
+     * @return string
      */
     public function getFilamentName(): string
     {
+        /** @var string|null */
         $name = $this->getAttribute('name');
+
+        /** @var string|null */
         $firstName = $this->getAttribute('first_name');
+
+        /** @var string|null */
         $lastName = $this->getAttribute('last_name');
 
         return trim(sprintf(
             '%s %s %s',
             $name ?? '',
             $firstName ?? '',
-            $lastName ?? ''
+            $lastName ?? '',
         ));
     }
 
-    /**
-     * Get the user's profile.
-     */
     public function profile(): HasOne
     {
-        $profile_class = XotData::make()->getProfileModel();
+        /** @var class-string<Model> */
+        $profileClass = XotData::make()->getProfileClass();
 
-        return $this->hasOne($profile_class);
+        return $this->hasOne($profileClass);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 867b3bd (.)
     /**
      * Verifica se l'utente ha il ruolo di super-admin.
      *
@@ -245,173 +223,162 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         return $this->hasRole('super-admin');
     }
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/dev
->>>>>>> 867b3bd (.)
-=======
-    /**
-     * Check if the user can access a specific panel.
-     */
->>>>>>> 5a344fb (.)
     public function canAccessPanel(Panel $panel): bool
     {
-        return true;
+        // $panel->default('admin');
+        if ($panel->getId() !== 'admin') {
+            $role = $panel->getId();
+            /*
+            $xot = XotData::make();
+            if ($xot->super_admin === $this->email) {
+                $role = Role::firstOrCreate(['name' => $role]);
+                $this->assignRole($role);
+            }
+            */
+
+            return $this->hasRole($role);
+        }
+
+        return true; // str_ends_with($this->email, '@yourdomain.com') && $this->hasVerifiedEmail();
     }
 
-    /**
-     * Check if the user can access socialite features.
-     */
     public function canAccessSocialite(): bool
     {
         return true;
     }
 
-    /**
-     * Detach a model from the user.
-     */
     public function detach(Model $model): void
     {
-        $pivot_table = $this->getTable().'_'.$model->getTable();
-        $this->belongsToMany(get_class($model), $pivot_table)->detach($model->getKey());
+        // @phpstan-ignore function.alreadyNarrowedType
+        if (method_exists($this, 'teams')) {
+            // @phpstan-ignore function.alreadyNarrowedType
+            $this->teams()->detach($model);
+        }
     }
 
-    /**
-     * Attach a model to the user.
-     */
     public function attach(Model $model): void
     {
-        $pivot_table = $this->getTable().'_'.$model->getTable();
-        $this->belongsToMany(get_class($model), $pivot_table)->attach($model->getKey());
+        // @phpstan-ignore function.alreadyNarrowedType
+        if (method_exists($this, 'teams')) {
+            // @phpstan-ignore function.alreadyNarrowedType
+            $this->teams()->attach($model);
+        }
     }
 
-    /**
-     * Get the tree label for the user.
-     */
     public function treeLabel(): string
     {
-        return $this->email;
+        return strval($this->name ?? $this->email);
     }
 
-    /**
-     * Get the tree sons for the user.
-     */
     public function treeSons(): Collection
     {
-        return new Collection();
+        return $this->teams ?? new Collection();
     }
 
     /**
-     * Get the user's devices.
+     * @return BelongsToMany<Device, static|$this>
      */
     public function devices(): BelongsToMany
     {
-        return $this->belongsToMany(Device::class);
+        return $this
+            ->belongsToManyX(Device::class);
     }
 
-    /**
-     * Get the user's socialite accounts.
-     */
     public function socialiteUsers(): HasMany
     {
-        return $this->hasMany(SocialiteUser::class);
+        return $this
+            ->hasMany(SocialiteUser::class);
     }
 
-    /**
-     * Get a specific field from a provider.
-     */
     public function getProviderField(string $provider, string $field): string
     {
-        $socialiteUser = $this->socialiteUsers()
-            ->where('provider', $provider)
-            ->first();
-
-        if (null === $socialiteUser) {
-            return '';
+        $socialiteUser = $this->socialiteUsers()->firstWhere(['provider' => $provider]);
+        if ($socialiteUser == null) {
+            throw new \Exception('SocialiteUser not found');
         }
 
-        return $socialiteUser->{$field} ?? '';
+        $res = $socialiteUser->{$field};
+        return (string) $res;
     }
 
     /**
-     * Get the user's notifications.
+     * Get the entity's notifications.
+     *
+     * @return MorphMany<Notification, static|$this>
      */
-<<<<<<< HEAD
     public function notifications(): MorphMany
-=======
-<<<<<<< HEAD
-    public function notifications(): MorphMany
-=======
-    public function notifications()
->>>>>>> origin/dev
->>>>>>> 867b3bd (.)
     {
-        return $this->morphMany(DatabaseNotification::class, 'notifiable')
-            ->orderBy('created_at', 'desc');
+        // @phpstan-ignore return.type
+        return $this->morphMany(Notification::class, 'notifiable');
     }
 
     /**
-     * Get the user's latest authentication.
+     * Get the user's latest authentication log.
+     *
+     * @return MorphOne<AuthenticationLog, static>
      */
     public function latestAuthentication(): MorphOne
     {
+        // @phpstan-ignore return.type
         return $this->morphOne(AuthenticationLog::class, 'authenticatable')
             ->latestOfMany();
     }
 
-    /**
-     * Get the user's full name.
-     */
     public function getFullNameAttribute(?string $value): ?string
     {
-        return $this->first_name.' '.$this->last_name;
+        return $value ?? $this->first_name . ' ' . $this->last_name;
     }
 
-    /**
-     * Get the user's name.
-     */
     public function getNameAttribute(?string $value): ?string
     {
-        if (null !== $value) {
+        if ($value !== null || $this->getKey() === null) {
             return $value;
         }
-
-        if (null !== $this->first_name) {
-            return $this->first_name;
+        $name = Str::of((string) $this->email)->before('@')->toString();
+        $i = 1;
+        $value = $name . '-' . $i;
+        while (self::firstWhere(['name' => $value]) !== null) {
+            $i++;
+            $value = $name . '-' . $i;
         }
+        $this->update(['name' => $value]);
 
-        if (null !== $this->email) {
-            return Str::before($this->email, '@');
-        }
-
-        return null;
+        return $value;
     }
 
     /**
      * Create a new factory instance for the model.
+     *
+     * @return Factory
      */
-    protected static function newFactory(): Factory
+    protected static function newFactory()
     {
         return UserFactory::new();
     }
 
-    /**
-     * Get the attributes that should be cast.
-     */
+    /** @return array<string, string> */
     protected function casts(): array
     {
         return [
+            'id' => 'string',
             'email_verified_at' => 'datetime',
-            'password_expires_at' => 'datetime',
+            // 'password' => 'hashed', //Call to undefined cast [hashed] on column [password] in model [Modules\User\Models\User].
             'is_active' => 'boolean',
+            'roles.pivot.id' => 'string',
+            // https://github.com/beitsafe/laravel-uuid-auditing
+            // ALTER TABLE model_has_role CHANGE COLUMN `id` `id` CHAR(37) NOT NULL DEFAULT uuid();
+
             'is_otp' => 'boolean',
-            'current_team_id' => 'string',
-            'profile_photo_path' => 'string',
+            'password_expires_at' => 'datetime',
+
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
             'deleted_at' => 'datetime',
+
+            'updated_by' => 'string',
+            'created_by' => 'string',
+            'deleted_by' => 'string',
         ];
     }
 
@@ -457,14 +424,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
      */
     /**
      * Get all role names associated with the user.
-<<<<<<< HEAD
      * 
-=======
-<<<<<<< HEAD
-     * 
-=======
->>>>>>> origin/dev
->>>>>>> 867b3bd (.)
      * @return array<int, string>
      */
     public function getRoleNames(): array
@@ -606,20 +566,11 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         return $this->belongsTo(Team::class, 'current_team_id');
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 867b3bd (.)
     public function tenants(): BelongsToMany
     {
         return $this->belongsToMany(Tenant::class, 'tenant_user');
     }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/dev
->>>>>>> 867b3bd (.)
     public function authentications(): MorphMany
     {
         return $this->morphMany(\Modules\User\Models\Authentication::class, 'authenticatable');
@@ -636,19 +587,9 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     {
         // Se è una stringa semplice, utilizziamo il metodo interno tramite relazione roles
         if (is_string($roles)) {
-<<<<<<< HEAD
             return once(function () use ($roles) {
                 return $this->roles()->where('name', $roles)->exists();
             });
-=======
-<<<<<<< HEAD
-            return once(function () use ($roles) {
-                return $this->roles()->where('name', $roles)->exists();
-            });
-=======
-            return $this->roles()->where('name', $roles)->exists();
->>>>>>> origin/dev
->>>>>>> 867b3bd (.)
         }
 
         // Per gli altri tipi, implementiamo una logica di base
@@ -694,46 +635,4 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         /** @var array<int, string> */
         return $permissions->pluck('name')->values()->toArray();
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-    /**
-     * Get all of the teams that the user owns or belongs to.
-     */
-    public function teams(): BelongsToMany
-    {
-        return $this->belongsToManyX(Team::class);
-    }
-
-    /**
-     * Get the user's permissions for the given team.
-     */
-    public function teamPermissions(Team $team): array
-    {
-        if ($this->ownsTeam($team)) {
-            return ['*'];
-        }
-
-        return $team->getPermissionsFor($this);
-    }
-
-    /**
-     * Get the user's authentication logs.
-     */
-    public function authentications(): HasMany
-    {
-        return $this->hasMany(AuthenticationLog::class);
-    }
-
-    /**
-     * Get the user's socialite accounts.
-     */
-    public function socialiteUsers(): HasMany
-    {
-        return $this->hasMany(SocialiteUser::class);
-    }
-=======
->>>>>>> origin/dev
->>>>>>> 867b3bd (.)
 }

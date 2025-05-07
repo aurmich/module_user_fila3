@@ -11,11 +11,7 @@ use Modules\User\Filament\Resources\RoleResource\Pages\EditRole;
 use Modules\User\Filament\Resources\RoleResource\Pages\ListRoles;
 use Modules\User\Models\Role;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
-=======
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
->>>>>>> 867b3bd (.)
 
 class RoleResource extends XotBaseResource
 {

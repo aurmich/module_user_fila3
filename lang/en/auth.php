@@ -61,13 +61,6 @@ return [
         'user' => 'We can\'t find a user with that email address.',
     ],
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/dev
->>>>>>> 867b3bd (.)
     'login-via' => 'Or log in via',
 
     'login-failed' => 'Login failed, please try again.',

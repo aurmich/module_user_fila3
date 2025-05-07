@@ -16,11 +16,7 @@ use Modules\User\Filament\Resources\PermissionResource\Pages\EditPermission;
 use Modules\User\Filament\Resources\PermissionResource\Pages\ListPermissions;
 use Modules\User\Models\Permission;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
-=======
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
->>>>>>> 867b3bd (.)
 
 class PermissionResource extends XotBaseResource
 {

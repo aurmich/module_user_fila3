@@ -24,11 +24,7 @@ use Filament\Resources\Resource;
 use Filament\Tables\Table;
 use Modules\Xot\Services\XotService;
 
-<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
-=======
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
->>>>>>> 867b3bd (.)
 
 class TenantResource extends XotBaseResource
 {

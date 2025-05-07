@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-### Versione HEAD
-
->>>>>>> 5a344fb (.)
 ### Versione HEAD
 
 # Roadmap Modulo User
@@ -203,17 +196,6 @@
 
 ### Versione Incoming
 
-<<<<<<< HEAD
-=======
->>>>>>> 867b3bd (.)
-=======
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 5a344fb (.)
 # User Module Roadmap
 
 ## Module Progress Overview
@@ -450,24 +432,6 @@ Overall Module Completion: 82%
 - Laravel Permission v5.x
 - Laravel Data v3.x
 - Laravel Excel v3.x
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ---
 
-=======
->>>>>>> 867b3bd (.)
-=======
-
-### Versione HEAD
-
-
----
-
-
-### Versione Alternativa
-
-
----
-
->>>>>>> 5a344fb (.)
