@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Analisi PHPStan - Modulo User - Livello 1
 
 ## Errori Riscontrati e Soluzioni
@@ -67,15 +68,118 @@ protected function getViewData(): array
 >>>>>>> aurmich/dev
 
 =======
-
->>>>>>> aurmich/dev
 =======
 
+### Versione HEAD
+>>>>>>> 5a344fb (.)
+
+# Analisi PHPStan - Modulo User - Livello 1
+
+## Errori Riscontrati e Soluzioni
+
+### 1. Uso Improprio di Metodi Statici
+**File**: `Modules/Xot/app/Datas/MetatagData.php`
+**Problema**: Utilizzo di metodi non statici come se fossero statici
+**Soluzione**: Utilizzare il container di Laravel per risolvere le dipendenze
+```php
+// Da
+AssetAction::execute($this->logo_header);
+
+// A
+app(AssetAction::class)->execute($this->logo_header);
+```
+
+### 2. Metodo Mancante
+**File**: `Modules/Xot/app/Datas/MetatagData.php`
+**Problema**: Metodo `getLogoHeight()` non definito ma utilizzato
+**Soluzione**: Aggiungere il metodo getter
+```php
+public function getLogoHeight(): string
+{
+    return $this->logo_height;
+}
+```
+
+### 3. Proprietà $form non definita in BaseAuthWidget
+**File**: `Modules/User/app/Filament/Widgets/Auth/BaseAuthWidget.php`
+**Problema**: Accesso a proprietà `$form` non definita
+**Soluzione**: 
+- In Filament v3, la gestione dei form avviene tramite metodi come `getFormSchema()` e non tramite `$this->form`.
+- Rimuovere ogni riferimento a `$this->form`.
+- Aggiornare la logica per usare la struttura Filament/Xot corretta.
+- Se serve passare dati alla view, farlo tramite metodi dedicati o view data.
+
+Esempio di refactor:
+```php
+protected function getViewData(): array
+{
+    return [
+        'form' => $this->getFormSchema(),
+    ];
+}
+```
+
+## Best Practices Implementate
+1. Utilizzo del container di Laravel per la dependency injection
+2. Implementazione di metodi getter per le proprietà private
+3. Gestione corretta delle eccezioni
+4. Utilizzo di tipi di ritorno espliciti
+5. Uso dei metodi Filament per i form invece di proprietà pubbliche
+
+## Note Importanti
+- Assicurarsi che tutti i metodi utilizzati siano correttamente definiti
+- Utilizzare sempre il container di Laravel per risolvere le dipendenze
+- Mantenere la coerenza tra le proprietà e i loro getter
+- Documentare correttamente i metodi e le loro responsabilità 
+
+### Versione Alternativa
+
+
+
+
+### Versione Alternativa
+
+
+
+### Versione Alternativa
+
+
+
+---
+
+
+
+### Versione Alternativa
+
+
+
+---
+
+
+### Versione Alternativa
+
+
+
+---
+
+
+
+### Versione Alternativa
+
+
+---
+
+
+---
+
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
 
 =======
 >>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
+=======
+>>>>>>> 5a344fb (.)
 # Rapporto PHPStan Livello 1 per il modulo User
 
 Data analisi: 2025-04-15 21:57:11
@@ -623,6 +727,7 @@ Trovati 64 errori al livello 1.
 - [PSR-12: Standard di codifica](https://www.php-fig.org/psr/psr-12/)
 
 
+<<<<<<< HEAD
 =======
 aurmich/dev
 =======
@@ -630,13 +735,53 @@ aurmich/dev
 >>>>>>> aurmich/dev
 
 =======
-aurmich/dev
->>>>>>> aurmich/dev
 =======
+
+### Versione Alternativa
+
 aurmich/dev
+
+### Versione Alternativa
+
+
+
+---
+
+
+
+### Versione Alternativa
+
+>>>>>>> 5a344fb (.)
+aurmich/dev
+
+---
+
+
+### Versione Alternativa
+
+aurmich/dev
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
 
 =======
 >>>>>>> aurmich/dev
 >>>>>>> aurmich/dev
 >>>>>>> origin/dev
+=======
+
+---
+
+
+
+### Versione Alternativa
+
+
+---
+
+
+---
+
+
+---
+
+>>>>>>> 5a344fb (.)

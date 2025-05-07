@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 5a344fb (.)
 ### Versione HEAD
 
 # Correzioni PHPStan Livello 7 - Modulo User
@@ -46,8 +52,17 @@ Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` ut
 
 ### Versione Incoming
 
+<<<<<<< HEAD
 =======
 >>>>>>> 867b3bd (.)
+=======
+
+### Versione Alternativa
+
+
+---
+
+>>>>>>> 5a344fb (.)
 # Correzioni PHPStan per il Modulo User
 
 ## Problemi Principali
@@ -138,10 +153,26 @@ Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` ut
 3. Correggere i tipi nei modelli e nelle relazioni
 4. Aggiornare la documentazione delle classi
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 5a344fb (.)
 5. Eseguire nuovamente PHPStan per verificare le correzioni 
 
 ---
 
+<<<<<<< HEAD
 =======
 5. Eseguire nuovamente PHPStan per verificare le correzioni 
 >>>>>>> 867b3bd (.)
+=======
+
+### Versione Alternativa
+
+5. Eseguire nuovamente PHPStan per verificare le correzioni 
+
+---
+
+>>>>>>> 5a344fb (.)

@@ -510,10 +510,24 @@ resources/views/components/ui/app
 resources/views/components/ui/marketing
 resources/views/config
 <<<<<<< HEAD
+<<<<<<< HEAD
 docs
 =======
 resources/views/docs
 >>>>>>> 867b3bd (.)
+=======
+
+### Versione HEAD
+
+docs
+
+### Versione Alternativa
+
+resources/views/docs
+
+---
+
+>>>>>>> 5a344fb (.)
 resources/views/emails
 resources/views/filament
 resources/views/filament/auth
@@ -616,6 +630,12 @@ tests_old
 - [Report PHPStan](/docs/phpstan/)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 5a344fb (.)
 
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
@@ -635,5 +655,14 @@ tests_old
 * [structure.md](../../../Cms/docs/themes/structure.md)
 * [structure.md](../../../Cms/docs/components/structure.md)
 
+<<<<<<< HEAD
 =======
 >>>>>>> 867b3bd (.)
+=======
+
+### Versione Alternativa
+
+
+---
+
+>>>>>>> 5a344fb (.)

@@ -46,12 +46,28 @@ Questo file contiene le traduzioni in inglese per tutte le stringhe relative al 
 - Standardizzazione dei messaggi
 - Miglioramento dei placeholder
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 5a344fb (.)
 - Aggiunta di nuovi messaggi di sistema 
 ## Collegamenti tra versioni di auth.md
 * [auth.md](../../../Xot/docs/install/auth.md)
 * [auth.md](../../../User/docs/lang/en/auth.md)
 * [auth.md](../../../Tenant/docs/it/config/auth.md)
 
+<<<<<<< HEAD
 =======
 - Aggiunta di nuovi messaggi di sistema 
 >>>>>>> 867b3bd (.)
+=======
+
+### Versione Alternativa
+
+- Aggiunta di nuovi messaggi di sistema 
+
+---
+
+>>>>>>> 5a344fb (.)

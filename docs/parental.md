@@ -4,10 +4,24 @@
 - [Introduzione](#introduzione)
 - [Single Table Inheritance](#single-table-inheritance)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Implementazione in il progetto](#implementazione-in-<nome progetto>)
 =======
 - [Implementazione in SaluteOra](#implementazione-in-saluteora)
 >>>>>>> 867b3bd (.)
+=======
+
+### Versione HEAD
+
+- [Implementazione in il progetto](#implementazione-in-<nome progetto>)
+
+### Versione Alternativa
+
+- [Implementazione in SaluteOra](#implementazione-in-saluteora)
+
+---
+
+>>>>>>> 5a344fb (.)
 - [Casi d'uso nel Modulo User](#casi-duso-nel-modulo-user)
 - [Pattern e Best Practices](#pattern-e-best-practices)
 - [Troubleshooting](#troubleshooting)
@@ -17,10 +31,23 @@
 ## Introduzione
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Tighten/Parental è una libreria Laravel che aggiunge funzionalità di Single Table Inheritance (STI) ad Eloquent, il sistema ORM di Laravel. Questa documentazione spiega come viene utilizzata nel Modulo User di il progetto e come implementarla correttamente nei tuoi modelli.
 =======
+=======
+
+### Versione HEAD
+
+Tighten/Parental è una libreria Laravel che aggiunge funzionalità di Single Table Inheritance (STI) ad Eloquent, il sistema ORM di Laravel. Questa documentazione spiega come viene utilizzata nel Modulo User di il progetto e come implementarla correttamente nei tuoi modelli.
+
+### Versione Alternativa
+
+>>>>>>> 5a344fb (.)
 Tighten/Parental è una libreria Laravel che aggiunge funzionalità di Single Table Inheritance (STI) ad Eloquent, il sistema ORM di Laravel. Questa documentazione spiega come viene utilizzata nel Modulo User di SaluteOra e come implementarla correttamente nei tuoi modelli.
 >>>>>>> 867b3bd (.)
+
+---
+
 
 ### Cos'è Tighten/Parental?
 
@@ -54,18 +81,33 @@ In un'implementazione tradizionale di Laravel, ogni modello corrisponde a una ta
 4. Quando si recupera un record, viene istanziato automaticamente il modello figlio corretto
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 5a344fb (.)
 ## Implementazione in il progetto
 
 ### Installazione
 
 Nel progetto il progetto, Tighten/Parental è già installato come dipendenza. Se stai creando un nuovo modulo che necessita di questa funzionalità, puoi verificare l'installazione con:
+<<<<<<< HEAD
 =======
+=======
+
+### Versione Alternativa
+
+>>>>>>> 5a344fb (.)
 ## Implementazione in SaluteOra
 
 ### Installazione
 
 Nel progetto SaluteOra, Tighten/Parental è già installato come dipendenza. Se stai creando un nuovo modulo che necessita di questa funzionalità, puoi verificare l'installazione con:
 >>>>>>> 867b3bd (.)
+
+---
+
 
 ```bash
 composer show tightenco/parental
@@ -144,10 +186,23 @@ class User extends Model
 ## Casi d'uso nel Modulo User
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Nel Modulo User di il progetto, utilizziamo Tighten/Parental per gestire diversi tipi di utenti con comportamenti specifici.
 =======
+=======
+
+### Versione HEAD
+
+Nel Modulo User di il progetto, utilizziamo Tighten/Parental per gestire diversi tipi di utenti con comportamenti specifici.
+
+### Versione Alternativa
+
+>>>>>>> 5a344fb (.)
 Nel Modulo User di SaluteOra, utilizziamo Tighten/Parental per gestire diversi tipi di utenti con comportamenti specifici.
 >>>>>>> 867b3bd (.)
+
+---
+
 
 ### 1. Gestione dei Ruoli con Modelli Dedicati
 
@@ -155,10 +210,24 @@ Invece di utilizzare un sistema di permessi complesso, possiamo gestire comporta
 
 ```php
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Implementazione reale in il progetto
 =======
 // Implementazione reale in SaluteOra
 >>>>>>> 867b3bd (.)
+=======
+
+### Versione HEAD
+
+// Implementazione reale in il progetto
+
+### Versione Alternativa
+
+// Implementazione reale in SaluteOra
+
+---
+
+>>>>>>> 5a344fb (.)
 namespace Modules\User\app\Models;
 
 use Parental\HasParent;
@@ -252,10 +321,23 @@ class Doctor extends User
   - I comportamenti sono simili ma con diverse autorizzazioni
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 In il progetto, spesso combiniamo entrambi gli approcci.
 =======
+=======
+
+### Versione HEAD
+
+In il progetto, spesso combiniamo entrambi gli approcci.
+
+### Versione Alternativa
+
+>>>>>>> 5a344fb (.)
 In SaluteOra, spesso combiniamo entrambi gli approcci.
 >>>>>>> 867b3bd (.)
+
+---
+
 
 ### 2. Combinazione con Trait e Interface
 

@@ -60,6 +60,12 @@
 - [Sicurezza](packages/security.md)
 - [Performance](packages/performance.md) 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 5a344fb (.)
 ### Versione HEAD
 
 
@@ -80,5 +86,14 @@
 
 ---
 
+<<<<<<< HEAD
 =======
 >>>>>>> 867b3bd (.)
+=======
+
+### Versione Alternativa
+
+
+---
+
+>>>>>>> 5a344fb (.)

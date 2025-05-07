@@ -272,7 +272,7 @@ return [
         ],
         'edit' => [
             'label' => 'Modifica Ruolo',
-            'tooltip' => 'Clicca per modificare il ruolo selezionato.',
+            'tooltip' => 'Clicca per modificare questo ruolo.',
             'icon' => 'fa fa-edit',
             'color' => 'primary',
         ],
@@ -316,6 +316,11 @@ return [
         'content' => 'Gestione Contenuti',
         'settings' => 'Impostazioni',
         'reports' => 'Report',
+    ],
+    'validation' => [
+        'name_required' => 'Il nome del ruolo è obbligatorio',
+        'name_unique' => 'Questo nome ruolo è già in uso',
+        'permissions_required' => 'Seleziona almeno un permesso',
     ],
 ];
 <<<<<<< HEAD

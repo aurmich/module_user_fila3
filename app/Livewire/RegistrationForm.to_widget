@@ -83,10 +83,14 @@ class RegistrationForm extends Component
 
                             Checkbox::make('newsletter')
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 ->label('Desidero ricevere aggiornamenti via email sul progetto '),
 =======
                                 ->label('Desidero ricevere aggiornamenti via email sul progetto SaluteOra'),
 >>>>>>> 867b3bd (.)
+=======
+                                ->label('Desidero ricevere aggiornamenti via email sul progetto '),
+>>>>>>> 5a344fb (.)
                         ]),
                 ])
                 ->skippable(false)

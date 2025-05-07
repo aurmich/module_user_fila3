@@ -77,6 +77,7 @@ class Role extends SpatieRole
     protected $keyType = 'string';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // protected $fillable=['id','']
 =======
 <<<<<<< HEAD
@@ -108,6 +109,8 @@ class Role extends SpatieRole
      * Get the team that owns the role.
 =======
 >>>>>>> 867b3bd (.)
+=======
+>>>>>>> 5a344fb (.)
     /** @return array<string, string> */
     protected function casts(): array
     {
@@ -119,6 +122,13 @@ class Role extends SpatieRole
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
         ];
+    }
+
+    public function getTable(): string
+    {
+        Assert::string($table = config('permission.table_names.roles'));
+
+        return $table;
     }
 
     /**
@@ -167,5 +177,15 @@ class Role extends SpatieRole
         return $this->belongsToManyX(Permission::class);
 >>>>>>> origin/dev
 >>>>>>> 867b3bd (.)
+    }
+
+    /**
+     * A role belongs to some users of the model associated with its guard.
+     */
+    public function users(): BelongsToMany
+    {
+        $userClass = XotData::make()->getUserClass();
+
+        return $this->belongsToManyX($userClass);
     }
 }

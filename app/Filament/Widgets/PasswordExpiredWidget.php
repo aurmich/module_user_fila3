@@ -169,6 +169,7 @@ class PasswordExpiredWidget extends Widget implements HasForms
             throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia UserContract');
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -176,6 +177,9 @@ class PasswordExpiredWidget extends Widget implements HasForms
 =======
 >>>>>>> origin/dev
 >>>>>>> 867b3bd (.)
+=======
+
+>>>>>>> 5a344fb (.)
         event(new NewPasswordSet($user));
 
         Notification::make()
@@ -203,8 +207,7 @@ class PasswordExpiredWidget extends Widget implements HasForms
         return TextInput::make('current_password')
             ->password()
             ->revealable()
-            ->required()
-            ->validationAttribute(static::trans('fields.current_password.validation_attribute'));
+            ->required();
     }
 
     /*

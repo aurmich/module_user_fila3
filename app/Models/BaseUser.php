@@ -200,42 +200,37 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
 
     public function canAccessFilament(?Panel $panel = null): bool
     {
-        // return $this->role_id === Role::ROLE_ADMINISTRATOR;
         return true;
     }
 
     /**
      * Get the user's name for Filament.
-     *
-     * @return string
      */
     public function getFilamentName(): string
     {
-        /** @var string|null */
         $name = $this->getAttribute('name');
-
-        /** @var string|null */
         $firstName = $this->getAttribute('first_name');
-
-        /** @var string|null */
         $lastName = $this->getAttribute('last_name');
 
         return trim(sprintf(
             '%s %s %s',
             $name ?? '',
             $firstName ?? '',
-            $lastName ?? '',
+            $lastName ?? ''
         ));
     }
 
+    /**
+     * Get the user's profile.
+     */
     public function profile(): HasOne
     {
-        /** @var class-string<Model> */
-        $profileClass = XotData::make()->getProfileClass();
+        $profile_class = XotData::make()->getProfileModel();
 
-        return $this->hasOne($profileClass);
+        return $this->hasOne($profile_class);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -256,88 +251,92 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
 =======
 >>>>>>> origin/dev
 >>>>>>> 867b3bd (.)
+=======
+    /**
+     * Check if the user can access a specific panel.
+     */
+>>>>>>> 5a344fb (.)
     public function canAccessPanel(Panel $panel): bool
     {
-        // $panel->default('admin');
-        if ($panel->getId() !== 'admin') {
-            $role = $panel->getId();
-            /*
-            $xot = XotData::make();
-            if ($xot->super_admin === $this->email) {
-                $role = Role::firstOrCreate(['name' => $role]);
-                $this->assignRole($role);
-            }
-            */
-
-            return $this->hasRole($role);
-        }
-
-        return true; // str_ends_with($this->email, '@yourdomain.com') && $this->hasVerifiedEmail();
+        return true;
     }
 
+    /**
+     * Check if the user can access socialite features.
+     */
     public function canAccessSocialite(): bool
     {
         return true;
     }
 
+    /**
+     * Detach a model from the user.
+     */
     public function detach(Model $model): void
     {
-        // @phpstan-ignore function.alreadyNarrowedType
-        if (method_exists($this, 'teams')) {
-            // @phpstan-ignore function.alreadyNarrowedType
-            $this->teams()->detach($model);
-        }
-    }
-
-    public function attach(Model $model): void
-    {
-        // @phpstan-ignore function.alreadyNarrowedType
-        if (method_exists($this, 'teams')) {
-            // @phpstan-ignore function.alreadyNarrowedType
-            $this->teams()->attach($model);
-        }
-    }
-
-    public function treeLabel(): string
-    {
-        return strval($this->name ?? $this->email);
-    }
-
-    public function treeSons(): Collection
-    {
-        return $this->teams ?? new Collection();
+        $pivot_table = $this->getTable().'_'.$model->getTable();
+        $this->belongsToMany(get_class($model), $pivot_table)->detach($model->getKey());
     }
 
     /**
-     * @return BelongsToMany<Device, static|$this>
+     * Attach a model to the user.
+     */
+    public function attach(Model $model): void
+    {
+        $pivot_table = $this->getTable().'_'.$model->getTable();
+        $this->belongsToMany(get_class($model), $pivot_table)->attach($model->getKey());
+    }
+
+    /**
+     * Get the tree label for the user.
+     */
+    public function treeLabel(): string
+    {
+        return $this->email;
+    }
+
+    /**
+     * Get the tree sons for the user.
+     */
+    public function treeSons(): Collection
+    {
+        return new Collection();
+    }
+
+    /**
+     * Get the user's devices.
      */
     public function devices(): BelongsToMany
     {
-        return $this
-            ->belongsToManyX(Device::class);
-    }
-
-    public function socialiteUsers(): HasMany
-    {
-        return $this
-            ->hasMany(SocialiteUser::class);
-    }
-
-    public function getProviderField(string $provider, string $field): string
-    {
-        $socialiteUser = $this->socialiteUsers()->firstWhere(['provider' => $provider]);
-        if ($socialiteUser == null) {
-            throw new \Exception('SocialiteUser not found');
-        }
-
-        $res = $socialiteUser->{$field};
-        return (string) $res;
+        return $this->belongsToMany(Device::class);
     }
 
     /**
-     * Get the entity's notifications.
-     *
-     * @return MorphMany<Notification, static|$this>
+     * Get the user's socialite accounts.
+     */
+    public function socialiteUsers(): HasMany
+    {
+        return $this->hasMany(SocialiteUser::class);
+    }
+
+    /**
+     * Get a specific field from a provider.
+     */
+    public function getProviderField(string $provider, string $field): string
+    {
+        $socialiteUser = $this->socialiteUsers()
+            ->where('provider', $provider)
+            ->first();
+
+        if (null === $socialiteUser) {
+            return '';
+        }
+
+        return $socialiteUser->{$field} ?? '';
+    }
+
+    /**
+     * Get the user's notifications.
      */
 <<<<<<< HEAD
     public function notifications(): MorphMany
@@ -349,76 +348,70 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
 >>>>>>> origin/dev
 >>>>>>> 867b3bd (.)
     {
-        // @phpstan-ignore return.type
-        return $this->morphMany(Notification::class, 'notifiable');
+        return $this->morphMany(DatabaseNotification::class, 'notifiable')
+            ->orderBy('created_at', 'desc');
     }
 
     /**
-     * Get the user's latest authentication log.
-     *
-     * @return MorphOne<AuthenticationLog, static>
+     * Get the user's latest authentication.
      */
     public function latestAuthentication(): MorphOne
     {
-        // @phpstan-ignore return.type
         return $this->morphOne(AuthenticationLog::class, 'authenticatable')
             ->latestOfMany();
     }
 
+    /**
+     * Get the user's full name.
+     */
     public function getFullNameAttribute(?string $value): ?string
     {
-        return $value ?? $this->first_name . ' ' . $this->last_name;
+        return $this->first_name.' '.$this->last_name;
     }
 
+    /**
+     * Get the user's name.
+     */
     public function getNameAttribute(?string $value): ?string
     {
-        if ($value !== null || $this->getKey() === null) {
+        if (null !== $value) {
             return $value;
         }
-        $name = Str::of((string) $this->email)->before('@')->toString();
-        $i = 1;
-        $value = $name . '-' . $i;
-        while (self::firstWhere(['name' => $value]) !== null) {
-            $i++;
-            $value = $name . '-' . $i;
-        }
-        $this->update(['name' => $value]);
 
-        return $value;
+        if (null !== $this->first_name) {
+            return $this->first_name;
+        }
+
+        if (null !== $this->email) {
+            return Str::before($this->email, '@');
+        }
+
+        return null;
     }
 
     /**
      * Create a new factory instance for the model.
-     *
-     * @return Factory
      */
-    protected static function newFactory()
+    protected static function newFactory(): Factory
     {
         return UserFactory::new();
     }
 
-    /** @return array<string, string> */
+    /**
+     * Get the attributes that should be cast.
+     */
     protected function casts(): array
     {
         return [
-            'id' => 'string',
             'email_verified_at' => 'datetime',
-            // 'password' => 'hashed', //Call to undefined cast [hashed] on column [password] in model [Modules\User\Models\User].
-            'is_active' => 'boolean',
-            'roles.pivot.id' => 'string',
-            // https://github.com/beitsafe/laravel-uuid-auditing
-            // ALTER TABLE model_has_role CHANGE COLUMN `id` `id` CHAR(37) NOT NULL DEFAULT uuid();
-
-            'is_otp' => 'boolean',
             'password_expires_at' => 'datetime',
-
+            'is_active' => 'boolean',
+            'is_otp' => 'boolean',
+            'current_team_id' => 'string',
+            'profile_photo_path' => 'string',
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
             'deleted_at' => 'datetime',
-
-            'updated_by' => 'string',
-            'created_by' => 'string',
-            'deleted_by' => 'string',
         ];
     }
 

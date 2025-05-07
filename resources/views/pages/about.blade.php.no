@@ -5,10 +5,14 @@ use function Safe\json_decode;
 
 $locale = app()->getLocale();
 <<<<<<< HEAD
+<<<<<<< HEAD
 $content = json_decode(file_get_contents(base_path('laravel/config/local/<nome progetto>/database/content/pages/about.json')), true);
 =======
 $content = json_decode(file_get_contents(base_path('laravel/config/local/saluteora/database/content/pages/about.json')), true);
 >>>>>>> 867b3bd (.)
+=======
+$content = json_decode(file_get_contents(base_path('laravel/config/local/<nome progetto>/database/content/pages/about.json')), true);
+>>>>>>> 5a344fb (.)
 $blocks = $content['content_blocks'][$locale] ?? [];
 
 ?>

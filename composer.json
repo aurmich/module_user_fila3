@@ -41,6 +41,7 @@
         "flowframe/laravel-trend": "*",
         "jenssegers/agent": "*",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "laravel/passport": "^12.4",
 =======
 <<<<<<< HEAD
@@ -49,6 +50,9 @@
         "laravel/passport": "^12.4",
 >>>>>>> origin/dev
 >>>>>>> 867b3bd (.)
+=======
+        "laravel/passport": "^12.4",
+>>>>>>> 5a344fb (.)
         "socialiteproviders/auth0": "*",
         "spatie/laravel-personal-data-export": "*"
     },

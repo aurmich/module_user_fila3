@@ -50,6 +50,12 @@ class User extends Authenticatable
   - `user_agent`
   - `login_at`
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+### Versione HEAD
+
+>>>>>>> 5a344fb (.)
 ### Versione HEAD
 
 
@@ -63,11 +69,19 @@ class User extends Authenticatable
 
 ---
 
+<<<<<<< HEAD
 =======
 >>>>>>> 867b3bd (.)
+=======
+
+### Versione Alternativa
+
+
+---
+
+>>>>>>> 5a344fb (.)
   - `login_successful`
   - `created_at`
   - `updated_at`
 - I log vengono automaticamente creati quando un utente tenta di autenticarsi
 - Le notifiche vengono inviate tramite email per default
-- Il trait supporta il tracciamento di tentativi di login falliti e riusciti 

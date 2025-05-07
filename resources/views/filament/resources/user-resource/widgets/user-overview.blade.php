@@ -1,5 +1,6 @@
 <x-filament::widget>
     <x-filament::card>
+<<<<<<< HEAD
         {{-- Widget content --}}
         @php
 <<<<<<< HEAD
@@ -28,5 +29,8 @@
         {{ $record-> }}
 >>>>>>> origin/dev
 >>>>>>> 867b3bd (.)
+=======
+        {{ $record->name ?? 'Utente' }}
+>>>>>>> 5a344fb (.)
     </x-filament::card>
 </x-filament::widget>
