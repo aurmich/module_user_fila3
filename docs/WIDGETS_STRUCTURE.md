@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Struttura Widget Filament nel Modulo User
 
 ## Introduzione
@@ -172,6 +173,8 @@ class LoginWidget extends XotBaseWidget
     }
 }
 ```
+=======
+>>>>>>> 1db86dc (.)
 # Regole di Struttura per i Widget Filament nel Modulo User
 
 ## Percorso Obbligatorio

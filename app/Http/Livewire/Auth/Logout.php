@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Http\Livewire\Auth;
 
 use Livewire\Component;
+<<<<<<< HEAD
 use Livewire\WithRateLimiting;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
@@ -78,6 +79,21 @@ class Logout extends Component
      * @return \Illuminate\Contracts\View\View
      */
     public function render(): View
+=======
+use Illuminate\Support\Facades\Auth;
+
+class Logout extends Component
+{
+    public function mount(): void
+    {
+        Auth::logout();
+        session()->invalidate();
+        session()->regenerateToken();
+        redirect()->route('login');
+    }
+
+    public function render()
+>>>>>>> 1db86dc (.)
     {
         return view('user::livewire.auth.logout');
     }

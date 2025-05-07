@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AVVERTENZA: Modifiche ai ServiceProvider Base
 
 ## Introduzione
@@ -50,6 +51,8 @@ class UserServiceProvider extends XotBaseServiceProvider
         
         // ERRORE: Aggiungere path personalizzati per risolvere problemi specifici
         View::addNamespace('user-widgets', __DIR__.'/../resources/views/filament/widgets');
+=======
+>>>>>>> 1db86dc (.)
 # ⚠️ ATTENZIONE: Modifiche al ServiceProvider
 
 ## Regole Critiche per Estendere XotBaseServiceProvider
@@ -92,6 +95,7 @@ class UserServiceProvider extends XotBaseServiceProvider
 }
 ```
 
+<<<<<<< HEAD
 ### Approccio Corretto
 
 ```php
@@ -130,6 +134,8 @@ class LoginWidget extends XotBaseWidget
 Le modifiche ai ServiceProvider possono sembrare una soluzione rapida per problemi immediati, ma spesso introducono problemi più gravi a lungo termine. I problemi dovrebbero essere risolti al livello appropriato, rispettando l'architettura del sistema.
 
 **Ricorda**: È sempre meglio adattarsi all'architettura esistente piuttosto che forzare l'architettura ad adattarsi alle proprie esigenze immediate.
+=======
+>>>>>>> 1db86dc (.)
 ## Collegamenti
 - [XotBaseServiceProvider.md](/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/Xot/docs/providers/xotbaseserviceprovider.md)
 - [SERVICE-PROVIDER-BEST-PRACTICES.md](/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/Xot/docs/SERVICE-PROVIDER-BEST-PRACTICES.md)
