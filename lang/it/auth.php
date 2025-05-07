@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< HEAD
     // Messaggi generali di autenticazione
     'failed' => 'Credenziali non valide.',
     'password' => 'La password inserita non è corretta.',
@@ -11,6 +12,8 @@ return [
     'unauthorized' => 'Non hai i permessi necessari per questa operazione.',
 
     // Login
+=======
+>>>>>>> 867b3bd (.)
     'login-via' => 'Accedi con',
 
     'login-failed' => 'Login fallito, riprova.',
@@ -113,6 +116,7 @@ return [
         'forgot_password' => 'Password dimenticata?',
         'no_account' => 'Non hai un account?',
         'register' => 'Registrati',
+<<<<<<< HEAD
         'success' => 'Accesso effettuato con successo.',
         'failed' => 'Credenziali non valide.',
         'logout_success' => 'Logout effettuato con successo.',
@@ -133,6 +137,8 @@ return [
     ],
 
     // Registrazione
+=======
+>>>>>>> 867b3bd (.)
     ],
 
     'register' => [
@@ -148,6 +154,7 @@ return [
         'password_confirmation_placeholder' => '••••••••',
         'submit' => 'Registrati',
         'already_registered' => 'Hai già un account? Accedi',
+<<<<<<< HEAD
         'success' => 'Registrazione completata con successo.',
         'failed' => 'Impossibile completare la registrazione.',
     ],
@@ -176,6 +183,8 @@ return [
     // Reset Password
     'reset-password' => [
         'title' => 'Reimposta password',
+=======
+>>>>>>> 867b3bd (.)
     ],
 
     'forgot-password' => [
@@ -197,6 +206,7 @@ return [
         'password_confirmation' => 'Conferma password',
         'password_confirmation_placeholder' => '••••••••',
         'submit' => 'Reimposta password',
+<<<<<<< HEAD
         'success' => 'Password reimpostata con successo.',
         'failed' => 'Impossibile reimpostare la password.',
     ],
@@ -227,6 +237,8 @@ return [
         'account_blocked' => 'Account bloccato. Contatta l\'assistenza.',
         'too_many_attempts' => 'Troppi tentativi. Riprova più tardi.',
         'session_expired' => 'Sessione scaduta. Effettua nuovamente il login.',
+=======
+>>>>>>> 867b3bd (.)
     ],
 
     'passwords' => [
@@ -236,4 +248,11 @@ return [
         'token' => 'Il token di reset password non è valido.',
         'user' => 'Non riusciamo a trovare un utente con questo indirizzo email.',
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
 ];

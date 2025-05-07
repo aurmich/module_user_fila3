@@ -33,6 +33,7 @@ Il problema è che i tag PHPDoc facevano riferimento a una classe `Builder` nel 
  */
 ```
 
+<<<<<<< HEAD
 ### Versione HEAD
 
 Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` utilizzando il namespace completo `\Illuminate\Database\Eloquent\Builder`. 
@@ -50,3 +51,6 @@ Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` ut
 
 ---
 
+=======
+Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` utilizzando il namespace completo `\Illuminate\Database\Eloquent\Builder`. 
+>>>>>>> 867b3bd (.)

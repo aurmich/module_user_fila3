@@ -25,7 +25,17 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 use Laravel\Passport\HasApiTokens;
 use Modules\User\Database\Factories\UserFactory;
+<<<<<<< HEAD
 use Modules\User\Models\Traits\HasTeams;
+=======
+<<<<<<< HEAD
+use Modules\User\Models\Traits\HasAuthenticationLogTrait;
+use Modules\User\Models\Traits\HasTeams;
+use Modules\User\Models\Traits\HasTenants as HasTenantsRelation;
+=======
+use Modules\User\Models\Traits\HasTeams;
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Traits\RelationX;
@@ -123,10 +133,23 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     use HasRoles;
     use HasTeams;
     use HasUuids;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    use HasAuthenticationLogTrait;
+    use HasTenantsRelation;
+    use Notifiable;
+    use RelationX;
+=======
+>>>>>>> 867b3bd (.)
     use Notifiable;
     use RelationX;
     use Traits\HasAuthenticationLogTrait;
     use Traits\HasTenants;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
 
     public $incrementing = false;
 
@@ -213,6 +236,10 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         return $this->hasOne($profileClass);
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 867b3bd (.)
     /**
      * Verifica se l'utente ha il ruolo di super-admin.
      *
@@ -223,7 +250,12 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         return $this->hasRole('super-admin');
     }
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
     public function canAccessPanel(Panel $panel): bool
     {
         // $panel->default('admin');
@@ -307,7 +339,15 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
      *
      * @return MorphMany<Notification, static|$this>
      */
+<<<<<<< HEAD
     public function notifications(): MorphMany
+=======
+<<<<<<< HEAD
+    public function notifications(): MorphMany
+=======
+    public function notifications()
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
     {
         // @phpstan-ignore return.type
         return $this->morphMany(Notification::class, 'notifiable');
@@ -424,7 +464,14 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
      */
     /**
      * Get all role names associated with the user.
+<<<<<<< HEAD
      * 
+=======
+<<<<<<< HEAD
+     * 
+=======
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
      * @return array<int, string>
      */
     public function getRoleNames(): array
@@ -566,11 +613,20 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         return $this->belongsTo(Team::class, 'current_team_id');
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 867b3bd (.)
     public function tenants(): BelongsToMany
     {
         return $this->belongsToMany(Tenant::class, 'tenant_user');
     }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
     public function authentications(): MorphMany
     {
         return $this->morphMany(\Modules\User\Models\Authentication::class, 'authenticatable');
@@ -587,9 +643,19 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     {
         // Se è una stringa semplice, utilizziamo il metodo interno tramite relazione roles
         if (is_string($roles)) {
+<<<<<<< HEAD
             return once(function () use ($roles) {
                 return $this->roles()->where('name', $roles)->exists();
             });
+=======
+<<<<<<< HEAD
+            return once(function () use ($roles) {
+                return $this->roles()->where('name', $roles)->exists();
+            });
+=======
+            return $this->roles()->where('name', $roles)->exists();
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
         }
 
         // Per gli altri tipi, implementiamo una logica di base
@@ -635,4 +701,46 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         /** @var array<int, string> */
         return $permissions->pluck('name')->values()->toArray();
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    /**
+     * Get all of the teams that the user owns or belongs to.
+     */
+    public function teams(): BelongsToMany
+    {
+        return $this->belongsToManyX(Team::class);
+    }
+
+    /**
+     * Get the user's permissions for the given team.
+     */
+    public function teamPermissions(Team $team): array
+    {
+        if ($this->ownsTeam($team)) {
+            return ['*'];
+        }
+
+        return $team->getPermissionsFor($this);
+    }
+
+    /**
+     * Get the user's authentication logs.
+     */
+    public function authentications(): HasMany
+    {
+        return $this->hasMany(AuthenticationLog::class);
+    }
+
+    /**
+     * Get the user's socialite accounts.
+     */
+    public function socialiteUsers(): HasMany
+    {
+        return $this->hasMany(SocialiteUser::class);
+    }
+=======
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
 }

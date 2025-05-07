@@ -40,7 +40,15 @@
     "require": {
         "flowframe/laravel-trend": "*",
         "jenssegers/agent": "*",
+<<<<<<< HEAD
         "laravel/passport": "^12.4",
+=======
+<<<<<<< HEAD
+        "laravel/passport": "*",
+=======
+        "laravel/passport": "^12.4",
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
         "socialiteproviders/auth0": "*",
         "spatie/laravel-personal-data-export": "*"
     },

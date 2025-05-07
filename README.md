@@ -11,19 +11,25 @@ Manage users, roles, and permissions with lightning speed ⚡ through this Larav
 - **Create Super Admin in Seconds**: Instantly make any user a super admin with `php artisan user:super-admin`. 🛡️
 - **Dynamic Module Assignment**: Control user access to specific modules through `php artisan user:assign-module`. 🎯
 - **Complete Team Management**: Manage teams with simple commands like `php artisan team:create` and `php artisan team:assign-user`. 👥
+<<<<<<< HEAD
 ### Versione HEAD
 
 - **Permissions that Fit**: Set flexible roles and permissions to fit your app's unique needs! 🔑
 
 ### Versione Incoming
 
+=======
+>>>>>>> 867b3bd (.)
 - **Permissions that Fit**: Set flexible roles and permissions to fit your app’s unique needs! 🔑
 
 ---
 
+<<<<<<< HEAD
 
 ---
 
+=======
+>>>>>>> 867b3bd (.)
 ### Installation Guide 💻
 
 1. **Install the package via Composer:**
@@ -50,6 +56,7 @@ Manage users, roles, and permissions with lightning speed ⚡ through this Larav
 
 ### Supercharged Console Commands 🚀
 
+<<<<<<< HEAD
 ### Versione HEAD
 
 Leverage powerful artisan commands to boost your app's user management capabilities:
@@ -61,6 +68,10 @@ Leverage powerful artisan commands to boost your app’s user management capabil
 ---
 
 
+=======
+Leverage powerful artisan commands to boost your app’s user management capabilities:
+
+>>>>>>> 867b3bd (.)
 - **Create Super Admin:**
     ```bash
     php artisan user:super-admin
@@ -124,11 +135,15 @@ This package is open-sourced under the [MIT license](LICENSE).
 
 Give your Laravel app the **edge** it deserves with **Module User Fila3**. Try it now! 💥
 
+<<<<<<< HEAD
 ### Versione HEAD
 
 
 ### Versione Incoming
 
+=======
+<<<<<<< HEAD
+>>>>>>> 867b3bd (.)
 # 👤 User Module - Gestione Utenti Avanzata
 
 [![PHP Version](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net)
@@ -245,9 +260,14 @@ Questo progetto è distribuito sotto la licenza MIT. Vedi il file [LICENSE](LICE
 This project is distributed under the MIT license. See the [LICENSE](LICENSE) file for more details.
 
 Este proyecto está distribuido bajo la licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+<<<<<<< HEAD
 
 ---
 
+=======
+=======
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
 
 # Module users
 Gestione degli utenti, ruoli, permessi tramite l'utilizzo di filament.
@@ -303,6 +323,7 @@ php artisan user:assign-module
 L'account potrà accedere al modulo assegnato.
 
 ## [Gestione dei Team](docs/teams.md)
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -380,3 +401,5 @@ The module is open-sourced software licensed under the [MIT license](https://ope
 
 ---
 
+=======
+>>>>>>> 867b3bd (.)

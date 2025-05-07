@@ -11,7 +11,11 @@ return [
     */
 
     'name' => 'One',
+<<<<<<< HEAD
     'description' => 'Tema predefinito per il progetto',
+=======
+    'description' => 'Tema predefinito per SaluteOra',
+>>>>>>> 867b3bd (.)
     'version' => '1.0.0',
 
     /*
@@ -55,7 +59,11 @@ return [
     */
 
     'cms' => [
+<<<<<<< HEAD
         'content_path' => 'laravel/config/local/<nome progetto>/database/content/pages',
+=======
+        'content_path' => 'laravel/config/local/saluteora/database/content/pages',
+>>>>>>> 867b3bd (.)
     ],
 
     /*

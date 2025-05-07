@@ -95,7 +95,15 @@ class Permission extends SpatiePermission
      */
     public function roles(): BelongsToMany
     {
+<<<<<<< HEAD
         return $this->belongsToManyX(Role::class);
+=======
+<<<<<<< HEAD
+        return $this->belongsToMany(Role::class, config('permission.table_names.role_has_permissions'));
+=======
+        return $this->belongsToManyX(Role::class);
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
     }
 
     /**
@@ -105,6 +113,14 @@ class Permission extends SpatiePermission
     {
         $userClass = XotData::make()->getUserClass();
 
+<<<<<<< HEAD
         return $this->belongsToManyX($userClass);
+=======
+<<<<<<< HEAD
+        return $this->belongsToMany($userClass, config('permission.table_names.model_has_permissions'));
+=======
+        return $this->belongsToManyX($userClass);
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
     }
 }

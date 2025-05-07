@@ -72,7 +72,11 @@ render(function (View $view) {
                 Archivio Pagine
             </h1>
             <p class="text-lg text-gray-600 mb-6">
+<<<<<<< HEAD
                 Esplora tutte le pagine informative disponibili in il progetto
+=======
+                Esplora tutte le pagine informative disponibili in SaluteOra
+>>>>>>> 867b3bd (.)
             </p>
 
             <div class="flex flex-col md:flex-row justify-between gap-4 mb-8">

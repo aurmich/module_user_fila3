@@ -15,9 +15,18 @@ return [
         'icon' => 'user-main',
     ],
     'fields' => [
+<<<<<<< HEAD
         'id' => [
             'label' => 'ID',
         ],
+=======
+<<<<<<< HEAD
+        'id' => [
+            'label' => 'ID',
+        ],
+=======
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
         'name' => [
             'label' => 'Nome',
             'placeholder' => 'Inserisci il nome',
@@ -82,6 +91,10 @@ return [
         'unverified' => [
             'label' => 'Non Verificato',
         ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 867b3bd (.)
         'applyFilters' => [
             'label' => 'applyFilters',
         ],
@@ -118,6 +131,11 @@ return [
         'email_verified_at' => [
             'label' => 'Email Verificata il',
         ],
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
     ],
     'actions' => [
         'create' => 'Crea Utente',
@@ -154,7 +172,16 @@ return [
         'impersonate_users' => 'Impersona utenti',
         'manage_roles' => 'Gestisci ruoli',
     ],
+<<<<<<< HEAD
     'model' => [
         'label' => 'Utente',
     ],
+=======
+<<<<<<< HEAD
+    'model' => [
+        'label' => 'Utente',
+    ],
+=======
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
 ];

@@ -15,6 +15,7 @@ return array (
     array (
       'label' => 'Privacy',
     ),
+<<<<<<< HEAD
     'Contatti' => 
     array (
       'label' => 'Contatti',
@@ -55,6 +56,8 @@ return array (
     array (
       'label' => 'professional',
     ),
+=======
+>>>>>>> 867b3bd (.)
   ),
   'fields' => 
   array (
@@ -86,6 +89,7 @@ return array (
     array (
       'label' => 'newsletter',
     ),
+<<<<<<< HEAD
     'notes' => 
     array (
       'label' => 'notes',
@@ -234,5 +238,7 @@ return array (
     array (
       'label' => 'full_name',
     ),
+=======
+>>>>>>> 867b3bd (.)
   ),
 );

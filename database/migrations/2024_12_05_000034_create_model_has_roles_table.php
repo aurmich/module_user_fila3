@@ -36,11 +36,25 @@ return new class extends XotBaseMigration
                 if (! $this->hasColumn('team_id')) {
                     $table->foreignIdFor($team_class, 'team_id')->nullable();
                 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                if ('uuid' === $this->getColumnType('model_id')) {
+                    $table->string('model_id', 36)->index()->change();
+                }
+                if ('uuid' === $this->getColumnType('role_id')) {
+                    $table->string('role_id', 36)->index()->change();
+=======
+>>>>>>> 867b3bd (.)
                 if ($this->getColumnType('model_id') === 'uuid') {
                     $table->string('model_id', 36)->index()->change();
                 }
                 if ($this->getColumnType('role_id') === 'uuid') {
                     $table->integer('role_id')->index()->change();
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
                 }
                 // $this->updateUser($table);
                 $this->updateTimestamps($table);

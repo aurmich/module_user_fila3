@@ -76,7 +76,23 @@ class Role extends SpatieRole
     /** @var string */
     protected $keyType = 'string';
 
+<<<<<<< HEAD
     // protected $fillable=['id','']
+=======
+<<<<<<< HEAD
+    /** @var array<string, string> */
+    protected $casts = [
+        'id' => 'string',
+        'uuid' => 'string',
+        'name' => 'string',
+        'guard_name' => 'string',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+    ];
+=======
+    // protected $fillable=['id','']
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
 
     public function getTable(): string
     {
@@ -85,6 +101,13 @@ class Role extends SpatieRole
         return $table;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * Get the team that owns the role.
+=======
+>>>>>>> 867b3bd (.)
     /** @return array<string, string> */
     protected function casts(): array
     {
@@ -100,6 +123,10 @@ class Role extends SpatieRole
 
     /**
      * Get all of the teams the user belongs to.
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
      */
     public function team(): BelongsTo
     {
@@ -115,6 +142,30 @@ class Role extends SpatieRole
      */
     public function permissions(): BelongsToMany
     {
+<<<<<<< HEAD
         return $this->belongsToManyX(Permission::class);
+=======
+<<<<<<< HEAD
+        return $this->belongsToMany(
+            Permission::class,
+            config('permission.table_names.role_has_permissions')
+        );
+    }
+
+    /**
+     * A role belongs to some users of the model associated with its guard.
+     */
+    public function users(): BelongsToMany
+    {
+        $userClass = XotData::make()->getUserClass();
+
+        return $this->belongsToMany(
+            $userClass,
+            config('permission.table_names.model_has_roles')
+        );
+=======
+        return $this->belongsToManyX(Permission::class);
+>>>>>>> origin/dev
+>>>>>>> 867b3bd (.)
     }
 }

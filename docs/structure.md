@@ -509,7 +509,11 @@ resources/views/components/ui
 resources/views/components/ui/app
 resources/views/components/ui/marketing
 resources/views/config
+<<<<<<< HEAD
 docs
+=======
+resources/views/docs
+>>>>>>> 867b3bd (.)
 resources/views/emails
 resources/views/filament
 resources/views/filament/auth
@@ -611,6 +615,7 @@ tests_old
 - [Analisi strutturale complessiva](/docs/phpstan/modules_structure_analysis.md)
 - [Report PHPStan](/docs/phpstan/)
 
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
@@ -630,3 +635,5 @@ tests_old
 * [structure.md](../../../Cms/docs/themes/structure.md)
 * [structure.md](../../../Cms/docs/components/structure.md)
 
+=======
+>>>>>>> 867b3bd (.)
