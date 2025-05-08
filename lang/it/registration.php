@@ -55,6 +55,26 @@ return array (
     array (
       'label' => 'professional',
     ),
+    'moderation' => 
+    array (
+      'label' => 'moderation',
+    ),
+    'privacy_step' => 
+    array (
+      'label' => 'privacy_step',
+    ),
+    'personal_data_step' => 
+    array (
+      'label' => 'personal_data_step',
+    ),
+    'documents_step' => 
+    array (
+      'label' => 'documents_step',
+    ),
+    'pre_visit_step' => 
+    array (
+      'label' => 'pre_visit_step',
+    ),
   ),
   'fields' => 
   array (
@@ -68,7 +88,7 @@ return array (
     ),
     'email' => 
     array (
-      'label' => 'email',
+      'label' => 'Email',
     ),
     'password' => 
     array (
@@ -120,11 +140,11 @@ return array (
     ),
     'city' => 
     array (
-      'label' => 'city',
+      'label' => 'Città',
     ),
     'phone' => 
     array (
-      'label' => 'phone',
+      'label' => 'Telefono',
     ),
     'fiscal_code' => 
     array (
@@ -136,7 +156,7 @@ return array (
     ),
     'last_name' => 
     array (
-      'label' => 'last_name',
+      'label' => 'Cognome',
     ),
     'birth_date' => 
     array (
@@ -144,11 +164,11 @@ return array (
     ),
     'address' => 
     array (
-      'label' => 'address',
+      'label' => 'Indirizzo',
     ),
     'first_name' => 
     array (
-      'label' => 'first_name',
+      'label' => 'Nome',
     ),
     'health_card' => 
     array (
@@ -233,6 +253,22 @@ return array (
     'full_name' => 
     array (
       'label' => 'full_name',
+    ),
+    'dental_problems' => 
+    array (
+      'label' => 'dental_problems',
+    ),
+    'last_dental_visit' => 
+    array (
+      'label' => 'last_dental_visit',
+    ),
+    'identity_document' => 
+    array (
+      'label' => 'identity_document',
+    ),
+    'moderation_notes' => 
+    array (
+      'label' => 'moderation_notes',
     ),
   ),
 );

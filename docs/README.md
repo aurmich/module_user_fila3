@@ -25,11 +25,17 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e i profili utente de
 - [Two Factor Authentication](./two_factor.txt) - Autenticazione a due fattori
 - [Custom Login](./custom_login.md) - Implementazione login personalizzata
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - [Volt Folio Logout](./VOLT_FOLIO_LOGOUT.md) - Implementazione logout con Volt e Folio
 - [Volt Folio Auth Implementation](./VOLT_FOLIO_AUTH_IMPLEMENTATION.md) - Implementazione completa autenticazione con Volt e Folio
 - [Analisi Logout Blade](./LOGOUT_BLADE_ANALYSIS.md) - Analisi e miglioramenti del file logout.blade.php
 >>>>>>> 04d87b1 (.)
+=======
+- [Volt Folio Logout](./VOLT_FOLIO_LOGOUT.md) - Implementazione logout con Volt e Folio
+- [Volt Folio Auth Implementation](./VOLT_FOLIO_AUTH_IMPLEMENTATION.md) - Implementazione completa autenticazione con Volt e Folio
+- [Analisi Logout Blade](./LOGOUT_BLADE_ANALYSIS.md) - Analisi e miglioramenti del file logout.blade.php
+>>>>>>> 93c6c85 (.)
 
 ### Modelli e Profili
 - [User Profile Models](./user_profile_models.md) - Modelli profilo utente

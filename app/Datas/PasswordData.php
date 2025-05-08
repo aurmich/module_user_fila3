@@ -16,6 +16,8 @@ use Illuminate\Support\HtmlString;
 use Illuminate\Validation\Rules\Password;
 use Modules\Tenant\Services\TenantService;
 use Spatie\LaravelData\Data;
+use Filament\Forms\Components\TextInput as FilamentTextInput;
+use Filament\Forms\Components\TextInput as FormsTextInput;
 
 /**
  * Classe per la gestione dei dati relativi alle password.
@@ -182,6 +184,22 @@ class PasswordData extends Data
         return [
             $this->getPasswordFormComponent($field_name),
             $this->getPasswordConfirmationFormComponent(),
+        ];
+    }
+
+    public static function getFormSchema(): array
+    {
+        return [
+            'password' => FormsTextInput::make('password')
+                ->password()
+                ->required()
+                ->minLength(8)
+                ->maxLength(255),
+            'password_confirmation' => FormsTextInput::make('password_confirmation')
+                ->password()
+                ->required()
+                ->minLength(8)
+                ->maxLength(255),
         ];
     }
 }

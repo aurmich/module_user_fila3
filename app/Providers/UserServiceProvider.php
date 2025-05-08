@@ -24,6 +24,8 @@ use Modules\User\Models\OauthRefreshToken;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 use SocialiteProviders\Manager\ServiceProvider as SocialiteServiceProvider;
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\ServiceProvider;
 
 class UserServiceProvider extends XotBaseServiceProvider
 {
@@ -39,6 +41,11 @@ class UserServiceProvider extends XotBaseServiceProvider
         $this->registerPasswordRules();
         $this->registerPulse();
         $this->registerMailsNotification();
+    }
+
+    public function register(): void
+    {
+        parent::register();
     }
 
     public function registerMailsNotification(): void
@@ -106,11 +113,6 @@ class UserServiceProvider extends XotBaseServiceProvider
 
     private function registerPassport(): void
     {
-        
-        Passport::useTokenModel(OauthAccessToken::class);
-        Passport::useRefreshTokenModel(OauthRefreshToken::class);
-        Passport::useAuthCodeModel(OauthAuthCode::class);
-        Passport::useClientModel(OauthClient::class);
         if (method_exists(Passport::class, 'routes')) {
             Passport::routes();
         }

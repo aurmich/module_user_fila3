@@ -96,27 +96,46 @@ return [
     'login' => [
         'title' => 'Accedi al tuo account',
         'subtitle' => 'Inserisci le tue credenziali per accedere',
-        'email' => 'Indirizzo email',
-        'email_placeholder' => 'esempio@email.com',
-        'password' => 'Password',
-        'password_placeholder' => '••••••••',
-        'remember' => 'Ricordami',
+        'email' => [
+            'label' => 'Email',
+            'placeholder' => 'Inserisci la tua email'
+        ],
+        'password' => [
+            'label' => 'Password',
+            'placeholder' => 'Inserisci la tua password'
+        ],
+        'remember' => [
+            'label' => 'Ricordami'
+        ],
         'submit' => 'Accedi',
         'forgot_password' => 'Password dimenticata?',
         'no_account' => 'Non hai un account?',
         'register' => 'Registrati',
+        'failed' => 'Credenziali non valide'
     ],
 
     'register' => [
         'title' => 'Crea un nuovo account',
         'subtitle' => 'Inserisci i tuoi dati per registrarti',
-        'name' => 'Nome completo',
+        'name' => [
+            'label' => 'Nome',
+            'placeholder' => 'Inserisci il tuo nome'
+        ],
         'name_placeholder' => 'Mario Rossi',
-        'email' => 'Indirizzo email',
+        'email' => [
+            'label' => 'Email',
+            'placeholder' => 'Inserisci la tua email'
+        ],
         'email_placeholder' => 'esempio@email.com',
-        'password' => 'Password',
+        'password' => [
+            'label' => 'Password',
+            'placeholder' => 'Inserisci la tua password'
+        ],
         'password_placeholder' => '••••••••',
-        'password_confirmation' => 'Conferma password',
+        'password_confirmation' => [
+            'label' => 'Conferma Password',
+            'placeholder' => 'Conferma la tua password'
+        ],
         'password_confirmation_placeholder' => '••••••••',
         'submit' => 'Registrati',
         'already_registered' => 'Hai già un account? Accedi',
@@ -125,7 +144,10 @@ return [
     'forgot-password' => [
         'title' => 'Recupera la password',
         'subtitle' => 'Inserisci la tua email per ricevere il link di reset',
-        'email' => 'Indirizzo email',
+        'email' => [
+            'label' => 'Email',
+            'placeholder' => 'Inserisci la tua email'
+        ],
         'email_placeholder' => 'esempio@email.com',
         'submit' => 'Invia link di reset',
         'back_to_login' => 'Torna al login',
@@ -134,11 +156,20 @@ return [
     'reset-password' => [
         'title' => 'Reimposta la password',
         'subtitle' => 'Inserisci la nuova password',
-        'email' => 'Indirizzo email',
+        'email' => [
+            'label' => 'Email',
+            'placeholder' => 'Inserisci la tua email'
+        ],
         'email_placeholder' => 'esempio@email.com',
-        'password' => 'Nuova password',
+        'password' => [
+            'label' => 'Nuova Password',
+            'placeholder' => 'Inserisci la nuova password'
+        ],
         'password_placeholder' => '••••••••',
-        'password_confirmation' => 'Conferma password',
+        'password_confirmation' => [
+            'label' => 'Conferma Password',
+            'placeholder' => 'Conferma la nuova password'
+        ],
         'password_confirmation_placeholder' => '••••••••',
         'submit' => 'Reimposta password',
     ],

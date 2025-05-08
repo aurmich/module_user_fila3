@@ -10,6 +10,7 @@ use Filament\Forms\Form;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
+use Filament\Forms;
 
 class ResetPasswordWidget extends BaseAuthWidget
 {
@@ -22,27 +23,21 @@ class ResetPasswordWidget extends BaseAuthWidget
                 Section::make()
                     ->schema([
                         TextInput::make('email')
-                            ->label(__('user::auth.reset-password.email'))
                             ->email()
                             ->required()
-                            ->autocomplete('email')
-                            ->placeholder(__('user::auth.reset-password.email_placeholder')),
+                            ->autocomplete('email'),
 
                         TextInput::make('password')
-                            ->label(__('user::auth.reset-password.password'))
                             ->password()
                             ->required()
                             ->minLength(8)
                             ->same('password_confirmation')
-                            ->autocomplete('new-password')
-                            ->placeholder(__('user::auth.reset-password.password_placeholder')),
+                            ->autocomplete('new-password'),
 
                         TextInput::make('password_confirmation')
-                            ->label(__('user::auth.reset-password.password_confirmation'))
                             ->password()
                             ->required()
-                            ->autocomplete('new-password')
-                            ->placeholder(__('user::auth.reset-password.password_confirmation_placeholder')),
+                            ->autocomplete('new-password'),
                     ])
                     ->columns(1),
             ])
@@ -74,5 +69,26 @@ class ResetPasswordWidget extends BaseAuthWidget
         } else {
             $this->addError('email', __($status));
         }
+    }
+
+    protected function getFormSchema(): array
+    {
+        return [
+            Forms\Components\TextInput::make('email')
+                ->email()
+                ->required()
+                ->maxLength(255),
+
+            Forms\Components\TextInput::make('password')
+                ->password()
+                ->required()
+                ->maxLength(255),
+
+            Forms\Components\TextInput::make('password_confirmation')
+                ->password()
+                ->required()
+                ->maxLength(255)
+                ->same('password'),
+        ];
     }
 }

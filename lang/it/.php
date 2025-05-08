@@ -1,4 +1,6 @@
-<?php return array (
+<?php
+
+return array (
   'fields' => 
   array (
     'startDate' => 
@@ -8,6 +10,8 @@
     'endDate' => 
     array (
       'label' => 'endDate',
+      'description' => 'endDate',
+      'helper_text' => 'endDate',
     ),
   ),
-);
+);

@@ -19,6 +19,7 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 class RegistrationWidget extends XotBaseWidget
 {
+    public ?array $data = [];
     protected int | string | array $columnSpan = 'full';
     public string $type;
     public string $resource;
@@ -27,7 +28,8 @@ class RegistrationWidget extends XotBaseWidget
     public function mount(string $type): void
     {
         $this->type = $type;
-        $this->resource=XotData::make()->getUserTypeResourceClass($type);
+        $this->resource = XotData::make()->getUserTypeResourceClass($type);
+        $this->form->fill();
     }
 
 

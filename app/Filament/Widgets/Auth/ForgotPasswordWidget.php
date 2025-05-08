@@ -8,6 +8,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Illuminate\Support\Facades\Password;
+use Filament\Forms\Components\TextInput as FormsTextInput;
 
 class ForgotPasswordWidget extends BaseAuthWidget
 {
@@ -20,11 +21,9 @@ class ForgotPasswordWidget extends BaseAuthWidget
                 Section::make()
                     ->schema([
                         TextInput::make('email')
-                            ->label(__('user::auth.forgot-password.email'))
                             ->email()
                             ->required()
-                            ->autocomplete('email')
-                            ->placeholder(__('user::auth.forgot-password.email_placeholder')),
+                            ->maxLength(255),
                     ])
                     ->columns(1),
             ])

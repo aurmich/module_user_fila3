@@ -2,18 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Modules\User\App\Http\Livewire\Auth;
+namespace Modules\User\Http\Livewire\Auth;
 
 use Livewire\Component;
 
-class Logout extends Component
+class AuthLogout extends Component
 {
     public function mount(): void
     {
         auth()->logout();
-        session()->invalidate();
-        session()->regenerateToken();
-        redirect()->route('home')->send();
     }
 
     public function render()

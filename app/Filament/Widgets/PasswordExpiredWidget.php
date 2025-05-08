@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Widgets;
 
+use Filament\Forms;
+use Filament\Forms\Form;
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Forms\ComponentContainer;
@@ -11,7 +13,7 @@ use Filament\Forms\Components\Component;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
-use Filament\Forms\Form;
+use Filament\Forms\Form as FilamentForm;
 use Filament\Notifications\Notification;
 use Filament\Pages\Concerns\InteractsWithFormActions;
 use Filament\Widgets\Widget;
@@ -27,11 +29,13 @@ use Modules\User\Rules\CheckOtpExpiredRule;
 use Modules\Xot\Filament\Traits\TransTrait;
 use Webmozart\Assert\Assert;
 use Filament\Facades\Filament;
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
+use Illuminate\Auth\Events\PasswordReset as PasswordResetResponseEvent;
 
 /**
  * @property ComponentContainer $form
  */
-class PasswordExpiredWidget extends Widget implements HasForms
+class PasswordExpiredWidget extends XotBaseWidget implements HasForms
 {
     use InteractsWithForms;
 
@@ -44,7 +48,7 @@ class PasswordExpiredWidget extends Widget implements HasForms
 
     public ?string $passwordConfirmation = '';
 
-    public array $data = [];
+    public ?array $data = [];
 
     /**
      * @var view-string
@@ -53,13 +57,7 @@ class PasswordExpiredWidget extends Widget implements HasForms
 
     protected static bool $shouldRegisterNavigation = false;
 
-    public function form(Form $form): Form
-    {
-        return $form
-            ->schema($this->getFormSchema())
-            ->columns(1)
-            ->statePath('data');
-    }
+    
 
     /**
      * @return array<Component>
@@ -69,10 +67,6 @@ class PasswordExpiredWidget extends Widget implements HasForms
         return [
             $this->getCurrentPasswordFormComponent(),
             ...PasswordData::make()->getPasswordFormComponents('password'),
-            /*
-            $this->getPasswordFormComponent(),
-            $this->getPasswordConfirmationFormComponent(),
-            */
         ];
     }
 
@@ -89,94 +83,18 @@ class PasswordExpiredWidget extends Widget implements HasForms
 
     public function resetPassword(): ?PasswordResetResponse
     {
-        $data = $this->form->getState();
-        Assert::string($current_password = Arr::get($data, 'current_password'));
-        Assert::string($password = Arr::get($data, 'password'));
-        $user = Auth::user();
-        if ($user === null) {
+        $this->validate();
+
+        if (! Hash::check($this->data['current_password'], auth()->user()->password)) {
+            $this->addError('current_password', __('user::auth.password_current_incorrect'));
             return null;
         }
 
-        // check if current password is correct
-        if ($user->password === null || ! Hash::check($current_password, $user->password)) {
-            Notification::make()
-                ->title(__('user::otp.notifications.wrong_password.title'))
-                ->body(__('user::otp.notifications.wrong_password.body'))
-                ->danger()
-                ->send();
+        $user = auth()->user();
+        $user->password = Hash::make($this->data['password']);
+        $user->save();
 
-            return null;
-        }
-
-        // check if new password is different from the current password
-        if ($user->password !== null && Hash::check($password, $user->password)) {
-            Notification::make()
-                ->title(__('user::otp.notifications.same_password.title'))
-                ->body(__('user::otp.notifications.same_password.body'))
-                ->danger()
-                ->send();
-
-            return null;
-        }
-
-        // check if both required columns exist in the database
-        if (! Schema::hasColumn('users', 'password_expires_at')) {
-            Notification::make()
-                ->title(__('user::otp.notifications.column_not_found.title'))
-                ->body(__('user::otp.notifications.column_not_found.body', [
-                    'column_name' => 'password_expires_at',
-                    'password_column_name' => 'password',
-                    'table_name' => 'users',
-                ]))
-                ->danger()
-                ->send();
-
-            return null;
-        }
-
-        $pwd_data = PasswordData::make();
-        // get OTP expiration minutes from PasswordData
-        $otpExpirationMinutes = $pwd_data->otp_expiration_minutes;
-
-        // Check if OTP is expired using updated_at
-        if ($user->updated_at && now()->greaterThan($user->updated_at->addMinutes($otpExpirationMinutes))) {
-            Notification::make()
-                ->title(__('user::otp.notifications.otp_expired.title'))
-                ->body(__('user::otp.notifications.otp_expired.body'))
-                ->danger()
-                ->send();
-
-            return null;
-        }
-
-        // get password expiry date and time
-        $passwordExpiryDateTime = now()->addDays($pwd_data->expires_in);
-
-        // Verificare che l'utente esistante e che sia un modello Eloquent
-        if (!($user instanceof \Illuminate\Database\Eloquent\Model)) {
-            throw new \InvalidArgumentException('L\'utente deve essere un modello Eloquent con il metodo update');
-        }
-
-        // set password expiry date and time
-        $user->update([
-            'password_expires_at' => $passwordExpiryDateTime,
-            'is_otp' => false,
-            'password' => Hash::make($password),
-        ]);
-
-        // Verificare che l'utente implementi l'interfaccia UserContract prima di passarlo all'evento
-        if (!$user instanceof \Modules\Xot\Contracts\UserContract) {
-            throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia UserContract');
-        }
-
-        event(new NewPasswordSet($user));
-
-        Notification::make()
-            ->title(__('user::otp.notifications.password_reset.success'))
-            ->success()
-            ->send();
-
-        return new PasswordResetResponse();
+        return new PasswordResetResponse($user);
     }
 
     protected function getCurrentPasswordFormComponent(): Component

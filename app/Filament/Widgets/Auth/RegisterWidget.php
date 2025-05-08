@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\User\App\Filament\Widgets\Auth;
+namespace Modules\User\Filament\Widgets\Auth;
 
 use Filament\Widgets\Widget;
 use Filament\Forms\Components\TextInput;
@@ -10,6 +10,7 @@ use Modules\User\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
 use Illuminate\Support\Facades\Auth;
+use Filament\Forms\Components\TextInput as FormsTextInput;
 
 class RegisterWidget extends Widget
 {
@@ -29,35 +30,27 @@ class RegisterWidget extends Widget
                 Section::make()
                     ->schema([
                         TextInput::make('name')
-                            ->label(__('user::auth.register.name'))
                             ->required()
                             ->maxLength(255)
-                            ->autocomplete('name')
-                            ->placeholder(__('user::auth.register.name_placeholder')),
+                            ->autocomplete('name'),
 
                         TextInput::make('email')
-                            ->label(__('user::auth.register.email'))
                             ->email()
                             ->required()
                             ->unique(table: User::class)
-                            ->autocomplete('email')
-                            ->placeholder(__('user::auth.register.email_placeholder')),
+                            ->autocomplete('email'),
 
                         TextInput::make('password')
-                            ->label(__('user::auth.register.password'))
                             ->password()
                             ->required()
                             ->rule(Password::default())
-                            ->autocomplete('new-password')
-                            ->placeholder(__('user::auth.register.password_placeholder')),
+                            ->autocomplete('new-password'),
 
                         TextInput::make('password_confirmation')
-                            ->label(__('user::auth.register.password_confirmation'))
                             ->password()
                             ->required()
                             ->same('password')
-                            ->autocomplete('new-password')
-                            ->placeholder(__('user::auth.register.password_confirmation_placeholder')),
+                            ->autocomplete('new-password'),
                     ])
                     ->columns(1),
             ])

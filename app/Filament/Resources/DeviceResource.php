@@ -14,6 +14,7 @@ use Modules\User\Filament\Resources\DeviceResource\RelationManagers\UsersRelatio
 use Modules\User\Models\Device;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+use Filament\Forms\Components\Forms;
 
 class DeviceResource extends XotBaseResource
 {
@@ -22,27 +23,17 @@ class DeviceResource extends XotBaseResource
     public static function getFormSchema(): array
     {
         return [
-            'uuid' => TextInput::make('uuid')
-                ->label('UUID')
+            \Filament\Forms\Components\TextInput::make('uuid')
+                ->required()
                 ->maxLength(255),
-            'mobile_id' => TextInput::make('mobile_id')
-                ->label('Mobile ID')
+            \Filament\Forms\Components\TextInput::make('mobile_id')
+                ->required()
                 ->maxLength(255),
-            'languages' => TagsInput::make('languages')
-                ->label('Languages')
-                ->suggestions([
-                    'it' => 'Italiano',
-                    'en' => 'English',
-                    'es' => 'Español',
-                    'fr' => 'Français',
-                    'de' => 'Deutsch',
-                ])
-                ->placeholder('Add a language')
-                ->helperText('Select or type languages codes (e.g. it, en, es)')
-                ->separator(',')
-                ->reorderable(),
-            'device' => TextInput::make('device')
-                ->label('Device Name')
+            \Filament\Forms\Components\TextInput::make('languages')
+                ->required()
+                ->maxLength(255),
+            \Filament\Forms\Components\TextInput::make('device_name')
+                ->required()
                 ->maxLength(255),
             'platform' => TextInput::make('platform')
                 ->maxLength(255),
