@@ -19,14 +19,5 @@ if (XotData::make()->register_pub_theme) {
     Route::get('/login', static fn () => redirect('/admin/login'))->name('login');
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-Route::post('/logout', LogoutController::class)->name('logout');
-
->>>>>>> 04d87b1 (.)
-=======
 // Route::post('/logout', LogoutController::class)->name('logout');
-
->>>>>>> 93c6c85 (.)
 //Route::get('/upgrade', 'UpgradeController');

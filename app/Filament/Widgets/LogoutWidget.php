@@ -108,11 +108,7 @@ class LogoutWidget extends XotBaseWidget
     protected function getViewData(): array
     {
         return [
-<<<<<<< HEAD
             'title' => __('Logout'),
-=======
-            'title' => __('auth.logout'),
->>>>>>> 93c6c85 (.)
             'description' => __('Sei sicuro di voler uscire?'),
         ];
     }

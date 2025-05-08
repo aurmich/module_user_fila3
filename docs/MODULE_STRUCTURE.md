@@ -50,13 +50,8 @@ laravel/Modules/ModuleName/
 
 1. **Namespace PSR-4**
    ```php
-<<<<<<< HEAD
    namespace Modules\ModuleName\Actions;      // CORRETTO
    namespace Modules\ModuleName\App\Actions;  // ERRATO
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 93c6c85 (.)
    // Per Actions
    namespace Modules\ModuleName\Actions;      // CORRETTO
    namespace Modules\ModuleName\App\Actions;  // ERRATO
@@ -64,10 +59,6 @@ laravel/Modules/ModuleName/
    // Per Livewire Components
    namespace Modules\ModuleName\Http\Livewire;  // CORRETTO
    namespace Modules\ModuleName\App\Http\Livewire;  // ERRATO
-<<<<<<< HEAD
->>>>>>> 04d87b1 (.)
-=======
->>>>>>> 93c6c85 (.)
    ```
 
 2. **Case Sensitivity**
@@ -115,11 +106,6 @@ laravel/Modules/User/resources/views/
 laravel/Modules/User/Resources/views/
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 93c6c85 (.)
 ### Livewire Components
 ```php
 // CORRETTO
@@ -129,10 +115,6 @@ laravel/Modules/User/app/Http/Livewire/Profile/DeleteAccount.php
 laravel/Modules/User/Http/Livewire/Profile/DeleteAccount.php
 ```
 
-<<<<<<< HEAD
->>>>>>> 04d87b1 (.)
-=======
->>>>>>> 93c6c85 (.)
 ### Translations
 ```php
 // CORRETTO
