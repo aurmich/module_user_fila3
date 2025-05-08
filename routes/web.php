@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\Route;
 use Modules\Xot\Datas\XotData;
+use Modules\User\Http\Controllers\Auth\LogoutController;
 
 require 'socialite.php';
 
@@ -18,4 +19,9 @@ if (XotData::make()->register_pub_theme) {
     Route::get('/login', static fn () => redirect('/admin/login'))->name('login');
 }
 
+<<<<<<< HEAD
+=======
+Route::post('/logout', LogoutController::class)->name('logout');
+
+>>>>>>> 04d87b1 (.)
 //Route::get('/upgrade', 'UpgradeController');

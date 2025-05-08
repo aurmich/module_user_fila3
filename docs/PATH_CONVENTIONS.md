@@ -35,6 +35,27 @@ Modules/User/app/Http/Controllers/UserController.php
 Modules/User/Http/Controllers/UserController.php
 ```
 
+<<<<<<< HEAD
+=======
+### Livewire Components
+```bash
+# ✅ CORRETTO
+Modules/User/app/Http/Livewire/Profile/DeleteAccount.php
+
+# ❌ ERRATO
+Modules/User/Http/Livewire/Profile/DeleteAccount.php
+```
+
+### Livewire Components
+```bash
+# ✅ CORRETTO
+Modules/User/app/Http/Livewire/Profile/DeleteAccount.php
+
+# ❌ ERRATO
+Modules/User/Http/Livewire/Profile/DeleteAccount.php
+```
+
+>>>>>>> 04d87b1 (.)
 ## Struttura Standard delle Cartelle
 
 ```bash
@@ -61,12 +82,27 @@ Modules/User/
 
 2. **Namespace Mapping**
    ```php
+<<<<<<< HEAD
    // ✅ CORRETTO
    namespace Modules\User\Actions;
    
    // ❌ ERRATO
    namespace Modules\User\App\Actions;
    ```
+=======
+   // ✅ CORRETTO per classi in app/Actions/
+   namespace Modules\User\Actions;
+   
+   // ✅ CORRETTO per classi in app/Http/Livewire/
+   namespace Modules\User\Http\Livewire;
+   
+   // ❌ ERRATO
+   namespace Modules\User\App\Actions;
+   namespace Modules\User\App\Http\Livewire;
+   ```
+   
+   Il namespace deve riflettere il percorso relativo alla cartella `app/`, che è mappata al namespace base `Modules\User\` nel composer.json.
+>>>>>>> 04d87b1 (.)
 
 3. **Codice PHP**
    - Tutto il codice PHP va sotto la cartella `app/`
@@ -158,6 +194,7 @@ laravel/Modules/User/
 ### Correzione Namespace
 
 ```php
+<<<<<<< HEAD
 // Prima
 namespace Modules\User\Actions;
 namespace Modules\User\Http\Controllers;
@@ -165,6 +202,15 @@ namespace Modules\User\Http\Controllers;
 // Dopo
 namespace Modules\User\App\Actions;
 namespace Modules\User\App\Http\Controllers;
+=======
+// Prima (ERRATO)
+namespace Modules\User\App\Actions;
+namespace Modules\User\App\Http\Controllers;
+
+// Dopo (CORRETTO)
+namespace Modules\User\Actions;
+namespace Modules\User\Http\Controllers;
+>>>>>>> 04d87b1 (.)
 ```
 
 ## Automazione

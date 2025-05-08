@@ -351,3 +351,122 @@ class UserResource extends Resource
 - [Volt Documentation](https://livewire.laravel.com/docs/volt)
 - [Folio Documentation](https://laravel.com/docs/folio)
 - [Filament Documentation](https://filamentphp.com/docs) 
+<<<<<<< HEAD
+=======
+
+# Best Practices di Routing per le Blade di Autenticazione
+
+## Introduzione
+
+Il routing per le blade di autenticazione deve seguire un pattern coerente che garantisca:
+- Sicurezza
+- Manutenibilità
+- Coerenza con l'architettura Volt + Folio
+
+## Struttura dei Route
+
+### 1. Route di Autenticazione
+
+```php
+// routes/web.php
+Route::middleware(['guest'])->group(function () {
+    Route::get('login', \App\Livewire\Auth\Login::class)->name('login');
+    Route::get('register', \App\Livewire\Auth\Register::class)->name('register');
+    Route::get('forgot-password', \App\Livewire\Auth\ForgotPassword::class)->name('password.request');
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('logout', \App\Livewire\Auth\Logout::class)->name('logout');
+    Route::get('verify-email', \App\Livewire\Auth\VerifyEmail::class)->name('verification.notice');
+});
+```
+
+### 2. Route Protette
+
+```php
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('dashboard', \App\Livewire\Dashboard::class)->name('dashboard');
+    Route::get('profile', \App\Livewire\Profile::class)->name('profile');
+});
+```
+
+## Best Practices
+
+### 1. Middleware
+- Utilizzare middleware appropriati per ogni route
+- Implementare middleware personalizzati quando necessario
+- Verificare l'ordine dei middleware
+
+### 2. Naming
+- Utilizzare nomi descrittivi e coerenti
+- Seguire le convenzioni Laravel
+- Evitare nomi ambigui
+
+### 3. Gruppi
+- Raggruppare route correlate
+- Utilizzare prefissi quando appropriato
+- Applicare middleware a gruppi di route
+
+### 4. Sicurezza
+- Proteggere route sensibili
+- Implementare rate limiting
+- Validare input
+
+## Esempi Specifici
+
+### Login
+```php
+Route::get('login', \App\Livewire\Auth\Login::class)
+    ->name('login')
+    ->middleware(['guest'])
+    ->where('returnUrl', '.*');
+```
+
+### Register
+```php
+Route::get('register', \App\Livewire\Auth\Register::class)
+    ->name('register')
+    ->middleware(['guest'])
+    ->where('invite', '[a-zA-Z0-9]+');
+```
+
+### Logout
+```php
+Route::get('logout', \App\Livewire\Auth\Logout::class)
+    ->name('logout')
+    ->middleware(['auth'])
+    ->where('returnUrl', '.*');
+```
+
+## Gestione Redirect
+
+### 1. Redirect dopo Login
+```php
+public function login()
+{
+    if (Auth::attempt($credentials)) {
+        return redirect()->intended(
+            request()->input('returnUrl', route('dashboard'))
+        );
+    }
+}
+```
+
+### 2. Redirect dopo Logout
+```php
+public function logout()
+{
+    auth()->logout();
+    session()->invalidate();
+    session()->regenerateToken();
+    
+    return redirect()->route('home');
+}
+```
+
+## Collegamenti
+
+- [Documentazione Volt](./VOLT_LOGOUT.md)
+- [Struttura Directory](./DIRECTORY_STRUCTURE_CHECKLIST.md)
+- [Gestione Errori](./ERROR_HANDLING.md) 
+>>>>>>> 04d87b1 (.)
