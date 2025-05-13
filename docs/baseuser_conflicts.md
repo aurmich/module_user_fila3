@@ -1,7 +1,6 @@
 # Risoluzione Conflitti in BaseUser.php
 
 ## Analisi dei Conflitti
-<<<<<<< HEAD
 
 Dopo un'analisi approfondita del file `BaseUser.php` e dei file correlati, è stato determinato che non ci sono conflitti da risolvere. Il file è già correttamente implementato con:
 
@@ -49,8 +48,6 @@ I file di lingua (`auth.php`, `registration.php`, `change_password.php`, `passwo
 - Le relazioni con team e tenant sono correttamente implementate
 - I metodi di autenticazione e autorizzazione seguono le best practices
 ## Conflitto nel metodo `notifications()`
-=======
->>>>>>> 7539264 (.)
 
 Dopo un'analisi approfondita del file `BaseUser.php` e dei file correlati, è stato determinato che non ci sono conflitti da risolvere. Il file è già correttamente implementato con:
 
