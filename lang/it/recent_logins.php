@@ -33,11 +33,8 @@ return [
         'openFilters' => [
             'label' => 'openFilters',
         ],
-<<<<<<< HEAD
         'user' => [
             'label' => 'user',
         ],
-=======
->>>>>>> ba18491 (.)
     ],
 ];

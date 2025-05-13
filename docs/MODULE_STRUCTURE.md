@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Struttura del Modulo User
 
 ## Panoramica
@@ -100,7 +99,6 @@ return [
     'prefix' => 'user',
     'namespace' => 'Modules\User\Http\Controllers',
 ];
-=======
 # Struttura Standard dei Moduli Laravel
 
 ## Struttura Base Corretta
@@ -202,12 +200,10 @@ laravel/Modules/ModuleName/
 
 // ERRATO
 /var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Lang/it/
->>>>>>> ba18491 (.)
 ```
 
 ## Best Practices
 
-<<<<<<< HEAD
 1. **Autenticazione**
    - Utilizzare il middleware `auth` per le rotte protette
    - Implementare il logout in modo sicuro
@@ -233,7 +229,6 @@ laravel/Modules/ModuleName/
 - [Best Practices per le Traduzioni](TRANSLATION_BEST_PRACTICES.md)
 - [Regole per le Chiavi di Traduzione](TRANSLATION_KEYS_RULES.md)
 - [Convenzioni di Codice](CODE_CONVENTIONS.md) 
-=======
 1. **Verifica Path**
    ```bash
    # Prima di creare un file/cartella, verifica sempre il path
@@ -296,4 +291,3 @@ find . -type d -name "Resources" -o -name "Lang"
 chmod -R 755 laravel/Modules/*/app/
 chmod -R 644 laravel/Modules/*/resources/
 ``` 
->>>>>>> ba18491 (.)

@@ -61,11 +61,7 @@ new class extends Component
                     <x-ui.logo class="h-12 text-blue-900" />
                 </div>
                 <h1 class="text-3xl font-light text-blue-900">Benvenuto in <span class="font-bold">il progetto</span></h1>
-<<<<<<< HEAD
                 <p class="text-gray-600 mt-2">Crea il tuo account per accedere a tutti i servizi1</p>
-=======
-                <p class="text-gray-600 mt-2">Crea il tuo account per accedere a tutti i servizi</p>
->>>>>>> ba18491 (.)
             </div>
 
             <!-- Card contenente il form di registrazione -->

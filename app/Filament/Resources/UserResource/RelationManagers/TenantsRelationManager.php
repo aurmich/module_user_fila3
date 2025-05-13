@@ -44,14 +44,8 @@ class TenantsRelationManager extends XotBaseRelationManager
      *
      * @return array<string, \Filament\Tables\Columns\Column>
      */
-<<<<<<< HEAD
     public function getTableColumns(): array
     {
         return app(ListTenants::class)->getTableColumns();
-=======
-    public function getListTableColumns(): array
-    {
-        return app(ListTenants::class)->getListTableColumns();
->>>>>>> ba18491 (.)
     }
 }
