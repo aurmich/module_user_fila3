@@ -99,6 +99,7 @@ return [
     'prefix' => 'user',
     'namespace' => 'Modules\User\Http\Controllers',
 ];
+<<<<<<< HEAD
 # Struttura Standard dei Moduli Laravel
 
 ## Struttura Base Corretta
@@ -200,6 +201,8 @@ laravel/Modules/ModuleName/
 
 // ERRATO
 /var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Lang/it/
+=======
+>>>>>>> 7539264 (.)
 ```
 
 ## Best Practices
@@ -229,6 +232,7 @@ laravel/Modules/ModuleName/
 - [Best Practices per le Traduzioni](TRANSLATION_BEST_PRACTICES.md)
 - [Regole per le Chiavi di Traduzione](TRANSLATION_KEYS_RULES.md)
 - [Convenzioni di Codice](CODE_CONVENTIONS.md) 
+<<<<<<< HEAD
 1. **Verifica Path**
    ```bash
    # Prima di creare un file/cartella, verifica sempre il path
@@ -291,3 +295,5 @@ find . -type d -name "Resources" -o -name "Lang"
 chmod -R 755 laravel/Modules/*/app/
 chmod -R 644 laravel/Modules/*/resources/
 ``` 
+=======
+>>>>>>> 7539264 (.)

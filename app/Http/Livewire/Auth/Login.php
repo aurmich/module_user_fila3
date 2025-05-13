@@ -141,7 +141,11 @@ class Login extends Component implements HasForms
      */
     public function render(): \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
     {
+<<<<<<< HEAD
         //app(ViewCopyAction::class)->execute('user::livewire.auth.login', 'pub_theme::livewire.auth.login');
+=======
+        app(ViewCopyAction::class)->execute('user::livewire.auth.login', 'pub_theme::livewire.auth.login');
+>>>>>>> 7539264 (.)
         return view('user::livewire.auth.login');
     }
 }

@@ -52,6 +52,7 @@
 [0;32m✅ [2025-05-06 11:48:56] Configurazione git completata con successo[0m
 [0;34mℹ️ [2025-05-06 14:03:09] Configurazione avanzata git...[0m
 [0;32m✅ [2025-05-06 14:03:09] Configurazione git completata con successo[0m
+<<<<<<< HEAD
 [0;34mℹ️ [2025-05-13 10:45:49] Configurazione avanzata git...[0m
 [0;32m✅ [2025-05-13 10:45:49] Configurazione git completata con successo[0m
 >>>>>>> a8c5afb (.)
@@ -61,3 +62,31 @@
 [0;32m✅ [2025-05-13 13:40:45] Configurazione git completata con successo[0m
 [0;34mℹ️ [2025-05-13 14:19:51] Configurazione avanzata git...[0m
 [0;32m✅ [2025-05-13 14:19:51] Configurazione git completata con successo[0m
+=======
+=======
+📆 2025-05-05 11:47:17 - ✅ Configurazione git completata
+=======
+📆 2025-05-05 22:55:23 - 🔧 Configurazione git di base...
+📆 2025-05-05 22:55:23 - ✅ Configurazione git completata
+>>>>>>> de10520 (.)
+📆 2025-05-06 14:44:42 - 🔧 Configurazione git di base...
+📆 2025-05-06 14:44:42 - ✅ Configurazione git completata
+>>>>>>> c2af572 (.)
+=======
+>>>>>>> aurmich/dev
+[0;34mℹ️ [2025-05-06 16:43:57] Configurazione avanzata git...[0m
+[0;32m✅ [2025-05-06 16:43:57] Configurazione git completata con successo[0m
+>>>>>>> 3a17e19 (.)
+[0;34mℹ️ [2025-05-06 17:22:11] Configurazione avanzata git...[0m
+[0;32m✅ [2025-05-06 17:22:11] Configurazione git completata con successo[0m
+[0;34mℹ️ [2025-05-06 17:27:08] Configurazione avanzata git...[0m
+[0;32m✅ [2025-05-06 17:27:08] Configurazione git completata con successo[0m
+=======
+[0;34mℹ️ [2025-05-06 18:39:37] Configurazione avanzata git...[0m
+[0;32m✅ [2025-05-06 18:39:37] Configurazione git completata con successo[0m
+>>>>>>> 1f17fa7 (.)
+[0;34mℹ️ [2025-05-06 21:19:06] Configurazione avanzata git...[0m
+[0;32m✅ [2025-05-06 21:19:06] Configurazione git completata con successo[0m
+[0;34mℹ️ [2025-05-13 16:11:29] Configurazione avanzata git...[0m
+[0;32m✅ [2025-05-13 16:11:29] Configurazione git completata con successo[0m
+>>>>>>> 7539264 (.)
