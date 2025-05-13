@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 declare(strict_types=1);
+=======
+>>>>>>> ba18491 (.)
 
 namespace Modules\User\Livewire;
 

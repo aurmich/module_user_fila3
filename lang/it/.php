@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 <?php
 
 return array (
+=======
+<?php return array (
+>>>>>>> ba18491 (.)
   'fields' => 
   array (
     'startDate' => 
@@ -10,8 +14,14 @@ return array (
     'endDate' => 
     array (
       'label' => 'endDate',
+<<<<<<< HEAD
       'description' => 'endDate',
       'helper_text' => 'endDate',
     ),
   ),
 );
+=======
+    ),
+  ),
+);
+>>>>>>> ba18491 (.)

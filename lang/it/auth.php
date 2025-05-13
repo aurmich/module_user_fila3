@@ -109,6 +109,7 @@ return [
         'password' => 'Password',
         'password_placeholder' => '••••••••',
         'remember' => 'Ricordami',
+<<<<<<< HEAD
         'email_structured' => [
             'label' => 'Email',
             'placeholder' => 'Inserisci la tua email'
@@ -120,6 +121,8 @@ return [
         'remember_structured' => [
             'label' => 'Ricordami'
         ],
+=======
+>>>>>>> ba18491 (.)
         'submit' => 'Accedi',
         'forgot_password' => 'Password dimenticata?',
         'no_account' => 'Non hai un account?',
@@ -144,6 +147,10 @@ return [
     ],
 
     // Registrazione
+<<<<<<< HEAD
+=======
+
+>>>>>>> ba18491 (.)
     'register' => [
         'title' => 'Crea un nuovo account',
         'subtitle' => 'Inserisci i tuoi dati per registrarti',
@@ -159,6 +166,7 @@ return [
         'already_registered' => 'Hai già un account? Accedi',
         'success' => 'Registrazione completata con successo.',
         'failed' => 'Impossibile completare la registrazione.',
+<<<<<<< HEAD
         // Structured version
         'name_structured' => [
             'label' => 'Nome',
@@ -176,6 +184,17 @@ return [
             'label' => 'Conferma Password',
             'placeholder' => 'Conferma la tua password'
         ],
+=======
+    ],
+
+    // Reset Password
+    'passwords' => [
+        'reset' => 'La tua password è stata reimpostata!',
+        'sent' => 'Ti abbiamo inviato una email con il link per reimpostare la password!',
+        'throttled' => 'Attendi prima di riprovare.',
+        'token' => 'Il token per il reset della password non è valido.',
+        'user' => 'Non esiste un utente con questo indirizzo email.',
+>>>>>>> ba18491 (.)
     ],
 
     // Recupero Password
@@ -188,16 +207,35 @@ return [
         'back_to_login' => 'Torna al login',
         'success' => 'Ti abbiamo inviato le istruzioni via email.',
         'failed' => 'Impossibile inviare le istruzioni di reset.',
+<<<<<<< HEAD
         // Structured version
         'email_structured' => [
             'label' => 'Email',
             'placeholder' => 'Inserisci la tua email'
         ],
+=======
+>>>>>>> ba18491 (.)
     ],
 
     // Reset Password
     'reset-password' => [
         'title' => 'Reimposta password',
+<<<<<<< HEAD
+=======
+    ],
+
+    'forgot-password' => [
+        'title' => 'Recupera la password',
+        'subtitle' => 'Inserisci la tua email per ricevere il link di reset',
+        'email' => 'Indirizzo email',
+        'email_placeholder' => 'esempio@email.com',
+        'submit' => 'Invia link di reset',
+        'back_to_login' => 'Torna al login',
+    ],
+
+    'reset-password' => [
+        'title' => 'Reimposta la password',
+>>>>>>> ba18491 (.)
         'subtitle' => 'Inserisci la nuova password',
         'email' => 'Indirizzo email',
         'email_placeholder' => 'esempio@email.com',
@@ -208,6 +246,7 @@ return [
         'submit' => 'Reimposta password',
         'success' => 'Password reimpostata con successo.',
         'failed' => 'Impossibile reimpostare la password.',
+<<<<<<< HEAD
         // Structured version
         'email_structured' => [
             'label' => 'Email',
@@ -221,6 +260,8 @@ return [
             'label' => 'Conferma Password',
             'placeholder' => 'Conferma la nuova password'
         ],
+=======
+>>>>>>> ba18491 (.)
     ],
 
     // Verifica Email
@@ -250,8 +291,12 @@ return [
         'too_many_attempts' => 'Troppi tentativi. Riprova più tardi.',
         'session_expired' => 'Sessione scaduta. Effettua nuovamente il login.',
     ],
+<<<<<<< HEAD
     
     // Reset Password
+=======
+
+>>>>>>> ba18491 (.)
     'passwords' => [
         'reset' => 'La tua password è stata reimpostata!',
         'sent' => 'Ti abbiamo inviato il link per reimpostare la password!',

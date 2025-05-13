@@ -30,7 +30,10 @@ use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Traits\RelationX;
 use Spatie\Permission\Traits\HasRoles;
+<<<<<<< HEAD
 use Parental\HasChildren;
+=======
+>>>>>>> ba18491 (.)
 
 /**
  * Modules\User\Models\User.
@@ -128,8 +131,11 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     use RelationX;
     use Traits\HasAuthenticationLogTrait;
     use Traits\HasTenants;
+<<<<<<< HEAD
     use HasChildren;
 
+=======
+>>>>>>> ba18491 (.)
 
     public $incrementing = false;
 
@@ -142,9 +148,12 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     /** @var string */
     protected $keyType = 'string';
 
+<<<<<<< HEAD
     /** @var string */
     protected $childColumn = 'type';
 
+=======
+>>>>>>> ba18491 (.)
     /** @var list<string> */
     protected $fillable = [
         'id',
@@ -158,7 +167,10 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         'is_active',
         'is_otp', // is One Time Password
         'password_expires_at',
+<<<<<<< HEAD
         'type',
+=======
+>>>>>>> ba18491 (.)
     ];
 
     /** @var list<string> */
@@ -179,11 +191,14 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         // 'profile_photo_url',
     ];
 
+<<<<<<< HEAD
     /** @var array<string, class-string> */
     protected $childTypes = [
 
     ];
 
+=======
+>>>>>>> ba18491 (.)
     /** @var \Illuminate\Database\Eloquent\Relations\Pivot|null */
     public $pivot;
 
@@ -436,7 +451,11 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
      */
     /**
      * Get all role names associated with the user.
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> ba18491 (.)
      * @return array<int, string>
      */
     public function getRoleNames(): array
