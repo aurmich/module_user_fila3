@@ -20,7 +20,11 @@ class ListFeatures extends XotBaseListRecords
     /**
      * @return array<string, \Filament\Tables\Columns\Column>
      */
+<<<<<<< HEAD
     public function getListTableColumns(): array
+=======
+    public function getTableColumns(): array
+>>>>>>> aurmich/dev
     {
         return [
             'name' => TextColumn::make('name')

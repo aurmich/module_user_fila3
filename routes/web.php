@@ -8,6 +8,10 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\Route;
 use Modules\Xot\Datas\XotData;
+<<<<<<< HEAD
+=======
+use Modules\User\Http\Controllers\Auth\LogoutController;
+>>>>>>> aurmich/dev
 
 require 'socialite.php';
 
@@ -18,4 +22,8 @@ if (XotData::make()->register_pub_theme) {
     Route::get('/login', static fn () => redirect('/admin/login'))->name('login');
 }
 
+<<<<<<< HEAD
+=======
+// Route::post('/logout', LogoutController::class)->name('logout');
+>>>>>>> aurmich/dev
 //Route::get('/upgrade', 'UpgradeController');

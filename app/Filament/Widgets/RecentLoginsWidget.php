@@ -30,6 +30,7 @@ class RecentLoginsWidget extends BaseWidget
     /**
      * Define the columns to display in the table.
      */
+<<<<<<< HEAD
     protected function getTableColumns(): array
     {
         return [
@@ -46,6 +47,15 @@ class RecentLoginsWidget extends BaseWidget
             Tables\Columns\TextColumn::make('user_agent')
                 ->label('User Agent')
                 ->limit(30), // Limita il testo a 30 caratteri
+=======
+    public function getTableColumns(): array
+    {
+        return [
+            \Filament\Tables\Columns\TextColumn::make('user'),
+            \Filament\Tables\Columns\TextColumn::make('login_at'),
+            \Filament\Tables\Columns\TextColumn::make('ip_address'),
+            \Filament\Tables\Columns\TextColumn::make('user_agent'),
+>>>>>>> aurmich/dev
         ];
     }
 

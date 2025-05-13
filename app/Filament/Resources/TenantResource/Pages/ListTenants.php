@@ -20,7 +20,11 @@ class ListTenants extends XotBaseListRecords
     /**
      * Definisce le colonne della tabella per la lista tenant.
      */
+<<<<<<< HEAD
     public function getListTableColumns(): array
+=======
+    public function getTableColumns(): array
+>>>>>>> aurmich/dev
     {
         return [
             'id' => TextColumn::make('id')

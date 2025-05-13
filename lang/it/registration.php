@@ -55,6 +55,29 @@ return array (
     array (
       'label' => 'professional',
     ),
+<<<<<<< HEAD
+=======
+    'moderation' => 
+    array (
+      'label' => 'moderation',
+    ),
+    'privacy_step' => 
+    array (
+      'label' => 'privacy_step',
+    ),
+    'personal_data_step' => 
+    array (
+      'label' => 'personal_data_step',
+    ),
+    'documents_step' => 
+    array (
+      'label' => 'documents_step',
+    ),
+    'pre_visit_step' => 
+    array (
+      'label' => 'pre_visit_step',
+    ),
+>>>>>>> aurmich/dev
   ),
   'fields' => 
   array (
@@ -68,7 +91,11 @@ return array (
     ),
     'email' => 
     array (
+<<<<<<< HEAD
       'label' => 'email',
+=======
+      'label' => 'Email',
+>>>>>>> aurmich/dev
     ),
     'password' => 
     array (
@@ -120,11 +147,19 @@ return array (
     ),
     'city' => 
     array (
+<<<<<<< HEAD
       'label' => 'city',
     ),
     'phone' => 
     array (
       'label' => 'phone',
+=======
+      'label' => 'Città',
+    ),
+    'phone' => 
+    array (
+      'label' => 'Telefono',
+>>>>>>> aurmich/dev
     ),
     'fiscal_code' => 
     array (
@@ -136,7 +171,11 @@ return array (
     ),
     'last_name' => 
     array (
+<<<<<<< HEAD
       'label' => 'last_name',
+=======
+      'label' => 'Cognome',
+>>>>>>> aurmich/dev
     ),
     'birth_date' => 
     array (
@@ -144,11 +183,19 @@ return array (
     ),
     'address' => 
     array (
+<<<<<<< HEAD
       'label' => 'address',
     ),
     'first_name' => 
     array (
       'label' => 'first_name',
+=======
+      'label' => 'Indirizzo',
+    ),
+    'first_name' => 
+    array (
+      'label' => 'Nome',
+>>>>>>> aurmich/dev
     ),
     'health_card' => 
     array (
@@ -234,5 +281,24 @@ return array (
     array (
       'label' => 'full_name',
     ),
+<<<<<<< HEAD
+=======
+    'dental_problems' => 
+    array (
+      'label' => 'dental_problems',
+    ),
+    'last_dental_visit' => 
+    array (
+      'label' => 'last_dental_visit',
+    ),
+    'identity_document' => 
+    array (
+      'label' => 'identity_document',
+    ),
+    'moderation_notes' => 
+    array (
+      'label' => 'moderation_notes',
+    ),
+>>>>>>> aurmich/dev
   ),
 );

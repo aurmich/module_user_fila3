@@ -12,7 +12,11 @@ class ListProfiles extends XotBaseListRecords
 {
     protected static string $resource = ProfileResource::class;
 
+<<<<<<< HEAD
     public function getListTableColumns(): array
+=======
+    public function getTableColumns(): array
+>>>>>>> aurmich/dev
     {
         return [
             'email' => TextColumn::make('email')

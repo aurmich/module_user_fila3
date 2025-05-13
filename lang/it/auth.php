@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< HEAD
     // Messaggi generali di autenticazione
     'failed' => 'Credenziali non valide.',
     'password' => 'La password inserita non è corretta.',
@@ -11,6 +12,8 @@ return [
     'unauthorized' => 'Non hai i permessi necessari per questa operazione.',
 
     // Login
+=======
+>>>>>>> aurmich/dev
     'login-via' => 'Accedi con',
 
     'login-failed' => 'Login fallito, riprova.',
@@ -104,15 +107,30 @@ return [
     'login' => [
         'title' => 'Accedi al tuo account',
         'subtitle' => 'Inserisci le tue credenziali per accedere',
+<<<<<<< HEAD
         'email' => 'Indirizzo email',
         'email_placeholder' => 'esempio@email.com',
         'password' => 'Password',
         'password_placeholder' => '••••••••',
         'remember' => 'Ricordami',
+=======
+        'email' => [
+            'label' => 'Email',
+            'placeholder' => 'Inserisci la tua email'
+        ],
+        'password' => [
+            'label' => 'Password',
+            'placeholder' => 'Inserisci la tua password'
+        ],
+        'remember' => [
+            'label' => 'Ricordami'
+        ],
+>>>>>>> aurmich/dev
         'submit' => 'Accedi',
         'forgot_password' => 'Password dimenticata?',
         'no_account' => 'Non hai un account?',
         'register' => 'Registrati',
+<<<<<<< HEAD
         'success' => 'Accesso effettuato con successo.',
         'failed' => 'Credenziali non valide.',
         'logout_success' => 'Logout effettuato con successo.',
@@ -175,12 +193,49 @@ return [
     // Reset Password
     'reset-password' => [
         'title' => 'Reimposta password',
+=======
+        'failed' => 'Credenziali non valide'
+    ],
+
+    'register' => [
+        'title' => 'Crea un nuovo account',
+        'subtitle' => 'Inserisci i tuoi dati per registrarti',
+        'name' => [
+            'label' => 'Nome',
+            'placeholder' => 'Inserisci il tuo nome'
+        ],
+        'name_placeholder' => 'Mario Rossi',
+        'email' => [
+            'label' => 'Email',
+            'placeholder' => 'Inserisci la tua email'
+        ],
+        'email_placeholder' => 'esempio@email.com',
+        'password' => [
+            'label' => 'Password',
+            'placeholder' => 'Inserisci la tua password'
+        ],
+        'password_placeholder' => '••••••••',
+        'password_confirmation' => [
+            'label' => 'Conferma Password',
+            'placeholder' => 'Conferma la tua password'
+        ],
+        'password_confirmation_placeholder' => '••••••••',
+        'submit' => 'Registrati',
+        'already_registered' => 'Hai già un account? Accedi',
+>>>>>>> aurmich/dev
     ],
 
     'forgot-password' => [
         'title' => 'Recupera la password',
         'subtitle' => 'Inserisci la tua email per ricevere il link di reset',
+<<<<<<< HEAD
         'email' => 'Indirizzo email',
+=======
+        'email' => [
+            'label' => 'Email',
+            'placeholder' => 'Inserisci la tua email'
+        ],
+>>>>>>> aurmich/dev
         'email_placeholder' => 'esempio@email.com',
         'submit' => 'Invia link di reset',
         'back_to_login' => 'Torna al login',
@@ -189,6 +244,7 @@ return [
     'reset-password' => [
         'title' => 'Reimposta la password',
         'subtitle' => 'Inserisci la nuova password',
+<<<<<<< HEAD
         'email' => 'Indirizzo email',
         'email_placeholder' => 'esempio@email.com',
         'password' => 'Nuova password',
@@ -226,6 +282,24 @@ return [
         'account_blocked' => 'Account bloccato. Contatta l\'assistenza.',
         'too_many_attempts' => 'Troppi tentativi. Riprova più tardi.',
         'session_expired' => 'Sessione scaduta. Effettua nuovamente il login.',
+=======
+        'email' => [
+            'label' => 'Email',
+            'placeholder' => 'Inserisci la tua email'
+        ],
+        'email_placeholder' => 'esempio@email.com',
+        'password' => [
+            'label' => 'Nuova Password',
+            'placeholder' => 'Inserisci la nuova password'
+        ],
+        'password_placeholder' => '••••••••',
+        'password_confirmation' => [
+            'label' => 'Conferma Password',
+            'placeholder' => 'Conferma la nuova password'
+        ],
+        'password_confirmation_placeholder' => '••••••••',
+        'submit' => 'Reimposta password',
+>>>>>>> aurmich/dev
     ],
 
     'passwords' => [

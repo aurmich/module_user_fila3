@@ -5,7 +5,11 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Widgets;
 
 use Filament\Forms\Components\TextInput;
+<<<<<<< HEAD
 use Filament\Forms\Components\Checkbox;
+=======
+use Filament\Forms\Components\Toggle;
+>>>>>>> aurmich/dev
 use Filament\Forms\Form;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
@@ -13,6 +17,11 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use Exception;
 use Illuminate\Http\RedirectResponse;
 use Livewire\Attributes\Layout;
+<<<<<<< HEAD
+=======
+use Filament\Forms\Components\TextInput as FormsTextInput;
+use Filament\Forms\Components\Checkbox as FormsCheckbox;
+>>>>>>> aurmich/dev
 
 /**
  * LoginWidget: Widget di login conforme alle regole Windsurf/Xot.
@@ -50,14 +59,22 @@ class LoginWidget extends XotBaseWidget
         $this->form->fill();
     }
 
+<<<<<<< HEAD
 
 
     /**
      * Definisce lo schema del form con i suoi campi.
+=======
+    /**
+     * Definisce lo schema del form di login.
+     *
+     * @return array<string, \Filament\Forms\Components\Component>
+>>>>>>> aurmich/dev
      */
     public function getFormSchema(): array
     {
         return [
+<<<<<<< HEAD
             TextInput::make('email')
                 ->email()
                 ->required()
@@ -75,6 +92,17 @@ class LoginWidget extends XotBaseWidget
             Checkbox::make('remember')
                 ->label(__('Ricordami'))
                 ->default(false),
+=======
+            'email' => TextInput::make('email')
+                ->email()
+                ->required()
+                ->autofocus(),
+            'password' => TextInput::make('password')
+                ->password()
+                ->required(),
+            'remember' => Toggle::make('remember')
+                ->label('Ricordami'),
+>>>>>>> aurmich/dev
         ];
     }
 

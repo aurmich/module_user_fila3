@@ -32,5 +32,9 @@ build
 *.bak
 # File di log
 *.log
+<<<<<<< HEAD
+=======
+-e 
+>>>>>>> aurmich/dev
 # PHPStan documentation
 docs/phpstan/

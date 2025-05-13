@@ -11,6 +11,7 @@ namespace Modules\User\Filament\Resources;
 use Filament\Forms\Components\ColorPicker;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
+<<<<<<< HEAD
 use Illuminate\Support\Str;
 use Modules\User\Filament\Resources\TenantResource\Pages\CreateTenant;
 use Modules\User\Filament\Resources\TenantResource\Pages\EditTenant;
@@ -26,6 +27,11 @@ use Modules\Xot\Services\XotService;
 
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
 
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource;
+use Modules\Xot\Services\XotService;
+
+>>>>>>> aurmich/dev
 class TenantResource extends XotBaseResource
 {
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
@@ -46,6 +52,7 @@ class TenantResource extends XotBaseResource
         return [
             Section::make()
                 ->schema([
+<<<<<<< HEAD
                         TextInput::make('name')
                             ->required()
                             ->unique(table: 'tenants', ignoreRecord: true)
@@ -134,6 +141,41 @@ class TenantResource extends XotBaseResource
             'create' => CreateTenant::route('/create'),
             'view' => ViewTenant::route('/{record}'),
             'edit' => EditTenant::route('/{record}/edit'),
+=======
+                    TextInput::make('name')
+                        ->required()
+                        ->maxLength(255),
+
+                    TextInput::make('slug')
+                        ->required()
+                        ->maxLength(255),
+
+                    TextInput::make('domain')
+                        ->required()
+                        ->maxLength(255),
+
+                    TextInput::make('email')
+                        ->email()
+                        ->required()
+                        ->maxLength(255),
+
+                    TextInput::make('phone')
+                        ->tel()
+                        ->maxLength(255),
+
+                    TextInput::make('mobile')
+                        ->tel()
+                        ->maxLength(255),
+
+                    TextInput::make('address')
+                        ->maxLength(255),
+
+                    ColorPicker::make('primary_color'),
+
+                    ColorPicker::make('secondary_color'),
+                ])
+                ->columns(2)
+>>>>>>> aurmich/dev
         ];
     }
 }
