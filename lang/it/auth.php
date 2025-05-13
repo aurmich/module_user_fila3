@@ -133,7 +133,6 @@ return [
     ],
 
     // Registrazione
-    ],
 
     'register' => [
         'title' => 'Crea un nuovo account',

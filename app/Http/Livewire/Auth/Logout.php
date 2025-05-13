@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Http\Livewire\Auth;
 
 use Livewire\Component;
-use Livewire\WithRateLimiting;
+use DanHarrin\LivewireRateLimiting\WithRateLimiting;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Event;
