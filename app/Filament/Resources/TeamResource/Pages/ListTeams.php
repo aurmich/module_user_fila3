@@ -13,7 +13,7 @@ class ListTeams extends XotBaseListRecords
     // //
     protected static string $resource = TeamResource::class;
 
-    public function getListTableColumns(): array
+    public function getTableColumns(): array
     {
         return [
             'name' => TextColumn::make('name')

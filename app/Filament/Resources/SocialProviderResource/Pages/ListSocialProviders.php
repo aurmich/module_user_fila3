@@ -18,7 +18,7 @@ class ListSocialProviders extends XotBaseListRecords
 {
     protected static string $resource = SocialProviderResource::class;
 
-    public function getListTableColumns(): array
+    public function getTableColumns(): array
     {
         return [
             'name' => TextColumn::make('name')

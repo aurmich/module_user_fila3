@@ -81,7 +81,7 @@ class SocialiteUsersRelationManager extends XotBaseRelationManager
      *
      * @return array<TextColumn|ImageColumn>
      */
-    public function getListTableColumns(): array
+    public function getTableColumns(): array
     {
         return [
             TextColumn::make('provider')
