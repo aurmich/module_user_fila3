@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 return [
-<<<<<<< HEAD
     // Messaggi generali di autenticazione
     'failed' => 'Credenziali non valide.',
     'password' => 'La password inserita non è corretta.',
@@ -12,8 +11,6 @@ return [
     'unauthorized' => 'Non hai i permessi necessari per questa operazione.',
 
     // Login
-=======
->>>>>>> aurmich/dev
     'login-via' => 'Accedi con',
 
     'login-failed' => 'Login fallito, riprova.',
@@ -107,30 +104,26 @@ return [
     'login' => [
         'title' => 'Accedi al tuo account',
         'subtitle' => 'Inserisci le tue credenziali per accedere',
-<<<<<<< HEAD
         'email' => 'Indirizzo email',
         'email_placeholder' => 'esempio@email.com',
         'password' => 'Password',
         'password_placeholder' => '••••••••',
         'remember' => 'Ricordami',
-=======
-        'email' => [
+        'email_structured' => [
             'label' => 'Email',
             'placeholder' => 'Inserisci la tua email'
         ],
-        'password' => [
+        'password_structured' => [
             'label' => 'Password',
             'placeholder' => 'Inserisci la tua password'
         ],
-        'remember' => [
+        'remember_structured' => [
             'label' => 'Ricordami'
         ],
->>>>>>> aurmich/dev
         'submit' => 'Accedi',
         'forgot_password' => 'Password dimenticata?',
         'no_account' => 'Non hai un account?',
         'register' => 'Registrati',
-<<<<<<< HEAD
         'success' => 'Accesso effettuato con successo.',
         'failed' => 'Credenziali non valide.',
         'logout_success' => 'Logout effettuato con successo.',
@@ -151,7 +144,6 @@ return [
     ],
 
     // Registrazione
-
     'register' => [
         'title' => 'Crea un nuovo account',
         'subtitle' => 'Inserisci i tuoi dati per registrarti',
@@ -167,15 +159,23 @@ return [
         'already_registered' => 'Hai già un account? Accedi',
         'success' => 'Registrazione completata con successo.',
         'failed' => 'Impossibile completare la registrazione.',
-    ],
-
-    // Reset Password
-    'passwords' => [
-        'reset' => 'La tua password è stata reimpostata!',
-        'sent' => 'Ti abbiamo inviato una email con il link per reimpostare la password!',
-        'throttled' => 'Attendi prima di riprovare.',
-        'token' => 'Il token per il reset della password non è valido.',
-        'user' => 'Non esiste un utente con questo indirizzo email.',
+        // Structured version
+        'name_structured' => [
+            'label' => 'Nome',
+            'placeholder' => 'Inserisci il tuo nome'
+        ],
+        'email_structured' => [
+            'label' => 'Email',
+            'placeholder' => 'Inserisci la tua email'
+        ],
+        'password_structured' => [
+            'label' => 'Password',
+            'placeholder' => 'Inserisci la tua password'
+        ],
+        'password_confirmation_structured' => [
+            'label' => 'Conferma Password',
+            'placeholder' => 'Conferma la tua password'
+        ],
     ],
 
     // Recupero Password
@@ -188,63 +188,17 @@ return [
         'back_to_login' => 'Torna al login',
         'success' => 'Ti abbiamo inviato le istruzioni via email.',
         'failed' => 'Impossibile inviare le istruzioni di reset.',
+        // Structured version
+        'email_structured' => [
+            'label' => 'Email',
+            'placeholder' => 'Inserisci la tua email'
+        ],
     ],
 
     // Reset Password
     'reset-password' => [
         'title' => 'Reimposta password',
-=======
-        'failed' => 'Credenziali non valide'
-    ],
-
-    'register' => [
-        'title' => 'Crea un nuovo account',
-        'subtitle' => 'Inserisci i tuoi dati per registrarti',
-        'name' => [
-            'label' => 'Nome',
-            'placeholder' => 'Inserisci il tuo nome'
-        ],
-        'name_placeholder' => 'Mario Rossi',
-        'email' => [
-            'label' => 'Email',
-            'placeholder' => 'Inserisci la tua email'
-        ],
-        'email_placeholder' => 'esempio@email.com',
-        'password' => [
-            'label' => 'Password',
-            'placeholder' => 'Inserisci la tua password'
-        ],
-        'password_placeholder' => '••••••••',
-        'password_confirmation' => [
-            'label' => 'Conferma Password',
-            'placeholder' => 'Conferma la tua password'
-        ],
-        'password_confirmation_placeholder' => '••••••••',
-        'submit' => 'Registrati',
-        'already_registered' => 'Hai già un account? Accedi',
->>>>>>> aurmich/dev
-    ],
-
-    'forgot-password' => [
-        'title' => 'Recupera la password',
-        'subtitle' => 'Inserisci la tua email per ricevere il link di reset',
-<<<<<<< HEAD
-        'email' => 'Indirizzo email',
-=======
-        'email' => [
-            'label' => 'Email',
-            'placeholder' => 'Inserisci la tua email'
-        ],
->>>>>>> aurmich/dev
-        'email_placeholder' => 'esempio@email.com',
-        'submit' => 'Invia link di reset',
-        'back_to_login' => 'Torna al login',
-    ],
-
-    'reset-password' => [
-        'title' => 'Reimposta la password',
         'subtitle' => 'Inserisci la nuova password',
-<<<<<<< HEAD
         'email' => 'Indirizzo email',
         'email_placeholder' => 'esempio@email.com',
         'password' => 'Nuova password',
@@ -254,6 +208,19 @@ return [
         'submit' => 'Reimposta password',
         'success' => 'Password reimpostata con successo.',
         'failed' => 'Impossibile reimpostare la password.',
+        // Structured version
+        'email_structured' => [
+            'label' => 'Email',
+            'placeholder' => 'Inserisci la tua email'
+        ],
+        'password_structured' => [
+            'label' => 'Nuova Password',
+            'placeholder' => 'Inserisci la nuova password'
+        ],
+        'password_confirmation_structured' => [
+            'label' => 'Conferma Password',
+            'placeholder' => 'Conferma la nuova password'
+        ],
     ],
 
     // Verifica Email
@@ -282,26 +249,9 @@ return [
         'account_blocked' => 'Account bloccato. Contatta l\'assistenza.',
         'too_many_attempts' => 'Troppi tentativi. Riprova più tardi.',
         'session_expired' => 'Sessione scaduta. Effettua nuovamente il login.',
-=======
-        'email' => [
-            'label' => 'Email',
-            'placeholder' => 'Inserisci la tua email'
-        ],
-        'email_placeholder' => 'esempio@email.com',
-        'password' => [
-            'label' => 'Nuova Password',
-            'placeholder' => 'Inserisci la nuova password'
-        ],
-        'password_placeholder' => '••••••••',
-        'password_confirmation' => [
-            'label' => 'Conferma Password',
-            'placeholder' => 'Conferma la nuova password'
-        ],
-        'password_confirmation_placeholder' => '••••••••',
-        'submit' => 'Reimposta password',
->>>>>>> aurmich/dev
     ],
-
+    
+    // Reset Password
     'passwords' => [
         'reset' => 'La tua password è stata reimpostata!',
         'sent' => 'Ti abbiamo inviato il link per reimpostare la password!',

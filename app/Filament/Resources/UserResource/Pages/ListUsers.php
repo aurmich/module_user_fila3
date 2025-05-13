@@ -24,11 +24,7 @@ class ListUsers extends XotBaseListRecords
     /**
      * @return array<string, TextColumn>
      */
-<<<<<<< HEAD
     public function getListTableColumns(): array
-=======
-    public function getTableColumns(): array
->>>>>>> aurmich/dev
     {
         return [
             'id' => TextColumn::make('id'),

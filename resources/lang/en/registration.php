@@ -2,8 +2,6 @@
 
 return [
     'fields' => [
-<<<<<<< HEAD
-=======
         'first_name' => [
             'label' => 'First Name',
             'placeholder' => 'Enter your first name',
@@ -14,7 +12,6 @@ return [
             'placeholder' => 'Enter your last name',
             'tooltip' => 'Enter your last name'
         ],
->>>>>>> aurmich/dev
         'email' => [
             'label' => 'Email',
             'placeholder' => 'Enter your email',
@@ -25,8 +22,6 @@ return [
             'placeholder' => 'Enter your phone number',
             'tooltip' => 'Enter a valid phone number'
         ],
-<<<<<<< HEAD
-=======
         'address' => [
             'label' => 'Address',
             'placeholder' => 'Enter your address',
@@ -53,7 +48,6 @@ return [
             'tooltip' => 'Enter your country of residence',
             'default' => 'Italy'
         ],
->>>>>>> aurmich/dev
         'password' => [
             'label' => 'Password',
             'placeholder' => 'Enter your password',
@@ -74,13 +68,6 @@ return [
         ]
     ],
     'buttons' => [
-<<<<<<< HEAD
-        'register' => 'Register'
-    ],
-    'messages' => [
-        'success' => 'Registration completed successfully!',
-        'error' => 'An error occurred during registration.'
-=======
         'register' => 'Register',
         'next' => 'Next',
         'back' => 'Back',
@@ -108,6 +95,5 @@ return [
             'title' => 'Confirm Data',
             'description' => 'Verify your information before completing registration'
         ]
->>>>>>> aurmich/dev
     ]
 ]; 

@@ -1,4 +1,12 @@
 <?php
+declare(strict_types=1);
+
+// Includi l'autoloader di Composer per accedere alle classi PhpCsFixer
+$vendorDir = __DIR__ . '/vendor';
+if (!file_exists($vendorDir)) {
+    $vendorDir = dirname(__DIR__, 3) . '/vendor';
+}
+require_once $vendorDir . '/autoload.php';
 
 $finder = PhpCsFixer\Finder::create()
     ->notPath('bootstrap/cache')
@@ -8,10 +16,9 @@ $finder = PhpCsFixer\Finder::create()
     ->name('*.php')
     ->notName('*.blade.php')
     ->ignoreDotFiles(true)
-    ->ignoreVCS(true)
+    ->ignoreVCS(true);
 
 $config = new PhpCsFixer\Config();
-
 $config
     ->setRules([
         '@Symfony' => true,
@@ -35,6 +42,6 @@ $config
         'class_definition' => true,
         'elseif' => true,
     ])
-    ->setFinder($finder)
+    ->setFinder($finder);
 
 return $config;

@@ -351,8 +351,6 @@ class UserResource extends Resource
 - [Volt Documentation](https://livewire.laravel.com/docs/volt)
 - [Folio Documentation](https://laravel.com/docs/folio)
 - [Filament Documentation](https://filamentphp.com/docs) 
-<<<<<<< HEAD
-=======
 
 # Best Practices di Routing per le Blade di Autenticazione
 
@@ -469,4 +467,3 @@ public function logout()
 - [Documentazione Volt](./VOLT_LOGOUT.md)
 - [Struttura Directory](./DIRECTORY_STRUCTURE_CHECKLIST.md)
 - [Gestione Errori](./ERROR_HANDLING.md) 
->>>>>>> aurmich/dev

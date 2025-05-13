@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<?php return array (
-=======
 <?php
 
 return array (
->>>>>>> aurmich/dev
   'fields' => 
   array (
     'startDate' => 
@@ -14,14 +10,8 @@ return array (
     'endDate' => 
     array (
       'label' => 'endDate',
-<<<<<<< HEAD
-    ),
-  ),
-);
-=======
       'description' => 'endDate',
       'helper_text' => 'endDate',
     ),
   ),
 );
->>>>>>> aurmich/dev

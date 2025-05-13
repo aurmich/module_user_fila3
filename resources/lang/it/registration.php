@@ -2,8 +2,6 @@
 
 return [
     'fields' => [
-<<<<<<< HEAD
-=======
         'first_name' => [
             'label' => 'Nome',
             'placeholder' => 'Inserisci il tuo nome',
@@ -14,7 +12,6 @@ return [
             'placeholder' => 'Inserisci il tuo cognome',
             'tooltip' => 'Inserisci il tuo cognome'
         ],
->>>>>>> aurmich/dev
         'email' => [
             'label' => 'Email',
             'placeholder' => 'Inserisci la tua email',
@@ -25,8 +22,6 @@ return [
             'placeholder' => 'Inserisci il tuo numero di telefono',
             'tooltip' => 'Inserisci un numero di telefono valido'
         ],
-<<<<<<< HEAD
-=======
         'address' => [
             'label' => 'Indirizzo',
             'placeholder' => 'Inserisci il tuo indirizzo',
@@ -53,7 +48,6 @@ return [
             'tooltip' => 'Inserisci il paese di residenza',
             'default' => 'Italia'
         ],
->>>>>>> aurmich/dev
         'password' => [
             'label' => 'Password',
             'placeholder' => 'Inserisci la tua password',
@@ -74,13 +68,6 @@ return [
         ]
     ],
     'buttons' => [
-<<<<<<< HEAD
-        'register' => 'Registrati'
-    ],
-    'messages' => [
-        'success' => 'Registrazione completata con successo!',
-        'error' => 'Si è verificato un errore durante la registrazione.'
-=======
         'register' => 'Registrati',
         'next' => 'Avanti',
         'back' => 'Indietro',
@@ -108,6 +95,5 @@ return [
             'title' => 'Conferma Dati',
             'description' => 'Verifica i dati inseriti prima di completare la registrazione'
         ]
->>>>>>> aurmich/dev
     ]
 ]; 

@@ -26,13 +26,7 @@ class TeamsRelationManager extends RelationManager
                 TextColumn::make('name')
                     ->searchable()
                     ->sortable(),
-<<<<<<< HEAD
-
                 IconColumn::make('personal_team')
-                    ->label('Personal Team')
-=======
-                IconColumn::make('personal_team')
->>>>>>> aurmich/dev
                     ->boolean()
                     ->default(fn ($record, $livewire) => $livewire->getOwnerRecord()->current_team_id === $record->id),
             ])
@@ -62,8 +56,6 @@ class TeamsRelationManager extends RelationManager
                 DetachBulkAction::make(),
             ]);
     }
-<<<<<<< HEAD
-=======
 
     public function getTableColumns(): array
     {
@@ -78,5 +70,4 @@ class TeamsRelationManager extends RelationManager
                 ->sortable(),
         ];
     }
->>>>>>> aurmich/dev
 }

@@ -1,23 +1,16 @@
 <div>
     <form wire:submit.prevent="register">
         {{ $this->form }}
-<<<<<<< HEAD
-    </form>
-    
-    <div class="text-sm text-center text-gray-600 mt-6">
-        Hai già un account? <a href="{{ route('login') }}" class="text-blue-800 hover:underline">Accedi</a>
-=======
 
         <x-filament::button type="submit" class="w-full">
-            {{ __('Register') }}
+            {{ __('user::registration.submit') }}
         </x-filament::button>
     </form>
     
     <div class="text-sm text-center text-gray-600 mt-6">
-        {{ __('Already have an account?') }} 
+        {{ __('user::registration.already_registered') }} 
         <a href="{{ route('login') }}" class="text-primary-600 hover:text-primary-500">
-            {{ __('Log in') }}
+            {{ __('user::auth.login.title') }}
         </a>
->>>>>>> aurmich/dev
     </div>
 </div>

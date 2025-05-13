@@ -1,243 +1,130 @@
-# Struttura Standard dei Moduli Laravel
+# Struttura del Modulo User
 
-<<<<<<< HEAD
-=======
-## Collegamenti correlati
-- [Documentazione centrale](../../../docs/README.md)
-- [Collegamenti documentazione](../../../docs/collegamenti-documentazione.md)
-- [README modulo User](./README.md)
-- [Convenzioni Path](./PATH_CONVENTIONS.md)
-- [Struttura moduli](../../../docs/architecture/modules-structure.md)
+## Panoramica
 
->>>>>>> aurmich/dev
-## Struttura Base Corretta
+Il modulo User gestisce tutte le funzionalità relative agli utenti, inclusa l'autenticazione, la registrazione, la gestione del profilo e le autorizzazioni.
+
+## Struttura delle Directory
+
 ```
-laravel/Modules/ModuleName/
-├── app/                        # Codice principale dell'applicazione
-│   ├── Actions/               # Action classes
-│   ├── Http/                  # Controllers, Middleware, Requests
-│   ├── Models/                # Model classes
-│   ├── Providers/            # Service providers
-│   └── Services/             # Service classes
-├── config/                    # Configurazioni del modulo
-├── database/                  # Migrations, seeds, factories
-├── docs/                      # Documentazione del modulo
-├── lang/                      # File di traduzione (non Lang!)
-├── resources/                # Asset e viste (non Resources!)
-│   ├── css/
-│   ├── js/
+User/
+├── Config/
+│   └── config.php
+├── Console/
+│   └── Commands/
+├── Database/
+│   ├── Migrations/
+│   └── Seeders/
+├── Http/
+│   ├── Controllers/
+│   ├── Middleware/
+│   └── Requests/
+├── Models/
+│   └── BaseUser.php
+├── Resources/
+│   ├── assets/
+│   ├── lang/
+│   │   ├── en/
+│   │   └── it/
 │   └── views/
-├── routes/                    # File di routing
-└── tests/                     # Test del modulo
+├── Routes/
+│   ├── api.php
+│   └── web.php
+├── Services/
+├── Tests/
+└── composer.json
 ```
 
-## ❌ Pattern Errati da Evitare
-```
-laravel/Modules/ModuleName/
-├── Resources/                # ERRATO: R maiuscola
-├── Lang/                     # ERRATO: L maiuscola
-<<<<<<< HEAD
-├── Actions/                  # ERRATO: dovrebbe essere in app/Actions
-=======
-├── app/Actions/              # ERRATO: dovrebbe essere Actions/ a livello root
->>>>>>> aurmich/dev
-└── Http/                     # ERRATO: dovrebbe essere in app/Http
-```
+## Componenti Principali
 
-## ✅ Pattern Corretti
-```
-laravel/Modules/ModuleName/
-├── resources/               # CORRETTO: r minuscola
-├── lang/                    # CORRETTO: l minuscola
-<<<<<<< HEAD
-├── app/Actions/            # CORRETTO: sotto app/
-=======
-├── Actions/                 # CORRETTO: a livello root
->>>>>>> aurmich/dev
-└── app/Http/               # CORRETTO: sotto app/
-```
+### 1. Models
 
-## Regole Fondamentali
+- `BaseUser.php`: Il modello principale per la gestione degli utenti
+  - Implementa l'autenticazione
+  - Gestisce le relazioni
+  - Definisce le autorizzazioni
 
-1. **Namespace PSR-4**
-   ```php
-<<<<<<< HEAD
-   namespace Modules\ModuleName\App\Actions;  // CORRETTO
-   namespace Modules\ModuleName\Actions;      // ERRATO
-=======
-   namespace Modules\ModuleName\Actions;      // CORRETTO
-   namespace Modules\ModuleName\App\Actions;  // ERRATO
-   // Per Actions
-   namespace Modules\ModuleName\Actions;      // CORRETTO
-   namespace Modules\ModuleName\App\Actions;  // ERRATO
-   
-   // Per Livewire Components
-   namespace Modules\ModuleName\Http\Livewire;  // CORRETTO
-   namespace Modules\ModuleName\App\Http\Livewire;  // ERRATO
->>>>>>> aurmich/dev
-   ```
+### 2. Controllers
 
-2. **Case Sensitivity**
-   - Usare lowercase per cartelle standard Laravel
-   - Mantenere PascalCase per classi e namespace
+- `AuthController`: Gestisce l'autenticazione
+- `ProfileController`: Gestisce il profilo utente
+- `UserController`: Gestisce gli utenti (CRUD)
 
-3. **Struttura app/**
-   - Tutto il codice PHP va sotto `app/`
-   - Eccezioni: routes/, config/, lang/, resources/
+### 3. Middleware
 
-4. **Resources vs resources**
-   - `resources/`: assets, views, lang (lowercase)
-   - `Resources/`: MAI usare questa versione
+- `Authenticate`: Verifica l'autenticazione
+- `Authorize`: Gestisce le autorizzazioni
+- `CheckRole`: Verifica i ruoli utente
 
-5. **Lang vs lang**
-   - `lang/`: file di traduzione (lowercase)
-   - `Lang/`: MAI usare questa versione
+### 4. Routes
 
-## Esempi di Path Corretti
-
-### Controllers
 ```php
-// CORRETTO
-<<<<<<< HEAD
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/app/Http/Controllers/
+// web.php
+Route::group(['middleware' => ['web']], function () {
+    // Auth Routes
+    Route::get('login', 'AuthController@showLoginForm')->name('login');
+    Route::post('login', 'AuthController@login');
+    Route::post('logout', 'AuthController@logout')->name('logout');
+    
+    // Profile Routes
+    Route::get('profile', 'ProfileController@show')->name('profile');
+    Route::put('profile', 'ProfileController@update')->name('profile.update');
+});
 
-// ERRATO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Http/Controllers/
-=======
-laravel/Modules/User/app/Http/Controllers/
-
-// ERRATO
-laravel/Modules/User/Http/Controllers/
->>>>>>> aurmich/dev
+// api.php
+Route::group(['middleware' => ['api']], function () {
+    Route::apiResource('users', 'UserController');
+});
 ```
 
-### Actions
+### 5. Views
+
+- `auth/`: Viste per l'autenticazione
+- `profile/`: Viste per il profilo
+- `users/`: Viste per la gestione utenti
+
+### 6. Language Files
+
+- `auth.php`: Traduzioni per l'autenticazione
+- `profile.php`: Traduzioni per il profilo
+- `user.php`: Traduzioni per la gestione utenti
+
+## Configurazione
+
 ```php
-// CORRETTO
-<<<<<<< HEAD
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/app/Actions/
-
-// ERRATO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Actions/
-=======
-laravel/Modules/User/Actions/User/DeleteUserAction.php
-
-// ERRATO
-laravel/Modules/User/app/Actions/User/DeleteUserAction.php
->>>>>>> aurmich/dev
-```
-
-### Views
-```php
-// CORRETTO
-<<<<<<< HEAD
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/resources/views/
-
-// ERRATO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Resources/views/
-=======
-laravel/Modules/User/resources/views/
-
-// ERRATO
-laravel/Modules/User/Resources/views/
-```
-
-### Livewire Components
-```php
-// CORRETTO
-laravel/Modules/User/app/Http/Livewire/Profile/DeleteAccount.php
-
-// ERRATO
-laravel/Modules/User/Http/Livewire/Profile/DeleteAccount.php
->>>>>>> aurmich/dev
-```
-
-### Translations
-```php
-// CORRETTO
-<<<<<<< HEAD
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/lang/it/
-
-// ERRATO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Lang/it/
-=======
-laravel/Modules/User/lang/it/
-
-// ERRATO
-laravel/Modules/User/Lang/it/
->>>>>>> aurmich/dev
+// config.php
+return [
+    'name' => 'User',
+    'middleware' => ['web', 'api'],
+    'prefix' => 'user',
+    'namespace' => 'Modules\User\Http\Controllers',
+];
 ```
 
 ## Best Practices
 
-1. **Verifica Path**
-   ```bash
-   # Prima di creare un file/cartella, verifica sempre il path
-   pwd
-   tree -L 3 laravel/Modules/User/
-   ```
+1. **Autenticazione**
+   - Utilizzare il middleware `auth` per le rotte protette
+   - Implementare il logout in modo sicuro
+   - Gestire correttamente le sessioni
 
-2. **Namespace Check**
-   ```php
-   // Verifica sempre il namespace corrisponda al path
-<<<<<<< HEAD
-   namespace Modules\User\App\Http\Controllers;  // CORRETTO
-   namespace Modules\User\Http\Controllers;      // ERRATO
-   ```
+2. **Autorizzazioni**
+   - Utilizzare le policies per le autorizzazioni
+   - Implementare i ruoli e i permessi
+   - Verificare le autorizzazioni nei controller
 
-3. **Case Sensitivity**
-   ```bash
-   # Usa sempre lowercase per le cartelle standard Laravel
-   mkdir -p resources/views
-   mkdir -p lang/it
-   
-   # NON usare mai
-   mkdir -p Resources/views  # ERRATO
-   mkdir -p Lang/it         # ERRATO
-   ```
+3. **Validazione**
+   - Utilizzare le form requests per la validazione
+   - Implementare regole di validazione personalizzate
+   - Gestire i messaggi di errore
 
-4. **Struttura Moduli**
-   ```bash
-   # Crea sempre la struttura base completa
-   mkdir -p app/{Actions,Http,Models,Providers,Services}
-   mkdir -p {config,database,docs,lang,resources,routes,tests}
-=======
-   namespace Modules\User\Http\Controllers;  // CORRETTO
-   namespace Modules\User\App\Http\Controllers;      // ERRATO
->>>>>>> aurmich/dev
-   ```
+4. **Testing**
+   - Scrivere test per l'autenticazione
+   - Testare le autorizzazioni
+   - Verificare il funzionamento delle rotte
 
-## Checklist di Validazione
+## Collegamenti Correlati
 
-- [ ] Tutti i path usano lowercase per cartelle standard Laravel
-- [ ] Tutto il codice PHP è sotto la cartella `app/`
-- [ ] I namespace corrispondono alla struttura delle cartelle
-- [ ] Non ci sono cartelle con iniziali maiuscole (Resources, Lang, etc.)
-- [ ] Le traduzioni sono in `lang/` (lowercase)
-- [ ] Le viste sono in `resources/views/` (lowercase)
-
-## Note Importanti
-
-1. La struttura dei moduli segue le convenzioni Laravel
-2. Case sensitivity è fondamentale in Linux/Unix
-3. Mantenere consistenza tra namespace e struttura cartelle
-4. Evitare duplicazione di codice tra moduli
-5. Seguire PSR-4 per l'autoloading
-
-## Comandi Utili
-
-```bash
-# Verifica struttura cartelle
-tree -L 3 laravel/Modules/User/
-
-# Trova cartelle con nomi errati
-find . -type d -name "Resources" -o -name "Lang"
-
-# Correggi permessi
-chmod -R 755 laravel/Modules/*/app/
-chmod -R 644 laravel/Modules/*/resources/
-<<<<<<< HEAD
-``` 
-=======
-``` 
->>>>>>> aurmich/dev
+- [Best Practices per le Traduzioni](TRANSLATION_BEST_PRACTICES.md)
+- [Regole per le Chiavi di Traduzione](TRANSLATION_KEYS_RULES.md)
+- [Convenzioni di Codice](CODE_CONVENTIONS.md) 

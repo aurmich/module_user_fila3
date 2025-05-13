@@ -1,111 +1,143 @@
 # Best Practices per le Traduzioni
 
-## Regole Fondamentali
+## Principi Generali
 
-1. **Chiavi in Inglese**
-   - Le chiavi di traduzione DEVONO essere sempre in inglese
-   - Esempio corretto: `__('login')` invece di `__('Accedi')`
-   - Le traduzioni effettive vengono gestite nei file di lingua
+1. **Coerenza**: Mantenere una nomenclatura coerente per le chiavi di traduzione
+2. **Completezza**: Tradurre tutte le chiavi in tutte le lingue supportate
+3. **Struttura**: Mantenere una struttura gerarchica chiara e logica
+4. **Manutenibilità**: Organizzare le traduzioni in file separati per ogni contesto
+5. **Riusabilità**: Evitare duplicazioni di chiavi e contenuti
 
-2. **Struttura delle Chiavi**
-   - Utilizzare il formato `namespace.key` per chiavi complesse
-   - Esempio: `auth.login` per la pagina di login
-   - Mantenere una gerarchia logica e coerente
+## Struttura dei File
 
-3. **File di Traduzione**
-   - Posizione: `resources/lang/{locale}/`
-   - Struttura nidificata per organizzare le traduzioni
-   - Esempio:
-     ```php
-     // resources/lang/it/auth.php
-     return [
-         'login' => 'Accedi',
-         'register' => 'Registrati'
-     ];
-     ```
+### Organizzazione
 
-4. **Convenzioni di Naming**
-   - Utilizzare nomi descrittivi ma concisi
-   - Evitare spazi e caratteri speciali
-   - Mantenere la coerenza tra i file di traduzione
+- `lang/{locale}/auth.php`: Autenticazione e autorizzazione
+- `lang/{locale}/registration.php`: Registrazione utenti
+- `lang/{locale}/change_password.php`: Gestione password
+- `lang/{locale}/password.php`: Configurazione password
+- `lang/{locale}/user.php`: Gestione utenti
 
-5. **Gestione dei Namespace**
-   - Raggruppare le traduzioni per modulo/funzionalità
-   - Esempio:
-     ```php
-     // resources/lang/it/user.php
-     return [
-         'profile' => [
-             'title' => 'Profilo',
-             'edit' => 'Modifica Profilo'
-         ]
-     ];
-     ```
+### Formato delle Chiavi
 
-## Implementazione
-
-### 1. Definizione delle Chiavi
 ```php
-// Corretto
-__('auth.login')
-__('auth.register')
-__('user.profile.title')
-
-// Non Corretto
-__('Accedi')
-__('Registrati')
-__('Profilo')
-```
-
-### 2. File di Traduzione
-```php
-// resources/lang/it/auth.php
 return [
-    'login' => 'Accedi',
-    'register' => 'Registrati',
-    'logout' => 'Esci'
-];
-
-// resources/lang/en/auth.php
-return [
-    'login' => 'Login',
-    'register' => 'Register',
-    'logout' => 'Logout'
+    'context' => [
+        'subcontext' => [
+            'key' => 'value',
+            'nested' => [
+                'key' => 'value'
+            ]
+        ]
+    ]
 ];
 ```
 
-### 3. Utilizzo nei Componenti
-```blade
-{{-- Corretto --}}
-<a href="{{ route('login') }}">{{ __('auth.login') }}</a>
-<a href="{{ route('register') }}">{{ __('auth.register') }}</a>
+## Best Practices Specifiche
 
-{{-- Non Corretto --}}
-<a href="{{ route('login') }}">{{ __('Accedi') }}</a>
-<a href="{{ route('register') }}">{{ __('Registrati') }}</a>
+### 1. Nomenclatura delle Chiavi
+
+- Utilizzare chiavi descrittive e significative
+- Seguire una convenzione di denominazione coerente
+- Evitare abbreviazioni non standard
+- Utilizzare il formato snake_case per le chiavi
+
+### 2. Struttura Gerarchica
+
+- Organizzare le chiavi in modo logico e gerarchico
+- Raggruppare le chiavi correlate
+- Utilizzare sottosezioni per organizzare le traduzioni
+- Mantenere una profondità massima di 3-4 livelli
+
+### 3. Gestione delle Variabili
+
+- Utilizzare il formato `:variable` per le variabili
+- Documentare le variabili disponibili
+- Fornire esempi di utilizzo
+- Gestire correttamente il plurale/singolare
+
+### 4. Manutenzione
+
+- Verificare periodicamente la completezza delle traduzioni
+- Rimuovere le chiavi non utilizzate
+- Aggiornare le traduzioni quando si aggiungono nuove funzionalità
+- Mantenere un registro delle modifiche
+
+### 5. Qualità
+
+- Verificare la correttezza grammaticale
+- Mantenere uno stile coerente
+- Evitare traduzioni letterali
+- Considerare il contesto culturale
+
+## Strumenti e Risorse
+
+### Strumenti Consigliati
+
+1. Editor di testo con supporto per PHP
+2. Strumenti di validazione JSON
+3. Strumenti di gestione delle traduzioni
+4. Linter per PHP
+
+### Risorse Utili
+
+1. Documentazione Laravel sulle traduzioni
+2. Guide di stile per le traduzioni
+3. Glossario dei termini tecnici
+4. Template per nuove traduzioni
+
+## Processo di Revisione
+
+1. Verifica della completezza
+2. Controllo della coerenza
+3. Validazione della struttura
+4. Test delle traduzioni
+5. Approvazione finale
+
+## Note Tecniche
+
+- Utilizzare `trans()` per le traduzioni semplici
+- Utilizzare `trans_choice()` per le traduzioni con plurali
+- Gestire correttamente le variabili nelle traduzioni
+- Considerare l'ordine delle parole nelle diverse lingue
+
+## Esempi
+
+### Traduzione Semplice
+
+```php
+'welcome' => 'Benvenuto',
+'goodbye' => 'Arrivederci'
 ```
 
-## Best Practices Aggiuntive
+### Traduzione con Variabili
 
-1. **Validazione**
-   - Verificare l'esistenza delle chiavi di traduzione
-   - Utilizzare strumenti di validazione automatica
-   - Mantenere una lista di tutte le chiavi utilizzate
+```php
+'hello_name' => 'Ciao :name',
+'items_count' => ':count elementi'
+```
 
-2. **Manutenzione**
-   - Aggiornare regolarmente i file di traduzione
-   - Rimuovere le chiavi non utilizzate
-   - Documentare le nuove chiavi aggiunte
+### Traduzione con Plurali
 
-3. **Performance**
-   - Utilizzare il caching delle traduzioni
-   - Minimizzare le chiamate di traduzione
-   - Ottimizzare la struttura dei file
+```php
+'items' => '{0} Nessun elemento|{1} Un elemento|[2,*] :count elementi'
+```
 
-4. **Testing**
-   - Verificare la presenza di tutte le traduzioni
-   - Testare con diverse lingue
-   - Validare la coerenza delle traduzioni
+### Traduzione Gerarchica
+
+```php
+'auth' => [
+    'login' => [
+        'title' => 'Accedi',
+        'button' => 'Accedi',
+        'error' => 'Credenziali non valide'
+    ]
+]
+```
+
+## Conclusione
+
+Seguire queste best practices aiuta a mantenere un sistema di traduzioni efficiente, manutenibile e di alta qualità. È importante aggiornare regolarmente le traduzioni e mantenere la documentazione aggiornata.
 
 ## Collegamenti Correlati
 - [Documentazione Laravel Localization](https://laravel.com/docs/localization)

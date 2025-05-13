@@ -1,163 +1,117 @@
-# Regole per le Chiavi di Traduzione in SaluteOra
+# Regole per le Chiavi di Traduzione
 
-## Collegamenti correlati
-- [Documentazione centrale](/docs/README.md)
-- [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
-- [Implementazione Auth Pages](AUTH_PAGES_IMPLEMENTATION.md)
-- [Implementazione Logout](LOGOUT_BLADE_IMPLEMENTATION.md)
-- [Documentazione Auth Tema One](/laravel/Themes/One/docs/AUTH.md)
-- [Documentazione Lang](/laravel/Modules/Lang/docs/README.md)
+## Principi Fondamentali
 
-## Errore Identificato
+1. **Chiavi in Inglese**
+   - Le chiavi di traduzione DEVONO essere sempre in inglese
+   - Esempio corretto: `__('login')` invece di `__('Accedi')`
+   - Le traduzioni effettive vengono gestite nei file di lingua
 
-Nella documentazione e implementazione precedente, è stato commesso un errore fondamentale:
+2. **Struttura delle Chiavi**
+   - Utilizzare il formato `namespace.key` per chiavi complesse
+   - Esempio: `auth.login` per la pagina di login
+   - Mantenere una gerarchia logica e coerente
 
-```blade
-<a href="{{ route('login') }}" class="text-sm font-medium text-gray-700 hover:text-gray-900">
-    {{ __('Accedi') }}
-</a>
-```
+3. **File di Traduzione**
+   - Posizione: `lang/{locale}/`
+   - Struttura nidificata per organizzare le traduzioni
+   - Esempio:
+     ```php
+     // lang/it/auth.php
+     return [
+         'login' => 'Accedi',
+         'register' => 'Registrati'
+     ];
+     ```
 
-Questo approccio è **errato** perché:
+4. **Convenzioni di Naming**
+   - Utilizzare nomi descrittivi ma concisi
+   - Evitare spazi e caratteri speciali
+   - Mantenere la coerenza tra i file di traduzione
 
-1. Utilizza chiavi di traduzione in italiano (`'Accedi'`) invece di chiavi standardizzate
-2. Non segue la struttura espansa per i campi nei file di traduzione
-3. Non rispetta le convenzioni di naming per le chiavi di traduzione
+5. **Gestione dei Namespace**
+   - Raggruppare le traduzioni per modulo/funzionalità
+   - Esempio:
+     ```php
+     // lang/it/user.php
+     return [
+         'profile' => [
+             'title' => 'Profilo',
+             'edit' => 'Modifica Profilo'
+         ]
+     ];
+     ```
 
-## Regole Corrette per le Traduzioni
+## Implementazione
 
-Secondo le regole del progetto SaluteOra:
-
-1. **MAI utilizzare il metodo `->label()` nei componenti Filament**
-   - Le etichette sono gestite automaticamente dal LangServiceProvider
-
-2. **Utilizzare la struttura espansa per i campi nei file di traduzione**
-   - Non utilizzare stringhe dirette come chiavi di traduzione
-
-3. **Seguire la convenzione di naming per le chiavi di traduzione**
-   - Formato corretto: `modulo::risorsa.fields.campo.label`
-   - Esempio: `user::auth.login.button.label`
-
-4. **Verificare sempre che il LangServiceProvider sia registrato correttamente**
-
-## Implementazione Corretta
-
-### 1. Definizione delle Chiavi di Traduzione
-
-File: `/laravel/Modules/Lang/resources/lang/it/auth.php`
-
-```php
-return [
-    'login' => [
-        'button' => [
-            'label' => 'Accedi',
-        ],
-    ],
-    'register' => [
-        'button' => [
-            'label' => 'Registrati',
-        ],
-    ],
-    'logout' => [
-        'button' => [
-            'label' => 'Esci',
-        ],
-        'confirm' => [
-            'label' => 'Conferma Logout',
-        ],
-        'cancel' => [
-            'label' => 'Annulla',
-        ],
-        'success' => [
-            'message' => 'Logout effettuato con successo',
-        ],
-    ],
-    'profile' => [
-        'link' => [
-            'label' => 'Profilo',
-        ],
-    ],
-    'settings' => [
-        'link' => [
-            'label' => 'Impostazioni',
-        ],
-    ],
-];
-```
-
-File: `/laravel/Modules/Lang/resources/lang/en/auth.php`
+### 1. Definizione delle Chiavi
 
 ```php
-return [
-    'login' => [
-        'button' => [
-            'label' => 'Login',
-        ],
-    ],
-    'register' => [
-        'button' => [
-            'label' => 'Register',
-        ],
-    ],
-    'logout' => [
-        'button' => [
-            'label' => 'Logout',
-        ],
-        'confirm' => [
-            'label' => 'Confirm Logout',
-        ],
-        'cancel' => [
-            'label' => 'Cancel',
-        ],
-        'success' => [
-            'message' => 'Successfully logged out',
-        ],
-    ],
-    'profile' => [
-        'link' => [
-            'label' => 'Profile',
-        ],
-    ],
-    'settings' => [
-        'link' => [
-            'label' => 'Settings',
-        ],
-    ],
-];
-```
-
-### 2. Utilizzo Corretto nelle Viste
-
-```blade
-<a href="{{ route('login') }}" class="text-sm font-medium text-gray-700 hover:text-gray-900">
-    {{ __('auth.login.button.label') }}
-</a>
-<a href="{{ route('register') }}" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
-    {{ __('auth.register.button.label') }}
-</a>
-```
-
-### 3. Utilizzo nei Componenti Filament
-
-```php
-// Errato
-Action::make('logout')
-    ->label(__('Conferma Logout'))
-    ->color('danger')
-
 // Corretto
-Action::make('logout')
-    ->label(__('auth.logout.confirm.label'))
-    ->color('danger')
+__('auth.login')
+__('auth.register')
+__('user.profile.title')
+
+// Non Corretto
+__('Accedi')
+__('Registrati')
+__('Profilo')
 ```
 
-## Vantaggi dell'Approccio Corretto
+### 2. File di Traduzione
 
-1. **Manutenibilità**: Le chiavi di traduzione sono organizzate in modo gerarchico e coerente
-2. **Internazionalizzazione**: Facilita l'aggiunta di nuove lingue
-3. **Coerenza**: Garantisce una terminologia coerente in tutta l'applicazione
-4. **Automazione**: Consente l'estrazione automatica delle chiavi di traduzione
+```php
+// lang/it/auth.php
+return [
+    'login' => 'Accedi',
+    'register' => 'Registrati',
+    'logout' => 'Esci'
+];
 
-## Conclusione
+// lang/en/auth.php
+return [
+    'login' => 'Login',
+    'register' => 'Register',
+    'logout' => 'Logout'
+];
+```
 
-L'utilizzo di chiavi di traduzione standardizzate è fondamentale per garantire la coerenza e la manutenibilità dell'applicazione SaluteOra. L'implementazione corretta segue le convenzioni del progetto e facilita l'internazionalizzazione dell'applicazione.
+### 3. Utilizzo nei Componenti
+
+```blade
+{{-- Corretto --}}
+<a href="{{ route('login') }}">{{ __('auth.login') }}</a>
+<a href="{{ route('register') }}">{{ __('auth.register') }}</a>
+
+{{-- Non Corretto --}}
+<a href="{{ route('login') }}">{{ __('Accedi') }}</a>
+<a href="{{ route('register') }}">{{ __('Registrati') }}</a>
+```
+
+## Best Practices Aggiuntive
+
+1. **Validazione**
+   - Verificare l'esistenza delle chiavi di traduzione
+   - Utilizzare strumenti di validazione automatica
+   - Mantenere una lista di tutte le chiavi utilizzate
+
+2. **Manutenzione**
+   - Aggiornare regolarmente i file di traduzione
+   - Rimuovere le chiavi non utilizzate
+   - Documentare le nuove chiavi aggiunte
+
+3. **Performance**
+   - Utilizzare il caching delle traduzioni
+   - Minimizzare le chiamate di traduzione
+   - Ottimizzare la struttura dei file
+
+4. **Testing**
+   - Verificare la presenza di tutte le traduzioni
+   - Testare con diverse lingue
+   - Validare la coerenza delle traduzioni
+
+## Collegamenti Correlati
+
+- [Best Practices per le Traduzioni](TRANSLATION_BEST_PRACTICES.md)
+- [Struttura del Modulo](MODULE_STRUCTURE.md)
+- [Convenzioni di Codice](CODE_CONVENTIONS.md)

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\User\Filament\Widgets;
 
 use Filament\Forms\Form;
@@ -19,10 +21,7 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 class RegistrationWidget extends XotBaseWidget
 {
-<<<<<<< HEAD
-=======
     public ?array $data = [];
->>>>>>> aurmich/dev
     protected int | string | array $columnSpan = 'full';
     public string $type;
     public string $resource;
@@ -31,12 +30,8 @@ class RegistrationWidget extends XotBaseWidget
     public function mount(string $type): void
     {
         $this->type = $type;
-<<<<<<< HEAD
-        $this->resource=XotData::make()->getUserTypeResourceClass($type);
-=======
         $this->resource = XotData::make()->getUserTypeResourceClass($type);
         $this->form->fill();
->>>>>>> aurmich/dev
     }
 
 

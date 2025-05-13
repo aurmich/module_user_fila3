@@ -9,12 +9,6 @@ use Filament\Actions\EditAction;
 use Filament\Infolists\Components\TextEntry;
 use Modules\User\Filament\Resources\PermissionResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
-<<<<<<< HEAD
-=======
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Toggle;
-use Filament\Forms\Components\Forms;
->>>>>>> aurmich/dev
 
 class ViewPermission extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
 {

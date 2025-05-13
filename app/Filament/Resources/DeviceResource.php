@@ -14,10 +14,6 @@ use Modules\User\Filament\Resources\DeviceResource\RelationManagers\UsersRelatio
 use Modules\User\Models\Device;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
-<<<<<<< HEAD
-=======
-use Filament\Forms\Components\Forms;
->>>>>>> aurmich/dev
 
 class DeviceResource extends XotBaseResource
 {
@@ -26,7 +22,6 @@ class DeviceResource extends XotBaseResource
     public static function getFormSchema(): array
     {
         return [
-<<<<<<< HEAD
             'uuid' => TextInput::make('uuid')
                 ->label('UUID')
                 ->maxLength(255),
@@ -48,19 +43,6 @@ class DeviceResource extends XotBaseResource
                 ->reorderable(),
             'device' => TextInput::make('device')
                 ->label('Device Name')
-=======
-            \Filament\Forms\Components\TextInput::make('uuid')
-                ->required()
-                ->maxLength(255),
-            \Filament\Forms\Components\TextInput::make('mobile_id')
-                ->required()
-                ->maxLength(255),
-            \Filament\Forms\Components\TextInput::make('languages')
-                ->required()
-                ->maxLength(255),
-            \Filament\Forms\Components\TextInput::make('device_name')
-                ->required()
->>>>>>> aurmich/dev
                 ->maxLength(255),
             'platform' => TextInput::make('platform')
                 ->maxLength(255),

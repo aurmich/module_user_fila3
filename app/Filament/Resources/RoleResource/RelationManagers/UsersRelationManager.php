@@ -61,11 +61,7 @@ final class UsersRelationManager extends XotBaseRelationManager
      *
      * @return array<Tables\Columns\Column|Tables\Columns\Layout\Component>
      */
-<<<<<<< HEAD
     public function getListTableColumns(): array
-=======
-    public function getTableColumns(): array
->>>>>>> aurmich/dev
     {
         return [
             TextColumn::make('name')
