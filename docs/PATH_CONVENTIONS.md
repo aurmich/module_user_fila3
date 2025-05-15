@@ -1,11 +1,14 @@
 # Convenzioni Path nei Moduli Laravel
 
+<<<<<<< HEAD
 ## Collegamenti correlati
 - [Documentazione centrale](../../../docs/README.md)
 - [Collegamenti documentazione](../../../docs/collegamenti-documentazione.md)
 - [README modulo User](./README.md)
 - [Struttura moduli](../../../docs/architecture/modules-structure.md)
 
+=======
+>>>>>>> 73101fd (.)
 ## ✅ Path Corretti vs ❌ Path Errati
 
 ### Views
@@ -15,7 +18,10 @@ laravel/Modules/User/Resources/views/filament/widgets/auth/login.blade.php
 
 # ✅ CORRETTO
 laravel/Modules/User/resources/views/filament/widgets/auth/login.blade.php
+<<<<<<< HEAD
 Modules/User/resources/views/filament/widgets/auth/login.blade.php
+=======
+>>>>>>> 73101fd (.)
 ```
 
 ### Actions
@@ -25,11 +31,14 @@ laravel/Modules/User/Actions/User/DeleteUserAction.php
 
 # ✅ CORRETTO
 laravel/Modules/User/app/Actions/User/DeleteUserAction.php
+<<<<<<< HEAD
 # ✅ CORRETTO
 Modules/User/app/Actions/User/DeleteUserAction.php
 
 # ❌ ERRATO
 Modules/User/Actions/User/DeleteUserAction.php
+=======
+>>>>>>> 73101fd (.)
 ```
 
 ### Controllers
@@ -39,6 +48,7 @@ laravel/Modules/User/app/Http/Controllers/UserController.php
 
 # ❌ ERRATO
 laravel/Modules/User/Http/Controllers/UserController.php
+<<<<<<< HEAD
 Modules/User/app/Http/Controllers/UserController.php
 
 # ❌ ERRATO
@@ -61,13 +71,18 @@ Modules/User/app/Http/Livewire/Profile/DeleteAccount.php
 
 # ❌ ERRATO
 Modules/User/Http/Livewire/Profile/DeleteAccount.php
+=======
+>>>>>>> 73101fd (.)
 ```
 
 ## Struttura Standard delle Cartelle
 
 ```bash
 laravel/Modules/User/
+<<<<<<< HEAD
 Modules/User/
+=======
+>>>>>>> 73101fd (.)
 ├── app/                    # Tutto il codice PHP va qui
 │   ├── Actions/           # Actions
 │   ├── Http/             # Controllers, Middleware, etc.
@@ -96,6 +111,7 @@ Modules/User/
    // ❌ ERRATO
    namespace Modules\User\Actions;
    ```
+<<<<<<< HEAD
    namespace Modules\User\Actions;
    
    // ❌ ERRATO
@@ -113,6 +129,8 @@ Modules/User/
    ```
    
    Il namespace deve riflettere il percorso relativo alla cartella `app/`, che è mappata al namespace base `Modules\User\` nel composer.json.
+=======
+>>>>>>> 73101fd (.)
 
 3. **Codice PHP**
    - Tutto il codice PHP va sotto la cartella `app/`
@@ -211,6 +229,7 @@ namespace Modules\User\Http\Controllers;
 // Dopo
 namespace Modules\User\App\Actions;
 namespace Modules\User\App\Http\Controllers;
+<<<<<<< HEAD
 // Prima (ERRATO)
 namespace Modules\User\App\Actions;
 namespace Modules\User\App\Http\Controllers;
@@ -218,6 +237,8 @@ namespace Modules\User\App\Http\Controllers;
 // Dopo (CORRETTO)
 namespace Modules\User\Actions;
 namespace Modules\User\Http\Controllers;
+=======
+>>>>>>> 73101fd (.)
 ```
 
 ## Automazione

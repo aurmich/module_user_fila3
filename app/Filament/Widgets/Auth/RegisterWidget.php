@@ -1,7 +1,12 @@
 <?php
+<<<<<<< HEAD
 declare(strict_types=1);
 
 namespace Modules\User\Filament\Widgets\Auth;
+=======
+
+namespace Modules\User\App\Filament\Widgets\Auth;
+>>>>>>> 73101fd (.)
 
 use Filament\Widgets\Widget;
 use Filament\Forms\Components\TextInput;
@@ -11,7 +16,10 @@ use Modules\User\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
 use Illuminate\Support\Facades\Auth;
+<<<<<<< HEAD
 use Filament\Forms\Components\TextInput as FormsTextInput;
+=======
+>>>>>>> 73101fd (.)
 
 class RegisterWidget extends Widget
 {
@@ -31,6 +39,7 @@ class RegisterWidget extends Widget
                 Section::make()
                     ->schema([
                         TextInput::make('name')
+<<<<<<< HEAD
                             ->required()
                             ->maxLength(255)
                             ->autocomplete('name'),
@@ -52,6 +61,37 @@ class RegisterWidget extends Widget
                             ->required()
                             ->same('password')
                             ->autocomplete('new-password'),
+=======
+                            ->label(__('user::auth.register.name'))
+                            ->required()
+                            ->maxLength(255)
+                            ->autocomplete('name')
+                            ->placeholder(__('user::auth.register.name_placeholder')),
+
+                        TextInput::make('email')
+                            ->label(__('user::auth.register.email'))
+                            ->email()
+                            ->required()
+                            ->unique(table: User::class)
+                            ->autocomplete('email')
+                            ->placeholder(__('user::auth.register.email_placeholder')),
+
+                        TextInput::make('password')
+                            ->label(__('user::auth.register.password'))
+                            ->password()
+                            ->required()
+                            ->rule(Password::default())
+                            ->autocomplete('new-password')
+                            ->placeholder(__('user::auth.register.password_placeholder')),
+
+                        TextInput::make('password_confirmation')
+                            ->label(__('user::auth.register.password_confirmation'))
+                            ->password()
+                            ->required()
+                            ->same('password')
+                            ->autocomplete('new-password')
+                            ->placeholder(__('user::auth.register.password_confirmation_placeholder')),
+>>>>>>> 73101fd (.)
                     ])
                     ->columns(1),
             ])

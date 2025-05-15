@@ -29,7 +29,10 @@ return [
         'password' => [
             'label' => 'Password',
             'placeholder' => 'Inserisci la password',
+<<<<<<< HEAD
             'description' => 'password',
+=======
+>>>>>>> 73101fd (.)
         ],
         'password_confirmation' => [
             'label' => 'Conferma Password',

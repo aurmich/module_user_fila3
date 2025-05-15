@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Http\Livewire\Auth;
 
 use Livewire\Component;
@@ -80,5 +81,24 @@ class Logout extends Component
     public function render(): View
     {
         return view('user::livewire.auth.logout');
+=======
+namespace Modules\User\App\Http\Livewire\Auth;
+
+use Livewire\Component;
+
+class Logout extends Component
+{
+    public function mount(): void
+    {
+        auth()->logout();
+        session()->invalidate();
+        session()->regenerateToken();
+        redirect()->route('home')->send();
+    }
+
+    public function render()
+    {
+        return view('livewire.auth.logout');
+>>>>>>> 73101fd (.)
     }
 }

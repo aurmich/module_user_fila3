@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 declare(strict_types=1);
+=======
+>>>>>>> 73101fd (.)
 
 namespace Modules\User\Livewire;
 

@@ -57,7 +57,10 @@ return [
             'fields' => [
                 'label' => 'new_password',
             ],
+<<<<<<< HEAD
             'description' => 'new_password',
+=======
+>>>>>>> 73101fd (.)
         ],
     ],
     'actions' => [

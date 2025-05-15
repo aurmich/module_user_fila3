@@ -32,5 +32,9 @@ build
 *.bak
 # File di log
 *.log
+<<<<<<< HEAD
+=======
+-e 
+>>>>>>> 73101fd (.)
 # PHPStan documentation
 docs/phpstan/

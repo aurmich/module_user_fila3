@@ -24,12 +24,15 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e i profili utente de
 - [Socialite Integration](./socialite.txt) - Login social
 - [Two Factor Authentication](./two_factor.txt) - Autenticazione a due fattori
 - [Custom Login](./custom_login.md) - Implementazione login personalizzata
+<<<<<<< HEAD
 - [Volt Folio Logout](./VOLT_FOLIO_LOGOUT.md) - Implementazione logout con Volt e Folio
 - [Volt Folio Auth Implementation](./VOLT_FOLIO_AUTH_IMPLEMENTATION.md) - Implementazione completa autenticazione con Volt e Folio
 - [Analisi Logout Blade](./LOGOUT_BLADE_ANALYSIS.md) - Analisi e miglioramenti del file logout.blade.php
 - [Volt Folio Logout](./VOLT_FOLIO_LOGOUT.md) - Implementazione logout con Volt e Folio
 - [Volt Folio Auth Implementation](./VOLT_FOLIO_AUTH_IMPLEMENTATION.md) - Implementazione completa autenticazione con Volt e Folio
 - [Analisi Logout Blade](./LOGOUT_BLADE_ANALYSIS.md) - Analisi e miglioramenti del file logout.blade.php
+=======
+>>>>>>> 73101fd (.)
 
 ### Modelli e Profili
 - [User Profile Models](./user_profile_models.md) - Modelli profilo utente
@@ -54,9 +57,12 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e i profili utente de
 ### Versione HEAD
 
 - [Best Practices](./BEST-PRACTICES.md) - Linee guida generali
+<<<<<<< HEAD
 - [Convenzioni Path Actions](./ACTIONS_PATH_CONVENTION.md) - Convenzioni per i percorsi delle Actions
 - [Convenzioni Path](./PATH_CONVENTIONS.md) - Convenzioni generali per i percorsi nei moduli
 - [Checklist Struttura Directory](./DIRECTORY_STRUCTURE_CHECKLIST.md) - Checklist per la struttura delle directory
+=======
+>>>>>>> 73101fd (.)
 
 ### Versione Incoming
 
@@ -478,6 +484,7 @@ class UserServiceProvider extends XotBaseServiceProvider
 
 ---
 
+<<<<<<< HEAD
 ## Gestione delle Traduzioni
 
 Il modulo User utilizza un sistema di traduzioni multilingua per supportare l'interfaccia utente in diverse lingue. Le traduzioni sono organizzate in file separati per ogni lingua nella cartella `lang/`.
@@ -515,3 +522,5 @@ Per aggiungere o aggiornare le traduzioni:
 Per installare e utilizzare i server MCP in modo condiviso, segui la guida:
 [Installazione MCP Server](../AI/docs/MCP_INSTALLAZIONE_SERVER.md)
 
+=======
+>>>>>>> 73101fd (.)

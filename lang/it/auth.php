@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< HEAD
     // Messaggi generali di autenticazione
     'failed' => 'Credenziali non valide.',
     'password' => 'La password inserita non è corretta.',
@@ -11,6 +12,8 @@ return [
     'unauthorized' => 'Non hai i permessi necessari per questa operazione.',
 
     // Login
+=======
+>>>>>>> 73101fd (.)
     'login-via' => 'Accedi con',
 
     'login-failed' => 'Login fallito, riprova.',
@@ -109,6 +112,7 @@ return [
         'password' => 'Password',
         'password_placeholder' => '••••••••',
         'remember' => 'Ricordami',
+<<<<<<< HEAD
         'email_structured' => [
             'label' => 'Email',
             'placeholder' => 'Inserisci la tua email'
@@ -120,10 +124,13 @@ return [
         'remember_structured' => [
             'label' => 'Ricordami'
         ],
+=======
+>>>>>>> 73101fd (.)
         'submit' => 'Accedi',
         'forgot_password' => 'Password dimenticata?',
         'no_account' => 'Non hai un account?',
         'register' => 'Registrati',
+<<<<<<< HEAD
         'success' => 'Accesso effettuato con successo.',
         'failed' => 'Credenziali non valide.',
         'logout_success' => 'Logout effettuato con successo.',
@@ -144,6 +151,10 @@ return [
     ],
 
     // Registrazione
+=======
+    ],
+
+>>>>>>> 73101fd (.)
     'register' => [
         'title' => 'Crea un nuovo account',
         'subtitle' => 'Inserisci i tuoi dati per registrarti',
@@ -157,6 +168,7 @@ return [
         'password_confirmation_placeholder' => '••••••••',
         'submit' => 'Registrati',
         'already_registered' => 'Hai già un account? Accedi',
+<<<<<<< HEAD
         'success' => 'Registrazione completata con successo.',
         'failed' => 'Impossibile completare la registrazione.',
         // Structured version
@@ -198,6 +210,21 @@ return [
     // Reset Password
     'reset-password' => [
         'title' => 'Reimposta password',
+=======
+    ],
+
+    'forgot-password' => [
+        'title' => 'Recupera la password',
+        'subtitle' => 'Inserisci la tua email per ricevere il link di reset',
+        'email' => 'Indirizzo email',
+        'email_placeholder' => 'esempio@email.com',
+        'submit' => 'Invia link di reset',
+        'back_to_login' => 'Torna al login',
+    ],
+
+    'reset-password' => [
+        'title' => 'Reimposta la password',
+>>>>>>> 73101fd (.)
         'subtitle' => 'Inserisci la nuova password',
         'email' => 'Indirizzo email',
         'email_placeholder' => 'esempio@email.com',
@@ -206,6 +233,7 @@ return [
         'password_confirmation' => 'Conferma password',
         'password_confirmation_placeholder' => '••••••••',
         'submit' => 'Reimposta password',
+<<<<<<< HEAD
         'success' => 'Password reimpostata con successo.',
         'failed' => 'Impossibile reimpostare la password.',
         // Structured version
@@ -252,6 +280,10 @@ return [
     ],
     
     // Reset Password
+=======
+    ],
+
+>>>>>>> 73101fd (.)
     'passwords' => [
         'reset' => 'La tua password è stata reimpostata!',
         'sent' => 'Ti abbiamo inviato il link per reimpostare la password!',
