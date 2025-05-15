@@ -5,11 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Widgets;
 
 use Filament\Forms\Components\TextInput;
-<<<<<<< HEAD
 use Filament\Forms\Components\Toggle;
-=======
-use Filament\Forms\Components\Checkbox;
->>>>>>> 73101fd (.)
 use Filament\Forms\Form;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
@@ -17,11 +13,8 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use Exception;
 use Illuminate\Http\RedirectResponse;
 use Livewire\Attributes\Layout;
-<<<<<<< HEAD
 use Filament\Forms\Components\TextInput as FormsTextInput;
 use Filament\Forms\Components\Checkbox as FormsCheckbox;
-=======
->>>>>>> 73101fd (.)
 
 /**
  * LoginWidget: Widget di login conforme alle regole Windsurf/Xot.
@@ -59,25 +52,14 @@ class LoginWidget extends XotBaseWidget
         $this->form->fill();
     }
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
     /**
      * Definisce lo schema del form di login.
      *
      * @return array<string, \Filament\Forms\Components\Component>
-=======
-
-
-=======
->>>>>>> Stashed changes
-    /**
-     * Definisce lo schema del form con i suoi campi.
->>>>>>> 73101fd (.)
      */
     public function getFormSchema(): array
     {
         return [
-<<<<<<< HEAD
             'email' => TextInput::make('email')
                 ->email()
                 ->required()
@@ -87,25 +69,6 @@ class LoginWidget extends XotBaseWidget
                 ->required(),
             'remember' => Toggle::make('remember')
                 ->label('Ricordami'),
-=======
-            TextInput::make('email')
-                ->email()
-                ->required()
-                ->label(__('Email'))
-                ->placeholder(__('Inserisci la tua email'))
-                ->suffixIcon('heroicon-m-envelope'),
-
-            TextInput::make('password')
-                ->password()
-                ->required()
-                ->label(__('Password'))
-                ->placeholder(__('Inserisci la tua password'))
-                ->suffixIcon('heroicon-m-key'),
-
-            Checkbox::make('remember')
-                ->label(__('Ricordami'))
-                ->default(false),
->>>>>>> 73101fd (.)
         ];
     }
 

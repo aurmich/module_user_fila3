@@ -8,16 +8,10 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\Route;
 use Modules\Xot\Datas\XotData;
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 use Modules\User\Http\Controllers\Auth\LogoutController;
-=======
->>>>>>> 73101fd (.)
-=======
-use Modules\User\Http\Controllers\Auth\LogoutController;
->>>>>>> Stashed changes
 
 require 'socialite.php';
+
 
 if (XotData::make()->register_pub_theme) {
     // require 'web_tall.php';
@@ -25,12 +19,5 @@ if (XotData::make()->register_pub_theme) {
     Route::get('/login', static fn () => redirect('/admin/login'))->name('login');
 }
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 // Route::post('/logout', LogoutController::class)->name('logout');
-=======
->>>>>>> 73101fd (.)
-=======
-// Route::post('/logout', LogoutController::class)->name('logout');
->>>>>>> Stashed changes
 //Route::get('/upgrade', 'UpgradeController');

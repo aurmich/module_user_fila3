@@ -1,4 +1,4 @@
-# Best Practices per l'Implementazione del Logout in SaluteOra
+# Best Practices per l'Implementazione del Logout 
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
@@ -8,7 +8,7 @@
 
 ## Panoramica
 
-Questo documento descrive le best practices per implementare il processo di logout in SaluteOra, con particolare attenzione all'utilizzo di Livewire Volt e alla gestione corretta degli eventi di autenticazione.
+Questo documento descrive le best practices per implementare il processo di logout , con particolare attenzione all'utilizzo di Livewire Volt e alla gestione corretta degli eventi di autenticazione.
 
 ## Problematiche del Logout Diretto
 

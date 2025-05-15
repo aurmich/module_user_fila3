@@ -18,7 +18,7 @@ Themes/One/resources/views/pages/auth/logout.blade.php
 
 ## Approcci di Implementazione
 
-In SaluteOra, ci sono tre approcci principali per implementare il logout:
+, ci sono tre approcci principali per implementare il logout:
 
 ### 1. Folio con PHP puro (Raccomandato)
 

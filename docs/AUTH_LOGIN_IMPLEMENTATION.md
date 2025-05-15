@@ -1,4 +1,4 @@
-# Implementazione Corretta della Pagina di Login in SaluteOra
+# Implementazione Corretta della Pagina di Login 
 
 ## Collegamenti correlati
 - [Documentazione centrale](/docs/README.md)

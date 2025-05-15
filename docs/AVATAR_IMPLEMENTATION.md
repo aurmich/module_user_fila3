@@ -1,4 +1,4 @@
-# Implementazione degli Avatar in SaluteOra
+# Implementazione degli Avatar 
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
@@ -7,7 +7,7 @@
 
 ## Panoramica
 
-Questo documento descrive l'implementazione degli avatar utente in SaluteOra, con particolare attenzione agli avatar SVG predefiniti utilizzati quando l'utente non ha un'immagine del profilo personalizzata.
+Questo documento descrive l'implementazione degli avatar utente , con particolare attenzione agli avatar SVG predefiniti utilizzati quando l'utente non ha un'immagine del profilo personalizzata.
 
 ## Struttura degli Avatar SVG
 

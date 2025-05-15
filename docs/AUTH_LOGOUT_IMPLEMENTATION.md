@@ -1,4 +1,4 @@
-# Implementazione del Logout in SaluteOra
+# Implementazione del Logout 
 
 ## Indice
 - [Panoramica](#panoramica)
@@ -11,11 +11,11 @@
 
 ## Panoramica
 
-Questo documento descrive l'implementazione corretta del processo di logout in SaluteOra, utilizzando Livewire Volt, LaravelLocalization e componenti Filament. L'obiettivo è fornire una guida completa per implementare un processo di logout sicuro, user-friendly e conforme alle convenzioni del progetto.
+Questo documento descrive l'implementazione corretta del processo di logout , utilizzando Livewire Volt, LaravelLocalization e componenti Filament. L'obiettivo è fornire una guida completa per implementare un processo di logout sicuro, user-friendly e conforme alle convenzioni del progetto.
 
 ## Implementazione Raccomandata
 
-L'implementazione raccomandata per il logout in SaluteOra utilizza Volt con il metodo `mount()` per gestire il processo di logout in modo automatico e controllato:
+L'implementazione raccomandata per il logout  utilizza Volt con il metodo `mount()` per gestire il processo di logout in modo automatico e controllato:
 
 ```php
 <?php

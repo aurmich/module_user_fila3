@@ -1,7 +1,7 @@
 # Convenzione dei Percorsi per le Actions
 
 ## Regola Fondamentale
-In SaluteOra, tutte le Actions devono essere collocate nella directory `app/Actions/` del modulo, seguendo la struttura PSR-4 per l'autoloading.
+, tutte le Actions devono essere collocate nella directory `app/Actions/` del modulo, seguendo la struttura PSR-4 per l'autoloading.
 
 ## Esempi di Percorsi Corretti vs Errati
 

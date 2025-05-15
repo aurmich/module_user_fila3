@@ -75,7 +75,7 @@ Questo errore evidenzia l'importanza di:
 
 ## Approccio Corretto per l'Implementazione
 
-Per implementare correttamente le pagine di autenticazione in SaluteOra, è necessario scegliere l'approccio più adatto in base alla complessità dell'operazione:
+Per implementare correttamente le pagine di autenticazione , è necessario scegliere l'approccio più adatto in base alla complessità dell'operazione:
 
 1. **Folio con PHP puro**: Per operazioni semplici come il logout (già correttamente implementato)
 2. **Widget Filament**: Per form complessi che devono essere adattabili a diverse grafiche

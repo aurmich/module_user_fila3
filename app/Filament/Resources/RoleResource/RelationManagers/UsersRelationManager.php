@@ -31,14 +31,14 @@ use Modules\Xot\Filament\Traits\TransTrait;
  */
 final class UsersRelationManager extends XotBaseRelationManager
 {
-
+    
     protected static string $relationship = 'users';
 
     protected static ?string $inverseRelationship = 'roles';
 
+    
 
-
-
+    
 
 
     /**
@@ -61,15 +61,7 @@ final class UsersRelationManager extends XotBaseRelationManager
      *
      * @return array<Tables\Columns\Column|Tables\Columns\Layout\Component>
      */
-<<<<<<< Updated upstream
-<<<<<<< HEAD
     public function getTableColumns(): array
-=======
-    public function getListTableColumns(): array
->>>>>>> 73101fd (.)
-=======
-    public function getTableColumns(): array
->>>>>>> Stashed changes
     {
         return [
             TextColumn::make('name')
@@ -126,9 +118,9 @@ final class UsersRelationManager extends XotBaseRelationManager
         ];
     }
 
+    
 
+   
 
-
-
-
+   
 }

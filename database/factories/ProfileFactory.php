@@ -1,12 +1,5 @@
 <?php
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 declare(strict_types=1);
-=======
->>>>>>> 73101fd (.)
-=======
-declare(strict_types=1);
->>>>>>> Stashed changes
 
 namespace Modules\User\Database\Factories;
 

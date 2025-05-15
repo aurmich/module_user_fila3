@@ -33,17 +33,8 @@ return [
         'openFilters' => [
             'label' => 'openFilters',
         ],
-<<<<<<< Updated upstream
-<<<<<<< HEAD
         'user' => [
             'label' => 'user',
         ],
-=======
->>>>>>> 73101fd (.)
-=======
-        'user' => [
-            'label' => 'user',
-        ],
->>>>>>> Stashed changes
     ],
 ];

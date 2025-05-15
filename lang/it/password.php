@@ -57,14 +57,7 @@ return [
             'fields' => [
                 'label' => 'new_password',
             ],
-<<<<<<< Updated upstream
-<<<<<<< HEAD
             'description' => 'new_password',
-=======
->>>>>>> 73101fd (.)
-=======
-            'description' => 'new_password',
->>>>>>> Stashed changes
         ],
     ],
     'actions' => [
