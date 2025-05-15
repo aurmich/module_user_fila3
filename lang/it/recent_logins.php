@@ -33,8 +33,26 @@ return [
         'openFilters' => [
             'label' => 'openFilters',
         ],
+<<<<<<< HEAD
         'user' => [
             'label' => 'user',
         ],
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+        'user' => [
+            'label' => 'user',
+        ],
+=======
+>>>>>>> 73101fd (.)
+=======
+        'user' => [
+            'label' => 'user',
+        ],
+>>>>>>> Stashed changes
+=======
+>>>>>>> 88efd6b (.)
+>>>>>>> 019e694 (.)
     ],
 ];

@@ -20,6 +20,7 @@ Tracker gathers a lot of information from your requests to identify and store:
 https://github.com/antonioribeiro/tracker
 
 ---
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -34,3 +35,5 @@ https://github.com/antonioribeiro/tracker
 
 ---
 
+=======
+>>>>>>> 88efd6b (.)

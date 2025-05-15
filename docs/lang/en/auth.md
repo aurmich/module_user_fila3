@@ -45,9 +45,13 @@ Questo file contiene le traduzioni in inglese per tutte le stringhe relative al 
 - Rimozione conflitti di merge
 - Standardizzazione dei messaggi
 - Miglioramento dei placeholder
+<<<<<<< HEAD
 - Aggiunta di nuovi messaggi di sistema 
 ## Collegamenti tra versioni di auth.md
 * [auth.md](../../../Xot/docs/install/auth.md)
 * [auth.md](../../../User/docs/lang/en/auth.md)
 * [auth.md](../../../Tenant/docs/it/config/auth.md)
 
+=======
+- Aggiunta di nuovi messaggi di sistema 
+>>>>>>> 88efd6b (.)

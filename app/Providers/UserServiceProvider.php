@@ -11,8 +11,20 @@ namespace Modules\User\Providers;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Notifications\Messages\MailMessage;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Gate;
+=======
+<<<<<<< HEAD
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\ServiceProvider;
+=======
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Gate;
+>>>>>>> 88efd6b (.)
+>>>>>>> 019e694 (.)
 use Illuminate\Validation\Rules\Password;
 use Laravel\Passport\Passport;
 use Modules\User\Datas\PasswordData;
@@ -24,8 +36,19 @@ use Modules\User\Models\OauthRefreshToken;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 use SocialiteProviders\Manager\ServiceProvider as SocialiteServiceProvider;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\ServiceProvider;
+=======
+>>>>>>> 73101fd (.)
+=======
+>>>>>>> 88efd6b (.)
+>>>>>>> 019e694 (.)
 
 class UserServiceProvider extends XotBaseServiceProvider
 {
@@ -43,11 +66,29 @@ class UserServiceProvider extends XotBaseServiceProvider
         $this->registerMailsNotification();
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> 019e694 (.)
     public function register(): void
     {
         parent::register();
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> 73101fd (.)
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> 88efd6b (.)
+>>>>>>> 019e694 (.)
     public function registerMailsNotification(): void
     {
         $app_name = config('app.name');
@@ -113,7 +154,35 @@ class UserServiceProvider extends XotBaseServiceProvider
 
     private function registerPassport(): void
     {
+<<<<<<< HEAD
         if (method_exists(Passport::class, 'routes')) {
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+        
+=======
+>>>>>>> Stashed changes
+=======
+        Passport::usePersonalAccessClientModel(OauthPersonalAccessClient::class);
+>>>>>>> 88efd6b (.)
+        Passport::useTokenModel(OauthAccessToken::class);
+        Passport::useRefreshTokenModel(OauthRefreshToken::class);
+        Passport::useAuthCodeModel(OauthAuthCode::class);
+        Passport::useClientModel(OauthClient::class);
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+>>>>>>> 73101fd (.)
+        if (method_exists(Passport::class, 'routes')) {
+=======
+
+        if (class_exists(Passport::class) && method_exists(Passport::class, 'routes')) {
+>>>>>>> Stashed changes
+=======
+        if (method_exists(Passport::class, 'routes')) {
+>>>>>>> 88efd6b (.)
+>>>>>>> 019e694 (.)
             Passport::routes();
         }
 

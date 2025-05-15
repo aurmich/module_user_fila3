@@ -74,6 +74,7 @@ Sistema di autenticazione completo con supporto per multiple strategie di login,
 
 ## Related Features
 - [Gestione Utenti](./gestione-utenti.md)
+<<<<<<< HEAD
 ### Versione HEAD
 
 - [Autorizzazione](./autorizzazione.md) 
@@ -89,3 +90,6 @@ Sistema di autenticazione completo con supporto per multiple strategie di login,
 
 ---
 
+=======
+- [Autorizzazione](./autorizzazione.md) 
+>>>>>>> 88efd6b (.)

@@ -8,7 +8,21 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Illuminate\Support\Facades\Password;
+<<<<<<< HEAD
 use Filament\Forms\Components\TextInput as FormsTextInput;
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+use Filament\Forms\Components\TextInput as FormsTextInput;
+=======
+>>>>>>> 73101fd (.)
+=======
+use Filament\Forms\Components\TextInput as FormsTextInput;
+>>>>>>> Stashed changes
+=======
+>>>>>>> 88efd6b (.)
+>>>>>>> 019e694 (.)
 
 class ForgotPasswordWidget extends BaseAuthWidget
 {
@@ -21,9 +35,35 @@ class ForgotPasswordWidget extends BaseAuthWidget
                 Section::make()
                     ->schema([
                         TextInput::make('email')
+<<<<<<< HEAD
                             ->email()
                             ->required()
                             ->maxLength(255),
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+                            ->email()
+                            ->required()
+                            ->maxLength(255),
+=======
+=======
+>>>>>>> 88efd6b (.)
+                            ->label(__('user::auth.forgot-password.email'))
+                            ->email()
+                            ->required()
+                            ->autocomplete('email')
+                            ->placeholder(__('user::auth.forgot-password.email_placeholder')),
+<<<<<<< HEAD
+>>>>>>> 73101fd (.)
+=======
+                            ->email()
+                            ->required()
+                            ->maxLength(255),
+>>>>>>> Stashed changes
+=======
+>>>>>>> 88efd6b (.)
+>>>>>>> 019e694 (.)
                     ])
                     ->columns(1),
             ])

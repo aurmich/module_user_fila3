@@ -3,7 +3,11 @@
 ## Indice
 - [Introduzione](#introduzione)
 - [Single Table Inheritance](#single-table-inheritance)
+<<<<<<< HEAD
 - [Implementazione in il progetto](#implementazione-in-<nome progetto>)
+=======
+- [Implementazione in SaluteOra](#implementazione-in-saluteora)
+>>>>>>> 88efd6b (.)
 - [Casi d'uso nel Modulo User](#casi-duso-nel-modulo-user)
 - [Pattern e Best Practices](#pattern-e-best-practices)
 - [Troubleshooting](#troubleshooting)
@@ -12,7 +16,11 @@
 
 ## Introduzione
 
+<<<<<<< HEAD
 Tighten/Parental è una libreria Laravel che aggiunge funzionalità di Single Table Inheritance (STI) ad Eloquent, il sistema ORM di Laravel. Questa documentazione spiega come viene utilizzata nel Modulo User di il progetto e come implementarla correttamente nei tuoi modelli.
+=======
+Tighten/Parental è una libreria Laravel che aggiunge funzionalità di Single Table Inheritance (STI) ad Eloquent, il sistema ORM di Laravel. Questa documentazione spiega come viene utilizzata nel Modulo User di SaluteOra e come implementarla correttamente nei tuoi modelli.
+>>>>>>> 88efd6b (.)
 
 ### Cos'è Tighten/Parental?
 
@@ -45,11 +53,19 @@ In un'implementazione tradizionale di Laravel, ogni modello corrisponde a una ta
 3. I modelli figli ereditano dal modello padre
 4. Quando si recupera un record, viene istanziato automaticamente il modello figlio corretto
 
+<<<<<<< HEAD
 ## Implementazione in il progetto
 
 ### Installazione
 
 Nel progetto il progetto, Tighten/Parental è già installato come dipendenza. Se stai creando un nuovo modulo che necessita di questa funzionalità, puoi verificare l'installazione con:
+=======
+## Implementazione in SaluteOra
+
+### Installazione
+
+Nel progetto SaluteOra, Tighten/Parental è già installato come dipendenza. Se stai creando un nuovo modulo che necessita di questa funzionalità, puoi verificare l'installazione con:
+>>>>>>> 88efd6b (.)
 
 ```bash
 composer show tightenco/parental
@@ -127,14 +143,22 @@ class User extends Model
 
 ## Casi d'uso nel Modulo User
 
+<<<<<<< HEAD
 Nel Modulo User di il progetto, utilizziamo Tighten/Parental per gestire diversi tipi di utenti con comportamenti specifici.
+=======
+Nel Modulo User di SaluteOra, utilizziamo Tighten/Parental per gestire diversi tipi di utenti con comportamenti specifici.
+>>>>>>> 88efd6b (.)
 
 ### 1. Gestione dei Ruoli con Modelli Dedicati
 
 Invece di utilizzare un sistema di permessi complesso, possiamo gestire comportamenti specifici per ruolo attraverso modelli dedicati:
 
 ```php
+<<<<<<< HEAD
 // Implementazione reale in il progetto
+=======
+// Implementazione reale in SaluteOra
+>>>>>>> 88efd6b (.)
 namespace Modules\User\app\Models;
 
 use Parental\HasParent;
@@ -227,7 +251,11 @@ class Doctor extends User
   - Gli utenti possono avere più ruoli contemporaneamente
   - I comportamenti sono simili ma con diverse autorizzazioni
 
+<<<<<<< HEAD
 In il progetto, spesso combiniamo entrambi gli approcci.
+=======
+In SaluteOra, spesso combiniamo entrambi gli approcci.
+>>>>>>> 88efd6b (.)
 
 ### 2. Combinazione con Trait e Interface
 

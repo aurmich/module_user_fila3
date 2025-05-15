@@ -21,7 +21,23 @@ class ListDevices extends XotBaseListRecords
     /**
      * @return array<string, \Filament\Tables\Columns\Column>
      */
+<<<<<<< HEAD
     public function getTableColumns(): array
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+    public function getTableColumns(): array
+=======
+    public function getListTableColumns(): array
+>>>>>>> 73101fd (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
+=======
+    public function getListTableColumns(): array
+>>>>>>> 88efd6b (.)
+>>>>>>> 019e694 (.)
     {
         return [
             'uuid' => TextColumn::make('uuid')
@@ -57,6 +73,14 @@ class ListDevices extends XotBaseListRecords
                 ->sortable(),
         ];
     }
+<<<<<<< HEAD
 
     
+=======
+<<<<<<< HEAD
+=======
+
+    
+>>>>>>> 88efd6b (.)
+>>>>>>> 019e694 (.)
 }

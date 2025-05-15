@@ -11,7 +11,11 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\Filter;
 use Illuminate\Database\Eloquent\Builder;
 use Modules\UI\Enums\TableLayoutEnum;
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> 88efd6b (.)
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Modules\Xot\Filament\Traits\TransTrait;
 
@@ -31,14 +35,34 @@ use Modules\Xot\Filament\Traits\TransTrait;
  */
 final class UsersRelationManager extends XotBaseRelationManager
 {
+<<<<<<< HEAD
     
+=======
+<<<<<<< HEAD
+
+=======
+    
+>>>>>>> 88efd6b (.)
+>>>>>>> 019e694 (.)
     protected static string $relationship = 'users';
 
     protected static ?string $inverseRelationship = 'roles';
 
+<<<<<<< HEAD
     
 
     
+=======
+<<<<<<< HEAD
+
+
+
+=======
+    
+
+    
+>>>>>>> 88efd6b (.)
+>>>>>>> 019e694 (.)
 
 
     /**
@@ -61,7 +85,23 @@ final class UsersRelationManager extends XotBaseRelationManager
      *
      * @return array<Tables\Columns\Column|Tables\Columns\Layout\Component>
      */
+<<<<<<< HEAD
     public function getTableColumns(): array
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+    public function getTableColumns(): array
+=======
+    public function getListTableColumns(): array
+>>>>>>> 73101fd (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
+=======
+    public function getListTableColumns(): array
+>>>>>>> 88efd6b (.)
+>>>>>>> 019e694 (.)
     {
         return [
             TextColumn::make('name')
@@ -118,9 +158,26 @@ final class UsersRelationManager extends XotBaseRelationManager
         ];
     }
 
+<<<<<<< HEAD
+    
+=======
+<<<<<<< HEAD
+>>>>>>> 019e694 (.)
+
+   
+
+<<<<<<< HEAD
+   
+=======
+
+
+
+=======
     
 
    
 
    
+>>>>>>> 88efd6b (.)
+>>>>>>> 019e694 (.)
 }

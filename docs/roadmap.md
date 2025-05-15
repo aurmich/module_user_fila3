@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Versione HEAD
 
 # Roadmap Modulo User
@@ -196,6 +197,8 @@
 
 ### Versione Incoming
 
+=======
+>>>>>>> 88efd6b (.)
 # User Module Roadmap
 
 ## Module Progress Overview
@@ -432,6 +435,9 @@ Overall Module Completion: 82%
 - Laravel Permission v5.x
 - Laravel Data v3.x
 - Laravel Excel v3.x
+<<<<<<< HEAD
 
 ---
 
+=======
+>>>>>>> 88efd6b (.)

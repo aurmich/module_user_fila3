@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 # Parental: Ereditarietà a Tabella Singola in il progetto
+=======
+# Parental: Ereditarietà a Tabella Singola in SaluteOra
+>>>>>>> 88efd6b (.)
 
 ## Indice
 - [Introduzione](#introduzione)
 - [Concetti Fondamentali](#concetti-fondamentali)
+<<<<<<< HEAD
 - [Implementazione in il progetto](#implementazione-in-<nome progetto>)
+=======
+- [Implementazione in SaluteOra](#implementazione-in-saluteora)
+>>>>>>> 88efd6b (.)
 - [Casi d'Uso nel Modulo User](#casi-duso-nel-modulo-user)
 - [Best Practices](#best-practices)
 - [Troubleshooting](#troubleshooting)
@@ -11,7 +19,11 @@
 
 ## Introduzione
 
+<<<<<<< HEAD
 Parental è una libreria sviluppata da Tighten che implementa il pattern di **Single Table Inheritance (STI)** in Laravel. Questo documento analizza in dettaglio come utilizzare Parental nel contesto del modulo User di il progetto per gestire diversi tipi di utenti mantenendo un'architettura pulita e performante.
+=======
+Parental è una libreria sviluppata da Tighten che implementa il pattern di **Single Table Inheritance (STI)** in Laravel. Questo documento analizza in dettaglio come utilizzare Parental nel contesto del modulo User di SaluteOra per gestire diversi tipi di utenti mantenendo un'architettura pulita e performante.
+>>>>>>> 88efd6b (.)
 
 ### Cos'è la Single Table Inheritance?
 
@@ -42,7 +54,11 @@ Per distinguere tra i diversi tipi di entità nella stessa tabella, Parental uti
 - Il nome completo della classe del modello figlio, oppure
 - Un alias configurabile più leggibile
 
+<<<<<<< HEAD
 ## Implementazione in il progetto
+=======
+## Implementazione in SaluteOra
+>>>>>>> 88efd6b (.)
 
 ### Configurazione Base
 
@@ -139,13 +155,21 @@ class User extends Authenticatable
 
 ### 1. Gestione Utenti con Ruoli Diversi
 
+<<<<<<< HEAD
 In il progetto, possiamo utilizzare Parental per implementare diversi tipi di utenti con comportamenti specifici:
+=======
+In SaluteOra, possiamo utilizzare Parental per implementare diversi tipi di utenti con comportamenti specifici:
+>>>>>>> 88efd6b (.)
 
 ```php
 // Creazione di utenti specializzati
 $admin = Admin::create([
     'name' => 'Mario Rossi',
+<<<<<<< HEAD
     'email' => 'admin@<nome progetto>.it',
+=======
+    'email' => 'admin@saluteora.it',
+>>>>>>> 88efd6b (.)
     'password' => Hash::make('password')
 ]);
 

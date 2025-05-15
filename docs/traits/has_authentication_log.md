@@ -49,6 +49,7 @@ class User extends Authenticatable
   - `ip_address`
   - `user_agent`
   - `login_at`
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -62,6 +63,8 @@ class User extends Authenticatable
 
 ---
 
+=======
+>>>>>>> 88efd6b (.)
   - `login_successful`
   - `created_at`
   - `updated_at`

@@ -14,8 +14,24 @@ use Modules\User\Actions\GetCurrentDeviceAction;
 use Modules\User\Models\AuthenticationLog;
 use Modules\User\Models\DeviceUser;
 use Modules\User\Contracts\HasAuthentications;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Log;
 use Modules\User\Traits\HasAuthentications as HasAuthenticationsTrait;
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+use Illuminate\Support\Facades\Log;
+use Modules\User\Traits\HasAuthentications as HasAuthenticationsTrait;
+=======
+>>>>>>> 73101fd (.)
+=======
+use Illuminate\Support\Facades\Log;
+use Modules\User\Traits\HasAuthentications as HasAuthenticationsTrait;
+>>>>>>> Stashed changes
+=======
+>>>>>>> 88efd6b (.)
+>>>>>>> 019e694 (.)
 
 class LogoutListener
 {
@@ -36,6 +52,14 @@ class LogoutListener
      */
     public function handle(Logout $event): void
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> 019e694 (.)
         try {
             // Verifica se l'utente esiste prima di procedere
             if (!$event->user) {
@@ -110,6 +134,147 @@ class LogoutListener
                     'user_id' => $event->user->getAuthIdentifier()
                 ]);
             }
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 88efd6b (.)
+        if (! config('authentication-log.logout_log', true)) {
+            return;
+        }
+
+        if ($event->user && $event->user instanceof HasAuthentications) {
+            $ip = $this->request->ip();
+            $userAgent = $this->request->userAgent();
+            // $location = optional(geoip()->getLocation($ip))->toArray();
+            $location = [];
+
+            $event->user->authentications()->create([
+                'ip_address' => $ip,
+                'user_agent' => $userAgent,
+                'logout_at' => now(),
+                'location' => $location,
+            ]);
+        }
+
+        // Session::flash('login-success', 'Hello ' . $event->user->name . ', welcome back!');
+        $device = app(GetCurrentDeviceAction::class)->execute();
+        $user = $event->user;
+        
+        $pivot = DeviceUser::firstOrCreate(['user_id' => $user->getAuthIdentifier(), 'device_id' => $device->id]);
+        $pivot->update(['logout_at' => now()]);
+
+        // ----------
+        if ($user instanceof HasAuthentications) {
+            $ip = $this->request->ip();
+            $userAgent = $this->request->userAgent();
+            $log = $user->authentications()
+                ->whereIpAddress($ip)
+                ->whereUserAgent($userAgent)
+                ->orderByDesc('login_at')
+                ->first();
+
+            if (! $log) {
+                $log = new AuthenticationLog([
+                    'ip_address' => $ip,
+                    'user_agent' => $userAgent,
+                ]);
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+            }
+
+            $device = app(GetCurrentDeviceAction::class)->execute();
+
+            // Aggiorna il pivot solo se abbiamo sia l'utente che il device
+            if ($device) {
+                try {
+                    $pivot = DeviceUser::firstOrCreate([
+                        'user_id' => $event->user->getAuthIdentifier(),
+                        'device_id' => $device->id
+                    ]);
+                    $pivot->update(['logout_at' => now()]);
+                } catch (\Exception $e) {
+                    Log::error('Errore durante l\'aggiornamento del pivot device-user', [
+                        'error' => $e->getMessage(),
+                        'user_id' => $event->user->getAuthIdentifier(),
+                        'device_id' => $device->id
+                    ]);
+                }
+            }
+
+            // Gestione delle autenticazioni
+            if ($event->user instanceof HasAuthentications) {
+                try {
+                    $event->user->authentications()->create([
+                        'type' => 'logout',
+                        'ip_address' => request()->ip(),
+                        'user_agent' => request()->userAgent(),
+                    ]);
+                } catch (\Exception $e) {
+                    Log::error('Errore durante la creazione del log di autenticazione', [
+                        'error' => $e->getMessage(),
+                        'user_id' => $event->user->getAuthIdentifier()
+                    ]);
+                }
+            }
+
+            // Log dell'evento
+            Log::info('Logout effettuato', [
+                'user_id' => $event->user->getAuthIdentifier(),
+                'device_id' => $device?->id,
+                'timestamp' => now()
+            ]);
+
+        } catch (\Exception $e) {
+            Log::error('Errore durante il logout', [
+                'error' => $e->getMessage(),
+                'trace' => $e->getTraceAsString(),
+                'user_id' => $event->user?->getAuthIdentifier()
+            ]);
+        }
+    }
+
+    /**
+     * Rimuove i remember tokens.
+     */
+    public function forgetRememberTokens(Logout $event): void
+    {
+        if ($event->user && $event->user instanceof HasAuthentications) {
+<<<<<<< Updated upstream
+            $event->user->authentications()->whereNotNull('remember_token')->update([
+                'remember_token' => null,
+            ]);
+>>>>>>> 73101fd (.)
+=======
+            try {
+                $event->user->authentications()->whereNotNull('remember_token')->update([
+                    'remember_token' => null,
+                ]);
+            } catch (\Exception $e) {
+                Log::error('Errore durante la rimozione dei remember tokens', [
+                    'error' => $e->getMessage(),
+                    'user_id' => $event->user->getAuthIdentifier()
+                ]);
+            }
+>>>>>>> Stashed changes
+=======
+            }
+
+            $log->setAttribute('logout_at', now());
+
+            $user->authentications()->save($log);
+        }
+    }
+
+    public function forgetRememberTokens(Logout $event): void
+    {
+        if ($event->user && $event->user instanceof HasAuthentications) {
+            $event->user->authentications()->whereNotNull('remember_token')->update([
+                'remember_token' => null,
+            ]);
+>>>>>>> 88efd6b (.)
+>>>>>>> 019e694 (.)
         }
     }
 }

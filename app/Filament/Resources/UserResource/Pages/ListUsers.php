@@ -15,7 +15,14 @@ use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+=======
+<<<<<<< HEAD
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
+>>>>>>> 88efd6b (.)
+>>>>>>> 019e694 (.)
 
 class ListUsers extends XotBaseListRecords
 {
@@ -24,7 +31,23 @@ class ListUsers extends XotBaseListRecords
     /**
      * @return array<string, TextColumn>
      */
+<<<<<<< HEAD
     public function getTableColumns(): array
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+    public function getTableColumns(): array
+=======
+    public function getListTableColumns(): array
+>>>>>>> 73101fd (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
+=======
+    public function getListTableColumns(): array
+>>>>>>> 88efd6b (.)
+>>>>>>> 019e694 (.)
     {
         return [
             'id' => TextColumn::make('id'),
