@@ -24,6 +24,7 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e i profili utente de
 - [Socialite Integration](./socialite.txt) - Login social
 - [Two Factor Authentication](./two_factor.txt) - Autenticazione a due fattori
 - [Custom Login](./custom_login.md) - Implementazione login personalizzata
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 - [Volt Folio Logout](./VOLT_FOLIO_LOGOUT.md) - Implementazione logout con Volt e Folio
 - [Volt Folio Auth Implementation](./VOLT_FOLIO_AUTH_IMPLEMENTATION.md) - Implementazione completa autenticazione con Volt e Folio
@@ -33,6 +34,11 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e i profili utente de
 - [Analisi Logout Blade](./LOGOUT_BLADE_ANALYSIS.md) - Analisi e miglioramenti del file logout.blade.php
 =======
 >>>>>>> 73101fd (.)
+=======
+- [Volt Folio Logout](./VOLT_FOLIO_LOGOUT.md) - Implementazione logout con Volt e Folio
+- [Volt Folio Auth Implementation](./VOLT_FOLIO_AUTH_IMPLEMENTATION.md) - Implementazione completa autenticazione con Volt e Folio
+- [Analisi Logout Blade](./LOGOUT_BLADE_ANALYSIS.md) - Analisi e miglioramenti del file logout.blade.php
+>>>>>>> Stashed changes
 
 ### Modelli e Profili
 - [User Profile Models](./user_profile_models.md) - Modelli profilo utente
@@ -40,36 +46,26 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e i profili utente de
 - [User Permissions](./user_permissions.md) - Sistema permessi
 
 ### Filament e UI
-### Versione HEAD
-
-- [Filament Best Practices](FILAMENT_BEST-PRACTICES.md) - Best practices Filament
-
-### Versione Incoming
-
-- [Filament Best Practices](filament-best-practices.md) - Best practices Filament
-
----
-
-- [Login Widget](login_widget.md) - Widget login personalizzato
-- [User Interface](user_interface.md) - Interfaccia utente
+- [Filament Best Practices](./FILAMENT_BEST-PRACTICES.md) - Best practices Filament
+- [Login Widget](./login_widget.md) - Widget login personalizzato
+- [User Interface](./user_interface.md) - Interfaccia utente
 
 ### Best Practices e Convenzioni
-### Versione HEAD
-
 - [Best Practices](./BEST-PRACTICES.md) - Linee guida generali
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 - [Convenzioni Path Actions](./ACTIONS_PATH_CONVENTION.md) - Convenzioni per i percorsi delle Actions
 - [Convenzioni Path](./PATH_CONVENTIONS.md) - Convenzioni generali per i percorsi nei moduli
 - [Checklist Struttura Directory](./DIRECTORY_STRUCTURE_CHECKLIST.md) - Checklist per la struttura delle directory
 =======
 >>>>>>> 73101fd (.)
+=======
+- [Convenzioni Path Actions](./ACTIONS_PATH_CONVENTION.md) - Convenzioni per i percorsi delle Actions
+- [Convenzioni Path](./PATH_CONVENTIONS.md) - Convenzioni generali per i percorsi nei moduli
+- [Checklist Struttura Directory](./DIRECTORY_STRUCTURE_CHECKLIST.md) - Checklist per la struttura delle directory
+>>>>>>> Stashed changes
 
-### Versione Incoming
-
-- [Best Practices](./best-practices.md) - Linee guida generali
-
----
-
+### Testing e Quality Assurance
 - [Testing](./testing.md) - Testing e quality assurance
 - [Security](./security.md) - Sicurezza e hardening
 
@@ -140,18 +136,16 @@ Il modulo User fornisce funzionalità di autenticazione e autorizzazione attrave
 ## Panoramica
 Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli utenti nell'applicazione. È strettamente integrato con altri moduli come Xot, Lang, e Notify.
 
-### Versione HEAD
-
 ## Collegamenti Principali
 
 ### Documentazione Core
-- [Architettura del Modulo](structure.md)
-- [Configurazione Passport](passport.md)
-- [Integrazione Socialite](socialite.txt)
-- [Gestione Profili](user_profile_models.md)
-- [Best Practices Filament](FILAMENT_BEST_PRACTICES.md)
-- [Roadmap](roadmap.md)
-- [Bottlenecks](bottlenecks.md)
+- [Architettura del Modulo](./structure.md)
+- [Configurazione Passport](./passport.md)
+- [Integrazione Socialite](./socialite.txt)
+- [Gestione Profili](./user_profile_models.md)
+- [Best Practices Filament](./FILAMENT_BEST_PRACTICES.md)
+- [Roadmap](./roadmap.md)
+- [Bottlenecks](./bottlenecks.md)
 
 ### Integrazioni
 - [Integrazione con Xot](../Xot/docs/README.md)
@@ -159,30 +153,15 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli u
 - [Integrazione con Notify](../Notify/docs/README.md)
 
 ### Autenticazione
-- [Login Personalizzato](custom_login.md)
-- [Autenticazione a Due Fattori](two_factor.txt)
-- [Single Sign-On](sso.txt)
-- [Gestione Password](password.md)
+- [Login Personalizzato](./custom_login.md)
+- [Autenticazione a Due Fattori](./two_factor.txt)
+- [Single Sign-On](./sso.txt)
+- [Gestione Password](./password.md)
 
 ### Autorizzazione
-- [Permessi Spatie](spatie_permissions.txt)
-- [Gestione Ruoli](repositories.md)
-- [Team e Collaborazioni](teams.md)
-
-
-### Versione Incoming
-
-## Collegamenti Bidirezionali
-
-- [Architettura del Modulo](structure.md) - Struttura e organizzazione del modulo
-- [Configurazione Passport](passport.md) - Integrazione con OAuth2
-- [Gestione Profili](user_profile_models.md) - Modelli per i profili utente
-- [Best Practices Filament](filament-best-practices.md) - Linee guida per Filament
-- [Roadmap](roadmap.md) - Piano di sviluppo futuro
-- [Bottlenecks](bottlenecks.md) - Analisi performance e ottimizzazioni
-- [Login Personalizzato](custom_login.md) - Implementazione login personalizzata
-- [Ruoli Utente](user_roles.md) - Sistema di ruoli
-- [Permessi Utente](user_permissions.md) - Sistema di permessi
+- [Permessi Spatie](./spatie_permissions.txt)
+- [Gestione Ruoli](./repositories.md)
+- [Team e Collaborazioni](./teams.md)
 
 ## Vedi Anche
 
@@ -191,29 +170,6 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli u
 - [Modulo Notify](../Notify/docs/README.md) - Sistema di notifiche
 - [Modulo Activity](../Activity/docs/README.md) - Logging e audit trail
 - [Convenzioni di Naming](../../../docs/standards/file_naming_conventions.md) - Standard per la nomenclatura dei file
-
-
----
-
-### Profili e GDPR
-- [Modelli Profilo](./user_profile_models.md)
-- [Separazione Profili](./user_profile_separation.md)
-- [Conformità GDPR](./gdpr.txt)
-
-### UI/UX
-- [Metriche Dashboard](./metrics-dashboard.md)
-- [Conflitti JS](./js_conflicts.md)
-- [Best Practices Tailwind](./tailwind.txt)
-
-### Sviluppo
-- [Convenzioni Namespace](./namespace-conventions.md)
-- [Struttura Repository](./repos.txt)
-- [Analisi Performance](./BOTTLENECKS.md)
-
-### Testing e Qualità
-- [PHPStan Fixes](./phpstan_fixes.md)
-- [PHPStan Level 9](./PHPSTAN_LEVEL9_FIXES.md)
-- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md)
 
 ## Struttura del Modulo
 
@@ -242,7 +198,6 @@ Modules/User/
 │   │   ├── Widgets/
 │   │   │   ├── Auth/
 │   │   │   │   ├── LoginWidget.php
-
 │   │   │   │   └── SocialLoginWidget.php
 │   │   │   └── User/
 │   │   │       ├── UserStatsWidget.php
@@ -264,140 +219,20 @@ Modules/User/
             └── auth/
 ```
 
-## Dipendenze Principali
+## Modifiche Recenti
 
-### Moduli
-- **Xot**: Fornisce le classi base e l'infrastruttura core
-- **Lang**: Gestione delle traduzioni
-- **Notify**: Sistema di notifiche
-- **UI**: Componenti di interfaccia utente
+### Risoluzione Conflitti
+- Risolti i conflitti nel modello BaseUser
+- Aggiornate le traduzioni in italiano
+- Migliorata la documentazione
+- Aggiunto supporto per il polimorfismo dei modelli utente
 
-### Pacchetti
-- Laravel Passport
-- Laravel Socialite
-- Spatie Permission
-- Filament
+### Miglioramenti
+- Aggiunta la documentazione strutturata per le traduzioni
+- Migliorata la gestione dei messaggi di errore
+- Ottimizzata la struttura dei file di traduzione
+- Aggiunto supporto per le traduzioni strutturate nei form
 
-## Best Practices
-
-### 1. Estensione delle Classi
-```php
-// ❌ NON FARE QUESTO
-use Filament\Widgets\Widget;
-class LoginForm extends Widget { ... }
-
-// ✅ FARE QUESTO
-use Modules\Xot\Filament\Widgets\XotBaseWidget;
-class LoginWidget extends XotBaseWidget { ... }
-```
-
-### 2. Gestione delle Traduzioni
-```php
-// ❌ NON FARE QUESTO
-->label('Sorgente')
-
-// ✅ FARE QUESTO
-->label(['label' => 'Sorgente'])
-```
-
-### 3. Configurazione dei Provider
-```php
-// In Modules/User/app/Providers/UserServiceProvider.php
-use Modules\User\Providers\Traits\HasPassportConfiguration;
-
-class UserServiceProvider extends XotBaseServiceProvider
-{
-    use HasPassportConfiguration;
-
-    public function boot(): void
-    {
-        $this->configurePassport();
-    }
-}
-```
-
-## Roadmap
-
-### Prossime Feature
-1. Miglioramento della gestione dei token OAuth
-2. Integrazione con nuovi provider social
-3. Ottimizzazione delle performance
-
-### Miglioramenti Pianificati
-1. Refactoring del sistema di autenticazione
-2. Miglioramento della gestione dei profili
-3. Ottimizzazione delle query
-
-## Contribuire
-
-### Setup Sviluppo
-1. Clona il repository
-2. Installa le dipendenze
-3. Configura l'ambiente
-4. Esegui i test
-
-### Convenzioni di Codice
-- Seguire PSR-12
-- Utilizzare type hints
-- Documentare il codice
-- Scrivere test unitari
-
-### Processo di Pull Request
-1. Crea un branch feature
-2. Implementa le modifiche
-3. Aggiungi i test
-4. Aggiorna la documentazione
-5. Crea la PR
-
-## Troubleshooting
-
-### Problemi Comuni
-1. Conflitti di autenticazione
-2. Problemi di performance
-3. Errori di configurazione
-
-### Soluzioni
-1. Verifica la configurazione
-2. Controlla i log
-3. Consulta la documentazione
-
-## Riferimenti
-
-### Documentazione
-- [Laravel Passport](https://laravel.com/docs/12.x/passport)
-- [Laravel Socialite](https://laravel.com/docs/12.x/socialite)
-- [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel)
-- [Filament](https://filamentphp.com/docs)
-
-### Collegamenti Interni
-- [Xot Base Classes](../Xot/docs/base-classes.md)
-- [Lang Integration](../Lang/docs/lang-link.md)
-- [Notify Setup](../Notify/docs/README.md)
-
-## Changelog
-
-### [1.0.0] - 2024-03-20
-#### Added
-- Implementazione iniziale
-- Supporto OAuth2
-- Integrazione Socialite
-- Sistema di autorizzazione
-
-#### Changed
-- Miglioramento performance
-- Ottimizzazione query
-- Refactoring codice
-
-#### Fixed
-- Bug autenticazione
-- Problemi di configurazione
-### Versione HEAD
-
-- Errori di traduzione 
-
-### Versione Incoming
-
-- Errori di traduzione 
 ## Collegamenti
 - [Indice Documentazione](../../../docs/INDEX.md)
 - [README Principale](../../../README.md)
@@ -484,7 +319,10 @@ class UserServiceProvider extends XotBaseServiceProvider
 
 ---
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 ## Gestione delle Traduzioni
 
 Il modulo User utilizza un sistema di traduzioni multilingua per supportare l'interfaccia utente in diverse lingue. Le traduzioni sono organizzate in file separati per ogni lingua nella cartella `lang/`.
@@ -521,6 +359,9 @@ Per aggiungere o aggiornare le traduzioni:
 ## Integrazione MCP Server
 Per installare e utilizzare i server MCP in modo condiviso, segui la guida:
 [Installazione MCP Server](../AI/docs/MCP_INSTALLAZIONE_SERVER.md)
+<<<<<<< Updated upstream
 
 =======
 >>>>>>> 73101fd (.)
+=======
+>>>>>>> Stashed changes

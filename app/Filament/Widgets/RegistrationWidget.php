@@ -1,10 +1,15 @@
 <?php
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 declare(strict_types=1);
 
 =======
 >>>>>>> 73101fd (.)
+=======
+declare(strict_types=1);
+
+>>>>>>> Stashed changes
 namespace Modules\User\Filament\Widgets;
 
 use Filament\Forms\Form;
@@ -24,10 +29,14 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 class RegistrationWidget extends XotBaseWidget
 {
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     public ?array $data = [];
 =======
 >>>>>>> 73101fd (.)
+=======
+    public ?array $data = [];
+>>>>>>> Stashed changes
     protected int | string | array $columnSpan = 'full';
     public string $type;
     public string $resource;
@@ -36,12 +45,17 @@ class RegistrationWidget extends XotBaseWidget
     public function mount(string $type): void
     {
         $this->type = $type;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
         $this->resource = XotData::make()->getUserTypeResourceClass($type);
         $this->form->fill();
 =======
         $this->resource=XotData::make()->getUserTypeResourceClass($type);
 >>>>>>> 73101fd (.)
+=======
+        $this->resource = XotData::make()->getUserTypeResourceClass($type);
+        $this->form->fill();
+>>>>>>> Stashed changes
     }
 
 

@@ -189,16 +189,24 @@ class PasswordData extends Data
             $this->getPasswordConfirmationFormComponent(),
         ];
     }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 
     public static function getFormSchema(): array
     {
         return [
+<<<<<<< Updated upstream
             'password' => FormsTextInput::make('password')
+=======
+            'password' => TextInput::make('password')
+>>>>>>> Stashed changes
                 ->password()
                 ->required()
                 ->minLength(8)
                 ->maxLength(255),
+<<<<<<< Updated upstream
             'password_confirmation' => FormsTextInput::make('password_confirmation')
                 ->password()
                 ->required()
@@ -208,4 +216,13 @@ class PasswordData extends Data
     }
 =======
 >>>>>>> 73101fd (.)
+=======
+            'password_confirmation' => TextInput::make('password_confirmation')
+                ->password()
+                ->required()
+                ->same('password')
+                ->maxLength(255),
+        ];
+    }
+>>>>>>> Stashed changes
 }

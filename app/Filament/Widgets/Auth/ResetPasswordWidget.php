@@ -10,10 +10,14 @@ use Filament\Forms\Form;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 use Filament\Forms;
 =======
 >>>>>>> 73101fd (.)
+=======
+use Filament\Forms;
+>>>>>>> Stashed changes
 
 class ResetPasswordWidget extends BaseAuthWidget
 {
@@ -26,6 +30,7 @@ class ResetPasswordWidget extends BaseAuthWidget
                 Section::make()
                     ->schema([
                         TextInput::make('email')
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                             ->email()
                             ->required()
@@ -34,18 +39,23 @@ class ResetPasswordWidget extends BaseAuthWidget
                         TextInput::make('password')
 =======
                             ->label(__('user::auth.reset-password.email'))
+=======
+>>>>>>> Stashed changes
                             ->email()
                             ->required()
-                            ->autocomplete('email')
-                            ->placeholder(__('user::auth.reset-password.email_placeholder')),
+                            ->autocomplete('email'),
 
                         TextInput::make('password')
+<<<<<<< Updated upstream
                             ->label(__('user::auth.reset-password.password'))
 >>>>>>> 73101fd (.)
+=======
+>>>>>>> Stashed changes
                             ->password()
                             ->required()
                             ->minLength(8)
                             ->same('password_confirmation')
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                             ->autocomplete('new-password'),
 
@@ -56,14 +66,20 @@ class ResetPasswordWidget extends BaseAuthWidget
 =======
                             ->autocomplete('new-password')
                             ->placeholder(__('user::auth.reset-password.password_placeholder')),
+=======
+                            ->autocomplete('new-password'),
+>>>>>>> Stashed changes
 
                         TextInput::make('password_confirmation')
-                            ->label(__('user::auth.reset-password.password_confirmation'))
                             ->password()
                             ->required()
+<<<<<<< Updated upstream
                             ->autocomplete('new-password')
                             ->placeholder(__('user::auth.reset-password.password_confirmation_placeholder')),
 >>>>>>> 73101fd (.)
+=======
+                            ->autocomplete('new-password'),
+>>>>>>> Stashed changes
                     ])
                     ->columns(1),
             ])
@@ -96,7 +112,10 @@ class ResetPasswordWidget extends BaseAuthWidget
             $this->addError('email', __($status));
         }
     }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 
     protected function getFormSchema(): array
     {
@@ -118,6 +137,9 @@ class ResetPasswordWidget extends BaseAuthWidget
                 ->same('password'),
         ];
     }
+<<<<<<< Updated upstream
 =======
 >>>>>>> 73101fd (.)
+=======
+>>>>>>> Stashed changes
 }

@@ -1,10 +1,14 @@
 <?php
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 declare(strict_types=1);
 
 return [
   'navigation' => [
+<<<<<<< Updated upstream
     'name' => 'Team',
     'plural' => 'Teams',
     'group' => [
@@ -97,119 +101,100 @@ return [
 return array (
   'navigation' => 
   array (
+=======
+>>>>>>> Stashed changes
     'name' => 'Team',
     'plural' => 'Teams',
-    'group' => 
-    array (
+    'group' => [
       'name' => 'Gestione Utenti',
       'description' => 'Gestione dei team e delle loro autorizzazioni',
-    ),
+    ],
     'label' => 'team',
     'sort' => 18,
     'icon' => 'user-team',
-  ),
-  'fields' => 
-  array (
+  ],
+  'fields' => [
     'first_name' => 'Nome',
     'last_name' => 'Cognome',
-    'detach' => 
-    array (
+    'detach' => [
       'label' => 'detach',
-    ),
-    'toggleColumns' => 
-    array (
+    ],
+    'toggleColumns' => [
       'label' => 'toggleColumns',
-    ),
-    'reorderRecords' => 
-    array (
+    ],
+    'reorderRecords' => [
       'label' => 'reorderRecords',
-    ),
-    'resetFilters' => 
-    array (
+    ],
+    'resetFilters' => [
       'label' => 'resetFilters',
-    ),
-    'create' => 
-    array (
+    ],
+    'create' => [
       'label' => 'create',
-    ),
-    'attach' => 
-    array (
+    ],
+    'attach' => [
       'label' => 'attach',
-    ),
-    'view' => 
-    array (
+    ],
+    'view' => [
       'label' => 'view',
-    ),
-    'edit' => 
-    array (
+    ],
+    'edit' => [
       'label' => 'edit',
-    ),
-    'openFilters' => 
-    array (
+    ],
+    'openFilters' => [
       'label' => 'openFilters',
-    ),
-    'applyFilters' => 
-    array (
+    ],
+    'applyFilters' => [
       'label' => 'applyFilters',
-    ),
-    'updated_at' => 
-    array (
+    ],
+    'updated_at' => [
       'label' => 'updated_at',
-    ),
-    'created_at' => 
-    array (
+    ],
+    'created_at' => [
       'label' => 'created_at',
-    ),
-    'users_count' => 
-    array (
+    ],
+    'users_count' => [
       'label' => 'users_count',
-    ),
-    'name' => 
-    array (
+    ],
+    'name' => [
       'label' => 'name',
-    ),
-    'recordId' => 
-    array (
+    ],
+    'recordId' => [
       'label' => 'recordId',
-    ),
-    'personal_team' => 
-    array (
+    ],
+    'personal_team' => [
       'label' => 'personal_team',
-    ),
-    'role' => 
-    array (
+    ],
+    'role' => [
       'label' => 'role',
-    ),
-  ),
-  'actions' => 
-  array (
-    'import' => 
-    array (
-      'fields' => 
-      array (
+    ],
+  ],
+  'actions' => [
+    'import' => [
+      'fields' => [
         'import_file' => 'Seleziona un file XLS o CSV da caricare',
-      ),
-    ),
-    'export' => 
-    array (
+      ],
+    ],
+    'export' => [
       'filename_prefix' => 'Aree al',
-      'columns' => 
-      array (
+      'columns' => [
         'name' => 'Nome area',
         'parent_name' => 'Nome area livello superiore',
-      ),
-    ),
-    'create' => 
-    array (
+      ],
+    ],
+    'create' => [
       'label' => 'create',
-    ),
-  ),
-  'plural' => 
-  array (
-    'model' => 
-    array (
+    ],
+  ],
+  'plural' => [
+    'model' => [
       'label' => 'team.plural.model',
+<<<<<<< Updated upstream
     ),
   ),
 );
 >>>>>>> 73101fd (.)
+=======
+    ],
+  ],
+];
+>>>>>>> Stashed changes

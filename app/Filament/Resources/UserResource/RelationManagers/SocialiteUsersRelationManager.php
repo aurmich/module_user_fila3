@@ -15,14 +15,6 @@ use Modules\User\Models\SocialiteUser;
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
 use Modules\Xot\Filament\Traits\HasXotTable;
 
-
-
-
-
-
-
-
-
 /**
  * Class Modules\User\Filament\Resources\UserResource\RelationManagers\SocialiteUsersRelationManager.
  */
@@ -33,11 +25,6 @@ class SocialiteUsersRelationManager extends XotBaseRelationManager
     protected static string $relationship = 'socialiteUsers';
 
     /**
-     * Configure the form schema for managing Socialite User data.
-     */
-
-
-    /**
      * Define form fields in a dedicated method for reusability.
      *
      * @return array<Forms\Components\Component>
@@ -46,33 +33,28 @@ class SocialiteUsersRelationManager extends XotBaseRelationManager
     {
         return [
             Forms\Components\TextInput::make('provider')
-
                 ->required()
                 ->maxLength(255)
                 ->placeholder(__('Enter provider name, e.g., Google, Facebook')),
 
             Forms\Components\TextInput::make('provider_id')
-
                 ->required()
                 ->maxLength(255)
                 ->placeholder(__('Enter the provider ID for the user')),
 
             Forms\Components\TextInput::make('name')
-
                 ->maxLength(255)
-                ->placeholder(__('User’s name associated with the provider')),
+                ->placeholder(__("User's name associated with the provider")),
 
             Forms\Components\TextInput::make('email')
-
                 ->email()
                 ->maxLength(255)
-                ->placeholder(__('User’s email associated with the provider')),
+                ->placeholder(__("User's email associated with the provider")),
 
             Forms\Components\TextInput::make('avatar')
-
                 ->url()
                 ->maxLength(512)
-                ->placeholder(__('URL of the user’s avatar image')),
+                ->placeholder(__("URL of the user's avatar image")),
         ];
     }
 
@@ -81,31 +63,30 @@ class SocialiteUsersRelationManager extends XotBaseRelationManager
      *
      * @return array<TextColumn|ImageColumn>
      */
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     public function getTableColumns(): array
 =======
     public function getListTableColumns(): array
 >>>>>>> 73101fd (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
     {
         return [
             TextColumn::make('provider')
-
                 ->searchable(),
 
             TextColumn::make('provider_id')
-
                 ->searchable(),
 
             TextColumn::make('name')
-
                 ->searchable(),
 
             TextColumn::make('email')
-
                 ->searchable(),
 
             ImageColumn::make('avatar')
-
                 ->size(40),
         ];
     }

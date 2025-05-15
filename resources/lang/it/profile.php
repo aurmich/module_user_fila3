@@ -7,7 +7,10 @@ return [
         'password_confirmation' => 'Inserisci la tua password per confermare',
         'button' => 'Elimina Account',
     ],
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
     'title' => 'Profilo',
     'personal_info' => 'Informazioni Personali',
     'name' => 'Nome',
@@ -16,6 +19,9 @@ return [
     'manage_account' => 'Gestisci Account',
     'update_success' => 'Profilo aggiornato con successo',
     'update_error' => 'Errore durante l\'aggiornamento del profilo',
+<<<<<<< Updated upstream
 =======
 >>>>>>> 73101fd (.)
+=======
+>>>>>>> Stashed changes
 ];

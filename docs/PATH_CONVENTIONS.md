@@ -1,14 +1,20 @@
 # Convenzioni Path nei Moduli Laravel
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 ## Collegamenti correlati
 - [Documentazione centrale](../../../docs/README.md)
 - [Collegamenti documentazione](../../../docs/collegamenti-documentazione.md)
 - [README modulo User](./README.md)
 - [Struttura moduli](../../../docs/architecture/modules-structure.md)
 
+<<<<<<< Updated upstream
 =======
 >>>>>>> 73101fd (.)
+=======
+>>>>>>> Stashed changes
 ## ✅ Path Corretti vs ❌ Path Errati
 
 ### Views
@@ -18,10 +24,14 @@ laravel/Modules/User/Resources/views/filament/widgets/auth/login.blade.php
 
 # ✅ CORRETTO
 laravel/Modules/User/resources/views/filament/widgets/auth/login.blade.php
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 Modules/User/resources/views/filament/widgets/auth/login.blade.php
 =======
 >>>>>>> 73101fd (.)
+=======
+Modules/User/resources/views/filament/widgets/auth/login.blade.php
+>>>>>>> Stashed changes
 ```
 
 ### Actions
@@ -31,14 +41,20 @@ laravel/Modules/User/Actions/User/DeleteUserAction.php
 
 # ✅ CORRETTO
 laravel/Modules/User/app/Actions/User/DeleteUserAction.php
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 # ✅ CORRETTO
 Modules/User/app/Actions/User/DeleteUserAction.php
 
 # ❌ ERRATO
 Modules/User/Actions/User/DeleteUserAction.php
+<<<<<<< Updated upstream
 =======
 >>>>>>> 73101fd (.)
+=======
+>>>>>>> Stashed changes
 ```
 
 ### Controllers
@@ -48,7 +64,10 @@ laravel/Modules/User/app/Http/Controllers/UserController.php
 
 # ❌ ERRATO
 laravel/Modules/User/Http/Controllers/UserController.php
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 Modules/User/app/Http/Controllers/UserController.php
 
 # ❌ ERRATO
@@ -71,18 +90,25 @@ Modules/User/app/Http/Livewire/Profile/DeleteAccount.php
 
 # ❌ ERRATO
 Modules/User/Http/Livewire/Profile/DeleteAccount.php
+<<<<<<< Updated upstream
 =======
 >>>>>>> 73101fd (.)
+=======
+>>>>>>> Stashed changes
 ```
 
 ## Struttura Standard delle Cartelle
 
 ```bash
 laravel/Modules/User/
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 Modules/User/
 =======
 >>>>>>> 73101fd (.)
+=======
+Modules/User/
+>>>>>>> Stashed changes
 ├── app/                    # Tutto il codice PHP va qui
 │   ├── Actions/           # Actions
 │   ├── Http/             # Controllers, Middleware, etc.
@@ -111,7 +137,10 @@ Modules/User/
    // ❌ ERRATO
    namespace Modules\User\Actions;
    ```
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
    namespace Modules\User\Actions;
    
    // ❌ ERRATO
@@ -129,8 +158,11 @@ Modules/User/
    ```
    
    Il namespace deve riflettere il percorso relativo alla cartella `app/`, che è mappata al namespace base `Modules\User\` nel composer.json.
+<<<<<<< Updated upstream
 =======
 >>>>>>> 73101fd (.)
+=======
+>>>>>>> Stashed changes
 
 3. **Codice PHP**
    - Tutto il codice PHP va sotto la cartella `app/`

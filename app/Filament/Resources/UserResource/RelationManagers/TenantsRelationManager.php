@@ -19,7 +19,7 @@ use Modules\Xot\Filament\Traits\HasXotTable;
  */
 class TenantsRelationManager extends XotBaseRelationManager
 {
-   
+
 
     protected static string $relationship = 'tenants';
 
@@ -44,6 +44,7 @@ class TenantsRelationManager extends XotBaseRelationManager
      *
      * @return array<string, \Filament\Tables\Columns\Column>
      */
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     public function getTableColumns(): array
     {
@@ -53,5 +54,10 @@ class TenantsRelationManager extends XotBaseRelationManager
     {
         return app(ListTenants::class)->getListTableColumns();
 >>>>>>> 73101fd (.)
+=======
+    public function getTableColumns(): array
+    {
+        return app(ListTenants::class)->getTableColumns();
+>>>>>>> Stashed changes
     }
 }

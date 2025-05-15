@@ -1,5 +1,8 @@
 <?php
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 declare(strict_types=1);
 
 // Includi l'autoloader di Composer per accedere alle classi PhpCsFixer
@@ -8,8 +11,11 @@ if (!file_exists($vendorDir)) {
     $vendorDir = dirname(__DIR__, 3) . '/vendor';
 }
 require_once $vendorDir . '/autoload.php';
+<<<<<<< Updated upstream
 =======
 >>>>>>> 73101fd (.)
+=======
+>>>>>>> Stashed changes
 
 $finder = PhpCsFixer\Finder::create()
     ->notPath('bootstrap/cache')
@@ -19,6 +25,7 @@ $finder = PhpCsFixer\Finder::create()
     ->name('*.php')
     ->notName('*.blade.php')
     ->ignoreDotFiles(true)
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     ->ignoreVCS(true);
 
@@ -29,6 +36,11 @@ $config = new PhpCsFixer\Config();
 $config = new PhpCsFixer\Config();
 
 >>>>>>> 73101fd (.)
+=======
+    ->ignoreVCS(true);
+
+$config = new PhpCsFixer\Config();
+>>>>>>> Stashed changes
 $config
     ->setRules([
         '@Symfony' => true,
@@ -52,10 +64,14 @@ $config
         'class_definition' => true,
         'elseif' => true,
     ])
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     ->setFinder($finder);
 =======
     ->setFinder($finder)
 >>>>>>> 73101fd (.)
+=======
+    ->setFinder($finder);
+>>>>>>> Stashed changes
 
 return $config;

@@ -59,6 +59,7 @@ class LoginWidget extends XotBaseWidget
         $this->form->fill();
     }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     /**
      * Definisce lo schema del form di login.
@@ -67,6 +68,8 @@ class LoginWidget extends XotBaseWidget
 =======
 
 
+=======
+>>>>>>> Stashed changes
     /**
      * Definisce lo schema del form con i suoi campi.
 >>>>>>> 73101fd (.)

@@ -11,8 +11,10 @@ namespace Modules\User\Providers;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
 use Laravel\Passport\Passport;
 use Modules\User\Datas\PasswordData;
@@ -46,14 +48,20 @@ class UserServiceProvider extends XotBaseServiceProvider
         $this->registerMailsNotification();
     }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
     public function register(): void
     {
         parent::register();
     }
 
+<<<<<<< Updated upstream
 =======
 >>>>>>> 73101fd (.)
+=======
+>>>>>>> Stashed changes
     public function registerMailsNotification(): void
     {
         $app_name = config('app.name');
@@ -119,15 +127,23 @@ class UserServiceProvider extends XotBaseServiceProvider
 
     private function registerPassport(): void
     {
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
         
+=======
+>>>>>>> Stashed changes
         Passport::useTokenModel(OauthAccessToken::class);
         Passport::useRefreshTokenModel(OauthRefreshToken::class);
         Passport::useAuthCodeModel(OauthAuthCode::class);
         Passport::useClientModel(OauthClient::class);
+<<<<<<< Updated upstream
 >>>>>>> 73101fd (.)
         if (method_exists(Passport::class, 'routes')) {
+=======
+
+        if (class_exists(Passport::class) && method_exists(Passport::class, 'routes')) {
+>>>>>>> Stashed changes
             Passport::routes();
         }
 

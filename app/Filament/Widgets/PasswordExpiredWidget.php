@@ -36,37 +36,45 @@ use Modules\User\Rules\CheckOtpExpiredRule;
 use Modules\Xot\Filament\Traits\TransTrait;
 use Webmozart\Assert\Assert;
 use Filament\Facades\Filament;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use Illuminate\Auth\Events\PasswordReset as PasswordResetResponseEvent;
 =======
 >>>>>>> 73101fd (.)
+=======
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
+>>>>>>> Stashed changes
 
 /**
  * @property ComponentContainer $form
  */
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 class PasswordExpiredWidget extends XotBaseWidget implements HasForms
 =======
 class PasswordExpiredWidget extends Widget implements HasForms
 >>>>>>> 73101fd (.)
+=======
+class PasswordExpiredWidget extends XotBaseWidget implements HasForms
+>>>>>>> Stashed changes
 {
     use InteractsWithForms;
-
-    // use InteractsWithFormActions;
     use TransTrait;
 
     public ?string $current_password = '';
-
     public ?string $password = '';
-
     public ?string $passwordConfirmation = '';
+<<<<<<< Updated upstream
 
 <<<<<<< HEAD
     public ?array $data = [];
 =======
     public array $data = [];
 >>>>>>> 73101fd (.)
+=======
+    public null|array $data = [];
+>>>>>>> Stashed changes
 
     /**
      * @var view-string
@@ -95,6 +103,7 @@ class PasswordExpiredWidget extends Widget implements HasForms
         return [
             $this->getCurrentPasswordFormComponent(),
             ...PasswordData::make()->getPasswordFormComponents('password'),
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
             /*
@@ -102,6 +111,8 @@ class PasswordExpiredWidget extends Widget implements HasForms
             $this->getPasswordConfirmationFormComponent(),
             */
 >>>>>>> 73101fd (.)
+=======
+>>>>>>> Stashed changes
         ];
     }
 
@@ -195,89 +206,45 @@ class PasswordExpiredWidget extends Widget implements HasForms
         // get password expiry date and time
         $passwordExpiryDateTime = now()->addDays($pwd_data->expires_in);
 
-        // Verificare che l'utente esistante e che sia un modello Eloquent
+        // Verificare che l'utente esistente e che sia un modello Eloquent
         if (!($user instanceof \Illuminate\Database\Eloquent\Model)) {
             throw new \InvalidArgumentException('L\'utente deve essere un modello Eloquent con il metodo update');
         }
-
-        // set password expiry date and time
+        
+        // update password and password_expires_at
         $user->update([
-            'password_expires_at' => $passwordExpiryDateTime,
-            'is_otp' => false,
             'password' => Hash::make($password),
+            'password_expires_at' => $passwordExpiryDateTime,
         ]);
 
-        // Verificare che l'utente implementi l'interfaccia UserContract prima di passarlo all'evento
-        if (!$user instanceof \Modules\Xot\Contracts\UserContract) {
-            throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia UserContract');
-        }
-
-        event(new NewPasswordSet($user));
+        // trigger the event
+        event(new NewPasswordSet($user, $passwordExpiryDateTime));
 
         Notification::make()
-            ->title(__('user::otp.notifications.password_reset.success'))
+            ->title(__('user::otp.notifications.password_changed.title'))
+            ->body(__('user::otp.notifications.password_changed.body', [
+                'expiration_days' => $pwd_data->expires_in,
+            ]))
             ->success()
             ->send();
 
+<<<<<<< Updated upstream
         return new PasswordResetResponse();
 >>>>>>> 73101fd (.)
+=======
+        return new PasswordResetResponse($user);
+>>>>>>> Stashed changes
     }
 
-    protected function getCurrentPasswordFormComponent(): Component
+    public function getCurrentPasswordFormComponent(): TextInput
     {
-        $authUser = Filament::auth()->user();
-
-        if ($authUser instanceof \Modules\User\Models\User) {
-            return TextInput::make('current_password')
-                ->password()
-                ->revealable()
-                ->required()
-                ->rule(new CheckOtpExpiredRule($authUser))
-                ->validationAttribute(static::trans('fields.current_password.validation_attribute'));
-        }
-
-        // Fallback nel caso l'utente non sia del tipo corretto
         return TextInput::make('current_password')
             ->password()
-            ->revealable()
             ->required()
-            ->validationAttribute(static::trans('fields.current_password.validation_attribute'));
-    }
-
-    /*
-    protected function getPasswordFormComponent(): Component
-    {
-        $validation_messages = __('user::validation');
-
-        return TextInput::make('password')
-            ->password()
-            // ->revealable(filament()->arePasswordsRevealable())
-            ->revealable()
-            ->required()
-            ->rule(PasswordRule::default())
-            ->same('passwordConfirmation')
-            ->validationMessages($validation_messages)
-            ->validationAttribute(static::trans('fields.password.validation_attribute'));
-    }
-
-    protected function getPasswordConfirmationFormComponent(): Component
-    {
-        return TextInput::make('passwordConfirmation')
-            ->password()
-            // ->revealable(filament()->arePasswordsRevealable())
-            ->revealable()
-            ->required()
-            ->dehydrated(false);
-    }
-    */
-
-    /**
-     * @return array<Action|ActionGroup>
-     */
-    protected function getFormActions(): array
-    {
-        return [
-            $this->getResetPasswordFormAction(),
-        ];
+            ->label(__('user::auth.current_password'))
+            ->placeholder(__('user::auth.current_password_placeholder'))
+            ->validationMessages([
+                'required' => __('user::validation.required'),
+            ]);
     }
 }

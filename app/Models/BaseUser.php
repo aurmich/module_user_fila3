@@ -30,10 +30,14 @@ use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Traits\RelationX;
 use Spatie\Permission\Traits\HasRoles;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 use Parental\HasChildren;
 =======
 >>>>>>> 73101fd (.)
+=======
+use Parental\HasChildren;
+>>>>>>> Stashed changes
 
 /**
  * Modules\User\Models\User.
@@ -86,6 +90,7 @@ use Parental\HasChildren;
  * @property string|null $deleted_by
  * @property string|null $profile_photo_path
  * @property \Illuminate\Database\Eloquent\Relations\Pivot|null $pivot
+ * @property string|null $type
  *
  * @method static \Modules\User\Database\Factories\UserFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()
@@ -117,6 +122,7 @@ use Parental\HasChildren;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereIsOtp($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePasswordExpiresAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereSurname($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereType($value)
  *
  * @mixin \Eloquent
  */
@@ -131,11 +137,15 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     use RelationX;
     use Traits\HasAuthenticationLogTrait;
     use Traits\HasTenants;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     use HasChildren;
 
 =======
 >>>>>>> 73101fd (.)
+=======
+    use HasChildren;
+>>>>>>> Stashed changes
 
     public $incrementing = false;
 
@@ -148,12 +158,18 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     /** @var string */
     protected $keyType = 'string';
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     /** @var string */
     protected $childColumn = 'type';
 
 =======
 >>>>>>> 73101fd (.)
+=======
+    /** @var string */
+    protected $childColumn = 'type';
+
+>>>>>>> Stashed changes
     /** @var list<string> */
     protected $fillable = [
         'id',
@@ -167,10 +183,14 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         'is_active',
         'is_otp', // is One Time Password
         'password_expires_at',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
         'type',
 =======
 >>>>>>> 73101fd (.)
+=======
+        'type',
+>>>>>>> Stashed changes
     ];
 
     /** @var list<string> */
@@ -191,6 +211,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         // 'profile_photo_url',
     ];
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     /** @var array<string, class-string> */
     protected $childTypes = [
@@ -199,6 +220,13 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
 
 =======
 >>>>>>> 73101fd (.)
+=======
+    /** @var array<string, class-string> */
+    protected $childTypes = [
+        // Definire qui i tipi di utente supportati
+    ];
+
+>>>>>>> Stashed changes
     /** @var \Illuminate\Database\Eloquent\Relations\Pivot|null */
     public $pivot;
 
@@ -451,11 +479,15 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
      */
     /**
      * Get all role names associated with the user.
+<<<<<<< Updated upstream
 <<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> 73101fd (.)
+=======
+     *
+>>>>>>> Stashed changes
      * @return array<int, string>
      */
     public function getRoleNames(): array

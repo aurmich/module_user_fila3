@@ -1,6 +1,7 @@
 {
     "name": "User",
     "alias": "user",
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     "description": "Gestione utenti, autenticazione, autorizzazioni e ruoli del sistema",
     "keywords": ["auth", "users", "roles", "permissions", "authentication"],
@@ -8,6 +9,10 @@
     "description": "",
     "keywords": [],
 >>>>>>> 73101fd (.)
+=======
+    "description": "Gestione utenti, autenticazione, autorizzazioni e ruoli del sistema",
+    "keywords": ["auth", "users", "roles", "permissions", "authentication"],
+>>>>>>> Stashed changes
     "priority": 0,
     "providers": [
         "Modules\\User\\Providers\\UserServiceProvider",

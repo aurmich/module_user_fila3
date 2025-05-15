@@ -15,6 +15,7 @@ use Modules\User\Listeners\LogoutListener;
 use Modules\User\Listeners\OtherDeviceLogoutListener;
 use SocialiteProviders\Auth0\Auth0ExtendSocialite;
 use SocialiteProviders\Manager\SocialiteWasCalled;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 use Modules\Xot\Providers\XotBaseEventServiceProvider;
 
@@ -26,10 +27,21 @@ class EventServiceProvider extends XotBaseEventServiceProvider
     protected string $module_ns = __NAMESPACE__;
 
 =======
+=======
+use Modules\Xot\Providers\XotBaseEventServiceProvider;
+>>>>>>> Stashed changes
 
-class EventServiceProvider extends ServiceProvider
+class EventServiceProvider extends XotBaseEventServiceProvider
 {
+<<<<<<< Updated upstream
 >>>>>>> 73101fd (.)
+=======
+    public string $name = 'User';
+    public string $nameLower = 'user';
+    protected string $module_dir = __DIR__;
+    protected string $module_ns = __NAMESPACE__;
+
+>>>>>>> Stashed changes
     /**
      * The event to listener mappings for the application.
      *
@@ -52,11 +64,17 @@ class EventServiceProvider extends ServiceProvider
             OtherDeviceLogoutListener::class,
         ],
     ];
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 
     protected $subscribe = [
         // Aggiungi qui i subscriber specifici del modulo
     ];
+<<<<<<< Updated upstream
 =======
 >>>>>>> 73101fd (.)
+=======
+>>>>>>> Stashed changes
 }

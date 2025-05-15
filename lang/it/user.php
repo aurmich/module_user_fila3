@@ -29,10 +29,14 @@ return [
         'password' => [
             'label' => 'Password',
             'placeholder' => 'Inserisci la password',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
             'description' => 'password',
 =======
 >>>>>>> 73101fd (.)
+=======
+            'description' => 'password',
+>>>>>>> Stashed changes
         ],
         'password_confirmation' => [
             'label' => 'Conferma Password',

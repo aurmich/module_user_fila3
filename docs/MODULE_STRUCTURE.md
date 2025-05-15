@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 # Struttura del Modulo User
 
 ## Panoramica
@@ -100,8 +103,13 @@ return [
     'prefix' => 'user',
     'namespace' => 'Modules\User\Http\Controllers',
 ];
+<<<<<<< Updated upstream
 =======
 >>>>>>> 73101fd (.)
+=======
+```
+
+>>>>>>> Stashed changes
 # Struttura Standard dei Moduli Laravel
 
 ## Struttura Base Corretta
@@ -207,7 +215,10 @@ laravel/Modules/ModuleName/
 
 ## Best Practices
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 1. **Autenticazione**
    - Utilizzare il middleware `auth` per le rotte protette
    - Implementare il logout in modo sicuro
@@ -232,9 +243,14 @@ laravel/Modules/ModuleName/
 
 - [Best Practices per le Traduzioni](TRANSLATION_BEST_PRACTICES.md)
 - [Regole per le Chiavi di Traduzione](TRANSLATION_KEYS_RULES.md)
+<<<<<<< Updated upstream
 - [Convenzioni di Codice](CODE_CONVENTIONS.md) 
 =======
 >>>>>>> 73101fd (.)
+=======
+- [Convenzioni di Codice](CODE_CONVENTIONS.md)
+
+>>>>>>> Stashed changes
 1. **Verifica Path**
    ```bash
    # Prima di creare un file/cartella, verifica sempre il path
@@ -296,8 +312,12 @@ find . -type d -name "Resources" -o -name "Lang"
 # Correggi permessi
 chmod -R 755 laravel/Modules/*/app/
 chmod -R 644 laravel/Modules/*/resources/
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 ``` 
 =======
 ``` 
 >>>>>>> 73101fd (.)
+=======
+```
+>>>>>>> Stashed changes

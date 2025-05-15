@@ -1,4 +1,5 @@
 <?php
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 declare(strict_types=1);
 
@@ -32,32 +33,37 @@ class LoginWidget extends XotBaseWidget
                 ->label(__('user::auth.remember_me')),
         ];
 =======
+=======
+declare(strict_types=1);
+>>>>>>> Stashed changes
 
-namespace Modules\User\App\Filament\Widgets\Auth;
+namespace Modules\User\Filament\Widgets\Auth;
 
-use Filament\Widgets\Widget;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Checkbox;
-use Filament\Forms\Components\Section;
+use Filament\Forms;
 use Filament\Forms\Form;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Validation\ValidationException;
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
-class LoginWidget extends Widget
+class LoginWidget extends XotBaseWidget
 {
-    protected static string $view = 'user::widgets.auth.login-widget';
-
     public ?array $data = [];
 
-    public function mount(): void
+    protected static string $view = 'user::filament.widgets.auth.login';
+
+    public function getFormSchema(): array
     {
-        if (Auth::check()) {
-            redirect()->intended(route('dashboard'));
-        }
+        return [
+            Forms\Components\TextInput::make('email')
+                ->label(__('user::auth.email'))
+                ->email()
+                ->required(),
 
-        $this->form->fill();
-    }
+            Forms\Components\TextInput::make('password')
+                ->label(__('user::auth.password'))
+                ->password()
+                ->required(),
 
+<<<<<<< Updated upstream
     public function form(Form $form): Form
     {
         return $form
@@ -85,12 +91,18 @@ class LoginWidget extends Widget
             ])
             ->statePath('data');
 >>>>>>> 73101fd (.)
+=======
+            Forms\Components\Checkbox::make('remember')
+                ->label(__('user::auth.remember_me')),
+        ];
+>>>>>>> Stashed changes
     }
 
     public function login(): void
     {
         $data = $this->form->getState();
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
         if (Auth::attempt($data)) {
             session()->regenerate();
@@ -112,5 +124,13 @@ class LoginWidget extends Widget
 
         redirect()->intended(route('dashboard'));
 >>>>>>> 73101fd (.)
+=======
+        if (Auth::attempt($data)) {
+            session()->regenerate();
+            redirect()->intended(route('filament.admin.pages.dashboard'));
+        }
+
+        $this->addError('email', __('auth.failed'));
+>>>>>>> Stashed changes
     }
 }
