@@ -11,25 +11,8 @@ namespace Modules\User\Providers;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Notifications\Messages\MailMessage;
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Gate;
-=======
-<<<<<<< HEAD
-use Illuminate\Support\Facades\Blade;
-use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\Gate;
-use Illuminate\Support\ServiceProvider;
-=======
-use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\Gate;
->>>>>>> 88efd6b (.)
->>>>>>> 019e694 (.)
-=======
-use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\Gate;
->>>>>>> Stashed changes
 use Illuminate\Validation\Rules\Password;
 use Laravel\Passport\Passport;
 use Modules\User\Datas\PasswordData;
@@ -41,24 +24,8 @@ use Modules\User\Models\OauthRefreshToken;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 use SocialiteProviders\Manager\ServiceProvider as SocialiteServiceProvider;
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Illuminate\Support\Facades\Blade;
-use Illuminate\Support\ServiceProvider;
-=======
->>>>>>> 73101fd (.)
-=======
->>>>>>> 88efd6b (.)
->>>>>>> 019e694 (.)
-=======
-use Illuminate\Support\Facades\Blade;
-use Illuminate\Support\ServiceProvider;
->>>>>>> Stashed changes
 
 class UserServiceProvider extends XotBaseServiceProvider
 {
@@ -76,35 +43,11 @@ class UserServiceProvider extends XotBaseServiceProvider
         $this->registerMailsNotification();
     }
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> 019e694 (.)
-=======
->>>>>>> Stashed changes
     public function register(): void
     {
         parent::register();
     }
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> 73101fd (.)
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> 88efd6b (.)
->>>>>>> 019e694 (.)
-=======
->>>>>>> Stashed changes
     public function registerMailsNotification(): void
     {
         $app_name = config('app.name');
@@ -170,39 +113,7 @@ class UserServiceProvider extends XotBaseServiceProvider
 
     private function registerPassport(): void
     {
-<<<<<<< Updated upstream
-<<<<<<< HEAD
         if (method_exists(Passport::class, 'routes')) {
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-        
-=======
->>>>>>> Stashed changes
-=======
-        Passport::usePersonalAccessClientModel(OauthPersonalAccessClient::class);
->>>>>>> 88efd6b (.)
-        Passport::useTokenModel(OauthAccessToken::class);
-        Passport::useRefreshTokenModel(OauthRefreshToken::class);
-        Passport::useAuthCodeModel(OauthAuthCode::class);
-        Passport::useClientModel(OauthClient::class);
-<<<<<<< HEAD
-<<<<<<< Updated upstream
->>>>>>> 73101fd (.)
-        if (method_exists(Passport::class, 'routes')) {
-=======
-
-        if (class_exists(Passport::class) && method_exists(Passport::class, 'routes')) {
->>>>>>> Stashed changes
-=======
-        if (method_exists(Passport::class, 'routes')) {
->>>>>>> 88efd6b (.)
->>>>>>> 019e694 (.)
-=======
-        if (method_exists(Passport::class, 'routes')) {
->>>>>>> Stashed changes
             Passport::routes();
         }
 

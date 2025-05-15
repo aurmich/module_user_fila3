@@ -141,15 +141,6 @@ class Login extends Component implements HasForms
      */
     public function render(): \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
     {
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
->>>>>>> 019e694 (.)
-=======
->>>>>>> Stashed changes
         //app(ViewCopyAction::class)->execute('user::livewire.auth.login', 'pub_theme::livewire.auth.login');
         return view('user::livewire.auth.login');
     }

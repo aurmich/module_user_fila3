@@ -1,33 +1,8 @@
 {
     "name": "User",
     "alias": "user",
-<<<<<<< Updated upstream
-<<<<<<< HEAD
     "description": "Gestione utenti, autenticazione, autorizzazioni e ruoli del sistema",
     "keywords": ["auth", "users", "roles", "permissions", "authentication"],
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-    "description": "Gestione utenti, autenticazione, autorizzazioni e ruoli del sistema",
-    "keywords": ["auth", "users", "roles", "permissions", "authentication"],
-=======
-    "description": "",
-    "keywords": [],
->>>>>>> 73101fd (.)
-=======
-    "description": "Gestione utenti, autenticazione, autorizzazioni e ruoli del sistema",
-    "keywords": ["auth", "users", "roles", "permissions", "authentication"],
->>>>>>> Stashed changes
-=======
-    "description": "",
-    "keywords": [],
->>>>>>> 88efd6b (.)
->>>>>>> 019e694 (.)
-=======
-    "description": "Gestione utenti, autenticazione, autorizzazioni e ruoli del sistema",
-    "keywords": ["auth", "users", "roles", "permissions", "authentication"],
->>>>>>> Stashed changes
     "priority": 0,
     "providers": [
         "Modules\\User\\Providers\\UserServiceProvider",
@@ -39,16 +14,4 @@
         ]
     },
     "files": []
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 88efd6b (.)
->>>>>>> 019e694 (.)
-=======
-}
->>>>>>> Stashed changes

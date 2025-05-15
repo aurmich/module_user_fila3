@@ -31,44 +31,14 @@ use Modules\Xot\Filament\Traits\TransTrait;
  */
 final class UsersRelationManager extends XotBaseRelationManager
 {
-<<<<<<< Updated upstream
-<<<<<<< HEAD
     
-=======
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> 88efd6b (.)
->>>>>>> 019e694 (.)
-=======
-    
->>>>>>> Stashed changes
     protected static string $relationship = 'users';
 
     protected static ?string $inverseRelationship = 'roles';
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
     
 
     
-=======
-<<<<<<< HEAD
-
-
-
-=======
-    
-
-    
->>>>>>> 88efd6b (.)
->>>>>>> 019e694 (.)
-=======
-    
-
-    
->>>>>>> Stashed changes
 
 
     /**
@@ -91,27 +61,7 @@ final class UsersRelationManager extends XotBaseRelationManager
      *
      * @return array<Tables\Columns\Column|Tables\Columns\Layout\Component>
      */
-<<<<<<< Updated upstream
-<<<<<<< HEAD
     public function getTableColumns(): array
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-    public function getTableColumns(): array
-=======
-    public function getListTableColumns(): array
->>>>>>> 73101fd (.)
-=======
-    public function getTableColumns(): array
->>>>>>> Stashed changes
-=======
-    public function getListTableColumns(): array
->>>>>>> 88efd6b (.)
->>>>>>> 019e694 (.)
-=======
-    public function getTableColumns(): array
->>>>>>> Stashed changes
     {
         return [
             TextColumn::make('name')
@@ -168,32 +118,9 @@ final class UsersRelationManager extends XotBaseRelationManager
         ];
     }
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-    
-=======
-<<<<<<< HEAD
->>>>>>> 019e694 (.)
-
-   
-
-<<<<<<< HEAD
-   
-=======
-
-
-
-=======
-=======
->>>>>>> Stashed changes
     
 
    
 
    
-<<<<<<< Updated upstream
->>>>>>> 88efd6b (.)
->>>>>>> 019e694 (.)
-=======
->>>>>>> Stashed changes
 }

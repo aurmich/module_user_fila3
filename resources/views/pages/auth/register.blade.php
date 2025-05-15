@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -62,19 +62,6 @@ new class extends Component
                 </div>
                 <h1 class="text-3xl font-light text-blue-900">Benvenuto in <span class="font-bold">il progetto</span></h1>
                 <p class="text-gray-600 mt-2">Crea il tuo account per accedere a tutti i servizi1</p>
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-=======
-                <p class="text-gray-600 mt-2">Crea il tuo account per accedere a tutti i servizi</p>
->>>>>>> 73101fd (.)
-=======
-                <h1 class="text-3xl font-light text-blue-900">Benvenuto in <span class="font-bold">SaluteOra</span></h1>
-                <p class="text-gray-600 mt-2">Crea il tuo account per accedere a tutti i servizi</p>
->>>>>>> 88efd6b (.)
->>>>>>> 019e694 (.)
-=======
->>>>>>> Stashed changes
             </div>
 
             <!-- Card contenente il form di registrazione -->

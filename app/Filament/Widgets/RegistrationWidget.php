@@ -1,30 +1,7 @@
 <?php
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 declare(strict_types=1);
 
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-declare(strict_types=1);
-
-=======
->>>>>>> 73101fd (.)
-=======
-declare(strict_types=1);
-
->>>>>>> Stashed changes
-=======
-declare(strict_types=1);
-
->>>>>>> 88efd6b (.)
->>>>>>> 019e694 (.)
-=======
-declare(strict_types=1);
-
->>>>>>> Stashed changes
 namespace Modules\User\Filament\Widgets;
 
 use Filament\Forms\Form;

@@ -19,19 +19,7 @@ use Modules\Xot\Filament\Traits\HasXotTable;
  */
 class TenantsRelationManager extends XotBaseRelationManager
 {
-<<<<<<< Updated upstream
-<<<<<<< HEAD
    
-=======
-<<<<<<< HEAD
-
-=======
-    use HasXotTable;
->>>>>>> 88efd6b (.)
->>>>>>> 019e694 (.)
-=======
-   
->>>>>>> Stashed changes
 
     protected static string $relationship = 'tenants';
 
@@ -56,38 +44,8 @@ class TenantsRelationManager extends XotBaseRelationManager
      *
      * @return array<string, \Filament\Tables\Columns\Column>
      */
-<<<<<<< Updated upstream
-<<<<<<< HEAD
     public function getTableColumns(): array
     {
         return app(ListTenants::class)->getTableColumns();
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-    public function getTableColumns(): array
-    {
-        return app(ListTenants::class)->getTableColumns();
-=======
-    public function getListTableColumns(): array
-    {
-        return app(ListTenants::class)->getListTableColumns();
->>>>>>> 73101fd (.)
-=======
-    public function getTableColumns(): array
-    {
-        return app(ListTenants::class)->getTableColumns();
->>>>>>> Stashed changes
-=======
-    public function getListTableColumns(): array
-    {
-        return app(ListTenants::class)->getListTableColumns();
->>>>>>> 88efd6b (.)
->>>>>>> 019e694 (.)
-=======
-    public function getTableColumns(): array
-    {
-        return app(ListTenants::class)->getTableColumns();
->>>>>>> Stashed changes
     }
 }
