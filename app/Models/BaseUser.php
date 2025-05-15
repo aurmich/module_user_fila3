@@ -578,11 +578,6 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         return $this->belongsTo(Team::class, 'current_team_id');
     }
 
-    public function tenants(): BelongsToMany
-    {
-        return $this->belongsToMany(Tenant::class, 'tenant_user');
-    }
-
     public function authentications(): MorphMany
     {
         return $this->morphMany(\Modules\User\Models\Authentication::class, 'authenticatable');
