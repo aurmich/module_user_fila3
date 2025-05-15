@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 ### Versione HEAD
 
 # Correzioni PHPStan Livello 7 - Modulo User
@@ -47,44 +46,55 @@ Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` ut
 ### Versione Incoming
 
 # Correzioni PHPStan per il Modulo User
-=======
-# Correzioni PHPStan Livello 7 - Modulo User
->>>>>>> Stashed changes
 
-Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo User e le relative soluzioni implementate.
+## Problemi Principali
 
-## Errori Identificati
+### BaseUser.php
 
-### 1. Errori in Profile.php
+1. Proprietà non definite:
+   - `$pivot`
+   - `$email`
+   - `$first_name`
+   - `$last_name`
+   - `$current_team_id`
 
-```
-Line 49: PHPDoc tag @method for method Modules\User\Models\Profile::permission() return type contains unknown class Modules\User\Models\Builder.
-Line 49: PHPDoc tag @method for method Modules\User\Models\Profile::role() return type contains unknown class Modules\User\Models\Builder.
-Line 49: PHPDoc tag @method for method Modules\User\Models\Profile::withExtraAttributes() return type contains unknown class Modules\User\Models\Builder.
-Line 49: PHPDoc tag @method for method Modules\User\Models\Profile::withoutPermission() return type contains unknown class Modules\User\Models\Builder.
-Line 49: PHPDoc tag @method for method Modules\User\Models\Profile::withoutRole() return type contains unknown class Modules\User\Models\Builder.
-```
+2. Metodi non definiti:
+   - `hasRole()`
+   - `teams()`
+   - `ownedTeams()`
+   - `belongsToTeam()`
+   - `teamRole()`
+   - `ownsTeam()`
+   - `hasTeamPermission()`
+   - `belongsToManyX()`
+   - `socialiteUsers()`
+   - `authentications()`
 
-## Soluzioni Implementate
+3. Problemi di tipo:
+   - Parametro `$role` in `hasRole()` senza tipo specificato
+   - Parametro `$related` in `belongsToMany()` richiede `class-string<Model>`
+   - Tipo template `TRelatedModel` non risolto in `belongsToMany()`
 
-### 1. Correzione in Profile.php
+### Soluzioni Proposte
 
-Il problema è che i tag PHPDoc facevano riferimento a una classe `Builder` nel namespace `Modules\User\Models` che non esiste. Abbiamo corretto i riferimenti utilizzando il namespace completo per la classe Builder:
+1. Definire le proprietà mancanti:
+   ```php
+   /**
+    * @property string|null $email
+    * @property string|null $first_name
+    * @property string|null $last_name
+    * @property string|null $current_team_id
+    * @property \Illuminate\Database\Eloquent\Relations\Pivot|null $pivot
+    */
+   ```
 
-```php
-/**
- * ...
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile permission($permissions, $without = false)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile query()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile role($roles, $guard = null, $without = false)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withExtraAttributes()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutPermission($permissions)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutRole($roles, $guard = null)
- * ...
- */
-```
+2. Implementare i metodi mancanti:
+   ```php
+   public function hasRole(string $role): bool
+   {
+       return $this->roles()->where('name', $role)->exists();
+   }
 
-<<<<<<< Updated upstream
    public function teams(): BelongsToMany
    {
        return $this->belongsToMany(Team::class);
@@ -128,6 +138,3 @@ Il problema è che i tag PHPDoc facevano riferimento a una classe `Builder` nel 
 
 ---
 
-=======
-Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` utilizzando il namespace completo `\Illuminate\Database\Eloquent\Builder`. 
->>>>>>> Stashed changes
