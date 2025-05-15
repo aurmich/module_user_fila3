@@ -109,6 +109,7 @@
 <<<<<<< Updated upstream
 [0;34mℹ️ [2025-05-15 14:01:42] Configurazione avanzata git...[0m
 [0;32m✅ [2025-05-15 14:01:42] Configurazione git completata con successo[0m
+<<<<<<< Updated upstream
 =======
 =======
 [0;34mℹ️ [2025-05-14 08:26:43] Configurazione avanzata git...[0m
@@ -149,4 +150,8 @@
 =======
 [0;34mℹ️ [2025-05-15 16:08:23] Configurazione avanzata git...[0m
 [0;32m✅ [2025-05-15 16:08:23] Configurazione git completata con successo[0m
+>>>>>>> Stashed changes
+=======
+[0;34mℹ️ [2025-05-15 16:21:52] Configurazione avanzata git...[0m
+[0;32m✅ [2025-05-15 16:21:52] Configurazione git completata con successo[0m
 >>>>>>> Stashed changes
