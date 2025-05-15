@@ -3,12 +3,9 @@
 **/*.Zone.Identifier
 
 
-<<<<<<< HEAD
 
 # Backup files
 *.bak
 -e 
 # PHPStan documentation
 docs/phpstan/
-=======
->>>>>>> 88efd6b (.)

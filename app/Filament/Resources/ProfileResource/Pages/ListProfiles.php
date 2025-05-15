@@ -12,6 +12,7 @@ class ListProfiles extends XotBaseListRecords
 {
     protected static string $resource = ProfileResource::class;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     public function getTableColumns(): array
 =======
@@ -29,6 +30,9 @@ class ListProfiles extends XotBaseListRecords
     public function getListTableColumns(): array
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
     {
         return [
             'email' => TextColumn::make('email')

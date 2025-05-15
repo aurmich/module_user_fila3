@@ -30,6 +30,7 @@ use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Traits\RelationX;
 use Spatie\Permission\Traits\HasRoles;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 use Parental\HasChildren;
 =======
@@ -45,6 +46,9 @@ use Parental\HasChildren;
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+use Parental\HasChildren;
+>>>>>>> Stashed changes
 
 /**
  * Modules\User\Models\User.
@@ -97,6 +101,7 @@ use Parental\HasChildren;
  * @property string|null $deleted_by
  * @property string|null $profile_photo_path
  * @property \Illuminate\Database\Eloquent\Relations\Pivot|null $pivot
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -104,6 +109,8 @@ use Parental\HasChildren;
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
  *
  * @method static \Modules\User\Database\Factories\UserFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()
@@ -135,6 +142,7 @@ use Parental\HasChildren;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereIsOtp($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePasswordExpiresAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereSurname($value)
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -142,6 +150,8 @@ use Parental\HasChildren;
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
  *
  * @mixin \Eloquent
  */
@@ -156,6 +166,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     use RelationX;
     use Traits\HasAuthenticationLogTrait;
     use Traits\HasTenants;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     use HasChildren;
 
@@ -173,6 +184,10 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+    use HasChildren;
+
+>>>>>>> Stashed changes
 
     public $incrementing = false;
 
@@ -185,6 +200,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     /** @var string */
     protected $keyType = 'string';
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     /** @var string */
     protected $childColumn = 'type';
@@ -206,6 +222,11 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+    /** @var string */
+    protected $childColumn = 'type';
+
+>>>>>>> Stashed changes
     /** @var list<string> */
     protected $fillable = [
         'id',
@@ -219,6 +240,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         'is_active',
         'is_otp', // is One Time Password
         'password_expires_at',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
         'type',
 =======
@@ -234,6 +256,9 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+        'type',
+>>>>>>> Stashed changes
     ];
 
     /** @var list<string> */
@@ -254,17 +279,21 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         // 'profile_photo_url',
     ];
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
     /** @var array<string, class-string> */
     protected $childTypes = [
 
     ];
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -279,6 +308,8 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
     /** @var \Illuminate\Database\Eloquent\Relations\Pivot|null */
     public $pivot;
 
@@ -320,7 +351,6 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         return $this->hasOne($profileClass);
     }
 
-<<<<<<< HEAD
     /**
      * Verifica se l'utente ha il ruolo di super-admin.
      *
@@ -332,8 +362,6 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     }
 
 
-=======
->>>>>>> 88efd6b (.)
     public function canAccessPanel(Panel $panel): bool
     {
         // $panel->default('admin');
@@ -534,6 +562,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
      */
     /**
      * Get all role names associated with the user.
+<<<<<<< Updated upstream
 <<<<<<< HEAD
      *
 =======
@@ -551,6 +580,9 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
      *
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+     *
+>>>>>>> Stashed changes
      * @return array<int, string>
      */
     public function getRoleNames(): array
@@ -692,21 +724,11 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         return $this->belongsTo(Team::class, 'current_team_id');
     }
 
-<<<<<<< HEAD
-=======
-    /*
-     * Moved to HasTenants trait
-     *
->>>>>>> 88efd6b (.)
     public function tenants(): BelongsToMany
     {
         return $this->belongsToMany(Tenant::class, 'tenant_user');
     }
-<<<<<<< HEAD
 
-=======
-    */
->>>>>>> 88efd6b (.)
     public function authentications(): MorphMany
     {
         return $this->morphMany(\Modules\User\Models\Authentication::class, 'authenticatable');
@@ -723,13 +745,9 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     {
         // Se è una stringa semplice, utilizziamo il metodo interno tramite relazione roles
         if (is_string($roles)) {
-<<<<<<< HEAD
             return once(function () use ($roles) {
                 return $this->roles()->where('name', $roles)->exists();
             });
-=======
-            return $this->roles()->where('name', $roles)->exists();
->>>>>>> 88efd6b (.)
         }
 
         // Per gli altri tipi, implementiamo una logica di base

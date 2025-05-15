@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Widgets;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -17,6 +18,10 @@ use Filament\Forms\Form;
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+use Filament\Forms;
+use Filament\Forms\Form;
+>>>>>>> Stashed changes
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Forms\ComponentContainer;
@@ -24,6 +29,7 @@ use Filament\Forms\Components\Component;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 use Filament\Forms\Form as FilamentForm;
 =======
@@ -37,6 +43,9 @@ use Filament\Forms\Form;
 use Filament\Forms\Form;
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+use Filament\Forms\Form as FilamentForm;
+>>>>>>> Stashed changes
 use Filament\Notifications\Notification;
 use Filament\Pages\Concerns\InteractsWithFormActions;
 use Filament\Widgets\Widget;
@@ -52,6 +61,7 @@ use Modules\User\Rules\CheckOtpExpiredRule;
 use Modules\Xot\Filament\Traits\TransTrait;
 use Webmozart\Assert\Assert;
 use Filament\Facades\Filament;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use Illuminate\Auth\Events\PasswordReset as PasswordResetResponseEvent;
@@ -69,10 +79,15 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
+use Illuminate\Auth\Events\PasswordReset as PasswordResetResponseEvent;
+>>>>>>> Stashed changes
 
 /**
  * @property ComponentContainer $form
  */
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -103,6 +118,9 @@ class PasswordExpiredWidget extends XotBaseWidget implements HasForms
 >>>>>>> Stashed changes
 =======
 class PasswordExpiredWidget extends Widget implements HasForms
+=======
+class PasswordExpiredWidget extends XotBaseWidget implements HasForms
+>>>>>>> Stashed changes
 {
     use InteractsWithForms;
 
@@ -115,9 +133,13 @@ class PasswordExpiredWidget extends Widget implements HasForms
 
     public ?string $passwordConfirmation = '';
 
+<<<<<<< Updated upstream
     public array $data = [];
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+    public ?array $data = [];
+>>>>>>> Stashed changes
 
     /**
      * @var view-string
@@ -126,6 +148,7 @@ class PasswordExpiredWidget extends Widget implements HasForms
 
     protected static bool $shouldRegisterNavigation = false;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     
 =======
@@ -147,6 +170,9 @@ class PasswordExpiredWidget extends Widget implements HasForms
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+    
+>>>>>>> Stashed changes
 
     /**
      * @return array<Component>
@@ -156,6 +182,7 @@ class PasswordExpiredWidget extends Widget implements HasForms
         return [
             $this->getCurrentPasswordFormComponent(),
             ...PasswordData::make()->getPasswordFormComponents('password'),
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -175,6 +202,8 @@ class PasswordExpiredWidget extends Widget implements HasForms
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
         ];
     }
 
@@ -191,11 +220,14 @@ class PasswordExpiredWidget extends Widget implements HasForms
 
     public function resetPassword(): ?PasswordResetResponse
     {
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
         $this->validate();
 
         if (! Hash::check($this->data['current_password'], auth()->user()->password)) {
@@ -208,6 +240,7 @@ class PasswordExpiredWidget extends Widget implements HasForms
         $user->save();
 
         return new PasswordResetResponse($user);
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -358,6 +391,8 @@ class PasswordExpiredWidget extends Widget implements HasForms
             ->send();
 
         return new PasswordResetResponse();
+=======
+>>>>>>> Stashed changes
     }
 
     protected function getCurrentPasswordFormComponent(): Component
@@ -417,9 +452,12 @@ class PasswordExpiredWidget extends Widget implements HasForms
         return [
             $this->getResetPasswordFormAction(),
         ];
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
     }
 }

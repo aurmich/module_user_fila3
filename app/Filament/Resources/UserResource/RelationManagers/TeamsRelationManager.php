@@ -26,6 +26,7 @@ class TeamsRelationManager extends RelationManager
                 TextColumn::make('name')
                     ->searchable()
                     ->sortable(),
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                 IconColumn::make('personal_team')
 =======
@@ -47,6 +48,9 @@ class TeamsRelationManager extends RelationManager
                     ->label('Personal Team')
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+                IconColumn::make('personal_team')
+>>>>>>> Stashed changes
                     ->boolean()
                     ->default(fn ($record, $livewire) => $livewire->getOwnerRecord()->current_team_id === $record->id),
             ])
@@ -76,6 +80,7 @@ class TeamsRelationManager extends RelationManager
                 DetachBulkAction::make(),
             ]);
     }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -84,6 +89,8 @@ class TeamsRelationManager extends RelationManager
 =======
 >>>>>>> Stashed changes
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
 
     public function getTableColumns(): array
     {
@@ -98,6 +105,7 @@ class TeamsRelationManager extends RelationManager
                 ->sortable(),
         ];
     }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
@@ -108,4 +116,6 @@ class TeamsRelationManager extends RelationManager
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
 }

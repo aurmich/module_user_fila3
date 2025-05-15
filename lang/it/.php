@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <?php
 
@@ -21,6 +22,11 @@ return array (
 <?php return array (
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+<?php
+
+return array (
+>>>>>>> Stashed changes
   'fields' => 
   array (
     'startDate' => 
@@ -30,6 +36,7 @@ return array (
     'endDate' => 
     array (
       'label' => 'endDate',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -38,11 +45,14 @@ return array (
 =======
 >>>>>>> Stashed changes
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
       'description' => 'endDate',
       'helper_text' => 'endDate',
     ),
   ),
 );
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< Updated upstream
@@ -59,3 +69,5 @@ return array (
 );
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes

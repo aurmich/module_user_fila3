@@ -30,12 +30,15 @@ class RecentLoginsWidget extends BaseWidget
     /**
      * Define the columns to display in the table.
      */
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
     public function getTableColumns(): array
     {
         return [
@@ -43,6 +46,7 @@ class RecentLoginsWidget extends BaseWidget
             \Filament\Tables\Columns\TextColumn::make('login_at'),
             \Filament\Tables\Columns\TextColumn::make('ip_address'),
             \Filament\Tables\Columns\TextColumn::make('user_agent'),
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -78,6 +82,8 @@ class RecentLoginsWidget extends BaseWidget
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
         ];
     }
 

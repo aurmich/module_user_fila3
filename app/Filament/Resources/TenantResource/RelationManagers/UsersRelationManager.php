@@ -7,11 +7,7 @@ namespace Modules\User\Filament\Resources\TenantResource\RelationManagers;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Tables\Columns\TextColumn;
-<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
-=======
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
->>>>>>> 88efd6b (.)
 use Modules\Xot\Filament\Traits\HasXotTable;
 
 class UsersRelationManager extends XotBaseRelationManager
@@ -59,6 +55,7 @@ class UsersRelationManager extends XotBaseRelationManager
     /**
      * @return array<string, \Filament\Tables\Columns\Column>
      */
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     public function getTableColumns(): array
 =======
@@ -76,6 +73,9 @@ class UsersRelationManager extends XotBaseRelationManager
     public function getListTableColumns(): array
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
     {
         return [
             'id' => TextColumn::make('id')

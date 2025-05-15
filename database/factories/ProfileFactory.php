@@ -1,4 +1,5 @@
 <?php
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 declare(strict_types=1);
 =======
@@ -14,6 +15,9 @@ declare(strict_types=1);
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+declare(strict_types=1);
+>>>>>>> Stashed changes
 
 namespace Modules\User\Database\Factories;
 

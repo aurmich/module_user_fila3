@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 ### Versione HEAD
 
-=======
->>>>>>> 88efd6b (.)
 # Correzioni PHPStan Livello 7 - Modulo User
 
 Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo User e le relative soluzioni implementate.
@@ -38,7 +35,6 @@ Il problema è che i tag PHPDoc facevano riferimento a una classe `Builder` nel 
  */
 ```
 
-<<<<<<< HEAD
 Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` utilizzando il namespace completo `\Illuminate\Database\Eloquent\Builder`. 
 ## Collegamenti tra versioni di phpstan_fixes.md
 * [phpstan_fixes.md](../../../Xot/docs/phpstan_fixes.md)
@@ -142,6 +138,3 @@ Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` ut
 
 ---
 
-=======
-Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` utilizzando il namespace completo `\Illuminate\Database\Eloquent\Builder`. 
->>>>>>> 88efd6b (.)

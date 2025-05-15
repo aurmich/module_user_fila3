@@ -16,6 +16,7 @@ use Illuminate\Support\HtmlString;
 use Illuminate\Validation\Rules\Password;
 use Modules\Tenant\Services\TenantService;
 use Spatie\LaravelData\Data;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 use Filament\Forms\Components\TextInput as FilamentTextInput;
 use Filament\Forms\Components\TextInput as FormsTextInput;
@@ -29,6 +30,10 @@ use Filament\Forms\Components\TextInput as FormsTextInput;
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+use Filament\Forms\Components\TextInput as FilamentTextInput;
+use Filament\Forms\Components\TextInput as FormsTextInput;
+>>>>>>> Stashed changes
 
 /**
  * Classe per la gestione dei dati relativi alle password.
@@ -197,6 +202,7 @@ class PasswordData extends Data
             $this->getPasswordConfirmationFormComponent(),
         ];
     }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -205,6 +211,8 @@ class PasswordData extends Data
 =======
 >>>>>>> Stashed changes
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
 
     public static function getFormSchema(): array
     {
@@ -221,6 +229,7 @@ class PasswordData extends Data
                 ->maxLength(255),
         ];
     }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -237,4 +246,6 @@ class PasswordData extends Data
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
 }

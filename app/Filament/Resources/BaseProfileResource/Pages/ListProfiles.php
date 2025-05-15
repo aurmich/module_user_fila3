@@ -25,6 +25,7 @@ class ListProfiles extends XotBaseListRecords
     /**
      * @return array<string, Tables\Columns\Column>
      */
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     public function getTableColumns(): array
 =======
@@ -42,6 +43,9 @@ class ListProfiles extends XotBaseListRecords
     public function getListTableColumns(): array
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
     {
         return [
             'user.name' => TextColumn::make('user.name')

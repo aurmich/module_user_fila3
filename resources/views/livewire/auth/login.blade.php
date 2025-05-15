@@ -1,9 +1,12 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
 @section('title', __('user::auth.login.title'))
 
 <div class="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
@@ -127,6 +130,7 @@
                     </div>
                 </div>
             @endif
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -341,6 +345,8 @@
             </form>
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
         </div>
     </div>
 </div>

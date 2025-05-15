@@ -11,11 +11,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\Filter;
 use Illuminate\Database\Eloquent\Builder;
 use Modules\UI\Enums\TableLayoutEnum;
-<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
-=======
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
->>>>>>> 88efd6b (.)
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Modules\Xot\Filament\Traits\TransTrait;
 
@@ -35,6 +31,7 @@ use Modules\Xot\Filament\Traits\TransTrait;
  */
 final class UsersRelationManager extends XotBaseRelationManager
 {
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     
 =======
@@ -44,10 +41,14 @@ final class UsersRelationManager extends XotBaseRelationManager
     
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+    
+>>>>>>> Stashed changes
     protected static string $relationship = 'users';
 
     protected static ?string $inverseRelationship = 'roles';
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     
 
@@ -63,6 +64,11 @@ final class UsersRelationManager extends XotBaseRelationManager
     
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+    
+
+    
+>>>>>>> Stashed changes
 
 
     /**
@@ -85,6 +91,7 @@ final class UsersRelationManager extends XotBaseRelationManager
      *
      * @return array<Tables\Columns\Column|Tables\Columns\Layout\Component>
      */
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     public function getTableColumns(): array
 =======
@@ -102,6 +109,9 @@ final class UsersRelationManager extends XotBaseRelationManager
     public function getListTableColumns(): array
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
     {
         return [
             TextColumn::make('name')
@@ -158,6 +168,7 @@ final class UsersRelationManager extends XotBaseRelationManager
         ];
     }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     
 =======
@@ -173,11 +184,16 @@ final class UsersRelationManager extends XotBaseRelationManager
 
 
 =======
+=======
+>>>>>>> Stashed changes
     
 
    
 
    
+<<<<<<< Updated upstream
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
 }

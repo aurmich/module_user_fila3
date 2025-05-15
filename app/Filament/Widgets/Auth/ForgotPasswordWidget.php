@@ -8,6 +8,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Illuminate\Support\Facades\Password;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 use Filament\Forms\Components\TextInput as FormsTextInput;
 =======
@@ -23,6 +24,9 @@ use Filament\Forms\Components\TextInput as FormsTextInput;
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+use Filament\Forms\Components\TextInput as FormsTextInput;
+>>>>>>> Stashed changes
 
 class ForgotPasswordWidget extends BaseAuthWidget
 {
@@ -35,6 +39,7 @@ class ForgotPasswordWidget extends BaseAuthWidget
                 Section::make()
                     ->schema([
                         TextInput::make('email')
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                             ->email()
                             ->required()
@@ -64,6 +69,11 @@ class ForgotPasswordWidget extends BaseAuthWidget
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+                            ->email()
+                            ->required()
+                            ->maxLength(255),
+>>>>>>> Stashed changes
                     ])
                     ->columns(1),
             ])

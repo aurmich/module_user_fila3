@@ -12,10 +12,10 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Modules\User\Models\SocialiteUser;
-<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
 use Modules\Xot\Filament\Traits\HasXotTable;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -23,6 +23,8 @@ use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelati
 use Modules\Xot\Filament\Traits\HasXotTable;
 >>>>>>> 019e694 (.)
 
+=======
+>>>>>>> Stashed changes
 
 
 
@@ -33,8 +35,11 @@ use Modules\Xot\Filament\Traits\HasXotTable;
 <<<<<<< HEAD
 =======
 
+<<<<<<< Updated upstream
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
 /**
  * Class Modules\User\Filament\Resources\UserResource\RelationManagers\SocialiteUsersRelationManager.
  */
@@ -45,20 +50,26 @@ class SocialiteUsersRelationManager extends XotBaseRelationManager
     protected static string $relationship = 'socialiteUsers';
 
     /**
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
      * Configure the form schema for managing Socialite User data.
      */
 
 
     /**
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
      * Define form fields in a dedicated method for reusability.
      *
      * @return array<Forms\Components\Component>
@@ -67,6 +78,7 @@ class SocialiteUsersRelationManager extends XotBaseRelationManager
     {
         return [
             Forms\Components\TextInput::make('provider')
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 
 =======
@@ -75,11 +87,15 @@ class SocialiteUsersRelationManager extends XotBaseRelationManager
 
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+
+>>>>>>> Stashed changes
                 ->required()
                 ->maxLength(255)
                 ->placeholder(__('Enter provider name, e.g., Google, Facebook')),
 
             Forms\Components\TextInput::make('provider_id')
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 
 =======
@@ -88,11 +104,15 @@ class SocialiteUsersRelationManager extends XotBaseRelationManager
 
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+
+>>>>>>> Stashed changes
                 ->required()
                 ->maxLength(255)
                 ->placeholder(__('Enter the provider ID for the user')),
 
             Forms\Components\TextInput::make('name')
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 
 =======
@@ -116,6 +136,8 @@ class SocialiteUsersRelationManager extends XotBaseRelationManager
 =======
                 ->placeholder(__("URL of the user's avatar image")),
 =======
+=======
+>>>>>>> Stashed changes
 
                 ->maxLength(255)
                 ->placeholder(__('User’s name associated with the provider')),
@@ -131,8 +153,11 @@ class SocialiteUsersRelationManager extends XotBaseRelationManager
                 ->url()
                 ->maxLength(512)
                 ->placeholder(__('URL of the user’s avatar image')),
+<<<<<<< Updated upstream
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
         ];
     }
 
@@ -141,6 +166,7 @@ class SocialiteUsersRelationManager extends XotBaseRelationManager
      *
      * @return array<TextColumn|ImageColumn>
      */
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -172,6 +198,9 @@ class SocialiteUsersRelationManager extends XotBaseRelationManager
 =======
 =======
     public function getListTableColumns(): array
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
     {
         return [
             TextColumn::make('provider')
@@ -192,8 +221,11 @@ class SocialiteUsersRelationManager extends XotBaseRelationManager
 
             ImageColumn::make('avatar')
 
+<<<<<<< Updated upstream
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
                 ->size(40),
         ];
     }

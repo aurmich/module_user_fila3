@@ -15,12 +15,9 @@ return [
         'icon' => 'user-main',
     ],
     'fields' => [
-<<<<<<< HEAD
         'id' => [
             'label' => 'ID',
         ],
-=======
->>>>>>> 88efd6b (.)
         'name' => [
             'label' => 'Nome',
             'placeholder' => 'Inserisci il nome',
@@ -32,6 +29,7 @@ return [
         'password' => [
             'label' => 'Password',
             'placeholder' => 'Inserisci la password',
+<<<<<<< Updated upstream
 <<<<<<< HEAD
             'description' => 'password',
 =======
@@ -47,6 +45,9 @@ return [
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+            'description' => 'password',
+>>>>>>> Stashed changes
         ],
         'password_confirmation' => [
             'label' => 'Conferma Password',
@@ -100,7 +101,6 @@ return [
         'unverified' => [
             'label' => 'Non Verificato',
         ],
-<<<<<<< HEAD
         'applyFilters' => [
             'label' => 'applyFilters',
         ],
@@ -137,8 +137,6 @@ return [
         'email_verified_at' => [
             'label' => 'Email Verificata il',
         ],
-=======
->>>>>>> 88efd6b (.)
     ],
     'actions' => [
         'create' => 'Crea Utente',
@@ -175,10 +173,7 @@ return [
         'impersonate_users' => 'Impersona utenti',
         'manage_roles' => 'Gestisci ruoli',
     ],
-<<<<<<< HEAD
     'model' => [
         'label' => 'Utente',
     ],
-=======
->>>>>>> 88efd6b (.)
 ];

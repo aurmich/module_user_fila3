@@ -2,11 +2,7 @@
 
 ## Introduzione
 
-<<<<<<< HEAD
 Questo documento analizza le due principali strategie architetturali per la gestione degli utenti in il progetto:
-=======
-Questo documento analizza le due principali strategie architetturali per la gestione degli utenti in SaluteOra:
->>>>>>> 88efd6b (.)
 1. **Approccio unificato**: Tutti i dati dell'utente in un unico modello `User`
 2. **Approccio separato**: Divisione tra `User` (autenticazione) e `Profile` (dati personali)
 
@@ -94,15 +90,9 @@ Questo documento analizza le due principali strategie architetturali per la gest
   - Maggiore complessità nel rollback
   - Sincronizzazione tra modelli da gestire attentamente
 
-<<<<<<< HEAD
 ## Raccomandazioni per il progetto
 
 Considerando la natura di il progetto come piattaforma che gestisce dati sensibili di pazienti vulnerabili, **si raccomanda l'adozione dell'approccio con modelli separati** per i seguenti motivi:
-=======
-## Raccomandazioni per SaluteOra
-
-Considerando la natura di SaluteOra come piattaforma che gestisce dati sensibili di pazienti vulnerabili, **si raccomanda l'adozione dell'approccio con modelli separati** per i seguenti motivi:
->>>>>>> 88efd6b (.)
 
 ### Motivazioni principali
 
@@ -206,8 +196,4 @@ Per mitigare gli svantaggi dell'approccio separato:
 
 ## Conclusione
 
-<<<<<<< HEAD
 La separazione dei modelli User e Profile rappresenta la scelta architetturale più adatta per il progetto, offrendo il giusto equilibrio tra manutenibilità, sicurezza e scalabilità. Nonostante la maggiore complessità iniziale, i benefici a lungo termine in termini di flessibilità e conformità normativa superano ampiamente gli svantaggi, specialmente in un contesto sanitario dove la protezione dei dati personali è fondamentale.
-=======
-La separazione dei modelli User e Profile rappresenta la scelta architetturale più adatta per SaluteOra, offrendo il giusto equilibrio tra manutenibilità, sicurezza e scalabilità. Nonostante la maggiore complessità iniziale, i benefici a lungo termine in termini di flessibilità e conformità normativa superano ampiamente gli svantaggi, specialmente in un contesto sanitario dove la protezione dei dati personali è fondamentale.
->>>>>>> 88efd6b (.)

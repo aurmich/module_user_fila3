@@ -122,15 +122,9 @@
   - Meno efficiente utilizzo della cache
   - Più overhead di cache
 
-<<<<<<< HEAD
 ## Raccomandazioni per il progetto
 
 Considerando la natura del progetto il progetto, si raccomanda:
-=======
-## Raccomandazioni per SaluteOra
-
-Considerando la natura del progetto SaluteOra, si raccomanda:
->>>>>>> 88efd6b (.)
 
 1. **Separazione dei Modelli**:
    - User: Gestione autenticazione, ruoli e permessi
@@ -319,11 +313,7 @@ class UserRepository
      - Gestione delle priorità
      - Ottimizzazione delle risorse
 
-<<<<<<< HEAD
 ## Best Practices per il progetto
-=======
-## Best Practices per SaluteOra
->>>>>>> 88efd6b (.)
 
 1. **Sicurezza**:
    - Crittografia dei dati sensibili

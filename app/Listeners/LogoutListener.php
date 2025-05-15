@@ -14,6 +14,7 @@ use Modules\User\Actions\GetCurrentDeviceAction;
 use Modules\User\Models\AuthenticationLog;
 use Modules\User\Models\DeviceUser;
 use Modules\User\Contracts\HasAuthentications;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 use Illuminate\Support\Facades\Log;
 use Modules\User\Traits\HasAuthentications as HasAuthenticationsTrait;
@@ -32,6 +33,10 @@ use Modules\User\Traits\HasAuthentications as HasAuthenticationsTrait;
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+use Illuminate\Support\Facades\Log;
+use Modules\User\Traits\HasAuthentications as HasAuthenticationsTrait;
+>>>>>>> Stashed changes
 
 class LogoutListener
 {
@@ -52,6 +57,7 @@ class LogoutListener
      */
     public function handle(Logout $event): void
     {
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -60,11 +66,14 @@ class LogoutListener
 =======
 >>>>>>> Stashed changes
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
         try {
             // Verifica se l'utente esiste prima di procedere
             if (!$event->user) {
                 Log::warning('Tentativo di logout per un utente non autenticato');
                 return;
+<<<<<<< Updated upstream
             }
 
             $device = app(GetCurrentDeviceAction::class)->execute();
@@ -182,6 +191,8 @@ class LogoutListener
 <<<<<<< HEAD
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
             }
 
             $device = app(GetCurrentDeviceAction::class)->execute();
@@ -241,12 +252,6 @@ class LogoutListener
     public function forgetRememberTokens(Logout $event): void
     {
         if ($event->user && $event->user instanceof HasAuthentications) {
-<<<<<<< Updated upstream
-            $event->user->authentications()->whereNotNull('remember_token')->update([
-                'remember_token' => null,
-            ]);
->>>>>>> 73101fd (.)
-=======
             try {
                 $event->user->authentications()->whereNotNull('remember_token')->update([
                     'remember_token' => null,
@@ -257,6 +262,7 @@ class LogoutListener
                     'user_id' => $event->user->getAuthIdentifier()
                 ]);
             }
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
             }
@@ -275,6 +281,8 @@ class LogoutListener
             ]);
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
         }
     }
 }

@@ -1,10 +1,13 @@
 <?php
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
 declare(strict_types=1);
 
 namespace Modules\User\Filament\Widgets\Auth;
@@ -36,6 +39,7 @@ class LoginWidget extends XotBaseWidget
             Forms\Components\Checkbox::make('remember')
                 ->label(__('user::auth.remember_me')),
         ];
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -134,12 +138,15 @@ class LoginWidget extends Widget
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
     }
 
     public function login(): void
     {
         $data = $this->form->getState();
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -172,15 +179,20 @@ class LoginWidget extends Widget
 <<<<<<< HEAD
 >>>>>>> 73101fd (.)
 =======
+=======
+>>>>>>> Stashed changes
         if (Auth::attempt($data)) {
             session()->regenerate();
             redirect()->intended(route('filament.admin.pages.dashboard'));
         }
 
         $this->addError('email', __('auth.failed'));
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
     }
 }

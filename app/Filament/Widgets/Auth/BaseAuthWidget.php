@@ -16,7 +16,6 @@ abstract class BaseAuthWidget extends Widget
         if (Auth::check()) {
             redirect()->intended(route('dashboard'));
         }
-<<<<<<< HEAD
     }
 
     /**
@@ -28,16 +27,6 @@ abstract class BaseAuthWidget extends Widget
     {
         return [
             'form' => $this->getFormSchema(),
-=======
-
-        $this->form->fill();
-    }
-
-    protected function getViewData(): array
-    {
-        return [
-            'form' => $this->form,
->>>>>>> 88efd6b (.)
         ];
     }
 }

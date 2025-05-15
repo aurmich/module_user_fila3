@@ -9,6 +9,7 @@ use Filament\Tables\Columns\TextColumn;
 use Modules\User\Filament\Resources\SocialProviderResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 
 
@@ -19,6 +20,10 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+
+
+>>>>>>> Stashed changes
 /**
  * --.
  */
@@ -26,6 +31,7 @@ class ListSocialProviders extends XotBaseListRecords
 {
     protected static string $resource = SocialProviderResource::class;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     public function getTableColumns(): array
 =======
@@ -43,6 +49,9 @@ class ListSocialProviders extends XotBaseListRecords
     public function getListTableColumns(): array
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
     {
         return [
             'name' => TextColumn::make('name')

@@ -60,9 +60,9 @@ new class extends Component
                 <div class="flex justify-center mb-4">
                     <x-ui.logo class="h-12 text-blue-900" />
                 </div>
-<<<<<<< HEAD
                 <h1 class="text-3xl font-light text-blue-900">Benvenuto in <span class="font-bold">il progetto</span></h1>
                 <p class="text-gray-600 mt-2">Crea il tuo account per accedere a tutti i servizi1</p>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -73,6 +73,8 @@ new class extends Component
                 <p class="text-gray-600 mt-2">Crea il tuo account per accedere a tutti i servizi</p>
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
             </div>
 
             <!-- Card contenente il form di registrazione -->

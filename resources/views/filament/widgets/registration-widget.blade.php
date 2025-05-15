@@ -1,6 +1,7 @@
 <div>
     <form wire:submit.prevent="register">
         {{ $this->form }}
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -9,6 +10,8 @@
 =======
 >>>>>>> Stashed changes
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
 
         <x-filament::button type="submit" class="w-full">
             {{ __('user::registration.submit') }}
@@ -20,6 +23,7 @@
         <a href="{{ route('login') }}" class="text-primary-600 hover:text-primary-500">
             {{ __('user::auth.login.title') }}
         </a>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -44,5 +48,7 @@
         Hai già un account? <a href="{{ route('login') }}" class="text-blue-800 hover:underline">Accedi</a>
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
     </div>
 </div>

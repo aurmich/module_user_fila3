@@ -7,11 +7,7 @@
             <div class="relative z-50 flex items-center w-auto h-full">
                 <a href="{{ route('home') }}" class="flex items-center mr-0 md:mr-5 shrink-0 transition-transform duration-300 hover:scale-105">
                     <x-ui.logo class="block w-auto fill-current h-8 text-white" />
-<<<<<<< HEAD
                     <span class="ml-2 font-semibold text-lg hidden sm:block">il progetto</span>
-=======
-                    <span class="ml-2 font-semibold text-lg hidden sm:block">SaluteOra</span>
->>>>>>> 88efd6b (.)
                 </a>
                 
                 <!-- Hamburger Menu Mobile -->

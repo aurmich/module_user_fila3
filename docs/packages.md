@@ -59,7 +59,6 @@
 - [Permessi](packages/permissions.md)
 - [Sicurezza](packages/security.md)
 - [Performance](packages/performance.md) 
-<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -80,5 +79,3 @@
 
 ---
 
-=======
->>>>>>> 88efd6b (.)

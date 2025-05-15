@@ -11,11 +11,7 @@ use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Infolist;
 use Modules\User\Filament\Resources\BaseProfileResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
-<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
-=======
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManager\XotBaseRelationManager;
->>>>>>> 88efd6b (.)
 
 class ViewProfile extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
 {

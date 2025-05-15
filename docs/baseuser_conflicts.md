@@ -1,5 +1,6 @@
 # Risoluzione Conflitti in BaseUser.php
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -65,6 +66,8 @@ protected $childTypes = [
 
 >>>>>>> Stashed changes
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
 ## Analisi dei Conflitti
 
 Dopo un'analisi approfondita del file `BaseUser.php` e dei file correlati, è stato determinato che non ci sono conflitti da risolvere. Il file è già correttamente implementato con:
@@ -159,6 +162,7 @@ I file di lingua (`auth.php`, `registration.php`, `change_password.php`, `passwo
 - Il metodo `notifications()` è correttamente tipizzato con `MorphMany`
 - Le relazioni con team e tenant sono correttamente implementate
 - I metodi di autenticazione e autorizzazione seguono le best practices
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -194,3 +198,5 @@ L'annotazione `@phpstan-ignore return.type` è stata comunque mantenuta poiché,
 L'annotazione `@phpstan-ignore return.type` è stata comunque mantenuta poiché, nonostante la tipizzazione corretta, PHPStan potrebbe rilevare incompatibilità con alcune versioni di Laravel. 
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes

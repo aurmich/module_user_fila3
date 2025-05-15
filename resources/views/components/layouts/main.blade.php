@@ -5,11 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="- La piattaforma per la gestione della tua salute">
         <meta name="keywords" content="salute, medici, studi, appuntamenti, prenotazioni">
-<<<<<<< HEAD
         <meta name="author" content="il progetto">
-=======
-        <meta name="author" content="SaluteOra">
->>>>>>> 88efd6b (.)
 
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
@@ -49,11 +45,7 @@
                         <div class="flex flex-col space-y-4">
                             <div class="flex items-center">
                                 <x-ui.logo class="block w-auto fill-current h-8 text-white" />
-<<<<<<< HEAD
                                 <span class="ml-2 font-semibold text-lg">il progetto</span>
-=======
-                                <span class="ml-2 font-semibold text-lg">SaluteOra</span>
->>>>>>> 88efd6b (.)
                             </div>
                             <p class="text-sm text-blue-200">La piattaforma innovativa per la gestione della tua salute, sempre a portata di mano.</p>
                         </div>
@@ -80,11 +72,7 @@
                                         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                                         <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                                     </svg>
-<<<<<<< HEAD
                                     info@<nome progetto>.it
-=======
-                                    info@saluteora.it
->>>>>>> 88efd6b (.)
                                 </p>
                                 <p class="flex items-center text-blue-200">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
@@ -98,11 +86,7 @@
 
                     <!-- Copyright -->
                     <div class="mt-8 pt-4 border-t border-blue-800 text-center text-sm text-blue-300">
-<<<<<<< HEAD
                         <p>&copy; {{ date('Y') }} il progetto. Tutti i diritti riservati.</p>
-=======
-                        <p>&copy; {{ date('Y') }} SaluteOra. Tutti i diritti riservati.</p>
->>>>>>> 88efd6b (.)
                     </div>
                 </div>
             </footer>

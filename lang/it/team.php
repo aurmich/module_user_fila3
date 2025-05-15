@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -8,6 +9,8 @@
 =======
 >>>>>>> Stashed changes
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes
 declare(strict_types=1);
 
 return [
@@ -100,6 +103,7 @@ return [
     ],
   ],
 ];
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
 =======
@@ -292,3 +296,5 @@ return [
 ];
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+>>>>>>> Stashed changes

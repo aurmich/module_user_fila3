@@ -13,6 +13,7 @@ class ListTeams extends XotBaseListRecords
     // //
     protected static string $resource = TeamResource::class;
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     public function getTableColumns(): array
 =======
@@ -30,6 +31,9 @@ class ListTeams extends XotBaseListRecords
     public function getListTableColumns(): array
 >>>>>>> 88efd6b (.)
 >>>>>>> 019e694 (.)
+=======
+    public function getTableColumns(): array
+>>>>>>> Stashed changes
     {
         return [
             'name' => TextColumn::make('name')
