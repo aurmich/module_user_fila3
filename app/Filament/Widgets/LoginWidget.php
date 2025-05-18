@@ -32,13 +32,13 @@ class LoginWidget extends XotBaseWidget
      * Blade view del widget nel modulo User.
      * IMPORTANTE: quando il widget viene usato con @livewire() direttamente nelle Blade,
      * il path deve essere senza il namespace del modulo (senza "user::").
-     * 
+     *
      * @see \Modules\User\docs\WIDGETS_STRUCTURE.md - Sezione B
      */
     protected static string $view = 'user::filament.widgets.login';
-    
+
     protected int | string | array $columnSpan = 'full';
-    
+
     /**
      * Dati del form per il login
      */
@@ -76,7 +76,7 @@ class LoginWidget extends XotBaseWidget
     {
         try {
             $data = $this->form->getState();
-            
+
             if (!Auth::attempt([
                 'email' => $data['email'],
                 'password' => $data['password']
@@ -87,13 +87,13 @@ class LoginWidget extends XotBaseWidget
             }
 
             session()->regenerate();
-            
+
             redirect()->intended(route('home'));
         } catch (ValidationException $e) {
             $this->addError('email', $e->getMessage());
         } catch (Exception $e) {
             report($e);
-            $this->addError('email', __('Si è verificato un errore durante il login. Riprova più tardi.'));
+            $this->addError('email', __('Si è verificato un errore durante il login. Riprova più tardi.['.$e->getMessage().']'));
         }
     }
 }

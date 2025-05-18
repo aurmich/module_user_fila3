@@ -244,7 +244,7 @@ Estende: Modules\Xot\Filament\Widgets\XotBaseWidget
 ## Collegamenti contestuali
 
 - **[LOGIN_FILAMENT_WIDGET_ERROR.md](../../../Themes/TwentyOne/docs/LOGIN_FILAMENT_WIDGET_ERROR.md)** — Per conoscere gli errori più comuni e le soluzioni sbagliate da evitare nella progettazione dei widget Filament, consulta questo file: offre casi reali e motivazioni pratiche.
-- **[LOGIN_FILAMENT_WIDGET_PRO_CONS.md](../../../Themes/TwentyOne/docs/LOGIN_FILAMENT_WIDGET_PRO_CONS.md)** — Per un confronto ragionato tra approcci, vantaggi/svantaggi e best practice sull’implementazione del LoginWidget, consulta questo file: aiuta a scegliere il pattern più adatto e conforme alle regole Windsurf/Xot.
+- **[LOGIN_FILAMENT_WIDGET_PRO_CONS.md](../../../Themes/TwentyOne/docs/LOGIN_FILAMENT_WIDGET_PRO_CONS.md)** — Per un confronto ragionato tra approcci, vantaggi/svantaggi e best practice sull'implementazione del LoginWidget, consulta questo file: aiuta a scegliere il pattern più adatto e conforme alle regole Windsurf/Xot.
 
 ---
 
@@ -455,3 +455,19 @@ class LoginWidget extends XotBaseWidget
 - Estensione XotBaseWidget: coerenza architetturale, patch globali, DRY.
 - Import componenti Filament: riuso, chiarezza, aggiornabilità.
 - Validazione e sicurezza: ispirazione da Laravel UI/Livewire, ma implementazione idiomatica Filament/Xot.
+
+## G. Login e autenticazione: solo tramite Widget
+
+**REGOLA CRITICA**: Tutti i form di login e autenticazione DEVONO essere implementati tramite un Filament Widget dedicato (es. LoginWidget) e MAI tramite form Blade classici.
+
+### Integrazione in una pagina Blade di tema
+
+Per integrare il login in una pagina Blade (es. tema custom):
+
+```blade
+@livewire(Modules\User\Filament\Widgets\LoginWidget::class)
+```
+
+- Non usare mai form HTML puro per il login.
+- Il widget gestisce validazione, sicurezza, traduzioni e UX.
+- Aggiornare la documentazione ogni volta che cambia la struttura del widget o la modalità di integrazione.
