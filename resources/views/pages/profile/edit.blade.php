@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Auth\Events\PasswordReset;

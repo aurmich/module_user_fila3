@@ -31,6 +31,7 @@ use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Traits\RelationX;
 use Spatie\Permission\Traits\HasRoles;
 use Parental\HasChildren;
+use Illuminate\Support\Facades\Schema;
 
 /**
  * Modules\User\Models\User.
@@ -122,12 +123,12 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     use HasApiTokens;
     use HasFactory;
     use HasRoles;
-    use HasTeams;
     use HasUuids;
     use Notifiable;
     use RelationX;
     use Traits\HasAuthenticationLogTrait;
     use Traits\HasTenants;
+    use Traits\HasTeams;
     use HasChildren;
 
 
@@ -319,7 +320,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
      *
      * @return MorphMany<Notification, static|$this>
      */
-    public function notifications(): MorphMany
+    public function notifications()
     {
         // @phpstan-ignore return.type
         return $this->morphMany(Notification::class, 'notifiable');
@@ -394,40 +395,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         ];
     }
 
-    /**
-     * Check if the user has teams.
-     */
-    public function hasTeams(): bool
-    {
-        return true;
-    }
 
-    /**
-     * Check if the user belongs to any teams.
-     */
-    public function belongsToTeams(): bool
-    {
-        return true;
-    }
-
-
-    /**
-     * Get permissions for a specific team.
-     *
-     * @param \Modules\User\Contracts\TeamContract $team
-     * @return array<int, string>
-     */
-    public function teamPermissions(\Modules\User\Contracts\TeamContract $team): array
-    {
-        $role = $this->teamRole($team);
-
-        if ($role === null || !$role->permissions) {
-            return [];
-        }
-
-        /** @var array<int, string> */
-        return $role->permissions->pluck('name')->values()->toArray();
-    }
 
     /**
      * Get the role name for the current team.
@@ -445,138 +413,9 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         return $this->roles()->pluck('name')->filter()->values()->toArray();
     }
 
-    public function personalTeam(): ?Team
-    {
-        /** @var Team|null */
-        return $this->ownedTeams()->first();
-    }
 
-    public function switchTeam(\Modules\User\Contracts\TeamContract $team): bool
-    {
-        if (! $this->belongsToTeam($team)) {
-            return false;
-        }
 
-        $this->current_team_id = (string) $team->id;
-        $this->save();
 
-        return true;
-    }
-
-    public function allTeams(): Collection
-    {
-        return $this->teams()->get();
-    }
-
-    public function belongsToTeam(\Modules\User\Contracts\TeamContract $team): bool
-    {
-        /** @var ?\Illuminate\Database\Eloquent\Model $found */
-        $found = $this->teams()->get()->first(function ($t) use ($team) {
-            // Accesso sicuro agli attributi
-            $teamId = $team->id ?? null;
-            $tId = $t->id ?? null;
-            $tTeamId = $t->team_id ?? null;
-
-            return ($tId !== null && $teamId !== null && $tId === $teamId) ||
-                ($tTeamId !== null && $teamId !== null && $tTeamId === $teamId);
-        });
-
-        return $found !== null;
-    }
-
-    public function ownsTeam(\Modules\User\Contracts\TeamContract $team): bool
-    {
-        /** @var ?\Illuminate\Database\Eloquent\Model $found */
-        $found = $this->ownedTeams()->get()->first(function ($t) use ($team) {
-            // Accesso sicuro agli attributi
-            $teamId = $team->id ?? null;
-            $tId = $t->id ?? null;
-
-            return $tId !== null && $teamId !== null && $tId === $teamId;
-        });
-
-        return $found !== null;
-    }
-
-    public function teamRole(\Modules\User\Contracts\TeamContract $team): ?Role
-    {
-        /** @var \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Relations\Pivot|null $teamUser */
-        $teamUser = $this->teams()->where('team_id', $team->id)->first();
-        if ($teamUser && method_exists($teamUser, 'getPivot') && $teamUser->getPivot() !== null && isset($teamUser->pivot->role)) {
-            return $teamUser->pivot->role;
-        }
-        return null;
-    }
-
-    public function hasTeamPermission(\Modules\User\Contracts\TeamContract $team, string $permission): bool
-    {
-        return $this->ownsTeam($team) || in_array($permission, $this->teamPermissions($team));
-    }
-
-    public function hasTeamRole(\Modules\User\Contracts\TeamContract $team, string $role): bool
-    {
-        if ($this->ownsTeam($team)) {
-            return true;
-        }
-
-        $teamRole = $this->teamRole($team);
-        return $teamRole !== null && isset($teamRole->name) && $teamRole->name === $role;
-    }
-
-    public function canManageTeam(Team $team): bool
-    {
-        return $this->ownsTeam($team);
-    }
-
-    public function canDeleteTeam(Team $team): bool
-    {
-        return $this->ownsTeam($team);
-    }
-
-    public function canLeaveTeam(Team $team): bool
-    {
-        return $this->belongsToTeam($team) && ! $this->ownsTeam($team);
-    }
-
-    public function canRemoveTeamMember(Team $team, User $user): bool
-    {
-        return $this->ownsTeam($team) || $this->hasTeamPermission($team, 'remove team member');
-    }
-
-    public function canAddTeamMember(Team $team): bool
-    {
-        return $this->ownsTeam($team) || $this->hasTeamPermission($team, 'add team member');
-    }
-
-    public function canUpdateTeamMember(Team $team, User $user): bool
-    {
-        return $this->ownsTeam($team) || $this->hasTeamPermission($team, 'update team member');
-    }
-
-    public function canUpdateTeam(Team $team): bool
-    {
-        return $this->ownsTeam($team) || $this->hasTeamPermission($team, 'update team');
-    }
-
-    public function canViewTeam(Team $team): bool
-    {
-        return $this->belongsToTeam($team) || $this->hasTeamPermission($team, 'view team');
-    }
-
-    public function canCreateTeam(): bool
-    {
-        return $this->hasPermissionTo('create team');
-    }
-
-    public function ownedTeams(): HasMany
-    {
-        return $this->hasMany(Team::class, 'owner_id');
-    }
-
-    public function currentTeam(): BelongsTo
-    {
-        return $this->belongsTo(Team::class, 'current_team_id');
-    }
 
     public function authentications(): MorphMany
     {

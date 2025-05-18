@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+
 return array (
   'fields' => 
   array (
@@ -12,6 +12,7 @@ return array (
       'label' => 'endDate',
       'description' => 'endDate',
       'helper_text' => 'endDate',
+      'placeholder' => 'endDate',
     ),
   ),
 );

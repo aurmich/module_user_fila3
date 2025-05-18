@@ -1,73 +1,55 @@
-# Indice della Documentazione - Modulo User
+# User Module Documentation
 
-## Collegamenti Correlati
-- [Documentazione Generale SaluteOra](../../../../docs/README.md)
-- [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
-- [Standard di Documentazione](../../../../docs/DOCUMENTATION_STANDARDS.md)
-- [Modulo Xot](../../Xot/docs/README.md)
-- [Modulo Notify](../../Notify/docs/README.md)
-- [Modulo Lang](../../Lang/docs/README.md)
-- [Modulo UI](../../UI/docs/README.md)
+## Overview
+This document serves as the central index for the User module, providing guidance on managing user-related functionality within a Laravel application. The User module handles authentication, authorization, profile management, and related features in a modular and reusable way.
 
-## Categorie Principali
+## Key Principles
+1. **Modularity**: The User module is designed to be reusable across different projects, maintaining generic functionality.
+2. **Extensibility**: Allows for customization and extension to meet specific project needs without altering core code.
+3. **Security**: Implements best practices for authentication, session management, and data protection.
 
-### Architettura e Struttura
-- [README](./README.md) - Panoramica generale del modulo
-- [Struttura del Modulo](./MODULE_STRUCTURE.md) - Struttura dettagliata del modulo
-- [Convenzioni di Path](./PATH_CONVENTIONS.md) - Convenzioni per i percorsi dei file
-- [Struttura Directory](./DIRECTORY_STRUCTURE_CHECKLIST.md) - Checklist per la struttura delle directory
-- [Namespace Livewire](./LIVEWIRE_NAMESPACE.md) - Convenzioni per i namespace Livewire
+## Core Features
+- **Authentication**: Handles user login, logout, and session management.
+- **Authorization**: Manages roles and permissions for access control.
+- **Profile Management**: Provides functionality for user profile creation and updates.
+- **Integration**: Works seamlessly with other modules like Notify for notifications.
 
-### Autenticazione
-- [Implementazione Pagine Auth](./AUTH_PAGES_IMPLEMENTATION.md) - Guida all'implementazione delle pagine di autenticazione
-- [Implementazione Login](./AUTH_LOGIN_IMPLEMENTATION.md) - Dettagli sull'implementazione del login
-- [Implementazione Logout](./LOGOUT_BLADE_IMPLEMENTATION.md) - Guida all'implementazione del logout
-- [Conclusioni Logout](./LOGOUT_BLADE_CONCLUSIONS.md) - Analisi finale dell'implementazione logout
-- [Sicurezza Logout](./LOGOUT_SECURITY.md) - Considerazioni di sicurezza per il logout
-- [Gestione Sessioni](./SESSION_MANAGEMENT.md) - Gestione delle sessioni utente
+## Implementation Guidelines
+### 1. Module Structure
+- The User module follows a standard structure with directories for models, controllers, services, and views to ensure clarity and maintainability.
 
-### Volt e Folio
-- [Implementazione Auth Volt+Folio](./VOLT_FOLIO_AUTH_IMPLEMENTATION.md) - Implementazione della auth con Volt e Folio
-- [Logout con Volt+Folio](./VOLT_FOLIO_LOGOUT.md) - Implementazione del logout con Volt e Folio
-- [Implementazione Blade Volt](./VOLT_BLADE_IMPLEMENTATION.md) - Integrazione di Volt con Blade
-- [Errori Volt](./VOLT_ERRORS.md) - Analisi e risoluzione degli errori comuni con Volt
+### 2. BaseUser Model
+- Use the `BaseUser` model as the foundation for user-related data and logic, extending it as needed for specific types.
+  ```php
+  namespace Modules\User\Models;
 
-### Componenti UI
-- [Implementazione Avatar](./AVATAR_IMPLEMENTATION.md) - Implementazione del componente avatar
-- [Componenti Header](./HEADER_COMPONENTS.md) - Componenti per l'header dell'applicazione
-- [Selettore Lingua con Bandiere](./HEADER_LANGUAGE_SELECTOR_WITH_FLAGS.md) - Implementazione del selettore lingua
-- [Implementazione Avatar e Lingua](./HEADER_LANGUAGE_AVATAR_IMPLEMENTATION.md) - Implementazione completa dei componenti avatar e lingua
-- [Struttura dei Widget](./WIDGETS_STRUCTURE.md) - Struttura e implementazione dei widget
+  class User extends BaseUser
+  {
+      // Custom user logic
+  }
+  ```
 
-### Filament
-- [Best Practices Filament](./FILAMENT_BEST_PRACTICES.md) - Best practices per l'utilizzo di Filament
-- [Widget Login Filament](./LOGIN_FILAMENT_WIDGET_ERROR.md) - Analisi degli errori nei widget di login
-- [Widget Logout Filament](./LOGOUT_FILAMENT_WIDGET.md) - Implementazione del widget di logout in Filament
-- [Widget Logout Corretto](./LOGOUT_FILAMENT_WIDGET_CORRECTED.md) - Versione corretta del widget di logout
+### 3. Authentication
+- Implement authentication using Laravel's built-in systems or custom solutions integrated with Filament for admin interfaces.
 
-### Routing e API
-- [Best Practices Routing](./ROUTING_BEST_PRACTICES.md) - Best practices per il routing
-- [Soluzione Errori Routing](./ROUTING_ERROR_SOLUTION.md) - Risoluzione dei problemi di routing
+### 4. Routing
+- Define user-related routes in a dedicated `routes` directory, ensuring they are prefixed with the appropriate locale.
 
-### Traduzioni
-- [Best Practices Traduzioni](./TRANSLATION_BEST_PRACTICES.md) - Best practices per le traduzioni
-- [Regole Chiavi Traduzioni](./TRANSLATION_KEYS_RULES.md) - Regole per le chiavi di traduzione
+## Common Issues and Fixes
+- **Authentication Failures**: Ensure correct configuration of auth providers and middleware for user routes.
+- **Permission Conflicts**: Verify role and permission assignments to avoid access issues.
+- **Session Expiry**: Implement proper session management to handle user logout and timeouts securely.
 
-### Modelli e Database
-- [Base User](./BaseUser.md) - Documentazione sul modello BaseUser
-- [Separazione User Profile](./user_profile_separation.md) - Separazione tra User e Profile
-- [Modelli User Profile](./user_profile_models.md) - Implementazione dei modelli User e Profile
-- [Gestione Profilo](./PROFILE_MANAGEMENT.md) - Gestione del profilo utente
+## Documentation and Updates
+- Document any custom implementations or deviations from standard User module practices in the relevant documentation folder.
+- Update this index if new features or significant changes are introduced to the User module.
 
-### Testing e Qualità
-- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
-- [PHPStan Level 9](./PHPSTAN_LEVEL9_FIXES.md) - Correzioni per PHPStan Level 9
-- [Tipi Generici PHPStan](./PHPSTAN_GENERIC_TYPES.md) - Utilizzo dei tipi generici con PHPStan
-
-### Gestione Errori e Conflitti
-- [Analisi Errori Logout](./LOGOUT_BLADE_ERROR_ANALYSIS.md) - Analisi degli errori nel logout
-- [Risoluzione Conflitti Git](./GIT_CONFLICT_RESOLUTION.md) - Risoluzione dei conflitti Git
-- [Gestione Errori](./ERROR_HANDLING.md) - Gestione degli errori nel modulo User
+## Links to Related Documentation
+- [BaseUser Model](./BaseUser.md)
+- [Authentication Pages Implementation](./AUTH_PAGES_IMPLEMENTATION.md)
+- [Profile Management](./PROFILE_MANAGEMENT.md)
+- [Routing Best Practices](./ROUTING_BEST_PRACTICES.md)
+- [Session Management](./SESSION_MANAGEMENT.md)
 
 ## Sottocartelle
 
@@ -86,3 +68,7 @@
 Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice, consultare la documentazione pertinente e aggiornare i documenti correlati.
 
 Ultimo aggiornamento: 14 Maggio 2025
+
+# Indice Documentazione User
+
+- [filament-best-practices.mdc](./filament-best-practices.mdc) — **Regola fondamentale:** chi estende XotBaseResource NON deve dichiarare $navigationGroup, $navigationLabel, né il metodo statico table(Table $table): Table. Seguire sempre questa regola per evitare errori di override e garantire coerenza tra i moduli.

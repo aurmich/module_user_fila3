@@ -1,4 +1,49 @@
-# RegistrationWidget e l'uso della proprietà `$data`
+# RegistrationWidget: Widget generico per la registrazione utente
+
+## Scopo e filosofia
+
+Il widget `RegistrationWidget` è progettato per essere **completamente generico e riutilizzabile** in qualsiasi progetto che utilizza il modulo User. Non contiene logica di dominio specifica (es. Doctor, Patient, ecc.), ma si limita a:
+- raccogliere i dati dal form,
+- determinare dinamicamente la risorsa, il modello e l'action da eseguire,
+- delegare la logica di salvataggio e gestione dello stato a una Action specifica del modulo che implementa il tipo di utente.
+
+## Pattern di delega
+
+- Il widget riceve il tipo di utente (`$type`) e determina la resource, il modello e l'action tramite convenzioni di namespace.
+- La proprietà `$action` viene costruita sostituendo `\Models\` con `\Actions\` e aggiungendo `\RegisterAction`.
+- L'action viene invocata tramite `app($this->action)->execute($data)`.
+- **Non va mai inserita logica di business o riferimenti a tipi di utente specifici nel widget.**
+
+## Esempio di estensione nei moduli
+
+Ogni modulo che implementa un tipo di utente deve fornire la propria Action di registrazione, ad esempio:
+- `Modules\Patient\Actions\Doctor\RegisterAction`
+- `Modules\Patient\Actions\Patient\RegisterAction`
+
+Queste Action devono occuparsi di:
+- Validare i dati ricevuti
+- Creare il modello corretto (Doctor, Patient, ...)
+- Impostare lo stato iniziale tramite Enum/Spatie Model States
+- Gestire eventuali workflow o notifiche
+
+## Best Practice
+1. **Non inserire logica di business nel widget**: tutta la logica di salvataggio e gestione stato va delegata alle Action specifiche.
+2. **Implementare una RegisterAction per ogni tipo di utente**: seguendo la convenzione dei namespace.
+3. **Utilizzare Enum centralizzate per lo stato**: definite nel modulo corretto.
+4. **Documentare i punti di estensione**: ogni progetto può aggiungere nuove Action per nuovi tipi di utente.
+5. **Non citare mai tipi di utente o logiche di dominio nel modulo User**: mantenere la massima riusabilità.
+
+## Collegamenti
+- [RegistrationWidget.php](../../app/Filament/Widgets/RegistrationWidget.php)
+- [Documentazione Xot sulla proprietà $data](../../../Xot/docs/filament/widgets/data-property.md)
+- [Esempio di Action di registrazione Doctor](../../../../Patient/app/Actions/Doctor/RegisterAction.php)
+- [Esempio di Action di registrazione Patient](../../../../Patient/app/Actions/Patient/RegisterAction.php)
+- [Documentazione generale: Registrazione Odontoiatra](../../../../../docs/doctor-registration.md)
+
+---
+
+**Nota:**
+Se vuoi estendere la logica di registrazione per un nuovo tipo di utente, crea una nuova Action seguendo la convenzione e aggiorna la documentazione del modulo specifico. La documentazione generale delle regole e delle convenzioni si trova nel modulo Xot e va sempre collegata da qui.
 
 ## Overview
 
@@ -94,3 +139,40 @@ public function register()
 - [Documentazione sulla proprietà `$data` in XotBaseWidget](../../../Xot/docs/filament/widgets/data-property.md)
 - [Filament Forms Documentation](https://filamentphp.com/docs/3.x/forms/installation)
 - [Livewire Data Binding](https://livewire.laravel.com/docs/properties)
+
+## Gestione dinamica del salvataggio e delle azioni
+
+Il `RegistrationWidget` è progettato per essere generico e riusabile in qualsiasi progetto che utilizza il modulo User. La logica di salvataggio e la gestione dello stato dell'utente non sono hardcodate, ma vengono risolte dinamicamente in base al tipo di utente (`$type`).
+
+### Scelte progettuali
+- Il widget determina dinamicamente la resource, il modello e l'action da eseguire tramite `$type` e la struttura delle classi.
+- La proprietà `$action` viene costruita sostituendo `\Models\` con `\Actions\` e aggiungendo `\RegisterAction` al namespace del modello.
+- Questo permette di delegare la logica di registrazione a una Action specifica per ogni tipo di utente (es. `Modules\Patient\Actions\Doctor\RegisterAction`, `Modules\Patient\Actions\Patient\RegisterAction`).
+- Il widget non contiene logica di business specifica, ma si limita a raccogliere i dati e a invocare l'action corretta.
+
+### Pattern consigliato
+- Ogni modulo che definisce un tipo di utente deve implementare la propria Action di registrazione (es. `Doctor\RegisterAction`, `Patient\RegisterAction`).
+- L'action deve occuparsi di validare, creare il modello, impostare lo stato iniziale e gestire eventuali notifiche o workflow.
+- Il widget rimane generico e riusabile in qualsiasi contesto.
+
+### Best Practice
+1. **Non inserire logica di business nel widget**: tutta la logica di salvataggio e gestione stato va delegata alle Action specifiche.
+2. **Implementare una RegisterAction per ogni tipo di utente**: seguendo la convenzione dei namespace.
+3. **Utilizzare Enum centralizzate per lo stato**: definite nel modulo corretto.
+4. **Documentare i punti di estensione**: ogni progetto può aggiungere nuove Action per nuovi tipi di utente.
+5. **Non citare mai tipi di utente o logiche di dominio nel modulo User**: mantenere la massima riusabilità.
+
+### Azioni da implementare (esempio per il modulo Patient)
+- `Modules\Patient\Actions\Doctor\RegisterAction`
+- `Modules\Patient\Actions\Patient\RegisterAction`
+
+Queste Action devono occuparsi di:
+- Validare i dati ricevuti
+- Creare il modello corretto (Doctor, Patient, ...)
+- Impostare lo stato iniziale tramite Enum
+- Gestire eventuali workflow o notifiche
+
+### Collegamenti
+- [RegistrationWidget.php](../../app/Filament/Widgets/RegistrationWidget.php)
+- [Documentazione Xot sulla proprietà $data](../../../Xot/docs/filament/widgets/data-property.md)
+- [Esempio di Action di registrazione (da creare)](../../../../Patient/app/Actions/Doctor/RegisterAction.php)

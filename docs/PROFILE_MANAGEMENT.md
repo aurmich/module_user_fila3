@@ -1,52 +1,71 @@
-# Gestione Profilo Utente
+# Profile Management in Laravel Modules
 
-## Perché questo modulo?
-Il modulo di gestione del profilo utente fornisce funzionalità essenziali per permettere agli utenti di gestire i propri dati personali e le impostazioni dell'account in modo sicuro e intuitivo.
+## Overview
+This document outlines the best practices for managing user profiles within a Laravel module, allowing users to view and update their personal information.
 
-## Funzionalità
+## Key Principles
+1. **User Control**: Enable users to manage their profile data securely and easily.
+2. **Data Integrity**: Ensure profile updates are validated to maintain data quality.
+3. **Privacy**: Protect sensitive user information with appropriate access controls.
 
-### Eliminazione Account
-- Implementata come azione dedicata (`DeleteUserAction`)
-- Richiede conferma password per sicurezza
-- Gestisce la pulizia delle risorse associate
-- Implementa logging e notifiche appropriate
+## Implementation Guidelines
+### 1. Profile View
+- Provide a dedicated page or section for users to view their profile information.
+  ```blade
+  <!-- Example Blade Profile View -->
+  <div>
+      <h1>{{ auth()->user()->name }}</h1>
+      <p>Email: {{ auth()->user()->email }}</p>
+  </div>
+  ```
 
-#### Componenti
-1. `DeleteUserAction`: Gestisce la logica di business
-   - Verifica la password
-   - Esegue l'eliminazione
-   - Gestisce gli errori
-   - Restituisce feedback appropriati
+### 2. Profile Update
+- Implement a form for updating profile details with proper validation.
+  ```php
+  // Example Controller Method for Profile Update
+  public function updateProfile(Request $request)
+  {
+      $user = auth()->user();
+      $user->update($request->validate([
+          'name' => 'required|string|max:255',
+          'email' => 'required|email|unique:users,email,' . $user->id,
+      ]));
+      return redirect()->back()->with('success', 'Profile updated.');
+  }
+  ```
 
-2. `DeleteAccount` (Livewire Component):
-   - Gestisce l'interfaccia utente
-   - Comunica con l'azione
-   - Gestisce il feedback all'utente
+### 3. Avatar Management
+- Allow users to upload or change profile avatars, ensuring secure file handling.
+  ```php
+  // Example Avatar Upload
+  public function updateAvatar(Request $request)
+  {
+      $user = auth()->user();
+      if ($request->hasFile('avatar')) {
+          $path = $request->file('avatar')->store('avatars', 'public');
+          $user->avatar = $path;
+          $user->save();
+      }
+      return redirect()->back()->with('success', 'Avatar updated.');
+  }
+  ```
 
-#### Flusso di Eliminazione
-1. L'utente richiede l'eliminazione dell'account
-2. Viene richiesta la password di conferma
-3. La password viene verificata
-4. Se corretta, l'account viene eliminato
-5. L'utente viene disconnesso e reindirizzato
+## Common Issues and Fixes
+- **Validation Failures**: Ensure all profile fields have clear validation rules to prevent incorrect data updates.
+- **File Upload Security**: Validate and sanitize avatar uploads to prevent malicious file uploads.
+- **Access Control**: Restrict profile access to authenticated users only, preventing unauthorized views or edits.
 
-#### Best Practices
-1. Separazione delle responsabilità:
-   - Logica di business nelle Actions
-   - Interfaccia utente nei Components
-   - Traduzioni nei file di lingua
+## Testing and Verification
+- Test profile updates with various inputs to ensure data validation and integrity.
+- Verify avatar uploads handle different file types and sizes correctly.
 
-2. Sicurezza:
-   - Verifica della password
-   - Gestione delle sessioni
-   - Pulizia dei dati
+## Documentation and Updates
+- Document any custom profile management features or security measures in the relevant module's documentation folder.
+- Update this document if new profile management functionalities are introduced.
 
-3. UX:
-   - Feedback chiari
-   - Conferme appropriate
-   - Gestione degli errori
-
-## Collegamenti
-- [Documentazione Azioni](./actions/README.md)
-- [Documentazione Componenti](./components/README.md)
-- [Gestione Sicurezza](../docs/SECURITY.md) 
+## Links to Related Documentation
+- [User Module Index](./INDEX.md)
+- [BaseUser Model](./BaseUser.md)
+- [Authentication Pages Implementation](./AUTH_PAGES_IMPLEMENTATION.md)
+- [Routing Best Practices](./ROUTING_BEST_PRACTICES.md)
+- [Session Management](./SESSION_MANAGEMENT.md)

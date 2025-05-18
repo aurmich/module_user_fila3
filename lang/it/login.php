@@ -1,21 +1,16 @@
 <?php
-declare(strict_types=1);
+
 return array (
   'fields' => 
   array (
     'email' => 
     array (
       'label' => 'email',
-      'description' => 'email',
-      'helper_text' => 'email',
-      'placeholder' => 'email',
     ),
     'password' => 
     array (
       'label' => 'password',
       'description' => 'password',
-      'helper_text' => 'password',
-      'placeholder' => 'password',
     ),
     'remember' => 
     array (
