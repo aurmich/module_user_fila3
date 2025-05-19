@@ -3,8 +3,6 @@ description:
 globs:
 alwaysApply: false
 ---
-<<<<<<< HEAD
-=======
 # Notifiche Moderazione
 
 ## Introduzione
@@ -42,9 +40,8 @@ class UserApprovedNotification extends Notification
 - Non tracciare l'invio tramite activitylog
 
 ## Collegamenti correlati
-- [Best Practice: ActivityLog per la Moderazione Utenti](./ACTIVITYLOG_MODERATION_BEST_PRACTICES.mdc)
-- [Contratti e Interfacce Moderazione](./MODERATION_CONTRACTS.mdc)
-- [Azioni di Moderazione](./MODERATION_ACTIONS.mdc)
-- [Configurazione Stati Utente](./USER_STATES.mdc)
-- [Moderazione e Wizard Generici](./MODERATION_WIZARD_GENERIC.mdc)
->>>>>>> f24e6b4 (.)
+- [Best Practice: ActivityLog per la Moderazione Utenti](mdc:ACTIVITYLOG_MODERATION_BEST_PRACTICES.mdc)
+- [Contratti e Interfacce Moderazione](mdc:MODERATION_CONTRACTS.mdc)
+- [Azioni di Moderazione](mdc:MODERATION_ACTIONS.mdc)
+- [Configurazione Stati Utente](mdc:USER_STATES.mdc)
+- [Moderazione e Wizard Generici](mdc:MODERATION_WIZARD_GENERIC.mdc)

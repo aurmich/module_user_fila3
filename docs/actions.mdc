@@ -3,12 +3,10 @@ description:
 globs:
 alwaysApply: false
 ---
-<<<<<<< HEAD
-=======
 # Linee guida per l'uso di Spatie Queueable Action
 
 ## Introduzione
-Utilizzare sempre [spatie/laravel-queueable-action](https://github.com/spatie/laravel-queueable-action) per la business logic asincrona e sincrona nei moduli. Non utilizzare mai Service custom.
+Utilizzare sempre [spatie/laravel-queueable-action](mdc:https:/github.com/spatie/laravel-queueable-action) per la business logic asincrona e sincrona nei moduli. Non utilizzare mai Service custom.
 
 ## Vantaggi
 - Uniformità architetturale
@@ -51,9 +49,9 @@ QueueableActionFake::assertPushed(ApproveUserAction::class);
 ```
 
 ## Collegamenti correlati
-- [README User](README.md)
-- [Best Practices](best-practices.md)
-- [Filament Best Practices](filament-best-practices.md)
-- [Testing](testing.md)
-- [Documentazione centrale](../../../../docs/INDEX.md)
->>>>>>> f24e6b4 (.)
+- [README User](mdc:README.md)
+- [Best Practices](mdc:best-practices.md)
+- [Filament Best Practices](mdc:filament-best-practices.md)
+- [Testing](mdc:testing.md)
+- [Documentazione centrale](mdc:../../../../docs/INDEX.md)
+

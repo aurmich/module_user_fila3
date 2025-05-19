@@ -3,12 +3,10 @@ description:
 globs:
 alwaysApply: false
 ---
-<<<<<<< HEAD
-=======
 # Linee guida per l'uso di Spatie Activitylog
 
 ## Introduzione
-Utilizzare sempre [spatie/laravel-activitylog](https://spatie.be/docs/laravel-activitylog/v4/introduction) per tracciare eventi, audit trail e cambi di stato nei moduli. Non creare mai tabelle custom come ModerationLog.
+Utilizzare sempre [spatie/laravel-activitylog](mdc:https:/spatie.be/docs/laravel-activitylog/v4/introduction) per tracciare eventi, audit trail e cambi di stato nei moduli. Non creare mai tabelle custom come ModerationLog.
 
 ## Vantaggi
 - Standardizzazione dell'audit trail
@@ -49,9 +47,9 @@ $logs = $user->activities()->where('log_name', 'user_moderation')->get();
 ```
 
 ## Collegamenti correlati
-- [README User](README.md)
-- [Best Practices](best-practices.md)
-- [Filament Best Practices](filament-best-practices.md)
-- [Testing](testing.md)
-- [Documentazione centrale](../../../../docs/INDEX.md)
->>>>>>> f24e6b4 (.)
+- [README User](mdc:README.md)
+- [Best Practices](mdc:best-practices.md)
+- [Filament Best Practices](mdc:filament-best-practices.md)
+- [Testing](mdc:testing.md)
+- [Documentazione centrale](mdc:../../../../docs/INDEX.md)
+

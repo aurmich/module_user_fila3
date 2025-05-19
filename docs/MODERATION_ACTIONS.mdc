@@ -3,12 +3,10 @@ description:
 globs:
 alwaysApply: false
 ---
-<<<<<<< HEAD
-=======
 # Azioni di Moderazione (Action class)
 
 ## Introduzione
-Tutte le operazioni di business logic relative alla moderazione sono implementate tramite Action class secondo [spatie/laravel-queueable-action](https://github.com/spatie/laravel-queueable-action), mai tramite Service class.
+Tutte le operazioni di business logic relative alla moderazione sono implementate tramite Action class secondo [spatie/laravel-queueable-action](mdc:https:/github.com/spatie/laravel-queueable-action), mai tramite Service class.
 
 ## Pattern Consigliati
 - Ogni azione (approvazione, rifiuto, richiesta integrazione, ecc.) deve essere una Action class
@@ -46,9 +44,8 @@ class ApproveUserAction
 - Non accettare ModeratableUser come parametro
 
 ## Collegamenti correlati
-- [Best Practice: ActivityLog per la Moderazione Utenti](./ACTIVITYLOG_MODERATION_BEST_PRACTICES.mdc)
-- [Contratti e Interfacce Moderazione](./MODERATION_CONTRACTS.mdc)
-- [Moderazione e Wizard Generici](./MODERATION_WIZARD_GENERIC.mdc)
-- [Configurazione Stati Utente](./USER_STATES.mdc)
-- [Notifiche Moderazione](./MODERATION_NOTIFICATIONS.mdc)
->>>>>>> f24e6b4 (.)
+- [Best Practice: ActivityLog per la Moderazione Utenti](mdc:ACTIVITYLOG_MODERATION_BEST_PRACTICES.mdc)
+- [Contratti e Interfacce Moderazione](mdc:MODERATION_CONTRACTS.mdc)
+- [Moderazione e Wizard Generici](mdc:MODERATION_WIZARD_GENERIC.mdc)
+- [Configurazione Stati Utente](mdc:USER_STATES.mdc)
+- [Notifiche Moderazione](mdc:MODERATION_NOTIFICATIONS.mdc)

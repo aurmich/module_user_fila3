@@ -3,8 +3,6 @@ description:
 globs:
 alwaysApply: false
 ---
-<<<<<<< HEAD
-=======
 # Contratti e Interfacce per la Moderazione Utenti
 
 ## Introduzione
@@ -30,9 +28,8 @@ interface ModeratableUser
 - Le action di moderazione devono accettare come parametro ModeratableUser
 
 ## Collegamenti correlati
-- [Best Practice: ActivityLog per la Moderazione Utenti](./ACTIVITYLOG_MODERATION_BEST_PRACTICES.mdc)
-- [Moderazione e Wizard Generici](./MODERATION_WIZARD_GENERIC.mdc)
-- [Azioni di Moderazione](./MODERATION_ACTIONS.mdc)
-- [Configurazione Stati Utente](./USER_STATES.mdc)
-- [Notifiche Moderazione](./MODERATION_NOTIFICATIONS.mdc)
->>>>>>> f24e6b4 (.)
+- [Best Practice: ActivityLog per la Moderazione Utenti](mdc:ACTIVITYLOG_MODERATION_BEST_PRACTICES.mdc)
+- [Moderazione e Wizard Generici](mdc:MODERATION_WIZARD_GENERIC.mdc)
+- [Azioni di Moderazione](mdc:MODERATION_ACTIONS.mdc)
+- [Configurazione Stati Utente](mdc:USER_STATES.mdc)
+- [Notifiche Moderazione](mdc:MODERATION_NOTIFICATIONS.mdc)

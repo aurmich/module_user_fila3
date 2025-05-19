@@ -3,8 +3,6 @@ description:
 globs:
 alwaysApply: false
 ---
-<<<<<<< HEAD
-=======
 # Relazione utenti-team: tabella pivot `doctor_team`
 
 ## Contesto
@@ -15,13 +13,12 @@ Questa documentazione descrive la relazione many-to-many tra utenti e team nel m
 
 ## Soluzione
 - Creata la migrazione per la tabella `doctor_team` estendendo `XotBaseMigration`.
-- Seguite le best practice documentate in [docs/database-migrations.md](../../../docs/database-migrations.md).
+- Seguite le best practice documentate in [docs/database-migrations.md](mdc:../../../docs/database-migrations.md).
 
 ## Collegamenti
-- [Documentazione generale sulle migrazioni](../../../docs/database-migrations.md)
-- [Best practice XotBaseMigration](../../Xot/docs/MIGRATIONS.md)
+- [Documentazione generale sulle migrazioni](mdc:../../../docs/database-migrations.md)
+- [Best practice XotBaseMigration](mdc:../../Xot/docs/MIGRATIONS.md)
 
 ---
 
 **Collegamento bidirezionale:** Aggiornare anche la documentazione generale per puntare a questo file.
->>>>>>> f24e6b4 (.)

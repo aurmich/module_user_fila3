@@ -3,24 +3,22 @@ description:
 globs:
 alwaysApply: false
 ---
-<<<<<<< HEAD
-=======
 # Moderazione e Wizard di Registrazione Generici per User
 
 ## Premessa
-Nel contesto di un modulo User riutilizzabile in più progetti, ogni "tipo" di utente (es. paziente, dentista, operatore, admin) è rappresentato da un model che estende/parente il modello base User tramite pattern Single Table Inheritance (STI) o Parental. **La colonna di discriminazione deve essere `type`** (non `user_type`), come da best practice [tighten/parental](https://github.com/tighten/parental).
+Nel contesto di un modulo User riutilizzabile in più progetti, ogni "tipo" di utente (es. paziente, dentista, operatore, admin) è rappresentato da un model che estende/parente il modello base User tramite pattern Single Table Inheritance (STI) o Parental. **La colonna di discriminazione deve essere `type`** (non `user_type`), come da best practice [tighten/parental](mdc:https:/github.com/tighten/parental).
 
 ## Analisi e Ragionamento
 - **User è la radice di tutti i tipi di utente**: ogni flusso di registrazione e moderazione deve essere agnostico rispetto al tipo.
 - **Il wizard di registrazione** deve essere configurabile (schema dinamico, step dinamici) in base al tipo di utente, ma la logica di base (validazione, salvataggio, avanzamento step, gestione stato) deve essere unica.
 - **La moderazione** deve essere centralizzata: ogni utente può essere soggetto a moderazione, indipendentemente dal tipo. Le policy, le azioni, le notifiche e la dashboard devono essere generiche e configurabili.
 - **Nessun riferimento hard-coded** a "paziente", "dentista" ecc. Tutto deve essere guidato da configurazione, enum, contract/interfacce.
-- **Non si usano Service class**: tutte le operazioni di business logic sono implementate tramite Action class secondo [spatie/laravel-queueable-action](https://github.com/spatie/laravel-queueable-action).
-- **Non si usa una tabella custom ModerationLog**: tutte le attività di moderazione, cambi di stato e azioni rilevanti sono tracciate tramite [spatie/laravel-activitylog](https://spatie.be/docs/laravel-activitylog/v4/introduction), che garantisce audit trail, query avanzate e riuso cross-modulo.
+- **Non si usano Service class**: tutte le operazioni di business logic sono implementate tramite Action class secondo [spatie/laravel-queueable-action](mdc:https:/github.com/spatie/laravel-queueable-action).
+- **Non si usa una tabella custom ModerationLog**: tutte le attività di moderazione, cambi di stato e azioni rilevanti sono tracciate tramite [spatie/laravel-activitylog](mdc:https:/spatie.be/docs/laravel-activitylog/v4/introduction), che garantisce audit trail, query avanzate e riuso cross-modulo.
 
 ## Struttura Tecnica Proposta
-- **Colonna discriminante:** `type` (STI/Parental, vedi [tighten/parental](https://github.com/tighten/parental#accessing-child-models-from-parents))
-- **Colonna stato:** `state` (gestita tramite [spatie/laravel-model-states](https://spatie.be/docs/laravel-model-states/v2/working-with-states/01-configuring-states)), non `moderation_status`.
+- **Colonna discriminante:** `type` (STI/Parental, vedi [tighten/parental](mdc:https:/github.com/tighten/parental#accessing-child-models-from-parents))
+- **Colonna stato:** `state` (gestita tramite [spatie/laravel-model-states](mdc:https:/spatie.be/docs/laravel-model-states/v2/working-with-states/01-configuring-states)), non `moderation_status`.
 - **Workflow Model Generico:** `UserRegistrationWorkflow` (relazione 1:1 con User, campi generici: current_step, state, notes, started_at, completed_at, session_id)
 - **Azioni Generiche (Action class):**
   - `ApproveUserAction`
@@ -41,7 +39,7 @@ Nel contesto di un modulo User riutilizzabile in più progetti, ogni "tipo" di u
   - Step e schema configurabili tramite mapping per tipo utente
   - Validazione e salvataggio centralizzati
 - **Audit Trail:**
-  - Tutte le attività di moderazione (approvazione, rifiuto, richiesta integrazione, cambio stato, commenti, ecc.) sono tracciate tramite [spatie/laravel-activitylog](https://spatie.be/docs/laravel-activitylog/v4/introduction), senza tabelle custom.
+  - Tutte le attività di moderazione (approvazione, rifiuto, richiesta integrazione, cambio stato, commenti, ecc.) sono tracciate tramite [spatie/laravel-activitylog](mdc:https:/spatie.be/docs/laravel-activitylog/v4/introduction), senza tabelle custom.
 
 ## Esempio di Interfaccia/Contract
 ```php
@@ -122,8 +120,7 @@ class ApproveUserAction
 **Nota:**
 - Tutte le label, i messaggi e le notifiche devono essere localizzati e privi di riferimenti hard-coded a domini specifici.
 - La documentazione e gli esempi devono essere neutrali e riutilizzabili in qualsiasi progetto che utilizza il modulo User.
-- Riferimenti: [tighten/parental](https://github.com/tighten/parental), [spatie/laravel-model-states](https://spatie.be/docs/laravel-model-states/v2/working-with-states/01-configuring-states), [spatie/laravel-queueable-action](https://github.com/spatie/laravel-queueable-action), [spatie/laravel-activitylog](https://spatie.be/docs/laravel-activitylog/v4/introduction)
+- Riferimenti: [tighten/parental](mdc:https:/github.com/tighten/parental), [spatie/laravel-model-states](mdc:https:/spatie.be/docs/laravel-model-states/v2/working-with-states/01-configuring-states), [spatie/laravel-queueable-action](mdc:https:/github.com/spatie/laravel-queueable-action), [spatie/laravel-activitylog](mdc:https:/spatie.be/docs/laravel-activitylog/v4/introduction)
 
 ## Collegamenti correlati
-- [Best Practice: ActivityLog per la Moderazione Utenti](./ACTIVITYLOG_MODERATION_BEST_PRACTICES.mdc)
->>>>>>> f24e6b4 (.)
+- [Best Practice: ActivityLog per la Moderazione Utenti](mdc:ACTIVITYLOG_MODERATION_BEST_PRACTICES.mdc)
