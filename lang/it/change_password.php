@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 return array (
   'fields' => 
   array (
@@ -15,3 +16,17 @@ return array (
     ),
   ),
 );
+=======
+declare(strict_types=1);
+
+return [
+    'fields' => [
+        'new_password_confirmation' => [
+            'label' => 'new_password_confirmation',
+        ],
+        'changePassword' => [
+            'label' => 'changePassword',
+        ],
+    ],
+];
+>>>>>>> 0b525d2 (.)

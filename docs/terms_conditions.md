@@ -1,5 +1,6 @@
 https://julienboyer.re/en/posts/how-to-add-terms-and-conditions-checkbox-on-filament-registration-page
 
+<<<<<<< HEAD
 ### Versione HEAD
 
 
@@ -13,3 +14,5 @@ https://julienboyer.re/en/posts/how-to-add-terms-and-conditions-checkbox-on-fila
 
 ---
 
+=======
+>>>>>>> 0b525d2 (.)

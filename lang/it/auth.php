@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< HEAD
     // Messaggi generali di autenticazione
     'failed' => 'Credenziali non valide.',
     'password' => 'La password inserita non è corretta.',
@@ -11,6 +12,8 @@ return [
     'unauthorized' => 'Non hai i permessi necessari per questa operazione.',
 
     // Login
+=======
+>>>>>>> 0b525d2 (.)
     'login-via' => 'Accedi con',
 
     'login-failed' => 'Login fallito, riprova.',
@@ -100,6 +103,7 @@ return [
     'Resend Verification Email' => 'Rinvia Email di Verifica',
     'Verify Your Email Address' => 'Verifica la tua email',
     'A fresh verification link has been sent to your email address.' => 'Un nuovo link di verifica è stato inviato al tuo indirizzo email.',
+<<<<<<< HEAD
 
     'login' => [
         'title' => 'Accedi al tuo account',
@@ -259,4 +263,6 @@ return [
         'token' => 'Il token di reset password non è valido.',
         'user' => 'Non riusciamo a trovare un utente con questo indirizzo email.',
     ],
+=======
+>>>>>>> 0b525d2 (.)
 ];

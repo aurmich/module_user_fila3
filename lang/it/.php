@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 <?php
 
 return array (
+=======
+<?php return array (
+>>>>>>> 0b525d2 (.)
   'fields' => 
   array (
     'startDate' => 
@@ -10,9 +14,15 @@ return array (
     'endDate' => 
     array (
       'label' => 'endDate',
+<<<<<<< HEAD
       'description' => 'endDate',
       'helper_text' => 'endDate',
       'placeholder' => 'endDate',
     ),
   ),
 );
+=======
+    ),
+  ),
+);
+>>>>>>> 0b525d2 (.)
