@@ -68,8 +68,21 @@ trait HasTeams
     /**
      * Check if the user belongs to a specific team.
      */
+<<<<<<< HEAD
     public function belongsToTeam(\Modules\User\Contracts\TeamContract $team): bool
     {
+=======
+<<<<<<< HEAD
+    public function belongsToTeam(?TeamContract $team): bool
+    {
+        if ($team === null) {
+            return false;
+        }
+=======
+    public function belongsToTeam(\Modules\User\Contracts\TeamContract $team): bool
+    {
+>>>>>>> da3d3a0 (.)
+>>>>>>> aurmich/dev
         $found = $this->teams()->where('teams.id', $team->id)->first();
         if ($found === null) {
             return false;
@@ -256,7 +269,15 @@ trait HasTeams
     {
         $xot = XotData::make();
         $teamClass = $xot->getTeamClass();
+<<<<<<< HEAD
         return $this->hasMany($teamClass, 'user_id'); 
+=======
+<<<<<<< HEAD
+        return $this->hasMany($teamClass, 'user_id');
+=======
+        return $this->hasMany($teamClass, 'user_id'); 
+>>>>>>> da3d3a0 (.)
+>>>>>>> aurmich/dev
     }
 
     /**
@@ -351,7 +372,15 @@ trait HasTeams
      *
      * @param \Modules\User\Contracts\TeamContract $team
      */
+<<<<<<< HEAD
     public function switchTeam(\Modules\User\Contracts\TeamContract $team): bool
+=======
+<<<<<<< HEAD
+    public function switchTeam(?TeamContract $team): bool
+=======
+    public function switchTeam(\Modules\User\Contracts\TeamContract $team): bool
+>>>>>>> da3d3a0 (.)
+>>>>>>> aurmich/dev
     {
         if (! $this->belongsToTeam($team)) {
             return false;
