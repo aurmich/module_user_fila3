@@ -1,4 +1,4 @@
-# Best Practices per i Componenti di Autenticazione in SaluteOra
+# Best Practices per i Componenti di Autenticazione 
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
@@ -8,7 +8,7 @@
 
 ## Panoramica
 
-Questo documento descrive le best practices per implementare e utilizzare i componenti di autenticazione in SaluteOra, con particolare attenzione alle chiavi di traduzione e alla struttura dei componenti.
+Questo documento descrive le best practices per implementare e utilizzare i componenti di autenticazione , con particolare attenzione alle chiavi di traduzione e alla struttura dei componenti.
 
 ## Struttura delle Chiavi di Traduzione per l'Autenticazione
 
@@ -149,7 +149,7 @@ Prima di utilizzare una chiave di traduzione, assicurarsi che i file di traduzio
 - `/laravel/Modules/Lang/lang/it/auth.php`
 - `/laravel/Modules/Lang/lang/en/auth.php`
 
-## Componenti di Autenticazione in SaluteOra
+## Componenti di Autenticazione 
 
 ### 1. Pagine di Autenticazione
 

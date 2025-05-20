@@ -181,7 +181,7 @@ Quindi nel form:
 
 ## Raccomandazione Finale
 
-Per il logout in SaluteOra, si raccomanda di utilizzare l'approccio Folio con PHP puro, che è il più semplice e diretto. Questo approccio offre diversi vantaggi:
+Per il logout , si raccomanda di utilizzare l'approccio Folio con PHP puro, che è il più semplice e diretto. Questo approccio offre diversi vantaggi:
 
 1. **Semplicità**: Il codice è semplice e facile da comprendere.
 

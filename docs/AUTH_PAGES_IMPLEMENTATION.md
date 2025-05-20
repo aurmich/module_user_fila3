@@ -1,4 +1,4 @@
-# Implementazione Corretta delle Pagine Auth in SaluteOra
+# Implementazione Corretta delle Pagine Auth 
 
 ## Collegamenti correlati
 - [Documentazione centrale](../../../docs/README.md)
@@ -32,7 +32,7 @@ laravel/Themes/One/resources/views/pages/auth/
 
 ## Approcci di Implementazione
 
-In SaluteOra, ci sono tre approcci principali per implementare le pagine di autenticazione:
+, ci sono tre approcci principali per implementare le pagine di autenticazione:
 
 1. **Folio con Volt (Raccomandato)**: Utilizza Laravel Folio per il routing e Volt per la logica del componente.
 2. **Volt Action dedicata**: Utilizza attributi PHP 8 per definire rotte specifiche.

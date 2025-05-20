@@ -181,4 +181,4 @@ invece di:
 
 ## Conclusione
 
-Seguire l'approccio Folio con Volt è raccomandato per la gestione del logout in SaluteOra. Assicurarsi di includere sempre la localizzazione negli URL e di utilizzare i componenti Filament per la UI.
+Seguire l'approccio Folio con Volt è raccomandato per la gestione del logout . Assicurarsi di includere sempre la localizzazione negli URL e di utilizzare i componenti Filament per la UI.

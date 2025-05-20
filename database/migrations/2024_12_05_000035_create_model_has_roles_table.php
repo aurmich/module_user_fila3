@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 // ---- models ---
 use Modules\User\Models\Role;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
@@ -23,7 +24,6 @@ return new class extends XotBaseMigration
             static function (Blueprint $table): void {
                 $team_class = XotData::make()->getTeamClass();
                 $table->id();
-                // $table->foreignIdFor(Role::class, 'role_id')->nullable();
                 $table->integer('role_id')->index()->nullable();
                 $table->uuidMorphs('model');
                 $table->foreignIdFor($team_class, 'team_id')->nullable();
@@ -42,7 +42,6 @@ return new class extends XotBaseMigration
                 if ($this->getColumnType('role_id') === 'uuid') {
                     $table->integer('role_id')->index()->change();
                 }
-                // $this->updateUser($table);
                 $this->updateTimestamps($table);
             }
         );

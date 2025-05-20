@@ -12,7 +12,7 @@ Questo documento descrive l'implementazione corretta dei form nel tema One utili
 
 ## Approccio Raccomandato: Widget Filament
 
-Per i form complessi in SaluteOra, l'approccio raccomandato è utilizzare i widget Filament invece di implementare form personalizzati con Volt o Blade. Questo approccio offre numerosi vantaggi:
+Per i form complessi , l'approccio raccomandato è utilizzare i widget Filament invece di implementare form personalizzati con Volt o Blade. Questo approccio offre numerosi vantaggi:
 
 1. **Riutilizzabilità**: I widget possono essere utilizzati in diverse parti dell'applicazione
 2. **Adattabilità**: Si adattano facilmente a diverse grafiche
@@ -256,7 +256,7 @@ class RegisterFormWidget extends XotBaseWidget
 
 ## Conclusione
 
-L'utilizzo di widget Filament per l'implementazione dei form in SaluteOra offre un approccio coerente, manutenibile e riutilizzabile. Questo approccio evita di "reinventare la ruota" e garantisce che tutti i form seguano le stesse convenzioni e standard di qualità.
+L'utilizzo di widget Filament per l'implementazione dei form  offre un approccio coerente, manutenibile e riutilizzabile. Questo approccio evita di "reinventare la ruota" e garantisce che tutti i form seguano le stesse convenzioni e standard di qualità.
 
 ## Collegamenti Utili
 

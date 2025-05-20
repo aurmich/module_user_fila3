@@ -38,12 +38,17 @@ Questo documento fornisce una checklist per verificare la corretta struttura del
 - ✅ `Modules/User/database/migrations/create_users_table.php`
 - ✅ `Modules/User/docs/USER_GUIDE.md`
 
+### ✅ Migration (tabelle, colonne, relazioni)
+- ✅ `Modules/User/database/migrations/2025_05_16_221811_add_owner_id_to_teams_table.php`
+- ❌ `laravel/database/migrations/2025_05_16_221811_add_owner_id_to_teams_table.php` (errore grave!)
+
 ### ❌ Errori comuni da evitare
 
 - ❌ `Modules/User/Resources/views/auth/login.blade.php` (case errata!)
 - ❌ `Modules/User/Actions/DeleteUserAction.php` (manca app/)
 - ❌ `Modules/User/Http/Controllers/UserController.php` (manca app/)
 - ❌ `Modules/User/App/Http/Controllers/UserController.php` (App maiuscolo errato!)
+- ❌ Migration custom fuori dalla cartella del modulo (es: in laravel/database/migrations)
 
 ## Mnemonica per ricordare
 

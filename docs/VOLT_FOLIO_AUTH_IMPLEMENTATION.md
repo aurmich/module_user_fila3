@@ -8,7 +8,7 @@
 
 ## Introduzione
 
-Questo documento descrive l'implementazione corretta delle pagine di autenticazione (login, logout, registrazione, ecc.) utilizzando Laravel Folio e Volt in SaluteOra. Seguendo queste linee guida, garantirai che le tue implementazioni siano conformi alle convenzioni del progetto e sfruttino al meglio le capacità di Volt e Folio.
+Questo documento descrive l'implementazione corretta delle pagine di autenticazione (login, logout, registrazione, ecc.) utilizzando Laravel Folio e Volt . Seguendo queste linee guida, garantirai che le tue implementazioni siano conformi alle convenzioni del progetto e sfruttino al meglio le capacità di Volt e Folio.
 
 ## Cos'è Volt e Folio?
 

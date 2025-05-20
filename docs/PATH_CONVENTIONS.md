@@ -256,4 +256,27 @@ namespace Modules\User\Http\Controllers;
            "Modules\\User\\": "Modules/User/app"
        }
    }
-   ``` 
+   ```
+
+## Migration: Regola Fondamentale
+
+- **Tutte le migration che riguardano tabelle, colonne o relazioni di un modulo devono essere SEMPRE nella cartella `database/migrations` del modulo stesso.**
+  - Esempio corretto: `laravel/Modules/User/database/migrations/2025_05_16_221811_add_owner_id_to_teams_table.php`
+  - Errore grave: `laravel/database/migrations/2025_05_16_221811_add_owner_id_to_teams_table.php`
+
+### Motivazione
+- Garantisce modularità e isolamento tra moduli
+- Permette rollback e deploy selettivo
+- Evita conflitti tra migration di moduli diversi
+- Migliora la manutenibilità e la chiarezza del progetto
+- Facilita la collaborazione e la revisione del codice
+
+### Checklist Migration
+- [ ] Ogni migration è nella cartella del modulo di riferimento
+- [ ] Nessuna migration custom in laravel/database/migrations
+- [ ] I nomi delle migration sono univoci e descrittivi
+
+### Common Pitfalls
+- Spostare migration tra cartelle senza aggiornare la history
+- Dimenticare di aggiornare la documentazione dopo lo spostamento
+- Creare migration duplicate in più moduli 

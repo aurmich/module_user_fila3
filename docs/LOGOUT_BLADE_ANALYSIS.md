@@ -292,7 +292,7 @@ $logout = function () {
 
 ### 3. Valutazione dell'Approccio
 
-L'implementazione attuale utilizza un approccio Volt con conferma utente, che non è l'approccio più efficiente per il logout in SaluteOra. Secondo le convenzioni del progetto, il logout dovrebbe essere un'operazione diretta che non richiede conferma dell'utente.
+L'implementazione attuale utilizza un approccio Volt con conferma utente, che non è l'approccio più efficiente per il logout . Secondo le convenzioni del progetto, il logout dovrebbe essere un'operazione diretta che non richiede conferma dell'utente.
 
 ## Raccomandazioni Specifiche
 

@@ -12,6 +12,7 @@ return array (
       'label' => 'endDate',
       'description' => 'endDate',
       'helper_text' => 'endDate',
+      'placeholder' => 'endDate',
     ),
   ),
 );
