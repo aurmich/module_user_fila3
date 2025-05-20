@@ -137,6 +137,7 @@
 <<<<<<< HEAD
 [0;34mℹ️ [2025-05-15 15:52:49] Configurazione avanzata git...[0m
 [0;32m✅ [2025-05-15 15:52:49] Configurazione git completata con successo[0m
+<<<<<<< Updated upstream
 =======
 =======
 [0;34mℹ️ [2025-05-15 12:50:36] Configurazione avanzata git...[0m
@@ -162,3 +163,7 @@
 [0;34mℹ️ [2025-05-20 10:22:20] Configurazione avanzata git...[0m
 [0;32m✅ [2025-05-20 10:22:20] Configurazione git completata con successo[0m
 >>>>>>> d94b452 (.)
+=======
+[0;34mℹ️ [2025-05-20 12:12:45] Configurazione avanzata git...[0m
+[0;32m✅ [2025-05-20 12:12:45] Configurazione git completata con successo[0m
+>>>>>>> Stashed changes
