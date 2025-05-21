@@ -7,6 +7,11 @@ return array (
     array (
       'label' => 'email',
       'description' => 'email',
+<<<<<<< HEAD
+=======
+      'helper_text' => 'email',
+      'placeholder' => 'email',
+>>>>>>> c50ec27 (.)
     ),
     'password' => 
     array (
