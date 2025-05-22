@@ -6,6 +6,10 @@ return array (
     'startDate' => 
     array (
       'label' => 'startDate',
+<<<<<<< HEAD
+=======
+      'description' => 'startDate',
+>>>>>>> 4d73eb6 (.)
     ),
     'endDate' => 
     array (

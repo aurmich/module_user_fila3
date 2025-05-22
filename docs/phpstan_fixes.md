@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 ### Versione HEAD
 
+=======
+>>>>>>> 4d73eb6 (.)
 # Correzioni PHPStan Livello 7 - Modulo User
 
 Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo User e le relative soluzioni implementate.
@@ -35,16 +38,29 @@ Il problema è che i tag PHPDoc facevano riferimento a una classe `Builder` nel 
  */
 ```
 
+<<<<<<< HEAD
 Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` utilizzando il namespace completo `\Illuminate\Database\Eloquent\Builder`. 
 ## Collegamenti tra versioni di phpstan_fixes.md
 * [phpstan_fixes.md](../../../Xot/docs/phpstan_fixes.md)
 * [phpstan_fixes.md](../../../User/docs/phpstan_fixes.md)
 * [phpstan_fixes.md](../../../User/docs/fixes/phpstan_fixes.md)
 * [phpstan_fixes.md](../../../Activity/docs/phpstan_fixes.md)
+=======
+### Versione HEAD
+
+Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` utilizzando il namespace completo `\Illuminate\Database\Eloquent\Builder`. 
+## Collegamenti tra versioni di PHPSTAN_FIXES.md
+* [PHPSTAN_FIXES.md](../../../Xot/docs/phpstan/PHPSTAN_FIXES.md)
+* [PHPSTAN_FIXES.md](../../../Xot/docs/PHPSTAN_FIXES.md)
+* [PHPSTAN_FIXES.md](../../../User/docs/PHPSTAN_FIXES.md)
+* [PHPSTAN_FIXES.md](../../../UI/docs/PHPSTAN_FIXES.md)
+* [PHPSTAN_FIXES.md](../../../Media/docs/PHPSTAN_FIXES.md)
+>>>>>>> 4d73eb6 (.)
 
 
 ### Versione Incoming
 
+<<<<<<< HEAD
 # Correzioni PHPStan per il Modulo User
 
 ## Problemi Principali
@@ -135,6 +151,9 @@ Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` ut
 3. Correggere i tipi nei modelli e nelle relazioni
 4. Aggiornare la documentazione delle classi
 5. Eseguire nuovamente PHPStan per verificare le correzioni 
+=======
+Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` utilizzando il namespace completo `\Illuminate\Database\Eloquent\Builder`. 
+>>>>>>> 4d73eb6 (.)
 
 ---
 

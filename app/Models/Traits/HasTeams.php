@@ -351,8 +351,17 @@ trait HasTeams
      *
      * @param \Modules\User\Contracts\TeamContract $team
      */
+<<<<<<< HEAD
     public function switchTeam(\Modules\User\Contracts\TeamContract $team): bool
     {
+=======
+    public function switchTeam(?\Modules\User\Contracts\TeamContract $team): bool
+    {
+        if ($team === null) {
+            return false;
+        }
+
+>>>>>>> 4d73eb6 (.)
         if (! $this->belongsToTeam($team)) {
             return false;
         }

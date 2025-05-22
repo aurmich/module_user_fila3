@@ -254,6 +254,7 @@ public function handle(Failed $event): void
 1. Continua l'utilizzo di queste pratiche in tutto il modulo User e in altri moduli.
 2. Considera l'uso di generics (come `@template`) per migliorare ulteriormente la tipizzazione delle classi che gestiscono diverse tipologie di dati.
 3. Mantieni aggiornata la documentazione quando vengono modificati metodi o proprietà.
+<<<<<<< HEAD
 4. Utilizza strumenti di analisi automatica come PHPStan regolarmente per verificare che il codice rimanga conforme. 
 ## Collegamenti tra versioni di PHPSTAN_LEVEL10_FIXES.md
 * [PHPSTAN_LEVEL10_FIXES.md](docs/PHPSTAN_LEVEL10_FIXES.md)
@@ -270,3 +271,6 @@ public function handle(Failed $event): void
 * [phpstan_level10_fixes.md](../../Job/docs/phpstan_level10_fixes.md)
 * [phpstan_level10_fixes.md](../../Media/docs/phpstan_level10_fixes.md)
 
+=======
+4. Utilizza strumenti di analisi automatica come PHPStan regolarmente per verificare che il codice rimanga conforme. 
+>>>>>>> 4d73eb6 (.)

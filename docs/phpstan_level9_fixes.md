@@ -26,6 +26,7 @@ Sono stati rilevati conflitti Git non risolti nel file `app/Filament/Resources/U
 
 **Vedi anche:**
 - [module_user.md](module_user.md)
+<<<<<<< HEAD
 
 ## Collegamenti tra versioni di PHPSTAN_LEVEL9_FIXES.md
 * [PHPSTAN_LEVEL9_FIXES.md](../../../User/docs/PHPSTAN_LEVEL9_FIXES.md)
@@ -35,3 +36,5 @@ Sono stati rilevati conflitti Git non risolti nel file `app/Filament/Resources/U
 ## Collegamenti tra versioni di phpstan_level9_fixes.md
 * [phpstan_level9_fixes.md](../../Lang/docs/phpstan_level9_fixes.md)
 
+=======
+>>>>>>> 4d73eb6 (.)
