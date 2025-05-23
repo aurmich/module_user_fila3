@@ -1,20 +1,6 @@
 <?php
 
 return array (
-<<<<<<< HEAD
-  'fields' => 
-  array (
-    'email' => 
-    array (
-      'label' => 'email',
-    ),
-    'password' => 
-    array (
-      'label' => 'password',
-      'description' => 'password',
-    ),
-    'remember' => 
-=======
   'fields' =>
   array (
     'email' =>
@@ -32,7 +18,6 @@ return array (
       'placeholder' => 'password',
     ),
     'remember' =>
->>>>>>> 4d73eb6 (.)
     array (
       'label' => 'remember',
       'description' => 'remember',

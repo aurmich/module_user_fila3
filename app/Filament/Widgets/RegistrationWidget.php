@@ -54,25 +54,11 @@ class RegistrationWidget extends XotBaseWidget
         $this->validate();
 
         // Creazione del dottore
-<<<<<<< HEAD
-        $doctor = \Modules\Patient\Models\Doctor::create([
-=======
         $doctor = \Modules\SaluteOra\Models\Doctor::create([
->>>>>>> 4d73eb6 (.)
             'full_name' => $data['full_name'] ?? ($data['first_name'] . ' ' . $data['last_name']),
             'email' => $data['email'] ?? '',
             'phone' => $data['phone'] ?? '',
             'certification' => $data['certification'] ?? null,
-<<<<<<< HEAD
-            'state' => \Modules\Patient\States\Pending::class, // Imposta lo stato iniziale
-        ]);
-
-        // Creazione del workflow di registrazione
-        $workflow = \Modules\Patient\Models\DoctorRegistrationWorkflow::create([
-            'doctor_id' => $doctor->id,
-            'current_step' => 'personal_info_step',
-            'status' => \Modules\Patient\Models\DoctorRegistrationWorkflow::STATUS_PENDING_MODERATION,
-=======
             'state' => \Modules\SaluteOra\States\Pending::class, // Imposta lo stato iniziale
         ]);
 
@@ -81,7 +67,6 @@ class RegistrationWidget extends XotBaseWidget
             'doctor_id' => $doctor->id,
             'current_step' => 'personal_info_step',
             'status' => \Modules\SaluteOra\Models\DoctorRegistrationWorkflow::STATUS_PENDING_MODERATION,
->>>>>>> 4d73eb6 (.)
             'started_at' => now(),
             'last_interaction_at' => now(),
             'session_id' => session()->getId(),
@@ -98,11 +83,7 @@ class RegistrationWidget extends XotBaseWidget
     /**
      * Invia l'email di conferma della registrazione.
      */
-<<<<<<< HEAD
-    protected function sendConfirmationEmail(\Modules\Patient\Models\Doctor $doctor): void
-=======
     protected function sendConfirmationEmail(\Modules\SaluteOra\Models\Doctor $doctor): void
->>>>>>> 4d73eb6 (.)
     {
         $email = new \Modules\Notify\Emails\SpatieEmail($doctor, 'registration_pending');
 

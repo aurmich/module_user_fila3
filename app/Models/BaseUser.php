@@ -120,9 +120,12 @@ use Illuminate\Support\Facades\Schema;
  */
 abstract class BaseUser extends Authenticatable implements HasName, HasTenants, UserContract
 {
+
+
     use HasApiTokens;
     use HasFactory;
     use HasRoles;
+    // Guard coerente con Spatie/Permission
     use HasUuids;
     use Notifiable;
     use RelationX;
@@ -184,6 +187,12 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     protected $childTypes = [
 
     ];
+
+    /**
+     * Guard coerente con Spatie/Permission: deve essere 'web'.
+     * @var string
+     */
+    protected $guard_name = 'web';
 
     /** @var \Illuminate\Database\Eloquent\Relations\Pivot|null */
     public $pivot;
