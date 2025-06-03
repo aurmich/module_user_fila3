@@ -13,15 +13,11 @@ use Illuminate\Database\Query\Builder;
 use Modules\User\Filament\Actions\ChangePasswordAction;
 use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
-<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
-=======
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
->>>>>>> 7ace243 (.)
 
-class ListUsers extends XotBaseListRecords
+abstract class BaseListUsers extends XotBaseListRecords
 {
     protected static string $resource = UserResource::class;
 
@@ -31,15 +27,15 @@ class ListUsers extends XotBaseListRecords
     public function getTableColumns(): array
     {
         return [
-            'id' => TextColumn::make('id'),
+            //'id' => TextColumn::make('id'),
             'name' => TextColumn::make('name')
                 ->searchable(),
             'email' => TextColumn::make('email')
                 ->searchable(),
-            'email_verified_at' => TextColumn::make('email_verified_at')
-                ->dateTime(),
-            'created_at' => TextColumn::make('created_at')
-                ->dateTime(),
+            //'email_verified_at' => TextColumn::make('email_verified_at')
+            //    ->dateTime(),
+            //'created_at' => TextColumn::make('created_at')
+            //    ->dateTime(),
         ];
     }
 

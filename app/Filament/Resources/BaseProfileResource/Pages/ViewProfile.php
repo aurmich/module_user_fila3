@@ -11,12 +11,13 @@ use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Infolist;
 use Modules\User\Filament\Resources\BaseProfileResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
-use Modules\Xot\Filament\Resources\XotBaseResource\RelationManagers\XotBaseRelationManager;
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 class ViewProfile extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
 {
     protected static string $resource = BaseProfileResource::class;
 
+<<<<<<< HEAD
     /*
     protected function getHeaderActions(): array
     {
@@ -26,11 +27,13 @@ class ViewProfile extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecor
         ];
     }
     */
+=======
+>>>>>>> 7ace243 (.)
 
     /**
      * @return array<string, \Filament\Infolists\Components\Component>
      */
-    public function getInfolistSchema(): array 
+    public function getInfolistSchema(): array
     {
         return [
             'profile_info' => Components\Section::make()

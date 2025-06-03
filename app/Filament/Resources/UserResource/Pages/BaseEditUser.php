@@ -21,7 +21,7 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 /**
  * Pagina per la modifica degli utenti con particolare gestione della password.
  */
-class EditUser extends EditRecord
+abstract class BaseEditUser extends EditRecord
 {
     // //
     protected static string $resource = UserResource::class;
