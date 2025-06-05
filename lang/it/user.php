@@ -11,7 +11,7 @@ return array (
       'description' => 'Gestione degli utenti e dei loro permessi',
     ),
     'label' => 'Utenti',
-    'sort' => 45,
+    'sort' => 11,
     'icon' => 'user-main',
   ),
   'fields' => 
@@ -25,6 +25,7 @@ return array (
       'label' => 'Nome',
       'placeholder' => 'Inserisci il nome',
       'description' => 'name',
+      'helper_text' => 'name',
     ),
     'email' => 
     array (

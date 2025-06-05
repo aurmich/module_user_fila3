@@ -11,7 +11,7 @@ return array (
       'description' => 'Gestione dei team e delle loro autorizzazioni',
     ),
     'label' => 'team',
-    'sort' => 30,
+    'sort' => 83,
     'icon' => 'user-team',
   ),
   'fields' => 

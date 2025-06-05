@@ -11,7 +11,7 @@ return array (
       'description' => 'Gestione dei profili utente',
     ),
     'label' => 'Profilo',
-    'sort' => 32,
+    'sort' => 25,
     'icon' => 'user-profile-animated',
   ),
   'fields' => 

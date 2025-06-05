@@ -14,7 +14,7 @@ return array (
       'description' => 'Gestione dei provider social',
     ),
     'label' => 'social provider',
-    'sort' => 8,
+    'sort' => 91,
     'icon' => 'user-user-social',
   ),
   'fields' => 

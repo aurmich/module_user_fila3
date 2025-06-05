@@ -11,7 +11,7 @@ return array (
       'description' => 'Gestione dei dispositivi degli utenti',
     ),
     'label' => 'device',
-    'sort' => 11,
+    'sort' => 92,
     'icon' => 'user-device',
   ),
   'fields' => 

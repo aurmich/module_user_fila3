@@ -14,7 +14,7 @@ return array (
       'description' => 'Gestione delle feature e delle funzionalità',
     ),
     'label' => 'feature',
-    'sort' => 62,
+    'sort' => 91,
     'icon' => 'user-user-feature',
   ),
   'fields' => 

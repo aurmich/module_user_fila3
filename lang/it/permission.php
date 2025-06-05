@@ -11,7 +11,7 @@ return array (
       'description' => 'Gestione dei permessi di sistema',
     ),
     'label' => 'Permessi',
-    'sort' => 95,
+    'sort' => 31,
     'icon' => 'user-permission-animated',
   ),
   'fields' => 
