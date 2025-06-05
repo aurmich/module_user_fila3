@@ -17,18 +17,6 @@ class ViewProfile extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecor
 {
     protected static string $resource = BaseProfileResource::class;
 
-<<<<<<< HEAD
-    /*
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\EditAction::make(),
-            Actions\DeleteAction::make(),
-        ];
-    }
-    */
-=======
->>>>>>> 7ace243 (.)
 
     /**
      * @return array<string, \Filament\Infolists\Components\Component>
