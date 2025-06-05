@@ -11,7 +11,7 @@ return array (
       'description' => 'Gestione dei tenant e delle loro configurazioni',
     ),
     'label' => 'tenant',
-    'sort' => 30,
+    'sort' => 77,
     'icon' => 'user-user-tenant',
   ),
   'table' => 

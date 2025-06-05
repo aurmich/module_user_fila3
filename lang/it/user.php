@@ -11,7 +11,7 @@ return array (
       'description' => 'Gestione degli utenti e dei loro permessi',
     ),
     'label' => 'Utenti',
-    'sort' => 26,
+    'sort' => 45,
     'icon' => 'user-main',
   ),
   'fields' => 
