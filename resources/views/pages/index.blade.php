@@ -28,6 +28,6 @@ new class extends Component
 
 <x-layouts.marketing>
     <div>
-        {!! $_theme->showPageContent('home') !!}
+        <x-page side="content" slug="home" />
     </div>
 </x-layouts.marketing>

@@ -48,6 +48,7 @@ class RegistrationWidget extends XotBaseWidget
     public function register()
     {
         $data = $this->form->getState();
+<<<<<<< HEAD
         app($this->action)->execute($data);
         /*
         // Validazione dei dati
@@ -78,19 +79,35 @@ class RegistrationWidget extends XotBaseWidget
         // Reindirizzamento alla pagina di conferma
         return redirect()->route('doctor.registration.confirmation');
         */
+=======
+        
+        // Execute the registration action defined in the action class
+        $result = app($this->action)->execute($data);
+        
+        // Handle the result if needed
+        if ($result) {
+            session()->flash('message', __('user::messages.registration_success'));
+            $this->form->fill();
+        }
+        
+        return $result;
+>>>>>>> 8363209 (✨ (User Module): introduce user management and authentication system with features like registration, email verification, and role-based access control)
     }
 
     /**
-     * Invia l'email di conferma della registrazione.
+     * Send confirmation email for registration.
+     * This method should be implemented in the specific action class.
      */
+<<<<<<< HEAD
     protected function sendConfirmationEmail(\Modules\Patient\Models\Doctor $doctor): void
+=======
+    protected function sendConfirmationEmail($user): void
+>>>>>>> 8363209 (✨ (User Module): introduce user management and authentication system with features like registration, email verification, and role-based access control)
     {
-        $email = new \Modules\Notify\Emails\SpatieEmail($doctor, 'registration_pending');
-
-        \Illuminate\Support\Facades\Mail::to($doctor->email)
-            ->locale(app()->getLocale())
-            ->send($email);
-        session()->flash('message', 'Registrazione completata con successo. La tua richiesta è in attesa di moderazione.');
-        $this->form->fill();
+        // This method is kept for backward compatibility
+        // The actual email sending should be handled in the specific action class
+        if (method_exists($this->action, 'sendConfirmationEmail')) {
+            app($this->action)->sendConfirmationEmail($user);
+        }
     }
 }
