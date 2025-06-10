@@ -14,7 +14,7 @@ return array (
       'description' => 'Gestione dei provider social',
     ),
     'label' => 'social provider',
-    'sort' => 91,
+    'sort' => 93,
     'icon' => 'user-user-social',
   ),
   'fields' => 
@@ -29,6 +29,10 @@ return array (
     array (
       'name' => 'Seleziona Tutti',
       'message' => '',
+    ),
+    'applyFilters' => 
+    array (
+      'label' => 'applyFilters',
     ),
   ),
   'actions' => 

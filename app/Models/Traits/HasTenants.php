@@ -5,11 +5,13 @@ declare(strict_types=1);
 namespace Modules\User\Models\Traits;
 
 use Filament\Panel;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Support\Collection;
-use Modules\User\Contracts\TeamContract;
 use Modules\Xot\Datas\XotData;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\Model;
+use Modules\User\Contracts\TeamContract;
+use Modules\Xot\Actions\Panel\ApplyTenancyToPanelAction;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 // use Modules\User\Models\OwnerRole;
 
@@ -23,9 +25,9 @@ trait HasTenants
      **/
     public function canAccessTenant(Model $tenant): bool
     {
-        // return $this->teams->contains($tenant);
+
         return $this->tenants()->whereKey($tenant)->exists();
-        // return true;
+
     }
 
     public function getTenants(Panel $panel): array|Collection
@@ -35,7 +37,7 @@ trait HasTenants
 
     /**
      * Get all of the tenants the user belongs to.
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Illuminate\Database\Eloquent\Model>
      */
     public function tenants(): BelongsToMany
@@ -45,7 +47,8 @@ trait HasTenants
         $tenant_class = $xot->getTenantClass();
 
         // $this->setConnection('mysql');
-        return $this->belongsToManyX($tenant_class, null, null, 'tenant_id');
+        //return $this->belongsToManyX($tenant_class, null, null, 'tenant_id');
+        return $this->belongsToManyX($tenant_class);
         // ->as('membership')
     }
 }

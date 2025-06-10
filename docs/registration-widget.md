@@ -2,7 +2,7 @@
 
 ## Overview
 
-Il file `RegistrationWidget.php` si trova in `/var/www/html/<directory progetto>/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php`. Questo widget è utilizzato per la registrazione di diversi tipi di utenti in applicazioni basate su Laravel con Filament. Il modulo `User` è progettato per essere riutilizzabile in vari progetti, quindi la logica del widget deve essere flessibile e adattabile a contesti diversi.
+Il file `RegistrationWidget.php` si trova in `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php`. Questo widget è utilizzato per la registrazione di diversi tipi di utenti in applicazioni basate su Laravel con Filament. Il modulo `User` è progettato per essere riutilizzabile in vari progetti, quindi la logica del widget deve essere flessibile e adattabile a contesti diversi.
 
 ## Current Issues
 
@@ -45,7 +45,7 @@ public function register()
 public function mount(string $type): void
 {
     $this->type = $type;
-    $this->resource = XotData::make()->getUserTypeResourceClass($type);
+    $this->resource = XotData::make()->getUserResourceClassByType($type);
     $this->model = $this->resource::getModel();
     $this->action = Str::of($this->model)->replace('\\Models\\', '\\Actions\\')->append('\\RegisterAction')->toString();
     $this->form->fill();

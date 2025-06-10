@@ -11,7 +11,7 @@ return array (
       'description' => 'Gestione dei ruoli e dei permessi associati',
     ),
     'label' => 'Ruoli',
-    'sort' => 49,
+    'sort' => 26,
     'icon' => 'user-role-animated',
   ),
   'fields' => 
@@ -56,6 +56,10 @@ return array (
       'label' => 'Descrizione',
       'tooltip' => 'Una descrizione del ruolo e delle sue funzioni.',
       'placeholder' => 'Descrizione del ruolo',
+    ),
+    'applyFilters' => 
+    array (
+      'label' => 'applyFilters',
     ),
   ),
   'roles' => 

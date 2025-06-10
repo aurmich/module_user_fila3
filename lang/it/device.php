@@ -11,7 +11,7 @@ return array (
       'description' => 'Gestione dei dispositivi degli utenti',
     ),
     'label' => 'device',
-    'sort' => 92,
+    'sort' => 20,
     'icon' => 'user-device',
   ),
   'fields' => 
@@ -81,6 +81,14 @@ return array (
     'resetFilters' => 
     array (
       'label' => 'resetFilters',
+    ),
+    'applyFilters' => 
+    array (
+      'label' => 'applyFilters',
+    ),
+    'openFilters' => 
+    array (
+      'label' => 'openFilters',
     ),
   ),
   'actions' => 

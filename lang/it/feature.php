@@ -14,7 +14,7 @@ return array (
       'description' => 'Gestione delle feature e delle funzionalità',
     ),
     'label' => 'feature',
-    'sort' => 91,
+    'sort' => 75,
     'icon' => 'user-user-feature',
   ),
   'fields' => 
@@ -33,6 +33,26 @@ return array (
     'value' => 
     array (
       'label' => 'value',
+    ),
+    'toggleColumns' => 
+    array (
+      'label' => 'toggleColumns',
+    ),
+    'reorderRecords' => 
+    array (
+      'label' => 'reorderRecords',
+    ),
+    'resetFilters' => 
+    array (
+      'label' => 'resetFilters',
+    ),
+    'applyFilters' => 
+    array (
+      'label' => 'applyFilters',
+    ),
+    'openFilters' => 
+    array (
+      'label' => 'openFilters',
     ),
   ),
   'actions' => 
@@ -53,5 +73,9 @@ return array (
         'parent_name' => 'Nome area livello superiore',
       ),
     ),
+  ),
+  'model' => 
+  array (
+    'label' => 'feature.model',
   ),
 );
