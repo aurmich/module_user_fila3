@@ -1,5 +1,26 @@
 # Modulo User
 
+## Obiettivi Funzionali
+- Gestione degli utenti e autenticazione
+- Supporto multilingua per le interfacce utente
+- Integrazione con Filament per l'amministrazione
+
+## Decisioni Architetturali
+- Utilizzo di XotBaseResource per le risorse Filament
+- Implementazione di traduzioni tramite file di lingua
+- Gestione delle relazioni utente-team
+
+## Collegamenti
+- [Documentazione Principale](../../docs/README.md)
+- [Regole Globali](../../docs/REGOLE_GLOBALI.md)
+- [Convenzioni di Denominazione](../../docs/NAMING_CONVENTIONS.md)
+
+## Backlink
+- [Modulo Cms](../Cms/docs/README.md)
+- [Modulo Xot](../Xot/docs/README.md)
+- [Modulo Blog](../Blog/docs/README.md)
+- [Modulo Predict](../Predict/docs/README.md)
+
 ## Introduzione
 
 Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli utenti nel sistema. Fornisce funzionalità base per la registrazione, il login, la gestione dei ruoli e dei permessi.
@@ -141,9 +162,6 @@ User/
 - [Volt Folio Logout](./VOLT_FOLIO_LOGOUT.md) - Implementazione logout con Volt e Folio
 - [Volt Folio Auth Implementation](./VOLT_FOLIO_AUTH_IMPLEMENTATION.md) - Implementazione completa autenticazione con Volt e Folio
 - [Analisi Logout Blade](./LOGOUT_BLADE_ANALYSIS.md) - Analisi e miglioramenti del file logout.blade.php
-- [Volt Folio Logout](./VOLT_FOLIO_LOGOUT.md) - Implementazione logout con Volt e Folio
-- [Volt Folio Auth Implementation](./VOLT_FOLIO_AUTH_IMPLEMENTATION.md) - Implementazione completa autenticazione con Volt e Folio
-- [Analisi Logout Blade](./LOGOUT_BLADE_ANALYSIS.md) - Analisi e miglioramenti del file logout.blade.php
 
 ### Modelli e Profili
 - [User Profile Models](./user_profile_models.md) - Modelli profilo utente
@@ -151,33 +169,15 @@ User/
 - [User Permissions](./user_permissions.md) - Sistema permessi
 
 ### Filament e UI
-### Versione HEAD
-
 - [Filament Best Practices](FILAMENT_BEST-PRACTICES.md) - Best practices Filament
-
-### Versione Incoming
-
-- [Filament Best Practices](filament-best-practices.md) - Best practices Filament
-
----
-
 - [Login Widget](login_widget.md) - Widget login personalizzato
 - [User Interface](user_interface.md) - Interfaccia utente
 
 ### Best Practices e Convenzioni
-### Versione HEAD
-
 - [Best Practices](./BEST-PRACTICES.md) - Linee guida generali
 - [Convenzioni Path Actions](./ACTIONS_PATH_CONVENTION.md) - Convenzioni per i percorsi delle Actions
 - [Convenzioni Path](./PATH_CONVENTIONS.md) - Convenzioni generali per i percorsi nei moduli
 - [Checklist Struttura Directory](./DIRECTORY_STRUCTURE_CHECKLIST.md) - Checklist per la struttura delle directory
-
-### Versione Incoming
-
-- [Best Practices](./best-practices.md) - Linee guida generali
-
----
-
 - [Testing](./testing.md) - Testing e quality assurance
 - [Security](./security.md) - Sicurezza e hardening
 
@@ -844,64 +844,6 @@ if (! $this->hasColumn('state')) {
 - [ ] Non usare mai Schema::hasColumn
 - [ ] Aggiornare tutte le migrazioni esistenti che non rispettano questa regola
 
-### Collegamenti correlati
-- [Linee guida Actions](./actions.mdc)
-- [Linee guida Activitylog](./activitylog.mdc)
-- [Best Practices](./best-practices.md)
-- [Testing](./testing.md)
-- [Documentazione centrale](../../../../docs/INDEX.md)
-
-> **Nota fondamentale:**
-> Se stai creando o modificando una Filament Resource che estende XotBaseResource, NON dichiarare mai le proprietà statiche $navigationGroup, $navigationLabel, né il metodo statico table(Table $table): Table. Segui la regola documentata in [filament-best-practices.mdc](./filament-best-practices.mdc).
-
-## Best Practice: Implementazione dei Contract
-
-> **Nota fondamentale:**
-> Tutti i metodi richiesti dalle interfacce (contract) devono essere implementati come **pubblici** nella classe o trait che li dichiara, anche se la logica è delegata a un metodo privato/protetto (es. `ownsTeamTrait`).
-> 
-> Questo garantisce:
-> - Compatibilità con il contract
-> - Autoload e type hint corretti
-> - Coerenza architetturale
-> - Prevenzione di errori fatali in fase di runtime
-
-### Esempio concreto: TeamContract
-
-- Il contract `HasTeamsContract` richiede il metodo pubblico `ownsTeam(TeamContract $team): bool`.
-- Il trait `HasTeams` implementa la logica in `ownsTeamTrait`, ma **deve** dichiarare anche il metodo pubblico `ownsTeam` che delega a `ownsTeamTrait`.
-
-```php
-public function ownsTeam(TeamContract $team): bool
-{
-    return $this->ownsTeamTrait($team);
-}
-```
-
-**Regola generale:**
-- Ogni volta che un contract richiede un metodo, assicurarsi che sia presente come metodo pubblico nella classe/trait.
-- Delegare la logica a metodi privati/protetti se necessario, ma la firma pubblica deve sempre esistere.
-
-**Vedi anche:**
-- [Best Practices](./best-practices.mdc)
-- [TeamContract](../app/Contracts/TeamContract.php)
-- [BaseTeam](../app/Models/BaseTeam.php)
-
-## Requisito strutturale: colonna owner_id in teams
-
-> **Nota fondamentale:**
-> La tabella `teams` deve avere la colonna `owner_id` (`uuid`, nullable) per garantire la compatibilità con il trait `HasTeams` e tutte le relazioni Eloquent che gestiscono la proprietà dei team.
-
-### Motivazione
-- Il trait `HasTeams` e la relazione `ownedTeams()` presuppongono che ogni team abbia un owner identificato da `owner_id`.
-- Senza questa colonna, tutte le query che cercano i team di proprietà di un utente falliscono con errore SQL.
-- Questa struttura è standard per tutti i pacchetti multi-team (Laravel Jetstream, Spark, ecc.) e garantisce compatibilità con i contract e i trait.
-
-### Checklist
-- [ ] La tabella `teams` ha la colonna `owner_id` (`uuid`, nullable)
-- [ ] La migration è aggiornata ed eseguita
-- [ ] La documentazione tecnica è aggiornata
-- [ ] Tutte le relazioni Eloquent funzionano correttamente
-
 ### Esempio di migration
 ```php
 Schema::table('teams', function (Blueprint $table) {
@@ -913,7 +855,7 @@ Schema::table('teams', function (Blueprint $table) {
 ## Best Practice migration modulari
 
 > **Regola fondamentale:**
-> Tutte le migration relative a tabelle modulari (es. `teams`, `team_user`, ecc.) devono essere create e mantenute nella cartella `database/migrations` del modulo corrispondente (es. `Modules/User/database/migrations`).
+> Tutte le migration relative a tabelle modulari (es. `teams`, `team_user`, ecc.) devono essere create e mantenute nella cartella `database/migrations` del modulo corrispondente (es. `Modules/User/database/migrations/`).
 
 ### Motivazione
 - Garantisce isolamento e coerenza tra i moduli
@@ -933,6 +875,7 @@ Schema::table('teams', function (Blueprint $table) {
 - [ ] La documentazione tecnica è aggiornata
 - [ ] I comandi artisan sono lanciati dal path corretto o con namespace modulo
 
+<<<<<<< HEAD
 ## Proprietà fondamentali del ServiceProvider (Laraxot/PTVX)
 
 Tutti i provider dei moduli che estendono XotBaseServiceProvider **devono** dichiarare:
@@ -969,3 +912,7 @@ class UserServiceProvider extends XotBaseServiceProvider
 
 ---
 
+=======
+
+```
+>>>>>>> 763c5a5 (📝 (README.md): add functional objectives, architectural decisions, and links to improve documentation clarity and navigation)
