@@ -3,76 +3,69 @@
 declare(strict_types=1);
 
 return [
-    'name' => 'Teams',
     'fields' => [
         'name' => [
-            'label' => 'Nome',
-            'placeholder' => 'Inserisci il nome del team',
-            'helper_text' => 'Nome identificativo del team',
-            'description' => 'Il nome che identifica questo team',
+            'label' => 'Nome Team',
+            'help' => 'Nome identificativo del team',
         ],
         'personal_team' => [
             'label' => 'Team Personale',
-            'helper_text' => 'Indica se questo è un team personale',
-            'description' => 'Un team personale è associato a un singolo utente',
+            'help' => 'Indica se questo è il team personale dell\'utente',
         ],
-        'owner' => [
-            'label' => 'Proprietario',
-            'helper_text' => 'Utente proprietario del team',
-            'description' => 'L\'utente che ha creato e gestisce questo team',
+        'role' => [
+            'label' => 'Ruolo nel Team', // Aggiornato per chiarezza
+            'help' => 'Ruolo dell\'utente nel team',
+            'placeholder' => 'Inserisci un ruolo',
         ],
         'created_at' => [
             'label' => 'Data Creazione',
-            'helper_text' => 'Data di creazione del team',
-            'description' => 'Data e ora in cui è stato creato il team',
         ],
         'updated_at' => [
             'label' => 'Ultima Modifica',
-            'helper_text' => 'Data dell\'ultima modifica',
-            'description' => 'Data e ora dell\'ultima modifica al team',
         ],
     ],
     'actions' => [
-        'create' => [
-            'label' => 'Nuovo Team',
-            'tooltip' => 'Crea un nuovo team',
+        'attach' => [
+            'label' => 'Associa Team',
+            'modal' => [
+                'heading' => "Associa Team all'Utente", // CORRETTO
+            ],
+            'form' => [
+                'role' => [
+                    'label' => 'Ruolo',
+                    'default_help_text' => 'Specifica il ruolo dell\'utente in questo team (es. member, admin).',
+                ],
+            ],
+            'success' => 'Team associato con successo.', // Aggiunto punto per coerenza
+            'error' => 'Si è verificato un errore durante l\'associazione del team.', // Aggiunto punto
         ],
         'edit' => [
-            'label' => 'Modifica',
-            'tooltip' => 'Modifica i dati del team',
+            'label' => 'Modifica Ruolo',
+            'modal' => [
+                'heading' => 'Modifica Ruolo nel Team',
+            ],
+            'success' => 'Ruolo nel team aggiornato con successo.',
+            'error' => 'Errore durante l\'aggiornamento del ruolo nel team.',
         ],
-        'delete' => [
-            'label' => 'Elimina',
-            'tooltip' => 'Elimina il team',
+        'detach' => [
+            'label' => 'Rimuovi Team',
+            'modal' => [
+                'heading' => 'Rimuovi Associazione Team',
+            ],
+            'success' => 'Team rimosso con successo.', // Aggiunto punto
+            'error' => 'Si è verificato un errore durante la rimozione del team.', // Aggiunto punto
         ],
-        'view' => [
-            'label' => 'Visualizza',
-            'tooltip' => 'Visualizza i dettagli del team',
+        'bulk_detach' => [
+            'label' => 'Rimuovi Team Selezionati',
+            'modal' => [
+                'heading' => 'Rimuovi Associazioni Team Selezionate',
+            ],
+            'success' => 'Team selezionati rimossi con successo.',
+            'error' => 'Errore durante la rimozione dei team selezionati.',
         ],
     ],
     'messages' => [
-        'success' => [
-            'created' => 'Team creato con successo',
-            'updated' => 'Team aggiornato con successo',
-            'deleted' => 'Team eliminato con successo',
-        ],
-        'error' => [
-            'create' => 'Errore durante la creazione del team',
-            'update' => 'Errore durante l\'aggiornamento del team',
-            'delete' => 'Errore durante l\'eliminazione del team',
-        ],
-        'confirm' => [
-            'delete' => 'Sei sicuro di voler eliminare questo team?',
-        ],
+        'team_current_changed' => 'Il team attuale è stato modificato.', // Aggiunto punto
+        'no_teams' => 'Nessun team associato.', // Aggiunto punto
     ],
-    'relationships' => [
-        'members' => [
-            'label' => 'Membri',
-            'description' => 'Utenti che fanno parte di questo team',
-        ],
-        'owner' => [
-            'label' => 'Proprietario',
-            'description' => 'Utente che ha creato questo team',
-        ],
-    ],
-]; 
+];

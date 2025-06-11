@@ -22,7 +22,7 @@ class UserResource extends XotBaseResource
 {
     // protected static ?string $model = \Modules\Xot\Datas\XotData::make()->getUserClass();
 
-    protected static ?string $navigationIcon = 'heroicon-o-users';
+    // protected static ?string $navigationIcon = 'heroicon-o-users';
 
     // Static property Modules\User\Filament\Resources\UserResource::$enablePasswordUpdates is never read, only written.
     // private static bool|\Closure $enablePasswordUpdates = true;
@@ -30,7 +30,7 @@ class UserResource extends XotBaseResource
     public static function getWidgets(): array
     {
         return [
-            UserOverview::class,
+            // UserOverview::class,
         ];
     }
 
@@ -56,10 +56,10 @@ class UserResource extends XotBaseResource
             'section02' => Section::make([
                 'created_at' => Placeholder::make('created_at')
                     ->content(static function ($record) {
-                        if ($record === null || $record->created_at === null) {
+                        if (null === $record || null === $record->created_at) {
                             return new HtmlString('&mdash;');
                         }
-                        
+
                         return $record->created_at->diffForHumans();
                     }),
             ])->columnSpan(4),

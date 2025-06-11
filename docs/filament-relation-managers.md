@@ -1,176 +1,143 @@
 # Filament Relation Managers nel Modulo User
 
-## Struttura dei Relation Managers
+Questa pagina fornisce indicazioni specifiche per l'implementazione dei `RelationManager` all'interno del modulo User, integrando le linee guida generali fornite dal modulo Xot.
 
-I Relation Managers nel modulo User devono seguire una struttura specifica che estende le classi base di Xot.
+## Estensione e Configurazione di Base
 
-### TeamsRelationManager
+Tutti i `RelationManager` nel modulo User **devono** estendere `Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager`.
 
-Gestisce la relazione tra Users e Teams.
+### Regola Fondamentale: Traduzioni Esplicite
 
-```php
-use Modules\Xot\Filament\RelationManagers\XotBaseRelationManager;
+**MAI** utilizzare metodi diretti come `->label()`, `->placeholder()`, `->helperText()`, `->modalHeading()` ecc. per impostare stringhe visibili all'utente.
+Tutte queste stringhe **DEVONO** provenire dai file di traduzione del modulo (es. `lang/it/teams.php`) utilizzando la funzione helper `__()`.
 
-class TeamsRelationManager extends XotBaseRelationManager
-{
-    protected static string $relationship = 'teams';
-    
-    // ...
-}
-```
+Esempio: `->label(__('user::teams.fields.name.label'))`
 
-## Metodi Principali
+Per le linee guida complete sulla configurazione di base, la definizione dello schema del form (`getFormSchema()`), la gestione delle colonne, le azioni, i filtri, fare riferimento alla documentazione centrale:
+-   **[Linee Guida per RelationManager e Tabelle Personalizzate Xot in Filament](../../Xot/docs/filament_relationmanager_e_tabelle_xot.md)**
 
-### Configurazione Tabella
+## Esempio Aggiornato: `TeamsRelationManager`
 
-I metodi di configurazione della tabella devono seguire queste regole:
+Il `TeamsRelationManager` gestisce la relazione molti-a-molti tra `User` e `Team`, includendo un campo `role` nella tabella pivot.
 
-1. Non devono essere statici
-2. Non devono usare il metodo `->label()`
-3. Devono affidarsi al sistema di traduzione automatico
+Ecco un estratto che evidenzia la struttura aggiornata, con l'uso esplicito delle traduzioni:
 
 ```php
-class TeamsRelationManager extends XotBaseRelationManager
-{
-    // CORRETTO: senza ->label()
-    public function getTableColumns(): array
-    {
-        return [
-            TextColumn::make('name')
-                ->searchable()
-                ->sortable(),
-            TextColumn::make('personal_team')
-                ->sortable(),
-            TextColumn::make('created_at')
-                ->dateTime()
-                ->sortable(),
-        ];
-    }
+<?php
 
-    // ERRATO: non usare ->label() o metodi statici
-    public static function getTableColumns(): array // ❌
-    {
-        return [
-            TextColumn::make('name')
-                ->label('Nome'), // ❌ Non usare ->label()
-        ];
-    }
-}
-```
+declare(strict_types=1);
 
-## Sistema di Traduzione
-
-### Struttura File di Traduzione
-
-Le traduzioni devono essere organizzate nei file di lingua del modulo:
-
-```php
-// lang/it/teams.php
-return [
-    'fields' => [
-        'name' => [
-            'label' => 'Nome',
-            'placeholder' => 'Inserisci il nome del team',
-            'helper_text' => 'Nome identificativo del team',
-        ],
-        'personal_team' => [
-            'label' => 'Team Personale',
-            'helper_text' => 'Indica se questo è un team personale',
-        ],
-    ],
-];
-```
-
-### Come Funziona
-
-1. Il LangServiceProvider gestisce automaticamente le traduzioni
-2. Le chiavi di traduzione sono generate automaticamente basandosi su:
-   - Nome del modulo
-   - Nome della risorsa
-   - Nome del campo
-
-### Errori Comuni
-
-1. **Uso di ->label()**
-   ```php
-   // ❌ ERRATO: Non usare ->label()
-   TextColumn::make('name')->label('Nome')
-   
-   // ✅ CORRETTO: Lasciare che il sistema gestisca la traduzione
-   TextColumn::make('name')
-   ```
-
-2. **Metodi Statici**
-   ```php
-   // ❌ ERRATO: Non usare metodi statici
-   public static function getTableColumns()
-   
-   // ✅ CORRETTO: Usare metodi di istanza
-   public function getTableColumns()
-   ```
-
-## Best Practices
-
-1. Mai usare il metodo `->label()`
-2. Definire tutte le traduzioni nei file di lingua
-3. Mantenere una struttura coerente nei file di traduzione
-4. Usare i metodi di istanza per la configurazione
-5. Seguire le convenzioni di naming per le chiavi di traduzione
-
-## Configurazione Corretta
-
-```php
 namespace Modules\User\Filament\Resources\UserResource\RelationManagers;
 
+use Filament\Forms\Components\TextInput;
+use Filament\Tables\Actions\AttachAction;
+use Filament\Tables\Actions\DetachAction;
+use Filament\Tables\Actions\DetachBulkAction;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
-use Modules\Xot\Filament\RelationManagers\XotBaseRelationManager;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Model;
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 class TeamsRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'teams';
+    protected static ?string $recordTitleAttribute = 'name';
 
-    public function getTableColumns(): array
+    public function getFormSchema(): array
+    {
+        return [
+            TextInput::make('role')
+                ->label(__('user::teams.fields.role.label'))
+                ->placeholder(__('user::teams.fields.role.placeholder'))
+                ->helperText(__('user::teams.fields.role.help'))
+                ->required(),
+        ];
+    }
+
+    public function table(Table $table): Table
+    {
+        return $table
+            ->columns($this->getTableColumns())
+            ->headerActions($this->getTableHeaderActions())
+            ->actions($this->getTableActions())
+            ->bulkActions($this->getTableBulkActions());
+    }
+
+    protected function getTableColumns(): array
     {
         return [
             TextColumn::make('name')
-                ->searchable()
-                ->sortable(),
-            TextColumn::make('personal_team')
-                ->sortable(),
+                ->label(__('user::teams.fields.name.label'))
+                ->searchable()->sortable(),
+            IconColumn::make('personal_team')
+                ->label(__('user::teams.fields.personal_team.label'))
+                ->boolean()
+                ->getStateUsing(function (Model $record, $livewire): bool {
+                    $user = $livewire->getOwnerRecord();
+                    return $user->current_team_id === $record->getKey();
+                }),
+            TextColumn::make('membership.role')
+                ->label(__('user::teams.fields.role.label'))
+                ->searchable()->sortable(),
             TextColumn::make('created_at')
-                ->dateTime()
-                ->sortable(),
+                ->label(__('user::teams.fields.created_at.label'))
+                ->dateTime()->sortable()->toggleable(isToggledHiddenByDefault: true),
+            TextColumn::make('updated_at')
+                ->label(__('user::teams.fields.updated_at.label'))
+                ->dateTime()->sortable()->toggleable(isToggledHiddenByDefault: true),
         ];
     }
 
-    public function getTableActions(): array
+    protected function getTableHeaderActions(): array
     {
         return [
-            ViewAction::make(),
-            EditAction::make(),
-            DeleteAction::make(),
+            AttachAction::make()
+                ->label(__('user::teams.actions.attach.label'))
+                ->modalHeading(__('user::teams.actions.attach.modal.heading'))
+                ->form(fn (AttachAction $action): array => [
+                    $action->getRecordSelect(),
+                    TextInput::make('role')
+                        ->label(__('user::teams.actions.attach.form.role.label'))
+                        ->helperText(__('user::teams.actions.attach.form.role.default_help_text'))
+                        ->required(),
+                ]),
         ];
     }
 
-    public function getTableBulkActions(): array
+    protected function getTableActions(): array
     {
         return [
-            DeleteBulkAction::make(),
+            EditAction::make()
+                ->label(__('user::teams.actions.edit.label'))
+                ->modalHeading(__('user::teams.actions.edit.modal.heading')),
+            DetachAction::make()
+                ->label(__('user::teams.actions.detach.label'))
+                ->modalHeading(__('user::teams.actions.detach.modal.heading'))
+                // ... (logica after)
+        ];
+    }
+
+    protected function getTableBulkActions(): array
+    {
+        return [
+            DetachBulkAction::make()
+                ->label(__('user::teams.actions.bulk_detach.label'))
+                ->modalHeading(__('user::teams.actions.bulk_detach.modal.heading'))
+                // ... (logica after)
         ];
     }
 }
 ```
 
-## Note Aggiuntive
+### Punti Chiave Corretti per `TeamsRelationManager` (e simili):
 
-- Non usare mai `->label()` nei componenti Filament
-- Tutte le etichette devono essere gestite tramite i file di traduzione
-- Il LangServiceProvider gestisce automaticamente le traduzioni
-- Mantenere una struttura coerente in tutti i RelationManager
+1.  **Traduzioni Esplicite Obbligatorie**: Tutte le stringhe UI (label, placeholder, helper text, modal heading, ecc.) devono essere caricate tramite `__('module::file.key.subkey')`.
+2.  **Definizione Schema Form Pivot**: Implementare `public function getFormSchema(): array`.
+3.  **`AttachAction` Form**: Definire il form completo (record select + campi pivot) direttamente nell'azione.
+4.  **Aderenza a `XotBaseRelationManager`**: Seguire le indicazioni della [documentazione Xot](../../Xot/docs/filament_relationmanager_e_tabelle_xot.md).
 
-## Riferimenti
-
-- [Documentazione Filament RelationManager](https://filamentphp.com/docs/tables#relation-managers)
-- [XotBaseRelationManager](../Xot/docs/filament-relation-managers.md)
-- [Sistema di Traduzione](../Xot/docs/translation-system.md)
-- [Best Practices Filament](../Xot/docs/filament-best-practices.md) 
+## Riferimenti Aggiuntivi
+(Come prima)
