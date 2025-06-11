@@ -39,37 +39,6 @@
 - Implementa le operazioni CRUD per i permessi associati a un utente
 - Supporta attach/detach di permessi esistenti
 
-## Regola fondamentale per RelationManager custom
-
-Tutti i RelationManager custom del modulo User (es. TeamsRelationManager, RolesRelationManager, PermissionsRelationManager) DEVONO estendere:
-
-- `Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager`
-
-e NON `Filament\Resources\RelationManagers\RelationManager`.
-
-### Motivazione
-- Centralizza logica, permessi, traduzioni e comportamenti comuni
-- Garantisce coerenza tra moduli e compatibilità con le estensioni Xot
-- Facilita override e personalizzazione senza duplicazione di codice
-
-### Pattern corretto
-```php
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
-
-class TeamsRelationManager extends XotBaseRelationManager
-{
-    // ...
-}
-```
-
-### Anti-pattern
-- ❌ Estendere direttamente RelationManager Filament
-- ❌ Usare metodi protected invece di public per override richiesti
-- ❌ Usare label hardcoded invece dei file di traduzione
-
-### Collegamenti
-- [XotBaseRelationManager – Linee guida](../../../Xot/docs/filament/relation_manager_guidelines.md)
-
 ## Note Importanti
 
 - Seguire sempre le best practices documentate

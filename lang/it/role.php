@@ -57,74 +57,10 @@ return array (
       'tooltip' => 'Una descrizione del ruolo e delle sue funzioni.',
       'placeholder' => 'Descrizione del ruolo',
     ),
-<<<<<<< HEAD
-=======
-    'toggleColumns' => 
-    array (
-      'label' => 'toggleColumns',
-    ),
-    'reorderRecords' => 
-    array (
-      'label' => 'reorderRecords',
-    ),
-    'resetFilters' => 
-    array (
-      'label' => 'resetFilters',
-    ),
->>>>>>> 5ed631f (.)
     'applyFilters' => 
     array (
       'label' => 'applyFilters',
     ),
-<<<<<<< HEAD
-=======
-    'openFilters' => 
-    array (
-      'label' => 'openFilters',
-    ),
-    'detach' => 
-    array (
-      'label' => 'detach',
-    ),
-    'edit' => 
-    array (
-      'label' => 'edit',
-    ),
-    'attach' => 
-    array (
-      'label' => 'attach',
-    ),
-    'team_id' => 
-    array (
-      'description' => 'team_id',
-      'label' => 'team_id',
-      'placeholder' => 'team_id',
-      'helper_text' => 'team_id',
-    ),
-    'id' => 
-    array (
-      'label' => 'id',
-    ),
-    'recordId' => 
-    array (
-      'label' => 'recordId',
-      'placeholder' => 'recordId',
-      'helper_text' => 'recordId',
-      'description' => 'recordId',
-    ),
-    'team' => 
-    array (
-      'name' => 
-      array (
-        'label' => 'team.name',
-      ),
-    ),
-    'enabled' => 
-    array (
-      'description' => 'enabled',
-      'helper_text' => 'enabled',
-    ),
->>>>>>> 5ed631f (.)
   ),
   'roles' => 
   array (
@@ -197,11 +133,4 @@ return array (
     'settings' => 'Impostazioni',
     'reports' => 'Report',
   ),
-<<<<<<< HEAD
-=======
-  'model' => 
-  array (
-    'label' => 'role.model',
-  ),
->>>>>>> 5ed631f (.)
 );

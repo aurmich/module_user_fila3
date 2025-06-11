@@ -42,7 +42,6 @@ return array (
     array (
       'label' => 'reorderRecords',
     ),
-<<<<<<< HEAD
     'resetFilters' => 
     array (
       'label' => 'resetFilters',
@@ -55,8 +54,6 @@ return array (
     array (
       'label' => 'openFilters',
     ),
-=======
->>>>>>> 5ed631f (.)
   ),
   'actions' => 
   array (
@@ -77,11 +74,8 @@ return array (
       ),
     ),
   ),
-<<<<<<< HEAD
   'model' => 
   array (
     'label' => 'feature.model',
   ),
-=======
->>>>>>> 5ed631f (.)
 );

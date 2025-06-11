@@ -77,12 +77,6 @@ return array (
     'recordId' => 
     array (
       'label' => 'recordId',
-<<<<<<< HEAD
-=======
-      'description' => 'recordId',
-      'helper_text' => 'recordId',
-      'placeholder' => 'recordId',
->>>>>>> 5ed631f (.)
     ),
     'personal_team' => 
     array (
@@ -91,24 +85,6 @@ return array (
     'role' => 
     array (
       'label' => 'role',
-<<<<<<< HEAD
-=======
-      'description' => 'role',
-      'helper_text' => 'role',
-      'placeholder' => 'role',
-    ),
-    'membership' => 
-    array (
-      'role' => 
-      array (
-        'label' => 'membership.role',
-      ),
-    ),
-    'description' => 
-    array (
-      'description' => 'description',
-      'helper_text' => 'description',
->>>>>>> 5ed631f (.)
     ),
   ),
   'actions' => 

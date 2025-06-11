@@ -90,21 +90,6 @@ return array (
     array (
       'label' => 'openFilters',
     ),
-<<<<<<< HEAD
-=======
-    'login_at' => 
-    array (
-      'label' => 'login_at',
-    ),
-    'created_at' => 
-    array (
-      'label' => 'created_at',
-    ),
-    'uuid' => 
-    array (
-      'label' => 'uuid',
-    ),
->>>>>>> 5ed631f (.)
   ),
   'actions' => 
   array (
@@ -129,11 +114,4 @@ return array (
       'label' => 'create',
     ),
   ),
-<<<<<<< HEAD
-=======
-  'model' => 
-  array (
-    'label' => 'device.model',
-  ),
->>>>>>> 5ed631f (.)
 );

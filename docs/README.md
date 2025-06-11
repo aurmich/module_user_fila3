@@ -350,73 +350,270 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli u
 > Mettere migration in `laravel/database/migrations` è un errore grave che rompe la modularità, il rollback e la chiarezza del progetto.
 > Vedi dettagli e motivazione in [PATH_CONVENTIONS.md](./PATH_CONVENTIONS.md).
 
-## RelationManager custom: regola di estensione
+```
+Modules/User/
+├── app/
+│   ├── Models/
+│   │   ├── User.php
+│   │   ├── OauthAccessToken.php
+│   │   ├── OauthAuthCode.php
+│   │   ├── OauthClient.php
+│   │   ├── OauthPersonalAccessClient.php
+│   │   └── OauthRefreshToken.php
+│   ├── Providers/
+│   │   ├── Traits/
+│   │   │   ├── HasPassportConfiguration.php
+│   │   │   └── HasSocialiteConfiguration.php
+│   │   ├── UserServiceProvider.php
+│   │   ├── EventServiceProvider.php
+│   │   ├── RouteServiceProvider.php
+│   │   └── Filament/
+│   │       └── AdminPanelProvider.php
+│   ├── Filament/
+│   │   ├── Resources/
+│   │   │   └── UserResource.php
+│   │   ├── Widgets/
+│   │   │   ├── Auth/
+│   │   │   │   ├── LoginWidget.php
 
-Tutti i RelationManager custom del modulo User (e di tutti i moduli Laraxot/PTVX) devono estendere **sempre**
+│   │   │   │   └── SocialLoginWidget.php
+│   │   │   └── User/
+│   │   │       ├── UserStatsWidget.php
+│   │   │       └── UserActivityWidget.php
+│   │   └── Pages/
+│   │       └── Auth/
+│   │           ├── LoginPage.php
+│   │           └── RegisterPage.php
+│   └── Http/
+│       └── Controllers/
+│           └── Auth/
+├── config/
+│   └── auth.php
+├── database/
+│   └── migrations/
+└── resources/
+    └── views/
+        └── pages/
+            └── auth/
+```
 
+## Dipendenze Principali
+
+### Moduli
+- **Xot**: Fornisce le classi base e l'infrastruttura core
+- **Lang**: Gestione delle traduzioni
+- **Notify**: Sistema di notifiche
+- **UI**: Componenti di interfaccia utente
+
+### Pacchetti
+- Laravel Passport
+- Laravel Socialite
+- Spatie Permission
+- Filament
+
+## Best Practices
+
+### 1. Estensione delle Classi
 ```php
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+// ❌ NON FARE QUESTO
+use Filament\Widgets\Widget;
+class LoginForm extends Widget { ... }
 
-class TeamsRelationManager extends XotBaseRelationManager
+// ✅ FARE QUESTO
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
+class LoginWidget extends XotBaseWidget { ... }
+```
+
+### 2. Gestione delle Traduzioni
+```php
+// ❌ NON FARE QUESTO
+->label('Sorgente')
+
+// ✅ FARE QUESTO
+->label(['label' => 'Sorgente'])
+```
+
+### 3. Configurazione dei Provider
+```php
+// In Modules/User/app/Providers/UserServiceProvider.php
+use Modules\User\Providers\Traits\HasPassportConfiguration;
+
+class UserServiceProvider extends XotBaseServiceProvider
 {
-    // ...
+    use HasPassportConfiguration;
+
+    public function boot(): void
+    {
+        $this->configurePassport();
+    }
 }
 ```
 
-Mai estendere direttamente `Filament\Resources\RelationManagers\RelationManager`.
+## Roadmap
 
-**Motivazione:**
-- Centralizza la logica tabellare e di form custom
-- Garantisce coerenza, DRY, aggiornabilità e riduce errori/duplicazioni
-- Permette override solo per personalizzazioni reali (es. campi extra nel form di attach)
+### Prossime Feature
+1. Miglioramento della gestione dei token OAuth
+2. Integrazione con nuovi provider social
+3. Ottimizzazione delle performance
 
-**Pattern corretto:**
-- Usa solo `getFormSchema()` per i form custom
-- Personalizza solo ciò che serve davvero (es. azioni, headerActions, ecc.)
-- Non ridefinire metodi già gestiti dalla base
-- **NON usare mai ->label(), ->helperText(), ->modalHeading()**
+### Miglioramenti Pianificati
+1. Refactoring del sistema di autenticazione
+2. Miglioramento della gestione dei profili
+3. Ottimizzazione delle query
 
-**Anti-pattern:**
-- Estendere direttamente la classe Filament
-- Duplicare metodi standard già gestiti dalla base
-- Usare `form()` invece di `getFormSchema()`
-- **Usare ->label(), ->helperText(), ->modalHeading()**
+## Contribuire
 
-**Checklist:**
-- [x] Tutti i RelationManager custom estendono XotBaseRelationManager
-- [x] Nessun override inutile di metodi base
-- [x] Solo personalizzazioni reali
-- [x] Nessun ->label(), ->helperText(), ->modalHeading()
-- [x] Documentazione aggiornata
+### Setup Sviluppo
+1. Clona il repository
+2. Installa le dipendenze
+3. Configura l'ambiente
+4. Esegui i test
 
-**Backlink:**
-- [Best practices Xot](../../Xot/docs/filament-best-practices.md)
-- [Root FILAMENT-BEST-PRACTICES.md](../../../docs/FILAMENT-BEST-PRACTICES.md)
+### Convenzioni di Codice
+- Seguire PSR-12
+- Utilizzare type hints
+- Documentare il codice
+- Scrivere test unitari
 
-# ⚠️ Regola fondamentale: NIENTE ->label(), ->helperText(), ->modalHeading() nei componenti Filament
+### Processo di Pull Request
+1. Crea un branch feature
+2. Implementa le modifiche
+3. Aggiungi i test
+4. Aggiorna la documentazione
+5. Crea la PR
 
-**Tutte le label, placeholder, help text e heading DEVONO essere gestite solo tramite la struttura espansa delle traduzioni.**
+## Troubleshooting
 
-## Pattern corretto
-```php
-TextInput::make('role')->required()
-```
+### Problemi Comuni
+1. Conflitti di autenticazione
+2. Problemi di performance
+3. Errori di configurazione
 
-## Anti-pattern (da evitare)
-```php
-TextInput::make('role')->label('Ruolo') // ❌ VIETATO
-TextInput::make('role')->helperText('Testo di aiuto') // ❌ VIETATO
-EditAction::make()->modalHeading('Modifica') // ❌ VIETATO
-```
+### Soluzioni
+1. Verifica la configurazione
+2. Controlla i log
+3. Consulta la documentazione
 
-## Checklist
-- [ ] Nessun ->label(), ->helperText(), ->modalHeading() nei componenti Filament
-- [ ] Tutte le label e testi solo tramite traduzioni espanse
-- [ ] Aggiorna sempre la struttura delle traduzioni se serve
+## Riferimenti
 
-## Backlink
-- [Xot/docs/filament-best-practices.md](../../Xot/docs/filament-best-practices.md)
-- [docs/FILAMENT-BEST-PRACTICES.md](../../../docs/FILAMENT-BEST-PRACTICES.md)
+### Documentazione
+- [Laravel Passport](https://laravel.com/docs/12.x/passport)
+- [Laravel Socialite](https://laravel.com/docs/12.x/socialite)
+- [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel)
+- [Filament](https://filamentphp.com/docs)
+
+### Collegamenti Interni
+- [Xot Base Classes](../Xot/docs/base-classes.md)
+- [Lang Integration](../Lang/docs/lang-link.md)
+- [Notify Setup](../Notify/docs/README.md)
+
+## Changelog
+
+### [1.0.0] - 2024-03-20
+#### Added
+- Implementazione iniziale
+- Supporto OAuth2
+- Integrazione Socialite
+- Sistema di autorizzazione
+
+#### Changed
+- Miglioramento performance
+- Ottimizzazione query
+- Refactoring codice
+
+#### Fixed
+- Bug autenticazione
+- Problemi di configurazione
+### Versione HEAD
+
+- Errori di traduzione 
+
+### Versione Incoming
+
+- Errori di traduzione 
+## Collegamenti
+- [Indice Documentazione](../../../docs/INDEX.md)
+- [README Principale](../../../README.md)
+- [API Reference](../docs/api.md)
+- [Changelog](../docs/CHANGELOG.md) 
+## Collegamenti tra versioni di README.md
+* [README.md](bashscripts/docs/README.md)
+* [README.md](bashscripts/docs/it/README.md)
+* [README.md](docs/laravel-app/phpstan/README.md)
+* [README.md](docs/laravel-app/README.md)
+* [README.md](docs/moduli/struttura/README.md)
+* [README.md](docs/moduli/README.md)
+* [README.md](docs/moduli/manutenzione/README.md)
+* [README.md](docs/moduli/core/README.md)
+* [README.md](docs/moduli/installati/README.md)
+* [README.md](docs/moduli/comandi/README.md)
+* [README.md](docs/phpstan/README.md)
+* [README.md](docs/README.md)
+* [README.md](docs/module-links/README.md)
+* [README.md](docs/troubleshooting/git-conflicts/README.md)
+* [README.md](docs/tecnico/laraxot/README.md)
+* [README.md](docs/modules/README.md)
+* [README.md](docs/conventions/README.md)
+* [README.md](docs/amministrazione/backup/README.md)
+* [README.md](docs/amministrazione/monitoraggio/README.md)
+* [README.md](docs/amministrazione/deployment/README.md)
+* [README.md](docs/translations/README.md)
+* [README.md](docs/roadmap/README.md)
+* [README.md](docs/ide/cursor/README.md)
+* [README.md](docs/implementazione/api/README.md)
+* [README.md](docs/implementazione/testing/README.md)
+* [README.md](docs/implementazione/pazienti/README.md)
+* [README.md](docs/implementazione/ui/README.md)
+* [README.md](docs/implementazione/dental/README.md)
+* [README.md](docs/implementazione/core/README.md)
+* [README.md](docs/implementazione/reporting/README.md)
+* [README.md](docs/implementazione/isee/README.md)
+* [README.md](docs/it/README.md)
+* [README.md](laravel/vendor/mockery/mockery/docs/README.md)
+* [README.md](../../../Chart/docs/README.md)
+* [README.md](../../../Reporting/docs/README.md)
+* [README.md](../../../Gdpr/docs/phpstan/README.md)
+* [README.md](../../../Gdpr/docs/README.md)
+* [README.md](../../../Notify/docs/phpstan/README.md)
+* [README.md](../../../Notify/docs/README.md)
+* [README.md](../../../Xot/docs/filament/README.md)
+* [README.md](../../../Xot/docs/phpstan/README.md)
+* [README.md](../../../Xot/docs/exceptions/README.md)
+* [README.md](../../../Xot/docs/README.md)
+* [README.md](../../../Xot/docs/standards/README.md)
+* [README.md](../../../Xot/docs/conventions/README.md)
+* [README.md](../../../Xot/docs/development/README.md)
+* [README.md](../../../Dental/docs/README.md)
+* [README.md](../../../User/docs/phpstan/README.md)
+* [README.md](../../../User/docs/README.md)
+* [README.md](../../../User/docs/README.md)
+* [README.md](../../../UI/docs/phpstan/README.md)
+* [README.md](../../../UI/docs/README.md)
+* [README.md](../../../UI/docs/standards/README.md)
+* [README.md](../../../UI/docs/themes/README.md)
+* [README.md](../../../UI/docs/components/README.md)
+* [README.md](../../../Lang/docs/phpstan/README.md)
+* [README.md](../../../Lang/docs/README.md)
+* [README.md](../../../Job/docs/phpstan/README.md)
+* [README.md](../../../Job/docs/README.md)
+* [README.md](../../../Media/docs/phpstan/README.md)
+* [README.md](../../../Media/docs/README.md)
+* [README.md](../../../Tenant/docs/phpstan/README.md)
+* [README.md](../../../Tenant/docs/README.md)
+* [README.md](../../../Activity/docs/phpstan/README.md)
+* [README.md](../../../Activity/docs/README.md)
+* [README.md](../../../Patient/docs/README.md)
+* [README.md](../../../Patient/docs/standards/README.md)
+* [README.md](../../../Patient/docs/value-objects/README.md)
+* [README.md](../../../Cms/docs/blocks/README.md)
+* [README.md](../../../Cms/docs/README.md)
+* [README.md](../../../Cms/docs/standards/README.md)
+* [README.md](../../../Cms/docs/content/README.md)
+* [README.md](../../../Cms/docs/frontoffice/README.md)
+* [README.md](../../../Cms/docs/components/README.md)
+* [README.md](../../../../Themes/Two/docs/README.md)
+* [README.md](../../../../Themes/One/docs/README.md)
+
 
 ---
 
@@ -500,7 +697,7 @@ Schema::table('users', function ($table) {
 
 ### 2. Model States (spatie/laravel-model-states)
 - **Colonna obbligatoria:** `state` (e NON `moderation_status` o simili)
-- **Motivazione:** Segue la convenzione spatie/laravel-model-states ([vedi doc](https://spatie.be/docs/laravel-model-states/v2/working-with-states))
+- **Motivazione:** Segue la convenzione spatie/laravel-model-states ([vedi doc](https://spatie.be/docs/laravel-model-states/v2/working-with-states/01-configuring-states))
 - **Esempio migrazione:**
 ```php
 Schema::table('users', function ($table) {
@@ -532,7 +729,7 @@ abstract class UserState extends State {
 - Queste convenzioni garantiscono compatibilità, manutenibilità e aderenza agli standard delle librerie usate.
 - Riferimenti:
   - [tighten/parental - Accessing Child Models from Parents](https://github.com/tighten/parental)
-  - [spatie/laravel-model-states - Configuring States](https://spatie.be/docs/laravel-model-states/v2/working-with-states)
+  - [spatie/laravel-model-states - Configuring States](https://spatie.be/docs/laravel-model-states/v2/working-with-states/01-configuring-states)
 
 ---
 
