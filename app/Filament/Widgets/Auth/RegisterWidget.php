@@ -3,19 +3,42 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Widgets\Auth;
 
-use Filament\Widgets\Widget;
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
+use Filament\Forms\Concerns\InteractsWithForms;
+use Filament\Forms\Contracts\HasForms;
 use Modules\User\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
 use Illuminate\Support\Facades\Auth;
 use Filament\Forms\Components\TextInput as FormsTextInput;
 
-class RegisterWidget extends Widget
+class RegisterWidget extends XotBaseWidget 
 {
     protected static string $view = 'user::widgets.auth.register-widget';
+    
+    public function getFormSchema(): array
+    {
+        return [
+            Form\Components\TextInput::make('name')
+                ->label('Nome')
+                ->required()
+                ->maxLength(255),
+            Forms\Components\TextInput::make('email')
+                ->label('Email')
+                ->email()
+                ->required()
+                ->maxLength(255),
+
+            Forms\Components\TextInput::make('password')
+                ->label('Password')
+                ->password()
+                ->required()
+                ->minLength(8),
+        ];
+    }
 
     public ?array $data = [];
 
