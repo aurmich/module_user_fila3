@@ -46,6 +46,21 @@ class UserServiceProvider extends XotBaseServiceProvider
     public function register(): void
     {
         parent::register();
+        $this->registerTeamModelBindings();
+    }
+
+    /**
+     * Register the team model bindings.
+     */
+    protected function registerTeamModelBindings(): void
+    {
+        $this->app->bind('team_user_model', function () {
+            return \Modules\User\Models\TeamUser::class;
+        });
+
+        $this->app->bind('team_invitation_model', function () {
+            return \Modules\User\Models\TeamInvitation::class;
+        });
     }
 
     public function registerMailsNotification(): void

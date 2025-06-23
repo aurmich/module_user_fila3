@@ -21,8 +21,11 @@
 =======
 
 >>>>>>> aurmich/dev
+<<<<<<< HEAD
 =======
 >>>>>>> aurmich/dev
+=======
+>>>>>>> 918b47f (.)
 # Rapporto PHPStan Livello 7 per il modulo User
 
 Data analisi: 2025-04-15 21:59:26
@@ -616,6 +619,9 @@ Trovati 69 errori al livello 7.
 - [PSR-12: Standard di codifica](https://www.php-fig.org/psr/psr-12/)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 918b47f (.)
 
 
 =======
@@ -638,8 +644,11 @@ aurmich/dev
 aurmich/dev
 aurmich/dev
 aurmich/dev
+<<<<<<< HEAD
 =======
 >>>>>>> aurmich/dev
+=======
+>>>>>>> 918b47f (.)
 
 ## Collegamenti tra versioni di level_7.md
 * [level_7.md](laravel/Modules/Chart/docs/phpstan/level_7.md)
@@ -658,7 +667,12 @@ aurmich/dev
 * [level_7.md](laravel/Modules/Patient/docs/phpstan/level_7.md)
 * [level_7.md](laravel/Modules/Cms/docs/phpstan/level_7.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> aurmich/dev
 =======
 >>>>>>> aurmich/dev
+=======
+
+>>>>>>> aurmich/dev
+>>>>>>> 918b47f (.)

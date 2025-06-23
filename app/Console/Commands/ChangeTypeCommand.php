@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Console\Commands;
 
+<<<<<<< HEAD
 use Illuminate\Console\Command;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
@@ -12,6 +13,17 @@ use Symfony\Component\Console\Input\InputOption;
 
 use function Laravel\Prompts\text;
 use function Laravel\Prompts\select;
+=======
+use Illuminate\Support\Arr;
+use Webmozart\Assert\Assert;
+use Modules\Xot\Datas\XotData;
+use Illuminate\Console\Command;
+use function Laravel\Prompts\text;
+
+use function Laravel\Prompts\select;
+use Modules\Xot\Contracts\UserContract;
+use Symfony\Component\Console\Input\InputOption;
+>>>>>>> 918b47f (.)
 
 class ChangeTypeCommand extends Command
 {
@@ -63,7 +75,11 @@ class ChangeTypeCommand extends Command
         $typeClass = get_class($user->type);
         $options=Arr::mapWithKeys($childTypes,
             function ($item, string $key) use($typeClass) {
+<<<<<<< HEAD
                 $val=$typeClass::tryFrom($key)->getLabel();
+=======
+                $val=$typeClass::tryFrom($key)?->getLabel();
+>>>>>>> 918b47f (.)
                 return [$key => $val];
             }
         );
@@ -75,7 +91,14 @@ class ChangeTypeCommand extends Command
         //$oldType = $this->getCurrentTypeValue($user);
 
         // Aggiorna il tipo utente
+<<<<<<< HEAD
         $user->type = $newType;
+=======
+        //$user->type = $newType;
+        Assert::notNull($newTypeEnum=$typeClass::tryFrom($newType));
+
+        $user->type = $newTypeEnum;
+>>>>>>> 918b47f (.)
         $user->save();
 
         $this->info("User type changed to '{$user->type->getLabel()}' for {$email}");

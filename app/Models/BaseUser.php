@@ -38,9 +38,6 @@ use Illuminate\Notifications\DatabaseNotificationCollection;
 /**
  * Modules\User\Models\User.
  *
- * @template TModel of \Illuminate\Database\Eloquent\Model
- * @template TRelatedModel of \Illuminate\Database\Eloquent\Model
- *
  * @property Collection<int, OauthClient> $clients
  * @property int|null $clients_count
  * @property Team|null $currentTeam
@@ -203,7 +200,12 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     public function __construct(array $attributes = [])
     {
         // Concateno i fillable del parent con quelli della classe corrente
+<<<<<<< HEAD
         $this->fillable = array_merge(parent::getFillable(), $this->getFillable());
+=======
+        // array_values() garantisce che sia un array indicizzato (list<string>)
+        $this->fillable = array_values(array_merge(parent::getFillable(), $this->getFillable()));
+>>>>>>> 918b47f (.)
 
         parent::__construct($attributes);
     }
@@ -310,7 +312,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     }
 
     /**
-     * @return BelongsToMany<Device, static|$this>
+     * @return BelongsToMany<Device, static>
      */
     public function devices(): BelongsToMany
     {
@@ -318,10 +320,12 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
             ->belongsToManyX(Device::class);
     }
 
+    /**
+     * @return HasMany<SocialiteUser, static>
+     */
     public function socialiteUsers(): HasMany
     {
-        return $this
-            ->hasMany(SocialiteUser::class);
+        return $this->hasMany(SocialiteUser::class);
     }
 
     public function getProviderField(string $provider, string $field): string

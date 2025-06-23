@@ -21,8 +21,11 @@
 =======
 
 >>>>>>> aurmich/dev
+<<<<<<< HEAD
 =======
 >>>>>>> aurmich/dev
+=======
+>>>>>>> 918b47f (.)
 # Rapporto PHPStan Livello 4 per il modulo User
 
 Data analisi: 2025-04-15 21:58:16
@@ -596,6 +599,9 @@ Trovati 67 errori al livello 4.
 - [PSR-12: Standard di codifica](https://www.php-fig.org/psr/psr-12/)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 918b47f (.)
 
 
 =======
@@ -618,8 +624,11 @@ aurmich/dev
 aurmich/dev
 aurmich/dev
 aurmich/dev
+<<<<<<< HEAD
 =======
 >>>>>>> aurmich/dev
+=======
+>>>>>>> 918b47f (.)
 
 ## Collegamenti tra versioni di level_4.md
 * [level_4.md](laravel/Modules/Chart/docs/phpstan/level_4.md)
@@ -639,7 +648,10 @@ aurmich/dev
 * [level_4.md](laravel/Modules/Cms/docs/phpstan/level_4.md)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
 =======
 
+=======
+>>>>>>> 918b47f (.)
 >>>>>>> aurmich/dev

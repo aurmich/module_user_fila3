@@ -18,7 +18,7 @@ use Modules\User\Filament\Resources\UserResource\Pages;
 use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 
-class UserResource extends XotBaseResource
+abstract class BaseUserResource extends XotBaseResource
 {
     // protected static ?string $model = \Modules\Xot\Datas\XotData::make()->getUserClass();
 
@@ -41,7 +41,6 @@ class UserResource extends XotBaseResource
 
     public static function getFormSchema(): array
     {
-        
         return [
             'section01' => Section::make([
                 'name' => TextInput::make('name')
