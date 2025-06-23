@@ -5,10 +5,6 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Widgets\Auth;
 
 use Filament\Forms;
-<<<<<<< HEAD
-use Modules\Xot\Filament\Widgets\XotBaseWidget;
-
-=======
 use Filament\Forms\Form;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
@@ -23,7 +19,6 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
  *
  * @property ComponentContainer $form
  */
->>>>>>> 918b47f (.)
 class ResetPasswordWidget extends XotBaseWidget
 {
     /**
@@ -125,28 +120,4 @@ class ResetPasswordWidget extends XotBaseWidget
             $this->addError('email', __((string) $status));
         }
     }
-<<<<<<< HEAD
-
-    public function getFormSchema(): array
-    {
-        return [
-            Forms\Components\TextInput::make('email')
-                ->email()
-                ->required()
-                ->maxLength(255),
-
-            Forms\Components\TextInput::make('password')
-                ->password()
-                ->required()
-                ->maxLength(255),
-
-            Forms\Components\TextInput::make('password_confirmation')
-                ->password()
-                ->required()
-                ->maxLength(255)
-                ->same('password'),
-        ];
-    }
-=======
->>>>>>> 918b47f (.)
 }

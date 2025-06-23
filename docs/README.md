@@ -494,6 +494,13 @@ class UserServiceProvider extends XotBaseServiceProvider
 2. Controlla i log
 3. Consulta la documentazione
 
+## Widget Filament
+
+### Widget Disponibili
+- [RegistrationWidget](./filament/widgets/registration-widget.md) - Widget generico per registrazione utente
+- [EditUserWidget](./filament/widgets/edit-user-widget.md) - Widget generico per modifica dati utente
+- [Widget Responsive Layout](./filament/widgets-responsive-layout.md) - Layout responsive per widget
+
 ## Riferimenti
 
 ### Documentazione

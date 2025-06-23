@@ -200,12 +200,8 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     public function __construct(array $attributes = [])
     {
         // Concateno i fillable del parent con quelli della classe corrente
-<<<<<<< HEAD
-        $this->fillable = array_merge(parent::getFillable(), $this->getFillable());
-=======
         // array_values() garantisce che sia un array indicizzato (list<string>)
         $this->fillable = array_values(array_merge(parent::getFillable(), $this->getFillable()));
->>>>>>> 918b47f (.)
 
         parent::__construct($attributes);
     }

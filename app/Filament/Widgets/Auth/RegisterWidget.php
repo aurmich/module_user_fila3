@@ -4,12 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Widgets\Auth;
 
-<<<<<<< HEAD
-use Modules\Xot\Filament\Widgets\XotBaseWidget;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Section;
-=======
->>>>>>> 918b47f (.)
 use Filament\Forms\Form;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
@@ -22,16 +16,12 @@ use Filament\Forms\Components\TextInput;
 use Illuminate\Validation\Rules\Password;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
-<<<<<<< HEAD
-class RegisterWidget extends XotBaseWidget 
-=======
 /**
  * Register widget for user registration functionality.
  *
  * @property ComponentContainer $form
  */
 class RegisterWidget extends XotBaseWidget
->>>>>>> 918b47f (.)
 {
     /**
      * The view for this widget.
@@ -40,26 +30,7 @@ class RegisterWidget extends XotBaseWidget
      */
     protected static string $view = 'user::widgets.auth.register-widget';
     
-    public function getFormSchema(): array
-    {
-        return [
-            Form\Components\TextInput::make('name')
-                ->label('Nome')
-                ->required()
-                ->maxLength(255),
-            Forms\Components\TextInput::make('email')
-                ->label('Email')
-                ->email()
-                ->required()
-                ->maxLength(255),
 
-            Forms\Components\TextInput::make('password')
-                ->label('Password')
-                ->password()
-                ->required()
-                ->minLength(8),
-        ];
-    }
 
     /**
      * Widget data array.

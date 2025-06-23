@@ -74,11 +74,7 @@ trait HasTeams
     /**
      * Check if the user belongs to a specific team.
      */
-<<<<<<< HEAD
-    public function belongsToTeam(\Modules\User\Contracts\TeamContract $team): bool
-=======
     public function belongsToTeam(TeamContract $team): bool
->>>>>>> 918b47f (.)
     {
         $found = $this->teams()->where('teams.id', $team->id)->first();
         if ($found === null) {

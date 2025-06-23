@@ -32,13 +32,7 @@ trait HasTenants
      */
     public function canAccessTenant(Model $tenant): bool
     {
-<<<<<<< HEAD
-
         return $this->tenants()->whereKey($tenant)->exists();
-
-=======
-        return $this->tenants()->whereKey($tenant)->exists();
->>>>>>> 918b47f (.)
     }
 
     /**
@@ -58,11 +52,7 @@ trait HasTenants
     /**
      * Get all of the tenants the user belongs to.
      *
-<<<<<<< HEAD
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Illuminate\Database\Eloquent\Model>
-=======
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Illuminate\Database\Eloquent\Model, \Illuminate\Database\Eloquent\Relations\Pivot>
->>>>>>> 918b47f (.)
      */
     public function tenants(): BelongsToMany
     {

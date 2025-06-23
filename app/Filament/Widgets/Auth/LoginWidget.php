@@ -10,15 +10,10 @@ use Filament\Forms\Contracts\HasForms;
 use Illuminate\Support\Facades\Auth;
 use Filament\Forms\ComponentContainer;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
-<<<<<<< HEAD
-
-class LoginWidget extends XotBaseWidget 
-=======
 /**
  * @property ComponentContainer $form
  */
 class LoginWidget extends XotBaseWidget
->>>>>>> 918b47f (.)
 {
     
     
