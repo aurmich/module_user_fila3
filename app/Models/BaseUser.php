@@ -36,14 +36,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Notifications\DatabaseNotificationCollection;
 
 /**
- * Modules\User\Models\User.
+ * Base User Model
  *
-<<<<<<< HEAD
- * @template TModel of \Illuminate\Database\Eloquent\Model
- * @template TRelatedModel of \Illuminate\Database\Eloquent\Model
+ * This is the base user model that provides the core authentication and authorization
+ * functionality for the application. It extends Laravel's Authenticatable class
+ * and implements the MustVerifyEmail interface.
  *
-=======
->>>>>>> aurmich/dev
  * @property Collection<int, OauthClient> $clients
  * @property int|null $clients_count
  * @property Team|null $currentTeam
@@ -206,12 +204,8 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     public function __construct(array $attributes = [])
     {
         // Concateno i fillable del parent con quelli della classe corrente
-<<<<<<< HEAD
-        $this->fillable = array_merge(parent::getFillable(), $this->getFillable());
-=======
         // array_values() garantisce che sia un array indicizzato (list<string>)
         $this->fillable = array_values(array_merge(parent::getFillable(), $this->getFillable()));
->>>>>>> aurmich/dev
 
         parent::__construct($attributes);
     }
@@ -318,11 +312,6 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     }
 
     /**
-<<<<<<< HEAD
-     * @return BelongsToMany<Device, static|$this>
-=======
-     * @return BelongsToMany<Device, static>
->>>>>>> aurmich/dev
      */
     public function devices(): BelongsToMany
     {
@@ -330,19 +319,14 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
             ->belongsToManyX(Device::class);
     }
 
-<<<<<<< HEAD
-    public function socialiteUsers(): HasMany
-    {
-        return $this
-            ->hasMany(SocialiteUser::class);
-=======
     /**
-     * @return HasMany<SocialiteUser, static>
+     * Get the socialite users associated with the user.
+     *
+     * @return HasMany<SocialiteUser>
      */
     public function socialiteUsers(): HasMany
     {
         return $this->hasMany(SocialiteUser::class);
->>>>>>> aurmich/dev
     }
 
     public function getProviderField(string $provider, string $field): string

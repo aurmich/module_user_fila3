@@ -8,10 +8,7 @@ use Filament\Forms\Form;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Filament\Widgets\Widget;
-<<<<<<< HEAD
-=======
 use Illuminate\Http\Request;
->>>>>>> aurmich/dev
 use Webmozart\Assert\Assert;
 use Modules\Xot\Datas\XotData;
 use Livewire\Attributes\Validate;
@@ -23,18 +20,11 @@ use Illuminate\Auth\Events\Registered;
 use Filament\Forms\Components\Checkbox;
 use Illuminate\Database\Eloquent\Model;
 use Filament\Forms\Components\TextInput;
-<<<<<<< HEAD
-use Modules\User\Contracts\UserContract;
-use Filament\Forms\Components\Wizard\Step;
-use Filament\Forms\Concerns\InteractsWithForms;
-use Modules\Xot\Filament\Widgets\XotBaseWidget;
-=======
 use Modules\Xot\Contracts\UserContract;
 use Filament\Forms\Components\Wizard\Step;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use Illuminate\Support\Facades\Log;
->>>>>>> aurmich/dev
 
 class RegistrationWidget extends XotBaseWidget
 {
@@ -45,38 +35,21 @@ class RegistrationWidget extends XotBaseWidget
     public string $model;
     public string $action;
     public Model $record;
-<<<<<<< HEAD
-    protected static string $view = 'pub_theme::filament.widgets.registration';
-
-    public function mount(string $type): void
-=======
     
     protected static string $view = 'pub_theme::filament.widgets.registration';
 
-    public function mount(string $type,Request $request): void
->>>>>>> aurmich/dev
+    public function __construct(string $type = 'user')
     {
         $this->type = $type;
         $this->resource = XotData::make()->getUserResourceClassByType($type);
         $this->model = $this->resource::getModel();
-        $this->action=Str::of($this->model)->replace('\Models\\', '\Actions\\')->append('\RegisterAction')->toString();
-<<<<<<< HEAD
-        $obj=app($this->model);
-        //Assert::implementsInterface($obj,UserContract::class);
-        Assert::isInstanceOf($obj,Model::class);
-        $fields=array_merge($obj->getFillable(),$obj->getAppends());
-
-        $fieldsWithNulls = Arr::mapWithKeys($fields, fn($field) => [$field=>null]);
-        $this->form->fill($fieldsWithNulls);
-        $this->form->model($obj);
-        $this->record=$obj;
-=======
-        $record=$this->getFormModel();
-        $data=$this->getFormFill();
+        $this->action = Str::of($this->model)->replace('\\Models\\', '\\Actions\\')->append('\\RegisterAction')->toString();
+        $record = $this->getFormModel();
+        $data = $this->getFormFill();
         $this->form->fill($data);
         $this->form->model($record);
-        $this->data=$data;
-        $this->record=$record;
+        $this->data = $data;
+        $this->record = $record;
     }
 
     public function getFormModel(): Model
@@ -131,7 +104,6 @@ class RegistrationWidget extends XotBaseWidget
         $fields = array_merge($fillable, $appends);
         
         return array_fill_keys($fields, null);
->>>>>>> aurmich/dev
     }
 
 
@@ -143,19 +115,12 @@ class RegistrationWidget extends XotBaseWidget
     /**
      * @see https://filamentphp.com/docs/3.x/forms/adding-a-form-to-a-livewire-component
      */
-<<<<<<< HEAD
-    public function register()
-    {
-        $data = $this->form->getState();
-        $user=app($this->action)->execute($data);
-=======
     public function register():\Illuminate\Http\RedirectResponse|\Livewire\Features\SupportRedirects\Redirector
     {
         $data = $this->form->getState();
         $record=$this->record;
        
         $user=app($this->action)->execute($record,$data);
->>>>>>> aurmich/dev
         //$post = $this->model::create($this->form->getState());
 
         // Save the relationships from the form to the post after it is created.
@@ -164,17 +129,5 @@ class RegistrationWidget extends XotBaseWidget
 
     }
 
-    /**
-     * Invia l'email di conferma della registrazione.
-     */
-    protected function sendConfirmationEmail(\Modules\SaluteOra\Models\Doctor $doctor): void
-    {
-        $email = new \Modules\Notify\Emails\SpatieEmail($doctor, 'registration_pending');
-
-        \Illuminate\Support\Facades\Mail::to($doctor->email)
-            ->locale(app()->getLocale())
-            ->send($email);
-        session()->flash('message', 'Registrazione completata con successo. La tua richiesta è in attesa di moderazione.');
-        $this->form->fill();
-    }
+    
 }

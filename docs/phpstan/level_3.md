@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-
-=======
-
->>>>>>> aurmich/dev
 
 =======
 
@@ -21,13 +12,7 @@
 =======
 
 >>>>>>> aurmich/dev
-<<<<<<< HEAD
 =======
->>>>>>> aurmich/dev
-=======
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
 =======
 >>>>>>> 918b47f (.)
 >>>>>>> aurmich/dev
@@ -602,13 +587,6 @@ Trovati 67 errori al livello 3.
 - [Documentazione PHPStan](https://phpstan.org/user-guide/getting-started)
 - [Tipi in PHP](https://www.php.net/manual/en/language.types.declarations.php)
 - [PSR-12: Standard di codifica](https://www.php-fig.org/psr/psr-12/)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 918b47f (.)
 >>>>>>> aurmich/dev
 
 
@@ -632,13 +610,7 @@ aurmich/dev
 aurmich/dev
 aurmich/dev
 aurmich/dev
-<<<<<<< HEAD
 =======
->>>>>>> aurmich/dev
-=======
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
 =======
 >>>>>>> 918b47f (.)
 >>>>>>> aurmich/dev

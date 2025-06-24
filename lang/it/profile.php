@@ -106,8 +106,6 @@ return [
         ],
         'notify' => 'Profilo aggiornato correttamente!',
     ],
-<<<<<<< HEAD
-=======
     'edit_profile_title' => 'Modifica Profilo',
     'edit_tooltip' => 'Modifica i tuoi dati',
     'save_changes' => 'Salva Modifiche',
@@ -115,5 +113,4 @@ return [
     'update_success' => 'Profilo aggiornato con successo!',
     'no_permission' => 'Non hai i permessi per modificare questo profilo.',
     'profile' => 'Profilo',
->>>>>>> aurmich/dev
 ];

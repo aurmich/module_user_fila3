@@ -1,22 +1,10 @@
 <?php
-<<<<<<< HEAD
-=======
-
->>>>>>> aurmich/dev
 declare(strict_types=1);
 
 namespace Modules\User\Livewire;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
-<<<<<<< HEAD
-
-class Logout extends Component
-{
-    public $processing = false;
-
-    public function logout()
-=======
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Contracts\View\View;
 
@@ -34,7 +22,6 @@ class Logout extends Component
      * Handle user logout process.
      */
     public function logout(): ?RedirectResponse
->>>>>>> aurmich/dev
     {
         $this->processing = true;
 
@@ -47,12 +34,6 @@ class Logout extends Component
         } catch (\Exception $e) {
             $this->processing = false;
             session()->flash('error', __('Errore durante il logout. Riprova.'));
-<<<<<<< HEAD
-        }
-    }
-
-    public function render()
-=======
             return null;
         }
     }
@@ -61,7 +42,6 @@ class Logout extends Component
      * Render the logout component view.
      */
     public function render(): View
->>>>>>> aurmich/dev
     {
         return view('user::livewire.logout');
     }

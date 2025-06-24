@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-
-=======
-
->>>>>>> aurmich/dev
 
 =======
 
@@ -21,13 +12,7 @@
 =======
 
 >>>>>>> aurmich/dev
-<<<<<<< HEAD
 =======
->>>>>>> aurmich/dev
-=======
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
 =======
 >>>>>>> 918b47f (.)
 >>>>>>> aurmich/dev
@@ -638,13 +623,6 @@ Trovati 71 errori al livello 9.
 - [Documentazione PHPStan](https://phpstan.org/user-guide/getting-started)
 - [Tipi in PHP](https://www.php.net/manual/en/language.types.declarations.php)
 - [PSR-12: Standard di codifica](https://www.php-fig.org/psr/psr-12/)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 918b47f (.)
 >>>>>>> aurmich/dev
 
 
@@ -668,13 +646,7 @@ aurmich/dev
 aurmich/dev
 aurmich/dev
 aurmich/dev
-<<<<<<< HEAD
 =======
->>>>>>> aurmich/dev
-=======
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
 =======
 >>>>>>> 918b47f (.)
 >>>>>>> aurmich/dev
@@ -695,19 +667,9 @@ aurmich/dev
 * [level_9.md](laravel/Modules/Activity/docs/phpstan/level_9.md)
 * [level_9.md](laravel/Modules/Patient/docs/phpstan/level_9.md)
 * [level_9.md](laravel/Modules/Cms/docs/phpstan/level_9.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
 
 >>>>>>> aurmich/dev
 =======
->>>>>>> aurmich/dev
-<<<<<<< HEAD
-=======
-=======
-
 >>>>>>> aurmich/dev
 >>>>>>> 918b47f (.)
 >>>>>>> aurmich/dev

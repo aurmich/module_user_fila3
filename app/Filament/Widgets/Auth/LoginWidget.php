@@ -8,18 +8,13 @@ use Filament\Forms\Form;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Illuminate\Support\Facades\Auth;
-<<<<<<< HEAD
-use Modules\Xot\Filament\Widgets\XotBaseWidget;
-
-class LoginWidget extends XotBaseWidget 
-=======
 use Filament\Forms\ComponentContainer;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
+
 /**
  * @property ComponentContainer $form
  */
 class LoginWidget extends XotBaseWidget
->>>>>>> aurmich/dev
 {
     
     

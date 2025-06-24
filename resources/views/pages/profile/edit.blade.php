@@ -1,145 +1,58 @@
 <?php
 
-<<<<<<< HEAD
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Password;
-=======
-declare(strict_types=1);
-
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Password;
-use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Str;
->>>>>>> aurmich/dev
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Redirect;
 use function Laravel\Folio\{middleware, name};
 use Illuminate\Validation\Rule;
 use Livewire\Volt\Component;
 use Livewire\Attributes\Validate;
 use Livewire\Attributes\Locked;
-<<<<<<< HEAD
-=======
-use Modules\SaluteOra\Models\User;
->>>>>>> aurmich/dev
 
 name('profile.edit');
 middleware(['auth', 'verified']);
 
-<<<<<<< HEAD
 new class extends Component {
+    
+    #[Validate('required|string|max:255')]
+    public string $name = '';
+    
+    #[Validate('required|string|email|max:255')]
+    public string $email = '';
+    
+    #[Validate('required|string')]
+    public string $current_password = '';
+    
+    #[Validate('required|string|min:8|confirmed')]
+    public string $new_password = '';
+    
+    #[Validate('required|string')]
+    public string $new_password_confirmation = '';
+    
+    #[Validate('required|string')]
+    public string $delete_confirm_password = '';
+    
     #[Locked]
     public $user;
-
-    public $name = '';
-    public $email = '';
-    public $current_password = '';
-
-    #[Validate('required|confirmed|min:6')]
-    public $new_password = '';
-    public $new_password_confirmation = '';
-    public $delete_confirm_password = '';
-
-    public function mount()
+    
+    public function mount(): void
     {
         $this->user = auth()->user();
         $this->name = $this->user->name;
         $this->email = $this->user->email;
     }
-
-    public function updateProfile()
-    {
-        $validated = $this->validate([
-            'name' => 'required|string|min:3',
-            'email' => 'required|min:3|email|max:255|unique:users,email,' . $this->user->id . ',id',
-=======
-/**
- * Profile edit component for managing user profile, password updates, and account deletion.
- */
-$component = new class extends Component {
-    /**
-     * The authenticated user (locked property).
-     *
-     * @var User
-     */
-    #[Locked]
-    public User $user;
-
-    /**
-     * User's name.
-     *
-     * @var string
-     */
-    public string $name = '';
-
-    /**
-     * User's email.
-     *
-     * @var string
-     */
-    public string $email = '';
-
-    /**
-     * Current password for password updates.
-     *
-     * @var string
-     */
-    public string $current_password = '';
-
-    /**
-     * New password for password updates.
-     *
-     * @var string
-     */
-    #[Validate('required|confirmed|min:6')]
-    public string $new_password = '';
-
-    /**
-     * New password confirmation.
-     *
-     * @var string
-     */
-    public string $new_password_confirmation = '';
-
-    /**
-     * Password confirmation for account deletion.
-     *
-     * @var string
-     */
-    public string $delete_confirm_password = '';
-
-    /**
-     * Initialize the component with user data.
-     *
-     * @return void
-     */
-    public function mount(): void
-    {
-        $user = auth()->user();
-        if (!$user instanceof User) {
-            abort(401, 'User not authenticated');
-        }
-        
-        $this->user = $user;
-        $this->name = $this->user->name ?? '';
-        $this->email = $this->user->email ?? '';
-    }
-
-    /**
-     * Update user profile information.
-     *
-     * @return void
-     */
+    
     public function updateProfile(): void
     {
-        $validated = $this->validate([
-            'name' => 'required|string|min:3',
-            'email' => 'required|min:3|email|max:255|unique:users,email,' . $this->user->getKey() . ',id',
->>>>>>> aurmich/dev
+        $this->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users')->ignore($this->user->id)],
         ]);
 
-        // if the user hasn't changed their name or email and we also want to make, don't update and show error
+        // if the user hasn't changed their name or email, don't update and show error
         if ($this->user->name == $this->name && $this->user->email == $this->email) {
             $this->dispatch('toast', message: 'Nothing to update.', data: ['position' => 'top-right', 'type' => 'info']);
             return;
@@ -150,18 +63,12 @@ $component = new class extends Component {
         $this->dispatch('toast', message: 'Successfully updated profile.', data: ['position' => 'top-right', 'type' => 'success']);
     }
 
-<<<<<<< HEAD
-    public function updatePassword()
-=======
-    /**
-     * Update user password.
-     *
-     * @return void
-     */
     public function updatePassword(): void
->>>>>>> aurmich/dev
     {
-        $validated = $this->validate();
+        $this->validate([
+            'current_password' => ['required', 'string'],
+            'new_password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
 
         if (!Hash::check($this->current_password, $this->user->password)) {
             $this->dispatch('toast', message: 'Current Password Incorrect', data: ['position' => 'top-right', 'type' => 'danger']);
@@ -174,31 +81,19 @@ $component = new class extends Component {
         $this->reset(['current_password', 'new_password', 'new_password_confirmation']);
     }
 
-<<<<<<< HEAD
-    public function destroy()
-=======
-    /**
-     * Delete user account after password confirmation.
-     *
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    public function destroy(): \Illuminate\Http\RedirectResponse
->>>>>>> aurmich/dev
+    public function destroy(): void
     {
+        $this->validate([
+            'delete_confirm_password' => ['required', 'string'],
+        ]);
+        
         if (!Hash::check($this->delete_confirm_password, $this->user->password)) {
             $this->dispatch('toast', message: 'The Password you entered is incorrect', data: ['position' => 'top-right', 'type' => 'danger']);
             $this->reset(['delete_confirm_password']);
-<<<<<<< HEAD
             return;
         }
 
-        $user = auth()->user();
-=======
-            return Redirect::back();
-        }
-
         $user = $this->user;
->>>>>>> aurmich/dev
 
         Auth::logout();
 

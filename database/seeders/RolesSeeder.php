@@ -5,23 +5,17 @@ declare(strict_types=1);
 namespace Modules\User\Database\Seeders;
 
 use Illuminate\Database\Seeder;
-<<<<<<< HEAD
 use Illuminate\Support\Collection;
 use Modules\User\Enums\UserTypeEnum;
-=======
->>>>>>> aurmich/dev
 use Modules\User\Models\Role;
 
 class RolesSeeder extends Seeder
 {
-<<<<<<< HEAD
-=======
     /**
      * Table headers for output display.
      *
      * @var array<int, string>
      */
->>>>>>> aurmich/dev
     private static array $OUTPUT_TABLE_HEADERS = [
         '#',
         'Name',
@@ -29,8 +23,6 @@ class RolesSeeder extends Seeder
     ];
 
     /**
-<<<<<<< HEAD
-=======
      * Default roles to be created.
      *
      * @var array<int, array<string, string>>
@@ -42,43 +34,57 @@ class RolesSeeder extends Seeder
     ];
 
     /**
->>>>>>> aurmich/dev
      * Run the database seeds.
      */
     public function run(): void
     {
         $roles = [];
-<<<<<<< HEAD
 
-        Collection::make(UserType::cases())
+        Collection::make(UserTypeEnum::cases())
             ->each(
-                static function (UserType $userType) use (&$roles): void {
+                static function (UserTypeEnum $userType) use (&$roles): void {
                     $roles[] = Role::firstOrCreate(
                         [
                             'name' => $userType->value,
-                            'guard_name' => $userType->getDefaultGuard(),
+                            'guard_name' => 'web',
+                        ],
+                        [
+                            'name' => $userType->value,
+                            'guard_name' => 'web',
                         ]
                     );
-                },
+                }
             );
-=======
-        
-        foreach (self::$DEFAULT_ROLES as $roleData) {
-            $roles[] = Role::firstOrCreate($roleData);
-        }
->>>>>>> aurmich/dev
 
-        $this->command->getOutput()->comment('<info>Newly created roles</info>');
-        $this->command->getOutput()->table(
-            self::$OUTPUT_TABLE_HEADERS,
-            array_map(
-                static fn (Role $role): array => [
-                    $role->id,
-                    $role->name,
-                    $role->guard_name,
+        // Create additional default roles
+        foreach (self::$DEFAULT_ROLES as $roleData) {
+            $roles[] = Role::firstOrCreate(
+                [
+                    'name' => $roleData['name'],
+                    'guard_name' => $roleData['guard_name'],
                 ],
-                $roles,
-            ),
-        );
+                $roleData
+            );
+        }
+
+        // Display results in a table format
+        $this->displayResults($roles);
+    }
+
+    /**
+     * Display the seeding results in a table format.
+     *
+     * @param array<int, Role> $roles
+     */
+    private function displayResults(array $roles): void
+    {
+        $this->command->info('Roles seeded successfully:');
+        $this->command->table(self::$OUTPUT_TABLE_HEADERS, collect($roles)->map(function (Role $role, int $index) {
+            return [
+                $index + 1,
+                $role->name,
+                $role->guard_name,
+            ];
+        })->toArray());
     }
 }

@@ -13,35 +13,15 @@ use Modules\User\Contracts\TeamContract;
 use Modules\Xot\Actions\Panel\ApplyTenancyToPanelAction;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-// use Modules\User\Models\OwnerRole;
-
 /**
-<<<<<<< HEAD
-=======
  * Trait HasTenants
  * 
  * Provides tenant functionality for User models implementing multi-tenancy.
- * 
->>>>>>> aurmich/dev
  * @property TeamContract $currentTeam
  */
 trait HasTenants
 {
     /**
-<<<<<<< HEAD
-     * ..
-     **/
-    public function canAccessTenant(Model $tenant): bool
-    {
-
-        return $this->tenants()->whereKey($tenant)->exists();
-
-    }
-
-    public function getTenants(Panel $panel): array|Collection
-    {
-        return $this->tenants;
-=======
      * Check if the user can access a specific tenant.
      *
      * @param \Illuminate\Database\Eloquent\Model $tenant
@@ -64,31 +44,19 @@ trait HasTenants
         $tenants = $this->tenants;
         
         return $tenants;
->>>>>>> aurmich/dev
     }
 
     /**
      * Get all of the tenants the user belongs to.
      *
-<<<<<<< HEAD
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Illuminate\Database\Eloquent\Model>
-=======
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Illuminate\Database\Eloquent\Model, \Illuminate\Database\Eloquent\Relations\Pivot>
->>>>>>> aurmich/dev
      */
     public function tenants(): BelongsToMany
     {
         $xot = XotData::make();
-<<<<<<< HEAD
-        /** @var class-string<Model> */
-=======
         /** @var class-string<\Illuminate\Database\Eloquent\Model> */
->>>>>>> aurmich/dev
         $tenant_class = $xot->getTenantClass();
 
-        // $this->setConnection('mysql');
-        //return $this->belongsToManyX($tenant_class, null, null, 'tenant_id');
         return $this->belongsToManyX($tenant_class);
-        // ->as('membership')
     }
 }

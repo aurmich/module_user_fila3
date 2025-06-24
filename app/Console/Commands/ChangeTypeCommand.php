@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Console\Commands;
 
-<<<<<<< HEAD
 use Illuminate\Console\Command;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
@@ -13,17 +12,7 @@ use Symfony\Component\Console\Input\InputOption;
 
 use function Laravel\Prompts\text;
 use function Laravel\Prompts\select;
-=======
-use Illuminate\Support\Arr;
 use Webmozart\Assert\Assert;
-use Modules\Xot\Datas\XotData;
-use Illuminate\Console\Command;
-use function Laravel\Prompts\text;
-
-use function Laravel\Prompts\select;
-use Modules\Xot\Contracts\UserContract;
-use Symfony\Component\Console\Input\InputOption;
->>>>>>> aurmich/dev
 
 class ChangeTypeCommand extends Command
 {
@@ -56,67 +45,29 @@ class ChangeTypeCommand extends Command
      */
     public function handle(): void
     {
-<<<<<<< HEAD
-=======
-        $xot=XotData::make();
->>>>>>> aurmich/dev
+        $xot = XotData::make();
         $email = text('User email?');
-
         /** @var UserContract */
         $user = XotData::make()->getUserByEmail($email);
-
         if (!$user) {
             $this->error("User with email '{$email}' not found.");
             return;
         }
-        if(!method_exists($user,'getChildTypes')){
+        if (!method_exists($user, 'getChildTypes')) {
             $this->error('User model does not have childTypes method.');
             return;
         }
-<<<<<<< HEAD
-        $childTypes = $user->getChildTypes();
-
-        $this->info("Current user type: {$user->type->getLabel()}");
-        $typeClass = get_class($user->type);
-        $options=Arr::mapWithKeys($childTypes,
-            function ($item, string $key) use($typeClass) {
-                $val=$typeClass::tryFrom($key)->getLabel();
-=======
-        //$childTypes = $user->getChildTypes();
-        $childTypes=$xot->getUserChildTypes();
+        $childTypes = $xot->getUserChildTypes();
         $this->info("Current user type: {$user->type?->getLabel()}");
-        //$typeClass = get_class($user->type);
-        $typeClass=$xot->getUserChildTypeClass();
-        $options=Arr::mapWithKeys($childTypes,
-            function ($item, string $key) use($typeClass) {
-                $val=$typeClass::tryFrom($key)?->getLabel();
->>>>>>> aurmich/dev
-                return [$key => $val];
-            }
-        );
-        // Selezione del nuovo tipo
-
+        $typeClass = $xot->getUserChildTypeClass();
+        $options = Arr::mapWithKeys($childTypes, function ($item, string $key) use ($typeClass) {
+            $val = $typeClass::tryFrom($key)?->getLabel();
+            return [$key => $val];
+        });
         $newType = select('Select new user type:', $options);
-
-        // Salva il tipo precedente per il log
-        //$oldType = $this->getCurrentTypeValue($user);
-
-        // Aggiorna il tipo utente
-<<<<<<< HEAD
-        $user->type = $newType;
-=======
-        //$user->type = $newType;
-        Assert::notNull($newTypeEnum=$typeClass::tryFrom($newType));
-
+        Assert::notNull($newTypeEnum = $typeClass::tryFrom($newType));
         $user->type = $newTypeEnum;
->>>>>>> aurmich/dev
         $user->save();
-
         $this->info("User type changed to '{$user->type->getLabel()}' for {$email}");
-
-        // Log dell'attività se disponibile
-        //$this->logActivity($user, $oldType, $newType);
     }
-
-
 }

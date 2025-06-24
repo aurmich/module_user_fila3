@@ -14,8 +14,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam query()
-<<<<<<< HEAD
-=======
  * @property string $id
  * @property int $team_id
  * @property string|null $user_id
@@ -36,7 +34,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam whereUserId($value)
->>>>>>> aurmich/dev
  * @mixin \Eloquent
  */
 class ProfileTeam extends TeamUser {}
