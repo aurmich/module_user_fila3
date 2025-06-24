@@ -494,12 +494,6 @@ class UserServiceProvider extends XotBaseServiceProvider
 2. Controlla i log
 3. Consulta la documentazione
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
 ## Widget Filament
 
 ### Widget Disponibili
@@ -507,12 +501,7 @@ class UserServiceProvider extends XotBaseServiceProvider
 - [EditUserWidget](./filament/widgets/edit-user-widget.md) - Widget generico per modifica dati utente
 - [Widget Responsive Layout](./filament/widgets-responsive-layout.md) - Layout responsive per widget
 
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
-=======
->>>>>>> a3f7230 (.)
->>>>>>> aurmich/dev
+
 ## Riferimenti
 
 ### Documentazione

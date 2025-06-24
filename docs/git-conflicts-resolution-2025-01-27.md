@@ -275,4 +275,35 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 2. Verificare funzionalità critiche
 3. Aggiornare documentazione correlata
 4. Monitorare performance in produzione
-5. Implementare test automatizzati 
+5. Implementare test automatizzati
+
+## 🔥 **NUOVI CONFLITTI IDENTIFICATI - 2025-01-27 15:30**
+
+### **File con Conflitti Attivi:**
+1. `resources/views/pages/profile/edit.blade.php` - View profilo utente
+2. `resources/views/pages/genesis/power-ups.blade.php` - View gamification
+3. `app/Filament/Widgets/Auth/ResetPasswordWidget.php` - Widget reset password  
+4. `app/Filament/Widgets/Auth/RegisterWidget.php` - Widget registrazione
+5. `app/Filament/Widgets/LogoutWidget.php` - Widget logout
+
+### **Strategia di Risoluzione:**
+- **Principio guida**: Mantenere coerenza architetturale con XotBaseWidget
+- **View Blade**: Seguire convenzioni `user::` namespace per percorsi
+- **Widget Auth**: Rispettare struttura directory `Auth/` per organizzazione
+- **Traduzioni**: Assicurare struttura espansa completa
+- **Tipizzazione**: PHPDoc rigorosi per conformità PHPStan
+
+### **Documentazione Aggiornata:**
+- [widgets_structure.md](./widgets_structure.md) - Regole per widget structure
+- [widget-translation-rules.md](./widget-translation-rules.md) - Pattern traduzioni
+- [path_conventions.md](./path_conventions.md) - Convenzioni percorsi
+- [volt_blade_implementation.md](./volt_blade_implementation.md) - View patterns
+
+### **Post-Risoluzione TODO:**
+- [ ] Verificare funzionamento widget in contesto Filament panel
+- [ ] Testare widget con direttiva @livewire nelle view Blade  
+- [ ] Validare traduzioni per tutti i widget
+- [ ] Aggiornare esempi in documentazione
+- [ ] Creare test di regressione per prevenire conflitti futuri
+
+--- 

@@ -22,21 +22,10 @@ use Filament\Forms\Components\Checkbox as FormsCheckbox;
  * - Usa solo componenti Filament importati
  * - Validazione e sicurezza integrate
  * - Facilmente estendibile (2FA, captcha, login social)
-<<<<<<< HEAD
  *
  * @property-read static string $view La view del widget segue il pattern {module}::filament.widgets.{type}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
- * @property-read static string $view La view del widget segue il pattern {module}::filament.widgets.{type}
-=======
->>>>>>> aurmich/dev
-=======
->>>>>>> a3f7230 (.)
->>>>>>> aurmich/dev
+ * @property array<string, mixed>|null $data
  */
-
 class LoginWidget extends XotBaseWidget
 {
     /**
@@ -45,30 +34,24 @@ class LoginWidget extends XotBaseWidget
      * il path deve essere senza il namespace del modulo (senza "user::").
      * 
      * @see \Modules\User\docs\WIDGETS_STRUCTURE.md - Sezione B
-<<<<<<< HEAD
      * @var view-string
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-     * @var view-string
->>>>>>> aurmich/dev
-=======
-     * @var view-string
->>>>>>> a3f7230 (.)
->>>>>>> aurmich/dev
      */
     protected static string $view = 'user::filament.widgets.login';
     
+    /** @var int|string|array<string, mixed> */
     protected int | string | array $columnSpan = 'full';
     
     /**
      * Dati del form per il login
+     *
+     * @var array<string, mixed>|null
      */
     public ?array $data = [];
 
     /**
      * Inizializza il widget quando viene montato.
+     *
+     * @return void
      */
     public function mount(): void
     {
@@ -95,37 +78,23 @@ class LoginWidget extends XotBaseWidget
         ];
     }
 
+    /**
+     * Handle login form submission.
+     *
+     * @return void
+     */
     public function save(): void
     {
         try {
             $data = $this->form->getState();
             
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if (!Auth::attempt([
-                'email' => $data['email'],
-                'password' => $data['password']
-            ], $data['remember'] ?? false)) {
-=======
-=======
->>>>>>> a3f7230 (.)
             // Cast esplicito per type safety PHPStan
->>>>>>> aurmich/dev
             $remember = (bool) ($data['remember'] ?? false);
             
             if (!Auth::attempt([
                 'email' => (string) $data['email'],
                 'password' => (string) $data['password']
             ], $remember)) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-=======
->>>>>>> a3f7230 (.)
->>>>>>> aurmich/dev
                 throw ValidationException::withMessages([
                     'email' => [__('Le credenziali fornite non sono corrette.')],
                 ]);

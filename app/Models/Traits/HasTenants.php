@@ -13,54 +13,16 @@ use Modules\User\Contracts\TeamContract;
 use Modules\Xot\Actions\Panel\ApplyTenancyToPanelAction;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-<<<<<<< HEAD
 /**
  * Trait HasTenants
  * 
  * Provides tenant functionality for User models implementing multi-tenancy.
-=======
-// use Modules\User\Models\OwnerRole;
-
-/**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a3f7230 (.)
- * Trait HasTenants
  * 
- * Provides tenant functionality for User models implementing multi-tenancy.
- * 
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-=======
->>>>>>> a3f7230 (.)
->>>>>>> aurmich/dev
  * @property TeamContract $currentTeam
  */
 trait HasTenants
 {
     /**
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * ..
-     **/
-    public function canAccessTenant(Model $tenant): bool
-    {
-
-        return $this->tenants()->whereKey($tenant)->exists();
-
-    }
-
-    public function getTenants(Panel $panel): array|Collection
-    {
-        return $this->tenants;
-=======
-=======
->>>>>>> a3f7230 (.)
->>>>>>> aurmich/dev
      * Check if the user can access a specific tenant.
      *
      * @param \Illuminate\Database\Eloquent\Model $tenant
@@ -83,56 +45,19 @@ trait HasTenants
         $tenants = $this->tenants;
         
         return $tenants;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-=======
->>>>>>> a3f7230 (.)
->>>>>>> aurmich/dev
     }
 
     /**
      * Get all of the tenants the user belongs to.
      *
-<<<<<<< HEAD
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Illuminate\Database\Eloquent\Model, \Illuminate\Database\Eloquent\Relations\Pivot>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Illuminate\Database\Eloquent\Model>
-=======
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Illuminate\Database\Eloquent\Model, \Illuminate\Database\Eloquent\Relations\Pivot>
->>>>>>> aurmich/dev
-=======
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Illuminate\Database\Eloquent\Model, \Illuminate\Database\Eloquent\Relations\Pivot>
->>>>>>> a3f7230 (.)
->>>>>>> aurmich/dev
      */
     public function tenants(): BelongsToMany
     {
         $xot = XotData::make();
-<<<<<<< HEAD
         /** @var class-string<\Illuminate\Database\Eloquent\Model> */
         $tenant_class = $xot->getTenantClass();
 
         return $this->belongsToManyX($tenant_class);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        /** @var class-string<Model> */
-=======
-        /** @var class-string<\Illuminate\Database\Eloquent\Model> */
->>>>>>> aurmich/dev
-=======
-        /** @var class-string<\Illuminate\Database\Eloquent\Model> */
->>>>>>> a3f7230 (.)
-        $tenant_class = $xot->getTenantClass();
-
-        // $this->setConnection('mysql');
-        //return $this->belongsToManyX($tenant_class, null, null, 'tenant_id');
-        return $this->belongsToManyX($tenant_class);
-        // ->as('membership')
->>>>>>> aurmich/dev
     }
 }
