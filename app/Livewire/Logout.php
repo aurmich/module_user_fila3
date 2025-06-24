@@ -1,35 +1,10 @@
 <?php
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> aurmich/dev
-=======
-
->>>>>>> a3f7230 (.)
->>>>>>> aurmich/dev
 declare(strict_types=1);
 
 namespace Modules\User\Livewire;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-class Logout extends Component
-{
-    public $processing = false;
-
-    public function logout()
-=======
-=======
->>>>>>> a3f7230 (.)
->>>>>>> aurmich/dev
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Contracts\View\View;
 
@@ -47,13 +22,6 @@ class Logout extends Component
      * Handle user logout process.
      */
     public function logout(): ?RedirectResponse
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-=======
->>>>>>> a3f7230 (.)
->>>>>>> aurmich/dev
     {
         $this->processing = true;
 
@@ -66,18 +34,6 @@ class Logout extends Component
         } catch (\Exception $e) {
             $this->processing = false;
             session()->flash('error', __('Errore durante il logout. Riprova.'));
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        }
-    }
-
-    public function render()
-=======
-=======
->>>>>>> a3f7230 (.)
->>>>>>> aurmich/dev
             return null;
         }
     }
@@ -86,13 +42,6 @@ class Logout extends Component
      * Render the logout component view.
      */
     public function render(): View
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-=======
->>>>>>> a3f7230 (.)
->>>>>>> aurmich/dev
     {
         return view('user::livewire.logout');
     }

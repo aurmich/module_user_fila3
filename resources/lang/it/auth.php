@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'login' => 'Accedi',
-    'register' => 'Registrati',
+    'login-in' => 'Accedi',
+    'sign-up' => 'Registrati',
     'logout' => 'Esci',
     'logout_success' => 'Logout effettuato con successo',
     'back_to_home' => 'Torna alla Home',
