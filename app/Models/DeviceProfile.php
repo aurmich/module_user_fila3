@@ -18,11 +18,17 @@ namespace Modules\User\Models;
  * @mixin \Eloquent
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 class DeviceProfile extends DeviceUser {}
 =======
+=======
+>>>>>>> a3f7230 (.)
 class DeviceProfile extends DeviceUser {
     /**
      * ---
      */
 }
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)

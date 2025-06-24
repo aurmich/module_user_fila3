@@ -495,6 +495,7 @@ class UserServiceProvider extends XotBaseServiceProvider
 3. Consulta la documentazione
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ## Widget Filament
 
@@ -504,6 +505,8 @@ class UserServiceProvider extends XotBaseServiceProvider
 - [Widget Responsive Layout](./filament/widgets-responsive-layout.md) - Layout responsive per widget
 
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
 ## Riferimenti
 
 ### Documentazione

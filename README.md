@@ -338,6 +338,7 @@ php artisan db:seed --class=\\Modules\\User\\Database\\Seeders\\UserDatabaseSeed
 - API authentication
 - Multi-tenancy support
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - Team management with binding resolution
 
@@ -353,6 +354,8 @@ Fixed critical `BindingResolutionException` for team models by registering prope
 
 **Documentation**: See [Team Bindings Fix](docs/team-bindings-fix.md) for complete details.
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
 
 ## Permissions
 

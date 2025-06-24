@@ -46,10 +46,15 @@ namespace Modules\User\Models;
  * @property string|null $uuid
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Team whereUuid($value)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  * @property string|null $owner_id
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Team whereOwnerId($value)
 >>>>>>> aurmich/dev
+=======
+ * @property string|null $owner_id
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Team whereOwnerId($value)
+>>>>>>> a3f7230 (.)
  * @mixin \Eloquent
  */
 class Team extends BaseTeam {}

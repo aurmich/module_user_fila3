@@ -23,10 +23,13 @@ use Filament\Forms\Components\Checkbox as FormsCheckbox;
  * - Validazione e sicurezza integrate
  * - Facilmente estendibile (2FA, captcha, login social)
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @property-read static string $view La view del widget segue il pattern {module}::filament.widgets.{type}
 =======
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
  */
 
 class LoginWidget extends XotBaseWidget
@@ -38,9 +41,13 @@ class LoginWidget extends XotBaseWidget
      * 
      * @see \Modules\User\docs\WIDGETS_STRUCTURE.md - Sezione B
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      * @var view-string
 >>>>>>> aurmich/dev
+=======
+     * @var view-string
+>>>>>>> a3f7230 (.)
      */
     protected static string $view = 'user::filament.widgets.login';
     
@@ -85,11 +92,14 @@ class LoginWidget extends XotBaseWidget
             $data = $this->form->getState();
             
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!Auth::attempt([
                 'email' => $data['email'],
                 'password' => $data['password']
             ], $data['remember'] ?? false)) {
 =======
+=======
+>>>>>>> a3f7230 (.)
             // Cast esplicito per type safety PHPStan
             $remember = (bool) ($data['remember'] ?? false);
             
@@ -97,7 +107,10 @@ class LoginWidget extends XotBaseWidget
                 'email' => (string) $data['email'],
                 'password' => (string) $data['password']
             ], $remember)) {
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
                 throw ValidationException::withMessages([
                     'email' => [__('Le credenziali fornite non sono corrette.')],
                 ]);

@@ -49,6 +49,7 @@ return [
         'form' => [
             'current_password' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'label' => 'Current Password',
                 'validation_attribute' => 'current_password',
             ],
@@ -99,6 +100,8 @@ return [
     'Confirm Password' => 'Conferma Password',
     'Confirm' => 'Conferma',
 =======
+=======
+>>>>>>> a3f7230 (.)
                 'label' => 'Password Attuale',
                 'placeholder' => 'Inserisci la password attuale',
                 'help' => 'Inserisci la tua password attuale per confermare la tua identità',
@@ -138,7 +141,10 @@ return [
     'reset_password_notification_line_2' => 'This password reset link will expire in :count minutes.',
     'reset_password_notification_line_3' => 'If you did not request a password reset, no further action is required.',
 
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
     'Resend Verification Email' => 'Rinvia Email di Verifica',
     'Verify Your Email Address' => 'Verifica la tua email',
     'A fresh verification link has been sent to your email address.' => 'Un nuovo link di verifica è stato inviato al tuo indirizzo email.',
@@ -199,6 +205,7 @@ return [
         'password_confirmation_placeholder' => '••••••••',
         'submit' => 'Registrati',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'already_registered' => 'Hai già un account? Accedi',
         'success' => 'Registrazione completata con successo.',
         'failed' => 'Impossibile completare la registrazione.',
@@ -207,6 +214,8 @@ return [
             'label' => 'Nome',
             'placeholder' => 'Inserisci il tuo nome'
 =======
+=======
+>>>>>>> a3f7230 (.)
         'success' => 'Registrazione completata con successo.',
         'failed' => 'Impossibile completare la registrazione.',
         'already_have_account' => 'Hai già un account?',
@@ -215,7 +224,10 @@ return [
         'name_structured' => [
             'label' => 'Nome',
             'placeholder' => 'Inserisci il tuo nome completo'
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
         ],
         'email_structured' => [
             'label' => 'Email',
@@ -223,6 +235,7 @@ return [
         ],
         'password_structured' => [
             'label' => 'Password',
+<<<<<<< HEAD
 <<<<<<< HEAD
             'placeholder' => 'Inserisci la tua password'
         ],
@@ -243,6 +256,8 @@ return [
         'success' => 'Ti abbiamo inviato le istruzioni via email.',
         'failed' => 'Impossibile inviare le istruzioni di reset.',
 =======
+=======
+>>>>>>> a3f7230 (.)
             'placeholder' => 'Inserisci la password'
         ],
         'password_confirmation_structured' => [
@@ -261,7 +276,10 @@ return [
         'success' => 'Le istruzioni sono state inviate alla tua email.',
         'failed' => 'Impossibile inviare le istruzioni di reset.',
         'back_to_login' => 'Torna al login',
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
         // Structured version
         'email_structured' => [
             'label' => 'Email',
@@ -270,12 +288,17 @@ return [
     ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Reset Password
     'reset-password' => [
 =======
     // Reset password
     'reset_password' => [
 >>>>>>> aurmich/dev
+=======
+    // Reset password
+    'reset_password' => [
+>>>>>>> a3f7230 (.)
         'title' => 'Reimposta password',
         'subtitle' => 'Inserisci la nuova password',
         'email' => 'Indirizzo email',

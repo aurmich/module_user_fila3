@@ -149,6 +149,7 @@ return [
         'data.password' => 'zu',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     'email_already_taken' => 'Questa email è già utilizzata da un altro utente.',
@@ -161,4 +162,6 @@ return [
     'phone_format' => 'Il numero di telefono deve avere un formato valido.',
     'birth_date_before' => 'La data di nascita deve essere precedente ad oggi.',
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
 ];

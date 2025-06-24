@@ -15,11 +15,14 @@ abstract class BaseUser extends Authenticatable
     /**
      * Get the entity's notifications.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public function notifications(): MorphMany
     {
         return $this->morphMany(config('notifications.notification_model', \Illuminate\Notifications\DatabaseNotification::class), 'notifiable');
 =======
+=======
+>>>>>>> a3f7230 (.)
      *
      * @return MorphMany<\Illuminate\Notifications\DatabaseNotification, $this>
      */
@@ -29,6 +32,9 @@ abstract class BaseUser extends Authenticatable
         $notificationClass = config('notifications.notification_model', \Illuminate\Notifications\DatabaseNotification::class);
         
         return $this->morphMany($notificationClass, 'notifiable');
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
     }
 }

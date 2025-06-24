@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Widgets\Auth;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
@@ -19,6 +20,8 @@ class ResetPasswordWidget extends XotBaseWidget
     protected static string $view = 'user::widgets.auth.reset-password-widget';
 
 =======
+=======
+>>>>>>> a3f7230 (.)
 use Filament\Forms;
 use Filament\Forms\Form;
 use Illuminate\Support\Str;
@@ -93,12 +96,16 @@ class ResetPasswordWidget extends XotBaseWidget
      * @param \Filament\Forms\Form $form
      * @return \Filament\Forms\Form
      */
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
     public function form(Form $form): Form
     {
         return $form
             ->schema([
                 Section::make()
+<<<<<<< HEAD
 <<<<<<< HEAD
                     ->schema([
                         TextInput::make('email')
@@ -121,26 +128,36 @@ class ResetPasswordWidget extends XotBaseWidget
 =======
                     ->schema($this->getFormSchema())
 >>>>>>> aurmich/dev
+=======
+                    ->schema($this->getFormSchema())
+>>>>>>> a3f7230 (.)
                     ->columns(1),
             ])
             ->statePath('data');
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function resetPassword(): void
 =======
+=======
+>>>>>>> a3f7230 (.)
     /**
      * Handle password reset.
      *
      * @return \Illuminate\Http\RedirectResponse|void
      */
     public function resetPassword()
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
     {
         $data = $this->form->getState();
 
         $status = Password::reset(
             [
+<<<<<<< HEAD
 <<<<<<< HEAD
                 'email' => $data['email'],
                 'password' => $data['password'],
@@ -149,13 +166,18 @@ class ResetPasswordWidget extends XotBaseWidget
             ],
             function ($user, $password) {
 =======
+=======
+>>>>>>> a3f7230 (.)
                 'email' => (string) $data['email'],
                 'password' => (string) $data['password'],
                 'password_confirmation' => (string) $data['password_confirmation'],
                 'token' => (string) request()->route('token'),
             ],
             function ($user, $password): void {
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
                 $user->forceFill([
                     'password' => Hash::make($password),
                     'remember_token' => Str::random(60),
@@ -164,6 +186,7 @@ class ResetPasswordWidget extends XotBaseWidget
         );
 
         if ($status === Password::PASSWORD_RESET) {
+<<<<<<< HEAD
 <<<<<<< HEAD
             session()->flash('status', __($status));
             redirect()->route('login');
@@ -193,11 +216,16 @@ class ResetPasswordWidget extends XotBaseWidget
         ];
     }
 =======
+=======
+>>>>>>> a3f7230 (.)
             session()->flash('status', __((string) $status));
             return redirect()->route('login');
         } else {
             $this->addError('email', __((string) $status));
         }
     }
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
 }

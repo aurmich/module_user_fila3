@@ -9,9 +9,13 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Filament\Widgets\Widget;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Illuminate\Http\Request;
 >>>>>>> aurmich/dev
+=======
+use Illuminate\Http\Request;
+>>>>>>> a3f7230 (.)
 use Webmozart\Assert\Assert;
 use Modules\Xot\Datas\XotData;
 use Livewire\Attributes\Validate;
@@ -24,17 +28,23 @@ use Filament\Forms\Components\Checkbox;
 use Illuminate\Database\Eloquent\Model;
 use Filament\Forms\Components\TextInput;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\User\Contracts\UserContract;
 use Filament\Forms\Components\Wizard\Step;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 =======
+=======
+>>>>>>> a3f7230 (.)
 use Modules\Xot\Contracts\UserContract;
 use Filament\Forms\Components\Wizard\Step;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use Illuminate\Support\Facades\Log;
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
 
 class RegistrationWidget extends XotBaseWidget
 {
@@ -46,20 +56,27 @@ class RegistrationWidget extends XotBaseWidget
     public string $action;
     public Model $record;
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected static string $view = 'pub_theme::filament.widgets.registration';
 
     public function mount(string $type): void
 =======
+=======
+>>>>>>> a3f7230 (.)
     
     protected static string $view = 'pub_theme::filament.widgets.registration';
 
     public function mount(string $type,Request $request): void
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
     {
         $this->type = $type;
         $this->resource = XotData::make()->getUserResourceClassByType($type);
         $this->model = $this->resource::getModel();
         $this->action=Str::of($this->model)->replace('\Models\\', '\Actions\\')->append('\RegisterAction')->toString();
+<<<<<<< HEAD
 <<<<<<< HEAD
         $obj=app($this->model);
         //Assert::implementsInterface($obj,UserContract::class);
@@ -71,6 +88,8 @@ class RegistrationWidget extends XotBaseWidget
         $this->form->model($obj);
         $this->record=$obj;
 =======
+=======
+>>>>>>> a3f7230 (.)
         $record=$this->getFormModel();
         $data=$this->getFormFill();
         $this->form->fill($data);
@@ -131,7 +150,10 @@ class RegistrationWidget extends XotBaseWidget
         $fields = array_merge($fillable, $appends);
         
         return array_fill_keys($fields, null);
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
     }
 
 
@@ -144,18 +166,24 @@ class RegistrationWidget extends XotBaseWidget
      * @see https://filamentphp.com/docs/3.x/forms/adding-a-form-to-a-livewire-component
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function register()
     {
         $data = $this->form->getState();
         $user=app($this->action)->execute($data);
 =======
+=======
+>>>>>>> a3f7230 (.)
     public function register():\Illuminate\Http\RedirectResponse|\Livewire\Features\SupportRedirects\Redirector
     {
         $data = $this->form->getState();
         $record=$this->record;
        
         $user=app($this->action)->execute($record,$data);
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
         //$post = $this->model::create($this->form->getState());
 
         // Save the relationships from the form to the post after it is created.
