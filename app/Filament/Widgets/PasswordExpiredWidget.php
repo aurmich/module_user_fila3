@@ -85,6 +85,15 @@ class PasswordExpiredWidget extends XotBaseWidget implements HasForms
     {
         $this->validate();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        if (! Hash::check($this->data['current_password'], auth()->user()->password)) {
+=======
+=======
+>>>>>>> a3f7230 (.)
+>>>>>>> aurmich/dev
         $user = Auth::user();
         if (!$user || !($user instanceof \Illuminate\Database\Eloquent\Model)) {
             $this->addError('current_password', __('user::auth.user_not_found'));
@@ -105,14 +114,41 @@ class PasswordExpiredWidget extends XotBaseWidget implements HasForms
         $userPasswordString = (string) ($userPassword ?? '');
         
         if (!Hash::check($currentPassword, $userPasswordString)) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
+>>>>>>> aurmich/dev
             $this->addError('current_password', __('user::auth.password_current_incorrect'));
             return null;
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        $user = auth()->user();
+        $user->password = Hash::make($this->data['password']);
+        $user->save();
+
+        return new PasswordResetResponse($user);
+=======
+=======
+>>>>>>> a3f7230 (.)
+>>>>>>> aurmich/dev
         $user->setAttribute('password', Hash::make($newPassword));
         $user->save();
 
         return new PasswordResetResponse();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
+>>>>>>> aurmich/dev
     }
 
     protected function getCurrentPasswordFormComponent(): Component

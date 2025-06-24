@@ -4,14 +4,21 @@ declare(strict_types=1);
 
 namespace Modules\User\Models;
 
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Builder;
+=======
+>>>>>>> aurmich/dev
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
+<<<<<<< HEAD
  * Team Permission Model
  *
  * Represents a permission assigned to a user within a team context.
+=======
+ * Modules\User\Models\TeamPermission
+>>>>>>> aurmich/dev
  *
  * @property string $id
  * @property string $team_id
@@ -21,6 +28,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property \DateTime|null $updated_at
  * @property Team $team
  * @property User $user
+<<<<<<< HEAD
  * @mixin \Eloquent
  */
 class TeamPermission extends Model
@@ -32,6 +40,36 @@ class TeamPermission extends Model
      */
     protected $connection = 'user';
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a3f7230 (.)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TeamPermission newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TeamPermission newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TeamPermission query()
+ * @mixin \Eloquent
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
+ */
+class TeamPermission extends Model
+{
+    /** @var string */
+    protected $connection = 'user';
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+    /** @var array<string> */
+=======
+    /** @var list<string> */
+>>>>>>> aurmich/dev
+=======
+    /** @var list<string> */
+>>>>>>> a3f7230 (.)
+>>>>>>> aurmich/dev
     protected $fillable = [
         'team_id',
         'user_id',

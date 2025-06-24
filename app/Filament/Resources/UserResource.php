@@ -41,6 +41,16 @@ class UserResource extends XotBaseResource
 
     public static function getFormSchema(): array
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        
+>>>>>>> aurmich/dev
+=======
+>>>>>>> a3f7230 (.)
+>>>>>>> aurmich/dev
         return [
             'section01' => Section::make([
                 'name' => TextInput::make('name')
