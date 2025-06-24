@@ -35,19 +35,8 @@ Queste Action devono occuparsi di:
 
 ## Collegamenti
 - [RegistrationWidget.php](../../app/Filament/Widgets/RegistrationWidget.php)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 - [EditUserWidget.php](../../app/Filament/Widgets/EditUserWidget.php) - Widget per modifica dati utente
 - [Documentazione EditUserWidget](./edit-user-widget.md) - Documentazione completa dell'EditUserWidget
->>>>>>> aurmich/dev
-=======
->>>>>>> a3f7230 (.)
->>>>>>> aurmich/dev
-=======
 - [EditUserWidget.php](../../app/Filament/Widgets/EditUserWidget.php) - Widget per modifica dati utente
 - [Documentazione EditUserWidget](./edit-user-widget.md) - Documentazione completa dell'EditUserWidget
 >>>>>>> aurmich/dev
@@ -192,8 +181,6 @@ Queste Action devono occuparsi di:
 - [RegistrationWidget.php](../../app/Filament/Widgets/RegistrationWidget.php)
 - [Documentazione Xot sulla proprietà $data](../../../Xot/docs/filament/widgets/data-property.md)
 - [Esempio di Action di registrazione (da creare)](../../../../Patient/app/Actions/Doctor/RegisterAction.php)
-<<<<<<< HEAD
-=======
 
 ---
 
@@ -334,4 +321,3 @@ class ResetPasswordWidget extends XotBaseWidget
 ---
 
 ## Collegamenti aggiornati
->>>>>>> aurmich/dev

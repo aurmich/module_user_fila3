@@ -17,15 +17,11 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 /**
  * Reset password widget for user password reset functionality.
  *
-<<<<<<< HEAD
- * @property ComponentContainer $form
-=======
  * Handles password reset functionality with token validation,
  * proper security measures, and user feedback. Follows Laraxot
  * architectural patterns and security best practices.
  *
  * @property ComponentContainer $form Form container from XotBaseWidget
->>>>>>> aurmich/dev
  */
 class ResetPasswordWidget extends XotBaseWidget
 {
@@ -37,25 +33,11 @@ class ResetPasswordWidget extends XotBaseWidget
     protected static string $view = 'user::widgets.auth.reset-password-widget';
 
     /**
-<<<<<<< HEAD
-     * Widget data array.
-     * 
-     * CRITICAL: Do not remove or redeclare this property - it's managed by XotBaseWidget.
-     *
-     * @var array<string, mixed>|null
-     */
-    public ?array $data = [];
-
-    /**
-     * Get the form schema for password reset.
-     *
-=======
      * Get the form schema for password reset.
      *
      * Uses string keys for Filament form compatibility and follows
      * the pattern established in widget documentation.
      *
->>>>>>> aurmich/dev
      * @return array<string, \Filament\Forms\Components\Component>
      */
     public function getFormSchema(): array
@@ -106,14 +88,10 @@ class ResetPasswordWidget extends XotBaseWidget
     }
 
     /**
-<<<<<<< HEAD
-     * Handle password reset.
-=======
      * Handle password reset with proper security and error handling.
      *
      * Implements Laravel's password reset functionality with explicit
      * type casting for security and proper error feedback.
->>>>>>> aurmich/dev
      *
      * @return \Illuminate\Http\RedirectResponse|void
      */

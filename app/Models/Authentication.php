@@ -52,11 +52,7 @@ class Authentication extends Model
     /**
      * The attributes that are mass assignable.
      *
-<<<<<<< HEAD
-     * @var array<int, string>
-=======
      * @var list<string>
->>>>>>> aurmich/dev
      */
     protected $fillable = [
         'type',
@@ -73,15 +69,6 @@ class Authentication extends Model
     /**
      * The attributes that should be cast.
      *
-<<<<<<< HEAD
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'login_at' => 'datetime',
-        'logout_at' => 'datetime',
-        'login_successful' => 'boolean',
-    ];
-=======
      * @return array<string, string>
      */
     protected function casts(): array
@@ -92,7 +79,6 @@ class Authentication extends Model
             'login_successful' => 'boolean',
         ];
     }
->>>>>>> aurmich/dev
 
     public function authenticatable(): MorphTo
     {

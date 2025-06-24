@@ -1,40 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-
-=======
-
->>>>>>> aurmich/dev
-
-=======
-
->>>>>>> aurmich/dev
-=======
-
->>>>>>> aurmich/dev
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
-=======
-
->>>>>>> aurmich/dev
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
-=======
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
-=======
->>>>>>> 918b47f (.)
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
 # Rapporto PHPStan Livello 8 per il modulo User
+
+> File unificato dopo risoluzione conflitti git (2024-06-12). Per dettagli sulle versioni precedenti, consultare lo storico git.
 
 Data analisi: 2025-04-15 21:59:49
 
@@ -200,7 +166,6 @@ Trovati 69 errori al livello 8.
 - Se il metodo è definito nella classe
 - Se il metodo ha la visibilità corretta (public/protected/private)
 - Se stai importando la classe corretta
-- Se ci sono errori di digitazione nel nome del metodo
 
 #### Linea 437: Access to an undefined property Modules\User\Models\BaseUser<TModel of Illuminate\Database\Eloquent\Model, TRelatedModel of Illuminate\Database\Eloquent\Model>::$current_team_id.
 
@@ -625,48 +590,6 @@ Trovati 69 errori al livello 8.
 - [Documentazione PHPStan](https://phpstan.org/user-guide/getting-started)
 - [Tipi in PHP](https://www.php.net/manual/en/language.types.declarations.php)
 - [PSR-12: Standard di codifica](https://www.php-fig.org/psr/psr-12/)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 918b47f (.)
->>>>>>> aurmich/dev
-
-
-=======
-aurmich/dev
-=======
-
->>>>>>> aurmich/dev
-
-=======
-aurmich/dev
->>>>>>> aurmich/dev
-=======
-aurmich/dev
->>>>>>> aurmich/dev
-
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
-=======
-aurmich/dev
-aurmich/dev
-aurmich/dev
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
-=======
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
-=======
->>>>>>> 918b47f (.)
->>>>>>> aurmich/dev
 
 ## Collegamenti tra versioni di level_8.md
 * [level_8.md](laravel/Modules/Chart/docs/phpstan/level_8.md)
@@ -684,20 +607,3 @@ aurmich/dev
 * [level_8.md](laravel/Modules/Activity/docs/phpstan/level_8.md)
 * [level_8.md](laravel/Modules/Patient/docs/phpstan/level_8.md)
 * [level_8.md](laravel/Modules/Cms/docs/phpstan/level_8.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-
->>>>>>> aurmich/dev
-=======
->>>>>>> aurmich/dev
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> aurmich/dev
->>>>>>> 918b47f (.)
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev

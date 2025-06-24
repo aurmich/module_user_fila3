@@ -40,12 +40,7 @@ use Illuminate\Notifications\DatabaseNotificationCollection;
  *
  * This is the base user model that provides the core authentication and authorization
  * functionality for the application. It extends Laravel's Authenticatable class
-<<<<<<< HEAD
- * and implements the MustVerifyEmail interface.
- *
-=======
  * and implements the required interfaces for Filament and multi-tenancy.
->>>>>>> aurmich/dev
  * @property Collection<int, OauthClient> $clients
  * @property int|null $clients_count
  * @property Team|null $currentTeam
@@ -316,12 +311,9 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     }
 
     /**
-<<<<<<< HEAD
-=======
      * Get the devices associated with the user.
      *
      * @return BelongsToMany<Device, static>
->>>>>>> aurmich/dev
      */
     public function devices(): BelongsToMany
     {
@@ -332,11 +324,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     /**
      * Get the socialite users associated with the user.
      *
-<<<<<<< HEAD
-     * @return HasMany<SocialiteUser>
-=======
      * @return HasMany<SocialiteUser, static>
->>>>>>> aurmich/dev
      */
     public function socialiteUsers(): HasMany
     {

@@ -35,8 +35,6 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
  * @property array $preferences
  * @property string $status
  * @property \Spatie\SchemalessAttributes\SchemalessAttributes $extra
-<<<<<<< HEAD
-=======
  * @property-read string $avatar
  * @property-read ProfileContract|null $creator
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\DeviceUser> $deviceUsers
@@ -73,7 +71,6 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withExtraAttributes()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutPermission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutRole($roles, $guard = null)
->>>>>>> aurmich/dev
  * @mixin \Eloquent
  */
 class Profile extends BaseProfile implements HasMedia
@@ -92,11 +89,7 @@ class Profile extends BaseProfile implements HasMedia
     /**
      * The attributes that are mass assignable.
      *
-<<<<<<< HEAD
-     * @var array<int, string>
-=======
      * @var list<string>
->>>>>>> aurmich/dev
      */
     protected $fillable = [
         'first_name',
@@ -115,11 +108,7 @@ class Profile extends BaseProfile implements HasMedia
     /**
      * The attributes that should be hidden for serialization.
      *
-<<<<<<< HEAD
-     * @var array<int, string>
-=======
      * @var list<string>
->>>>>>> aurmich/dev
      */
     protected $hidden = [
         'deleted_at',
@@ -128,7 +117,6 @@ class Profile extends BaseProfile implements HasMedia
     /**
      * The attributes that should be cast.
      *
-<<<<<<< HEAD
      * @var array<string, string>
      */
     protected $casts = [
@@ -136,27 +124,11 @@ class Profile extends BaseProfile implements HasMedia
         'preferences' => 'array',
         'extra' => 'array',
     ];
-=======
-     * @return array<string, string>
-     */
-    protected function casts(): array
-    {
-        return [
-            'email_verified_at' => 'datetime',
-            'preferences' => 'array',
-            'extra' => 'array',
-        ];
-    }
->>>>>>> aurmich/dev
 
     /**
      * The accessors to append to the model's array form.
      *
-<<<<<<< HEAD
-     * @var array<int, string>
-=======
      * @var list<string>
->>>>>>> aurmich/dev
      */
     protected $appends = [
         'full_name',
@@ -168,18 +140,16 @@ class Profile extends BaseProfile implements HasMedia
     /**
      * The relationships that should always be loaded.
      *
-<<<<<<< HEAD
-     * @var array<int, string>
-=======
      * @var list<string>
->>>>>>> aurmich/dev
      */
     protected $with = [
         'media',
     ];
 
     /**
-     * Get the user's full name.
+     * Restituisce il nome completo dell'utente.
+     *
+     * @return string
      */
     public function getFullNameAttribute(): string
     {
@@ -187,7 +157,9 @@ class Profile extends BaseProfile implements HasMedia
     }
 
     /**
-     * Get the user's display name.
+     * Restituisce il display name dell'utente.
+     *
+     * @return string
      */
     public function getDisplayNameAttribute(): string
     {
@@ -195,18 +167,22 @@ class Profile extends BaseProfile implements HasMedia
     }
 
     /**
-     * Get the user's initials.
+     * Restituisce le iniziali dell'utente.
+     *
+     * @return string
      */
     public function getInitialsAttribute(): string
     {
         return strtoupper(
-            substr($this->first_name, 0, 1) . 
-            substr($this->last_name, 0, 1)
+            substr((string) $this->first_name, 0, 1) .
+            substr((string) $this->last_name, 0, 1)
         );
     }
 
     /**
-     * Get the URL to the user's profile photo.
+     * Restituisce l'URL dell'avatar dell'utente.
+     *
+     * @return string|null
      */
     public function getAvatarUrlAttribute(): ?string
     {
@@ -214,7 +190,9 @@ class Profile extends BaseProfile implements HasMedia
     }
 
     /**
-     * Get the user that owns the profile.
+     * Relazione con l'utente proprietario del profilo.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
@@ -222,7 +200,9 @@ class Profile extends BaseProfile implements HasMedia
     }
 
     /**
-     * Get all of the profile's devices.
+     * Relazione con i dispositivi associati al profilo.
+     *
+     * @return HasManyThrough
      */
     public function devices(): HasManyThrough
     {
@@ -237,7 +217,9 @@ class Profile extends BaseProfile implements HasMedia
     }
 
     /**
-     * Get all of the profile's device users.
+     * Relazione con i device user associati al profilo.
+     *
+     * @return HasMany
      */
     public function deviceUsers(): HasMany
     {
@@ -245,7 +227,9 @@ class Profile extends BaseProfile implements HasMedia
     }
 
     /**
-     * Get the profile's creator.
+     * Relazione con il creatore del profilo.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function creator(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
@@ -253,7 +237,9 @@ class Profile extends BaseProfile implements HasMedia
     }
 
     /**
-     * Get the profile's last updater.
+     * Relazione con l'ultimo utente che ha aggiornato il profilo.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function updater(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
@@ -261,7 +247,9 @@ class Profile extends BaseProfile implements HasMedia
     }
 
     /**
-     * Get the profile's teams.
+     * Relazione con i team associati al profilo.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function teams(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
@@ -272,7 +260,9 @@ class Profile extends BaseProfile implements HasMedia
     }
 
     /**
-     * Create a new factory instance for the model.
+     * Crea una nuova factory per il modello.
+     *
+     * @return ProfileFactory
      */
     protected static function newFactory(): ProfileFactory
     {

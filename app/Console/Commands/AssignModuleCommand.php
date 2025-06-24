@@ -29,11 +29,7 @@ class AssignModuleCommand extends Command
      *
      * @var string
      */
-<<<<<<< HEAD
-    protected $description = 'Assign a module to user';
-=======
     protected $description = 'Assign or revoke modules to/from user';
->>>>>>> aurmich/dev
 
     /**
      * Create a new command instance.
@@ -51,37 +47,11 @@ class AssignModuleCommand extends Command
     public function handle(): void
     {
         $email = text('email ?');
-<<<<<<< HEAD
-=======
         
->>>>>>> aurmich/dev
         /**
          * @var UserContract $user
          */
         $user = XotData::make()->getUserByEmail($email);
-<<<<<<< HEAD
-        /*
-        $modules = collect(Module::all())->map(function ($module) {
-            return $module->getName();
-        })->toArray();
-        */
-        $modules_opts = array_keys(Module::all());
-        $modules_opts = array_combine($modules_opts, $modules_opts);
-
-        $modules = multiselect(
-            label: 'What modules',
-            options: $modules_opts,
-            required: true,
-            scroll: 10,
-            // validate: function (array $values) {
-            //  return ! \in_array(\count($values), [1, 2], false)
-            //    ? 'A maximum of two'
-            //  : null;
-            // }
-        );
-
-        foreach ($modules as $module) {
-=======
         
         if (!$user) {
             $this->error("User with email '{$email}' not found.");
@@ -113,7 +83,6 @@ class AssignModuleCommand extends Command
 
         // Assign new modules
         foreach ($modulesToAssign as $module) {
->>>>>>> aurmich/dev
             $module_low = Str::lower(is_string($module) ? $module : (string) $module);
             $role_name = $module_low.'::admin';
 
@@ -125,11 +94,6 @@ class AssignModuleCommand extends Command
 
             // Assign the role to the user
             $user->assignRole($role);
-<<<<<<< HEAD
-        }
-
-        $this->info(implode(', ', $modules).' assigned to '.$email);
-=======
             
             $this->info("✓ Assigned module: {$module}");
         }
@@ -171,7 +135,6 @@ class AssignModuleCommand extends Command
         }
         
         return $moduleRoles;
->>>>>>> aurmich/dev
     }
 
     /**

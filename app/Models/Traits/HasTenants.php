@@ -17,10 +17,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * Trait HasTenants
  * 
  * Provides tenant functionality for User models implementing multi-tenancy.
-<<<<<<< HEAD
-=======
  * 
->>>>>>> aurmich/dev
  * @property TeamContract $currentTeam
  */
 trait HasTenants

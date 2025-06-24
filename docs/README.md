@@ -29,10 +29,8 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli u
 ### 3. Gestione Utenti
 - CRUD Utenti
 - Profili
-<<<<<<< HEAD
 - Impostazioni
 - Notifiche
-=======
 - Team Management
 - Tenant Management
 
@@ -145,7 +143,6 @@ Module assignment updated for admin@example.com
 - ✅ **Documentazione**: Aggiornamento completo con esempi pratici
 
 *Ultimo aggiornamento: 2025-01-27*
->>>>>>> aurmich/dev
 
 ## Best Practices
 
@@ -218,10 +215,7 @@ User/
 - [Validation](./validation.md)
 - [Linee guida Actions](./actions.mdc)
 - [Linee guida Activitylog](./activitylog.mdc)
-<<<<<<< HEAD
-=======
 - [Bug Fixes](./bug-fixes/) - Raccolta bug fixes e soluzioni
->>>>>>> aurmich/dev
 
 ## Console Commands Philosophy
 
@@ -613,15 +607,6 @@ class UserServiceProvider extends XotBaseServiceProvider
 2. Controlla i log
 3. Consulta la documentazione
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
-=======
->>>>>>> aurmich/dev
 ## Widget Filament
 
 ### Widget Disponibili
@@ -629,16 +614,6 @@ class UserServiceProvider extends XotBaseServiceProvider
 - [EditUserWidget](./filament/widgets/edit-user-widget.md) - Widget generico per modifica dati utente
 - [Widget Responsive Layout](./filament/widgets-responsive-layout.md) - Layout responsive per widget
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
-=======
->>>>>>> a3f7230 (.)
->>>>>>> aurmich/dev
-=======
-
->>>>>>> aurmich/dev
 ## Riferimenti
 
 ### Documentazione
@@ -842,11 +817,8 @@ Schema::table('users', function ($table) {
 
 ### 2. Model States (spatie/laravel-model-states)
 - **Colonna obbligatoria:** `state` (e NON `moderation_status` o simili)
-<<<<<<< HEAD
 - **Motivazione:** Segue la convenzione spatie/laravel-model-states ([vedi doc](https://spatie.be/docs/laravel-model-states/v2/working-with-states/01-configuring-states))
-=======
 - **Motivazione:** Segue la convenzione spatie/laravel-model-states ([vedi doc](https://spatie.be/docs/laravel-model-states/v2/working-with-states))
->>>>>>> aurmich/dev
 - **Esempio migrazione:**
 ```php
 Schema::table('users', function ($table) {
@@ -878,11 +850,8 @@ abstract class UserState extends State {
 - Queste convenzioni garantiscono compatibilità, manutenibilità e aderenza agli standard delle librerie usate.
 - Riferimenti:
   - [tighten/parental - Accessing Child Models from Parents](https://github.com/tighten/parental)
-<<<<<<< HEAD
   - [spatie/laravel-model-states - Configuring States](https://spatie.be/docs/laravel-model-states/v2/working-with-states/01-configuring-states)
-=======
   - [spatie/laravel-model-states - Configuring States](https://spatie.be/docs/laravel-model-states/v2/working-with-states)
->>>>>>> aurmich/dev
 
 ---
 

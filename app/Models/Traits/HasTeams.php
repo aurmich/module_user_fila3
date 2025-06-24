@@ -281,30 +281,6 @@ trait HasTeams
     }
 
     /**
-<<<<<<< HEAD
-     * Get the relationship name of the primary team user.
-     *
-     * @return string
-     */
-    public function teamRelation(): string
-    {
-        return (string) config('teams.relationship_name', 'teamUsers');
-    }
-
-    /**
-     * Get all of the team's users.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany<\Illuminate\Database\Eloquent\Model, $this>
-     */
-    public function teamUsers(): HasMany
-    {
-        $teamUserModel = app('team_user_model');
-        return $this->hasMany($teamUserModel, 'team_id');
-    }
-
-    /**
-=======
->>>>>>> aurmich/dev
      * Get the role for a specific team.
      */
     public function teamRole(TeamContract $team): ?Role
@@ -417,11 +393,8 @@ trait HasTeams
     /**
      * Get all of the teams the user belongs to.
      *
-<<<<<<< HEAD
-=======
      * @return BelongsToMany<\Modules\User\Contracts\TeamContract, static>
      * @phpstan-return BelongsToMany<\Modules\User\Contracts\TeamContract&\Illuminate\Database\Eloquent\Model, static>
->>>>>>> aurmich/dev
      */
     public function teams(): BelongsToMany
     {

@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 # Module User Fila3 🔥 Ultimate User, Roles & Permissions Manager for FilamentPHP 🚀
-=======
 # 👤 User Module - Advanced User Management
->>>>>>> aurmich/dev
 
 [![Latest Release](https://img.shields.io/github/v/release/laraxot/module_user_fila3)](https://github.com/laraxot/module_user_fila3/releases)
 [![Build Status](https://img.shields.io/travis/laraxot/module_user_fila3/master)](https://travis-ci.org/laraxot/module_user_fila3)
 [![Code Coverage](https://img.shields.io/codecov/c/github/laraxot/module_user_fila3)](https://codecov.io/gh/laraxot/module_user_fila3)
 [![License](https://img.shields.io/github/license/laraxot/module_user_fila3)](LICENSE)
-<<<<<<< HEAD
 
 Manage users, roles, and permissions with lightning speed ⚡ through this Laravel module, fully integrated with FilamentPHP. Designed for developers who want **full control** over their user management systems. **Empower your app** with dynamic user access control and module assignments. 🚀
 
@@ -133,7 +129,6 @@ Give your Laravel app the **edge** it deserves with **Module User Fila3**. Try i
 
 
 ### Versione Incoming
-=======
 [![PHP Version](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net)
 [![Laravel Version](https://img.shields.io/badge/Laravel-11.x-orange.svg)](https://laravel.com)
 [![Filament Version](https://img.shields.io/badge/Filament-3.x-purple.svg)](https://filamentphp.com)
@@ -318,7 +313,6 @@ This module is open-sourced software licensed under the [MIT License](LICENSE).
 ---
 
 Give your Laravel application the **powerful user management** it deserves with this comprehensive module. Try it today! 🚀
->>>>>>> aurmich/dev
 
 # 👤 User Module - Gestione Utenti Avanzata
 
@@ -528,15 +522,6 @@ php artisan db:seed --class=\\Modules\\User\\Database\\Seeders\\UserDatabaseSeed
 - Social authentication
 - API authentication
 - Multi-tenancy support
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
-=======
->>>>>>> aurmich/dev
 - Team management with binding resolution
 
 ## Critical Fixes
@@ -550,15 +535,6 @@ Fixed critical `BindingResolutionException` for team models by registering prope
 **Impact**: Restored full team functionality across all modules using the `HasTeams` trait.
 
 **Documentation**: See [Team Bindings Fix](docs/team-bindings-fix.md) for complete details.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
-=======
->>>>>>> a3f7230 (.)
->>>>>>> aurmich/dev
-=======
->>>>>>> aurmich/dev
 
 ## Permissions
 

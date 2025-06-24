@@ -9,19 +9,11 @@ declare(strict_types=1);
 namespace Modules\User\Actions\Socialite;
 
 use Illuminate\Database\Eloquent\Model;
-<<<<<<< HEAD
 use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
-=======
-use Webmozart\Assert\Assert;
-use Modules\Xot\Datas\XotData;
-use Modules\Xot\Contracts\UserContract;
-use Spatie\QueueableAction\QueueableAction;
-use Laravel\Socialite\Contracts\User as SocialiteUserContract;
->>>>>>> aurmich/dev
 
 /**
  * Handles the creation of a new user from a socialite authentication.
