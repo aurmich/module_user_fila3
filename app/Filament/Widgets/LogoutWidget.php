@@ -4,7 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Widgets;
 
+<<<<<<< HEAD
 use Filament\Forms\Components\Actions\Action;
+=======
+use Filament\Actions\Action;
+use Filament\Forms\Components\Actions\Action as FormAction;
+>>>>>>> aurmich/dev
 use Filament\Forms\Components\Component;
 use Filament\Forms\Components\View;
 use Illuminate\Support\Facades\Auth;
@@ -12,6 +17,12 @@ use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Log;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
+<<<<<<< HEAD
+=======
+/**
+ * Logout widget for user logout functionality.
+ */
+>>>>>>> aurmich/dev
 class LogoutWidget extends XotBaseWidget
 {
     /**
@@ -19,16 +30,49 @@ class LogoutWidget extends XotBaseWidget
      * IMPORTANTE: quando il widget viene usato con @livewire() direttamente nelle Blade,
      * il path deve essere senza il namespace del modulo.
      */
+<<<<<<< HEAD
     protected static string $view = 'user::widgets.logout';
 
     /**
+=======
+    /** @phpstan-ignore-next-line */
+    protected static string $view = 'user::widgets.logout';
+
+    /**
+     * Widget data array.
+     * 
+     * CRITICAL: Do not remove or redeclare this property - it's managed by XotBaseWidget.
+     *
+     * @var array<string, mixed>|null
+     */
+    public ?array $data = [];
+
+    /**
+>>>>>>> aurmich/dev
      * Stato del widget.
      */
     public bool $isLoggingOut = false;
 
     /**
+<<<<<<< HEAD
      * Implementazione del metodo astratto getFormSchema.
      * NON sovrascrivere il metodo form() che è dichiarato come final.
+=======
+     * Mount the widget and initialize the form.
+     *
+     * @return void
+     */
+    public function mount(): void
+    {
+        $this->form->fill();
+    }
+
+    /**
+     * Implementazione del metodo astratto getFormSchema.
+     * NON sovrascrivere il metodo form() che è dichiarato come final.
+     *
+     * @return array<string, Component>
+>>>>>>> aurmich/dev
      */
     public function getFormSchema(): array
     {
@@ -40,6 +84,12 @@ class LogoutWidget extends XotBaseWidget
 
     /**
      * Azione di logout.
+<<<<<<< HEAD
+=======
+     * Gestisce il logout dell'utente con eventi, logging e reindirizzamento localizzato.
+     *
+     * @return void
+>>>>>>> aurmich/dev
      */
     public function logout(): void
     {
@@ -85,6 +135,11 @@ class LogoutWidget extends XotBaseWidget
 
     /**
      * Azioni del form.
+<<<<<<< HEAD
+=======
+     *
+     * @return array<string, Action>
+>>>>>>> aurmich/dev
      */
     public function getFormActions(): array
     {
@@ -98,13 +153,25 @@ class LogoutWidget extends XotBaseWidget
                 ->color('gray')
                 ->size('lg')
                 ->extraAttributes(['class' => 'w-full justify-center mt-2'])
+<<<<<<< HEAD
                 ->url(function () {
+=======
+                ->url(function (): string {
+>>>>>>> aurmich/dev
                     $locale = app()->getLocale();
                     return '/' . $locale;
                 }),
         ];
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * Get view data for the widget.
+     *
+     * @return array<string, string>
+     */
+>>>>>>> aurmich/dev
     protected function getViewData(): array
     {
         return [

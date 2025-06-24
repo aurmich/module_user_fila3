@@ -4,12 +4,22 @@ declare(strict_types=1);
 
 namespace Modules\User\Models;
 
+<<<<<<< HEAD
+=======
+use Modules\User\Contracts\UserContract;
+use Modules\Xot\Contracts\ProfileContract;
+
+>>>>>>> aurmich/dev
 /**
  * 
  *
  * @property \Spatie\SchemalessAttributes\SchemalessAttributes $extra
  * @property-read string $avatar
+<<<<<<< HEAD
  * @property-read \Modules\Broker\Models\Profile|null $creator
+=======
+ * @property-read ProfileContract|null $creator
+>>>>>>> aurmich/dev
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\DeviceUser> $deviceUsers
  * @property-read int|null $device_users_count
  * @property-read \Modules\User\Models\ProfileTeam|\Modules\User\Models\DeviceProfile|null $pivot
@@ -32,8 +42,13 @@ namespace Modules\User\Models;
  * @property-read int|null $roles_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Team> $teams
  * @property-read int|null $teams_count
+<<<<<<< HEAD
  * @property-read \Modules\Broker\Models\Profile|null $updater
  * @property-read \Modules\Broker\Models\User|null $user
+=======
+ * @property-read ProfileContract|null $updater
+ * @property-read UserContract|null $user
+>>>>>>> aurmich/dev
  * @property-read string|null $user_name
  * @method static \Modules\User\Database\Factories\ProfileFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile newModelQuery()

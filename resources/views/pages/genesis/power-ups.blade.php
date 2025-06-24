@@ -1,5 +1,10 @@
 <?php
 
+<<<<<<< HEAD
+=======
+declare(strict_types=1);
+
+>>>>>>> aurmich/dev
 use Illuminate\Support\Facades\Http;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\File;
@@ -7,6 +12,7 @@ use Illuminate\Support\Facades\Artisan;
 use function Laravel\Folio\{name};
 use Livewire\Volt\Component;
 
+<<<<<<< HEAD
 new class extends Component
 {
     public $powerups = [];
@@ -23,6 +29,46 @@ new class extends Component
     }
 
     protected function fetchPowerup($repo, $installed)
+=======
+$component = new class extends Component
+{
+    /** @var array<int, mixed> */
+    public array $powerups = [];
+    
+    /** @var array<int, mixed>|null */
+    public ?array $powerupsJSON = null;
+
+    public function mount(): void
+    {
+        $jsonContent = file_get_contents(public_path('/genesis/power-ups.json'));
+        if ($jsonContent === false) {
+            $this->powerupsJSON = [];
+            return;
+        }
+        
+        $decoded = json_decode($jsonContent, true);
+        $this->powerupsJSON = is_array($decoded) ? $decoded : [];
+        
+        if (is_array($this->powerupsJSON)) {
+            foreach ($this->powerupsJSON as $powerup) {
+                if (is_array($powerup) && !empty($powerup)) {
+                    $repo = array_key_first($powerup);
+                    if ($repo !== null) {
+                        $installed = $powerup[$repo] ?? false;
+                        $this->powerups[] = $this->fetchPowerup($repo, $installed);
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * @param string $repo
+     * @param mixed $installed
+     * @return array<string, mixed>|object
+     */
+    protected function fetchPowerup(string $repo, mixed $installed): array|object
+>>>>>>> aurmich/dev
     {
         $response = Http::get('https://raw.githubusercontent.com/' . $repo . '/main/powerup.json');
         if ($response->successful()) {
@@ -34,15 +80,28 @@ new class extends Component
         return [];
     }
 
+<<<<<<< HEAD
     public function install($repo, $index)
     {
         foreach ($this->powerupsJSON as $powerUpIndex => $powerup) {
             if (key($powerup) == $repo) {
                 $this->powerupsJSON[$powerUpIndex]->{$repo} = true;
+=======
+    public function install(string $repo, int $index): \Illuminate\Http\RedirectResponse
+    {
+        if (is_array($this->powerupsJSON)) {
+            foreach ($this->powerupsJSON as $powerUpIndex => $powerup) {
+                if (is_array($powerup) && array_key_first($powerup) === $repo) {
+                    if (is_array($this->powerupsJSON[$powerUpIndex])) {
+                        $this->powerupsJSON[$powerUpIndex][$repo] = true;
+                    }
+                }
+>>>>>>> aurmich/dev
             }
         }
 
         $filePath = public_path('/genesis/power-ups.json');
+<<<<<<< HEAD
         File::put($filePath, json_encode($this->powerupsJSON, JSON_PRETTY_PRINT));
 
         Artisan::call('powerup:install ' . $repo);
@@ -59,6 +118,43 @@ new class extends Component
                 $model = $factory['model'];
                 $count = $factory['count'];
                 call_user_func("{$model}::factory", $count)->create();
+=======
+        $jsonContent = json_encode($this->powerupsJSON, JSON_PRETTY_PRINT);
+        if ($jsonContent !== false) {
+            File::put($filePath, $jsonContent);
+        }
+
+        Artisan::call('powerup:install ' . $repo);
+
+        if (isset($this->powerups[$index]) && is_object($this->powerups[$index])) {
+            $run = $this->powerups[$index]->run_after_install ?? null;
+            if (isset($run['commands']) && is_array($run['commands'])) {
+                foreach ($run['commands'] as $command) {
+                    if (is_string($command)) {
+                        Artisan::call($command);
+                    }
+                }
+            }
+
+            if (isset($run['factories']) && is_array($run['factories'])) {
+                foreach ($run['factories'] as $factory) {
+                    if (is_array($factory) && isset($factory['model'], $factory['count'])) {
+                        $model = $factory['model'];
+                        $count = $factory['count'];
+                        if (is_string($model) && is_int($count) && class_exists($model)) {
+                            try {
+                                $factoryInstance = $model::factory($count);
+                                if (is_object($factoryInstance) && method_exists($factoryInstance, 'create')) {
+                                    $factoryInstance->create();
+                                }
+                            } catch (\Throwable $e) {
+                                // Log error or handle factory creation failure silently
+                                continue;
+                            }
+                        }
+                    }
+                }
+>>>>>>> aurmich/dev
             }
         }
 
@@ -191,7 +287,11 @@ name('genesis.power-ups');
                         <div class="fixed bottom-0 right-0 z-30 w-full max-w-md p-4 bg-white border-t border-gray-200 dark:border-gray-800 dark:bg-gray-900">
                             <x-ui.button wire:click="install('{{ $powerup->repo }}', '{{ $index }}')" type="success" rounded="md">
                                 <span class="mr-1.5">
+<<<<<<< HEAD
                                     <svg wire:loading class="w-5 h-5 text-white animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+=======
+                                    <svg wire:loading class="w-5 h-5 text-white animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+>>>>>>> aurmich/dev
                                         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                                         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
                                         </path>

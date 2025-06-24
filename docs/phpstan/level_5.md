@@ -21,7 +21,15 @@
 =======
 
 >>>>>>> aurmich/dev
+<<<<<<< HEAD
 =======
+>>>>>>> aurmich/dev
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+=======
+>>>>>>> 918b47f (.)
 >>>>>>> aurmich/dev
 # Rapporto PHPStan Livello 5 per il modulo User
 
@@ -606,6 +614,12 @@ Trovati 68 errori al livello 5.
 - [PSR-12: Standard di codifica](https://www.php-fig.org/psr/psr-12/)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 918b47f (.)
+>>>>>>> aurmich/dev
 
 
 =======
@@ -628,7 +642,15 @@ aurmich/dev
 aurmich/dev
 aurmich/dev
 aurmich/dev
+<<<<<<< HEAD
 =======
+>>>>>>> aurmich/dev
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+=======
+>>>>>>> 918b47f (.)
 >>>>>>> aurmich/dev
 
 ## Collegamenti tra versioni di level_5.md
@@ -649,6 +671,14 @@ aurmich/dev
 * [level_5.md](laravel/Modules/Cms/docs/phpstan/level_5.md)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
+=======
+=======
+>>>>>>> 918b47f (.)
+>>>>>>> aurmich/dev
 >>>>>>> aurmich/dev

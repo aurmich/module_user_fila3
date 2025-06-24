@@ -48,6 +48,7 @@ return [
         ],
         'form' => [
             'current_password' => [
+<<<<<<< HEAD
                 'label' => 'Current Password',
                 'validation_attribute' => 'current_password',
             ],
@@ -97,6 +98,47 @@ return [
     'Send password reset link' => 'Invia link per reimpostare la password',
     'Confirm Password' => 'Conferma Password',
     'Confirm' => 'Conferma',
+=======
+                'label' => 'Password Attuale',
+                'placeholder' => 'Inserisci la password attuale',
+                'help' => 'Inserisci la tua password attuale per confermare la tua identità',
+            ],
+            'password' => [
+                'label' => 'Nuova Password',
+                'placeholder' => 'Inserisci la nuova password',
+                'help' => 'La password deve contenere almeno 8 caratteri',
+            ],
+            'password_confirmation' => [
+                'label' => 'Conferma Nuova Password',
+                'placeholder' => 'Conferma la nuova password',
+                'help' => 'Reinserisci la nuova password per confermarla',
+            ],
+        ],
+        'actions' => [
+            'update' => [
+                'label' => 'Aggiorna Password',
+                'success' => 'Password aggiornata con successo',
+                'error' => 'Errore durante l\'aggiornamento della password',
+            ],
+        ],
+    ],
+
+    'email' => 'Email',
+    'name' => 'Nome',
+    'confirm_password' => 'Conferma Password',
+
+    // Messaggi di stato
+    'logout_success' => 'Logout effettuato con successo.',
+    'logout_error' => 'Si è verificato un errore durante il logout.',
+
+    // Messaggi per il reset password
+    'reset_password_notification_subject' => 'Reset Password Notification',
+    'reset_password_notification_line_1' => 'You are receiving this email because we received a password reset request for your account.',
+    'reset_password_notification_action' => 'Reset Password',
+    'reset_password_notification_line_2' => 'This password reset link will expire in :count minutes.',
+    'reset_password_notification_line_3' => 'If you did not request a password reset, no further action is required.',
+
+>>>>>>> aurmich/dev
     'Resend Verification Email' => 'Rinvia Email di Verifica',
     'Verify Your Email Address' => 'Verifica la tua email',
     'A fresh verification link has been sent to your email address.' => 'Un nuovo link di verifica è stato inviato al tuo indirizzo email.',
@@ -156,6 +198,7 @@ return [
         'password_confirmation' => 'Conferma password',
         'password_confirmation_placeholder' => '••••••••',
         'submit' => 'Registrati',
+<<<<<<< HEAD
         'already_registered' => 'Hai già un account? Accedi',
         'success' => 'Registrazione completata con successo.',
         'failed' => 'Impossibile completare la registrazione.',
@@ -163,6 +206,16 @@ return [
         'name_structured' => [
             'label' => 'Nome',
             'placeholder' => 'Inserisci il tuo nome'
+=======
+        'success' => 'Registrazione completata con successo.',
+        'failed' => 'Impossibile completare la registrazione.',
+        'already_have_account' => 'Hai già un account?',
+        'login' => 'Accedi',
+        // Structured version
+        'name_structured' => [
+            'label' => 'Nome',
+            'placeholder' => 'Inserisci il tuo nome completo'
+>>>>>>> aurmich/dev
         ],
         'email_structured' => [
             'label' => 'Email',
@@ -170,6 +223,7 @@ return [
         ],
         'password_structured' => [
             'label' => 'Password',
+<<<<<<< HEAD
             'placeholder' => 'Inserisci la tua password'
         ],
         'password_confirmation_structured' => [
@@ -188,6 +242,26 @@ return [
         'back_to_login' => 'Torna al login',
         'success' => 'Ti abbiamo inviato le istruzioni via email.',
         'failed' => 'Impossibile inviare le istruzioni di reset.',
+=======
+            'placeholder' => 'Inserisci la password'
+        ],
+        'password_confirmation_structured' => [
+            'label' => 'Conferma Password',
+            'placeholder' => 'Conferma la password'
+        ],
+    ],
+
+    // Password dimenticata
+    'forgot_password' => [
+        'title' => 'Password dimenticata?',
+        'subtitle' => 'Inserisci la tua email per ricevere le istruzioni',
+        'email' => 'Indirizzo email',
+        'email_placeholder' => 'esempio@email.com',
+        'submit' => 'Invia istruzioni',
+        'success' => 'Le istruzioni sono state inviate alla tua email.',
+        'failed' => 'Impossibile inviare le istruzioni di reset.',
+        'back_to_login' => 'Torna al login',
+>>>>>>> aurmich/dev
         // Structured version
         'email_structured' => [
             'label' => 'Email',
@@ -195,8 +269,13 @@ return [
         ],
     ],
 
+<<<<<<< HEAD
     // Reset Password
     'reset-password' => [
+=======
+    // Reset password
+    'reset_password' => [
+>>>>>>> aurmich/dev
         'title' => 'Reimposta password',
         'subtitle' => 'Inserisci la nuova password',
         'email' => 'Indirizzo email',

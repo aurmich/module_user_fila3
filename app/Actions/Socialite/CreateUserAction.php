@@ -8,10 +8,18 @@ declare(strict_types=1);
 
 namespace Modules\User\Actions\Socialite;
 
+<<<<<<< HEAD
 use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Spatie\QueueableAction\QueueableAction;
+=======
+use Webmozart\Assert\Assert;
+use Modules\Xot\Datas\XotData;
+use Modules\Xot\Contracts\UserContract;
+use Spatie\QueueableAction\QueueableAction;
+use Laravel\Socialite\Contracts\User as SocialiteUserContract;
+>>>>>>> aurmich/dev
 
 class CreateUserAction
 {
@@ -36,6 +44,10 @@ class CreateUserAction
             'last_name' => $userAttributes->last_name,
             'email' => $userAttributes->email,
         ]);
+<<<<<<< HEAD
+=======
+        Assert::implementsInterface($newlyCreatedUser, UserContract::class);
+>>>>>>> aurmich/dev
         // Finally, assign the default set of roles
         app(SetDefaultRolesBySocialiteUserAction::class, [
             'provider' => $provider,

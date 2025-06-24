@@ -21,7 +21,15 @@
 =======
 
 >>>>>>> aurmich/dev
+<<<<<<< HEAD
 =======
+>>>>>>> aurmich/dev
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+=======
+>>>>>>> 918b47f (.)
 >>>>>>> aurmich/dev
 # Rapporto PHPStan Livello 2 per il modulo User
 
@@ -596,6 +604,12 @@ Trovati 67 errori al livello 2.
 - [PSR-12: Standard di codifica](https://www.php-fig.org/psr/psr-12/)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 918b47f (.)
+>>>>>>> aurmich/dev
 
 
 =======
@@ -618,7 +632,15 @@ aurmich/dev
 aurmich/dev
 aurmich/dev
 aurmich/dev
+<<<<<<< HEAD
 =======
+>>>>>>> aurmich/dev
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+=======
+>>>>>>> 918b47f (.)
 >>>>>>> aurmich/dev
 
 ## Collegamenti tra versioni di level_2.md

@@ -85,16 +85,46 @@ class PasswordExpiredWidget extends XotBaseWidget implements HasForms
     {
         $this->validate();
 
+<<<<<<< HEAD
         if (! Hash::check($this->data['current_password'], auth()->user()->password)) {
+=======
+        $user = Auth::user();
+        if (!$user || !($user instanceof \Illuminate\Database\Eloquent\Model)) {
+            $this->addError('current_password', __('user::auth.user_not_found'));
+            return null;
+        }
+
+        // Cast e verifica esistenza dei dati del form
+        $currentPassword = (string) ($this->data['current_password'] ?? '');
+        $newPassword = (string) ($this->data['password'] ?? '');
+        
+        if (empty($currentPassword) || empty($newPassword)) {
+            $this->addError('current_password', __('user::auth.password_fields_required'));
+            return null;
+        }
+
+        $userPassword = $user->getAttribute('password');
+        // Cast esplicito di mixed a string per PHPStan
+        $userPasswordString = (string) ($userPassword ?? '');
+        
+        if (!Hash::check($currentPassword, $userPasswordString)) {
+>>>>>>> aurmich/dev
             $this->addError('current_password', __('user::auth.password_current_incorrect'));
             return null;
         }
 
+<<<<<<< HEAD
         $user = auth()->user();
         $user->password = Hash::make($this->data['password']);
         $user->save();
 
         return new PasswordResetResponse($user);
+=======
+        $user->setAttribute('password', Hash::make($newPassword));
+        $user->save();
+
+        return new PasswordResetResponse();
+>>>>>>> aurmich/dev
     }
 
     protected function getCurrentPasswordFormComponent(): Component
