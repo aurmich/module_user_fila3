@@ -4,6 +4,13 @@
     Modifica liberamente questa struttura per UX custom
 --}}
 <div class="filament-widget-login space-y-6">
+    @if ($errors->any())
+        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative text-sm">
+            @foreach ($errors->all() as $error)
+                <div>{{ $error }}</div>
+            @endforeach
+        </div>
+    @endif
     <form wire:submit.prevent="save" class="space-y-4">
         {{ $this->form }}
         <button type="submit" class="w-full py-3 rounded bg-blue-600 text-white font-bold hover:bg-blue-700 transition">{{ __('Accedi') }}</button>

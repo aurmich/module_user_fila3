@@ -11,8 +11,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
 use Filament\Forms;
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
-class ResetPasswordWidget extends BaseAuthWidget
+class ResetPasswordWidget extends XotBaseWidget
 {
     protected static string $view = 'user::widgets.auth.reset-password-widget';
 
@@ -71,7 +72,7 @@ class ResetPasswordWidget extends BaseAuthWidget
         }
     }
 
-    protected function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             Forms\Components\TextInput::make('email')
