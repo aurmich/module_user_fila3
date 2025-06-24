@@ -33,11 +33,30 @@ use Illuminate\Support\Facades\Log;
  * - Delega la logica di salvataggio a una UpdateAction specifica del modulo
  * 
  * Il widget è completamente generico e riutilizzabile per qualsiasi tipo di utente.
+<<<<<<< HEAD
  */
 class EditUserWidget extends XotBaseWidget
 {
     public ?array $data = [];
     protected int | string | array $columnSpan = 'full';
+=======
+ *
+ * @property-read string $type
+ * @property-read string $resource
+ * @property-read string $model
+ * @property-read string $action
+ * @property-read Model $record
+ * @property array|null $data
+ */
+class EditUserWidget extends XotBaseWidget
+{
+    /** @var array<string, mixed>|null */
+    public ?array $data = [];
+    
+    /** @var int|string|array<string, mixed> */
+    protected int | string | array $columnSpan = 'full';
+    
+>>>>>>> aurmich/dev
     public string $type;
     public string $resource;
     public string $model;
@@ -46,6 +65,16 @@ class EditUserWidget extends XotBaseWidget
     
     protected static string $view = 'pub_theme::filament.widgets.edit-user';
 
+<<<<<<< HEAD
+=======
+    /**
+     * Initialize the widget with user type and optional user ID.
+     *
+     * @param string $type
+     * @param int|null $userId
+     * @return void
+     */
+>>>>>>> aurmich/dev
     public function mount(string $type, ?int $userId = null): void
     {
         $this->type = $type;
@@ -65,6 +94,12 @@ class EditUserWidget extends XotBaseWidget
     /**
      * Ottiene il modello per il form.
      * Se viene fornito un userId, carica quell'utente, altrimenti usa l'utente autenticato.
+<<<<<<< HEAD
+=======
+     *
+     * @param int|null $userId
+     * @return Model
+>>>>>>> aurmich/dev
      */
     public function getFormModel(?int $userId = null): Model
     {
@@ -93,6 +128,11 @@ class EditUserWidget extends XotBaseWidget
 
     /**
      * Ottiene i dati per il riempimento del form.
+<<<<<<< HEAD
+=======
+     *
+     * @return array<string, mixed>
+>>>>>>> aurmich/dev
      */
     public function getFormFill(): array
     {
@@ -126,6 +166,11 @@ class EditUserWidget extends XotBaseWidget
 
     /**
      * Ottiene lo schema del form dalla resource.
+<<<<<<< HEAD
+=======
+     *
+     * @return array<string, mixed>
+>>>>>>> aurmich/dev
      */
     public function getFormSchema(): array
     {
@@ -136,6 +181,11 @@ class EditUserWidget extends XotBaseWidget
      * Gestisce il salvataggio delle modifiche delegando all'action specifica.
      * 
      * @see https://filamentphp.com/docs/3.x/forms/adding-a-form-to-a-livewire-component
+<<<<<<< HEAD
+=======
+     *
+     * @return \Illuminate\Http\RedirectResponse|\Livewire\Features\SupportRedirects\Redirector
+>>>>>>> aurmich/dev
      */
     public function updateUser(): \Illuminate\Http\RedirectResponse|\Livewire\Features\SupportRedirects\Redirector
     {
@@ -156,6 +206,11 @@ class EditUserWidget extends XotBaseWidget
 
     /**
      * Controlla se l'utente può modificare il record corrente.
+<<<<<<< HEAD
+=======
+     *
+     * @return bool
+>>>>>>> aurmich/dev
      */
     public function canEdit(): bool
     {
@@ -167,4 +222,8 @@ class EditUserWidget extends XotBaseWidget
             $currentUser->id === $this->record->user_id ?? null
         );
     }
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> aurmich/dev

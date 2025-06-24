@@ -17,6 +17,10 @@
     },
     "require": {
         "filament/filament": "^3.4",
+<<<<<<< HEAD
         "filament/tables": "*"
+=======
+        "filament/tables": "^3.4"
+>>>>>>> aurmich/dev
     }
 }

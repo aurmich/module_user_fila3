@@ -29,8 +29,15 @@ abstract class BaseListUsers extends XotBaseListRecords
     public function getTableColumns(): array
     {
         return [
+<<<<<<< HEAD
             'name' => TextColumn::make('name')->searchable(),
             'email' => TextColumn::make('email')->searchable(),
+=======
+            'name' => TextColumn::make('name')
+                ->searchable(),
+            'email' => TextColumn::make('email')
+                ->searchable(),
+>>>>>>> aurmich/dev
         ];
     }
 
@@ -42,7 +49,15 @@ abstract class BaseListUsers extends XotBaseListRecords
     public function getTableFilters(): array
     {
         return [
+<<<<<<< HEAD
             // Filtri disabilitati per ora, abilitare se necessario
+=======
+            // Filters disabled by default, enable if needed
+            Filter::make('verified')
+                ->query(static fn (Builder $query): Builder => $query->whereNotNull('email_verified_at')),
+            Filter::make('unverified')
+                ->query(static fn (Builder $query): Builder => $query->whereNull('email_verified_at')),
+>>>>>>> aurmich/dev
         ];
     }
 
@@ -54,19 +69,37 @@ abstract class BaseListUsers extends XotBaseListRecords
     public function getTableActions(): array
     {
         $actions = [
+<<<<<<< HEAD
             ChangePasswordAction::make()->tooltip('Cambio Password')->iconButton(),
         ];
+=======
+            ChangePasswordAction::make()
+                ->tooltip('Cambio Password')
+                ->iconButton(),
+        ];
+        
+        // Add parent actions - filter to ensure type compatibility
+>>>>>>> aurmich/dev
         $parentActions = parent::getTableActions();
         foreach ($parentActions as $action) {
             if ($action instanceof \Filament\Tables\Actions\Action || $action instanceof \Filament\Tables\Actions\ActionGroup) {
                 $actions[] = $action;
             }
         }
+<<<<<<< HEAD
+=======
+        
+        // Add deactivate action
+>>>>>>> aurmich/dev
         $actions[] = Action::make('deactivate')
             ->tooltip(__('filament-actions::delete.single.label'))
             ->color('danger')
             ->icon('heroicon-o-trash')
             ->action(static fn (UserContract $user) => $user->delete());
+<<<<<<< HEAD
+=======
+            
+>>>>>>> aurmich/dev
         return $actions;
     }
 
@@ -83,7 +116,11 @@ abstract class BaseListUsers extends XotBaseListRecords
     /**
      * Get table bulk actions for user records.
      *
+<<<<<<< HEAD
      * @return array<Tables\Actions\BulkAction>
+=======
+     * @return array<\Filament\Tables\Actions\BulkAction>
+>>>>>>> aurmich/dev
      */
     public function getTableBulkActions(): array
     {

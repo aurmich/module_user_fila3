@@ -5,8 +5,11 @@ namespace Modules\User\Filament\Widgets\Auth;
 
 use Filament\Forms;
 use Filament\Forms\Form;
+<<<<<<< HEAD
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
+=======
+>>>>>>> aurmich/dev
 use Illuminate\Support\Facades\Auth;
 use Filament\Forms\ComponentContainer;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
@@ -16,8 +19,11 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
  */
 class LoginWidget extends XotBaseWidget
 {
+<<<<<<< HEAD
     
     
+=======
+>>>>>>> aurmich/dev
     public ?array $data = [];
 
     protected static string $view = 'user::filament.widgets.auth.login';

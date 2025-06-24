@@ -35,6 +35,45 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
  * @property array $preferences
  * @property string $status
  * @property \Spatie\SchemalessAttributes\SchemalessAttributes $extra
+<<<<<<< HEAD
+=======
+ * @property-read string $avatar
+ * @property-read ProfileContract|null $creator
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\DeviceUser> $deviceUsers
+ * @property-read int|null $device_users_count
+ * @property-read \Modules\User\Models\ProfileTeam|\Modules\User\Models\DeviceProfile|null $pivot
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Device> $devices
+ * @property-read int|null $devices_count
+ * @property-read string|null $first_name
+ * @property-read string|null $full_name
+ * @property-read string|null $last_name
+ * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Modules\Media\Models\Media> $media
+ * @property-read int|null $media_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\DeviceUser> $mobileDeviceUsers
+ * @property-read int|null $mobile_device_users_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Device> $mobileDevices
+ * @property-read int|null $mobile_devices_count
+ * @property-read \Illuminate\Notifications\DatabaseNotificationCollection<int, \Illuminate\Notifications\DatabaseNotification> $notifications
+ * @property-read int|null $notifications_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Permission> $permissions
+ * @property-read int|null $permissions_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Role> $roles
+ * @property-read int|null $roles_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Team> $teams
+ * @property-read int|null $teams_count
+ * @property-read ProfileContract|null $updater
+ * @property-read UserContract|null $user
+ * @property-read string|null $user_name
+ * @method static \Modules\User\Database\Factories\ProfileFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile permission($permissions, $without = false)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile role($roles, $guard = null, $without = false)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withExtraAttributes()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutPermission($permissions)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutRole($roles, $guard = null)
+>>>>>>> aurmich/dev
  * @mixin \Eloquent
  */
 class Profile extends BaseProfile implements HasMedia
@@ -53,7 +92,11 @@ class Profile extends BaseProfile implements HasMedia
     /**
      * The attributes that are mass assignable.
      *
+<<<<<<< HEAD
      * @var array<int, string>
+=======
+     * @var list<string>
+>>>>>>> aurmich/dev
      */
     protected $fillable = [
         'first_name',
@@ -72,7 +115,11 @@ class Profile extends BaseProfile implements HasMedia
     /**
      * The attributes that should be hidden for serialization.
      *
+<<<<<<< HEAD
      * @var array<int, string>
+=======
+     * @var list<string>
+>>>>>>> aurmich/dev
      */
     protected $hidden = [
         'deleted_at',
@@ -81,6 +128,7 @@ class Profile extends BaseProfile implements HasMedia
     /**
      * The attributes that should be cast.
      *
+<<<<<<< HEAD
      * @var array<string, string>
      */
     protected $casts = [
@@ -88,11 +136,27 @@ class Profile extends BaseProfile implements HasMedia
         'preferences' => 'array',
         'extra' => 'array',
     ];
+=======
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'email_verified_at' => 'datetime',
+            'preferences' => 'array',
+            'extra' => 'array',
+        ];
+    }
+>>>>>>> aurmich/dev
 
     /**
      * The accessors to append to the model's array form.
      *
+<<<<<<< HEAD
      * @var array<int, string>
+=======
+     * @var list<string>
+>>>>>>> aurmich/dev
      */
     protected $appends = [
         'full_name',
@@ -104,7 +168,11 @@ class Profile extends BaseProfile implements HasMedia
     /**
      * The relationships that should always be loaded.
      *
+<<<<<<< HEAD
      * @var array<int, string>
+=======
+     * @var list<string>
+>>>>>>> aurmich/dev
      */
     protected $with = [
         'media',

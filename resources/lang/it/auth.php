@@ -1,8 +1,13 @@
 <?php
 
 return [
+<<<<<<< HEAD
     'login-in' => 'Accedi',
     'sign-up' => 'Registrati',
+=======
+    'login' => 'Accedi',
+    'register' => 'Registrati',
+>>>>>>> aurmich/dev
     'logout' => 'Esci',
     'logout_success' => 'Logout effettuato con successo',
     'back_to_home' => 'Torna alla Home',

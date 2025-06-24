@@ -81,6 +81,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static \Illuminate\Database\Eloquent\Builder|User withoutPermission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|User withoutRole($roles, $guard = null)
  * @property string $last_name
+<<<<<<< HEAD
  * @property string|null $facebook_id
  * @property Team|null $currentTeam
  * @method static \Illuminate\Database\Eloquent\Builder|User whereFacebookId($value)
@@ -110,6 +111,8 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereState($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereType($value)
+=======
+>>>>>>> aurmich/dev
  * @mixin \Eloquent
  */
 class User extends BaseUser

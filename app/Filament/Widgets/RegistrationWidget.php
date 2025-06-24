@@ -38,7 +38,11 @@ class RegistrationWidget extends XotBaseWidget
     
     protected static string $view = 'pub_theme::filament.widgets.registration';
 
+<<<<<<< HEAD
     public function __construct(string $type = 'user')
+=======
+    public function mount(string $type, Request $request): void
+>>>>>>> aurmich/dev
     {
         $this->type = $type;
         $this->resource = XotData::make()->getUserResourceClassByType($type);
@@ -54,6 +58,7 @@ class RegistrationWidget extends XotBaseWidget
 
     public function getFormModel(): Model
     {
+<<<<<<< HEAD
         $data=request()->all();
         $email=Arr::get($data,'email');//,'marco1@gmail.com';
         $token=Arr::get($data,'token');//'$2y$12$M9lZbLr8T.2GktlJjl1w6OoKHFX5MXnYV/ZePL7N4Rls0.pgkPczK';
@@ -74,6 +79,29 @@ class RegistrationWidget extends XotBaseWidget
         }
         return app($this->model);
         
+=======
+        $data = request()->all();
+        $email = Arr::get($data, 'email');
+        $token = Arr::get($data, 'token');
+
+        $user = $this->model::firstWhere('email', $email);
+        if ($user === null) {
+            return app($this->model);
+        }
+        
+        $remember_token = $user->remember_token;
+        if ($remember_token === null) {
+            $user->remember_token = Str::uuid()->toString();
+            $user->save();
+        }
+        
+        if ($remember_token === $token) {
+            $this->record = $user;
+            return $user;
+        }
+        
+        return app($this->model);
+>>>>>>> aurmich/dev
     }
 
     public function getFormFill(): array
@@ -106,7 +134,10 @@ class RegistrationWidget extends XotBaseWidget
         return array_fill_keys($fields, null);
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aurmich/dev
     public function getFormSchema(): array
     {
         return $this->resource::getFormSchemaWidget();
@@ -115,6 +146,7 @@ class RegistrationWidget extends XotBaseWidget
     /**
      * @see https://filamentphp.com/docs/3.x/forms/adding-a-form-to-a-livewire-component
      */
+<<<<<<< HEAD
     public function register():\Illuminate\Http\RedirectResponse|\Livewire\Features\SupportRedirects\Redirector
     {
         $data = $this->form->getState();
@@ -130,4 +162,30 @@ class RegistrationWidget extends XotBaseWidget
     }
 
     
+=======
+    public function register(): \Illuminate\Http\RedirectResponse|\Livewire\Features\SupportRedirects\Redirector
+    {
+        $data = $this->form->getState();
+        $record = $this->record;
+       
+        $user = app($this->action)->execute($record, $data);
+
+        return redirect()->route('pages.view', ['slug' => $this->type . '_register_complete']);
+    }
+
+    /**
+     * Invia l'email di conferma della registrazione.
+     */
+    protected function sendConfirmationEmail(\Modules\SaluteOra\Models\Doctor $doctor): void
+    {
+        $email = new \Modules\Notify\Emails\SpatieEmail($doctor, 'registration_pending');
+
+        \Illuminate\Support\Facades\Mail::to($doctor->email)
+            ->locale(app()->getLocale())
+            ->send($email);
+        
+        session()->flash('message', 'Registrazione completata con successo. La tua richiesta è in attesa di moderazione.');
+        $this->form->fill();
+    }
+>>>>>>> aurmich/dev
 }

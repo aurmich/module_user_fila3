@@ -33,11 +33,22 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use Illuminate\Auth\Events\PasswordReset as PasswordResetResponseEvent;
 
 /**
+<<<<<<< HEAD
  * @property ComponentContainer $form
+=======
+ * Widget for handling expired password reset.
+ * 
+ * @property ComponentContainer $form
+ * @property string|null $current_password
+ * @property string|null $password
+ * @property string|null $passwordConfirmation
+ * @property array<string, mixed>|null $data
+>>>>>>> aurmich/dev
  */
 class PasswordExpiredWidget extends XotBaseWidget implements HasForms
 {
     use InteractsWithForms;
+<<<<<<< HEAD
 
     // use InteractsWithFormActions;
     use TransTrait;
@@ -48,6 +59,15 @@ class PasswordExpiredWidget extends XotBaseWidget implements HasForms
 
     public ?string $passwordConfirmation = '';
 
+=======
+    use TransTrait;
+
+    public ?string $current_password = '';
+    public ?string $password = '';
+    public ?string $passwordConfirmation = '';
+
+    /** @var array<string, mixed>|null */
+>>>>>>> aurmich/dev
     public ?array $data = [];
 
     /**
@@ -57,10 +77,17 @@ class PasswordExpiredWidget extends XotBaseWidget implements HasForms
 
     protected static bool $shouldRegisterNavigation = false;
 
+<<<<<<< HEAD
     
 
     /**
      * @return array<Component>
+=======
+    /**
+     * Get the form schema for password reset.
+     *
+     * @return array<int, Component>
+>>>>>>> aurmich/dev
      */
     public function getFormSchema(): array
     {
@@ -70,17 +97,41 @@ class PasswordExpiredWidget extends XotBaseWidget implements HasForms
         ];
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * Get the reset password form action.
+     *
+     * @return Action
+     */
+>>>>>>> aurmich/dev
     public function getResetPasswordFormAction(): Action
     {
         return Action::make('resetPassword')
             ->submit('resetPassword');
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * Check if the widget should display a logo.
+     *
+     * @return bool
+     */
+>>>>>>> aurmich/dev
     public function hasLogo(): bool
     {
         return false;
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * Reset the user's password.
+     *
+     * @return PasswordResetResponse|null
+     */
+>>>>>>> aurmich/dev
     public function resetPassword(): ?PasswordResetResponse
     {
         $this->validate();
@@ -115,6 +166,14 @@ class PasswordExpiredWidget extends XotBaseWidget implements HasForms
         return new PasswordResetResponse();
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * Get the current password form component.
+     *
+     * @return Component
+     */
+>>>>>>> aurmich/dev
     protected function getCurrentPasswordFormComponent(): Component
     {
         $authUser = Filament::auth()->user();
@@ -164,7 +223,13 @@ class PasswordExpiredWidget extends XotBaseWidget implements HasForms
     */
 
     /**
+<<<<<<< HEAD
      * @return array<Action|ActionGroup>
+=======
+     * Get the form actions.
+     *
+     * @return array<int, Action|ActionGroup>
+>>>>>>> aurmich/dev
      */
     protected function getFormActions(): array
     {

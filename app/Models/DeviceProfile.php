@@ -5,7 +5,11 @@ declare(strict_types=1);
 namespace Modules\User\Models;
 
 /**
+<<<<<<< HEAD
  * 
+=======
+ * DeviceProfile Model
+>>>>>>> aurmich/dev
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property Device|null $device
@@ -17,8 +21,13 @@ namespace Modules\User\Models;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|DeviceProfile query()
  * @mixin \Eloquent
  */
+<<<<<<< HEAD
 class DeviceProfile extends DeviceUser {
     /**
      * ---
      */
+=======
+class DeviceProfile extends DeviceUser
+{
+>>>>>>> aurmich/dev
 }

@@ -1,4 +1,8 @@
 <?php
+<<<<<<< HEAD
+=======
+
+>>>>>>> aurmich/dev
 declare(strict_types=1);
 
 namespace Modules\User\Livewire;

@@ -24,8 +24,13 @@ use Filament\Forms\Components\Checkbox as FormsCheckbox;
  * - Facilmente estendibile (2FA, captcha, login social)
  *
  * @property-read static string $view La view del widget segue il pattern {module}::filament.widgets.{type}
+<<<<<<< HEAD
  */
 
+=======
+ * @property array<string, mixed>|null $data
+ */
+>>>>>>> aurmich/dev
 class LoginWidget extends XotBaseWidget
 {
     /**
@@ -38,15 +43,29 @@ class LoginWidget extends XotBaseWidget
      */
     protected static string $view = 'user::filament.widgets.login';
     
+<<<<<<< HEAD
+=======
+    /** @var int|string|array<string, mixed> */
+>>>>>>> aurmich/dev
     protected int | string | array $columnSpan = 'full';
     
     /**
      * Dati del form per il login
+<<<<<<< HEAD
+=======
+     *
+     * @var array<string, mixed>|null
+>>>>>>> aurmich/dev
      */
     public ?array $data = [];
 
     /**
      * Inizializza il widget quando viene montato.
+<<<<<<< HEAD
+=======
+     *
+     * @return void
+>>>>>>> aurmich/dev
      */
     public function mount(): void
     {
@@ -73,11 +92,23 @@ class LoginWidget extends XotBaseWidget
         ];
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * Handle login form submission.
+     *
+     * @return void
+     */
+>>>>>>> aurmich/dev
     public function save(): void
     {
         try {
             $data = $this->form->getState();
             
+<<<<<<< HEAD
+=======
+            // Cast esplicito per type safety PHPStan
+>>>>>>> aurmich/dev
             $remember = (bool) ($data['remember'] ?? false);
             
             if (!Auth::attempt([

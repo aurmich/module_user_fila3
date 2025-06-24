@@ -281,6 +281,7 @@ trait HasTeams
     }
 
     /**
+<<<<<<< HEAD
      * Get the relationship name of the primary team user.
      *
      * @return string
@@ -302,6 +303,8 @@ trait HasTeams
     }
 
     /**
+=======
+>>>>>>> aurmich/dev
      * Get the role for a specific team.
      */
     public function teamRole(TeamContract $team): ?Role
@@ -414,6 +417,11 @@ trait HasTeams
     /**
      * Get all of the teams the user belongs to.
      *
+<<<<<<< HEAD
+=======
+     * @return BelongsToMany<\Modules\User\Contracts\TeamContract, static>
+     * @phpstan-return BelongsToMany<\Modules\User\Contracts\TeamContract&\Illuminate\Database\Eloquent\Model, static>
+>>>>>>> aurmich/dev
      */
     public function teams(): BelongsToMany
     {

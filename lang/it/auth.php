@@ -12,11 +12,16 @@ return [
 
     // Login
     'login-via' => 'Accedi con',
+<<<<<<< HEAD
 
     'login-failed' => 'Login fallito, riprova.',
 
     'user-not-allowed' => 'La tua email non è autorizzata.',
 
+=======
+    'login-failed' => 'Login fallito, riprova.',
+    'user-not-allowed' => 'La tua email non è autorizzata.',
+>>>>>>> aurmich/dev
     'registration-not-enabled' => 'Non è possibile registrare un nuovo utente.',
     'Sign in to your account' => 'Accedi al tuo account',
     'create a new account' => 'Crea un nuovo account',
@@ -29,13 +34,21 @@ return [
     'Sign in' => 'Accedi',
     'login-in' => 'Accedi',
     'sign-up' => 'Registrati',
+<<<<<<< HEAD
+=======
+
+>>>>>>> aurmich/dev
     'password_expired' => [
         'title' => 'Password Scaduta, Reimposta Password',
         'heading' => 'Crea una Nuova Password',
         'sub_heading' => 'La tua password è scaduta, per favore crea una nuova password',
         'fields' => [
             'current_password' => [
+<<<<<<< HEAD
                 'label' => 'Current Password',
+=======
+                'label' => 'Password Attuale',
+>>>>>>> aurmich/dev
                 'validation_attribute' => 'current_password',
             ],
             'password' => [
@@ -43,7 +56,11 @@ return [
                 'validation_attribute' => 'password',
             ],
             'password_confirmation' => [
+<<<<<<< HEAD
                 'label' => 'Confirm Password',
+=======
+                'label' => 'Conferma Password',
+>>>>>>> aurmich/dev
             ],
         ],
         'form' => [
@@ -64,10 +81,82 @@ return [
             ],
         ],
         'actions' => [
+<<<<<<< HEAD
             // qui vanno le azioni, se previste
         ],
     ],
 
+=======
+            'update' => [
+                'label' => 'Aggiorna Password',
+                'success' => 'Password aggiornata con successo',
+                'error' => 'Errore durante l\'aggiornamento della password',
+            ],
+        ],
+    ],
+
+    'email' => 'Email',
+    'name' => 'Nome',
+    'confirm_password' => 'Conferma Password',
+
+    // Messaggi di stato
+    'logout_success' => 'Logout effettuato con successo.',
+    'logout_error' => 'Si è verificato un errore durante il logout.',
+
+    // Messaggi per il reset password
+    'reset_password_notification_subject' => 'Reset Password Notification',
+    'reset_password_notification_line_1' => 'You are receiving this email because we received a password reset request for your account.',
+    'reset_password_notification_action' => 'Reset Password',
+    'reset_password_notification_line_2' => 'This password reset link will expire in :count minutes.',
+    'reset_password_notification_line_3' => 'If you did not request a password reset, no further action is required.',
+
+    'Resend Verification Email' => 'Rinvia Email di Verifica',
+    'Verify Your Email Address' => 'Verifica la tua email',
+    'A fresh verification link has been sent to your email address.' => 'Un nuovo link di verifica è stato inviato al tuo indirizzo email.',
+
+    'login' => [
+        'title' => 'Accedi al tuo account',
+        'subtitle' => 'Inserisci le tue credenziali per accedere',
+        'email' => 'Indirizzo email',
+        'email_placeholder' => 'esempio@email.com',
+        'password' => 'Password',
+        'password_placeholder' => '••••••••',
+        'remember' => 'Ricordami',
+        'email_structured' => [
+            'label' => 'Email',
+            'placeholder' => 'Inserisci la tua email'
+        ],
+        'password_structured' => [
+            'label' => 'Password',
+            'placeholder' => 'Inserisci la tua password'
+        ],
+        'remember_structured' => [
+            'label' => 'Ricordami'
+        ],
+        'submit' => 'Accedi',
+        'forgot_password' => 'Password dimenticata?',
+        'no_account' => 'Non hai un account?',
+        'register' => 'Registrati',
+        'success' => 'Accesso effettuato con successo.',
+        'failed' => 'Credenziali non valide.',
+        'logout_success' => 'Logout effettuato con successo.',
+        'logout_error' => 'Si è verificato un errore durante il logout.',
+        'login-via' => 'Accedi con',
+        'login-failed' => 'Login fallito, riprova.',
+        'user-not-allowed' => 'La tua email non è autorizzata.',
+        'login-in' => 'Accedi',
+        'Sign in' => 'Accedi',
+        'Sign in to your account' => 'Accedi al tuo account',
+        'Welcome back' => 'Bentornato',
+        'Email address' => 'Indirizzo email',
+        'Email' => 'Email',
+        'Password' => 'Password',
+        'Remember me' => 'Ricordami',
+        'Remember' => 'Ricordami',
+        'Forgot your password?' => 'Password dimenticata?',
+    ],
+
+>>>>>>> aurmich/dev
     // Registrazione
     'register' => [
         'title' => 'Crea un nuovo account',
@@ -96,6 +185,14 @@ return [
         ],
         'password_structured' => [
             'label' => 'Password',
+<<<<<<< HEAD
+=======
+            'placeholder' => 'Inserisci la password'
+        ],
+        'password_confirmation_structured' => [
+            'label' => 'Conferma Password',
+            'placeholder' => 'Conferma la password'
+>>>>>>> aurmich/dev
         ],
     ],
 
@@ -116,6 +213,10 @@ return [
         ],
     ],
 
+<<<<<<< HEAD
+=======
+    // Reset password
+>>>>>>> aurmich/dev
     'reset_password' => [
         'title' => 'Reimposta password',
         'subtitle' => 'Inserisci la nuova password',
