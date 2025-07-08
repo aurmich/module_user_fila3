@@ -24,7 +24,7 @@ abstract class BaseListUsers extends XotBaseListRecords
     /**
      * Get table columns for user records.
      *
-     * @return array<string, TextColumn>
+     * @return array<string, \Filament\Tables\Columns\Column>
      */
     public function getTableColumns(): array
     {
@@ -45,6 +45,12 @@ abstract class BaseListUsers extends XotBaseListRecords
     {
         return [
             // Filtri disabilitati per ora, abilitare se necessario
+            /*
+            Filter::make('verified')
+                ->query(static fn (Builder $query): Builder => $query->whereNotNull('email_verified_at')),
+            Filter::make('unverified')
+                ->query(static fn (Builder $query): Builder => $query->whereNull('email_verified_at')),
+            */
         ];
     }
 
@@ -68,14 +74,14 @@ abstract class BaseListUsers extends XotBaseListRecords
                 $actions[] = $action;
             }
         }
-        
+        /*
         // Add deactivate action
         $actions[] = Action::make('deactivate')
             ->tooltip(__('filament-actions::delete.single.label'))
             ->color('danger')
             ->icon('heroicon-o-trash')
             ->action(static fn (UserContract $user) => $user->delete());
-            
+        */   
         return $actions;
     }
 
@@ -86,7 +92,9 @@ abstract class BaseListUsers extends XotBaseListRecords
      */
     protected function getHeaderWidgets(): array
     {
-        return [UserOverview::class];
+        return [
+            //UserOverview::class
+        ];
     }
 
     /**
@@ -98,7 +106,7 @@ abstract class BaseListUsers extends XotBaseListRecords
     {
         return [
             Tables\Actions\DeleteBulkAction::make(),
-            ExportBulkAction::make(),
+            //ExportBulkAction::make(),
         ];
     }
 }

@@ -33,7 +33,7 @@ use Illuminate\Support\Facades\Log;
  * - Delega la logica di salvataggio a una UpdateAction specifica del modulo
  * 
  * Il widget è completamente generico e riutilizzabile per qualsiasi tipo di utente.
- *
+ * 
  * @property-read string $type
  * @property-read string $resource
  * @property-read string $model
@@ -46,7 +46,7 @@ class EditUserWidget extends XotBaseWidget
     /** @var array<string, mixed>|null */
     public ?array $data = [];
     
-    /** @var int|string|array<string, mixed> */
+    /** @var array<string, int|null>|int|string */
     protected int | string | array $columnSpan = 'full';
     
     public string $type;
@@ -87,7 +87,7 @@ class EditUserWidget extends XotBaseWidget
      * @param int|null $userId
      * @return Model
      */
-    public function getFormModel(?int $userId = null): Model
+    protected function getFormModel(?int $userId = null): Model
     {
         if ($userId) {
             $user = $this->model::findOrFail($userId);
@@ -131,7 +131,7 @@ class EditUserWidget extends XotBaseWidget
                 $attributes = $model->getAttributes();
                 
                 // Gestisci specificamente gli enum se presenti
-                if (isset($attributes['type']) && $model->type instanceof \BackedEnum) {
+                if (isset($attributes['type']) && property_exists($model, 'type') && $model->type instanceof \BackedEnum) {
                     $attributes['type'] = $model->type->value;
                 }
                 
@@ -150,7 +150,7 @@ class EditUserWidget extends XotBaseWidget
     /**
      * Ottiene lo schema del form dalla resource.
      *
-     * @return array<string, mixed>
+     * @return array<int|string, \Filament\Forms\Components\Component>
      */
     public function getFormSchema(): array
     {
@@ -192,8 +192,8 @@ class EditUserWidget extends XotBaseWidget
         
         // L'utente può modificare solo il proprio profilo
         return $currentUser && (
-            $currentUser->id === $this->record->id ||
-            $currentUser->id === $this->record->user_id ?? null
+            (property_exists($currentUser, 'id') && property_exists($this->record, 'id') && $currentUser->id === $this->record->id) ||
+            (property_exists($currentUser, 'id') && $currentUser->id === ($this->record->user_id ?? null))
         );
     }
 }
