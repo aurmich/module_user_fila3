@@ -24,9 +24,19 @@ return new class extends XotBaseMigration
                 $table->increments('id');
                 $table->uuidMorphs('model');
                 $table->schemalessAttributes('extra_attributes');
+<<<<<<< HEAD
                 
                 
                 
+=======
+<<<<<<< HEAD
+                
+                
+                
+=======
+                $table->unique(['model_id', 'model_type'], 'morph_unique');
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
             }
         );
 
@@ -37,6 +47,15 @@ return new class extends XotBaseMigration
                 //    $table->string('name')->nullable();
                 // }
                 $this->updateTimestamps(table: $table, hasSoftDeletes: true);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+                // if (! $this->hasIndex('morph_unique')) {
+                //    $table->unique(['model_id', 'model_type'], 'morph_unique');
+                // }
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
 
                 if ($this->hasColumn('model_id') && $this->getColumnType('model_id') === 'bigint') {
                     $table->string('model_id', 36)->index()->change();

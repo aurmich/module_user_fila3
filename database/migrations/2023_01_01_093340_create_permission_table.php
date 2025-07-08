@@ -43,6 +43,10 @@ return new class extends XotBaseMigration
         $cache_key = config('permission.cache.key');
 
         try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
             // Verifica se l'applicazione è completamente inizializzata
             if (app()->bound('cache')) {
                 app('cache')
@@ -52,6 +56,16 @@ return new class extends XotBaseMigration
         } catch (Exception $e) {
             // Silently ignore cache errors during package discovery
             // echo $e->getMessage();
+<<<<<<< HEAD
+=======
+=======
+            app('cache')
+                ->store($cache_store !== 'default' ? $cache_store : null)
+                ->forget($cache_key);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
         }
     }
 

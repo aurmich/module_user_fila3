@@ -33,7 +33,15 @@ use Illuminate\Support\Facades\Log;
  * - Delega la logica di salvataggio a una UpdateAction specifica del modulo
  * 
  * Il widget è completamente generico e riutilizzabile per qualsiasi tipo di utente.
+<<<<<<< HEAD
  * 
+=======
+<<<<<<< HEAD
+ * 
+=======
+ *
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
  * @property-read string $type
  * @property-read string $resource
  * @property-read string $model
@@ -46,7 +54,15 @@ class EditUserWidget extends XotBaseWidget
     /** @var array<string, mixed>|null */
     public ?array $data = [];
     
+<<<<<<< HEAD
     /** @var array<string, int|null>|int|string */
+=======
+<<<<<<< HEAD
+    /** @var array<string, int|null>|int|string */
+=======
+    /** @var int|string|array<string, mixed> */
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
     protected int | string | array $columnSpan = 'full';
     
     public string $type;
@@ -87,7 +103,15 @@ class EditUserWidget extends XotBaseWidget
      * @param int|null $userId
      * @return Model
      */
+<<<<<<< HEAD
     protected function getFormModel(?int $userId = null): Model
+=======
+<<<<<<< HEAD
+    protected function getFormModel(?int $userId = null): Model
+=======
+    public function getFormModel(?int $userId = null): Model
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
     {
         if ($userId) {
             $user = $this->model::findOrFail($userId);
@@ -131,7 +155,15 @@ class EditUserWidget extends XotBaseWidget
                 $attributes = $model->getAttributes();
                 
                 // Gestisci specificamente gli enum se presenti
+<<<<<<< HEAD
                 if (isset($attributes['type']) && property_exists($model, 'type') && $model->type instanceof \BackedEnum) {
+=======
+<<<<<<< HEAD
+                if (isset($attributes['type']) && property_exists($model, 'type') && $model->type instanceof \BackedEnum) {
+=======
+                if (isset($attributes['type']) && $model->type instanceof \BackedEnum) {
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
                     $attributes['type'] = $model->type->value;
                 }
                 
@@ -150,7 +182,15 @@ class EditUserWidget extends XotBaseWidget
     /**
      * Ottiene lo schema del form dalla resource.
      *
+<<<<<<< HEAD
      * @return array<int|string, \Filament\Forms\Components\Component>
+=======
+<<<<<<< HEAD
+     * @return array<int|string, \Filament\Forms\Components\Component>
+=======
+     * @return array<string, mixed>
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
      */
     public function getFormSchema(): array
     {
@@ -192,8 +232,18 @@ class EditUserWidget extends XotBaseWidget
         
         // L'utente può modificare solo il proprio profilo
         return $currentUser && (
+<<<<<<< HEAD
             (property_exists($currentUser, 'id') && property_exists($this->record, 'id') && $currentUser->id === $this->record->id) ||
             (property_exists($currentUser, 'id') && $currentUser->id === ($this->record->user_id ?? null))
+=======
+<<<<<<< HEAD
+            (property_exists($currentUser, 'id') && property_exists($this->record, 'id') && $currentUser->id === $this->record->id) ||
+            (property_exists($currentUser, 'id') && $currentUser->id === ($this->record->user_id ?? null))
+=======
+            $currentUser->id === $this->record->id ||
+            $currentUser->id === $this->record->user_id ?? null
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
         );
     }
 }

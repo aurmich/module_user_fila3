@@ -6,7 +6,15 @@ namespace Modules\User\Models;
 
 /**
  * DeviceProfile Model
+<<<<<<< HEAD
  * 
+=======
+<<<<<<< HEAD
+ * 
+=======
+ *
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
  * Represents the relationship between a device and a user profile.
  * Extends the base DeviceUser model to add specific functionality.
  *

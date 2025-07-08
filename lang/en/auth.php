@@ -53,6 +53,7 @@ return [
         'submit' => 'Reset password',
     ],
 
+<<<<<<< HEAD
     'password_reset' => [
         'email_placeholder' => 'Enter your email address',
         'send_button' => 'Send reset link',
@@ -100,6 +101,8 @@ return [
         ],
     ],
 
+=======
+>>>>>>> aurmich/dev
     'passwords' => [
         'reset' => 'Your password has been reset!',
         'sent' => 'We have emailed your password reset link!',
@@ -118,6 +121,7 @@ return [
 
     'login-in' => 'Sign in',
     'sign-up' => 'Sign up',
+<<<<<<< HEAD
 
     // Basic fields
     'email' => 'Email',
@@ -130,4 +134,6 @@ return [
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
     'general_error' => 'An error occurred. Please try again later.',
     'unauthorized' => 'You do not have the necessary permissions for this operation.',
+=======
+>>>>>>> aurmich/dev
 ];

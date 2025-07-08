@@ -1,5 +1,9 @@
 <?php
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aurmich/dev
 declare(strict_types=1);
 
 return [
@@ -245,3 +249,35 @@ return [
         'data_protection' => 'Tutti i dati sono protetti secondo le normative europee GDPR',
     ],
 ];
+<<<<<<< HEAD
+=======
+=======
+return array (
+  'fields' => 
+  array (
+    'name' => 
+    array (
+      'label' => 'name',
+      'placeholder' => 'name',
+      'helper_text' => 'name',
+      'description' => 'name',
+    ),
+    'phone' => 
+    array (
+      'label' => 'phone',
+      'placeholder' => 'phone',
+      'helper_text' => 'phone',
+      'description' => 'phone',
+    ),
+    'email' => 
+    array (
+      'label' => 'email',
+      'placeholder' => 'email',
+      'helper_text' => 'email',
+      'description' => 'email',
+    ),
+  ),
+  'label' => 'register tenant',
+);
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev

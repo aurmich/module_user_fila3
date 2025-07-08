@@ -11,7 +11,15 @@ use Illuminate\Support\Carbon;
 
 /**
  * Authentication Model
+<<<<<<< HEAD
  * 
+=======
+<<<<<<< HEAD
+ * 
+=======
+ *
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
  * Tracks user authentication attempts and sessions.
  *
  * @property int $id
@@ -26,7 +34,17 @@ use Illuminate\Support\Carbon;
  * @property string $authenticatable_id The ID of the authenticatable model
  * @property Carbon|null $created_at When the record was created
  * @property Carbon|null $updated_at When the record was last updated
+<<<<<<< HEAD
  * @property-read Model|\Eloquent $authenticatable The authenticatable model instance
+=======
+<<<<<<< HEAD
+ * @property-read Model|\Eloquent $authenticatable The authenticatable model instance
+=======
+ * 
+ * @property-read Model|\Eloquent $authenticatable The authenticatable model instance
+ * 
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
  * @method static Builder<static>|Authentication newModelQuery()
  * @method static Builder<static>|Authentication newQuery()
  * @method static Builder<static>|Authentication query()
@@ -42,6 +60,13 @@ use Illuminate\Support\Carbon;
  * @method static Builder<static>|Authentication whereLoginSuccessful($value)
  * @method static Builder<static>|Authentication whereAuthenticatableType($value)
  * @method static Builder<static>|Authentication whereAuthenticatableId($value)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+ * 
+>>>>>>> aurmich/dev
+>>>>>>> aurmich/dev
  * @mixin \Eloquent
  */
 class Authentication extends Model
