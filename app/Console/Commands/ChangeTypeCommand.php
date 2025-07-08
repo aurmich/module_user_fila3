@@ -69,7 +69,12 @@ class ChangeTypeCommand extends Command
         }
 
         $childTypes = $xot->getUserChildTypes();
+<<<<<<< HEAD
         $this->info("Current user type: {$user->type->getLabel()}");
+=======
+        /** @phpstan-ignore-next-line */
+        $this->info("Current user type: {$user->type?->getLabel()}");
+>>>>>>> aurmich/dev
         
         $typeClass = $xot->getUserChildTypeClass();
         $options = Arr::mapWithKeys($childTypes, function ($item, int|string $key){
