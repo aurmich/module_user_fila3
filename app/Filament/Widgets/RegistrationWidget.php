@@ -13,13 +13,17 @@ use Webmozart\Assert\Assert;
 use Modules\Xot\Datas\XotData;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\HtmlString;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Log;
+=======
+>>>>>>> aurmich/dev
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Filament\Forms\Contracts\HasForms;
 use Illuminate\Auth\Events\Registered;
 use Filament\Forms\Components\Checkbox;
 use Illuminate\Database\Eloquent\Model;
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Wizard\Step;
@@ -31,6 +35,17 @@ use Filament\Actions\Concerns\InteractsWithRecord;
 class RegistrationWidget extends XotBaseWidget
 {
     
+=======
+use Filament\Forms\Components\TextInput;
+use Modules\Xot\Contracts\UserContract;
+use Filament\Forms\Components\Wizard\Step;
+use Filament\Forms\Concerns\InteractsWithForms;
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
+use Illuminate\Support\Facades\Log;
+
+class RegistrationWidget extends XotBaseWidget
+{
+>>>>>>> aurmich/dev
     public ?array $data = [];
     protected int | string | array $columnSpan = 'full';
     public string $type;
@@ -49,11 +64,18 @@ class RegistrationWidget extends XotBaseWidget
         $this->action = Str::of($this->model)->replace('\\Models\\', '\\Actions\\')->append('\\RegisterAction')->toString();
         $record = $this->getFormModel();
         $data = $this->getFormFill();
+<<<<<<< HEAD
         $this->data = $data; 
         $this->form->fill($data);
         $this->form->model($record);
         $this->record = $record;
         
+=======
+        $this->form->fill($data);
+        $this->form->model($record);
+        $this->data = $data;
+        $this->record = $record;
+>>>>>>> aurmich/dev
     }
 
     public function getFormModel(): Model
@@ -81,6 +103,7 @@ class RegistrationWidget extends XotBaseWidget
         return app($this->model);
     }
 
+<<<<<<< HEAD
     public function getFormFill(): array{
         $data=parent::getFormFill();
         $data['type']=$this->type;
@@ -90,6 +113,38 @@ class RegistrationWidget extends XotBaseWidget
 
    
 
+=======
+    public function getFormFill(): array
+    {
+        $model = $this->getFormModel();
+        
+        // Se il modello ha un ID, significa che è stato trovato nel database
+        if ($model->exists) {
+            try {
+                return $model->toArray();
+            } catch (\Exception $e) {
+                // Se toArray() fallisce (problemi con enum), usa getAttributes()
+                Log::warning("Errore in toArray() per modello {$this->model}: " . $e->getMessage());
+                $attributes = $model->getAttributes();
+                
+                // Gestisci specificamente gli enum se presenti
+                if (isset($attributes['type']) && $model->type instanceof \BackedEnum) {
+                    $attributes['type'] = $model->type->value;
+                }
+                
+                return $attributes;
+            }
+        }
+        
+        // Se è un nuovo modello, restituisci solo i campi fillable con valori null
+        $fillable = $model->getFillable();
+        $appends = $model->getAppends();
+        $fields = array_merge($fillable, $appends);
+        
+        return array_fill_keys($fields, null);
+    }
+
+>>>>>>> aurmich/dev
     public function getFormSchema(): array
     {
         return $this->resource::getFormSchemaWidget();
@@ -101,8 +156,11 @@ class RegistrationWidget extends XotBaseWidget
     public function register(): \Illuminate\Http\RedirectResponse|\Livewire\Features\SupportRedirects\Redirector
     {
         $data = $this->form->getState();
+<<<<<<< HEAD
         
         $data=array_merge($this->data ?? [],$data);
+=======
+>>>>>>> aurmich/dev
         $record = $this->record;
        
         $user = app($this->action)->execute($record, $data);

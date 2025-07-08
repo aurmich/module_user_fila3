@@ -48,6 +48,7 @@ class UpdateUserAction
             DB::commit();
             
             Log::info("Utente aggiornato con successo", [
+<<<<<<< HEAD
                 'user_id' => $user->getKey(),
                 'updated_fields' => array_keys($updateData)
             ]);
@@ -58,12 +59,23 @@ class UpdateUserAction
             }
             
             return $updatedUser;
+=======
+                'user_id' => $user->id,
+                'updated_fields' => array_keys($updateData)
+            ]);
+            
+            return $user->fresh();
+>>>>>>> aurmich/dev
             
         } catch (\Exception $e) {
             DB::rollBack();
             
             Log::error("Errore nell'aggiornamento utente", [
+<<<<<<< HEAD
                 'user_id' => $user->getKey(),
+=======
+                'user_id' => $user->id ?? null,
+>>>>>>> aurmich/dev
                 'error' => $e->getMessage(),
                 'data' => $updateData ?? []
             ]);
@@ -98,13 +110,21 @@ class UpdateUserAction
                 unset($updateData['password']);
             } else {
                 // Hash della password se presente
+<<<<<<< HEAD
                 $updateData['password'] = Hash::make((string) $updateData['password']);
+=======
+                $updateData['password'] = Hash::make($updateData['password']);
+>>>>>>> aurmich/dev
             }
         }
         
         // Gestione dell'email per evitare duplicati
         if (isset($updateData['email'])) {
+<<<<<<< HEAD
             $updateData['email'] = strtolower((string) $updateData['email']);
+=======
+            $updateData['email'] = strtolower($updateData['email']);
+>>>>>>> aurmich/dev
         }
         
         return $updateData;
@@ -125,7 +145,11 @@ class UpdateUserAction
         if (isset($data['email'])) {
             $existingUser = $user->newQuery()
                 ->where('email', $data['email'])
+<<<<<<< HEAD
                 ->where('id', '!=', $user->getKey())
+=======
+                ->where('id', '!=', $user->id)
+>>>>>>> aurmich/dev
                 ->first();
                 
             if ($existingUser) {

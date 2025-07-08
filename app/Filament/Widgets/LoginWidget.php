@@ -20,6 +20,10 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
  * - Validazione e sicurezza integrate
  * - Facilmente estendibile (2FA, captcha, login social)
  *
+<<<<<<< HEAD
+=======
+ * @property-read static string $view La view del widget segue il pattern {module}::filament.widgets.{type}
+>>>>>>> aurmich/dev
  * @property array<string, mixed>|null $data
  */
 class LoginWidget extends XotBaseWidget
@@ -35,6 +39,10 @@ class LoginWidget extends XotBaseWidget
     protected static string $view = 'user::filament.widgets.login';
     
    
+<<<<<<< HEAD
+=======
+   
+>>>>>>> aurmich/dev
     /**
      * Inizializza il widget quando viene montato.
      *
@@ -42,6 +50,10 @@ class LoginWidget extends XotBaseWidget
      */
     public function mount(): void
     {
+<<<<<<< HEAD
+=======
+        //$this->form = $this->makeForm();
+>>>>>>> aurmich/dev
         $this->form->fill();
     }
     
@@ -60,15 +72,23 @@ class LoginWidget extends XotBaseWidget
             TextInput::make('password')
                 ->password()
                 ->required(),
+<<<<<<< HEAD
             Toggle::make('remember')
             ->visible(false),
+=======
+            Toggle::make('remember'),
+>>>>>>> aurmich/dev
         ];
     }
 
     /**
      * Get the form model.
      *
+<<<<<<< HEAD
      * @return \Illuminate\Database\Eloquent\Model|null
+=======
+     * @return \Illuminate\Database\Eloquent\Model|string|null
+>>>>>>> aurmich/dev
      */
     protected function getFormModel(): ?\Illuminate\Database\Eloquent\Model
     {
@@ -149,7 +169,11 @@ class LoginWidget extends XotBaseWidget
                 
             $this->form->fill();
             $this->form->saveRelationships();
+<<<<<<< HEAD
             //$this->form->callAfter();
+=======
+            $this->form->callAfter();
+>>>>>>> aurmich/dev
             
             $this->addError('email', __('Si è verificato un errore durante il login. Riprova più tardi.'));
         }
