@@ -10,15 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * Team Permission Model
-<<<<<<< HEAD
  * 
-=======
-<<<<<<< HEAD
- * 
-=======
- *
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
  * Represents a permission assigned to a user within a team context.
  *
  * @property string $id

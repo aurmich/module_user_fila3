@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources\UserResource\Pages;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
 use Webmozart\Assert\Assert;
 use Modules\User\Models\User;
 use Filament\Actions\DeleteAction;
@@ -22,18 +18,6 @@ use Modules\User\Filament\Resources\UserResource;
 
 use Modules\User\Filament\Actions\ChangePasswordAction;
 use Modules\User\Filament\Actions\Header\ChangePasswordHeaderAction;
-<<<<<<< HEAD
-=======
-=======
-use Filament\Actions\DeleteAction;
-use Filament\Resources\Pages\EditRecord;
-use Illuminate\Support\Facades\Hash;
-use Modules\User\Filament\Resources\UserResource;
-use Modules\User\Models\User;
-use Webmozart\Assert\Assert;
-
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 /**
@@ -74,14 +58,7 @@ abstract class BaseEditUser extends EditRecord
     {
         return [
             DeleteAction::make(),
-<<<<<<< HEAD
             ChangePasswordHeaderAction::make('change-password'),
-=======
-<<<<<<< HEAD
-            ChangePasswordHeaderAction::make('change-password'),
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
         ];
     }
 }

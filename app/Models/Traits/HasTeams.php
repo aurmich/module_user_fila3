@@ -237,15 +237,7 @@ trait HasTeams
     /**
      * Get the current team of the user's context.
      *
-<<<<<<< HEAD
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<\Illuminate\Database\Eloquent\Model&\Modules\User\Contracts\TeamContract, $this>
-=======
-<<<<<<< HEAD
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<\Illuminate\Database\Eloquent\Model&\Modules\User\Contracts\TeamContract, $this>
-=======
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<\Modules\User\Contracts\TeamContract, $this>
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
      */
     public function currentTeam(): BelongsTo
     {
@@ -267,15 +259,7 @@ trait HasTeams
     /**
      * Get the teams owned by the user.
      *
-<<<<<<< HEAD
      * @return \Illuminate\Database\Eloquent\Relations\HasMany<\Illuminate\Database\Eloquent\Model&\Modules\User\Contracts\TeamContract, $this>
-=======
-<<<<<<< HEAD
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany<\Illuminate\Database\Eloquent\Model&\Modules\User\Contracts\TeamContract, $this>
-=======
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany<\Modules\User\Contracts\TeamContract, $this>
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
      */
     public function ownedTeams(): HasMany
     {
@@ -286,10 +270,6 @@ trait HasTeams
     }
 
     /**
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
      * Get all team users.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany<\Modules\User\Models\Membership, $this>
@@ -299,19 +279,6 @@ trait HasTeams
         /** @var \Illuminate\Database\Eloquent\Relations\HasMany<\Modules\User\Models\Membership, $this> $relation */
         $relation = $this->hasMany(\Modules\User\Models\Membership::class, 'user_id');
         return $relation;
-<<<<<<< HEAD
-=======
-=======
-     * Get all of the pending invitations for the team.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany<\Illuminate\Database\Eloquent\Model, $this>
-     */
-    public function teamInvitations(): HasMany
-    {
-        $invitationModel = app('team_invitation_model');
-        return $this->hasMany($invitationModel, 'team_id');
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
     }
 
     /**
@@ -427,26 +394,13 @@ trait HasTeams
     /**
      * Get all of the teams the user belongs to.
      *
-<<<<<<< HEAD
      * @return BelongsToMany<\Illuminate\Database\Eloquent\Model&\Modules\User\Contracts\TeamContract, \Illuminate\Database\Eloquent\Model>
-=======
-<<<<<<< HEAD
-     * @return BelongsToMany<\Illuminate\Database\Eloquent\Model&\Modules\User\Contracts\TeamContract, \Illuminate\Database\Eloquent\Model>
-=======
-     * @return BelongsToMany<\Modules\User\Contracts\TeamContract, static>
-     * @phpstan-return BelongsToMany<\Modules\User\Contracts\TeamContract&\Illuminate\Database\Eloquent\Model, static>
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
      */
     public function teams(): BelongsToMany
     {
         $xot = XotData::make();
         $teamClass = $xot->getTeamClass();
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
         /** @var BelongsToMany<\Illuminate\Database\Eloquent\Model&\Modules\User\Contracts\TeamContract, \Illuminate\Database\Eloquent\Model> $relation */
         $relation = $this->belongsToMany(
             $teamClass,
@@ -456,13 +410,6 @@ trait HasTeams
         )->using(Membership::class);
 
         return $relation;
-<<<<<<< HEAD
-=======
-=======
-        return $this->belongsToManyX($teamClass, null, null, 'team_id');
-        // ->as('membership')
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
     }
 
     /**

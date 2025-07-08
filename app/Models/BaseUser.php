@@ -22,14 +22,7 @@ use Filament\Models\Contracts\HasTenants;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\Collection;
 use Modules\User\Database\Factories\UserFactory;
-<<<<<<< HEAD
 use Modules\Xot\Actions\Factory\GetFactoryAction;
-=======
-<<<<<<< HEAD
-use Modules\Xot\Actions\Factory\GetFactoryAction;
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
@@ -199,10 +192,6 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
 
     ];
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
     /** @var array<string, mixed>  */
     protected $attributes = [
         //'state' => Pending::class,
@@ -211,11 +200,6 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
         'is_active'=>true,
     ];
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
     /**
      * Guard coerente con Spatie/Permission: deve essere 'web'.
      * @var string
@@ -349,15 +333,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     /**
      * Get the socialite users associated with the user.
      *
-<<<<<<< HEAD
      * @return HasMany<SocialiteUser, $this>
-=======
-<<<<<<< HEAD
-     * @return HasMany<SocialiteUser, $this>
-=======
-     * @return HasMany<SocialiteUser, static>
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
      */
     public function socialiteUsers(): HasMany
     {
@@ -427,15 +403,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
      */
     protected static function newFactory()
     {
-<<<<<<< HEAD
         return app(GetFactoryAction::class)->execute(static::class);
-=======
-<<<<<<< HEAD
-        return app(GetFactoryAction::class)->execute(static::class);
-=======
-        return UserFactory::new();
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
     }
 
     /** @return array<string, string> */

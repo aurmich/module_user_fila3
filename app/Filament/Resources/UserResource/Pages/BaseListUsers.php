@@ -24,15 +24,7 @@ abstract class BaseListUsers extends XotBaseListRecords
     /**
      * Get table columns for user records.
      *
-<<<<<<< HEAD
      * @return array<string, \Filament\Tables\Columns\Column>
-=======
-<<<<<<< HEAD
-     * @return array<string, \Filament\Tables\Columns\Column>
-=======
-     * @return array<string, TextColumn>
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
      */
     public function getTableColumns(): array
     {
@@ -53,21 +45,12 @@ abstract class BaseListUsers extends XotBaseListRecords
     {
         return [
             // Filtri disabilitati per ora, abilitare se necessario
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> aurmich/dev
             /*
             Filter::make('verified')
                 ->query(static fn (Builder $query): Builder => $query->whereNotNull('email_verified_at')),
             Filter::make('unverified')
                 ->query(static fn (Builder $query): Builder => $query->whereNull('email_verified_at')),
             */
-<<<<<<< HEAD
-=======
-=======
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
         ];
     }
 
@@ -91,30 +74,14 @@ abstract class BaseListUsers extends XotBaseListRecords
                 $actions[] = $action;
             }
         }
-<<<<<<< HEAD
         /*
-=======
-<<<<<<< HEAD
-        /*
-=======
-        
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
         // Add deactivate action
         $actions[] = Action::make('deactivate')
             ->tooltip(__('filament-actions::delete.single.label'))
             ->color('danger')
             ->icon('heroicon-o-trash')
             ->action(static fn (UserContract $user) => $user->delete());
-<<<<<<< HEAD
         */   
-=======
-<<<<<<< HEAD
-        */   
-=======
-            
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
         return $actions;
     }
 
@@ -125,19 +92,9 @@ abstract class BaseListUsers extends XotBaseListRecords
      */
     protected function getHeaderWidgets(): array
     {
-<<<<<<< HEAD
         return [
             //UserOverview::class
         ];
-=======
-<<<<<<< HEAD
-        return [
-            //UserOverview::class
-        ];
-=======
-        return [UserOverview::class];
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
     }
 
     /**
@@ -149,15 +106,7 @@ abstract class BaseListUsers extends XotBaseListRecords
     {
         return [
             Tables\Actions\DeleteBulkAction::make(),
-<<<<<<< HEAD
             //ExportBulkAction::make(),
-=======
-<<<<<<< HEAD
-            //ExportBulkAction::make(),
-=======
-            ExportBulkAction::make(),
->>>>>>> aurmich/dev
->>>>>>> aurmich/dev
         ];
     }
 }
