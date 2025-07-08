@@ -7,22 +7,22 @@ return array (
     array (
       'label' => 'email',
       'placeholder' => 'email',
-      'helper_text' => '',
+      'helper_text' => 'email',
       'description' => 'email',
     ),
     'password' => 
     array (
       'label' => 'password',
       'placeholder' => 'password',
-      'helper_text' => '',
+      'helper_text' => 'password',
       'description' => 'password',
     ),
-    'remember' => 
+    'password_confirmation' => 
     array (
-      'label' => 'remember',
-      'placeholder' => 'remember',
-      'helper_text' => '',
-      'description' => 'remember',
+      'label' => 'password_confirmation',
+      'placeholder' => 'password_confirmation',
+      'helper_text' => 'password_confirmation',
+      'description' => 'password_confirmation',
     ),
   ),
 );
