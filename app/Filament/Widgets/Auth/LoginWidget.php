@@ -24,8 +24,6 @@ class LoginWidget extends XotBaseWidget
 {
     public ?array $data = [];
 
-<<<<<<< HEAD
-=======
     /**
      * Blade view del widget nel modulo User.
      * IMPORTANTE: quando il widget viene usato con @livewire() direttamente nelle Blade,
@@ -35,7 +33,6 @@ class LoginWidget extends XotBaseWidget
      * @var view-string
      * @phpstan-ignore-next-line 
      */
->>>>>>> 52c6b2e (.)
     protected static string $view = 'pub_theme::filament.widgets.auth.login';
 
     public function getFormSchema(): array
