@@ -41,9 +41,13 @@ return [
         ],
         'gender' => [
             'label' => 'Genere',
-            'male' => 'Maschio',
-            'female' => 'Femmina',
-            'other' => 'Altro',
+            'placeholder' => 'Seleziona il genere',
+            'help' => 'Genere dell\'utente',
+            'options' => [
+                'male' => 'Maschio',
+                'female' => 'Femmina',
+                'other' => 'Altro',
+            ],
         ],
         'is_active' => [
             'label' => 'Attivo',
@@ -51,12 +55,18 @@ return [
         ],
         'id' => [
             'label' => 'ID',
+            'placeholder' => 'Identificativo automatico',
+            'help' => 'Identificativo univoco del profilo',
         ],
         'ente' => [
             'label' => 'Ente',
+            'placeholder' => 'Seleziona l\'ente',
+            'help' => 'Ente di appartenenza dell\'utente',
         ],
         'matr' => [
             'label' => 'Matricola',
+            'placeholder' => 'Inserisci la matricola',
+            'help' => 'Codice matricola dell\'utente',
         ],
         // ... altri campi ...
     ],
