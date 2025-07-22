@@ -10,8 +10,11 @@ use Illuminate\Support\Facades\Password;
 use Filament\Forms\ComponentContainer;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use Filament\Notifications\Notification;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\HtmlString;
+=======
+>>>>>>> aurmich/dev
 
 /**
  * Password Reset Widget for SaluteOra platform.
@@ -41,6 +44,7 @@ class PasswordResetWidget extends XotBaseWidget
                 ->autocomplete('email')
                 ->maxLength(255)
                 ->extraInputAttributes(['class' => 'text-center']),
+<<<<<<< HEAD
             
             'error_display'=>\Filament\Forms\Components\Placeholder::make('error_display')
                 ->label('')
@@ -58,6 +62,8 @@ class PasswordResetWidget extends XotBaseWidget
                 ->reactive()
 
 
+=======
+>>>>>>> aurmich/dev
         ];
     }
 
@@ -76,7 +82,10 @@ class PasswordResetWidget extends XotBaseWidget
                 'email' => $data['email']
             ]);
 
+<<<<<<< HEAD
             
+=======
+>>>>>>> aurmich/dev
             if ($response === Password::RESET_LINK_SENT) {
                 $this->emailSent = true;
                 
@@ -90,7 +99,10 @@ class PasswordResetWidget extends XotBaseWidget
                 // Clear the form
                 $this->form->fill();
             } else {
+<<<<<<< HEAD
                 Session::flash('error', trans('user::errors.'.$response.'.label'));
+=======
+>>>>>>> aurmich/dev
                 Notification::make()
                     ->title(__('user::auth.password_reset.email_failed.title'))
                     ->body(trans($response))

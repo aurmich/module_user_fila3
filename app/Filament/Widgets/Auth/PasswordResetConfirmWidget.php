@@ -142,7 +142,11 @@ class PasswordResetConfirmWidget extends XotBaseWidget
                 $this->js('setTimeout(() => { window.location.href = "' . route('login') . '"; }, 3000);');
 
             } else {
+<<<<<<< HEAD
                 /** @phpstan-ignore argument.type */
+=======
+                /** @phpstan-ignore-next-line */
+>>>>>>> aurmich/dev
                 $this->handleResetError($response);
             }
 

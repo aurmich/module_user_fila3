@@ -118,8 +118,11 @@ return array (
       'label' => 'create',
     ),
   ),
+<<<<<<< HEAD
   'model' => 
   array (
     'label' => 'device.model',
   ),
+=======
+>>>>>>> aurmich/dev
 );
