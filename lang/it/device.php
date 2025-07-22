@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return array (
   'navigation' => 
   array (
@@ -118,17 +120,8 @@ return array (
       'label' => 'create',
     ),
   ),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b71de93 (.)
   'model' => 
   array (
     'label' => 'device.model',
   ),
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
-=======
->>>>>>> b71de93 (.)
 );

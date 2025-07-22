@@ -41,14 +41,6 @@ return [
         ],
         'gender' => [
             'label' => 'Genere',
-<<<<<<< HEAD
-<<<<<<< HEAD
-            'male' => 'Maschio',
-            'female' => 'Femmina',
-            'other' => 'Altro',
-=======
-=======
->>>>>>> b71de93 (.)
             'placeholder' => 'Seleziona il genere',
             'help' => 'Genere dell\'utente',
             'options' => [
@@ -56,32 +48,14 @@ return [
                 'female' => 'Femmina',
                 'other' => 'Altro',
             ],
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-=======
->>>>>>> b71de93 (.)
         ],
         'is_active' => [
             'label' => 'Attivo',
-            'help' => 'Stato attivo del profilo',
-<<<<<<< HEAD
-        ],
-        'id' => [
-            'label' => 'ID',
-<<<<<<< HEAD
-        ],
-        'ente' => [
-            'label' => 'Ente',
-        ],
-        'matr' => [
-            'label' => 'Matricola',
-=======
-=======
             'placeholder' => 'Profilo attivo',
+            'help' => 'Stato attivo del profilo',
         ],
         'id' => [
             'label' => 'ID',
->>>>>>> b71de93 (.)
             'placeholder' => 'Identificativo automatico',
             'help' => 'Identificativo univoco del profilo',
         ],
@@ -94,10 +68,6 @@ return [
             'label' => 'Matricola',
             'placeholder' => 'Inserisci la matricola',
             'help' => 'Codice matricola dell\'utente',
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-=======
->>>>>>> b71de93 (.)
         ],
         // ... altri campi ...
     ],

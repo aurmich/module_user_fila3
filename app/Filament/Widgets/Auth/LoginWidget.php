@@ -31,15 +31,7 @@ class LoginWidget extends XotBaseWidget
      * 
      * @see \Modules\User\docs\WIDGETS_STRUCTURE.md - Sezione B
      * @var view-string
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @phpstan-ignore property.defaultValue 
-=======
-     * @phpstan-ignore-next-line 
->>>>>>> aurmich/dev
-=======
-     * @phpstan-ignore property.defaultValue 
->>>>>>> b71de93 (.)
+     * @phpstan-ignore-next-line
      */
     protected static string $view = 'pub_theme::filament.widgets.auth.login';
 

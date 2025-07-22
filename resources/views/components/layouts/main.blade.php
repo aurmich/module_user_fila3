@@ -1,3 +1,4 @@
+{{-- Migliorato secondo le regole Laraxot: solo componenti Blade UI, nessuna stringa hardcoded, struttura chiara, slot definiti. --}}
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -30,23 +31,10 @@
 
         <title>{{ $title ?? '- La tua salute, ora' }}</title>
     </head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <body>
-        <div>
-            <!-- Contenuto principale -->
-            <main>
-=======
-=======
->>>>>>> b71de93 (.)
     <body class="min-h-screen antialiased bg-gray-50 dark:bg-gradient-to-b dark:from-gray-950 dark:to-gray-900 font-sans">
         <div class="flex flex-col min-h-screen">
             <!-- Contenuto principale -->
             <main class="flex-grow">
-<<<<<<< HEAD
->>>>>>> aurmich/dev
-=======
->>>>>>> b71de93 (.)
                 {{ $slot }}
             </main>
 
