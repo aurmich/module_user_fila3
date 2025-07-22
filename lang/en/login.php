@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 return array (
   'fields' => 
   array (
@@ -76,6 +77,8 @@ return array (
   ),
 );
 =======
+=======
+>>>>>>> b71de93 (.)
 declare(strict_types=1);
 
 return [
@@ -138,4 +141,7 @@ return [
         'unauthorized' => 'You do not have the necessary permissions for this operation.',
     ],
 ];
+<<<<<<< HEAD
 >>>>>>> aurmich/dev
+=======
+>>>>>>> b71de93 (.)

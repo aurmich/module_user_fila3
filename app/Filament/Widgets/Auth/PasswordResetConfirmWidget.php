@@ -143,10 +143,14 @@ class PasswordResetConfirmWidget extends XotBaseWidget
 
             } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 /** @phpstan-ignore argument.type */
 =======
                 /** @phpstan-ignore-next-line */
 >>>>>>> aurmich/dev
+=======
+                /** @phpstan-ignore argument.type */
+>>>>>>> b71de93 (.)
                 $this->handleResetError($response);
             }
 

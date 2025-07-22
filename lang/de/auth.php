@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b71de93 (.)
 declare(strict_types=1);
 
 return [
@@ -9,6 +12,7 @@ return [
     'throttle' => 'Zu viele Anmeldeversuche. Bitte versuchen Sie es in :seconds Sekunden erneut.',
     'general_error' => 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.',
     'unauthorized' => 'Sie haben nicht die erforderlichen Berechtigungen für diese Operation.',
+<<<<<<< HEAD
 =======
 return [
     'failed' => 'Credenziali non valide.',
@@ -47,10 +51,43 @@ return [
             ],
             'password_confirmation' => [
                 'label' => 'Conferma Password',
+=======
+    'login-via' => 'Anmelden mit',
+    'login-failed' => 'Anmeldung fehlgeschlagen, bitte erneut versuchen.',
+    'user-not-allowed' => 'Ihre E-Mail ist nicht autorisiert.',
+    'registration-not-enabled' => 'Die Benutzerregistrierung ist nicht erlaubt.',
+    'Sign in to your account' => 'Melden Sie sich bei Ihrem Konto an',
+    'create a new account' => 'Neues Konto erstellen',
+    'Or' => 'Oder',
+    'Email address' => 'E-Mail-Adresse',
+    'Password' => 'Passwort',
+    'Remember me' => 'Angemeldet bleiben',
+    'Remember' => 'Angemeldet bleiben',
+    'Forgot your password?' => 'Passwort vergessen?',
+    'Sign in' => 'Anmelden',
+    'login-in' => 'Anmelden',
+    'sign-up' => 'Registrieren',
+    'password_expired' => [
+        'title' => 'Passwort abgelaufen, Passwort zurücksetzen',
+        'heading' => 'Neues Passwort erstellen',
+        'sub_heading' => 'Ihr Passwort ist abgelaufen, bitte erstellen Sie ein neues Passwort',
+        'fields' => [
+            'current_password' => [
+                'label' => 'Aktuelles Passwort',
+                'validation_attribute' => 'current_password',
+            ],
+            'password' => [
+                'label' => 'Passwort',
+                'validation_attribute' => 'password',
+            ],
+            'password_confirmation' => [
+                'label' => 'Passwort bestätigen',
+>>>>>>> b71de93 (.)
             ],
         ],
         'form' => [
             'current_password' => [
+<<<<<<< HEAD
                 'label' => 'Password Attuale',
                 'placeholder' => 'Inserisci la password attuale',
                 'help' => 'Inserisci la tua password attuale per confermare la tua identità',
@@ -64,10 +101,26 @@ return [
                 'label' => 'Conferma Nuova Password',
                 'placeholder' => 'Conferma la nuova password',
                 'help' => 'Reinserisci la nuova password per confermarla',
+=======
+                'label' => 'Aktuelles Passwort',
+                'placeholder' => 'Geben Sie Ihr aktuelles Passwort ein',
+                'help' => 'Geben Sie Ihr aktuelles Passwort ein, um Ihre Identität zu bestätigen',
+            ],
+            'password' => [
+                'label' => 'Neues Passwort',
+                'placeholder' => 'Neues Passwort eingeben',
+                'help' => 'Das Passwort muss mindestens 8 Zeichen lang sein',
+            ],
+            'password_confirmation' => [
+                'label' => 'Neues Passwort bestätigen',
+                'placeholder' => 'Neues Passwort bestätigen',
+                'help' => 'Geben Sie das neue Passwort erneut ein, um es zu bestätigen',
+>>>>>>> b71de93 (.)
             ],
         ],
         'actions' => [
             'update' => [
+<<<<<<< HEAD
                 'label' => 'Aggiorna Password',
                 'success' => 'Password aggiornata con successo',
                 'error' => 'Errore durante l\'aggiornamento della password',
@@ -236,6 +289,127 @@ return [
     'password_reset' => [
 <<<<<<< HEAD
         'email_placeholder' => 'Geben Sie Ihre E-Mail-Adresse ein',
+=======
+                'label' => 'Passwort aktualisieren',
+                'success' => 'Passwort erfolgreich aktualisiert',
+                'error' => 'Fehler beim Aktualisieren des Passworts',
+            ],
+        ],
+    ],
+    'email' => 'E-Mail',
+    'name' => 'Name',
+    'confirm_password' => 'Passwort bestätigen',
+    'logout_success' => 'Erfolgreich abgemeldet.',
+    'logout_error' => 'Beim Abmelden ist ein Fehler aufgetreten.',
+    'reset_password_notification_subject' => 'Benachrichtigung zum Zurücksetzen des Passworts',
+    'reset_password_notification_line_1' => 'Sie erhalten diese E-Mail, weil wir eine Anfrage zum Zurücksetzen Ihres Passworts erhalten haben.',
+    'reset_password_notification_action' => 'Passwort zurücksetzen',
+    'reset_password_notification_line_2' => 'Dieser Link zum Zurücksetzen des Passworts läuft in :count Minuten ab.',
+    'reset_password_notification_line_3' => 'Wenn Sie kein Zurücksetzen des Passworts angefordert haben, ist keine weitere Aktion erforderlich.',
+    'Resend Verification Email' => 'Bestätigungs-E-Mail erneut senden',
+    'Verify Your Email Address' => 'Bestätigen Sie Ihre E-Mail-Adresse',
+    'A fresh verification link has been sent to your email address.' => 'Ein neuer Bestätigungslink wurde an Ihre E-Mail-Adresse gesendet.',
+    'login' => [
+        'title' => 'Melden Sie sich bei Ihrem Konto an',
+        'subtitle' => 'Geben Sie Ihre Zugangsdaten ein, um sich anzumelden',
+        'email' => 'E-Mail-Adresse',
+        'email_placeholder' => 'beispiel@email.com',
+        'password' => 'Passwort',
+        'password_placeholder' => '********',
+        'remember' => 'Angemeldet bleiben',
+        'email_structured' => [
+            'label' => 'E-Mail',
+            'placeholder' => 'Geben Sie Ihre E-Mail ein',
+        ],
+        'password_structured' => [
+            'label' => 'Passwort',
+            'placeholder' => 'Geben Sie Ihr Passwort ein',
+        ],
+        'remember_structured' => [
+            'label' => 'Angemeldet bleiben',
+        ],
+        'submit' => 'Anmelden',
+        'forgot_password' => 'Passwort vergessen?',
+        'no_account' => 'Sie haben kein Konto?',
+        'register' => 'Registrieren',
+        'success' => 'Anmeldung erfolgreich.',
+        'failed' => 'Ungültige Zugangsdaten.',
+        'logout_success' => 'Erfolgreich abgemeldet.',
+        'logout_error' => 'Beim Abmelden ist ein Fehler aufgetreten.',
+        'login-via' => 'Anmelden mit',
+        'login-failed' => 'Anmeldung fehlgeschlagen, bitte erneut versuchen.',
+        'user-not-allowed' => 'Ihre E-Mail ist nicht autorisiert.',
+        'login-in' => 'Anmelden',
+        'Sign in' => 'Anmelden',
+        'Sign in to your account' => 'Melden Sie sich bei Ihrem Konto an',
+        'Welcome back' => 'Willkommen zurück',
+        'Email address' => 'E-Mail-Adresse',
+        'Email' => 'E-Mail',
+        'Password' => 'Passwort',
+        'Remember me' => 'Angemeldet bleiben',
+        'Remember' => 'Angemeldet bleiben',
+        'Forgot your password?' => 'Passwort vergessen?',
+    ],
+    'register' => [
+        'title' => 'Neues Konto erstellen',
+        'subtitle' => 'Geben Sie Ihre Daten ein, um sich zu registrieren',
+        'name' => 'Vollständiger Name',
+        'name_placeholder' => 'Max Mustermann',
+        'email' => 'E-Mail-Adresse',
+        'email_placeholder' => 'beispiel@email.com',
+        'password' => 'Passwort',
+        'password_placeholder' => '********',
+        'password_confirmation' => 'Passwort bestätigen',
+        'password_confirmation_placeholder' => '********',
+        'submit' => 'Registrieren',
+        'success' => 'Registrierung erfolgreich abgeschlossen.',
+        'failed' => 'Registrierung konnte nicht abgeschlossen werden.',
+        'already_have_account' => 'Sie haben bereits ein Konto?',
+        'login' => 'Anmelden',
+        'name_structured' => [
+            'label' => 'Name',
+            'placeholder' => 'Geben Sie Ihren vollständigen Namen ein',
+        ],
+        'email_structured' => [
+            'label' => 'E-Mail',
+            'placeholder' => 'Geben Sie Ihre E-Mail ein',
+        ],
+        'password_structured' => [
+            'label' => 'Passwort',
+            'placeholder' => 'Passwort eingeben',
+        ],
+        'password_confirmation_structured' => [
+            'label' => 'Passwort bestätigen',
+            'placeholder' => 'Passwort bestätigen',
+        ],
+    ],
+    'forgot_password' => [
+        'title' => 'Passwort vergessen?',
+        'subtitle' => 'Geben Sie Ihre E-Mail ein, um Anweisungen zu erhalten',
+        'email' => 'E-Mail-Adresse',
+        'email_placeholder' => 'beispiel@email.com',
+        'submit' => 'Anweisungen senden',
+        'success' => 'Anweisungen wurden an Ihre E-Mail gesendet.',
+        'failed' => 'Anweisungen zum Zurücksetzen konnten nicht gesendet werden.',
+        'back_to_login' => 'Zurück zur Anmeldung',
+        'email_structured' => [
+            'label' => 'E-Mail',
+            'placeholder' => 'Geben Sie Ihre E-Mail ein',
+        ],
+    ],
+    'reset_password' => [
+        'title' => 'Passwort zurücksetzen',
+        'subtitle' => 'Geben Sie das neue Passwort ein',
+        'email' => 'E-Mail-Adresse',
+        'email_placeholder' => 'Geben Sie Ihre E-Mail-Adresse ein',
+        'password' => 'Neues Passwort',
+        'password_placeholder' => '********',
+        'password_confirmation' => 'Passwort bestätigen',
+        'password_confirmation_placeholder' => '********',
+        'submit' => 'Passwort zurücksetzen',
+        'success' => 'Passwort erfolgreich zurückgesetzt.',
+        'failed' => 'Passwort konnte nicht zurückgesetzt werden.',
+>>>>>>> b71de93 (.)
         'send_button' => 'Reset-Link senden',
         'back_to_login' => 'Zurück zur Anmeldung',
         'send_another' => 'Einen anderen Link senden',
@@ -278,6 +452,7 @@ return [
                 'already_used' => 'Der Reset-Link wurde bereits verwendet',
             ],
             'try_again' => 'Erneut versuchen',
+<<<<<<< HEAD
 =======
         'email_placeholder' => 'Inserisci il tuo indirizzo email',
         'send_button' => 'Invia link di reset',
@@ -331,5 +506,15 @@ return [
         'throttled' => 'Per favore attendi prima di riprovare.',
         'token' => 'Il token di reset password non è valido.',
         'user' => 'Non riusciamo a trovare un utente con questo indirizzo email.',
+=======
+        ],
+    ],
+    'passwords' => [
+        'reset' => 'Ihr Passwort wurde zurückgesetzt!',
+        'sent' => 'Wir haben Ihnen den Link zum Zurücksetzen des Passworts gesendet!',
+        'throttled' => 'Bitte warten Sie, bevor Sie es erneut versuchen.',
+        'token' => 'Der Token zum Zurücksetzen des Passworts ist ungültig.',
+        'user' => 'Wir können keinen Benutzer mit dieser E-Mail-Adresse finden.',
+>>>>>>> b71de93 (.)
     ],
 ];

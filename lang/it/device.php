@@ -119,10 +119,16 @@ return array (
     ),
   ),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b71de93 (.)
   'model' => 
   array (
     'label' => 'device.model',
   ),
+<<<<<<< HEAD
 =======
 >>>>>>> aurmich/dev
+=======
+>>>>>>> b71de93 (.)
 );
