@@ -51,7 +51,10 @@ return [
         ],
         'is_active' => [
             'label' => 'Attivo',
+<<<<<<< HEAD
             'placeholder' => 'Profilo attivo',
+=======
+>>>>>>> 52d8d45 (.)
             'help' => 'Stato attivo del profilo',
         ],
         'id' => [

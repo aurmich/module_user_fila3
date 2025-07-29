@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -8,6 +9,14 @@ return [
     'throttle' => 'Zu viele Anmeldeversuche. Bitte versuchen Sie es in :seconds Sekunden erneut.',
     'general_error' => 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.',
     'unauthorized' => 'Sie haben nicht die erforderlichen Berechtigungen für diese Operation.',
+=======
+return [
+    'failed' => 'Credenziali non valide.',
+    'password' => 'La password inserita non è corretta.',
+    'throttle' => 'Troppi tentativi di accesso. Riprova fra :seconds secondi.',
+    'general_error' => 'Si è verificato un errore. Riprova più tardi.',
+    'unauthorized' => 'Non hai i permessi necessari per questa operazione.',
+>>>>>>> 52d8d45 (.)
     'login-via' => 'Accedi con',
     'login-failed' => 'Login fallito, riprova.',
     'user-not-allowed' => 'La tua email non è autorizzata.',
@@ -38,8 +47,11 @@ return [
             ],
             'password_confirmation' => [
                 'label' => 'Conferma Password',
+<<<<<<< HEAD
                 'placeholder' => 'Conferma la nuova password',
                 'help' => 'Reinserisci la nuova password per confermarla',
+=======
+>>>>>>> 52d8d45 (.)
             ],
         ],
         'form' => [
@@ -191,6 +203,57 @@ return [
             'title' => 'Errore nell\'invio',
             'generic' => 'Si è verificato un errore durante l\'invio dell\'email. Riprova più tardi.',
         ],
+<<<<<<< HEAD
+=======
+        'email_structured' => [
+            'label' => 'Email',
+            'placeholder' => 'Inserisci la tua email',
+        ],
+        'password_structured' => [
+            'label' => 'Nuova Password',
+            'placeholder' => 'Inserisci la nuova password',
+        ],
+        'password_confirmation_structured' => [
+            'label' => 'Conferma Password',
+            'placeholder' => 'Conferma la nuova password',
+        ],
+    ],
+    'verification' => [
+        'title' => 'Verifica il tuo indirizzo email',
+        'subtitle' => 'Ti abbiamo inviato un link di verifica',
+        'notice' => 'Prima di procedere, controlla la tua email per il link di verifica.',
+        'another' => 'Se non hai ricevuto l\'email',
+        'resend' => 'Clicca qui per richiederne un\'altra',
+        'success' => 'Un nuovo link di verifica è stato inviato al tuo indirizzo email.',
+    ],
+    'social' => [
+        'title' => 'Accedi con',
+        'google' => 'Google',
+        'facebook' => 'Facebook',
+        'github' => 'GitHub',
+        'error' => 'Si è verificato un errore con il login social.',
+    ],
+    'errors' => [
+        'invalid_credentials' => 'Credenziali non valide.',
+        'invalid_token' => 'Token non valido o scaduto.',
+        'account_blocked' => 'Account bloccato. Contatta l\'assistenza.',
+        'too_many_attempts' => 'Troppi tentativi. Riprova più tardi.',
+        'session_expired' => 'Sessione scaduta. Effettua nuovamente il login.',
+    ],
+    'password_reset' => [
+        'email_placeholder' => 'Inserisci il tuo indirizzo email',
+        'send_button' => 'Invia link di reset',
+        'back_to_login' => 'Torna al login',
+        'send_another' => 'Invia un altro link',
+        'email_sent' => [
+            'title' => 'Email inviata!',
+            'message' => 'Ti abbiamo inviato un link per reimpostare la password. Controlla la tua casella di posta elettronica e segui le istruzioni.',
+        ],
+        'email_failed' => [
+            'title' => 'Errore nell\'invio',
+            'generic' => 'Si è verificato un errore durante l\'invio dell\'email. Riprova più tardi.',
+        ],
+>>>>>>> 52d8d45 (.)
         'password_requirements' => 'La password deve avere almeno 8 caratteri',
         'processing' => 'Elaborazione in corso...',
         'instructions' => [
@@ -224,6 +287,7 @@ return [
             'try_again' => 'Riprova',
         ],
     ],
+<<<<<<< HEAD
     'verification' => [
         'title' => 'Verifica il tuo indirizzo email',
         'subtitle' => 'Ti abbiamo inviato un link di verifica',
@@ -298,5 +362,13 @@ return [
         'throttled' => 'Bitte warten Sie, bevor Sie es erneut versuchen.',
         'token' => 'Der Token zum Zurücksetzen des Passworts ist ungültig.',
         'user' => 'Wir können keinen Benutzer mit dieser E-Mail-Adresse finden.',
+=======
+    'passwords' => [
+        'reset' => 'La tua password è stata reimpostata!',
+        'sent' => 'Ti abbiamo inviato il link per reimpostare la password!',
+        'throttled' => 'Per favore attendi prima di riprovare.',
+        'token' => 'Il token di reset password non è valido.',
+        'user' => 'Non riusciamo a trovare un utente con questo indirizzo email.',
+>>>>>>> 52d8d45 (.)
     ],
 ];

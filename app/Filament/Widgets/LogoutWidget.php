@@ -43,7 +43,11 @@ class LogoutWidget extends XotBaseWidget
      * 
      * @var string
      * 
+<<<<<<< HEAD
      * @phpstan-ignore-next-line
+=======
+     * @phpstan-ignore-next-line 
+>>>>>>> 52d8d45 (.)
      */
     protected static string $view = 'user::widgets.logout';
 

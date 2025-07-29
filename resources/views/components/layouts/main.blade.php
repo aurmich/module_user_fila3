@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 {{-- Migliorato secondo le regole Laraxot: solo componenti Blade UI, nessuna stringa hardcoded, struttura chiara, slot definiti. --}}
+=======
+>>>>>>> 52d8d45 (.)
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>

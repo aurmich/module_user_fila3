@@ -32,6 +32,7 @@ return [
         'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
         'unauthorized' => 'You are not authorized to access this resource.',
     ],
+<<<<<<< HEAD
     
     // Password Reset Widget - specific translations
     'password_reset' => [
@@ -80,4 +81,6 @@ return [
             'try_again' => 'Try again',
         ],
     ],
+=======
+>>>>>>> 52d8d45 (.)
 ];
