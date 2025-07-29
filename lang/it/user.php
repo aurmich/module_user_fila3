@@ -165,6 +165,10 @@ return array (
     array (
       'label' => 'attach',
     ),
+    'changePassword' => 
+    array (
+      'label' => 'changePassword',
+    ),
   ),
   'actions' => 
   array (

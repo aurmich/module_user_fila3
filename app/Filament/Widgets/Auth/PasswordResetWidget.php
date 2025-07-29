@@ -10,11 +10,8 @@ use Illuminate\Support\Facades\Password;
 use Filament\Forms\ComponentContainer;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use Filament\Notifications\Notification;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\HtmlString;
-=======
->>>>>>> 52d8d45 (.)
 
 /**
  * Password Reset Widget for SaluteOra platform.
@@ -44,23 +41,23 @@ class PasswordResetWidget extends XotBaseWidget
                 ->autocomplete('email')
                 ->maxLength(255)
                 ->extraInputAttributes(['class' => 'text-center']),
-<<<<<<< HEAD
             
             'error_display'=>\Filament\Forms\Components\Placeholder::make('error_display')
                 ->label('')
                 ->content(function ($get) {
                     $error = Session::get('error');
                     
+                    
                     if ($error && is_string($error)) {
                         $str= '<div class="text-red-600 font-medium bg-red-50 p-3 rounded-md border border-red-200">' . $error . '</div>';
                         return new HtmlString($str);
                     }
-                    
+                        
                     return null;
                 })
                 ->reactive()
-=======
->>>>>>> 52d8d45 (.)
+
+
         ];
     }
 
@@ -78,11 +75,8 @@ class PasswordResetWidget extends XotBaseWidget
             $response = $password_broker->sendResetLink([
                 'email' => $data['email']
             ]);
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> 52d8d45 (.)
+            
             if ($response === Password::RESET_LINK_SENT) {
                 $this->emailSent = true;
                 
@@ -96,10 +90,7 @@ class PasswordResetWidget extends XotBaseWidget
                 // Clear the form
                 $this->form->fill();
             } else {
-<<<<<<< HEAD
                 Session::flash('error', trans('user::errors.'.$response.'.label'));
-=======
->>>>>>> 52d8d45 (.)
                 Notification::make()
                     ->title(__('user::auth.password_reset.email_failed.title'))
                     ->body(trans($response))

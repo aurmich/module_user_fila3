@@ -1,10 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-=======
->>>>>>> 52d8d45 (.)
 return array (
   'navigation' => 
   array (
@@ -123,11 +118,8 @@ return array (
       'label' => 'create',
     ),
   ),
-<<<<<<< HEAD
   'model' => 
   array (
     'label' => 'device.model',
   ),
-=======
->>>>>>> 52d8d45 (.)
 );
