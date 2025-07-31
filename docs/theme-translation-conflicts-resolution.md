@@ -169,6 +169,14 @@ return [
 
 ## Verifiche Post-Correzione
 
+<<<<<<< HEAD
+=======
+### 1. Controllo Conflitti
+```bash
+grep -r "<<<<<<< HEAD" laravel/Themes/Two/lang/
+```
+**Risultato**: Nessun conflitto rimanente
+>>>>>>> ae962ff (.)
 
 ### 2. Validazione Struttura
 ```bash
