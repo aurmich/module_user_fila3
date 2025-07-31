@@ -35,6 +35,20 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Notifications\DatabaseNotificationCollection;
+<<<<<<< HEAD
+=======
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Str;
+use Laravel\Passport\HasApiTokens;
+use Modules\User\Database\Factories\UserFactory;
+use Modules\User\Models\Traits\HasTeams;
+use Modules\Xot\Contracts\UserContract;
+use Modules\Xot\Datas\XotData;
+use Modules\Xot\Models\Traits\RelationX;
+use Spatie\Permission\Traits\HasRoles;
+use Parental\HasChildren;
+use Illuminate\Support\Facades\Schema;
+>>>>>>> 5856def (.)
 
 /**
  * Base User Model
@@ -128,7 +142,10 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     use HasApiTokens;
     use HasFactory;
     use HasRoles;
+<<<<<<< HEAD
     // Guard coerente con Spatie/Permission
+=======
+>>>>>>> 5856def (.)
     use HasUuids;
     use Notifiable;
     use RelationX;
@@ -433,6 +450,28 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
 
 
 
+<<<<<<< HEAD
+=======
+    /**
+     * Get the role name for the current team.
+     *
+     * @return array<int, string>
+     */
+    /**
+     * Get all role names associated with the user.
+     *
+     * @return array<int, string>
+     */
+    public function getRoleNames(): array
+    {
+        /** @var array<int, string> */
+        return $this->roles()->pluck('name')->filter()->values()->toArray();
+    }
+
+
+
+
+>>>>>>> 5856def (.)
 
     public function authentications(): MorphMany
     {

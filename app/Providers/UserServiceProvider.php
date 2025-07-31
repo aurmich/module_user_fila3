@@ -8,18 +8,39 @@ declare(strict_types=1);
 
 namespace Modules\User\Providers;
 
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
+=======
+use Illuminate\Auth\Notifications\ResetPassword;
+use Illuminate\Auth\Notifications\VerifyEmail;
+use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Validation\Rules\Password;
+>>>>>>> 5856def (.)
 use Laravel\Passport\Passport;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Gate;
 use Modules\User\Datas\PasswordData;
 use Modules\User\Models\OauthClient;
+<<<<<<< HEAD
+=======
+use Modules\User\Models\OauthPersonalAccessClient;
+use Modules\User\Models\OauthRefreshToken;
+use Modules\Xot\Contracts\UserContract;
+use Modules\Xot\Providers\XotBaseServiceProvider;
+use SocialiteProviders\Manager\ServiceProvider as SocialiteServiceProvider;
+<<<<<<< HEAD
+>>>>>>> 5856def (.)
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Config;
 use Modules\Notify\Emails\SpatieEmail;
 use Modules\User\Models\OauthAuthCode;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 use Illuminate\Validation\Rules\Password;
 use Modules\User\Models\OauthAccessToken;
@@ -30,6 +51,10 @@ use Modules\Xot\Providers\XotBaseServiceProvider;
 use Illuminate\Notifications\Messages\MailMessage;
 use Modules\User\Models\OauthPersonalAccessClient;
 use SocialiteProviders\Manager\ServiceProvider as SocialiteServiceProvider;
+=======
+=======
+>>>>>>> 73101fd (.)
+>>>>>>> 5856def (.)
 
 class UserServiceProvider extends XotBaseServiceProvider
 {
@@ -67,6 +92,11 @@ class UserServiceProvider extends XotBaseServiceProvider
         });
     }
 
+<<<<<<< Updated upstream
+=======
+>>>>>>> 73101fd (.)
+=======
+>>>>>>> Stashed changes
     public function registerMailsNotification(): void
     {
         $app_name = config('app.name');
@@ -155,7 +185,23 @@ class UserServiceProvider extends XotBaseServiceProvider
 
     private function registerPassport(): void
     {
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> Stashed changes
+        Passport::useTokenModel(OauthAccessToken::class);
+        Passport::useRefreshTokenModel(OauthRefreshToken::class);
+        Passport::useAuthCodeModel(OauthAuthCode::class);
+        Passport::useClientModel(OauthClient::class);
+<<<<<<< Updated upstream
+>>>>>>> 73101fd (.)
         if (method_exists(Passport::class, 'routes')) {
+=======
+
+        if (class_exists(Passport::class) && method_exists(Passport::class, 'routes')) {
+>>>>>>> Stashed changes
             Passport::routes();
         }
 
