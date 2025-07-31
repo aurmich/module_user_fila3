@@ -75,10 +75,7 @@ return array (
       ),
       'description' => 'new_password',
       'helper_text' => 'new_password',
-<<<<<<< HEAD
       'placeholder' => 'new_password',
-=======
->>>>>>> 5856def (.)
     ),
   ),
   'actions' => 

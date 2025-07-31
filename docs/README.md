@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-# User Module
-
-## Overview
-
-The User module provides comprehensive user management functionality including authentication, registration, profile management, and user type handling. This module follows the Laravel Modules architecture and integrates seamlessly with Filament for admin interfaces.
-
-## Key Features
-=======
 # Modulo User
 
 ## Introduzione
@@ -141,42 +132,198 @@ User/
 > - [Collegamenti documentazione centrale](../../../docs/collegamenti-documentazione.md)
 
 ## Indice
->>>>>>> 5856def (.)
 
-- **User Authentication**: Login, logout, password reset, and email verification
-- **User Registration**: Multi-step registration with validation
-- **Profile Management**: User profile editing and management
-- **User Types**: Support for different user types (standard, admin, etc.)
-- **Security**: Password policies, account locking, and security features
-- **Filament Integration**: Complete admin interface using Filament
+### Autenticazione e Autorizzazione
+- [Passport Integration](./passport.md) - Integrazione OAuth2
+- [Socialite Integration](./socialite.txt) - Login social
+- [Two Factor Authentication](./two_factor.txt) - Autenticazione a due fattori
+- [Custom Login](./custom_login.md) - Implementazione login personalizzata
+- [Volt Folio Logout](./VOLT_FOLIO_LOGOUT.md) - Implementazione logout con Volt e Folio
+- [Volt Folio Auth Implementation](./VOLT_FOLIO_AUTH_IMPLEMENTATION.md) - Implementazione completa autenticazione con Volt e Folio
+- [Analisi Logout Blade](./LOGOUT_BLADE_ANALYSIS.md) - Analisi e miglioramenti del file logout.blade.php
+- [Volt Folio Logout](./VOLT_FOLIO_LOGOUT.md) - Implementazione logout con Volt e Folio
+- [Volt Folio Auth Implementation](./VOLT_FOLIO_AUTH_IMPLEMENTATION.md) - Implementazione completa autenticazione con Volt e Folio
+- [Analisi Logout Blade](./LOGOUT_BLADE_ANALYSIS.md) - Analisi e miglioramenti del file logout.blade.php
 
-## Architecture
+### Modelli e Profili
+- [User Profile Models](./user_profile_models.md) - Modelli profilo utente
+- [User Roles](./user_roles.md) - Sistema ruoli
+- [User Permissions](./user_permissions.md) - Sistema permessi
 
-### Widgets
+### Filament e UI
+### Versione HEAD
 
-All Filament widgets in this module extend `XotBaseWidget` and follow established patterns:
+- [Filament Best Practices](FILAMENT_BEST-PRACTICES.md) - Best practices Filament
 
-- **Authentication Widgets**: Login, registration, password reset
-- **Profile Widgets**: User profile editing and management
-- **Chart Widgets**: User statistics and analytics
+### Versione Incoming
 
-### Type Safety
+- [Filament Best Practices](filament-best-practices.md) - Best practices Filament
 
-The module implements comprehensive type safety measures:
+---
 
-- **Safe Type Casting**: All form data uses `safeStringCast()` method
-- **Proper Type Declarations**: All methods have proper parameter and return types
-- **PHPDoc Annotations**: Comprehensive documentation for complex types
-- **PHPStan Compliance**: Full compliance with PHPStan level 9
+- [Login Widget](login_widget.md) - Widget login personalizzato
+- [User Interface](user_interface.md) - Interfaccia utente
 
-### Security Features
+### Best Practices e Convenzioni
+### Versione HEAD
 
-- **Password Hashing**: Secure password storage using Laravel's Hash facade
-- **Input Validation**: Comprehensive validation for all user inputs
-- **Safe Data Handling**: All sensitive data is handled safely
-- **Error Handling**: Graceful error handling with proper user feedback
+- [Best Practices](./BEST-PRACTICES.md) - Linee guida generali
+- [Convenzioni Path Actions](./ACTIONS_PATH_CONVENTION.md) - Convenzioni per i percorsi delle Actions
+- [Convenzioni Path](./PATH_CONVENTIONS.md) - Convenzioni generali per i percorsi nei moduli
+- [Checklist Struttura Directory](./DIRECTORY_STRUCTURE_CHECKLIST.md) - Checklist per la struttura delle directory
 
-## File Structure
+### Versione Incoming
+
+- [Best Practices](./best-practices.md) - Linee guida generali
+
+---
+
+- [Testing](./testing.md) - Testing e quality assurance
+- [Security](./security.md) - Sicurezza e hardening
+
+### Documentazione Tecnica
+- [Roadmap](./roadmap.md) - Piano di sviluppo futuro
+- [Bottlenecks](./bottlenecks.md) - Analisi performance e ottimizzazioni
+- [Architecture](./architecture.md) - Architettura del modulo
+
+### Link Esterni
+- [Laravel Authentication](https://laravel.com/docs/12.x/authentication)
+- [Laravel Authorization](https://laravel.com/docs/12.x/authorization)
+- [Filament Documentation](https://filamentphp.com/docs)
+
+## Note Importanti
+
+### Estensione Classi
+- Non estendere mai direttamente le classi di Filament
+- Utilizzare sempre le classi base di Xot con prefisso XotBase
+- Seguire le convenzioni di naming del modulo
+
+### Trait e Service Provider
+- I trait per i provider devono essere in `Providers/Traits/`
+- Seguire la struttura esistente per nuovi trait
+- Documentare sempre l'uso dei trait
+
+### Traduzioni
+- Utilizzare il LangServiceProvider per le traduzioni
+- Non usare ->label() direttamente
+- Struttura corretta: 'source' => ['label'=>'Sorgente']
+
+## Esempi
+
+### Service Provider
+```php
+use Xot\XotBaseServiceProvider;
+
+class UserServiceProvider extends XotBaseServiceProvider
+{
+    // Implementazione
+}
+```
+
+### Widget Base
+```php
+use Xot\Filament\Widgets\XotBaseWidget;
+
+class LoginWidget extends XotBaseWidget
+{
+    // Implementazione
+}
+```
+
+## Dipendenze
+- Laravel Framework
+- Filament
+- Livewire
+- Volt
+- Folio
+
+## Utilizzo
+Il modulo User fornisce funzionalità di autenticazione e autorizzazione attraverso:
+- OAuth2 con Passport
+- Social login con Socialite
+- Sistema ruoli e permessi
+- Profili utente personalizzabili
+- Interfaccia Filament
+
+## Panoramica
+Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli utenti nell'applicazione. È strettamente integrato con altri moduli come Xot, Lang, e Notify.
+
+### Versione HEAD
+
+## Collegamenti Principali
+
+### Documentazione Core
+- [Architettura del Modulo](structure.md)
+- [Configurazione Passport](passport.md)
+- [Integrazione Socialite](socialite.txt)
+- [Gestione Profili](user_profile_models.md)
+- [Best Practices Filament](FILAMENT_BEST_PRACTICES.md)
+- [Roadmap](roadmap.md)
+- [Bottlenecks](bottlenecks.md)
+
+### Integrazioni
+- [Integrazione con Xot](../Xot/docs/README.md)
+- [Integrazione con Lang](../Lang/docs/README.md)
+- [Integrazione con Notify](../Notify/docs/README.md)
+
+### Autenticazione
+- [Login Personalizzato](custom_login.md)
+- [Autenticazione a Due Fattori](two_factor.txt)
+- [Single Sign-On](sso.txt)
+- [Gestione Password](password.md)
+
+### Autorizzazione
+- [Permessi Spatie](spatie_permissions.txt)
+- [Gestione Ruoli](repositories.md)
+- [Team e Collaborazioni](teams.md)
+
+
+### Versione Incoming
+
+## Collegamenti Bidirezionali
+
+- [Architettura del Modulo](structure.md) - Struttura e organizzazione del modulo
+- [Configurazione Passport](passport.md) - Integrazione con OAuth2
+- [Gestione Profili](user_profile_models.md) - Modelli per i profili utente
+- [Best Practices Filament](filament-best-practices.md) - Linee guida per Filament
+- [Roadmap](roadmap.md) - Piano di sviluppo futuro
+- [Bottlenecks](bottlenecks.md) - Analisi performance e ottimizzazioni
+- [Login Personalizzato](custom_login.md) - Implementazione login personalizzata
+- [Ruoli Utente](user_roles.md) - Sistema di ruoli
+- [Permessi Utente](user_permissions.md) - Sistema di permessi
+
+## Vedi Anche
+
+- [Modulo Xot](../Xot/docs/README.md) - Modulo base e linee guida generali
+- [Modulo Lang](../Lang/docs/README.md) - Gestione traduzioni
+- [Modulo Notify](../Notify/docs/README.md) - Sistema di notifiche
+- [Modulo Activity](../Activity/docs/README.md) - Logging e audit trail
+- [Convenzioni di Naming](../../../docs/standards/file_naming_conventions.md) - Standard per la nomenclatura dei file
+
+
+---
+
+### Profili e GDPR
+- [Modelli Profilo](./user_profile_models.md)
+- [Separazione Profili](./user_profile_separation.md)
+- [Conformità GDPR](./gdpr.txt)
+
+### UI/UX
+- [Metriche Dashboard](./metrics-dashboard.md)
+- [Conflitti JS](./js_conflicts.md)
+- [Best Practices Tailwind](./tailwind.txt)
+
+### Sviluppo
+- [Convenzioni Namespace](./namespace-conventions.md)
+- [Struttura Repository](./repos.txt)
+- [Analisi Performance](./BOTTLENECKS.md)
+
+### Testing e Qualità
+- [PHPStan Fixes](./phpstan_fixes.md)
+- [PHPStan Level 9](./PHPSTAN_LEVEL9_FIXES.md)
+- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md)
+
+## Struttura del Modulo
 
 ## Regola fondamentale sulle migration
 
@@ -187,212 +334,174 @@ The module implements comprehensive type safety measures:
 ```
 Modules/User/
 ├── app/
-│   ├── Actions/           # Business logic actions
-│   ├── Filament/          # Filament components
-│   │   ├── Pages/         # Filament pages
-│   │   ├── Resources/     # Filament resources
-│   │   └── Widgets/       # Filament widgets
-│   ├── Http/              # HTTP layer
-│   ├── Models/            # Eloquent models
-│   └── Services/          # Service classes
-├── database/              # Database migrations and seeders
-├── docs/                  # Documentation
-├── resources/             # Views and assets
-└── routes/                # Route definitions
+│   ├── Models/
+│   │   ├── User.php
+│   │   ├── OauthAccessToken.php
+│   │   ├── OauthAuthCode.php
+│   │   ├── OauthClient.php
+│   │   ├── OauthPersonalAccessClient.php
+│   │   └── OauthRefreshToken.php
+│   ├── Providers/
+│   │   ├── Traits/
+│   │   │   ├── HasPassportConfiguration.php
+│   │   │   └── HasSocialiteConfiguration.php
+│   │   ├── UserServiceProvider.php
+│   │   ├── EventServiceProvider.php
+│   │   ├── RouteServiceProvider.php
+│   │   └── Filament/
+│   │       └── AdminPanelProvider.php
+│   ├── Filament/
+│   │   ├── Resources/
+│   │   │   └── UserResource.php
+│   │   ├── Widgets/
+│   │   │   ├── Auth/
+│   │   │   │   ├── LoginWidget.php
+
+│   │   │   │   └── SocialLoginWidget.php
+│   │   │   └── User/
+│   │   │       ├── UserStatsWidget.php
+│   │   │       └── UserActivityWidget.php
+│   │   └── Pages/
+│   │       └── Auth/
+│   │           ├── LoginPage.php
+│   │           └── RegisterPage.php
+│   └── Http/
+│       └── Controllers/
+│           └── Auth/
+├── config/
+│   └── auth.php
+├── database/
+│   └── migrations/
+└── resources/
+    └── views/
+        └── pages/
+            └── auth/
 ```
 
-## Widgets
+## Dipendenze Principali
 
-### Authentication Widgets
+### Moduli
+- **Xot**: Fornisce le classi base e l'infrastruttura core
+- **Lang**: Gestione delle traduzioni
+- **Notify**: Sistema di notifiche
+- **UI**: Componenti di interfaccia utente
 
-#### LoginWidget
-- **Purpose**: User login interface
-- **Features**: Email/password authentication, remember me, error handling
-- **Security**: Rate limiting, validation, secure session handling
-
-#### RegisterWidget
-- **Purpose**: User registration interface
-- **Features**: Multi-step registration, validation, email verification
-- **Security**: Password strength validation, duplicate email prevention
-
-#### PasswordResetWidget
-- **Purpose**: Password reset request interface
-- **Features**: Email-based password reset, token validation
-- **Security**: Secure token generation, email validation
-
-#### PasswordResetConfirmWidget
-- **Purpose**: Password reset confirmation interface
-- **Features**: Token validation, new password setting
-- **Security**: Secure password hashing, token verification
-
-#### PasswordExpiredWidget
-- **Purpose**: Password expiration handling
-- **Features**: Current password verification, new password setting
-- **Security**: Secure password validation, account protection
-
-### Profile Widgets
-
-#### EditUserWidget
-- **Purpose**: User profile editing
-- **Features**: Dynamic form generation, validation, data persistence
-- **Security**: User authorization, data sanitization
-
-### Chart Widgets
-
-#### UserTypeRegistrationsChartWidget
-- **Purpose**: User registration analytics
-- **Features**: Time-based charts, filtering, data visualization
-- **Type Safety**: Proper handling of TrendValue objects
-
-## Type Safety Implementation
-
-### Safe String Casting
-
-All widgets implement a `safeStringCast()` method for secure type conversion:
-
-```php
-private function safeStringCast(mixed $value): string
-{
-    if (is_string($value)) {
-        return $value;
-    }
-
-    if (is_null($value)) {
-        return '';
-    }
-
-    if (is_bool($value)) {
-        return $value ? '1' : '0';
-    }
-
-    if (is_scalar($value)) {
-        return (string) $value;
-    }
-
-    return '';
-}
-```
-
-### Form Data Handling
-
-All form data is safely handled:
-
-```php
-protected function validateForm(): array
-{
-    $data = $this->form->getState();
-    
-    return [
-        'first_name' => $this->safeStringCast($data['first_name'] ?? ''),
-        'last_name' => $this->safeStringCast($data['last_name'] ?? ''),
-        'email' => $this->safeStringCast($data['email'] ?? ''),
-        'password' => Hash::make($this->safeStringCast($data['password'] ?? '')),
-    ];
-}
-```
-
-## Configuration
-
-### Widget Configuration
-
-All widgets use proper view configuration:
-
-```php
-/**
- * @var string
- */
-protected static string $view = 'pub_theme::filament.widgets.edit-user';
-```
-
-### PHPStan Configuration
-
-The module is configured for PHPStan level 9 compliance with specific ignore patterns for Filament's view-string type system.
-
-## Testing
-
-### Unit Tests
-
-Test the safe string casting functionality:
-
-```php
-public function test_safe_string_cast_handles_various_types(): void
-{
-    $widget = new TestWidget();
-    
-    $this->assertEquals('test', $widget->safeStringCast('test'));
-    $this->assertEquals('', $widget->safeStringCast(null));
-    $this->assertEquals('1', $widget->safeStringCast(true));
-    $this->assertEquals('0', $widget->safeStringCast(false));
-    $this->assertEquals('123', $widget->safeStringCast(123));
-    $this->assertEquals('', $widget->safeStringCast([]));
-}
-```
-
-### Integration Tests
-
-- Test form submission with various data types
-- Verify password reset functionality
-- Test user registration with edge cases
-- Validate chart widget data handling
+### Pacchetti
+- Laravel Passport
+- Laravel Socialite
+- Spatie Permission
+- Filament
 
 ## Best Practices
 
-### Development Guidelines
+### 1. Estensione delle Classi
+```php
+// ❌ NON FARE QUESTO
+use Filament\Widgets\Widget;
+class LoginForm extends Widget { ... }
 
-1. **Always extend XotBaseWidget**: Never extend Filament classes directly
-2. **Use safeStringCast()**: For all type conversions from mixed to string
-3. **Add proper type declarations**: All methods should have parameter and return types
-4. **Implement proper validation**: Validate all user inputs
-5. **Handle errors gracefully**: Provide meaningful error messages
+// ✅ FARE QUESTO
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
+class LoginWidget extends XotBaseWidget { ... }
+```
 
-### Security Guidelines
+### 2. Gestione delle Traduzioni
+```php
+// ❌ NON FARE QUESTO
+->label('Sorgente')
 
-1. **Hash passwords**: Always use Hash::make() for password storage
-2. **Validate inputs**: Comprehensive validation for all user inputs
-3. **Sanitize data**: Clean all data before processing
-4. **Rate limiting**: Implement rate limiting for authentication endpoints
-5. **Session security**: Proper session handling and security
+// ✅ FARE QUESTO
+->label(['label' => 'Sorgente'])
+```
 
-### Performance Guidelines
+### 3. Configurazione dei Provider
+```php
+// In Modules/User/app/Providers/UserServiceProvider.php
+use Modules\User\Providers\Traits\HasPassportConfiguration;
 
-1. **Efficient queries**: Use proper Eloquent relationships
-2. **Caching**: Implement caching where appropriate
-3. **Lazy loading**: Use lazy loading for widgets
-4. **Memory management**: Proper memory handling for large datasets
+class UserServiceProvider extends XotBaseServiceProvider
+{
+    use HasPassportConfiguration;
+
+    public function boot(): void
+    {
+        $this->configurePassport();
+    }
+}
+```
+
+## Roadmap
+
+### Prossime Feature
+1. Miglioramento della gestione dei token OAuth
+2. Integrazione con nuovi provider social
+3. Ottimizzazione delle performance
+
+### Miglioramenti Pianificati
+1. Refactoring del sistema di autenticazione
+2. Miglioramento della gestione dei profili
+3. Ottimizzazione delle query
+
+## Contribuire
+
+### Setup Sviluppo
+1. Clona il repository
+2. Installa le dipendenze
+3. Configura l'ambiente
+4. Esegui i test
+
+### Convenzioni di Codice
+- Seguire PSR-12
+- Utilizzare type hints
+- Documentare il codice
+- Scrivere test unitari
+
+### Processo di Pull Request
+1. Crea un branch feature
+2. Implementa le modifiche
+3. Aggiungi i test
+4. Aggiorna la documentazione
+5. Crea la PR
 
 ## Troubleshooting
 
-### Common Issues
+### Problemi Comuni
+1. Conflitti di autenticazione
+2. Problemi di performance
+3. Errori di configurazione
 
-1. **PHPStan Errors**: Ensure all type declarations are proper
-2. **View Not Found**: Check view paths and namespaces
-3. **Form Validation**: Verify validation rules and messages
-4. **Authentication**: Check user model and guard configuration
+### Soluzioni
+1. Verifica la configurazione
+2. Controlla i log
+3. Consulta la documentazione
 
-### Debugging
+## Riferimenti
 
-1. **Enable logging**: Check Laravel logs for errors
-2. **PHPStan Analysis**: Run `./vendor/bin/phpstan analyse Modules/User`
-3. **Test Coverage**: Run tests to identify issues
-4. **Type Checking**: Verify all type declarations
+### Documentazione
+- [Laravel Passport](https://laravel.com/docs/12.x/passport)
+- [Laravel Socialite](https://laravel.com/docs/12.x/socialite)
+- [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel)
+- [Filament](https://filamentphp.com/docs)
 
-## Contributing
+### Collegamenti Interni
+- [Xot Base Classes](../Xot/docs/base-classes.md)
+- [Lang Integration](../Lang/docs/lang-link.md)
+- [Notify Setup](../Notify/docs/README.md)
 
-When contributing to this module:
+## Changelog
 
-1. Follow the established architectural patterns
-2. Implement proper type safety measures
-3. Add comprehensive tests
-4. Update documentation
-5. Ensure PHPStan compliance
+### [1.0.0] - 2024-03-20
+#### Added
+- Implementazione iniziale
+- Supporto OAuth2
+- Integrazione Socialite
+- Sistema di autorizzazione
 
-## Related Documentation
+#### Changed
+- Miglioramento performance
+- Ottimizzazione query
+- Refactoring codice
 
-<<<<<<< HEAD
-- [Type Safety Improvements](type-safety-improvements.md)
-- [Widget Structure](widgets_structure.md)
-- [PHPStan Fixes](phpstan-fixes.md)
-=======
 #### Fixed
 - Bug autenticazione
 - Problemi di configurazione
@@ -823,5 +932,4 @@ Schema::table('teams', function (Blueprint $table) {
 - [ ] Nessuna migration di tabelle modulari nella cartella globale
 - [ ] La documentazione tecnica è aggiornata
 - [ ] I comandi artisan sono lanciati dal path corretto o con namespace modulo
->>>>>>> 5856def (.)
 

@@ -3,8 +3,6 @@
 declare(strict_types=1);
 
 return [
-<<<<<<< HEAD
-=======
     // Messaggi generali di autenticazione
     'failed' => 'Credenziali non valide.',
     'password' => 'La password inserita non è corretta.',
@@ -13,11 +11,6 @@ return [
     'unauthorized' => 'Non hai i permessi necessari per questa operazione.',
 
     // Login
-<<<<<<< Updated upstream
-=======
->>>>>>> 73101fd (.)
-=======
->>>>>>> Stashed changes
     'login-via' => 'Accedi con',
     'login-failed' => 'Login fallito, riprova.',
     'user-not-allowed' => 'La tua email non è autorizzata.',
@@ -33,8 +26,6 @@ return [
     'Sign in' => 'Accedi',
     'login-in' => 'Accedi',
     'sign-up' => 'Registrati',
-
-    // Password Expired
     'password_expired' => [
         'title' => 'Password Scaduta, Reimposta Password',
         'heading' => 'Crea una Nuova Password',
@@ -42,7 +33,7 @@ return [
         'fields' => [
             'current_password' => [
                 'label' => 'Password Attuale',
-                'validation_attribute' => 'password attuale',
+                'validation_attribute' => 'current_password',
             ],
             'password' => [
                 'label' => 'Password',
@@ -55,67 +46,54 @@ return [
         'form' => [
             'current_password' => [
                 'label' => 'Password Attuale',
-                'validation_attribute' => 'password attuale',
+                'placeholder' => 'Inserisci la password attuale',
+                'help' => 'Inserisci la tua password attuale per confermare la tua identità',
             ],
             'password' => [
-                'label' => 'Password',
-                'validation_attribute' => 'password',
+                'label' => 'Nuova Password',
+                'placeholder' => 'Inserisci la nuova password',
+                'help' => 'La password deve contenere almeno 8 caratteri',
             ],
             'password_confirmation' => [
-                'label' => 'Conferma Password',
+                'label' => 'Conferma Nuova Password',
+                'placeholder' => 'Conferma la nuova password',
+                'help' => 'Reinserisci la nuova password per confermarla',
             ],
         ],
         'actions' => [
-            'reset_password' => ['label' => 'Reimposta Password'],
-            'cancel' => ['label' => 'Annulla'],
-        ],
-        'reset_password' => 'Reimposta Password',
-        'password_reset' => 'Password Reimpostata',
-        'notifications' => [
-            'wrong_password' => [
-                'title' => 'Password Errata',
-                'body' => 'La password attuale inserita non è corretta.',
+            'update' => [
+                'label' => 'Aggiorna Password',
+                'success' => 'Password aggiornata con successo',
+                'error' => 'Errore durante l\'aggiornamento della password',
             ],
-            'column_not_found' => [
-                'title' => 'Colonna Non Trovata',
-                'body' => 'La colonna ":column_name" o la colonna password ":password_column_name" non è stata trovata nella tabella :table_name.',
-            ],
-            'password_reset' => [
-                'success' => 'Password Reimpostata con Successo',
-            ],
-            'same_password' => [
-                'title' => 'Password Identica',
-                'body' => 'La nuova password deve essere diversa dalla password attuale.',
-            ],
-        ],
-        'exceptions' => [
-            'column_not_found' => 'La colonna ":column_name" o la colonna password ":password_column_name" non è stata trovata nella tabella ":table_name". Pubblica le migrazioni ed eseguile, se l\'errore persiste, pubblica il file di configurazione e aggiorna i valori di table_name, column_name e password_column_name.',
         ],
     ],
 
-    // Socialite
-    'socialite' => [
-        'unacceptable' => ':provider non è supportato.',
-    ],
+    'email' => 'Email',
+    'name' => 'Nome',
+    'confirm_password' => 'Conferma Password',
 
-    // Reset Password
-    'Reset password' => 'Reimposta la password',
-    'Send password reset link' => 'Invia link per reimpostare la password',
-    'Confirm Password' => 'Conferma Password',
-    'Confirm' => 'Conferma',
+    // Messaggi di stato
+    'logout_success' => 'Logout effettuato con successo.',
+    'logout_error' => 'Si è verificato un errore durante il logout.',
+
+    // Messaggi per il reset password
+    'reset_password_notification_subject' => 'Reset Password Notification',
+    'reset_password_notification_line_1' => 'You are receiving this email because we received a password reset request for your account.',
+    'reset_password_notification_action' => 'Reset Password',
+    'reset_password_notification_line_2' => 'This password reset link will expire in :count minutes.',
+    'reset_password_notification_line_3' => 'If you did not request a password reset, no further action is required.',
+
     'Resend Verification Email' => 'Rinvia Email di Verifica',
     'Verify Your Email Address' => 'Verifica la tua email',
     'A fresh verification link has been sent to your email address.' => 'Un nuovo link di verifica è stato inviato al tuo indirizzo email.',
 
-    // Login
->>>>>>> 5856def (.)
     'login' => [
-        'title' => 'Accedi',
-        'email' => 'Email',
+        'title' => 'Accedi al tuo account',
+        'subtitle' => 'Inserisci le tue credenziali per accedere',
+        'email' => 'Indirizzo email',
+        'email_placeholder' => 'esempio@email.com',
         'password' => 'Password',
-<<<<<<< HEAD
-        'remember_me' => 'Ricordami',
-=======
         'password_placeholder' => '••••••••',
         'remember' => 'Ricordami',
         'email_structured' => [
@@ -129,54 +107,50 @@ return [
         'remember_structured' => [
             'label' => 'Ricordami'
         ],
-<<<<<<< Updated upstream
-=======
->>>>>>> 73101fd (.)
-=======
->>>>>>> Stashed changes
         'submit' => 'Accedi',
->>>>>>> 5856def (.)
         'forgot_password' => 'Password dimenticata?',
-        'submit' => 'Accedi',
-        'or' => 'oppure',
-        'create_account' => 'crea un account',
-        'link' => 'Accedi',
-        'email_placeholder' => 'Inserisci la tua email',
-        'password_placeholder' => 'Inserisci la tua password',
-        'credentials_error' => 'Le credenziali fornite non sono corrette.',
-        'login_error' => 'Si è verificato un errore durante il login. Riprova più tardi.',
+        'no_account' => 'Non hai un account?',
+        'register' => 'Registrati',
+        'success' => 'Accesso effettuato con successo.',
+        'failed' => 'Credenziali non valide.',
+        'logout_success' => 'Logout effettuato con successo.',
+        'logout_error' => 'Si è verificato un errore durante il logout.',
+        'login-via' => 'Accedi con',
+        'login-failed' => 'Login fallito, riprova.',
+        'user-not-allowed' => 'La tua email non è autorizzata.',
+        'login-in' => 'Accedi',
+        'Sign in' => 'Accedi',
+        'Sign in to your account' => 'Accedi al tuo account',
+        'Welcome back' => 'Bentornato',
+        'Email address' => 'Indirizzo email',
+        'Email' => 'Email',
+        'Password' => 'Password',
+        'Remember me' => 'Ricordami',
+        'Remember' => 'Ricordami',
+        'Forgot your password?' => 'Password dimenticata?',
     ],
-<<<<<<< HEAD
-=======
 
     // Registrazione
-<<<<<<< Updated upstream
-=======
-    ],
-
->>>>>>> 73101fd (.)
-=======
->>>>>>> Stashed changes
->>>>>>> 5856def (.)
     'register' => [
-        'title' => 'Registrati',
+        'title' => 'Crea un nuovo account',
+        'subtitle' => 'Inserisci i tuoi dati per registrarti',
+        'name' => 'Nome completo',
+        'name_placeholder' => 'Mario Rossi',
+        'email' => 'Indirizzo email',
+        'email_placeholder' => 'esempio@email.com',
+        'password' => 'Password',
+        'password_placeholder' => '••••••••',
+        'password_confirmation' => 'Conferma password',
+        'password_confirmation_placeholder' => '••••••••',
         'submit' => 'Registrati',
-<<<<<<< HEAD
-        'link' => 'Registrati',
-=======
-        'already_registered' => 'Hai già un account? Accedi',
-<<<<<<< Updated upstream
-<<<<<<< HEAD
         'success' => 'Registrazione completata con successo.',
         'failed' => 'Impossibile completare la registrazione.',
+        'already_have_account' => 'Hai già un account?',
+        'login' => 'Accedi',
         // Structured version
-=======
-        'success' => 'Registrazione completata con successo.',
-        'failed' => 'Impossibile completare la registrazione.',
->>>>>>> Stashed changes
         'name_structured' => [
             'label' => 'Nome',
-            'placeholder' => 'Inserisci il tuo nome'
+            'placeholder' => 'Inserisci il tuo nome completo'
         ],
         'email_structured' => [
             'label' => 'Email',
@@ -184,85 +158,56 @@ return [
         ],
         'password_structured' => [
             'label' => 'Password',
-            'placeholder' => 'Inserisci la tua password'
+            'placeholder' => 'Inserisci la password'
         ],
         'password_confirmation_structured' => [
             'label' => 'Conferma Password',
-            'placeholder' => 'Conferma la tua password'
+            'placeholder' => 'Conferma la password'
         ],
-<<<<<<< Updated upstream
->>>>>>> 5856def (.)
-    ],
-    'profile' => [
-        'title' => 'Profilo',
-        'settings' => 'Impostazioni',
-        'information' => 'Informazioni Profilo',
-        'update_password' => 'Aggiorna Password',
-        'current_password' => 'Password Attuale',
-        'new_password' => 'Nuova Password',
-        'confirm_password' => 'Conferma Password',
-        'save' => 'Salva',
-        'update' => 'Aggiorna',
-    ],
-<<<<<<< HEAD
-    'user_dropdown' => [
-        'manage_account' => 'Gestione Account',
-        'profile' => 'Profilo',
-        'settings' => 'Impostazioni',
-        'logout' => 'Logout',
-        'login_link' => 'Accedi',
-        'register_link' => 'Registrati',
-=======
-
-    // Reset Password
-    'reset-password' => [
-        'title' => 'Reimposta password',
-=======
-=======
->>>>>>> Stashed changes
     ],
 
-    // Recupero Password
-    'forgot-password' => [
-        'title' => 'Recupera password',
-        'subtitle' => 'Inserisci il tuo indirizzo email per ricevere il link di reset',
+    // Password dimenticata
+    'forgot_password' => [
+        'title' => 'Password dimenticata?',
+        'subtitle' => 'Inserisci la tua email per ricevere le istruzioni',
         'email' => 'Indirizzo email',
         'email_placeholder' => 'esempio@email.com',
-        'submit' => 'Invia link',
-        'back_to_login' => 'Torna al login',
-        'success' => 'Ti abbiamo inviato le istruzioni via email.',
+        'submit' => 'Invia istruzioni',
+        'success' => 'Le istruzioni sono state inviate alla tua email.',
         'failed' => 'Impossibile inviare le istruzioni di reset.',
+        'back_to_login' => 'Torna al login',
+        // Structured version
         'email_structured' => [
             'label' => 'Email',
             'placeholder' => 'Inserisci la tua email'
         ],
     ],
 
-    // Reset Password
-    'reset-password' => [
-<<<<<<< Updated upstream
-        'title' => 'Reimposta la password',
->>>>>>> 73101fd (.)
-=======
+    // Reset password
+    'reset_password' => [
         'title' => 'Reimposta password',
->>>>>>> Stashed changes
         'subtitle' => 'Inserisci la nuova password',
         'email' => 'Indirizzo email',
-        'email_placeholder' => 'esempio@email.com',
+        'email_placeholder' => 'Inserisci il tuo indirizzo email',
         'password' => 'Nuova password',
         'password_placeholder' => '••••••••',
         'password_confirmation' => 'Conferma password',
         'password_confirmation_placeholder' => '••••••••',
         'submit' => 'Reimposta password',
-<<<<<<< Updated upstream
-<<<<<<< HEAD
         'success' => 'Password reimpostata con successo.',
         'failed' => 'Impossibile reimpostare la password.',
+        'send_button' => 'Invia link di reset',
+        'back_to_login' => 'Torna al login',
+        'send_another' => 'Invia un altro link',
+        'email_sent' => [
+            'title' => 'Email inviata!',
+            'message' => 'Ti abbiamo inviato un link per reimpostare la password. Controlla la tua casella di posta elettronica e segui le istruzioni.',
+        ],
+        'email_failed' => [
+            'title' => 'Errore nell\'invio',
+            'generic' => 'Si è verificato un errore durante l\'invio dell\'email. Riprova più tardi.',
+        ],
         // Structured version
-=======
-        'success' => 'Password reimpostata con successo.',
-        'failed' => 'Impossibile reimpostare la password.',
->>>>>>> Stashed changes
         'email_structured' => [
             'label' => 'Email',
             'placeholder' => 'Inserisci la tua email'
@@ -275,29 +220,17 @@ return [
             'label' => 'Conferma Password',
             'placeholder' => 'Conferma la nuova password'
         ],
->>>>>>> 5856def (.)
     ],
-    'logout' => [
-        'title' => 'Logout',
-        'confirm_message' => 'Sei sicuro di voler effettuare il logout?',
-        'confirm_button' => 'Conferma Logout',
-        'cancel_button' => 'Annulla',
-        'success_title' => 'Logout effettuato',
-        'success_message' => 'Sei stato disconnesso con successo.',
-        'error_title' => 'Errore durante il logout',
-        'error_message' => 'Si è verificato un errore durante il logout.',
-        'try_again' => 'Riprova',
-        'back_to_home' => 'Torna alla Home',
+
+    // Verifica Email
+    'verification' => [
+        'title' => 'Verifica il tuo indirizzo email',
+        'subtitle' => 'Ti abbiamo inviato un link di verifica',
+        'notice' => 'Prima di procedere, controlla la tua email per il link di verifica.',
+        'another' => 'Se non hai ricevuto l\'email',
+        'resend' => 'Clicca qui per richiederne un\'altra',
+        'success' => 'Un nuovo link di verifica è stato inviato al tuo indirizzo email.',
     ],
-<<<<<<< HEAD
-    'navigation' => [
-        'open_menu' => 'Apri menu principale',
-        'close_menu' => 'Chiudi menu principale',
-        'home' => 'Home',
-        'dashboard' => 'Dashboard',
-        'profile' => 'Profilo',
-        'settings' => 'Impostazioni',
-=======
 
     // Social Login
     'social' => [
@@ -316,25 +249,61 @@ return [
         'too_many_attempts' => 'Troppi tentativi. Riprova più tardi.',
         'session_expired' => 'Sessione scaduta. Effettua nuovamente il login.',
     ],
-<<<<<<< Updated upstream
 
-    // Reset Password
-=======
+    // Password Reset Widget - specific translations
+    'password_reset' => [
+        'email_placeholder' => 'Inserisci il tuo indirizzo email',
+        'send_button' => 'Invia link di reset',
+        'back_to_login' => 'Torna al login',
+        'send_another' => 'Invia un altro link',
+        'email_sent' => [
+            'title' => 'Email inviata!',
+            'message' => 'Ti abbiamo inviato un link per reimpostare la password. Controlla la tua casella di posta elettronica e segui le istruzioni.',
+        ],
+        'email_failed' => [
+            'title' => 'Errore nell\'invio',
+            'generic' => 'Si è verificato un errore durante l\'invio dell\'email. Riprova più tardi.',
+        ],
+        'password_requirements' => 'La password deve avere almeno 8 caratteri',
+        'processing' => 'Elaborazione in corso...',
+        'instructions' => [
+            'title' => 'Istruzioni per il reset',
+            'description' => 'Inserisci la tua email e la nuova password per completare il reset.',
+        ],
+        'confirm_button' => 'Conferma nuova password',
+        'request_new_link' => 'Richiedi un nuovo link',
+        'security' => [
+            'title' => 'Sicurezza',
+            'note' => 'Il link di reset è valido per 60 minuti e può essere utilizzato una sola volta.',
+        ],
+        'success' => [
+            'title' => 'Password reimpostata con successo!',
+            'message' => 'La tua password è stata aggiornata. Ora puoi accedere con la nuova password.',
+            'redirect_notice' => 'Reindirizzamento automatico in corso...',
+            'go_to_dashboard' => 'Vai alla dashboard',
+            'go_to_login' => 'Vai al login',
+        ],
+        'errors' => [
+            'title' => 'Errore nel reset della password',
+            'invalid_token' => 'Il link di reset non è più valido o è scaduto.',
+            'invalid_user' => 'Non è stato possibile trovare un utente con questo indirizzo email.',
+            'generic' => 'Si è verificato un errore durante il reset della password. Riprova più tardi.',
+            'possible_causes' => 'Possibili cause:',
+            'causes' => [
+                'expired_token' => 'Il link di reset è scaduto (valido per 60 minuti)',
+                'invalid_email' => 'L\'indirizzo email non corrisponde a nessun account',
+                'already_used' => 'Il link di reset è già stato utilizzato',
+            ],
+            'try_again' => 'Riprova',
+        ],
     ],
-
->>>>>>> 73101fd (.)
-=======
-
+    
     // Reset Password
->>>>>>> Stashed changes
     'passwords' => [
         'reset' => 'La tua password è stata reimpostata!',
         'sent' => 'Ti abbiamo inviato il link per reimpostare la password!',
         'throttled' => 'Per favore attendi prima di riprovare.',
         'token' => 'Il token di reset password non è valido.',
         'user' => 'Non riusciamo a trovare un utente con questo indirizzo email.',
->>>>>>> 5856def (.)
     ],
-    'failed' => 'Le credenziali non corrispondono ai nostri record.',
-    'throttle' => 'Troppi tentativi di accesso. Riprova tra :seconds secondi.',
 ];

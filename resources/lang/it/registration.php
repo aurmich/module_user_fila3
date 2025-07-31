@@ -12,11 +12,6 @@ return [
             'placeholder' => 'Inserisci il tuo cognome',
             'tooltip' => 'Inserisci il tuo cognome'
         ],
-<<<<<<< Updated upstream
-=======
->>>>>>> 73101fd (.)
-=======
->>>>>>> Stashed changes
         'email' => [
             'label' => 'Email',
             'placeholder' => 'Inserisci la tua email',
@@ -53,11 +48,6 @@ return [
             'tooltip' => 'Inserisci il paese di residenza',
             'default' => 'Italia'
         ],
-<<<<<<< Updated upstream
-=======
->>>>>>> 73101fd (.)
-=======
->>>>>>> Stashed changes
         'password' => [
             'label' => 'Password',
             'placeholder' => 'Inserisci la tua password',
@@ -82,7 +72,6 @@ return [
         'next' => 'Avanti',
         'back' => 'Indietro',
         'complete' => 'Completa Registrazione'
-<<<<<<< Updated upstream
     ],
     'messages' => [
         'success' => 'Registrazione completata con successo!',
@@ -106,37 +95,5 @@ return [
             'title' => 'Conferma Dati',
             'description' => 'Verifica i dati inseriti prima di completare la registrazione'
         ]
-=======
-        'register' => 'Registrati'
-    ],
-    'messages' => [
-        'success' => 'Registrazione completata con successo!',
-        'error' => 'Si è verificato un errore durante la registrazione.'
->>>>>>> 73101fd (.)
-=======
-    ],
-    'messages' => [
-        'success' => 'Registrazione completata con successo!',
-        'error' => 'Si è verificato un errore durante la registrazione.',
-        'validation_error' => 'Compila tutti i campi obbligatori per procedere.'
-    ],
-    'steps' => [
-        'personal_data' => [
-            'title' => 'Dati Anagrafici',
-            'description' => 'Inserisci i tuoi dati personali'
-        ],
-        'contacts' => [
-            'title' => 'Contatti e Indirizzo',
-            'description' => 'Inserisci i tuoi contatti e l\'indirizzo'
-        ],
-        'isee' => [
-            'title' => 'Dati ISEE',
-            'description' => 'Inserisci i dati ISEE (opzionale)'
-        ],
-        'confirmation' => [
-            'title' => 'Conferma Dati',
-            'description' => 'Verifica i dati inseriti prima di completare la registrazione'
-        ]
->>>>>>> Stashed changes
     ]
-];
+]; 
