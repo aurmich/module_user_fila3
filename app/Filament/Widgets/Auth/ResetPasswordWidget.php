@@ -114,6 +114,7 @@ class ResetPasswordWidget extends XotBaseWidget
             session()->flash('status', __($status));
             return redirect()->route('login');
         } else {
+            /** @phpstan-ignore-next-line */
             $this->addError('email', __($status));
         }
     }
