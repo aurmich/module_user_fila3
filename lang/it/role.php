@@ -11,7 +11,11 @@ return array (
       'description' => 'Gestione dei ruoli e dei permessi associati',
     ),
     'label' => 'Ruoli',
+<<<<<<< HEAD
     'sort' => 26,
+=======
+    'sort' => 49,
+>>>>>>> d46f92c (.)
     'icon' => 'user-role-animated',
   ),
   'fields' => 
@@ -69,17 +73,28 @@ return array (
     array (
       'label' => 'reorderRecords',
     ),
+<<<<<<< HEAD
     'team_id' => 
     array (
       'description' => 'team_id',
       'helper_text' => 'team_id',
       'placeholder' => 'team_id',
       'label' => 'team_id',
+=======
+    'resetFilters' => 
+    array (
+      'label' => 'resetFilters',
+    ),
+    'team_id' => 
+    array (
+      'description' => 'team_id',
+>>>>>>> d46f92c (.)
     ),
     'detach' => 
     array (
       'label' => 'detach',
     ),
+<<<<<<< HEAD
     'resetFilters' => 
     array (
       'label' => 'resetFilters',
@@ -88,10 +103,13 @@ return array (
     array (
       'label' => 'edit',
     ),
+=======
+>>>>>>> d46f92c (.)
     'openFilters' => 
     array (
       'label' => 'openFilters',
     ),
+<<<<<<< HEAD
     'attach' => 
     array (
       'label' => 'attach',
@@ -107,6 +125,8 @@ return array (
     array (
       'label' => 'id',
     ),
+=======
+>>>>>>> d46f92c (.)
   ),
   'roles' => 
   array (

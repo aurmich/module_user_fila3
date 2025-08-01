@@ -11,7 +11,11 @@ return array (
       'description' => 'Gestione dei permessi di sistema',
     ),
     'label' => 'Permessi',
+<<<<<<< HEAD
     'sort' => 44,
+=======
+    'sort' => 31,
+>>>>>>> d46f92c (.)
     'icon' => 'user-permission-animated',
   ),
   'fields' => 
@@ -58,10 +62,13 @@ return array (
       'tooltip' => 'Fornisci una breve descrizione del permesso.',
       'placeholder' => 'Descrizione del permesso',
     ),
+<<<<<<< HEAD
     'applyFilters' => 
     array (
       'label' => 'applyFilters',
     ),
+=======
+>>>>>>> d46f92c (.)
   ),
   'actions' => 
   array (

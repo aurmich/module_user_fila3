@@ -11,7 +11,7 @@ return array (
       'description' => 'Gestione dei team e delle loro autorizzazioni',
     ),
     'label' => 'team',
-    'sort' => 18,
+    'sort' => 83,
     'icon' => 'user-team',
   ),
   'fields' => 
@@ -77,9 +77,12 @@ return array (
     'recordId' => 
     array (
       'label' => 'recordId',
+<<<<<<< HEAD
       'description' => 'recordId',
       'helper_text' => 'recordId',
       'placeholder' => 'recordId',
+=======
+>>>>>>> d46f92c (.)
     ),
     'personal_team' => 
     array (
@@ -88,6 +91,7 @@ return array (
     'role' => 
     array (
       'label' => 'role',
+<<<<<<< HEAD
       'description' => 'role',
       'helper_text' => 'role',
       'placeholder' => 'role',
@@ -97,6 +101,8 @@ return array (
       'description' => 'description',
       'helper_text' => 'description',
       'placeholder' => 'description',
+=======
+>>>>>>> d46f92c (.)
     ),
   ),
   'actions' => 
@@ -129,8 +135,11 @@ return array (
       'label' => 'team.plural.model',
     ),
   ),
+<<<<<<< HEAD
   'model' => 
   array (
     'label' => 'team.model',
   ),
+=======
+>>>>>>> d46f92c (.)
 );

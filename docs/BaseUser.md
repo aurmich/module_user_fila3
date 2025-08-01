@@ -42,31 +42,9 @@ This document outlines the structure and usage of the `BaseUser` model within a 
 - **Inheritance Conflicts**: Ensure that extending models do not redefine essential `BaseUser` methods unless intentional.
 - **Attribute Overlap**: Avoid duplicating attributes in child models that are already defined in `BaseUser`.
 
-<<<<<<< HEAD
 ## Documentation and Updates
 - Document any custom extensions or modifications to `BaseUser` in the relevant module's documentation folder.
 - Update this document if significant changes are made to the `BaseUser` structure or functionality.
-=======
-- `teamRole(Team $team): ?string` - Ottiene il ruolo dell'utente nel team specificato
-- `canRemoveTeamMember(Team $team, HasTeamsContract $user): bool` - Verifica se l'utente può rimuovere un membro del team
-- `canUpdateTeamMember(Team $team, HasTeamsContract $user): bool` - Verifica se l'utente può aggiornare un membro del team
-- `teamPermissions(Team $team): array<string, bool>` - Ottiene i permessi dell'utente nel team
-
-### Role Management
-
-- `hasRole($roles, ?string $guard = null): bool` - Verifica se l'utente ha un determinato ruolo
-- `assignRole($roles): self` - Assegna uno o più ruoli all'utente
-- `removeRole($role): self` - Rimuove un ruolo dall'utente
-
-## Note Importanti
-
-- La classe utilizza UUID come chiave primaria
-- Implementa il multi-tenancy attraverso la relazione `tenants`
-- Supporta l'autenticazione social attraverso la relazione `socialiteUsers`
-- Gestisce i log di autenticazione attraverso la relazione `authentications`
-
-## Collegamenti Correlati
->>>>>>> d46f92c (.)
 
 ## Links to Related Documentation
 - [User Module Index](./INDEX.md)

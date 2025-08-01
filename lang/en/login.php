@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 <?php
 
 return array (
+=======
+<?php return array (
+>>>>>>> d46f92c (.)
   'fields' => 
   array (
     'email' => 

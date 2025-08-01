@@ -1,3 +1,80 @@
+<<<<<<< HEAD
+=======
+<?php
+
+use Illuminate\Support\Facades\Http;
+use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Artisan;
+use function Laravel\Folio\{name};
+use Livewire\Volt\Component;
+
+new class extends Component
+{
+    public $powerups = [];
+    public $powerupsJSON = null;
+
+    public function mount()
+    {
+        $this->powerupsJSON = json_decode(file_get_contents(public_path('/genesis/power-ups.json')));
+        foreach ($this->powerupsJSON as $powerup) {
+            $repo = key($powerup);
+            $installed = $powerup->{$repo};
+            $this->powerups[] = $this->fetchPowerup($repo, $installed);
+        }
+    }
+
+    protected function fetchPowerup($repo, $installed)
+    {
+        $response = Http::get('https://raw.githubusercontent.com/' . $repo . '/main/powerup.json');
+        if ($response->successful()) {
+            $powerup = (object) $response->json();
+            $powerup->repo = $repo;
+            $powerup->installed = $installed;
+            return $powerup;
+        }
+        return [];
+    }
+
+    public function install($repo, $index)
+    {
+        foreach ($this->powerupsJSON as $powerUpIndex => $powerup) {
+            if (key($powerup) == $repo) {
+                $this->powerupsJSON[$powerUpIndex]->{$repo} = true;
+            }
+        }
+
+        $filePath = public_path('/genesis/power-ups.json');
+        File::put($filePath, json_encode($this->powerupsJSON, JSON_PRETTY_PRINT));
+
+        Artisan::call('powerup:install ' . $repo);
+
+        $run = $this->powerups[$index]->run_after_install;
+        if (isset($run['commands'])) {
+            foreach ($run['commands'] as $command) {
+                Artisan::call($command);
+            }
+        }
+
+        if (isset($run['factories'])) {
+            foreach ($run['factories'] as $factory) {
+                $model = $factory['model'];
+                $count = $factory['count'];
+                call_user_func("{$model}::factory", $count)->create();
+            }
+        }
+
+        session()->flash('power-up-install', 'success');
+
+        return redirect()->to('/genesis/power-ups');
+    }
+};
+
+name('genesis.power-ups');
+
+?>
+
+>>>>>>> d46f92c (.)
 <x-layouts.marketing>
 
     @volt('genesis-powerups')

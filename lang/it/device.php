@@ -11,7 +11,11 @@ return array (
       'description' => 'Gestione dei dispositivi degli utenti',
     ),
     'label' => 'device',
+<<<<<<< HEAD
     'sort' => 20,
+=======
+    'sort' => 92,
+>>>>>>> d46f92c (.)
     'icon' => 'user-device',
   ),
   'fields' => 
@@ -82,6 +86,7 @@ return array (
     array (
       'label' => 'resetFilters',
     ),
+<<<<<<< HEAD
     'applyFilters' => 
     array (
       'label' => 'applyFilters',
@@ -94,6 +99,8 @@ return array (
     array (
       'label' => 'login_at',
     ),
+=======
+>>>>>>> d46f92c (.)
   ),
   'actions' => 
   array (
@@ -118,8 +125,11 @@ return array (
       'label' => 'create',
     ),
   ),
+<<<<<<< HEAD
   'model' => 
   array (
     'label' => 'device.model',
   ),
+=======
+>>>>>>> d46f92c (.)
 );

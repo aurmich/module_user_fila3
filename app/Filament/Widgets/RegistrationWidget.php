@@ -5,7 +5,10 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Widgets;
 
 use Filament\Forms\Form;
+<<<<<<< HEAD
 use Illuminate\Support\Arr;
+=======
+>>>>>>> d46f92c (.)
 use Illuminate\Support\Str;
 use Filament\Widgets\Widget;
 use Illuminate\Http\Request;
@@ -37,17 +40,21 @@ class RegistrationWidget extends XotBaseWidget
     public string $resource;
     public string $model;
     public string $action;
+<<<<<<< HEAD
     public Model $record;
     
     /**
      * @phpstan-var class-string
      * @phpstan-ignore-next-line
      */
+=======
+>>>>>>> d46f92c (.)
     protected static string $view = 'pub_theme::filament.widgets.registration';
 
     public function mount(string $type, Request $request): void
     {
         $this->type = $type;
+<<<<<<< HEAD
         $this->resource = XotData::make()->getUserResourceClassByType($type);
         $this->model = $this->resource::getModel();
         $this->action = Str::of($this->model)->replace('\\Models\\', '\\Actions\\')->append('\\RegisterAction')->toString();
@@ -58,6 +65,12 @@ class RegistrationWidget extends XotBaseWidget
         $this->form->model($record);
         $this->record = $record;
         
+=======
+        $this->resource = XotData::make()->getUserTypeResourceClass($type);
+        $this->model = $this->resource::getModel();
+        $this->action=Str::of($this->model)->replace('\Models\\', '\Actions\\')->append('\RegisterAction')->toString();
+        $this->form->fill();
+>>>>>>> d46f92c (.)
     }
 
     public function getFormModel(): Model
@@ -99,6 +112,7 @@ class RegistrationWidget extends XotBaseWidget
         return $this->resource::getFormSchemaWidget();
     }
 
+<<<<<<< HEAD
     /**
      * @see https://filamentphp.com/docs/3.x/forms/adding-a-form-to-a-livewire-component
      */
@@ -116,3 +130,54 @@ class RegistrationWidget extends XotBaseWidget
 
     
 }
+=======
+    public function register()
+    {
+        $data = $this->form->getState();
+        app($this->action)->execute($data);
+        /*
+        // Validazione dei dati
+        $this->validate();
+
+        // Creazione del dottore
+        $doctor = \Modules\Patient\Models\Doctor::create([
+            'full_name' => $data['full_name'] ?? ($data['first_name'] . ' ' . $data['last_name']),
+            'email' => $data['email'] ?? '',
+            'phone' => $data['phone'] ?? '',
+            'certification' => $data['certification'] ?? null,
+            'state' => \Modules\Patient\States\Pending::class, // Imposta lo stato iniziale
+        ]);
+
+        // Creazione del workflow di registrazione
+        $workflow = \Modules\Patient\Models\DoctorRegistrationWorkflow::create([
+            'doctor_id' => $doctor->id,
+            'current_step' => 'personal_info_step',
+            'status' => \Modules\Patient\Models\DoctorRegistrationWorkflow::STATUS_PENDING_MODERATION,
+            'started_at' => now(),
+            'last_interaction_at' => now(),
+            'session_id' => session()->getId(),
+        ]);
+
+        // Invio email di conferma
+        $this->sendConfirmationEmail($doctor);
+
+        // Reindirizzamento alla pagina di conferma
+        return redirect()->route('doctor.registration.confirmation');
+        */
+    }
+
+    /**
+     * Invia l'email di conferma della registrazione.
+     */
+    protected function sendConfirmationEmail(\Modules\Patient\Models\Doctor $doctor): void
+    {
+        $email = new \Modules\Notify\Emails\SpatieEmail($doctor, 'registration_pending');
+
+        \Illuminate\Support\Facades\Mail::to($doctor->email)
+            ->locale(app()->getLocale())
+            ->send($email);
+        session()->flash('message', 'Registrazione completata con successo. La tua richiesta è in attesa di moderazione.');
+        $this->form->fill();
+    }
+}
+>>>>>>> d46f92c (.)
