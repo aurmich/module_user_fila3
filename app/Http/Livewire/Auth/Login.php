@@ -124,12 +124,8 @@ class Login extends Component implements HasForms
             if (Auth::attempt($data, $remember)) {
                 session()->regenerate();
 
-<<<<<<< HEAD
                 // Redirect intelligente basato sui ruoli dell'utente
                 return $this->getRedirectUrl();
-=======
-                return redirect()->intended();
->>>>>>> b45e29f (.)
             }
 
             $this->addError('email', __('Le credenziali fornite non sono corrette.'));
@@ -140,7 +136,6 @@ class Login extends Component implements HasForms
     }
 
     /**
-<<<<<<< HEAD
      * Determina l'URL di redirect appropriato per l'utente autenticato.
      *
      * @return RedirectResponse
@@ -161,8 +156,10 @@ class Login extends Component implements HasForms
         if ($adminRoles->count() === 1) {
             // Un solo ruolo admin - redirect al modulo specifico
             $role = $adminRoles->first();
-            $moduleName = str_replace('::admin', '', $role->name);
-            return redirect()->to("/{$moduleName}/admin");
+            if ($role !== null) {
+                $moduleName = str_replace('::admin', '', $role->name);
+                return redirect()->to("/{$moduleName}/admin");
+            }
         } elseif ($adminRoles->count() > 1) {
             // Più ruoli admin - redirect alla dashboard principale
             return redirect()->to('/admin');
@@ -173,8 +170,6 @@ class Login extends Component implements HasForms
     }
 
     /**
-=======
->>>>>>> b45e29f (.)
      * Renderizza il componente.
      *
      * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
