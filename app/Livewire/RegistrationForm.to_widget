@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\HtmlString;
 use Livewire\Component;
-use Modules\Xot\Contracts\UserContract;
+use Modules\User\Contracts\UserContract;
 
 class RegistrationForm extends Component
 {
@@ -42,15 +42,7 @@ class RegistrationForm extends Component
                                 ->required()
                                 ->maxLength(255),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                             TextInput::make('last_name')
-=======
-                            TextInput::make('surname')
->>>>>>> 54f4fa16 (.)
-=======
-                            TextInput::make('last_name')
->>>>>>> 77f21bed (✨ (AddressResource.php): refactor address form schema to conditionally show the name field based on the number of addresses, enhancing user experience)
                                 ->label('Cognome')
                                 ->required()
                                 ->maxLength(255),
@@ -105,15 +97,7 @@ class RegistrationForm extends Component
 
         /** @var UserContract $user */
         $user = app(UserContract::class);
-<<<<<<< HEAD
-<<<<<<< HEAD
         $user->name = $state['name'] . ' ' . $state['last_name'];
-=======
-        $user->name = $state['name'] . ' ' . $state['surname'];
->>>>>>> 54f4fa16 (.)
-=======
-        $user->name = $state['name'] . ' ' . $state['last_name'];
->>>>>>> 77f21bed (✨ (AddressResource.php): refactor address form schema to conditionally show the name field based on the number of addresses, enhancing user experience)
         $user->email = $state['email'];
         $user->password = Hash::make($state['password']);
         $user->save();

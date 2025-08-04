@@ -6,14 +6,12 @@ namespace Modules\User\Http\Livewire\Auth;
 
 use Filament\Forms\ComponentContainer;
 use Filament\Forms\Components\Checkbox;
-use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\HtmlString;
 use Livewire\Component;
 use Modules\Xot\Actions\File\ViewCopyAction;
 
@@ -76,23 +74,7 @@ class Login extends Component implements HasForms
                 ->suffixIcon('heroicon-m-envelope')
                 ->autofocus()
                 ->live()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                 ->afterStateUpdated(fn ($state) => $this->validateOnly('email'))
-=======
-                ->afterStateUpdated(fn ($state) => $this->validateEmail($state))
->>>>>>> aurmich/dev
-=======
-                ->afterStateUpdated(fn ($state) => $this->validateOnly('email'))
->>>>>>> 345f8677 (phpstan)
-=======
-                ->afterStateUpdated(fn($state) => $this->validateOnly('email'))
->>>>>>> ae2048b (.)
-=======
-                ->afterStateUpdated(fn ($state) => $this->validateOnly('email'))
->>>>>>> a33fbfc (.)
                 ->dehydrated(),
 
             TextInput::make('password')
@@ -110,12 +92,6 @@ class Login extends Component implements HasForms
                 ->label(__('Ricordami'))
                 ->default(false)
                 ->dehydrated(),
-            Placeholder::make('signup_link')
-                ->hiddenLabel()
-                ->content(new HtmlString(
-                    __('Non hai un account?') . ' <a href="' . route('register') . '" class="text-blue-600 hover:underline">' . __('Registrati') . '</a>'
-                ))
-                ->extraAttributes(['class' => 'text-sm text-gray-600 dark:text-gray-300'])
         ];
     }
 
