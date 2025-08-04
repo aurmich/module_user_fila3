@@ -1,10 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-=======
-declare(strict_types=1);
-
->>>>>>> aurmich/dev
 return [
     'edit_user' => [
         'title' => 'Edit User Profile',

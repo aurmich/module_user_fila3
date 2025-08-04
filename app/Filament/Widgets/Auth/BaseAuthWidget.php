@@ -29,10 +29,6 @@ abstract class BaseAuthWidget extends Widget
             'form' => $this->getFormSchema(),
         ];
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 345f8677 (phpstan)
 
     /**
      * Restituisce lo schema del form per l'autenticazione.
@@ -41,9 +37,4 @@ abstract class BaseAuthWidget extends Widget
      * @return array<mixed>
      */
     abstract protected function getFormSchema(): array;
-<<<<<<< HEAD
-=======
->>>>>>> aurmich/dev
-=======
->>>>>>> 345f8677 (phpstan)
 }

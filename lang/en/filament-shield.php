@@ -1,88 +1,27 @@
 <?php
 
-<<<<<<< HEAD
 return [
-=======
-declare(strict_types=1);
-
-return [
-    /*
-    |--------------------------------------------------------------------------
-    | Table Columns
-    |--------------------------------------------------------------------------
-    */
-
->>>>>>> aurmich/dev
     'column.name' => 'Name',
     'column.guard_name' => 'Guard Name',
     'column.roles' => 'Roles',
     'column.permissions' => 'Permissions',
     'column.updated_at' => 'Updated At',
-<<<<<<< HEAD
-=======
-
-    /*
-    |--------------------------------------------------------------------------
-    | Form Fields
-    |--------------------------------------------------------------------------
-    */
-
->>>>>>> aurmich/dev
     'field.name' => 'Name',
     'field.guard_name' => 'Guard Name',
     'field.permissions' => 'Permissions',
     'field.select_all.name' => 'Select All',
-<<<<<<< HEAD
     'field.select_all.message' => 'Enable all Permissions currently <span class=\"text-primary font-medium\">Enabled</span> for this role',
-=======
-    'field.select_all.message' => 'Enable all Permissions currently <span class="text-primary font-medium">Enabled</span> for this role',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Navigation & Resource
-    |--------------------------------------------------------------------------
-    */
-
->>>>>>> aurmich/dev
     'nav.group' => 'Filament Shield',
     'nav.role.label' => 'Roles',
     'nav.role.icon' => 'heroicon-o-shield-check',
     'resource.label.role' => 'Role',
     'resource.label.roles' => 'Roles',
-<<<<<<< HEAD
-=======
-
-    /*
-    |--------------------------------------------------------------------------
-    | Section & Tabs
-    |--------------------------------------------------------------------------
-    */
-
->>>>>>> aurmich/dev
     'section' => 'Entities',
     'resources' => 'Resources',
     'widgets' => 'Widgets',
     'pages' => 'Pages',
     'custom' => 'Custom Permissions',
-<<<<<<< HEAD
     'forbidden' => 'You do not have permission to access',
-=======
-
-    /*
-    |--------------------------------------------------------------------------
-    | Messages
-    |--------------------------------------------------------------------------
-    */
-
-    'forbidden' => 'You do not have permission to access',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Resource Permissions' Labels
-    |--------------------------------------------------------------------------
-    */
-
->>>>>>> aurmich/dev
     'resource_permission_prefixes_labels' => [
         'view' => 'View',
         'view_any' => 'View Any',

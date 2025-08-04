@@ -1,10 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-=======
-declare(strict_types=1);
-
->>>>>>> aurmich/dev
 return [
     'new_password' => [
         'label' => 'New Password',
@@ -14,7 +9,6 @@ return [
         'label' => 'Confirm Password',
         'placeholder' => 'Confirm your new password',
     ],
-<<<<<<< HEAD
     'name' => 'Nome',
     'slug' => 'Slug',
     'email' => 'Email',
@@ -27,6 +21,4 @@ return [
     'actions' => [
         'attach_user' => 'Attacca utente',
     ],
-=======
->>>>>>> aurmich/dev
 ];

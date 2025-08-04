@@ -23,12 +23,9 @@ return array (
     array (
       'label' => 'name',
     ),
-<<<<<<< HEAD
     'changePassword' => 
     array (
       'label' => 'changePassword',
     ),
-=======
->>>>>>> aurmich/dev
   ),
 );

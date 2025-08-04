@@ -22,12 +22,6 @@ class ListUsers extends BaseListUsers
 {
     protected static string $resource = UserResource::class;
 
-<<<<<<< HEAD
-=======
-    /**
-     * @return array<string, TextColumn>
-     */
->>>>>>> aurmich/dev
     public function getTableColumns(): array
     {
         return [
@@ -49,23 +43,16 @@ class ListUsers extends BaseListUsers
     public function getTableFilters(): array
     {
         return [
-<<<<<<< HEAD
             /*
-=======
->>>>>>> aurmich/dev
             Filter::make('verified')
                 ->query(static fn (Builder $query): Builder => $query->whereNotNull('email_verified_at')),
             Filter::make('unverified')
                 ->query(static fn (Builder $query): Builder => $query->whereNull('email_verified_at')),
-<<<<<<< HEAD
             */
-=======
->>>>>>> aurmich/dev
         ];
     }
 
     /**
-<<<<<<< HEAD
      * @phpstan-ignore-next-line
      */
     public function getTableActions(): array
@@ -77,18 +64,6 @@ class ListUsers extends BaseListUsers
                 ->iconButton(),
             ...parent::getTableActions(),
             'deactivate' => Action::make('deactivate')
-=======
-     * @return array<Action|Tables\Actions\ActionGroup>
-     */
-    public function getTableActions(): array
-    {
-        return [
-            ChangePasswordAction::make()
-                ->tooltip('Cambio Password')
-                ->iconButton(),
-            ...parent::getTableActions(),
-            Action::make('deactivate')
->>>>>>> aurmich/dev
                 ->tooltip(__('filament-actions::delete.single.label'))
                 ->color('danger')
                 ->icon('heroicon-o-trash')

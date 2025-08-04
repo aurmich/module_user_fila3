@@ -140,8 +140,4 @@
 
     </div>
     @endvolt
-<<<<<<< HEAD
 </x-layouts.marketing>
-=======
-</x-layouts.marketing>
->>>>>>> aurmich/dev

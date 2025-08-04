@@ -43,11 +43,7 @@ class LogoutWidget extends XotBaseWidget
      * 
      * @var string
      * 
-<<<<<<< HEAD
      * @phpstan-ignore property.phpDocType 
-=======
-     * @phpstan-ignore-next-line 
->>>>>>> aurmich/dev
      */
     protected static string $view = 'user::widgets.logout';
 
@@ -88,17 +84,12 @@ class LogoutWidget extends XotBaseWidget
      */
     public function getFormSchema(): array
     {
-<<<<<<< HEAD
         $view='filament.widgets.auth.logout-message';
         if(!view()->exists($view)){
             throw new \Exception('View '.$view.' not found');
         }
         return [
             'message' => View::make($view)
-=======
-        return [
-            'message' => View::make('filament.widgets.auth.logout-message')
->>>>>>> aurmich/dev
                 ->columnSpanFull(),
         ];
     }

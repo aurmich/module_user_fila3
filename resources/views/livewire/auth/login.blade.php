@@ -49,22 +49,14 @@
                         <input wire:model="remember" id="remember" type="checkbox" 
                             class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
                         <label for="remember" class="ml-2 block text-sm text-gray-900">
-<<<<<<< HEAD
                             {{ __('pub_theme::auth.login.remember') }}
-=======
-                            {{ __('auth.login.remember') }}
->>>>>>> aurmich/dev
                         </label>
                     </div>
 
                     @if (Route::has('password.request'))
                         <div class="text-sm">
                             <a href="{{ route('password.request') }}" class="font-medium text-blue-600 hover:text-blue-500">
-<<<<<<< HEAD
                                 {{ __('pub_theme::auth.login.forgot_password') }}
-=======
-                                {{ __('auth.login.forgot_password') }}
->>>>>>> aurmich/dev
                             </a>
                         </div>
                     @endif
@@ -80,13 +72,13 @@
 <<<<<<< HEAD
                         </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                         </span> -->
 >>>>>>> ae2048b (.)
-                        {{ __('pub_theme::auth.login.submit') }}
 =======
-                        {{ __('auth.login.submit') }}
->>>>>>> aurmich/dev
+>>>>>>> a33fbfc (.)
+                        {{ __('pub_theme::auth.login.submit') }}
                     </button>
                 </div>
             </form>

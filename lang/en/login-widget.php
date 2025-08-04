@@ -1,10 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-=======
-declare(strict_types=1);
-
->>>>>>> aurmich/dev
 return [
     'name' => 'Login',
     'fields' => [
@@ -47,8 +42,4 @@ return [
             'too_many_attempts' => 'Too many attempts, please try again later',
         ],
     ],
-<<<<<<< HEAD
 ];
-=======
-]; 
->>>>>>> aurmich/dev

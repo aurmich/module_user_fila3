@@ -1,10 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-=======
-declare(strict_types=1);
-
->>>>>>> aurmich/dev
 return [
     'name' => 'Teams',
     'fields' => [
@@ -78,8 +73,4 @@ return [
             'description' => 'User who created this team',
         ],
     ],
-<<<<<<< HEAD
 ];
-=======
-]; 
->>>>>>> aurmich/dev

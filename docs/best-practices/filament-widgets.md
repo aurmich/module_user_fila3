@@ -117,15 +117,12 @@ public function testWidgetRendering()
 }
 ```
 
-<<<<<<< HEAD
 ### 5. Integrazione con Filtri Dashboard
 - Utilizzare accesso sicuro ai filtri della pagina
 - Implementare fallback appropriati quando i filtri non sono disponibili
 - Verificare sempre l'esistenza di `$this->filters` prima dell'accesso
 - Vedere: [Dashboard Filters Integration](../filament/widgets/dashboard-filters-integration.md)
 
-=======
->>>>>>> aurmich/dev
 ## Checklist di Verifica
 
 1. [ ] I dati sono validati prima dell'uso

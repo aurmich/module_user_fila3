@@ -81,7 +81,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static \Illuminate\Database\Eloquent\Builder|User withoutPermission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|User withoutRole($roles, $guard = null)
  * @property string $last_name
-<<<<<<< HEAD
  * @property-read \Modules\User\Models\Team|null $currentTeam
  * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Modules\Media\Models\Media> $media
  * @property-read int|null $media_count
@@ -90,8 +89,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Membership> $teamUsers
  * @property-read int|null $team_users_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\User> $all_team_users
-=======
->>>>>>> aurmich/dev
  * @mixin \Eloquent
  */
 class User extends BaseUser

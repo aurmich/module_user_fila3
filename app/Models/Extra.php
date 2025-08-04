@@ -7,11 +7,6 @@ namespace Modules\User\Models;
 use Modules\Xot\Models\Extra as XotBaseExtra;
 
 /**
-<<<<<<< HEAD
-=======
- * 
- *
->>>>>>> aurmich/dev
  * @property \Spatie\SchemalessAttributes\SchemalessAttributes $extra_attributes
  * @method static \Illuminate\Database\Eloquent\Builder|Extra newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Extra newQuery()
