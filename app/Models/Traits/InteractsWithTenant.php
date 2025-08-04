@@ -40,7 +40,11 @@ trait InteractsWithTenant
 
         $tenantClass = config('tenant.tenant_model', Tenant::class);
 
+<<<<<<< HEAD
         // @phpstan-ignore argument.type, argument.templateType
+=======
+        // @phpstan-ignore-next-line
+>>>>>>> aurmich/dev
         return $this->belongsTo($tenantClass, 'tenant_id');
     }
 

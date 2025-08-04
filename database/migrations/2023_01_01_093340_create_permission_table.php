@@ -43,15 +43,32 @@ return new class extends XotBaseMigration
         $cache_key = config('permission.cache.key');
 
         try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 03b27bf2 (✨ (laravel): update .env.example to remove DEBUGBAR_ENABLED and improve clarity)
             // Verifica se l'applicazione è completamente inizializzata
             if (app()->bound('cache')) {
                 app('cache')
                     ->store($cache_store !== 'default' ? $cache_store : null)
                     ->forget($cache_key);
             }
+<<<<<<< HEAD
         } catch (Exception $e) {
             // Silently ignore cache errors during package discovery
             // echo $e->getMessage();
+=======
+            app('cache')
+                ->store($cache_store !== 'default' ? $cache_store : null)
+                ->forget($cache_key);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+>>>>>>> aurmich/dev
+=======
+        } catch (Exception $e) {
+            // Silently ignore cache errors during package discovery
+            // echo $e->getMessage();
+>>>>>>> 03b27bf2 (✨ (laravel): update .env.example to remove DEBUGBAR_ENABLED and improve clarity)
         }
     }
 

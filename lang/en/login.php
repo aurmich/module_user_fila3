@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 <?php
 
 return array (
-=======
-<?php return array (
->>>>>>> d46f92c (.)
   'fields' => 
   array (
     'email' => 
     array (
+<<<<<<< HEAD
       'label' => 'Email',
       'placeholder' => 'Enter your email',
       'help' => 'Enter your email address to log in',
@@ -18,10 +15,23 @@ return array (
       'label' => 'Password',
       'placeholder' => 'Enter your password',
       'help' => 'Enter your account password',
+=======
+      'label' => 'email',
+      'placeholder' => 'email',
+      'helper_text' => 'email',
+      'description' => 'email',
+    ),
+    'password' => 
+    array (
+      'label' => 'password',
+      'placeholder' => 'password',
+      'helper_text' => 'password',
+>>>>>>> aurmich/dev
       'description' => 'password',
     ),
     'remember' => 
     array (
+<<<<<<< HEAD
       'label' => 'Remember me',
       'placeholder' => '',
       'help' => 'Keep me logged in on this device',
@@ -77,5 +87,12 @@ return array (
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
     'general_error' => 'An error occurred. Please try again later.',
     'unauthorized' => 'You do not have the necessary permissions for this operation.',
+=======
+      'label' => 'remember',
+      'description' => 'remember',
+      'placeholder' => 'remember',
+      'helper_text' => 'remember',
+    ),
+>>>>>>> aurmich/dev
   ),
 );

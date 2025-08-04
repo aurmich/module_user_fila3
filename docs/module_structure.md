@@ -99,7 +99,10 @@ return [
     'prefix' => 'user',
     'namespace' => 'Modules\User\Http\Controllers',
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> aurmich/dev
 # Struttura Standard dei Moduli Laravel
 
 ## Struttura Base Corretta
@@ -282,7 +285,10 @@ laravel/Modules/ModuleName/
 ## Comandi Utili
 
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> aurmich/dev
 # Verifica struttura cartelle
 tree -L 3 laravel/Modules/User/
 
@@ -293,27 +299,3 @@ find . -type d -name "Resources" -o -name "Lang"
 chmod -R 755 laravel/Modules/*/app/
 chmod -R 644 laravel/Modules/*/resources/
 ``` 
-
-## Provider: Proprietà Fondamentali (Laraxot/PTVX)
-
-Tutti i provider dei moduli che estendono XotBaseServiceProvider **devono** dichiarare:
-- `protected string $module_dir = __DIR__;`
-- `protected string $module_ns = __NAMESPACE__;`
-- `public string $name = 'User';`
-
-**Motivazione:**
-- Queste proprietà sono essenziali per la risoluzione automatica di path, namespace e publish.
-- Se mancanti, alcune risorse (views, translations, svg, ecc.) potrebbero non essere caricate correttamente.
-
-**Esempio:**
-```php
-class UserServiceProvider extends XotBaseServiceProvider
-{
-    protected string $module_dir = __DIR__;
-    protected string $module_ns = __NAMESPACE__;
-    public string $name = 'User';
-}
-```
-
-**Approfondimenti:**
-- Vedi anche [../../../../docs/PROVIDER_OVERVIEW.md](../../../../docs/PROVIDER_OVERVIEW.md) 

@@ -14,11 +14,7 @@ return array (
       'description' => 'Gestione dei provider social',
     ),
     'label' => 'social provider',
-<<<<<<< HEAD
     'sort' => 93,
-=======
-    'sort' => 91,
->>>>>>> d46f92c (.)
     'icon' => 'user-user-social',
   ),
   'fields' => 
@@ -34,13 +30,10 @@ return array (
       'name' => 'Seleziona Tutti',
       'message' => '',
     ),
-<<<<<<< HEAD
     'applyFilters' => 
     array (
       'label' => 'applyFilters',
     ),
-=======
->>>>>>> d46f92c (.)
   ),
   'actions' => 
   array (

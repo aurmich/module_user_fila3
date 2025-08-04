@@ -7,7 +7,11 @@ return array (
     array (
       'label' => 'email',
       'description' => 'email',
+<<<<<<< HEAD
       'helper_text' => '',
+=======
+      'helper_text' => 'email',
+>>>>>>> aurmich/dev
       'placeholder' => 'email',
     ),
     'password' =>
@@ -16,9 +20,10 @@ return array (
       'description' => 'password',
 <<<<<<< HEAD
       'helper_text' => '',
-      'placeholder' => 'password',
 =======
->>>>>>> d46f92c (.)
+      'helper_text' => 'password',
+>>>>>>> aurmich/dev
+      'placeholder' => 'password',
     ),
     'remember' =>
     array (
@@ -28,7 +33,7 @@ return array (
       'helper_text' => '',
 =======
       'helper_text' => 'remember',
->>>>>>> d46f92c (.)
+>>>>>>> aurmich/dev
       'placeholder' => 'remember',
     ),
   ),

@@ -1,6 +1,5 @@
 <?php
 
-<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -18,6 +17,7 @@ return [
     'fields' => [
         'id' => [
             'label' => 'ID',
+<<<<<<< HEAD
             'help' => 'Identificativo univoco dell\'utente',
             'tooltip' => 'ID utente',
             'helper_text' => '',
@@ -49,24 +49,42 @@ return [
             'help' => 'Indirizzo email dell\'utente',
             'tooltip' => 'Email per l\'accesso e le comunicazioni',
             'helper_text' => '',
+=======
+        ],
+        'name' => [
+            'label' => 'Nome',
+            'placeholder' => 'Inserisci il nome',
+        ],
+        'email' => [
+            'label' => 'Email',
+            'placeholder' => 'Inserisci l\'email',
+>>>>>>> aurmich/dev
         ],
         'password' => [
             'label' => 'Password',
             'placeholder' => 'Inserisci la password',
+<<<<<<< HEAD
             'help' => 'Password per l\'accesso al sistema',
             'tooltip' => 'Password di accesso',
             'helper_text' => '',
+=======
+            'description' => 'password',
+>>>>>>> aurmich/dev
         ],
         'password_confirmation' => [
             'label' => 'Conferma Password',
             'placeholder' => 'Conferma la password',
+<<<<<<< HEAD
             'help' => 'Ripeti la password per conferma',
             'tooltip' => 'Conferma della password',
             'helper_text' => '',
+=======
+>>>>>>> aurmich/dev
         ],
         'current_password' => [
             'label' => 'Password Attuale',
             'placeholder' => 'Inserisci la password attuale',
+<<<<<<< HEAD
             'help' => 'Password corrente per la verifica',
             'tooltip' => 'Password attuale',
             'helper_text' => '',
@@ -105,10 +123,25 @@ return [
             'help' => 'Stato dell\'account utente',
             'tooltip' => 'Stato dell\'utente',
             'helper_text' => '',
+=======
+        ],
+        'role' => [
+            'label' => 'Ruolo',
+        ],
+        'roles' => [
+            'label' => 'Ruoli',
+        ],
+        'permissions' => [
+            'label' => 'Permessi',
+        ],
+        'status' => [
+            'label' => 'Stato',
+>>>>>>> aurmich/dev
             'options' => [
                 'active' => 'Attivo',
                 'inactive' => 'Inattivo',
                 'blocked' => 'Bloccato',
+<<<<<<< HEAD
                 'pending' => 'In Attesa',
                 'suspended' => 'Sospeso',
             ],
@@ -125,10 +158,13 @@ return [
                 'doctor' => 'Medico',
                 'patient' => 'Paziente',
                 'staff' => 'Personale',
+=======
+>>>>>>> aurmich/dev
             ],
         ],
         'last_login' => [
             'label' => 'Ultimo Accesso',
+<<<<<<< HEAD
             'help' => 'Data e ora dell\'ultimo accesso',
             'tooltip' => 'Ultimo login',
             'helper_text' => '',
@@ -335,6 +371,80 @@ return [
             'icon' => 'heroicon-o-x-circle',
             'tooltip' => 'Disattiva l\'utente',
         ],
+=======
+        ],
+        'created_at' => [
+            'label' => 'Data Creazione',
+        ],
+        'updated_at' => [
+            'label' => 'Ultima Modifica',
+        ],
+        'avatar' => [
+            'label' => 'Avatar',
+        ],
+        'language' => [
+            'label' => 'Lingua',
+        ],
+        'timezone' => [
+            'label' => 'Fuso Orario',
+        ],
+        'password_expires_at' => [
+            'label' => 'Scadenza Password',
+        ],
+        'verified' => [
+            'label' => 'Verificato',
+        ],
+        'unverified' => [
+            'label' => 'Non Verificato',
+        ],
+        'applyFilters' => [
+            'label' => 'applyFilters',
+        ],
+        'toggleColumns' => [
+            'label' => 'toggleColumns',
+        ],
+        'reorderRecords' => [
+            'label' => 'reorderRecords',
+        ],
+        'resetFilters' => [
+            'label' => 'resetFilters',
+        ],
+        'openFilters' => [
+            'label' => 'openFilters',
+        ],
+        'isActive' => [
+            'label' => 'isActive',
+        ],
+        'deactivate' => [
+            'label' => 'deactivate',
+        ],
+        'delete' => [
+            'label' => 'delete',
+        ],
+        'edit' => [
+            'label' => 'edit',
+        ],
+        'view' => [
+            'label' => 'view',
+        ],
+        'create' => [
+            'label' => 'create',
+        ],
+        'email_verified_at' => [
+            'label' => 'Email Verificata il',
+        ],
+    ],
+    'actions' => [
+        'create' => 'Crea Utente',
+        'edit' => 'Modifica Utente',
+        'delete' => 'Elimina Utente',
+        'impersonate' => 'Impersona Utente',
+        'stop_impersonating' => 'Termina Impersonificazione',
+        'block' => 'Blocca',
+        'unblock' => 'Sblocca',
+        'send_reset_link' => 'Invia Link Reset Password',
+        'verify_email' => 'Verifica Email',
+>>>>>>> aurmich/dev
     ],
     'messages' => [
         'created' => 'Utente creato con successo',
@@ -342,6 +452,7 @@ return [
         'deleted' => 'Utente eliminato con successo',
         'blocked' => 'Utente bloccato con successo',
         'unblocked' => 'Utente sbloccato con successo',
+<<<<<<< HEAD
         'activated' => 'Utente attivato con successo',
         'deactivated' => 'Utente disattivato con successo',
         'reset_link_sent' => 'Link per il reset della password inviato',
@@ -374,11 +485,21 @@ return [
         'max' => 'Il campo :attribute non può superare :max caratteri',
         'confirmed' => 'La conferma del campo :attribute non corrisponde',
         'same' => 'Il campo :attribute deve corrispondere a :other',
+=======
+        'reset_link_sent' => 'Link per il reset della password inviato',
+        'email_verified' => 'Email verificata con successo',
+        'impersonating' => 'Stai impersonando l\'utente :name',
+    ],
+    'validation' => [
+>>>>>>> aurmich/dev
         'email_unique' => 'Questa email è già in uso',
         'password_min' => 'La password deve essere di almeno :min caratteri',
         'password_confirmed' => 'Le password non coincidono',
         'current_password' => 'La password attuale non è corretta',
+<<<<<<< HEAD
         'password_complexity' => 'La password deve contenere almeno 8 caratteri, una lettera maiuscola, una minuscola, un numero e un carattere speciale',
+=======
+>>>>>>> aurmich/dev
     ],
     'permissions' => [
         'view_users' => 'Visualizza utenti',
@@ -387,6 +508,7 @@ return [
         'delete_users' => 'Elimina utenti',
         'impersonate_users' => 'Impersona utenti',
         'manage_roles' => 'Gestisci ruoli',
+<<<<<<< HEAD
         'manage_permissions' => 'Gestisci permessi',
         'view_roles' => 'Visualizza ruoli',
         'create_roles' => 'Crea ruoli',
@@ -576,208 +698,10 @@ return [
         'error' => 'Si è verificato un errore',
     ],
     'search_placeholder' => 'Cerca per nome, email o ruolo...',
-];
 =======
-return array (
-  'navigation' => 
-  array (
-    'name' => 'Utenti',
-    'plural' => 'Utenti',
-    'group' => 
-    array (
-      'name' => 'Gestione Utenti',
-      'description' => 'Gestione degli utenti e dei loro permessi',
-    ),
-    'label' => 'Utenti',
-    'sort' => 11,
-    'icon' => 'user-main',
-  ),
-  'fields' => 
-  array (
-    'id' => 
-    array (
-      'label' => 'ID',
-    ),
-    'name' => 
-    array (
-      'label' => 'Nome',
-      'placeholder' => 'Inserisci il nome',
-      'description' => 'name',
-      'helper_text' => 'name',
-    ),
-    'email' => 
-    array (
-      'label' => 'Email',
-      'placeholder' => 'Inserisci l\'email',
-      'description' => 'email',
-      'helper_text' => 'email',
-    ),
-    'password' => 
-    array (
-      'label' => 'Password',
-      'placeholder' => 'Inserisci la password',
-      'description' => 'password',
-      'helper_text' => 'password',
-    ),
-    'password_confirmation' => 
-    array (
-      'label' => 'Conferma Password',
-      'placeholder' => 'Conferma la password',
-    ),
-    'current_password' => 
-    array (
-      'label' => 'Password Attuale',
-      'placeholder' => 'Inserisci la password attuale',
-    ),
-    'role' => 
-    array (
-      'label' => 'Ruolo',
-    ),
-    'roles' => 
-    array (
-      'label' => 'Ruoli',
-    ),
-    'permissions' => 
-    array (
-      'label' => 'Permessi',
-    ),
-    'status' => 
-    array (
-      'label' => 'Stato',
-      'options' => 
-      array (
-        'active' => 'Attivo',
-        'inactive' => 'Inattivo',
-        'blocked' => 'Bloccato',
-      ),
-    ),
-    'last_login' => 
-    array (
-      'label' => 'Ultimo Accesso',
-    ),
-    'created_at' => 
-    array (
-      'label' => 'Data Creazione',
-    ),
-    'updated_at' => 
-    array (
-      'label' => 'Ultima Modifica',
-    ),
-    'avatar' => 
-    array (
-      'label' => 'Avatar',
-    ),
-    'language' => 
-    array (
-      'label' => 'Lingua',
-    ),
-    'timezone' => 
-    array (
-      'label' => 'Fuso Orario',
-    ),
-    'password_expires_at' => 
-    array (
-      'label' => 'Scadenza Password',
-    ),
-    'verified' => 
-    array (
-      'label' => 'Verificato',
-    ),
-    'unverified' => 
-    array (
-      'label' => 'Non Verificato',
-    ),
-    'applyFilters' => 
-    array (
-      'label' => 'applyFilters',
-    ),
-    'toggleColumns' => 
-    array (
-      'label' => 'toggleColumns',
-    ),
-    'reorderRecords' => 
-    array (
-      'label' => 'reorderRecords',
-    ),
-    'resetFilters' => 
-    array (
-      'label' => 'resetFilters',
-    ),
-    'openFilters' => 
-    array (
-      'label' => 'openFilters',
-    ),
-    'isActive' => 
-    array (
-      'label' => 'isActive',
-    ),
-    'deactivate' => 
-    array (
-      'label' => 'deactivate',
-    ),
-    'delete' => 
-    array (
-      'label' => 'delete',
-    ),
-    'edit' => 
-    array (
-      'label' => 'edit',
-    ),
-    'view' => 
-    array (
-      'label' => 'view',
-    ),
-    'create' => 
-    array (
-      'label' => 'create',
-    ),
-    'email_verified_at' => 
-    array (
-      'label' => 'Email Verificata il',
-    ),
-  ),
-  'actions' => 
-  array (
-    'create' => 'Crea Utente',
-    'edit' => 'Modifica Utente',
-    'delete' => 'Elimina Utente',
-    'impersonate' => 'Impersona Utente',
-    'stop_impersonating' => 'Termina Impersonificazione',
-    'block' => 'Blocca',
-    'unblock' => 'Sblocca',
-    'send_reset_link' => 'Invia Link Reset Password',
-    'verify_email' => 'Verifica Email',
-  ),
-  'messages' => 
-  array (
-    'created' => 'Utente creato con successo',
-    'updated' => 'Utente aggiornato con successo',
-    'deleted' => 'Utente eliminato con successo',
-    'blocked' => 'Utente bloccato con successo',
-    'unblocked' => 'Utente sbloccato con successo',
-    'reset_link_sent' => 'Link per il reset della password inviato',
-    'email_verified' => 'Email verificata con successo',
-    'impersonating' => 'Stai impersonando l\'utente :name',
-  ),
-  'validation' => 
-  array (
-    'email_unique' => 'Questa email è già in uso',
-    'password_min' => 'La password deve essere di almeno :min caratteri',
-    'password_confirmed' => 'Le password non coincidono',
-    'current_password' => 'La password attuale non è corretta',
-  ),
-  'permissions' => 
-  array (
-    'view_users' => 'Visualizza utenti',
-    'create_users' => 'Crea utenti',
-    'edit_users' => 'Modifica utenti',
-    'delete_users' => 'Elimina utenti',
-    'impersonate_users' => 'Impersona utenti',
-    'manage_roles' => 'Gestisci ruoli',
-  ),
-  'model' => 
-  array (
-    'label' => 'Utente',
-  ),
-);
->>>>>>> d46f92c (.)
+    ],
+    'model' => [
+        'label' => 'Utente',
+    ],
+>>>>>>> aurmich/dev
+];

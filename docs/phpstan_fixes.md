@@ -50,7 +50,7 @@ Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` ut
 * [PHPSTAN_FIXES.md](../../../User/docs/PHPSTAN_FIXES.md)
 * [PHPSTAN_FIXES.md](../../../UI/docs/PHPSTAN_FIXES.md)
 * [PHPSTAN_FIXES.md](../../../Media/docs/PHPSTAN_FIXES.md)
->>>>>>> d46f92c (.)
+>>>>>>> aurmich/dev
 
 
 ### Versione Incoming

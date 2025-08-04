@@ -4,7 +4,10 @@
 
 ### 1. Controllo Versione
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> aurmich/dev
 # Verifica versione Filament
 composer show filament/filament
 

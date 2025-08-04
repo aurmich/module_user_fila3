@@ -22,7 +22,10 @@ use Filament\Models\Contracts\HasTenants;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\Collection;
 use Modules\User\Database\Factories\UserFactory;
+<<<<<<< HEAD
 use Modules\Xot\Actions\Factory\GetFactoryAction;
+=======
+>>>>>>> aurmich/dev
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
@@ -35,20 +38,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Notifications\DatabaseNotificationCollection;
-<<<<<<< HEAD
-=======
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Str;
-use Laravel\Passport\HasApiTokens;
-use Modules\User\Database\Factories\UserFactory;
-use Modules\User\Models\Traits\HasTeams;
-use Modules\Xot\Contracts\UserContract;
-use Modules\Xot\Datas\XotData;
-use Modules\Xot\Models\Traits\RelationX;
-use Spatie\Permission\Traits\HasRoles;
-use Parental\HasChildren;
-use Illuminate\Support\Facades\Schema;
->>>>>>> d46f92c (.)
 
 /**
  * Base User Model
@@ -142,10 +131,7 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     use HasApiTokens;
     use HasFactory;
     use HasRoles;
-<<<<<<< HEAD
     // Guard coerente con Spatie/Permission
-=======
->>>>>>> d46f92c (.)
     use HasUuids;
     use Notifiable;
     use RelationX;
@@ -350,7 +336,15 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     /**
      * Get the socialite users associated with the user.
      *
+<<<<<<< HEAD
+<<<<<<< HEAD
      * @return HasMany<SocialiteUser, $this>
+=======
+     * @return HasMany<SocialiteUser, static>
+>>>>>>> aurmich/dev
+=======
+     * @return HasMany<SocialiteUser, $this>
+>>>>>>> 345f8677 (phpstan)
      */
     public function socialiteUsers(): HasMany
     {
@@ -420,7 +414,11 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
      */
     protected static function newFactory()
     {
+<<<<<<< HEAD
         return app(GetFactoryAction::class)->execute(static::class);
+=======
+        return UserFactory::new();
+>>>>>>> aurmich/dev
     }
 
     /** @return array<string, string> */
@@ -450,28 +448,6 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
 
 
 
-<<<<<<< HEAD
-=======
-    /**
-     * Get the role name for the current team.
-     *
-     * @return array<int, string>
-     */
-    /**
-     * Get all role names associated with the user.
-     *
-     * @return array<int, string>
-     */
-    public function getRoleNames(): array
-    {
-        /** @var array<int, string> */
-        return $this->roles()->pluck('name')->filter()->values()->toArray();
-    }
-
-
-
-
->>>>>>> d46f92c (.)
 
     public function authentications(): MorphMany
     {

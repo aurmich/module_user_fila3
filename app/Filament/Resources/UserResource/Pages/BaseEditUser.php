@@ -27,7 +27,7 @@ use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Models\User;
 use Webmozart\Assert\Assert;
 
->>>>>>> d46f92c (.)
+>>>>>>> aurmich/dev
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 /**
@@ -71,7 +71,7 @@ abstract class BaseEditUser extends EditRecord
 <<<<<<< HEAD
             ChangePasswordHeaderAction::make('change-password'),
 =======
->>>>>>> d46f92c (.)
+>>>>>>> aurmich/dev
         ];
     }
 }

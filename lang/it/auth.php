@@ -188,7 +188,11 @@ return [
         'title' => 'Reimposta password',
         'subtitle' => 'Inserisci la nuova password',
         'email' => 'Indirizzo email',
+<<<<<<< HEAD
         'email_placeholder' => 'Inserisci il tuo indirizzo email',
+=======
+        'email_placeholder' => 'esempio@email.com',
+>>>>>>> aurmich/dev
         'password' => 'Nuova password',
         'password_placeholder' => '••••••••',
         'password_confirmation' => 'Conferma password',
@@ -196,6 +200,7 @@ return [
         'submit' => 'Reimposta password',
         'success' => 'Password reimpostata con successo.',
         'failed' => 'Impossibile reimpostare la password.',
+<<<<<<< HEAD
         'send_button' => 'Invia link di reset',
         'back_to_login' => 'Torna al login',
         'send_another' => 'Invia un altro link',
@@ -207,6 +212,8 @@ return [
             'title' => 'Errore nell\'invio',
             'generic' => 'Si è verificato un errore durante l\'invio dell\'email. Riprova più tardi.',
         ],
+=======
+>>>>>>> aurmich/dev
         // Structured version
         'email_structured' => [
             'label' => 'Email',
@@ -249,6 +256,7 @@ return [
         'too_many_attempts' => 'Troppi tentativi. Riprova più tardi.',
         'session_expired' => 'Sessione scaduta. Effettua nuovamente il login.',
     ],
+<<<<<<< HEAD
 
     // Password Reset Widget - specific translations
     'password_reset' => [
@@ -297,6 +305,8 @@ return [
             'try_again' => 'Riprova',
         ],
     ],
+=======
+>>>>>>> aurmich/dev
     
     // Reset Password
     'passwords' => [

@@ -152,7 +152,10 @@ const calendarOptions = {
 
 ### 1. Variabili Ambiente (.env)
 ```env
+<<<<<<< HEAD
 
+=======
+>>>>>>> aurmich/dev
 # Licenza FullCalendar Scheduler
 FULLCALENDAR_SCHEDULER_LICENSE_KEY=XXXXXXXXXX-XXX-XXXXXXXXXX
 
@@ -263,7 +266,10 @@ class AdminPanelProvider extends XotBasePanelProvider
 
 ### 1. Verifica Configurazione
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> aurmich/dev
 # Verificare variabili ambiente
 php artisan config:show fullcalendar
 

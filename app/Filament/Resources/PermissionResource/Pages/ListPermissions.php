@@ -70,6 +70,7 @@ class ListPermissions extends XotBaseListRecords
         ];
     }
 
+<<<<<<< HEAD
     /**
      * @return array<string, \Filament\Actions\Action>
      */
@@ -77,6 +78,12 @@ class ListPermissions extends XotBaseListRecords
     {
         return [
             'create' => CreateAction::make(),
+=======
+    protected function getHeaderActions(): array
+    {
+        return [
+            CreateAction::make(),
+>>>>>>> aurmich/dev
         ];
     }
 

@@ -32,7 +32,11 @@ class ChangeTypeCommand extends Command
     /**
      * The console command description.
      *
+<<<<<<< HEAD
      * @var string
+=======
+     * @var string|null
+>>>>>>> aurmich/dev
      */
     protected $description = 'Change user type based on project configuration';
 
@@ -56,7 +60,15 @@ class ChangeTypeCommand extends Command
         $xot = XotData::make();
         $email = text('User email?');
         
+<<<<<<< HEAD
+<<<<<<< HEAD
         /** @var UserContract $user */
+=======
+        /** @var UserContract|null */
+>>>>>>> aurmich/dev
+=======
+        /** @var UserContract $user */
+>>>>>>> 345f8677 (phpstan)
         $user = XotData::make()->getUserByEmail($email);
 
         if (!$user) {
@@ -69,6 +81,8 @@ class ChangeTypeCommand extends Command
         }
 
         $childTypes = $xot->getUserChildTypes();
+<<<<<<< HEAD
+<<<<<<< HEAD
         /** @phpstan-ignore nullsafe.neverNull */
         $this->info("Current user type: {$user->type?->getLabel()}");
         
@@ -78,6 +92,22 @@ class ChangeTypeCommand extends Command
             //$val = $typeClass::tryFrom((string) $key)?->getLabel();
             //return [(string) $key => '['.$key.'] '.$val.''];
             return[$item->value => $item->getLabel()];
+=======
+        $this->info("Current user type: {$user->type?->getLabel()}");
+        
+        $typeClass = $xot->getUserChildTypeClass();
+        $options = Arr::mapWithKeys($childTypes, function ($item, string $key) use ($typeClass) {
+            $val = $typeClass::tryFrom($key)?->getLabel();
+            return [$key => $val];
+>>>>>>> aurmich/dev
+=======
+        $this->info("Current user type: {$user->type->getLabel()}");
+        
+        $typeClass = $xot->getUserChildTypeClass();
+        $options = Arr::mapWithKeys($childTypes, function ($item, int|string $key) use ($typeClass) {
+            $val = $typeClass::tryFrom((string) $key)?->getLabel();
+            return [(string) $key => $val];
+>>>>>>> 345f8677 (phpstan)
         });
 
         $newType = select('Select new user type:', $options);

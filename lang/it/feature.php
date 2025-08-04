@@ -14,11 +14,7 @@ return array (
       'description' => 'Gestione delle feature e delle funzionalità',
     ),
     'label' => 'feature',
-<<<<<<< HEAD
     'sort' => 75,
-=======
-    'sort' => 91,
->>>>>>> d46f92c (.)
     'icon' => 'user-user-feature',
   ),
   'fields' => 
@@ -38,7 +34,6 @@ return array (
     array (
       'label' => 'value',
     ),
-<<<<<<< HEAD
     'toggleColumns' => 
     array (
       'label' => 'toggleColumns',
@@ -59,8 +54,6 @@ return array (
     array (
       'label' => 'openFilters',
     ),
-=======
->>>>>>> d46f92c (.)
   ),
   'actions' => 
   array (
@@ -81,11 +74,8 @@ return array (
       ),
     ),
   ),
-<<<<<<< HEAD
   'model' => 
   array (
     'label' => 'feature.model',
   ),
-=======
->>>>>>> d46f92c (.)
 );

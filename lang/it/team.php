@@ -11,7 +11,7 @@ return array (
       'description' => 'Gestione dei team e delle loro autorizzazioni',
     ),
     'label' => 'team',
-    'sort' => 83,
+    'sort' => 18,
     'icon' => 'user-team',
   ),
   'fields' => 
@@ -82,7 +82,7 @@ return array (
       'helper_text' => 'recordId',
       'placeholder' => 'recordId',
 =======
->>>>>>> d46f92c (.)
+>>>>>>> aurmich/dev
     ),
     'personal_team' => 
     array (
@@ -102,7 +102,7 @@ return array (
       'helper_text' => 'description',
       'placeholder' => 'description',
 =======
->>>>>>> d46f92c (.)
+>>>>>>> aurmich/dev
     ),
   ),
   'actions' => 
@@ -135,11 +135,8 @@ return array (
       'label' => 'team.plural.model',
     ),
   ),
-<<<<<<< HEAD
   'model' => 
   array (
     'label' => 'team.model',
   ),
-=======
->>>>>>> d46f92c (.)
 );

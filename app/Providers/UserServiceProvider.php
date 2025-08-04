@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Providers;
 
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
 use Laravel\Passport\Passport;
 use Illuminate\Support\Facades\Log;
@@ -30,6 +31,26 @@ use Modules\Xot\Providers\XotBaseServiceProvider;
 use Illuminate\Notifications\Messages\MailMessage;
 use Modules\User\Models\OauthPersonalAccessClient;
 use SocialiteProviders\Manager\ServiceProvider as SocialiteServiceProvider;
+=======
+use Illuminate\Auth\Notifications\ResetPassword;
+use Illuminate\Auth\Notifications\VerifyEmail;
+use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Validation\Rules\Password;
+use Laravel\Passport\Passport;
+use Modules\User\Datas\PasswordData;
+use Modules\User\Models\OauthAccessToken;
+use Modules\User\Models\OauthAuthCode;
+use Modules\User\Models\OauthClient;
+use Modules\User\Models\OauthPersonalAccessClient;
+use Modules\User\Models\OauthRefreshToken;
+use Modules\Xot\Contracts\UserContract;
+use Modules\Xot\Providers\XotBaseServiceProvider;
+use SocialiteProviders\Manager\ServiceProvider as SocialiteServiceProvider;
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\ServiceProvider;
+>>>>>>> aurmich/dev
 
 class UserServiceProvider extends XotBaseServiceProvider
 {
@@ -74,8 +95,12 @@ class UserServiceProvider extends XotBaseServiceProvider
             $app_name = '';
         }
 
+<<<<<<< HEAD
         ResetPassword::toMailUsing(function ($notifiable, string $token): SpatieEmail {
             /*
+=======
+        ResetPassword::toMailUsing(function ($notifiable, string $token): MailMessage {
+>>>>>>> aurmich/dev
             return (new MailMessage)
                 ->template('user::notifications.email')
                 ->subject(__('user::reset_password.password_reset_subject'))
@@ -84,6 +109,7 @@ class UserServiceProvider extends XotBaseServiceProvider
                 ->line(__('user::reset_password.password_if_not_requested'))
                 ->line(__('user::reset_password.thank_you_for_using_app'))
                 ->salutation(__('user::reset_password.regards'));
+<<<<<<< HEAD
             */
             Assert::isInstanceOf($notifiable, Model::class);
             $email = new SpatieEmail($notifiable, 'reset-password');
@@ -106,6 +132,8 @@ class UserServiceProvider extends XotBaseServiceProvider
             }
             
             return $email;
+=======
+>>>>>>> aurmich/dev
         });
 
         $salutation = __('user::verify_email.salutation', ['app_name' => $app_name]);

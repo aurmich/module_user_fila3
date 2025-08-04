@@ -148,10 +148,17 @@ class RegisterWidget extends XotBaseWidget
         $data = $this->form->getState();
         
         return [
+<<<<<<< HEAD
             'first_name' => app(\Modules\Xot\Actions\Cast\SafeStringCastAction::class)->execute($data['first_name']),
             'last_name' => app(\Modules\Xot\Actions\Cast\SafeStringCastAction::class)->execute($data['last_name']),
             'email' => app(\Modules\Xot\Actions\Cast\SafeStringCastAction::class)->execute($data['email']),
             'password' => Hash::make(app(\Modules\Xot\Actions\Cast\SafeStringCastAction::class)->execute($data['password'])),
+=======
+            'first_name' => (string) ($data['first_name'] ?? ''),
+            'last_name' => (string) ($data['last_name'] ?? ''),
+            'email' => (string) ($data['email'] ?? ''),
+            'password' => Hash::make((string) ($data['password'] ?? '')),
+>>>>>>> aurmich/dev
             'type' => 'standard',
             'state' => 'pending',
             'email_verified_at' => null,
@@ -160,7 +167,11 @@ class RegisterWidget extends XotBaseWidget
 
     protected function logRegistrationAttempt(array $data): void
     {
+<<<<<<< HEAD
         $email = app(\Modules\Xot\Actions\Cast\SafeStringCastAction::class)->execute($data['email']);
+=======
+        $email = is_string($data['email'] ?? null) ? $data['email'] : '';
+>>>>>>> aurmich/dev
         Log::info('Registration attempt', [
             'email_hash' => hash('sha256', $email),
             'ip' => request()->ip(),

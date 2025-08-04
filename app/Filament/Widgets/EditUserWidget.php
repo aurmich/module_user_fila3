@@ -46,7 +46,15 @@ class EditUserWidget extends XotBaseWidget
     /** @var array<string, mixed>|null */
     public ?array $data = [];
     
+<<<<<<< HEAD
+<<<<<<< HEAD
     /** @var array<string, int|null>|int|string */
+=======
+    /** @var int|string|array<string, mixed> */
+>>>>>>> aurmich/dev
+=======
+    /** @var array<string, int|null>|int|string */
+>>>>>>> 345f8677 (phpstan)
     protected int | string | array $columnSpan = 'full';
     
     public string $type;
@@ -54,10 +62,14 @@ class EditUserWidget extends XotBaseWidget
     public string $model;
     public string $action;
     public Model $record;
+<<<<<<< HEAD
 
     /**
      * @phpstan-ignore-next-line
      */
+=======
+    
+>>>>>>> aurmich/dev
     protected static string $view = 'pub_theme::filament.widgets.edit-user';
 
     /**
@@ -134,7 +146,15 @@ class EditUserWidget extends XotBaseWidget
                 $attributes = $model->getAttributes();
                 
                 // Gestisci specificamente gli enum se presenti
+<<<<<<< HEAD
+<<<<<<< HEAD
                 if (isset($attributes['type']) && property_exists($model, 'type') && $model->type instanceof \BackedEnum) {
+=======
+                if (isset($attributes['type']) && $model->type instanceof \BackedEnum) {
+>>>>>>> aurmich/dev
+=======
+                if (isset($attributes['type']) && property_exists($model, 'type') && $model->type instanceof \BackedEnum) {
+>>>>>>> 345f8677 (phpstan)
                     $attributes['type'] = $model->type->value;
                 }
                 
@@ -195,8 +215,18 @@ class EditUserWidget extends XotBaseWidget
         
         // L'utente può modificare solo il proprio profilo
         return $currentUser && (
+<<<<<<< HEAD
+<<<<<<< HEAD
             (property_exists($currentUser, 'id') && property_exists($this->record, 'id') && $currentUser->id === $this->record->id) ||
             (property_exists($currentUser, 'id') && $currentUser->id === ($this->record->user_id ?? null))
+=======
+            $currentUser->id === $this->record->id ||
+            $currentUser->id === ($this->record->user_id ?? null)
+>>>>>>> aurmich/dev
+=======
+            (property_exists($currentUser, 'id') && property_exists($this->record, 'id') && $currentUser->id === $this->record->id) ||
+            (property_exists($currentUser, 'id') && $currentUser->id === ($this->record->user_id ?? null))
+>>>>>>> 345f8677 (phpstan)
         );
     }
 }

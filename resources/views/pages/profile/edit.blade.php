@@ -1,12 +1,7 @@
 <?php
 
-<<<<<<< HEAD
 declare(strict_types=1);
 
-=======
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Password;
->>>>>>> d46f92c (.)
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

@@ -1,5 +1,10 @@
 <?php
 
+<<<<<<< HEAD
+=======
+declare(strict_types=1);
+
+>>>>>>> aurmich/dev
 return [
     'actions' => [
         'attach_user' => 'Attach User',
@@ -21,6 +26,7 @@ return [
         'associate' => 'Associate User',
         'bulk_delete' => 'Delete Selected',
         'bulk_detach' => 'Detach Selected',
+<<<<<<< HEAD
         'impersonate' => 'Impersona Utente',
         'stop_impersonating' => 'Termina Impersonificazione',
         'block' => 'Blocca',
@@ -145,6 +151,20 @@ return [
         'attach' => [
             'label' => 'attach',
         ],
+=======
+    ],
+    'fields' => [
+        'name' => 'Name',
+        'email' => 'Email',
+        'created_at' => 'Created At',
+        'updated_at' => 'Updated At',
+        'role' => 'Role',
+        'active' => 'Active',
+        'id' => 'ID',
+        'password' => 'Password',
+        'password_confirmation' => 'Confirm Password',
+        'email_verified_at' => 'Email Verified At',
+>>>>>>> aurmich/dev
     ],
     'filters' => [
         'active_users' => 'Active Users',
@@ -158,6 +178,7 @@ return [
         'no_records' => 'No users found',
         'loading' => 'Loading users...',
         'search' => 'Search users...',
+<<<<<<< HEAD
         'created' => 'Utente creato con successo',
         'updated' => 'Utente aggiornato con successo',
         'deleted' => 'Utente eliminato con successo',
@@ -166,6 +187,8 @@ return [
         'reset_link_sent' => 'Link per il reset della password inviato',
         'email_verified' => 'Email verificata con successo',
         'impersonating' => 'Stai impersonando l\'utente :name',
+=======
+>>>>>>> aurmich/dev
     ],
     'modals' => [
         'create' => [
@@ -225,6 +248,7 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
     'navigation' => [
         'name' => 'Utenti',
         'plural' => 'Utenti',
@@ -253,4 +277,6 @@ return [
     'model' => [
         'label' => 'Utente',
     ],
+=======
+>>>>>>> aurmich/dev
 ];

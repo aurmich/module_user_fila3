@@ -1,5 +1,10 @@
 <?php
 
+<<<<<<< HEAD
+=======
+declare(strict_types=1);
+
+>>>>>>> aurmich/dev
 return [
     'login' => [
         'username_or_email' => 'Benutzername oder E-Mail',
@@ -112,7 +117,10 @@ return [
                 'success_notification' => 'Code verifiziert. Zwei-Faktor-Authentifizierung aktiviert.',
                 'invalid_code' => 'Der von Ihnen eingegebene Code ist ungültig.',
             ],
+<<<<<<< HEAD
             'must_enable' => 'Per utilizzare questa applicazione devi abilitare la 2FA.',
+=======
+>>>>>>> aurmich/dev
         ],
         'sanctum' => [
             'title' => 'API Tokens',
@@ -122,14 +130,20 @@ return [
                 'submit' => [
                     'label' => 'Erstellen',
                 ],
+<<<<<<< HEAD
                 'message' => 'Il tuo token viene mostrato solo una volta. Se perdi il token, dovrai cancellarlo e crearne uno nuovo.',
+=======
+>>>>>>> aurmich/dev
             ],
             'update' => [
                 'notify' => 'Token erfolgreich aktualisiert!',
             ],
+<<<<<<< HEAD
             'copied' => [
                 'label' => 'Ho copiato il mio token',
             ],
+=======
+>>>>>>> aurmich/dev
         ],
     ],
     'clipboard' => [
@@ -150,9 +164,12 @@ return [
         '2fa_recovery_code' => 'Wiederherstellungscode',
         'created' => 'Erstellt',
         'expired' => 'Abgelaufen',
+<<<<<<< HEAD
         'avatar' => 'Avatar',
         'token_expiry' => 'Scadenza del Token',
         'expires' => 'Scade',
+=======
+>>>>>>> aurmich/dev
     ],
     'or' => 'Oder',
     'cancel' => 'Abbrechen',

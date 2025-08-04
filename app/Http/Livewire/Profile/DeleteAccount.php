@@ -8,7 +8,14 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Modules\User\Actions\User\DeleteUserAction;
+<<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\User\Contracts\UserContract;
+=======
+>>>>>>> aurmich/dev
+=======
+use Modules\User\Contracts\UserContract;
+>>>>>>> 345f8677 (phpstan)
 
 class DeleteAccount extends Component
 {
@@ -21,7 +28,14 @@ class DeleteAccount extends Component
 
     public function destroy(): void
     {
+<<<<<<< HEAD
+<<<<<<< HEAD
         /** @var \Modules\User\Models\User|null $user */
+=======
+>>>>>>> aurmich/dev
+=======
+        /** @var \Modules\User\Models\User|null $user */
+>>>>>>> 345f8677 (phpstan)
         $user = Auth::user();
         if (!$user) {
             $this->dispatch('toast', [
@@ -31,6 +45,10 @@ class DeleteAccount extends Component
             return;
         }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 345f8677 (phpstan)
         // Assicuriamoci che sia del tipo corretto per l'action
         if (!$user instanceof UserContract) {
             $this->dispatch('toast', [
@@ -40,6 +58,11 @@ class DeleteAccount extends Component
             return;
         }
 
+<<<<<<< HEAD
+=======
+>>>>>>> aurmich/dev
+=======
+>>>>>>> 345f8677 (phpstan)
         $result = app(DeleteUserAction::class)->execute($user, $this->delete_confirm_password);
 
         if (!$result['success']) {

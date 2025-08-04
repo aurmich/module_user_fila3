@@ -156,7 +156,10 @@
 - [Bottlenecks](bottlenecks.md)
 - [Best Practices](BEST-PRACTICES.md)
 - [Testing](testing.md)
+<<<<<<< HEAD
 
+=======
+>>>>>>> aurmich/dev
 ### Versione HEAD
 
 
