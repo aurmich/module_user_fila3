@@ -142,4 +142,7 @@ Questo bug fix ha permesso di completare il miglioramento della qualità del cod
 - Transazioni database
 - Notifiche utente
 - Verifica email
+<<<<<<< HEAD
 - Auto-login dopo registrazione 
+=======
+>>>>>>> d63a4a0d (.)

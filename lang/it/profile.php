@@ -58,9 +58,13 @@ return [
         'matr' => [
             'label' => 'Matricola',
         ],
+<<<<<<< HEAD
         'toggleColumns' => [
             'label' => 'Toggle Colonne',
         ],
+=======
+        // ... altri campi ...
+>>>>>>> d63a4a0d (.)
     ],
     'actions' => [
         'edit' => [
