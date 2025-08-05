@@ -88,10 +88,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property-read int|null $socialite_users_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Membership> $teamUsers
  * @property-read int|null $team_users_count
-<<<<<<< HEAD
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\User> $all_team_users
-=======
->>>>>>> f01684a (.)
  * @mixin \Eloquent
  */
 class User extends BaseUser

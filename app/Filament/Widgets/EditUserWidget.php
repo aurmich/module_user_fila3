@@ -54,14 +54,10 @@ class EditUserWidget extends XotBaseWidget
     public string $model;
     public string $action;
     public Model $record;
-<<<<<<< HEAD
 
     /**
      * @phpstan-ignore-next-line
      */
-=======
-    
->>>>>>> f01684a (.)
     protected static string $view = 'pub_theme::filament.widgets.edit-user';
 
     /**

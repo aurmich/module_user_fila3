@@ -26,12 +26,9 @@ class PasswordResetWidget extends XotBaseWidget
     public ?array $data = [];
     public bool $emailSent = false;
 
-<<<<<<< HEAD
     /**
      * @phpstan-ignore-next-line
      */
-=======
->>>>>>> f01684a (.)
     protected static string $view = 'pub_theme::filament.widgets.auth.password.reset';
 
     /**

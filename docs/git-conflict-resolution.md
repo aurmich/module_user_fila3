@@ -5,10 +5,7 @@
 ### 1. Strategie di Prevenzione
 
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> f01684a (.)
 # Pre-commit hook per verificare conflitti potenziali
 git diff --check
 
@@ -25,10 +22,7 @@ git diff origin/main...HEAD
 
 #### Metodo 1: Merge con Strategy
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> f01684a (.)
 # Usa strategie di merge avanzate
 git merge -X ours feature_branch    # Preferisci il branch corrente
 git merge -X theirs feature_branch  # Preferisci il branch remoto
@@ -36,33 +30,24 @@ git merge -X theirs feature_branch  # Preferisci il branch remoto
 
 #### Metodo 2: Rebase Interattivo
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> f01684a (.)
 # Riorganizza i commit per evitare conflitti
 git rebase -i origin/main
 
 # Opzioni disponibili:
-<<<<<<< HEAD
 
 # pick   - mantieni il commit
 
 # edit   - modifica il commit
 
-=======
 # pick   - mantieni il commit
 # edit   - modifica il commit
->>>>>>> f01684a (.)
 # squash - unisci con il commit precedente
 ```
 
 #### Metodo 3: Stash e Apply
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> f01684a (.)
 # Salva le modifiche locali
 git stash save "modifiche_importanti"
 
@@ -77,10 +62,7 @@ git stash pop
 
 1. **Git Mergetool**
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> f01684a (.)
 # Configura il tool preferito
 git config --global merge.tool vscode
 
@@ -99,10 +81,7 @@ git mergetool
 
 3. **PhpStorm**
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> f01684a (.)
 # Usa il merge tool integrato
 Tools -> Git -> Resolve Conflicts
 ```
@@ -178,10 +157,7 @@ safe_merge() {
 ### 6. Comandi Utili
 
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> f01684a (.)
 # Verifica branch e modifiche
 git branch -vv
 git status -s
@@ -197,10 +173,7 @@ git log --graph --oneline --all
 ### 7. Configurazione Git
 
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> f01684a (.)
 # Configurazione globale
 git config --global merge.conflictstyle diff3
 git config --global merge.tool vscode
@@ -235,7 +208,4 @@ git config --global alias.theirs '!f() { git checkout --theirs "$@" && git add "
 2. Mantenere commit atomici e descrittivi
 3. Usare tag per le release
 4. Documentare le decisioni di merge
-<<<<<<< HEAD
-=======
 5. Testare dopo ogni risoluzione 
->>>>>>> f01684a (.)

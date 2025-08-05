@@ -57,7 +57,6 @@ abstract class BaseListUsers extends XotBaseListRecords
     /**
      * Get table actions for user records.
      *
-<<<<<<< HEAD
      * @return array<string, \Filament\Tables\Actions\Action|\Filament\Tables\Actions\ActionGroup>
      * @phpstan-ignore-next-line
      */
@@ -66,19 +65,10 @@ abstract class BaseListUsers extends XotBaseListRecords
     {
         $actions = [
             'change_password' => ChangePasswordAction::make()
-=======
-     * @return array<\Filament\Tables\Actions\Action|\Filament\Tables\Actions\ActionGroup>
-     */
-    public function getTableActions(): array
-    {
-        $actions = [
-            ChangePasswordAction::make()
->>>>>>> f01684a (.)
                 ->tooltip('Cambio Password')
                 ->iconButton(),
         ];
         
-<<<<<<< HEAD
         // Add parent actions - merge arrays
         $parentActions = parent::getTableActions();
         $actions = array_merge($actions, $parentActions);
@@ -86,27 +76,12 @@ abstract class BaseListUsers extends XotBaseListRecords
         /*
         // Add deactivate action
         $actions['deactivate'] = Action::make('deactivate')
-=======
-        // Add parent actions - filter to ensure type compatibility
-        $parentActions = parent::getTableActions();
-        foreach ($parentActions as $action) {
-            if ($action instanceof \Filament\Tables\Actions\Action || $action instanceof \Filament\Tables\Actions\ActionGroup) {
-                $actions[] = $action;
-            }
-        }
-        /*
-        // Add deactivate action
-        $actions[] = Action::make('deactivate')
->>>>>>> f01684a (.)
             ->tooltip(__('filament-actions::delete.single.label'))
             ->color('danger')
             ->icon('heroicon-o-trash')
             ->action(static fn (UserContract $user) => $user->delete());
         */   
-<<<<<<< HEAD
         /** @phpstan-ignore-next-line */
-=======
->>>>>>> f01684a (.)
         return $actions;
     }
 

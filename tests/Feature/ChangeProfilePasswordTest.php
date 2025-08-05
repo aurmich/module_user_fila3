@@ -75,8 +75,4 @@ test('cannot change password with wrong current password', function (): void {
 
     // Verifica che la password non sia stata cambiata
     expect(Hash::check('old_password', $user->fresh()->password))->toBeTrue();
-<<<<<<< HEAD
 }); 
-=======
-}); 
->>>>>>> f01684a (.)

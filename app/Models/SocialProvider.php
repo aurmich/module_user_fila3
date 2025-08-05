@@ -12,11 +12,6 @@ use Modules\Tenant\Models\Traits\SushiToPhpArray;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
-<<<<<<< HEAD
-=======
- * 
- *
->>>>>>> f01684a (.)
  * @property int|null $id
  * @property string|null $name
  * @property array|null $scopes

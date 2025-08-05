@@ -5,20 +5,12 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Widgets;
 
 use Exception;
-<<<<<<< HEAD
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form as FilamentForm;
 use Filament\Notifications\Notification;
-=======
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Toggle;
-use Filament\Forms\Form as FilamentForm;
-use Filament\Notifications\Notification;
-use Illuminate\Support\Facades\Auth;
->>>>>>> f01684a (.)
 use Illuminate\Validation\ValidationException;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
@@ -42,11 +34,7 @@ class LoginWidget extends XotBaseWidget
      * @var view-string
      */
     /** @phpstan-ignore-next-line property.defaultValue */
-<<<<<<< HEAD
     protected static string $view = 'pub_theme::filament.widgets.auth.login';
-=======
-    protected static string $view = 'user::filament.widgets.login';
->>>>>>> f01684a (.)
     
    
     /**
@@ -116,17 +104,9 @@ class LoginWidget extends XotBaseWidget
             
             // Cast esplicito per type safety PHPStan
             $remember = (bool) ($data['remember'] ?? false);
-<<<<<<< HEAD
             $attempt_data =Arr::only($data,['email','password']);
             
             if (!Auth::attempt($attempt_data, $remember)) {
-=======
-            
-            if (!Auth::attempt([
-                'email' => (string) $data['email'],
-                'password' => (string) $data['password']
-            ], $remember)) {
->>>>>>> f01684a (.)
                 throw ValidationException::withMessages([
                     'email' => [__('Le credenziali fornite non sono corrette.')],
                 ]);

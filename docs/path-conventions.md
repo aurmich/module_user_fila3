@@ -10,10 +10,7 @@
 
 ### Views
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> f01684a (.)
 # ❌ ERRATO
 laravel/Modules/User/Resources/views/filament/widgets/auth/login.blade.php
 
@@ -24,19 +21,13 @@ Modules/User/resources/views/filament/widgets/auth/login.blade.php
 
 ### Actions
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> f01684a (.)
 # ❌ ERRATO
 laravel/Modules/User/Actions/User/DeleteUserAction.php
 
 # ✅ CORRETTO
 laravel/Modules/User/app/Actions/User/DeleteUserAction.php
-<<<<<<< HEAD
 
-=======
->>>>>>> f01684a (.)
 # ✅ CORRETTO
 Modules/User/app/Actions/User/DeleteUserAction.php
 
@@ -46,10 +37,7 @@ Modules/User/Actions/User/DeleteUserAction.php
 
 ### Controllers
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> f01684a (.)
 # ✅ CORRETTO
 laravel/Modules/User/app/Http/Controllers/UserController.php
 
@@ -63,10 +51,7 @@ Modules/User/Http/Controllers/UserController.php
 
 ### Livewire Components
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> f01684a (.)
 # ✅ CORRETTO
 Modules/User/app/Http/Livewire/Profile/DeleteAccount.php
 
@@ -76,10 +61,7 @@ Modules/User/Http/Livewire/Profile/DeleteAccount.php
 
 ### Livewire Components
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> f01684a (.)
 # ✅ CORRETTO
 Modules/User/app/Http/Livewire/Profile/DeleteAccount.php
 
@@ -185,10 +167,7 @@ fi
 ## Comandi Utili
 
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> f01684a (.)
 # Trova cartelle con nomi errati
 find . -type d \( -name "Resources" -o -name "Lang" -o -name "Actions" -o -name "Http" \)
 
@@ -213,10 +192,7 @@ chmod -R 644 resources/views/
 ### Da Struttura Errata a Corretta
 
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> f01684a (.)
 # Prima
 laravel/Modules/User/
 ├── Actions/

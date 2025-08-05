@@ -136,10 +136,7 @@ class AuthController extends Controller
 
 ### Comandi Artisan
 ```bash
-<<<<<<< HEAD
 
-=======
->>>>>>> f01684a (.)
 # Creare un nuovo utente
 php artisan user:create
 
