@@ -156,7 +156,10 @@
 - [Bottlenecks](bottlenecks.md)
 - [Best Practices](BEST-PRACTICES.md)
 - [Testing](testing.md)
+<<<<<<< HEAD
 
+=======
+>>>>>>> f01684a (.)
 ### Versione HEAD
 
 

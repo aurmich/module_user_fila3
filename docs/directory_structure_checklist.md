@@ -60,7 +60,10 @@ Questo documento fornisce una checklist per verificare la corretta struttura del
 ## Verifiche automatiche
 
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> f01684a (.)
 # Verifica percorsi PHP errati (fuori da app/)
 find Modules/User -type f -name "*.php" -not -path "*/app/*" -not -path "*/routes/*" -not -path "*/config/*" -not -path "*/database/*" -not -path "*/lang/*" -not -path "*/resources/*" -not -path "*/tests/*" -not -path "*/docs/*" | grep -v composer.json
 

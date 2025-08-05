@@ -14,7 +14,10 @@ return array (
       'label' => 'Password',
       'placeholder' => 'Enter your password',
       'help' => 'Enter your account password',
+<<<<<<< HEAD
       'description' => 'password',
+=======
+>>>>>>> f01684a (.)
     ),
     'remember' => 
     array (

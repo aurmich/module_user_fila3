@@ -140,4 +140,8 @@
 
     </div>
     @endvolt
+<<<<<<< HEAD
 </x-layouts.marketing>
+=======
+</x-layouts.marketing>
+>>>>>>> f01684a (.)

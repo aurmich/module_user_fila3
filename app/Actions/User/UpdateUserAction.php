@@ -4,12 +4,20 @@ declare(strict_types=1);
 
 namespace Modules\User\Actions\User;
 
+<<<<<<< HEAD
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Validation\ValidationException;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
+=======
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Validation\ValidationException;
+>>>>>>> f01684a (.)
 
 /**
  * UpdateUserAction: Action generica per l'aggiornamento dei dati utente.
@@ -99,14 +107,22 @@ class UpdateUserAction
                 unset($updateData['password']);
             } else {
                 // Hash della password se presente
+<<<<<<< HEAD
                 $updateData['password'] = Hash::make(SafeStringCastAction::cast($updateData['password']));
+=======
+                $updateData['password'] = Hash::make((string) $updateData['password']);
+>>>>>>> f01684a (.)
             }
         }
         
         // Gestione dell'email per evitare duplicati
         if (isset($updateData['email'])) {
+<<<<<<< HEAD
             $email = SafeStringCastAction::cast($updateData['email']);
             $updateData['email'] = strtolower($email);
+=======
+            $updateData['email'] = strtolower((string) $updateData['email']);
+>>>>>>> f01684a (.)
         }
         
         return $updateData;

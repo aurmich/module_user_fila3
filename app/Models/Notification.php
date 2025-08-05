@@ -7,6 +7,11 @@ namespace Modules\User\Models;
 use Illuminate\Notifications\DatabaseNotification as BaseNotification;
 
 /**
+<<<<<<< HEAD
+=======
+ * 
+ *
+>>>>>>> f01684a (.)
  * @property \Illuminate\Database\Eloquent\Model|\Eloquent $notifiable
  * @method static \Illuminate\Notifications\DatabaseNotificationCollection<int, static> all($columns = ['*'])
  * @method static \Illuminate\Notifications\DatabaseNotificationCollection<int, static> get($columns = ['*'])

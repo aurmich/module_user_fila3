@@ -53,6 +53,7 @@ class ListUsers extends BaseListUsers
     }
 
     /**
+<<<<<<< HEAD
      * @phpstan-ignore-next-line
      */
     public function getTableActions(): array
@@ -64,6 +65,18 @@ class ListUsers extends BaseListUsers
                 ->iconButton(),
             ...parent::getTableActions(),
             'deactivate' => Action::make('deactivate')
+=======
+     * @return array<Action|Tables\Actions\ActionGroup>
+     */
+    public function getTableActions(): array
+    {
+        return [
+            ChangePasswordAction::make()
+                ->tooltip('Cambio Password')
+                ->iconButton(),
+            ...parent::getTableActions(),
+            Action::make('deactivate')
+>>>>>>> f01684a (.)
                 ->tooltip(__('filament-actions::delete.single.label'))
                 ->color('danger')
                 ->icon('heroicon-o-trash')

@@ -90,7 +90,10 @@ const calendarOptions = {
 
 ### Configurazioni Ambiente
 ```env
+<<<<<<< HEAD
 
+=======
+>>>>>>> f01684a (.)
 # .env - Variabili necessarie
 FULLCALENDAR_SCHEDULER_LICENSE_KEY=XXXXXXXXXX-XXX-XXXXXXXXXX
 FULLCALENDAR_CACHE_TTL=300
@@ -130,7 +133,10 @@ slotDuration: '00:30:00', // 30 min slots
 
 ### Comandi Verifica
 ```bash
+<<<<<<< HEAD
 
+=======
+>>>>>>> f01684a (.)
 # Verifica configurazione
 php artisan config:show fullcalendar
 php artisan tinker
