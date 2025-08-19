@@ -38,23 +38,9 @@ git rebase -i origin/main
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<<< HEAD:docs/git-conflict-resolution.md
 =======
 >>>>>>> a250130 (.)
-=======
-<<<<<<<< HEAD:docs/git-conflict-resolution.md
-=======
->>>>>>> 6fac8d2 (.)
-# pick   - mantieni il commit
-
-# edit   - modifica il commit
-
-<<<<<<< HEAD
-========
->>>>>>>> d63a4a0d (.):docs/git_conflict_resolution.md
->>>>>>> a6d60cb (.)
 # pick   - mantieni il commit
 
 # edit   - modifica il commit
@@ -70,8 +56,6 @@ git rebase -i origin/main
 
 =======
 >>>>>>> a250130 (.)
-=======
->>>>>>> 6fac8d2 (.)
 # squash - unisci con il commit precedente
 ```
 
@@ -240,20 +224,11 @@ git config --global alias.theirs '!f() { git checkout --theirs "$@" && git add "
 4. Documentare le decisioni di merge
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a6d60cb (.)
 <<<<<<<< HEAD:docs/git-conflict-resolution.md
 5. Testare dopo ogni risoluzione 
 ========
 >>>>>>>> d63a4a0d (.):docs/git_conflict_resolution.md
-<<<<<<< HEAD
 =======
 >>>>>>> 61013ae (.)
 =======
 >>>>>>> a250130 (.)
-=======
->>>>>>> a6d60cb (.)
-=======
->>>>>>> 6fac8d2 (.)

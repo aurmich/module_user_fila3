@@ -44,23 +44,14 @@ Queste Action devono occuparsi di:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a6d60cb (.)
 >>>>>>> 4c632a28 (✨ (bashscripts): add new scripts for managing MCP MySQL server and PHPStan analysis)
 >>>>>>> f01684a (.)
 =======
 >>>>>>> d63a4a0d (.)
-<<<<<<< HEAD
 =======
 >>>>>>> 61013ae (.)
 =======
 >>>>>>> a250130 (.)
-=======
->>>>>>> a6d60cb (.)
-=======
->>>>>>> 6fac8d2 (.)
 - [Documentazione Xot sulla proprietà $data](../../../Xot/docs/filament/widgets/data-property.md)
 - [Esempio di Action di registrazione Doctor](../../../../Patient/app/Actions/Doctor/RegisterAction.php)
 - [Esempio di Action di registrazione Patient](../../../../Patient/app/Actions/Patient/RegisterAction.php)

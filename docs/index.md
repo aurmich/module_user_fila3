@@ -1,63 +1,82 @@
-# Modulo User
+# User Module Documentation
 
-## Panoramica
-Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli utenti nel sistema.
+## Overview
+This document serves as the central index for the User module, providing guidance on managing user-related functionality within a Laravel application. The User module handles authentication, authorization, profile management, and related features in a modular and reusable way.
 
-## Documentazione
+## Key Principles
+1. **Modularity**: The User module is designed to be reusable across different projects, maintaining generic functionality.
+2. **Extensibility**: Allows for customization and extension to meet specific project needs without altering core code.
+3. **Security**: Implements best practices for authentication, session management, and data protection.
 
-### Analisi e Correzioni
-- [Analisi PHPStan](phpstan.md)
-- [Correzioni PHPStan](../../Modules/User/docs/phpstan_fixes.md)
-- [Metriche](metrics-dashboard.md)
+## Core Features
+- **Authentication**: Handles user login, logout, and session management.
+- **Authorization**: Manages roles and permissions for access control.
+- **Profile Management**: Provides functionality for user profile creation and updates.
+- **Integration**: Works seamlessly with other modules like Notify for notifications.
 
-<<<<<<< HEAD
 ## Implementation Guidelines
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> a250130 (.)
+>>>>>>> 376bc0e6 (fix conflitti sync remote repo aurmich)
 ### 1. Module Structure
 - The User module follows a standard structure with directories for models, controllers, services, and views to ensure clarity and maintainability.
-=======
-### Modelli
-- [BaseUser](../../Modules/User/docs/Models/BaseUser.md)
-- [Team](../../Modules/User/docs/Models/Team.md)
-- [TeamInvitation](../../Modules/User/docs/Models/TeamInvitation.md)
-- [BasePivot](../../Modules/User/docs/Models/BasePivot.md)
 
-### Contratti e Interfacce
-- [UserContract](../../Modules/User/docs/Contracts/UserContract.md)
-- [TeamContract](../../Modules/User/docs/Contracts/TeamContract.md)
-- [HasTeamsContract](../../Modules/User/docs/Contracts/HasTeamsContract.md)
->>>>>>> a6d60cb (.)
+### 2. BaseUser Model
+- Use the `BaseUser` model as the foundation for user-related data and logic, extending it as needed for specific types.
+  ```php
+  namespace Modules\User\Models;
 
-### Trait
-- [HasTeams](../../Modules/User/docs/traits/HasTeams.md)
-- [HasTenants](../../Modules/User/docs/traits/HasTenants.md)
-- [HasAuthenticationLog](../../Modules/User/docs/traits/HasAuthenticationLog.md)
+  class User extends BaseUser
+  {
+      // Custom user logic
+  }
+  ```
 
-### Database
-- [Schema](../../Modules/User/docs/database/schema.md)
-- [Migrazioni](../../Modules/User/docs/database/migrations.md)
+### 3. Authentication
+- Implement authentication using Laravel's built-in systems or custom solutions integrated with Filament for admin interfaces.
 
-### Funzionalità
-- [Teams](teams.md)
-- [OAuth](OAuth/index.md)
-- [Password](password.md)
-- [Inviti](user_invitation.md)
+### 4. Routing
+- Define user-related routes in a dedicated `routes` directory, ensuring they are prefixed with the appropriate locale.
 
-## Stato Attuale
-- PHPStan Livello: 1 (in corso)
-- Test Coverage: N/A
-- Documentazione: In aggiornamento
+## Common Issues and Fixes
+- **Authentication Failures**: Ensure correct configuration of auth providers and middleware for user routes.
+- **Permission Conflicts**: Verify role and permission assignments to avoid access issues.
+- **Session Expiry**: Implement proper session management to handle user logout and timeouts securely.
 
-## Collegamenti
-- [Documentazione Generale](/docs/index.md)
-- [Analisi PHPStan](/docs/phpstan.md)
-- [Contratti](/docs/Contracts.md)
-- [Modelli](/docs/Models.md)
+## Documentation and Updates
+- Document any custom implementations or deviations from standard User module practices in the relevant documentation folder.
+- Update this index if new features or significant changes are introduced to the User module.
 
-## Roadmap
-- [Piano di Sviluppo](roadmap.md)
-- [Metriche e KPI](metrics-dashboard.md)
-- [Pacchetti](packages.md) 
+## Links to Related Documentation
+- [BaseUser Model](./BaseUser.md)
+- [Authentication Pages Implementation](./AUTH_PAGES_IMPLEMENTATION.md)
+- [Profile Management](./PROFILE_MANAGEMENT.md)
+- [Routing Best Practices](./ROUTING_BEST_PRACTICES.md)
+- [Session Management](./SESSION_MANAGEMENT.md)
+
+## Sottocartelle
+
+### Models
+- [Index](./Models/INDEX.md) - Indice della documentazione sui modelli
+- [Documentazione Traits](./traits/INDEX.md) - Documentazione sui trait utilizzati
+
+### Folio e Blade
+- [Documentazione Blade](./blade/INDEX.md) - Documentazione sui template Blade
+- [Componenti](./components/INDEX.md) - Documentazione sui componenti
+
+## Roadmap e Sviluppo Futuro
+- [Roadmap](./roadmap.md) - Piano di sviluppo futuro del modulo User
+
+## Note sulla Manutenzione
+Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice, consultare la documentazione pertinente e aggiornare i documenti correlati.
+
+Ultimo aggiornamento: 14 Maggio 2025
+
+# Indice Documentazione User
+
+- [filament-best-practices.mdc](./filament-best-practices.mdc) — **Regola fondamentale:** chi estende XotBaseResource NON deve dichiarare $navigationGroup, $navigationLabel, né il metodo statico table(Table $table): Table. Seguire sempre questa regola per evitare errori di override e garantire coerenza tra i moduli.

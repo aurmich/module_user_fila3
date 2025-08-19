@@ -319,6 +319,8 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli u
 - [Analisi Performance](./BOTTLENECKS.md)
 
 ### Testing e Qualità
+- [🚨 PHPStan Critical Rules](../Xot/docs/phpstan-critical-rules.md) - **🚨 CRITICO** - phpstan.neon INTOCCABILE
+- [PHPStan Array Types Fixes](phpstan-array-types-fixes.md) - **⭐ NUOVO** - Correzioni tipi array mancanti
 - [PHPStan Fixes](./phpstan_fixes.md)
 - [PHPStan Level 9](./PHPSTAN_LEVEL9_FIXES.md)
 - [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md)
@@ -932,4 +934,17 @@ Schema::table('teams', function (Blueprint $table) {
 - [ ] Nessuna migration di tabelle modulari nella cartella globale
 - [ ] La documentazione tecnica è aggiornata
 - [ ] I comandi artisan sono lanciati dal path corretto o con namespace modulo
+
+## Aggiornamenti Recenti
+
+### 27 Gennaio 2025
+- ✅ **Riorganizzazione Documentazione**: Spostati file specifici da docs_project alle cartelle docs dei moduli
+  - **File spostati in User/docs/**: 
+    - `doctor-registration-widget.md` - Widget registrazione dottori
+    - `doctor-registration.md` - Sistema registrazione dottori
+    - `email-doctor-registration.md` - Email registrazione dottori
+  - **Motivazione**: Separazione responsabilità, principio modulare, manutenibilità
+  - **Regola**: docs_project solo per documentazione generale del progetto, file specifici di moduli nelle rispettive cartelle docs
+
+## Collegamenti
 
