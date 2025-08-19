@@ -27,6 +27,10 @@ class UserResource extends XotBaseResource
     // Static property Modules\User\Filament\Resources\UserResource::$enablePasswordUpdates is never read, only written.
     // private static bool|\Closure $enablePasswordUpdates = true;
 
+<<<<<<< HEAD
+=======
+    /** @return array<class-string<\Filament\Widgets\Widget>> */
+>>>>>>> 61013ae (.)
     public static function getWidgets(): array
     {
         return [
@@ -39,6 +43,10 @@ class UserResource extends XotBaseResource
     //    static::$extendFormCallback = $callback;
     // }
 
+<<<<<<< HEAD
+=======
+    /** @return array<string, \Filament\Forms\Components\Component> */
+>>>>>>> 61013ae (.)
     public static function getFormSchema(): array
     {
         return [
