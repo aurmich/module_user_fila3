@@ -1573,8 +1573,17 @@ trait HasPassportConfiguration
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a250130 (.)
+=======
+# Changelog
+
+## [1.0.0] - 2024-03-20
+
+=======
+>>>>>>> d63a4a0d (.)
+>>>>>>> a6d60cb (.)
 # Changelog
 
 ## [1.0.0] - 2024-03-20
