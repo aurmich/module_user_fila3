@@ -37,11 +37,15 @@ git rebase -i origin/main
 # Opzioni disponibili:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:docs/git-conflict-resolution.md
+=======
+>>>>>>> a250130 (.)
 # pick   - mantieni il commit
 
 # edit   - modifica il commit
 
+<<<<<<< HEAD
 ========
 >>>>>>>> d63a4a0d (.):docs/git_conflict_resolution.md
 =======
@@ -50,6 +54,8 @@ git rebase -i origin/main
 
 # edit   - modifica il commit
 
+=======
+>>>>>>> a250130 (.)
 # squash - unisci con il commit precedente
 ```
 
@@ -217,9 +223,12 @@ git config --global alias.theirs '!f() { git checkout --theirs "$@" && git add "
 3. Usare tag per le release
 4. Documentare le decisioni di merge
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:docs/git-conflict-resolution.md
 5. Testare dopo ogni risoluzione 
 ========
 >>>>>>>> d63a4a0d (.):docs/git_conflict_resolution.md
 =======
 >>>>>>> 61013ae (.)
+=======
+>>>>>>> a250130 (.)

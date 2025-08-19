@@ -15,7 +15,10 @@ This document serves as the central index for the User module, providing guidanc
 - **Integration**: Works seamlessly with other modules like Notify for notifications.
 
 ## Implementation Guidelines
+<<<<<<< HEAD
 
+=======
+>>>>>>> a250130 (.)
 ### 1. Module Structure
 - The User module follows a standard structure with directories for models, controllers, services, and views to ensure clarity and maintainability.
 

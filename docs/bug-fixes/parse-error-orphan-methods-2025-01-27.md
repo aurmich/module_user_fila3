@@ -144,8 +144,11 @@ Questo bug fix ha permesso di completare il miglioramento della qualità del cod
 - Verifica email
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Auto-login dopo registrazione 
 =======
 >>>>>>> d63a4a0d (.)
 =======
 >>>>>>> 61013ae (.)
+=======
+>>>>>>> a250130 (.)
