@@ -8,11 +8,8 @@ return array (
       'label' => 'Email',
       'placeholder' => 'Enter your email',
       'help' => 'Enter your email address to log in',
-<<<<<<< HEAD
-=======
       'description' => 'email',
       'helper_text' => 'email',
->>>>>>> 61013ae (.)
     ),
     'password' => 
     array (
@@ -20,10 +17,7 @@ return array (
       'placeholder' => 'Enter your password',
       'help' => 'Enter your account password',
       'description' => 'password',
-<<<<<<< HEAD
-=======
       'helper_text' => 'password',
->>>>>>> 61013ae (.)
     ),
     'remember' => 
     array (
