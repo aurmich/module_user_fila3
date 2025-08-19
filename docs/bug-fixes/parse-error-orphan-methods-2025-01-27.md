@@ -146,6 +146,7 @@ Questo bug fix ha permesso di completare il miglioramento della qualità del cod
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Auto-login dopo registrazione 
 =======
 >>>>>>> d63a4a0d (.)
@@ -158,3 +159,5 @@ Questo bug fix ha permesso di completare il miglioramento della qualità del cod
 =======
 >>>>>>> d63a4a0d (.)
 >>>>>>> a6d60cb (.)
+=======
+>>>>>>> 6fac8d2 (.)
