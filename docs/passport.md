@@ -1570,26 +1570,14 @@ trait HasPassportConfiguration
 ### 4.2 Changelog
 ```markdown
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a250130 (.)
 # Changelog
 
 ## [1.0.0] - 2024-03-20
 
-<<<<<<< HEAD
-=======
->>>>>>> d63a4a0d (.)
-=======
->>>>>>> 61013ae (.)
 # Changelog
 
 ## [1.0.0] - 2024-03-20
 
-=======
->>>>>>> a250130 (.)
 ### Added
 - Implementazione iniziale dei trait di configurazione
 - Supporto per Passport e Socialite
