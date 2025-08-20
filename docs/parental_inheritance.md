@@ -203,7 +203,7 @@ class ChangeTypeCommand extends Command
     private function getAvailableTypes($user): array
     {
         // Verifica se il modello ha childTypes configurati
-        if (property_exists($user, 'childTypes') && !empty($user->childTypes)) {
+        if (isset($user->childTypes) && !empty($user->childTypes)) {
             return $user->childTypes;
         }
 
