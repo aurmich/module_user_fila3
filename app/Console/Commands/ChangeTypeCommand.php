@@ -76,7 +76,11 @@ class ChangeTypeCommand extends Command
         /** @var array<string, string> */
         $options = [];
         foreach ($childTypes as $key => $item) {
+<<<<<<< HEAD
             if (is_object($item) && method_exists($item, 'getLabel') && isset($item->value)) {
+=======
+            if (is_object($item) && method_exists($item, 'getLabel') && property_exists($item, 'value')) {
+>>>>>>> 08f361e (.)
                 $options[(string)$item->value] = (string)$item->getLabel();
             } else {
                 $options[(string)$key] = 'Unknown';

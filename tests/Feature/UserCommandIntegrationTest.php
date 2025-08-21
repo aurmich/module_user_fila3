@@ -129,7 +129,11 @@ describe('User Command Integration', function () {
         $testObject->getLabel = fn() => 'Test Label';
 
         expect(is_object($testObject))->toBeTrue()
+<<<<<<< HEAD
             ->and(isset($testObject->value))->toBeTrue();
+=======
+            ->and(property_exists($testObject, 'value'))->toBeTrue();
+>>>>>>> 08f361e (.)
     });
 
     it('integrates with Laravel configuration system', function () {
@@ -212,7 +216,12 @@ describe('User Command Integration', function () {
         $testObject = new stdClass();
         $testObject->testProperty = 'test_value';
         
+<<<<<<< HEAD
         expect(isset($testObject->testProperty))->toBeTrue()
             ->and(isset($testObject->nonExistentProperty))->toBeFalse();
+=======
+        expect(property_exists($testObject, 'testProperty'))->toBeTrue()
+            ->and(property_exists($testObject, 'nonExistentProperty'))->toBeFalse();
+>>>>>>> 08f361e (.)
     });
 });

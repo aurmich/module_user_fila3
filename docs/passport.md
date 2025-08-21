@@ -1570,10 +1570,13 @@ trait HasPassportConfiguration
 ### 4.2 Changelog
 ```markdown
 
+<<<<<<< HEAD
 # Changelog
 
 ## [1.0.0] - 2024-03-20
 
+=======
+>>>>>>> 08f361e (.)
 # Changelog
 
 ## [1.0.0] - 2024-03-20
