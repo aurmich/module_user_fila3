@@ -12,10 +12,14 @@ beforeEach(function (): void {
     $this->user = User::factory()->create([
         'type' => UserType::MasterAdmin,
 <<<<<<< HEAD
+<<<<<<< HEAD
         'email' => 'admin@example.com',
 =======
         'email' => fake()->unique()->safeEmail(),
 >>>>>>> f3bab43 (.)
+=======
+        'email' => fake()->unique()->safeEmail(),
+>>>>>>> 3fc5300 (.)
         'password' => Hash::make('password123'),
     ]);
 });
@@ -23,10 +27,14 @@ beforeEach(function (): void {
 test('user can be created', function (): void {
     expect($this->user)->toBeInstanceOf(User::class);
 <<<<<<< HEAD
+<<<<<<< HEAD
     expect($this->user->email)->toBe('admin@example.com');
 =======
     expect($this->user->email)->toBeString()->not->toBeEmpty();
 >>>>>>> f3bab43 (.)
+=======
+    expect($this->user->email)->toBeString()->not->toBeEmpty();
+>>>>>>> 3fc5300 (.)
     expect($this->user->type)->toBe(UserType::MasterAdmin);
 });
 

@@ -10,10 +10,14 @@ test('user can be created', function () {
         'name' => 'Mario Rossi',
         'email' => 'mario.rossi@example.com',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'type' => UserType::PATIENT,
 =======
         'type' => UserType::CustomerUser,
 >>>>>>> f3bab43 (.)
+=======
+        'type' => UserType::CustomerUser,
+>>>>>>> 3fc5300 (.)
     ]);
 
     expect($user)
@@ -21,10 +25,14 @@ test('user can be created', function () {
         ->and($user->name)->toBe('Mario Rossi')
         ->and($user->email)->toBe('mario.rossi@example.com')
 <<<<<<< HEAD
+<<<<<<< HEAD
         ->and($user->type)->toBe(UserType::PATIENT);
 =======
         ->and($user->type)->toBe(UserType::CustomerUser);
 >>>>>>> f3bab43 (.)
+=======
+        ->and($user->type)->toBe(UserType::CustomerUser);
+>>>>>>> 3fc5300 (.)
 });
 
 test('user has required attributes', function () {
@@ -39,17 +47,21 @@ test('user has required attributes', function () {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 test('user can be doctor type', function () {
     $doctor = createUser(['type' => UserType::DOCTOR]);
+=======
+test('user can be bo user type', function () {
+    $boUser = createUser(['type' => UserType::BoUser]);
+>>>>>>> 3fc5300 (.)
     
-    expect($doctor->type)->toBe(UserType::DOCTOR)
-        ->and($doctor->isDoctor())->toBeTrue()
-        ->and($doctor->isPatient())->toBeFalse();
+    expect($boUser->type)->toBe(UserType::BoUser);
 });
 
-test('user can be patient type', function () {
-    $patient = createUser(['type' => UserType::PATIENT]);
+test('user can be customer user type', function () {
+    $customerUser = createUser(['type' => UserType::CustomerUser]);
     
+<<<<<<< HEAD
     expect($patient->type)->toBe(UserType::PATIENT)
         ->and($patient->isPatient())->toBeTrue()
         ->and($patient->isDoctor())->toBeFalse();
@@ -65,6 +77,9 @@ test('user can be customer user type', function () {
     
     expect($customerUser->type)->toBe(UserType::CustomerUser);
 >>>>>>> f3bab43 (.)
+=======
+    expect($customerUser->type)->toBe(UserType::CustomerUser);
+>>>>>>> 3fc5300 (.)
 });
 
 test('user password is hashed', function () {

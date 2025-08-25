@@ -38,6 +38,7 @@ git rebase -i origin/main
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # pick   - mantieni il commit
 
 # edit   - modifica il commit
@@ -46,6 +47,8 @@ git rebase -i origin/main
 >>>>>>> 08f361e (.)
 =======
 >>>>>>> f3bab43 (.)
+=======
+>>>>>>> 3fc5300 (.)
 # pick   - mantieni il commit
 
 # edit   - modifica il commit
@@ -218,8 +221,11 @@ git config --global alias.theirs '!f() { git checkout --theirs "$@" && git add "
 4. Documentare le decisioni di merge
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 5. Testare dopo ogni risoluzione 
 =======
 >>>>>>> 08f361e (.)
 =======
 >>>>>>> f3bab43 (.)
+=======
+>>>>>>> 3fc5300 (.)
