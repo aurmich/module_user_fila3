@@ -143,6 +143,9 @@ Questo bug fix ha permesso di completare il miglioramento della qualità del cod
 - Notifiche utente
 - Verifica email
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Auto-login dopo registrazione 
 =======
 >>>>>>> 08f361e (.)
+=======
+>>>>>>> f3bab43 (.)

@@ -130,10 +130,14 @@ describe('User Command Integration', function () {
 
         expect(is_object($testObject))->toBeTrue()
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->and(isset($testObject->value))->toBeTrue();
 =======
             ->and(property_exists($testObject, 'value'))->toBeTrue();
 >>>>>>> 08f361e (.)
+=======
+            ->and(property_exists($testObject, 'value'))->toBeTrue();
+>>>>>>> f3bab43 (.)
     });
 
     it('integrates with Laravel configuration system', function () {
@@ -217,11 +221,16 @@ describe('User Command Integration', function () {
         $testObject->testProperty = 'test_value';
         
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect(isset($testObject->testProperty))->toBeTrue()
             ->and(isset($testObject->nonExistentProperty))->toBeFalse();
 =======
         expect(property_exists($testObject, 'testProperty'))->toBeTrue()
             ->and(property_exists($testObject, 'nonExistentProperty'))->toBeFalse();
 >>>>>>> 08f361e (.)
+=======
+        expect(property_exists($testObject, 'testProperty'))->toBeTrue()
+            ->and(property_exists($testObject, 'nonExistentProperty'))->toBeFalse();
+>>>>>>> f3bab43 (.)
     });
 });

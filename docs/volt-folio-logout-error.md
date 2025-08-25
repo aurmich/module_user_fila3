@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Errore nel Logout con Volt e Folio
 
 ## Il Problema
@@ -119,6 +120,8 @@ final class LogoutAction
 - [Best Practices Volt](./VOLT_BEST_PRACTICES.md)
 - [Gestione Sessione](./SESSION_MANAGEMENT.md) 
 =======
+=======
+>>>>>>> f3bab43 (.)
 # Errore Volt/Folio: `VoltDirectiveMissingException` su logout
 
 ## Descrizione dell'errore
@@ -165,4 +168,7 @@ use function Livewire\Volt\{state, mount};
 ---
 
 **Errore risolto: aggiungi `@volt` come prima riga!**
+<<<<<<< HEAD
 >>>>>>> 08f361e (.)
+=======
+>>>>>>> f3bab43 (.)
