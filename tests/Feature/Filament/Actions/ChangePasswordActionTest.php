@@ -12,29 +12,10 @@ use Livewire\Livewire;
 uses(Tests\TestCase::class);
 
 beforeEach(function (): void {
-<<<<<<< HEAD
     // Use in-memory model to avoid DB constraints between tests
     $this->user = User::factory()->make([
         'type' => UserType::MasterAdmin,
         'email' => 'admin+' . uniqid('', true) . '@example.com',
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    $this->user = User::factory()->create([
-        'type' => UserType::MasterAdmin,
-        'email' => 'admin@example.com',
-=======
-=======
->>>>>>> 11b9b29 (.)
-    // Use in-memory model to avoid DB constraints between tests
-    $this->user = User::factory()->make([
-        'type' => UserType::MasterAdmin,
-        'email' => 'admin+' . uniqid('', true) . '@example.com',
-<<<<<<< HEAD
->>>>>>> f3bab43 (.)
-=======
->>>>>>> 11b9b29 (.)
->>>>>>> c1a7cf4 (.)
         'password' => Hash::make('oldpassword'),
     ]);
     

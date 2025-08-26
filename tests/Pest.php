@@ -16,7 +16,6 @@ use Modules\User\Tests\TestCase;
 |
 */
 
-<<<<<<< HEAD
 uses(
     TestCase::class,
     RefreshDatabase::class,
@@ -24,17 +23,6 @@ uses(
 )->in('Feature', 'Unit');
 
 uses()->group('user')->in('Feature', 'Unit');
-=======
-pest()->extend(TestCase::class)
-<<<<<<< HEAD
-<<<<<<< HEAD
-    ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
-=======
->>>>>>> f3bab43 (.)
-=======
->>>>>>> 11b9b29 (.)
-    ->in('Feature', 'Unit');
->>>>>>> c1a7cf4 (.)
 
 /*
 |--------------------------------------------------------------------------

@@ -10,38 +10,14 @@ test('user can be created', function () {
     $user = createUser([
         'name' => 'Mario Rossi',
         'email' => 'mario.rossi@example.com',
-<<<<<<< HEAD
         'type' => UserType::CustomerUser,
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        'type' => UserType::PATIENT,
-=======
-        'type' => UserType::CustomerUser,
->>>>>>> f3bab43 (.)
-=======
-        'type' => UserType::CustomerUser,
->>>>>>> 11b9b29 (.)
->>>>>>> c1a7cf4 (.)
     ]);
 
     expect($user)
         ->toBeUser()
         ->and($user->name)->toBe('Mario Rossi')
         ->and($user->email)->toBe('mario.rossi@example.com')
-<<<<<<< HEAD
         ->and($user->type)->toBe(UserType::CustomerUser);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        ->and($user->type)->toBe(UserType::PATIENT);
-=======
-        ->and($user->type)->toBe(UserType::CustomerUser);
->>>>>>> f3bab43 (.)
-=======
-        ->and($user->type)->toBe(UserType::CustomerUser);
->>>>>>> 11b9b29 (.)
->>>>>>> c1a7cf4 (.)
 });
 
 test('user has required attributes', function () {
@@ -55,31 +31,6 @@ test('user has required attributes', function () {
         ->toHaveProperty('password');
 });
 
-<<<<<<< HEAD
-test('user can be bo user type', function () {
-    $boUser = createUser(['type' => UserType::BoUser]);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-test('user can be doctor type', function () {
-    $doctor = createUser(['type' => UserType::DOCTOR]);
->>>>>>> c1a7cf4 (.)
-    
-    expect($boUser->type)->toBe(UserType::BoUser);
-});
-
-test('user can be customer user type', function () {
-    $customerUser = createUser(['type' => UserType::CustomerUser]);
-    
-<<<<<<< HEAD
-    expect($customerUser->type)->toBe(UserType::CustomerUser);
-=======
-    expect($patient->type)->toBe(UserType::PATIENT)
-        ->and($patient->isPatient())->toBeTrue()
-        ->and($patient->isDoctor())->toBeFalse();
-=======
-=======
->>>>>>> 11b9b29 (.)
 test('user can be bo user type', function () {
     $boUser = createUser(['type' => UserType::BoUser]);
     
@@ -90,11 +41,6 @@ test('user can be customer user type', function () {
     $customerUser = createUser(['type' => UserType::CustomerUser]);
     
     expect($customerUser->type)->toBe(UserType::CustomerUser);
-<<<<<<< HEAD
->>>>>>> f3bab43 (.)
-=======
->>>>>>> 11b9b29 (.)
->>>>>>> c1a7cf4 (.)
 });
 
 test('user password is hashed', function () {
