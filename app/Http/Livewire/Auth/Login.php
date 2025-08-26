@@ -13,6 +13,10 @@ use Filament\Forms\Form;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
+<<<<<<< HEAD
+=======
+use Livewire\Features\SupportRedirects\Redirector as LivewireRedirector;
+>>>>>>> 96c23ce (.)
 use Modules\Xot\Actions\File\ViewCopyAction;
 
 /**
@@ -138,9 +142,15 @@ class Login extends Component implements HasForms
     /**
      * Determina l'URL di redirect appropriato per l'utente autenticato.
      *
+<<<<<<< HEAD
      * @return RedirectResponse
      */
     protected function getRedirectUrl(): RedirectResponse
+=======
+     * @return RedirectResponse|LivewireRedirector
+     */
+    protected function getRedirectUrl(): RedirectResponse|LivewireRedirector
+>>>>>>> 96c23ce (.)
     {
         $user = Auth::user();
         
