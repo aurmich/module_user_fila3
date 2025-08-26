@@ -2,34 +2,18 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
->>>>>>> 3fc5300 (.)
-=======
->>>>>>> 4f6d2d5 (.)
 uses(\Tests\TestCase::class);
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f3bab43 (.)
 =======
->>>>>>> 3fc5300 (.)
-=======
->>>>>>> 4f6d2d5 (.)
 use Modules\User\Models\User;
 use Modules\User\Models\Team;
 use Modules\User\Models\Profile;
 use Modules\User\Models\AuthenticationLog;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 // In-memory helper: build a User without touching DB
 function stubUser(array $attributes = []): User {
     $defaults = [
@@ -68,7 +52,6 @@ beforeAll(function (): void {
     }
 });
 
->>>>>>> 3fc5300 (.)
 describe('User Model', function () {
     it('can be created (in-memory)', function () {
         $user = stubUser();
@@ -104,13 +87,7 @@ describe('User Model', function () {
     });
 
     it('casts attributes correctly', function () {
-<<<<<<< HEAD
-        $user = createUser([
-            'email_verified_at' => now(),
-            'created_at' => now(),
 =======
-=======
->>>>>>> 4f6d2d5 (.)
 // In-memory helper: build a User without touching DB
 function stubUser(array $attributes = []): User {
     $defaults = [
@@ -187,15 +164,10 @@ describe('User Model', function () {
         $user = stubUser([
             'email_verified_at' => Carbon::now(),
             'created_at' => Carbon::now(),
-<<<<<<< HEAD
->>>>>>> f3bab43 (.)
-=======
         $user = stubUser([
             'email_verified_at' => Carbon::now(),
             'created_at' => Carbon::now(),
->>>>>>> 3fc5300 (.)
 =======
->>>>>>> 4f6d2d5 (.)
             'is_active' => true,
             'is_otp' => false,
         ]);
@@ -207,46 +179,6 @@ describe('User Model', function () {
     });
 
     describe('Relationships', function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        it('has profile relationship', function () {
-            $user = createUser();
-            $profile = createProfile(['user_id' => $user->id]);
-=======
-        it('has profile relationship (in-memory)', function () {
-            $user = stubUser();
-            $profile = new Profile();
-            $profile->forceFill(['user_id' => 'test-user-id']);
-            // Set relation without touching DB
-            $user->setRelation('profile', $profile);
->>>>>>> 3fc5300 (.)
-            
-            expect($user->profile)->toBeInstanceOf(Profile::class);
-        });
-
-        it('can attach authentication logs in-memory', function () {
-            $user = stubUser();
-            $log = new AuthenticationLog();
-            $user->setRelation('authentications', collect([$log]));
-            expect($user->authentications)->toHaveCount(1);
-        });
-
-        it('can expose ownedTeams relation when preset', function () {
-            $user = stubUser();
-            $team = new Team();
-            $user->setRelation('ownedTeams', collect([$team]));
-            expect($user->ownedTeams)->toHaveCount(1);
-        });
-
-<<<<<<< HEAD
-        it('belongs to many teams', function () {
-            $user = createUser();
-            
-            expect($user->teams())->toBeInstanceOf(\Illuminate\Database\Eloquent\Relations\BelongsToMany::class);
-=======
-=======
->>>>>>> 4f6d2d5 (.)
         it('has profile relationship (in-memory)', function () {
             $user = stubUser();
             $profile = new Profile();
@@ -271,41 +203,48 @@ describe('User Model', function () {
             expect($user->ownedTeams)->toHaveCount(1);
         });
 
-<<<<<<< HEAD
 =======
->>>>>>> 3fc5300 (.)
+        it('has profile relationship (in-memory)', function () {
+            $user = stubUser();
+            $profile = new Profile();
+            $profile->forceFill(['user_id' => 'test-user-id']);
+            // Set relation without touching DB
+            $user->setRelation('profile', $profile);
+            
+            expect($user->profile)->toBeInstanceOf(Profile::class);
+        });
+
+        it('can attach authentication logs in-memory', function () {
+            $user = stubUser();
+            $log = new AuthenticationLog();
+            $user->setRelation('authentications', collect([$log]));
+            expect($user->authentications)->toHaveCount(1);
+        });
+
+        it('can expose ownedTeams relation when preset', function () {
+            $user = stubUser();
+            $team = new Team();
+            $user->setRelation('ownedTeams', collect([$team]));
+            expect($user->ownedTeams)->toHaveCount(1);
+        });
+
 =======
->>>>>>> 4f6d2d5 (.)
         it('can expose teams relation when preset', function () {
             $user = stubUser();
             $team = new Team();
             $user->setRelation('teams', collect([$team]));
             expect($user->teams)->toHaveCount(1);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f3bab43 (.)
 =======
->>>>>>> 3fc5300 (.)
-=======
->>>>>>> 4f6d2d5 (.)
         });
     });
 
     describe('Accessors and Mutators', function () {
         it('has full_name accessor', function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            $user = createUser([
+            $user = stubUser([
 =======
             $user = stubUser([
->>>>>>> f3bab43 (.)
 =======
             $user = stubUser([
->>>>>>> 3fc5300 (.)
-=======
-            $user = stubUser([
->>>>>>> 4f6d2d5 (.)
                 'first_name' => 'John',
                 'last_name' => 'Doe'
             ]);
@@ -314,42 +253,24 @@ describe('User Model', function () {
         });
 
         it('handles null names in full_name accessor', function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            $user = createUser([
+            $user = stubUser([
 =======
             $user = stubUser([
->>>>>>> f3bab43 (.)
 =======
             $user = stubUser([
->>>>>>> 3fc5300 (.)
-=======
-            $user = stubUser([
->>>>>>> 4f6d2d5 (.)
                 'first_name' => 'John',
                 'last_name' => null
             ]);
             
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            expect($user->full_name)->toBe('John');
-=======
             // Some implementations may include a trailing space when last_name is null
             expect(rtrim($user->full_name))->toBe('John');
->>>>>>> 3fc5300 (.)
         });
 
         it('hashes password when set', function () {
             $user = stubUser(['password' => 'plain-password']);
             
             expect($user->password)->not->toBe('plain-password')
-<<<<<<< HEAD
-                ->and(\Hash::check('plain-password', $user->password))->toBeTrue();
 =======
-=======
->>>>>>> 4f6d2d5 (.)
             // Some implementations may include a trailing space when last_name is null
             expect(rtrim($user->full_name))->toBe('John');
         });
@@ -359,27 +280,14 @@ describe('User Model', function () {
             
             expect($user->password)->not->toBe('plain-password')
                 ->and(password_verify('plain-password', $user->password))->toBeTrue();
->>>>>>> f3bab43 (.)
-<<<<<<< HEAD
-=======
                 ->and(password_verify('plain-password', $user->password))->toBeTrue();
->>>>>>> 3fc5300 (.)
 =======
->>>>>>> 4f6d2d5 (.)
         });
     });
 
     describe('Authentication Features', function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        it('can verify email', function () {
-            $user = createUser(['email_verified_at' => null]);
-            
-=======
         it('reflects verified email state when timestamp is set', function () {
             $user = stubUser(['email_verified_at' => null]);
->>>>>>> 3fc5300 (.)
             expect($user->hasVerifiedEmail())->toBeFalse();
             $user->email_verified_at = Carbon::now();
             expect($user->hasVerifiedEmail())->toBeTrue();
@@ -388,13 +296,7 @@ describe('User Model', function () {
         it('can be activated/deactivated (in-memory)', function () {
             $user = stubUser(['is_active' => false]);
             expect($user->is_active)->toBeFalse();
-<<<<<<< HEAD
-            
-            $user->update(['is_active' => true]);
-            
 =======
-=======
->>>>>>> 4f6d2d5 (.)
         it('reflects verified email state when timestamp is set', function () {
             $user = stubUser(['email_verified_at' => null]);
             expect($user->hasVerifiedEmail())->toBeFalse();
@@ -407,48 +309,27 @@ describe('User Model', function () {
             expect($user->is_active)->toBeFalse();
             // simulate activation without DB
             $user->is_active = true;
-<<<<<<< HEAD
->>>>>>> f3bab43 (.)
-=======
             // simulate activation without DB
             $user->is_active = true;
->>>>>>> 3fc5300 (.)
 =======
->>>>>>> 4f6d2d5 (.)
             expect($user->is_active)->toBeTrue();
         });
 
         it('supports OTP authentication', function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            $user = createUser(['is_otp' => true]);
+            $user = stubUser(['is_otp' => true]);
 =======
             $user = stubUser(['is_otp' => true]);
->>>>>>> f3bab43 (.)
 =======
             $user = stubUser(['is_otp' => true]);
->>>>>>> 3fc5300 (.)
-=======
-            $user = stubUser(['is_otp' => true]);
->>>>>>> 4f6d2d5 (.)
             
             expect($user->is_otp)->toBeTrue();
         });
     });
 
     describe('Scopes and Queries', function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        it('can filter active users', function () {
-            createUser(['is_active' => true]);
-            createUser(['is_active' => false]);
-=======
         it('exposes active flag for filtering (in-memory)', function () {
             $u1 = stubUser(['is_active' => true]);
             $u2 = stubUser(['is_active' => false]);
->>>>>>> 3fc5300 (.)
             
             $active = collect([$u1, $u2])->filter(fn (User $u) => $u->is_active === true);
             $inactive = collect([$u1, $u2])->filter(fn (User $u) => $u->is_active === false);
@@ -472,13 +353,7 @@ describe('User Model', function () {
             $u1 = stubUser(['lang' => 'it']);
             $u2 = stubUser(['lang' => 'en']);
             
-<<<<<<< HEAD
-            $italianUsers = User::where('lang', 'it')->get();
-            
-            expect($italianUsers)->toHaveCount(1);
 =======
-=======
->>>>>>> 4f6d2d5 (.)
         it('exposes active flag for filtering (in-memory)', function () {
             $u1 = stubUser(['is_active' => true]);
             $u2 = stubUser(['is_active' => false]);
@@ -507,82 +382,43 @@ describe('User Model', function () {
             
             $italians = collect([$u1, $u2])->where('lang', 'it');
             expect($italians)->toHaveCount(1);
-<<<<<<< HEAD
->>>>>>> f3bab43 (.)
-=======
             $italians = collect([$u1, $u2])->where('lang', 'it');
             expect($italians)->toHaveCount(1);
->>>>>>> 3fc5300 (.)
 =======
->>>>>>> 4f6d2d5 (.)
         });
     });
 
     describe('Security Features', function () {
         it('has password expiration', function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            $user = createUser(['password_expires_at' => now()->addDays(30)]);
+            $user = stubUser(['password_expires_at' => Carbon::now()->addDays(30)]);
 =======
             $user = stubUser(['password_expires_at' => Carbon::now()->addDays(30)]);
->>>>>>> f3bab43 (.)
 =======
             $user = stubUser(['password_expires_at' => Carbon::now()->addDays(30)]);
->>>>>>> 3fc5300 (.)
-=======
-            $user = stubUser(['password_expires_at' => Carbon::now()->addDays(30)]);
->>>>>>> 4f6d2d5 (.)
             
             expect($user->password_expires_at)->toBeInstanceOf(\Carbon\Carbon::class);
         });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        it('tracks creation and updates', function () {
-            $user = createUser();
-            
-            expect($user->created_by)->toBeString()
-                ->and($user->updated_by)->toBeString()
-                ->and($user->created_at)->toBeInstanceOf(\Carbon\Carbon::class)
-=======
-=======
->>>>>>> 4f6d2d5 (.)
-        it('tracks creation and updates (in-memory)', function () {
-            $user = stubUser();
-            
-            // created_by/updated_by may be null in-memory; assert timestamps typing only
-            expect($user->created_at)->toBeInstanceOf(\Carbon\Carbon::class)
-<<<<<<< HEAD
->>>>>>> f3bab43 (.)
 =======
         it('tracks creation and updates (in-memory)', function () {
             $user = stubUser();
             
             // created_by/updated_by may be null in-memory; assert timestamps typing only
             expect($user->created_at)->toBeInstanceOf(\Carbon\Carbon::class)
->>>>>>> 3fc5300 (.)
+        it('tracks creation and updates (in-memory)', function () {
+            $user = stubUser();
+            
+            // created_by/updated_by may be null in-memory; assert timestamps typing only
+            expect($user->created_at)->toBeInstanceOf(\Carbon\Carbon::class)
 =======
->>>>>>> 4f6d2d5 (.)
                 ->and($user->updated_at)->toBeInstanceOf(\Carbon\Carbon::class);
         });
     });
 
     describe('Team Management', function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        it('can have current team', function () {
-            $team = createTeam();
-            $user = createUser(['current_team_id' => $team->id]);
-            
-            expect($user->current_team_id)->toBe($team->id);
-=======
         it('can have current team (in-memory)', function () {
             $user = stubUser(['current_team_id' => 'team-id']);
             expect($user->current_team_id)->toBe('team-id');
->>>>>>> 3fc5300 (.)
         });
 
         it('can own teams (in-memory)', function () {
@@ -591,12 +427,7 @@ describe('User Model', function () {
             $team->forceFill(['user_id' => 'owner-id']);
             $user->setRelation('ownedTeams', collect([$team]));
             
-<<<<<<< HEAD
-            expect($user->ownedTeams)->toHaveCount(1)
-                ->and($user->ownedTeams->first()->id)->toBe($team->id);
 =======
-=======
->>>>>>> 4f6d2d5 (.)
         it('can have current team (in-memory)', function () {
             $user = stubUser(['current_team_id' => 'team-id']);
             expect($user->current_team_id)->toBe('team-id');
@@ -609,13 +440,8 @@ describe('User Model', function () {
             $user->setRelation('ownedTeams', collect([$team]));
             
             expect($user->ownedTeams)->toHaveCount(1);
-<<<<<<< HEAD
->>>>>>> f3bab43 (.)
-=======
             expect($user->ownedTeams)->toHaveCount(1);
->>>>>>> 3fc5300 (.)
 =======
->>>>>>> 4f6d2d5 (.)
         });
     });
 });

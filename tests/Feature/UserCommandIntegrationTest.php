@@ -129,23 +129,13 @@ describe('User Command Integration', function () {
         $testObject->getLabel = fn() => 'Test Label';
 
         expect(is_object($testObject))->toBeTrue()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            ->and(isset($testObject->value))->toBeTrue();
+            ->and(property_exists($testObject, 'value'))->toBeTrue();
 =======
             ->and(property_exists($testObject, 'value'))->toBeTrue();
->>>>>>> 08f361e (.)
 =======
             ->and(property_exists($testObject, 'value'))->toBeTrue();
->>>>>>> f3bab43 (.)
-=======
-            ->and(property_exists($testObject, 'value'))->toBeTrue();
->>>>>>> 4f6d2d5 (.)
 =======
             ->and(($testObject->value ?? null) !== null)->toBeTrue();
->>>>>>> 4cf1a24 (.)
     });
 
     it('integrates with Laravel configuration system', function () {
@@ -228,27 +218,16 @@ describe('User Command Integration', function () {
         $testObject = new stdClass();
         $testObject->testProperty = 'test_value';
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect(isset($testObject->testProperty))->toBeTrue()
-            ->and(isset($testObject->nonExistentProperty))->toBeFalse();
+        expect(property_exists($testObject, 'testProperty'))->toBeTrue()
+            ->and(property_exists($testObject, 'nonExistentProperty'))->toBeFalse();
 =======
         expect(property_exists($testObject, 'testProperty'))->toBeTrue()
             ->and(property_exists($testObject, 'nonExistentProperty'))->toBeFalse();
->>>>>>> 08f361e (.)
 =======
         expect(property_exists($testObject, 'testProperty'))->toBeTrue()
             ->and(property_exists($testObject, 'nonExistentProperty'))->toBeFalse();
->>>>>>> f3bab43 (.)
-=======
-        expect(property_exists($testObject, 'testProperty'))->toBeTrue()
-            ->and(property_exists($testObject, 'nonExistentProperty'))->toBeFalse();
->>>>>>> 4f6d2d5 (.)
 =======
         expect(($testObject->testProperty ?? null) !== null)->toBeTrue()
             ->and(($testObject->nonExistentProperty ?? null) === null)->toBeTrue();
->>>>>>> 4cf1a24 (.)
     });
 });

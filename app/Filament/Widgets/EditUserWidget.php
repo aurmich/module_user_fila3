@@ -134,23 +134,13 @@ class EditUserWidget extends XotBaseWidget
                 $attributes = $model->getAttributes();
                 
                 // Gestisci specificamente gli enum se presenti
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                if (isset($attributes['type']) && isset($model->type) && $model->type instanceof \BackedEnum) {
+                if (isset($attributes['type']) && ($model->type ?? null) instanceof \BackedEnum) {
 =======
                 if (isset($attributes['type']) && ($model->type ?? null) instanceof \BackedEnum) {
->>>>>>> f3bab43 (.)
 =======
                 if (isset($attributes['type']) && ($model->type ?? null) instanceof \BackedEnum) {
->>>>>>> 3fc5300 (.)
-=======
-                if (isset($attributes['type']) && ($model->type ?? null) instanceof \BackedEnum) {
->>>>>>> 4f6d2d5 (.)
 =======
                 if (($attributes['type'] ?? null) !== null && ($model->type ?? null) !== null && $model->type instanceof \BackedEnum) {
->>>>>>> 4cf1a24 (.)
                     $attributes['type'] = $model->type->value;
                 }
                 
@@ -211,23 +201,14 @@ class EditUserWidget extends XotBaseWidget
         
         // L'utente può modificare solo il proprio profilo
         return $currentUser && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            (isset($currentUser->id) && isset($this->record->id) && $currentUser->id === $this->record->id) ||
-            (isset($currentUser->id) && $currentUser->id === ($this->record->user_id ?? null))
+            (($currentUser->id ?? null) !== null && ($this->record->id ?? null) !== null && $currentUser->id === $this->record->id) ||
+            (($currentUser->id ?? null) !== null && $currentUser->id === ($this->record->user_id ?? null))
 =======
             (($currentUser->id ?? null) !== null && ($this->record->id ?? null) !== null && $currentUser->id === $this->record->id) ||
             (($currentUser->id ?? null) !== null && $currentUser->id === ($this->record->user_id ?? null))
->>>>>>> f3bab43 (.)
 =======
             (($currentUser->id ?? null) !== null && ($this->record->id ?? null) !== null && $currentUser->id === $this->record->id) ||
             (($currentUser->id ?? null) !== null && $currentUser->id === ($this->record->user_id ?? null))
->>>>>>> 3fc5300 (.)
-=======
-            (($currentUser->id ?? null) !== null && ($this->record->id ?? null) !== null && $currentUser->id === $this->record->id) ||
-            (($currentUser->id ?? null) !== null && $currentUser->id === ($this->record->user_id ?? null))
->>>>>>> 4f6d2d5 (.)
         );
     }
 }
