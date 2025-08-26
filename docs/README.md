@@ -1,58 +1,173 @@
-# Modulo User - Documentazione Consolidata
+# Modulo User
 
-## 🎯 Panoramica
-Modulo fondamentale per la gestione degli utenti, autenticazione e autorizzazione nel sistema Laraxot.
+## Introduzione
 
-## 📚 Documentazione Principale
+Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli utenti nel sistema. Fornisce funzionalità base per la registrazione, il login, la gestione dei ruoli e dei permessi.
 
-### **Core e Architettura**
-- [Architettura e Best Practices](core/architecture.md)
-- [Convenzioni di Naming](core/naming-conventions.md)
-- [Struttura Moduli](core/module-structure.md)
-- [Gestione Autenticazione](core/authentication.md)
+## File Chiave
+- [BaseUser.php](app/Models/BaseUser.php)
+- [User.php](app/Models/User.php)
+- [Doctor.php](../Patient/app/Models/Doctor.php)
+- [DoctorResource.php](../Patient/app/Filament/Resources/DoctorResource.php)
+- [RegisterAction.php](../Patient/app/Actions/RegisterAction.php)
+- [RegistrationWidget.php](app/Filament/Widgets/RegistrationWidget.php)
 
-### **Filament e UI**
-- [Best Practices Filament](filament/best-practices.md)
-- [Risorse e Relation Manager](filament/resources.md)
-- [Azioni e Componenti](filament/actions.md)
-- [Dashboard e Pagine](filament/dashboard.md)
+## Funzionalità
 
-### **Sviluppo e Qualità**
-- [PHPStan e Analisi Statica](development/phpstan-guide.md)
-- [Testing e Best Practices](development/testing.md)
-- [Migrazioni e Database](development/migrations.md)
-- [Service Provider](development/service-providers.md)
+### 1. Autenticazione
+- Login/Logout
+- Registrazione
+- Password Reset
+- Email Verification
 
-### **Integrazione e Utilità**
-- [Traduzioni e Localizzazione](utils/translations.md)
-- [Gestione Errori](utils/error-handling.md)
-- [Eventi e Code](utils/events.md)
-- [Sicurezza](utils/security.md)
+### 2. Autorizzazione
+- Ruoli e Permessi
+- Policy
+- Gates
+- Middleware
 
-### **Template e Esempi**
-- [Template Classi Base](templates/base-classes.md)
-- [Template Service Provider](templates/service-provider.md)
-- [Template Filament](templates/filament.md)
+### 3. Gestione Utenti
+- CRUD Utenti
+- Profili
+- Impostazioni
+- Notifiche
 
-## 🚀 Quick Start
+## Best Practices
 
-1. **Estendi le classi base appropriate**
-2. **Segui le convenzioni di naming**
-3. **Utilizza i template standardizzati**
-4. **Rispetta le regole PHPStan**
+### 1. Ereditarietà
+- Estendere sempre `BaseUser` per i modelli utente
+- Usare il trait `HasParent` per STI
+- Non duplicare trait già presenti nelle classi base
 
-## 🔗 Collegamenti
+### 2. Validation
+- Usare le regole di validazione base
+- Estendere le regole quando necessario
+- Mantenere la validazione consistente
 
-- [Documentazione Root](../../docs/)
-- [Best Practices Sistema](../../docs/core/best-practices.md)
-- [Convenzioni Sistema](../../docs/core/conventions.md)
+### 3. Error Handling
+- Usare le eccezioni custom fornite
+- Implementare logging appropriato
+- Gestire gli errori in modo consistente
+
+## Struttura
+```
+User/
+├── app/
+│   ├── Models/
+│   │   ├── User.php
+│   │   ├── OauthAccessToken.php
+│   │   ├── OauthAuthCode.php
+│   │   ├── OauthClient.php
+│   │   ├── OauthPersonalAccessClient.php
+│   │   └── OauthRefreshToken.php
+│   ├── Providers/
+│   │   ├── Traits/
+│   │   │   ├── HasPassportConfiguration.php
+│   │   │   └── HasSocialiteConfiguration.php
+│   │   ├── UserServiceProvider.php
+│   │   ├── EventServiceProvider.php
+│   │   ├── RouteServiceProvider.php
+│   │   └── Filament/
+│   │       └── AdminPanelProvider.php
+│   ├── Filament/
+│   │   ├── Resources/
+│   │   │   └── UserResource.php
+│   │   ├── Widgets/
+│   │   │   ├── Auth/
+│   │   │   │   ├── LoginWidget.php
+│   │   │   │   └── SocialLoginWidget.php
+│   │   │   └── User/
+│   │   │       ├── UserStatsWidget.php
+│   │   │       └── UserActivityWidget.php
+│   │   └── Pages/
+│   │       └── Auth/
+│   │           ├── LoginPage.php
+│   │           └── RegisterPage.php
+│   └── Http/
+│       └── Controllers/
+│           └── Auth/
+├── config/
+│   └── auth.php
+├── database/
+│   └── migrations/
+└── resources/
+    └── views/
+        └── pages/
+            └── auth/
+```
+
+## Documentazione Tecnica
+- [Architettura](./architecture/README.md)
+- [Best Practices](./best-practices/README.md)
+- [Error Handling](./error-handling.md)
+- [Validation](./validation.md)
+- [Linee guida Actions](./actions.mdc)
+- [Linee guida Activitylog](./activitylog.mdc)
+
+## Collegamenti Bidirezionali
+- [Modulo Xot](../Xot/docs/README.md)
+- [Modulo Patient](../Patient/docs/README.md)
+- [Modulo Dental](../Dental/docs/README.md)
+- [Linee guida Actions](./actions.mdc)
+- [Linee guida Activitylog](./activitylog.mdc)
+
+## Vedi Anche
+- [Documentazione Principale](../../docs/INDEX.md)
+- [Architettura Moduli](../../docs/architecture/modules-structure.md)
+- [Convenzioni di Nomenclatura](../../docs/standards/file_naming_conventions.md)
+- [Struttura del Progetto](../Xot/docs/architecture/struttura-progetto.md)
+
+> **Collegamenti correlati**
+> - [README.md documentazione generale](../../../docs/README.md)
+> - [README.md toolkit bashscripts](../../../bashscripts/docs/README.md)
+> - [README.md modulo GDPR](../Gdpr/docs/README.md)
+> - [README.md modulo User](../User/docs/README.md)
+> - [README.md modulo Lang](../Lang/docs/README.md)
+> - [README.md modulo Activity](../Activity/docs/README.md)
+> - [README.md modulo Media](../Media/docs/README.md)
+> - [README.md modulo Notify](../Notify/docs/README.md)
+> - [README.md modulo Tenant](../Tenant/docs/README.md)
+> - [README.md modulo UI](../UI/docs/README.md)
+> - [README.md modulo Xot](../Xot/docs/README.md)
+> - [Collegamenti documentazione centrale](../../../docs/collegamenti-documentazione.md)
+
+## Indice
+
+### Autenticazione e Autorizzazione
+- [Passport Integration](./passport.md) - Integrazione OAuth2
+- [Socialite Integration](./socialite.txt) - Login social
+- [Two Factor Authentication](./two_factor.txt) - Autenticazione a due fattori
+- [Custom Login](./custom_login.md) - Implementazione login personalizzata
+- [Volt Folio Logout](./VOLT_FOLIO_LOGOUT.md) - Implementazione logout con Volt e Folio
+- [Volt Folio Auth Implementation](./VOLT_FOLIO_AUTH_IMPLEMENTATION.md) - Implementazione completa autenticazione con Volt e Folio
+- [Analisi Logout Blade](./LOGOUT_BLADE_ANALYSIS.md) - Analisi e miglioramenti del file logout.blade.php
+- [Volt Folio Logout](./VOLT_FOLIO_LOGOUT.md) - Implementazione logout con Volt e Folio
+- [Volt Folio Auth Implementation](./VOLT_FOLIO_AUTH_IMPLEMENTATION.md) - Implementazione completa autenticazione con Volt e Folio
+- [Analisi Logout Blade](./LOGOUT_BLADE_ANALYSIS.md) - Analisi e miglioramenti del file logout.blade.php
+
+### Modelli e Profili
+- [User Profile Models](./user_profile_models.md) - Modelli profilo utente
+- [User Roles](./user_roles.md) - Sistema ruoli
+- [User Permissions](./user_permissions.md) - Sistema permessi
+
+### Filament e UI
+### Versione HEAD
+
+- [Filament Best Practices](FILAMENT_BEST-PRACTICES.md) - Best practices Filament
+
+### Versione Incoming
+
+- [Filament Best Practices](filament-best-practices.md) - Best practices Filament
 
 ---
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Ultimo aggiornamento:** Gennaio 2025  
 **Versione:** 2.0 - Consolidata DRY + KISS
 =======
+=======
+>>>>>>> 4cf1a24 (.)
 - [Login Widget](login_widget.md) - Widget login personalizzato
 - [User Interface](user_interface.md) - Interfaccia utente
 
@@ -826,6 +941,7 @@ Schema::table('teams', function (Blueprint $table) {
 - [ ] Nessuna migration di tabelle modulari nella cartella globale
 - [ ] La documentazione tecnica è aggiornata
 - [ ] I comandi artisan sono lanciati dal path corretto o con namespace modulo
+<<<<<<< HEAD
 >>>>>>> 08f361e (.)
 
 ## Aggiornamenti Recenti
@@ -840,6 +956,8 @@ Schema::table('teams', function (Blueprint $table) {
   - **Regola**: docs_project solo per documentazione generale del progetto, file specifici di moduli nelle rispettive cartelle docs
 
 ## Collegamenti
+=======
+>>>>>>> 4cf1a24 (.)
 
 ## Aggiornamenti Recenti
 

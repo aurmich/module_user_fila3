@@ -132,6 +132,7 @@ describe('User Command Integration', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->and(isset($testObject->value))->toBeTrue();
 =======
             ->and(property_exists($testObject, 'value'))->toBeTrue();
@@ -142,6 +143,9 @@ describe('User Command Integration', function () {
 =======
             ->and(property_exists($testObject, 'value'))->toBeTrue();
 >>>>>>> 4f6d2d5 (.)
+=======
+            ->and(($testObject->value ?? null) !== null)->toBeTrue();
+>>>>>>> 4cf1a24 (.)
     });
 
     it('integrates with Laravel configuration system', function () {
@@ -227,6 +231,7 @@ describe('User Command Integration', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect(isset($testObject->testProperty))->toBeTrue()
             ->and(isset($testObject->nonExistentProperty))->toBeFalse();
 =======
@@ -241,5 +246,9 @@ describe('User Command Integration', function () {
         expect(property_exists($testObject, 'testProperty'))->toBeTrue()
             ->and(property_exists($testObject, 'nonExistentProperty'))->toBeFalse();
 >>>>>>> 4f6d2d5 (.)
+=======
+        expect(($testObject->testProperty ?? null) !== null)->toBeTrue()
+            ->and(($testObject->nonExistentProperty ?? null) === null)->toBeTrue();
+>>>>>>> 4cf1a24 (.)
     });
 });

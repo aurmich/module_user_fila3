@@ -137,6 +137,7 @@ class EditUserWidget extends XotBaseWidget
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if (isset($attributes['type']) && isset($model->type) && $model->type instanceof \BackedEnum) {
 =======
                 if (isset($attributes['type']) && ($model->type ?? null) instanceof \BackedEnum) {
@@ -147,6 +148,9 @@ class EditUserWidget extends XotBaseWidget
 =======
                 if (isset($attributes['type']) && ($model->type ?? null) instanceof \BackedEnum) {
 >>>>>>> 4f6d2d5 (.)
+=======
+                if (($attributes['type'] ?? null) !== null && ($model->type ?? null) !== null && $model->type instanceof \BackedEnum) {
+>>>>>>> 4cf1a24 (.)
                     $attributes['type'] = $model->type->value;
                 }
                 
