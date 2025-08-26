@@ -12,20 +12,12 @@ beforeEach(function (): void {
     $this->user = User::factory()->create([
         'type' => UserType::MasterAdmin,
         'email' => fake()->unique()->safeEmail(),
-=======
-        'email' => fake()->unique()->safeEmail(),
-=======
-        'email' => fake()->unique()->safeEmail(),
         'password' => Hash::make('password123'),
     ]);
 });
 
 test('user can be created', function (): void {
     expect($this->user)->toBeInstanceOf(User::class);
-    expect($this->user->email)->toBeString()->not->toBeEmpty();
-=======
-    expect($this->user->email)->toBeString()->not->toBeEmpty();
-=======
     expect($this->user->email)->toBeString()->not->toBeEmpty();
     expect($this->user->type)->toBe(UserType::MasterAdmin);
 });

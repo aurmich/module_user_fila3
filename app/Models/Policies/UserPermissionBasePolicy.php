@@ -17,33 +17,33 @@ use Illuminate\Auth\Access\HandlesAuthorization;
 
 // use Modules\Xot\Datas\XotData;
 
-abstract class UserBasePolicy
+abstract class UserPermissionBasePolicy
 {
     use HandlesAuthorization;
 
     public function before(UserContract $user, string $ability): ?bool
     {
-        $xotData = XotData::make();
+        
         if ($user->hasRole('super-admin')) {
             return true;
         }
-        /*
+       
         $class_name=class_basename(static::class);
         $permission_name=Str::of($class_name)
         ->before('Policy')
         ->lower()
         ->append('.'.$ability)
         ->toString();
-        */
-        //dddx($permission_name);
-        //if($user->hasPermissionTo($permission_name)){
-        //    return true;
-        //}
-        //try {
-        //    Permission::firstOrCreate(['name' => $permission_name]);
-        //} catch (\Exception $e) {
-        //    //dddx($e);
-        //}
+        
+        try {
+            Permission::firstOrCreate(['name' => $permission_name]);
+        } catch (\Exception $e) {
+            //dddx($e);
+        }
+        if($user->hasPermissionTo($permission_name)){
+            return true;
+        }
+        
 
         return null;
     }

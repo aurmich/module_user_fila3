@@ -129,12 +129,7 @@ describe('User Command Integration', function () {
         $testObject->getLabel = fn() => 'Test Label';
 
         expect(is_object($testObject))->toBeTrue()
-            ->and(property_exists($testObject, 'value'))->toBeTrue();
-=======
-            ->and(property_exists($testObject, 'value'))->toBeTrue();
-=======
-            ->and(property_exists($testObject, 'value'))->toBeTrue();
-=======
+            ->and(property_exists($testObject, 'value'))->toBeTrue()
             ->and(($testObject->value ?? null) !== null)->toBeTrue();
     });
 
@@ -220,14 +215,5 @@ describe('User Command Integration', function () {
         
         expect(property_exists($testObject, 'testProperty'))->toBeTrue()
             ->and(property_exists($testObject, 'nonExistentProperty'))->toBeFalse();
-=======
-        expect(property_exists($testObject, 'testProperty'))->toBeTrue()
-            ->and(property_exists($testObject, 'nonExistentProperty'))->toBeFalse();
-=======
-        expect(property_exists($testObject, 'testProperty'))->toBeTrue()
-            ->and(property_exists($testObject, 'nonExistentProperty'))->toBeFalse();
-=======
-        expect(($testObject->testProperty ?? null) !== null)->toBeTrue()
-            ->and(($testObject->nonExistentProperty ?? null) === null)->toBeTrue();
     });
 });

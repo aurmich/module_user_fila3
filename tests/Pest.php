@@ -2,32 +2,34 @@
 
 declare(strict_types=1);
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
 use Modules\User\Tests\TestCase;
 
 /*
 |--------------------------------------------------------------------------
-| Test Case
+| Test Configuration
 |--------------------------------------------------------------------------
 |
-| The closure you provide to your test functions is always bound to a specific PHPUnit test
-| case class. By default, that class is "PHPUnit\Framework\TestCase". Of course, you may
-| need to change it using the "pest()" function to bind a different classes or traits.
+| This file configures Pest testing for the User module.
+| It sets up the test environment, custom expectations, and helper functions.
 |
 */
 
-pest()->extend(TestCase::class)
-=======
-=======
-    ->in('Feature', 'Unit');
+uses(
+    TestCase::class,
+    RefreshDatabase::class,
+    WithFaker::class,
+)->in('Feature', 'Unit');
+
+uses()->group('user')->in('Feature', 'Unit');
 
 /*
 |--------------------------------------------------------------------------
-| Expectations
+| Custom Expectations
 |--------------------------------------------------------------------------
 |
-| When you're writing tests, you often need to check that values meet certain conditions. The
-| "expect()" function gives you access to a set of "expectations" methods that you can use
-| to assert different things. Of course, you may extend the Expectation API at any time.
+| Custom expectations for the User module models and relationships.
 |
 */
 
@@ -43,14 +45,24 @@ expect()->extend('toBeProfile', function () {
     return $this->toBeInstanceOf(\Modules\User\Models\Profile::class);
 });
 
+expect()->extend('toBeRole', function () {
+    return $this->toBeInstanceOf(\Modules\User\Models\Role::class);
+});
+
+expect()->extend('toHaveRole', function (string $roleName) {
+    return $this->value->hasRole($roleName);
+});
+
+expect()->extend('toHavePermission', function (string $permissionName) {
+    return $this->value->hasPermissionTo($permissionName);
+});
+
 /*
 |--------------------------------------------------------------------------
-| Functions
+| Helper Functions
 |--------------------------------------------------------------------------
 |
-| While Pest is very powerful out-of-the-box, you may have some testing code specific to your
-| project that you don't want to repeat in every file. Here you can also expose helpers as
-| global functions to help you to reduce the number of lines of code in your test files.
+| Helper functions for creating test data in the User module.
 |
 */
 
@@ -72,4 +84,39 @@ function createTeam(array $attributes = []): \Modules\User\Models\Team
 function createProfile(array $attributes = []): \Modules\User\Models\Profile
 {
     return \Modules\User\Models\Profile::factory()->create($attributes);
+}
+
+function createRole(array $attributes = []): \Modules\User\Models\Role
+{
+    return \Modules\User\Models\Role::factory()->create($attributes);
+}
+
+function createPermission(array $attributes = []): \Modules\User\Models\Permission
+{
+    return \Modules\User\Models\Permission::factory()->create($attributes);
+}
+
+function createTenant(array $attributes = []): \Modules\User\Models\Tenant
+{
+    return \Modules\User\Models\Tenant::factory()->create($attributes);
+}
+
+function createTeamUser(array $attributes = []): \Modules\User\Models\TeamUser
+{
+    return \Modules\User\Models\TeamUser::factory()->create($attributes);
+}
+
+function createTeamPermission(array $attributes = []): \Modules\User\Models\TeamPermission
+{
+    return \Modules\User\Models\TeamPermission::factory()->create($attributes);
+}
+
+function createModelHasRole(array $attributes = []): \Modules\User\Models\ModelHasRole
+{
+    return \Modules\User\Models\ModelHasRole::factory()->create($attributes);
+}
+
+function createModelHasPermission(array $attributes = []): \Modules\User\Models\ModelHasPermission
+{
+    return \Modules\User\Models\ModelHasPermission::factory()->create($attributes);
 }

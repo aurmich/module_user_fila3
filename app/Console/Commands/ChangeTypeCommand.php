@@ -76,19 +76,6 @@ class ChangeTypeCommand extends Command
         /** @var array<string, string> */
         $options = [];
         foreach ($childTypes as $key => $item) {
-            if (is_object($item) && method_exists($item, 'getLabel') && property_exists($item, 'value')) {
-=======
-            if (is_object($item) && method_exists($item, 'getLabel') && ($item->value ?? null) !== null) {
-                $options[(string)$item->value] = (string)$item->getLabel();
-=======
-            if (is_object($item) && method_exists($item, 'getLabel') && app(\Modules\Xot\Actions\Cast\SafeObjectCastAction::class)->hasNonNullProperty($item, 'value')) {
-                $value = app(\Modules\Xot\Actions\Cast\SafeObjectCastAction::class)->getStringProperty($item, 'value', '');
-                $options[$value] = (string)$item->getLabel();
-=======
-            if (is_object($item) && method_exists($item, 'getLabel') && app(\Modules\Xot\Actions\Cast\SafeObjectCastAction::class)->hasNonNullProperty($item, 'value')) {
-                $value = app(\Modules\Xot\Actions\Cast\SafeObjectCastAction::class)->getStringProperty($item, 'value', '');
-                $options[$value] = (string)$item->getLabel();
-=======
             if (is_object($item) && method_exists($item, 'getLabel') && app(\Modules\Xot\Actions\Cast\SafeObjectCastAction::class)->hasNonNullProperty($item, 'value')) {
                 $value = app(\Modules\Xot\Actions\Cast\SafeObjectCastAction::class)->getStringProperty($item, 'value', '');
                 $options[$value] = (string) $item->getLabel();
