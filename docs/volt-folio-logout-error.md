@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4f6d2d5 (.)
 # Errore nel Logout con Volt e Folio
 
 ## Il Problema
@@ -123,8 +126,11 @@ final class LogoutAction
 =======
 =======
 >>>>>>> f3bab43 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 3fc5300 (.)
+=======
+>>>>>>> 4f6d2d5 (.)
 # Errore Volt/Folio: `VoltDirectiveMissingException` su logout
 
 ## Descrizione dell'errore
@@ -173,8 +179,14 @@ use function Livewire\Volt\{state, mount};
 **Errore risolto: aggiungi `@volt` come prima riga!**
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 08f361e (.)
 =======
 >>>>>>> f3bab43 (.)
 =======
 >>>>>>> 3fc5300 (.)
+=======
+>>>>>>> 08f361e (.)
+=======
+>>>>>>> f3bab43 (.)
+>>>>>>> 4f6d2d5 (.)

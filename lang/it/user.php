@@ -14,6 +14,7 @@ return array(
 =======
 declare(strict_types=1);
 
+<<<<<<< HEAD
 >>>>>>> f3bab43 (.)
 return array (
   'navigation' => 
@@ -1971,3 +1972,360 @@ return array (
   ),
   'search_placeholder' => 'Cerca per nome, email o ruolo...',
 );
+=======
+return [
+    'navigation' => [
+        'name' => 'Utenti',
+        'plural' => 'Utenti',
+        'group' => [
+            'name' => 'Gestione Utenti',
+            'description' => 'Gestione degli utenti e dei loro permessi',
+        ],
+        'label' => 'Utenti',
+        'sort' => 26,
+        'icon' => 'user-main',
+    ],
+
+    'fields' => [
+        'id' => [
+            'label' => 'ID',
+            'help' => 'Identificativo univoco dell\'utente',
+            'tooltip' => 'ID utente',
+            'helper_text' => '',
+        ],
+        'name' => [
+            'label' => 'Nome',
+            'placeholder' => 'Inserisci il nome completo',
+            'help' => 'Nome completo dell\'utente',
+            'tooltip' => 'Nome e cognome dell\'utente',
+            'helper_text' => '',
+        ],
+        'first_name' => [
+            'label' => 'Nome',
+            'placeholder' => 'Inserisci il nome',
+            'help' => 'Nome dell\'utente',
+            'tooltip' => 'Nome dell\'utente',
+            'helper_text' => '',
+        ],
+        'last_name' => [
+            'label' => 'Cognome',
+            'placeholder' => 'Inserisci il cognome',
+            'help' => 'Cognome dell\'utente',
+            'tooltip' => 'Cognome dell\'utente',
+            'helper_text' => '',
+        ],
+        'email' => [
+            'label' => 'Email',
+            'placeholder' => 'Inserisci l\'indirizzo email',
+            'help' => 'Indirizzo email dell\'utente',
+            'tooltip' => 'Email per accesso al sistema',
+            'helper_text' => 'L\'email deve essere unica nel sistema',
+        ],
+        'password' => [
+            'label' => 'Password',
+            'placeholder' => 'Inserisci la password',
+            'help' => 'Password per l\'accesso al sistema',
+            'tooltip' => 'Password di accesso',
+            'helper_text' => 'Minimo 8 caratteri, maiuscole, minuscole e numeri',
+        ],
+        'password_confirmation' => [
+            'label' => 'Conferma Password',
+            'placeholder' => 'Conferma la password',
+            'help' => 'Ripeti la password inserita',
+            'tooltip' => 'Conferma password',
+            'helper_text' => 'Deve corrispondere alla password inserita',
+        ],
+        'role' => [
+            'label' => 'Ruolo',
+            'placeholder' => 'Seleziona un ruolo',
+            'help' => 'Ruolo dell\'utente nel sistema',
+            'tooltip' => 'Ruolo e permessi',
+            'helper_text' => 'Il ruolo determina i permessi disponibili',
+        ],
+        'permissions' => [
+            'label' => 'Permessi',
+            'placeholder' => 'Seleziona i permessi',
+            'help' => 'Permessi specifici dell\'utente',
+            'tooltip' => 'Permessi personalizzati',
+            'helper_text' => 'Oltre ai permessi del ruolo',
+        ],
+        'is_active' => [
+            'label' => 'Attivo',
+            'help' => 'Stato attivo dell\'utente',
+            'tooltip' => 'Utente attivo',
+            'helper_text' => 'Gli utenti inattivi non possono accedere',
+        ],
+        'email_verified_at' => [
+            'label' => 'Email Verificata',
+            'help' => 'Data di verifica email',
+            'tooltip' => 'Verifica email completata',
+            'helper_text' => 'Data in cui l\'email è stata verificata',
+        ],
+        'created_at' => [
+            'label' => 'Data Creazione',
+            'help' => 'Data di creazione dell\'utente',
+            'tooltip' => 'Data creazione',
+            'helper_text' => 'Data in cui l\'utente è stato creato',
+        ],
+        'updated_at' => [
+            'label' => 'Data Aggiornamento',
+            'help' => 'Data dell\'ultimo aggiornamento',
+            'tooltip' => 'Ultimo aggiornamento',
+            'helper_text' => 'Data dell\'ultima modifica',
+        ],
+    ],
+
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Utente',
+            'icon' => 'heroicon-o-plus',
+            'color' => 'primary',
+            'tooltip' => 'Crea un nuovo utente',
+            'modal' => [
+                'heading' => 'Crea Nuovo Utente',
+                'description' => 'Inserisci i dati per creare un nuovo utente',
+                'confirm' => 'Crea Utente',
+                'cancel' => 'Annulla',
+            ],
+            'messages' => [
+                'success' => 'Utente creato con successo',
+                'error' => 'Errore durante la creazione dell\'utente',
+            ],
+        ],
+        'edit' => [
+            'label' => 'Modifica',
+            'icon' => 'heroicon-o-pencil',
+            'color' => 'warning',
+            'tooltip' => 'Modifica utente',
+            'modal' => [
+                'heading' => 'Modifica Utente',
+                'description' => 'Modifica i dati dell\'utente selezionato',
+                'confirm' => 'Salva Modifiche',
+                'cancel' => 'Annulla',
+            ],
+            'messages' => [
+                'success' => 'Utente modificato con successo',
+                'error' => 'Errore durante la modifica dell\'utente',
+            ],
+        ],
+        'delete' => [
+            'label' => 'Elimina',
+            'icon' => 'heroicon-o-trash',
+            'color' => 'danger',
+            'tooltip' => 'Elimina utente',
+            'modal' => [
+                'heading' => 'Elimina Utente',
+                'description' => 'Sei sicuro di voler eliminare questo utente? Questa azione è irreversibile.',
+                'confirm' => 'Elimina',
+                'cancel' => 'Annulla',
+            ],
+            'messages' => [
+                'success' => 'Utente eliminato con successo',
+                'error' => 'Errore durante l\'eliminazione dell\'utente',
+            ],
+        ],
+        'view' => [
+            'label' => 'Visualizza',
+            'icon' => 'heroicon-o-eye',
+            'color' => 'info',
+            'tooltip' => 'Visualizza dettagli utente',
+        ],
+        'activate' => [
+            'label' => 'Attiva',
+            'icon' => 'heroicon-o-check-circle',
+            'color' => 'success',
+            'tooltip' => 'Attiva utente',
+            'messages' => [
+                'success' => 'Utente attivato con successo',
+                'error' => 'Errore durante l\'attivazione dell\'utente',
+            ],
+        ],
+        'deactivate' => [
+            'label' => 'Disattiva',
+            'icon' => 'heroicon-o-x-circle',
+            'color' => 'warning',
+            'tooltip' => 'Disattiva utente',
+            'messages' => [
+                'success' => 'Utente disattivato con successo',
+                'error' => 'Errore durante la disattivazione dell\'utente',
+            ],
+        ],
+        'reset_password' => [
+            'label' => 'Reset Password',
+            'icon' => 'heroicon-o-key',
+            'color' => 'info',
+            'tooltip' => 'Reset password utente',
+            'modal' => [
+                'heading' => 'Reset Password',
+                'description' => 'Invia email di reset password all\'utente',
+                'confirm' => 'Invia Reset',
+                'cancel' => 'Annulla',
+            ],
+            'messages' => [
+                'success' => 'Email di reset password inviata con successo',
+                'error' => 'Errore durante l\'invio dell\'email di reset',
+            ],
+        ],
+    ],
+
+    'messages' => [
+        'welcome' => 'Benvenuto nel sistema di gestione utenti',
+        'errors' => [
+            'general' => 'Si è verificato un errore. Riprova più tardi.',
+            'not_found' => 'Utente non trovato.',
+            'unauthorized' => 'Non sei autorizzato ad accedere a questa risorsa.',
+            'validation' => 'Si sono verificati errori di validazione.',
+        ],
+        'notifications' => [
+            'success' => 'Operazione completata con successo',
+            'info' => 'Informazione importante',
+            'warning' => 'Attenzione',
+            'error' => 'Errore',
+        ],
+        'confirmations' => [
+            'delete' => 'Sei sicuro di voler eliminare questo utente?',
+            'deactivate' => 'Sei sicuro di voler disattivare questo utente?',
+            'activate' => 'Sei sicuro di voler attivare questo utente?',
+        ],
+        'empty_states' => [
+            'default' => 'Nessun utente trovato',
+            'search' => 'Nessun utente corrisponde alla ricerca',
+            'filtered' => 'Nessun utente corrisponde ai filtri applicati',
+        ],
+    ],
+
+    'validation' => [
+        'name' => [
+            'required' => 'Il nome è obbligatorio',
+            'string' => 'Il nome deve essere una stringa',
+            'max' => 'Il nome non può superare :max caratteri',
+            'min' => 'Il nome deve essere di almeno :min caratteri',
+        ],
+        'email' => [
+            'required' => 'L\'email è obbligatoria',
+            'email' => 'L\'email deve essere valida',
+            'unique' => 'Questa email è già in uso',
+            'max' => 'L\'email non può superare :max caratteri',
+        ],
+        'password' => [
+            'required' => 'La password è obbligatoria',
+            'string' => 'La password deve essere una stringa',
+            'min' => 'La password deve essere di almeno :min caratteri',
+            'confirmed' => 'La conferma password non corrisponde',
+        ],
+        'role' => [
+            'required' => 'Il ruolo è obbligatorio',
+            'exists' => 'Il ruolo selezionato non esiste',
+        ],
+    ],
+
+    'filters' => [
+        'search' => [
+            'label' => 'Cerca',
+            'placeholder' => 'Cerca per nome, email...',
+            'help' => 'Cerca utenti per nome, email o altri campi',
+        ],
+        'role' => [
+            'label' => 'Filtra per Ruolo',
+            'placeholder' => 'Tutti i ruoli',
+            'help' => 'Filtra utenti per ruolo specifico',
+        ],
+        'status' => [
+            'label' => 'Filtra per Stato',
+            'placeholder' => 'Tutti gli stati',
+            'help' => 'Filtra utenti per stato attivo/inattivo',
+        ],
+        'date_range' => [
+            'label' => 'Filtra per Data',
+            'placeholder' => 'Seleziona range date',
+            'help' => 'Filtra utenti per periodo di creazione',
+        ],
+    ],
+
+    'bulk_actions' => [
+        'delete' => [
+            'label' => 'Elimina Selezionati',
+            'modal_heading' => 'Elimina Utenti Selezionati',
+            'modal_description' => 'Sei sicuro di voler eliminare gli utenti selezionati? Questa azione è irreversibile.',
+            'success' => 'Utenti eliminati con successo',
+            'error' => 'Errore durante l\'eliminazione degli utenti',
+        ],
+        'activate' => [
+            'label' => 'Attiva Selezionati',
+            'modal_heading' => 'Attiva Utenti Selezionati',
+            'modal_description' => 'Attivare gli utenti selezionati?',
+            'success' => 'Utenti attivati con successo',
+            'error' => 'Errore durante l\'attivazione degli utenti',
+        ],
+        'deactivate' => [
+            'label' => 'Disattiva Selezionati',
+            'modal_heading' => 'Disattiva Utenti Selezionati',
+            'modal_description' => 'Disattivare gli utenti selezionati?',
+            'success' => 'Utenti disattivati con successo',
+            'error' => 'Errore durante la disattivazione degli utenti',
+        ],
+        'change_role' => [
+            'label' => 'Cambia Ruolo',
+            'modal_heading' => 'Cambia Ruolo Utenti Selezionati',
+            'modal_description' => 'Seleziona il nuovo ruolo per gli utenti selezionati',
+            'success' => 'Ruolo cambiato con successo',
+            'error' => 'Errore durante il cambio di ruolo',
+        ],
+    ],
+
+    'exports' => [
+        'csv' => [
+            'label' => 'Esporta CSV',
+            'filename' => 'utenti_export.csv',
+            'success' => 'Esportazione CSV completata con successo',
+            'error' => 'Errore durante l\'esportazione CSV',
+        ],
+        'excel' => [
+            'label' => 'Esporta Excel',
+            'filename' => 'utenti_export.xlsx',
+            'success' => 'Esportazione Excel completata con successo',
+            'error' => 'Errore durante l\'esportazione Excel',
+        ],
+        'pdf' => [
+            'label' => 'Esporta PDF',
+            'filename' => 'utenti_export.pdf',
+            'success' => 'Esportazione PDF completata con successo',
+            'error' => 'Errore durante l\'esportazione PDF',
+        ],
+    ],
+
+    'imports' => [
+        'csv' => [
+            'label' => 'Importa CSV',
+            'modal_heading' => 'Importa Utenti da CSV',
+            'modal_description' => 'Carica un file CSV per importare utenti',
+            'success' => 'Importazione CSV completata con successo',
+            'error' => 'Errore durante l\'importazione CSV',
+            'validation' => [
+                'file_required' => 'Il file CSV è obbligatorio',
+                'file_type' => 'Il file deve essere in formato CSV',
+                'file_size' => 'Il file non può superare :max KB',
+            ],
+        ],
+    ],
+
+    'statistics' => [
+        'total_users' => 'Totale Utenti',
+        'active_users' => 'Utenti Attivi',
+        'inactive_users' => 'Utenti Inattivi',
+        'new_users_this_month' => 'Nuovi Utenti (Mese)',
+        'users_by_role' => 'Utenti per Ruolo',
+        'users_created_today' => 'Utenti Creati Oggi',
+        'users_updated_today' => 'Utenti Aggiornati Oggi',
+    ],
+
+    'help' => [
+        'general' => 'Gestisci gli utenti del sistema, i loro ruoli e permessi.',
+        'fields' => 'Compila tutti i campi obbligatori per creare o modificare un utente.',
+        'roles' => 'I ruoli determinano i permessi base degli utenti nel sistema.',
+        'permissions' => 'I permessi personalizzati si aggiungono a quelli del ruolo.',
+        'security' => 'Le password devono essere sicure e mai condivise.',
+        'activation' => 'Gli utenti inattivi non possono accedere al sistema.',
+    ],
+];
+>>>>>>> 4f6d2d5 (.)

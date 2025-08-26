@@ -136,6 +136,7 @@ class EditUserWidget extends XotBaseWidget
                 // Gestisci specificamente gli enum se presenti
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if (isset($attributes['type']) && isset($model->type) && $model->type instanceof \BackedEnum) {
 =======
                 if (isset($attributes['type']) && ($model->type ?? null) instanceof \BackedEnum) {
@@ -143,6 +144,9 @@ class EditUserWidget extends XotBaseWidget
 =======
                 if (isset($attributes['type']) && ($model->type ?? null) instanceof \BackedEnum) {
 >>>>>>> 3fc5300 (.)
+=======
+                if (isset($attributes['type']) && ($model->type ?? null) instanceof \BackedEnum) {
+>>>>>>> 4f6d2d5 (.)
                     $attributes['type'] = $model->type->value;
                 }
                 
@@ -205,6 +209,7 @@ class EditUserWidget extends XotBaseWidget
         return $currentUser && (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             (isset($currentUser->id) && isset($this->record->id) && $currentUser->id === $this->record->id) ||
             (isset($currentUser->id) && $currentUser->id === ($this->record->user_id ?? null))
 =======
@@ -215,6 +220,10 @@ class EditUserWidget extends XotBaseWidget
             (($currentUser->id ?? null) !== null && ($this->record->id ?? null) !== null && $currentUser->id === $this->record->id) ||
             (($currentUser->id ?? null) !== null && $currentUser->id === ($this->record->user_id ?? null))
 >>>>>>> 3fc5300 (.)
+=======
+            (($currentUser->id ?? null) !== null && ($this->record->id ?? null) !== null && $currentUser->id === $this->record->id) ||
+            (($currentUser->id ?? null) !== null && $currentUser->id === ($this->record->user_id ?? null))
+>>>>>>> 4f6d2d5 (.)
         );
     }
 }

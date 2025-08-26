@@ -8,12 +8,15 @@ use Modules\User\Models\User;
 use Modules\User\Enums\UserType;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Hash;
 use Livewire\Livewire;
 =======
 >>>>>>> f3bab43 (.)
 =======
 >>>>>>> 3fc5300 (.)
+=======
+>>>>>>> 4f6d2d5 (.)
 
 uses(Tests\TestCase::class);
 
@@ -24,6 +27,7 @@ beforeEach(function (): void {
 test('create user page has correct resource', function (): void {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     expect(CreateUser::getResource())->toBe(UserResource::class);
 =======
     expect($this->createUserPage->getResource())->toBe(UserResource::class);
@@ -31,6 +35,9 @@ test('create user page has correct resource', function (): void {
 =======
     expect($this->createUserPage->getResource())->toBe(UserResource::class);
 >>>>>>> 3fc5300 (.)
+=======
+    expect($this->createUserPage->getResource())->toBe(UserResource::class);
+>>>>>>> 4f6d2d5 (.)
 });
 
 test('create user page extends correct base class', function (): void {
@@ -44,6 +51,7 @@ test('create user page can be instantiated', function (): void {
 test('create user page has correct navigation label', function (): void {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     $label = CreateUser::getNavigationLabel();
 =======
     $label = $this->createUserPage->getNavigationLabel();
@@ -51,12 +59,16 @@ test('create user page has correct navigation label', function (): void {
 =======
     $label = $this->createUserPage->getNavigationLabel();
 >>>>>>> 3fc5300 (.)
+=======
+    $label = $this->createUserPage->getNavigationLabel();
+>>>>>>> 4f6d2d5 (.)
     
     // The label should be defined or fall back to default
     expect($label)->not->toBeNull();
 });
 
 test('create user page has correct title', function (): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     $title = CreateUser::getTitle();
@@ -66,11 +78,15 @@ test('create user page has correct title', function (): void {
 =======
     $title = $this->createUserPage->getTitle();
 >>>>>>> 3fc5300 (.)
+=======
+    $title = $this->createUserPage->getTitle();
+>>>>>>> 4f6d2d5 (.)
     
     // The title should be defined or fall back to default
     expect($title)->not->toBeNull();
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 test('create user page has correct breadcrumbs', function (): void {
@@ -79,11 +95,14 @@ test('create user page has correct breadcrumbs', function (): void {
     // Breadcrumbs should be an array
     expect($breadcrumbs)->toBeArray();
 =======
+=======
+>>>>>>> 4f6d2d5 (.)
 test('create user page has correct breadcrumbs structure', function (): void {
     // Breadcrumbs generation might fail due to route parameters in multi-tenant setup
     // Instead, test that the method exists and returns the expected type
     expect(method_exists($this->createUserPage, 'getBreadcrumbs'))->toBeTrue();
     
+<<<<<<< HEAD
 =======
 test('create user page has correct breadcrumbs structure', function (): void {
     // Breadcrumbs generation might fail due to route parameters in multi-tenant setup
@@ -91,6 +110,8 @@ test('create user page has correct breadcrumbs structure', function (): void {
     expect(method_exists($this->createUserPage, 'getBreadcrumbs'))->toBeTrue();
     
 >>>>>>> 3fc5300 (.)
+=======
+>>>>>>> 4f6d2d5 (.)
     try {
         $breadcrumbs = $this->createUserPage->getBreadcrumbs();
         expect($breadcrumbs)->toBeArray();
@@ -100,9 +121,12 @@ test('create user page has correct breadcrumbs structure', function (): void {
         expect(true)->toBeTrue();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f3bab43 (.)
 =======
 >>>>>>> 3fc5300 (.)
+=======
+>>>>>>> 4f6d2d5 (.)
 });
 
 test('create user page can be accessed', function (): void {
@@ -111,6 +135,7 @@ test('create user page can be accessed', function (): void {
     expect($this->createUserPage)->toBeInstanceOf(CreateUser::class);
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 test('create user page has correct form actions', function (): void {
@@ -150,6 +175,10 @@ test('create user page can create user with valid data', function (): void {
 test('create user page can create user with valid data', function (): void {
     // Test that the page can handle user creation with valid data structure
 >>>>>>> 3fc5300 (.)
+=======
+test('create user page can create user with valid data', function (): void {
+    // Test that the page can handle user creation with valid data structure
+>>>>>>> 4f6d2d5 (.)
     $userData = [
         'name' => 'Test User',
         'email' => 'test@example.com',
@@ -159,6 +188,7 @@ test('create user page can create user with valid data', function (): void {
     
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Test that the data is valid
 =======
     // Test that the data structure is correct for user creation
@@ -166,12 +196,16 @@ test('create user page can create user with valid data', function (): void {
 =======
     // Test that the data structure is correct for user creation
 >>>>>>> 3fc5300 (.)
+=======
+    // Test that the data structure is correct for user creation
+>>>>>>> 4f6d2d5 (.)
     expect($userData['name'])->toBe('Test User');
     expect($userData['email'])->toBe('test@example.com');
     expect($userData['password'])->toBe('password123');
     expect($userData['type'])->toBe(UserType::MasterAdmin);
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 test('create user page has correct redirect after create', function (): void {
@@ -242,6 +276,10 @@ test('create user page handles form submission structure', function (): void {
 test('create user page handles form submission structure', function (): void {
     // Test form data structure that would be submitted
 >>>>>>> 3fc5300 (.)
+=======
+test('create user page handles form submission structure', function (): void {
+    // Test form data structure that would be submitted
+>>>>>>> 4f6d2d5 (.)
     $formData = [
         'name' => 'New User',
         'email' => 'newuser@example.com',
@@ -262,9 +300,12 @@ test('create user page handles form submission structure', function (): void {
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 3fc5300 (.)
+=======
+>>>>>>> 4f6d2d5 (.)
 
 test('create user page has basic form functionality', function (): void {
     // Test that the page has basic form capabilities
@@ -277,8 +318,12 @@ test('create user page follows filament conventions', function (): void {
     expect($this->createUserPage->getResource())->toBe(UserResource::class);
     expect($this->createUserPage->getModel())->toBe(User::class);
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 >>>>>>> f3bab43 (.)
 =======
 });
 >>>>>>> 3fc5300 (.)
+=======
+});
+>>>>>>> 4f6d2d5 (.)

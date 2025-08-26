@@ -29,7 +29,11 @@ class ChangePasswordCommand extends Command
         }
 
         // Ensure we fetched a persisted user and not a transient instance to avoid accidental insert
+<<<<<<< HEAD
         if ($user === null || (property_exists($user, 'exists') && $user->exists !== true)) {
+=======
+        if (!($user instanceof \Illuminate\Database\Eloquent\Model) || $user->exists !== true) {
+>>>>>>> 4f6d2d5 (.)
             $this->error('User not found or not persisted. Please create the user first (name, email, type, etc.).');
 
             return;

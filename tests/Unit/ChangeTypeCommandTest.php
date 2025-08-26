@@ -7,6 +7,7 @@ use Modules\Xot\Datas\XotData;
 use Modules\Xot\Contracts\UserContract;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Console\Command;
 
@@ -20,6 +21,10 @@ use Illuminate\Console\Command;
 use Illuminate\Console\Command;
 
 >>>>>>> 3fc5300 (.)
+=======
+use Illuminate\Console\Command;
+
+>>>>>>> 4f6d2d5 (.)
 describe('ChangeTypeCommand', function () {
     beforeEach(function () {
         $this->command = new ChangeTypeCommand();
@@ -69,6 +74,7 @@ describe('ChangeTypeCommand', function () {
         expect(class_exists('Modules\Xot\Datas\XotData'))->toBeTrue()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->and(class_exists('Modules\Xot\Contracts\UserContract'))->toBeTrue()
 =======
             ->and(interface_exists('Modules\Xot\Contracts\UserContract'))->toBeTrue()
@@ -76,6 +82,9 @@ describe('ChangeTypeCommand', function () {
 =======
             ->and(interface_exists('Modules\Xot\Contracts\UserContract'))->toBeTrue()
 >>>>>>> 3fc5300 (.)
+=======
+            ->and(interface_exists('Modules\Xot\Contracts\UserContract'))->toBeTrue()
+>>>>>>> 4f6d2d5 (.)
             ->and(class_exists('Illuminate\Support\Arr'))->toBeTrue()
             ->and(class_exists('Webmozart\Assert\Assert'))->toBeTrue();
     });

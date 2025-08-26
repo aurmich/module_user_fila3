@@ -145,10 +145,16 @@ Questo bug fix ha permesso di completare il miglioramento della qualità del cod
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4f6d2d5 (.)
 - Auto-login dopo registrazione 
 =======
 >>>>>>> 08f361e (.)
 =======
 >>>>>>> f3bab43 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 3fc5300 (.)
+=======
+>>>>>>> 4f6d2d5 (.)

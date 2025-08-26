@@ -25,8 +25,15 @@ class EnsureUserHasType
     public function handle(Request $request, Closure $next, string $type): Response
     {
         
+<<<<<<< HEAD
         if ($request->user()?->type->value !== $type) {
             // Redirect...
+=======
+        $user = $request->user();
+        $userType = $user?->type ?? null;
+        $actualType = is_object($userType) && $userType instanceof \BackedEnum ? $userType->value : (is_string($userType) ? $userType : null);
+        if ($actualType !== $type) {
+>>>>>>> 4f6d2d5 (.)
             return redirect()->route('home');
         }
 

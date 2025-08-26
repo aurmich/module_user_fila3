@@ -79,6 +79,7 @@ class ChangeTypeCommand extends Command
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (is_object($item) && method_exists($item, 'getLabel') && isset($item->value)) {
 =======
             if (is_object($item) && method_exists($item, 'getLabel') && property_exists($item, 'value')) {
@@ -94,6 +95,11 @@ class ChangeTypeCommand extends Command
                 $value = app(\Modules\Xot\Actions\Cast\SafeObjectCastAction::class)->getStringProperty($item, 'value', '');
                 $options[$value] = (string)$item->getLabel();
 >>>>>>> 3fc5300 (.)
+=======
+            if (is_object($item) && method_exists($item, 'getLabel') && app(\Modules\Xot\Actions\Cast\SafeObjectCastAction::class)->hasNonNullProperty($item, 'value')) {
+                $value = app(\Modules\Xot\Actions\Cast\SafeObjectCastAction::class)->getStringProperty($item, 'value', '');
+                $options[$value] = (string) $item->getLabel();
+>>>>>>> 4f6d2d5 (.)
             } else {
                 $options[(string)$key] = 'Unknown';
             }

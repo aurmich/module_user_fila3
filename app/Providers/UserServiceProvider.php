@@ -94,9 +94,15 @@ class UserServiceProvider extends XotBaseServiceProvider
             
             // ✅ FIX CRITICO: Imposta il destinatario dell'email con metodo Laravel standard
             if (method_exists($notifiable, 'getEmailForPasswordReset')) {
+<<<<<<< HEAD
                 $email->to($notifiable->getEmailForPasswordReset());
             } elseif (isset($notifiable->email)) {
                 $email->to($notifiable->email);
+=======
+                $email->setRecipient($notifiable->getEmailForPasswordReset());
+            } elseif (isset($notifiable->email)) {
+                $email->setRecipient($notifiable->email);
+>>>>>>> 4f6d2d5 (.)
             } else {
                 // Fallback per debug
                 \Illuminate\Support\Facades\Log::error('SpatieEmail: Destinatario email non trovato', [
@@ -129,9 +135,15 @@ class UserServiceProvider extends XotBaseServiceProvider
                 'verification_url' => $url,
             ]);
             if (method_exists($notifiable, 'getEmailForPasswordReset')) {
+<<<<<<< HEAD
                 $email->to($notifiable->getEmailForPasswordReset());
             } elseif (isset($notifiable->email)) {
                 $email->to($notifiable->email);
+=======
+                $email->setRecipient($notifiable->getEmailForPasswordReset());
+            } elseif (isset($notifiable->email)) {
+                $email->setRecipient($notifiable->email);
+>>>>>>> 4f6d2d5 (.)
             }
             return $email;
         });

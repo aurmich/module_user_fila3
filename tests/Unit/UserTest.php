@@ -13,6 +13,7 @@ beforeEach(function (): void {
         'type' => UserType::MasterAdmin,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         'email' => 'admin@example.com',
 =======
         'email' => fake()->unique()->safeEmail(),
@@ -20,12 +21,16 @@ beforeEach(function (): void {
 =======
         'email' => fake()->unique()->safeEmail(),
 >>>>>>> 3fc5300 (.)
+=======
+        'email' => fake()->unique()->safeEmail(),
+>>>>>>> 4f6d2d5 (.)
         'password' => Hash::make('password123'),
     ]);
 });
 
 test('user can be created', function (): void {
     expect($this->user)->toBeInstanceOf(User::class);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     expect($this->user->email)->toBe('admin@example.com');
@@ -35,6 +40,9 @@ test('user can be created', function (): void {
 =======
     expect($this->user->email)->toBeString()->not->toBeEmpty();
 >>>>>>> 3fc5300 (.)
+=======
+    expect($this->user->email)->toBeString()->not->toBeEmpty();
+>>>>>>> 4f6d2d5 (.)
     expect($this->user->type)->toBe(UserType::MasterAdmin);
 });
 
