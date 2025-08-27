@@ -129,9 +129,15 @@ class UserServiceProvider extends XotBaseServiceProvider
                 'verification_url' => $url,
             ]);
             if (method_exists($notifiable, 'getEmailForPasswordReset')) {
+<<<<<<< HEAD
                 $email->setRecipient($notifiable->getEmailForPasswordReset());
             } elseif (isset($notifiable->email)) {
                 $email->setRecipient($notifiable->email);
+=======
+                $email->to($notifiable->getEmailForPasswordReset());
+            } elseif (isset($notifiable->email)) {
+                $email->to($notifiable->email);
+>>>>>>> fc93b0f (.)
             }
             return $email;
         });

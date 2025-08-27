@@ -60,11 +60,11 @@ class Login extends Component implements HasForms
     }
 
     /**
-     * Definisce lo schema del form.
+     * Restituisce lo schema del form per l'autenticazione.
      *
-     * @return array<TextInput|Checkbox>
+     * @return array<int|string, \Filament\Forms\Components\Component>
      */
-    protected function getFormSchema(): array
+    public function getFormSchema(): array
     {
         return [
             TextInput::make('email')

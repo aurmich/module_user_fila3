@@ -70,6 +70,7 @@ test('create user page can create user with valid data', function (): void {
     ];
     
     // Test that the data structure is correct for user creation
+<<<<<<< HEAD
     expect($userData)->toHaveKeys(['name', 'email', 'password', 'type'])
         ->and($userData['name'])->toBe('Test User')
         ->and($userData['email'])->toBe('test@example.com')
@@ -195,3 +196,43 @@ test('create user page has proper authorization', function (): void {
     $canCreateMethod = $reflection->getMethod('canCreate');
     expect($canCreateMethod->isPublic())->toBeTrue();
 });
+=======
+    expect($userData['name'])->toBe('Test User');
+    expect($userData['email'])->toBe('test@example.com');
+    expect($userData['password'])->toBe('password123');
+    expect($userData['type'])->toBe(UserType::MasterAdmin);
+});
+
+test('create user page handles form submission structure', function (): void {
+    // Test form data structure that would be submitted
+    $formData = [
+        'name' => 'New User',
+        'email' => 'newuser@example.com',
+        'password' => 'newpassword123',
+        'type' => UserType::BoUser,
+    ];
+    
+    // Test form data structure
+    expect($formData)->toHaveKey('name');
+    expect($formData)->toHaveKey('email');
+    expect($formData)->toHaveKey('password');
+    expect($formData)->toHaveKey('type');
+    
+    expect($formData['name'])->toBe('New User');
+    expect($formData['email'])->toBe('newuser@example.com');
+    expect($formData['password'])->toBe('newpassword123');
+    expect($formData['type'])->toBe(UserType::BoUser);
+});
+
+test('create user page has basic form functionality', function (): void {
+    // Test that the page has basic form capabilities
+    expect(method_exists($this->createUserPage, 'form'))->toBeTrue();
+    expect(method_exists($this->createUserPage, 'getFormModel'))->toBeTrue();
+});
+
+test('create user page follows filament conventions', function (): void {
+    // Test that the page follows standard Filament conventions
+    expect($this->createUserPage->getResource())->toBe(UserResource::class);
+    expect($this->createUserPage->getModel())->toBe(User::class);
+});
+>>>>>>> fc93b0f (.)

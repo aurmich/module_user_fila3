@@ -145,6 +145,7 @@ Questo bug fix ha permesso di completare il miglioramento della qualità del cod
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Auto-login dopo registrazione 
 =======
 >>>>>>> 08f361e (.)
@@ -155,3 +156,5 @@ Questo bug fix ha permesso di completare il miglioramento della qualità del cod
 =======
 >>>>>>> 08f361e (.)
 >>>>>>> 11b9b29 (.)
+=======
+>>>>>>> fc93b0f (.)

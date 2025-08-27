@@ -29,8 +29,15 @@ class UserSeeder extends Seeder
     {
         $this->command->info('👤 Inizializzazione seeding User...');
 
+<<<<<<< HEAD
         // Disabilita i controlli di foreign key
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+=======
+        // Disabilita i controlli di foreign key (solo per MySQL)
+        if (DB::getDriverName() !== 'sqlite') {
+            DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        }
+>>>>>>> fc93b0f (.)
 
         try {
             $this->seedSystemRolesAndPermissions();
@@ -38,8 +45,15 @@ class UserSeeder extends Seeder
             
             $this->command->info('✅ Seeding User completato con successo!');
         } finally {
+<<<<<<< HEAD
             // Riabilita i controlli di foreign key
             DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+=======
+            // Riabilita i controlli di foreign key (solo per MySQL)
+            if (DB::getDriverName() !== 'sqlite') {
+                DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+            }
+>>>>>>> fc93b0f (.)
         }
     }
 
@@ -207,3 +221,7 @@ class UserSeeder extends Seeder
         $this->command->info("   ✓ Creati 5 team di sistema");
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> fc93b0f (.)
