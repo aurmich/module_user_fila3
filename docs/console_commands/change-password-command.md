@@ -366,6 +366,7 @@ php artisan test --filter=ChangePasswordCommandIntegrationTest
 
 *Ultimo aggiornamento: 2025-01-27*
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -373,3 +374,5 @@ php artisan test --filter=ChangePasswordCommandIntegrationTest
 
 =======
 >>>>>>> a0c18bc (.)
+=======
+>>>>>>> 933fcfe (.)

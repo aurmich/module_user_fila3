@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # LoginWidget Translation Audit - Gennaio 2025
 
 ## Obiettivo
@@ -14,6 +15,8 @@ Il `LoginWidget` (`/Modules/User/app/Filament/Widgets/LoginWidget.php`) utilizza
 __('user::messages.credentials_incorrect')
 __('user::messages.login_success') 
 =======
+=======
+>>>>>>> 933fcfe (.)
 # LoginWidget Translation Audit - 2025-01-06
 
 ## Audit Overview
@@ -29,11 +32,15 @@ Il `LoginWidget` utilizzava le seguenti traduzioni nel namespace `user::messages
 // Traduzioni utilizzate nel LoginWidget
 __('user::messages.credentials_incorrect')
 __('user::messages.login_success')
+<<<<<<< HEAD
 >>>>>>> a0c18bc (.)
+=======
+>>>>>>> 933fcfe (.)
 __('user::messages.validation_error')
 __('user::messages.login_error')
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ### Stato Pre-Audit
 - ❌ File `messages.php` **non esisteva** in nessuna lingua
@@ -47,6 +54,8 @@ Creati i seguenti file di traduzione mancanti:
 
 #### Italiano (`/Modules/User/lang/it/messages.php`)
 =======
+=======
+>>>>>>> 933fcfe (.)
 ### File Mancante
 - **File**: `Modules/User/lang/{locale}/messages.php`
 - **Stato**: Non esisteva in nessuna lingua
@@ -59,12 +68,16 @@ Creati i seguenti file di traduzione mancanti:
 3. `laravel/Modules/User/lang/de/messages.php` - Traduzioni tedesche
 
 ### Struttura Implementata
+<<<<<<< HEAD
 >>>>>>> a0c18bc (.)
+=======
+>>>>>>> 933fcfe (.)
 ```php
 return [
     // Messaggi di autenticazione per LoginWidget
     'credentials_incorrect' => 'Le credenziali inserite non sono corrette.',
     'login_success' => 'Accesso effettuato con successo.',
+<<<<<<< HEAD
 <<<<<<< HEAD
     'login_error' => 'Si è verificato un errore durante l\'accesso. Riprova più tardi.',
     'validation_error' => 'Errore di validazione.',
@@ -233,6 +246,8 @@ Il pattern può essere applicato a tutti i widget del sistema per garantire cons
 **Translation keys aggiunte**: 60+ per lingua  
 **LoginWidget status**: ✅ Fully functional in all languages
 =======
+=======
+>>>>>>> 933fcfe (.)
     'login_error' => 'Si è verificato un errore durante l\'accesso.',
     'validation_error' => 'Errore di validazione.',
     
@@ -339,4 +354,7 @@ Questo audit dimostra l'importanza di:
 4. **Collegamenti**: documentazione interconnessa per facilità di navigazione
 
 *Ultimo aggiornamento: 2025-01-06*
+<<<<<<< HEAD
 >>>>>>> a0c18bc (.)
+=======
+>>>>>>> 933fcfe (.)

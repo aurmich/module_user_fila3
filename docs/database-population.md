@@ -301,9 +301,12 @@ echo "User roles: " . $user->roles()->count() . "\n";
 **Autore**: Sistema Laraxot
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
 =======
 >>>>>>> a0c18bc (.)
+=======
+>>>>>>> 933fcfe (.)

@@ -1571,11 +1571,14 @@ trait HasPassportConfiguration
 ```markdown
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Changelog
 
 ## [1.0.0] - 2024-03-20
 =======
 >>>>>>> a0c18bc (.)
+=======
+>>>>>>> 933fcfe (.)
 
 ### Added
 - Implementazione iniziale dei trait di configurazione

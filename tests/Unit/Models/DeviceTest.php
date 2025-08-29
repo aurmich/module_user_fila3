@@ -370,6 +370,9 @@ class DeviceTest extends TestCase
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> a0c18bc (.)
+=======
+>>>>>>> 933fcfe (.)

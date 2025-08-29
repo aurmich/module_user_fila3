@@ -940,7 +940,10 @@ Schema::table('teams', function (Blueprint $table) {
 - [ ] I comandi artisan sono lanciati dal path corretto o con namespace modulo
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 933fcfe (.)
 
 ## Aggiornamenti Recenti
 
@@ -955,7 +958,10 @@ Schema::table('teams', function (Blueprint $table) {
 
 ## Collegamenti
 
+<<<<<<< HEAD
 >>>>>>> a0c18bc (.)
+=======
+>>>>>>> 933fcfe (.)
 ## Aggiornamenti Recenti
 
 ### 27 Gennaio 2025
