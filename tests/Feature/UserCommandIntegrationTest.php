@@ -129,28 +129,8 @@ describe('User Command Integration', function () {
         $testObject->getLabel = fn() => 'Test Label';
 
         expect(is_object($testObject))->toBeTrue()
-<<<<<<< HEAD
-<<<<<<< HEAD
             ->and(property_exists($testObject, 'value'))->toBeTrue()
             ->and(($testObject->value ?? null) !== null)->toBeTrue();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            ->and(isset($testObject->value))->toBeTrue();
-=======
-            ->and(property_exists($testObject, 'value'))->toBeTrue();
->>>>>>> 08f361e (.)
-=======
-            ->and(property_exists($testObject, 'value'))->toBeTrue();
->>>>>>> f3bab43 (.)
-=======
-            ->and(property_exists($testObject, 'value'))->toBeTrue();
->>>>>>> 11b9b29 (.)
->>>>>>> e234d51 (.)
-=======
-            ->and(property_exists($testObject, 'value'))->toBeTrue();
->>>>>>> 469a9e0 (.)
     });
 
     it('integrates with Laravel configuration system', function () {
@@ -233,32 +213,7 @@ describe('User Command Integration', function () {
         $testObject = new stdClass();
         $testObject->testProperty = 'test_value';
         
-<<<<<<< HEAD
-<<<<<<< HEAD
         expect(property_exists($testObject, 'testProperty'))->toBeTrue()
             ->and(property_exists($testObject, 'nonExistentProperty'))->toBeFalse();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect(isset($testObject->testProperty))->toBeTrue()
-            ->and(isset($testObject->nonExistentProperty))->toBeFalse();
-=======
-        expect(property_exists($testObject, 'testProperty'))->toBeTrue()
-            ->and(property_exists($testObject, 'nonExistentProperty'))->toBeFalse();
->>>>>>> 08f361e (.)
-=======
-        expect(property_exists($testObject, 'testProperty'))->toBeTrue()
-            ->and(property_exists($testObject, 'nonExistentProperty'))->toBeFalse();
->>>>>>> f3bab43 (.)
-=======
-        expect(property_exists($testObject, 'testProperty'))->toBeTrue()
-            ->and(property_exists($testObject, 'nonExistentProperty'))->toBeFalse();
->>>>>>> 11b9b29 (.)
->>>>>>> e234d51 (.)
-=======
-        expect(property_exists($testObject, 'testProperty'))->toBeTrue()
-            ->and(property_exists($testObject, 'nonExistentProperty'))->toBeFalse();
->>>>>>> 469a9e0 (.)
     });
 });

@@ -5,31 +5,8 @@ declare(strict_types=1);
 use Modules\User\Console\Commands\ChangeTypeCommand;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Contracts\UserContract;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Console\Command;
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Console\Command;
-
-uses(RefreshDatabase::class);
-
-=======
-use Illuminate\Console\Command;
-
->>>>>>> f3bab43 (.)
-=======
-use Illuminate\Console\Command;
-
->>>>>>> 11b9b29 (.)
->>>>>>> e234d51 (.)
-=======
-use Illuminate\Console\Command;
-
->>>>>>> 469a9e0 (.)
 describe('ChangeTypeCommand', function () {
     beforeEach(function () {
         $this->command = new ChangeTypeCommand();
@@ -77,23 +54,7 @@ describe('ChangeTypeCommand', function () {
     it('imports required dependencies', function () {
         // Check that all required classes are available
         expect(class_exists('Modules\Xot\Datas\XotData'))->toBeTrue()
-<<<<<<< HEAD
-<<<<<<< HEAD
             ->and(interface_exists('Modules\Xot\Contracts\UserContract'))->toBeTrue()
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            ->and(class_exists('Modules\Xot\Contracts\UserContract'))->toBeTrue()
-=======
-            ->and(interface_exists('Modules\Xot\Contracts\UserContract'))->toBeTrue()
->>>>>>> f3bab43 (.)
-=======
-            ->and(interface_exists('Modules\Xot\Contracts\UserContract'))->toBeTrue()
->>>>>>> 11b9b29 (.)
->>>>>>> e234d51 (.)
-=======
-            ->and(interface_exists('Modules\Xot\Contracts\UserContract'))->toBeTrue()
->>>>>>> 469a9e0 (.)
             ->and(class_exists('Illuminate\Support\Arr'))->toBeTrue()
             ->and(class_exists('Webmozart\Assert\Assert'))->toBeTrue();
     });

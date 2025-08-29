@@ -44,17 +44,3 @@ use function Livewire\Volt\{state, mount};
 ---
 
 **Errore risolto: aggiungi `@volt` come prima riga!**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 08f361e (.)
-=======
->>>>>>> f3bab43 (.)
-=======
->>>>>>> 08f361e (.)
->>>>>>> 11b9b29 (.)
->>>>>>> e234d51 (.)
-=======
->>>>>>> 469a9e0 (.)

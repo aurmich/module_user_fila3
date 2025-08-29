@@ -938,12 +938,7 @@ Schema::table('teams', function (Blueprint $table) {
 - [ ] Nessuna migration di tabelle modulari nella cartella globale
 - [ ] La documentazione tecnica è aggiornata
 - [ ] I comandi artisan sono lanciati dal path corretto o con namespace modulo
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 08f361e (.)
-=======
->>>>>>> 469a9e0 (.)
+
 
 ## Aggiornamenti Recenti
 
@@ -957,9 +952,6 @@ Schema::table('teams', function (Blueprint $table) {
   - **Regola**: docs_project solo per documentazione generale del progetto, file specifici di moduli nelle rispettive cartelle docs
 
 ## Collegamenti
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e234d51 (.)
 
 ## Aggiornamenti Recenti
 
@@ -973,8 +965,4 @@ Schema::table('teams', function (Blueprint $table) {
   - **Regola**: docs_project solo per documentazione generale del progetto, file specifici di moduli nelle rispettive cartelle docs
 
 ## Collegamenti
-=======
->>>>>>> 11b9b29 (.)
-=======
->>>>>>> 469a9e0 (.)
 

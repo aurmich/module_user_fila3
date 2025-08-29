@@ -353,9 +353,6 @@ jobs:
 
 ---
 
-<<<<<<< HEAD
 *User Module Testing - Ensuring reliable and secure user management functionality*
-=======
 *Testing del Modulo User: DRY + KISS + SOLID + ROBUST + LARAXOT*
 
->>>>>>> 223c1e2 (.)
