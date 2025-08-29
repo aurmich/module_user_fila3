@@ -253,4 +253,7 @@ class PermissionTest extends TestCase
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a0c18bc (.)
