@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use Modules\User\Models\User;
 use Tests\TestCase;
 
+<<<<<<< HEAD
 class UserTest extends TestCase
 {
     use RefreshDatabase;
@@ -19,6 +20,37 @@ class UserTest extends TestCase
             'email' => 'test@example.com',
             'password' => Hash::make('password'),
         ]);
+=======
+test('user can be created', function () {
+    $user = createUser([
+        'name' => 'Mario Rossi',
+        'email' => 'mario.rossi@example.com',
+<<<<<<< HEAD
+<<<<<<< HEAD
+        'type' => UserType::PATIENT,
+=======
+        'type' => UserType::CustomerUser,
+>>>>>>> f3bab43 (.)
+=======
+        'type' => UserType::CustomerUser,
+>>>>>>> 11b9b29 (.)
+    ]);
+
+    expect($user)
+        ->toBeUser()
+        ->and($user->name)->toBe('Mario Rossi')
+        ->and($user->email)->toBe('mario.rossi@example.com')
+<<<<<<< HEAD
+<<<<<<< HEAD
+        ->and($user->type)->toBe(UserType::PATIENT);
+=======
+        ->and($user->type)->toBe(UserType::CustomerUser);
+>>>>>>> f3bab43 (.)
+=======
+        ->and($user->type)->toBe(UserType::CustomerUser);
+>>>>>>> 11b9b29 (.)
+});
+>>>>>>> e234d51 (.)
 
         $this->assertDatabaseHas('users', [
             'id' => $user->id,
@@ -28,6 +60,7 @@ class UserTest extends TestCase
         $this->assertTrue(Hash::check('password', $user->password));
     }
 
+<<<<<<< HEAD
     public function test_can_create_user_with_all_fields(): void
     {
         $userData = [
@@ -68,6 +101,42 @@ class UserTest extends TestCase
             'is_otp' => false,
         ]);
     }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+test('user can be doctor type', function () {
+    $doctor = createUser(['type' => UserType::DOCTOR]);
+    
+    expect($doctor->type)->toBe(UserType::DOCTOR)
+        ->and($doctor->isDoctor())->toBeTrue()
+        ->and($doctor->isPatient())->toBeFalse();
+});
+
+test('user can be patient type', function () {
+    $patient = createUser(['type' => UserType::PATIENT]);
+    
+    expect($patient->type)->toBe(UserType::PATIENT)
+        ->and($patient->isPatient())->toBeTrue()
+        ->and($patient->isDoctor())->toBeFalse();
+=======
+=======
+>>>>>>> 11b9b29 (.)
+test('user can be bo user type', function () {
+    $boUser = createUser(['type' => UserType::BoUser]);
+    
+    expect($boUser->type)->toBe(UserType::BoUser);
+});
+
+test('user can be customer user type', function () {
+    $customerUser = createUser(['type' => UserType::CustomerUser]);
+    
+    expect($customerUser->type)->toBe(UserType::CustomerUser);
+<<<<<<< HEAD
+>>>>>>> f3bab43 (.)
+=======
+>>>>>>> 11b9b29 (.)
+});
+>>>>>>> e234d51 (.)
 
     public function test_user_has_soft_deletes(): void
     {

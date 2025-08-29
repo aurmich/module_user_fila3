@@ -76,9 +76,30 @@ class ChangeTypeCommand extends Command
         /** @var array<string, string> */
         $options = [];
         foreach ($childTypes as $key => $item) {
+<<<<<<< HEAD
             if (is_object($item) && method_exists($item, 'getLabel') && app(\Modules\Xot\Actions\Cast\SafeObjectCastAction::class)->hasNonNullProperty($item, 'value')) {
                 $value = app(\Modules\Xot\Actions\Cast\SafeObjectCastAction::class)->getStringProperty($item, 'value', '');
                 $options[$value] = (string)$item->getLabel();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            if (is_object($item) && method_exists($item, 'getLabel') && isset($item->value)) {
+=======
+            if (is_object($item) && method_exists($item, 'getLabel') && property_exists($item, 'value')) {
+>>>>>>> 08f361e (.)
+                $options[(string)$item->value] = (string)$item->getLabel();
+=======
+            if (is_object($item) && method_exists($item, 'getLabel') && app(\Modules\Xot\Actions\Cast\SafeObjectCastAction::class)->hasNonNullProperty($item, 'value')) {
+                $value = app(\Modules\Xot\Actions\Cast\SafeObjectCastAction::class)->getStringProperty($item, 'value', '');
+                $options[$value] = (string)$item->getLabel();
+>>>>>>> f3bab43 (.)
+=======
+            if (is_object($item) && method_exists($item, 'getLabel') && app(\Modules\Xot\Actions\Cast\SafeObjectCastAction::class)->hasNonNullProperty($item, 'value')) {
+                $value = app(\Modules\Xot\Actions\Cast\SafeObjectCastAction::class)->getStringProperty($item, 'value', '');
+                $options[$value] = (string)$item->getLabel();
+>>>>>>> 11b9b29 (.)
+>>>>>>> e234d51 (.)
             } else {
                 $options[(string)$key] = 'Unknown';
             }

@@ -11,14 +11,38 @@ uses(Tests\TestCase::class);
 beforeEach(function (): void {
     $this->user = User::factory()->create([
         'type' => UserType::MasterAdmin,
+<<<<<<< HEAD
         'email' => fake()->unique()->safeEmail(),
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        'email' => 'admin@example.com',
+=======
+        'email' => fake()->unique()->safeEmail(),
+>>>>>>> f3bab43 (.)
+=======
+        'email' => fake()->unique()->safeEmail(),
+>>>>>>> 11b9b29 (.)
+>>>>>>> e234d51 (.)
         'password' => Hash::make('password123'),
     ]);
 });
 
 test('user can be created', function (): void {
     expect($this->user)->toBeInstanceOf(User::class);
+<<<<<<< HEAD
     expect($this->user->email)->toBeString()->not->toBeEmpty();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    expect($this->user->email)->toBe('admin@example.com');
+=======
+    expect($this->user->email)->toBeString()->not->toBeEmpty();
+>>>>>>> f3bab43 (.)
+=======
+    expect($this->user->email)->toBeString()->not->toBeEmpty();
+>>>>>>> 11b9b29 (.)
+>>>>>>> e234d51 (.)
     expect($this->user->type)->toBe(UserType::MasterAdmin);
 });
 

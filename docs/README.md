@@ -938,6 +938,9 @@ Schema::table('teams', function (Blueprint $table) {
 - [ ] Nessuna migration di tabelle modulari nella cartella globale
 - [ ] La documentazione tecnica è aggiornata
 - [ ] I comandi artisan sono lanciati dal path corretto o con namespace modulo
+<<<<<<< HEAD
+=======
+>>>>>>> 08f361e (.)
 
 ## Aggiornamenti Recenti
 
@@ -951,4 +954,21 @@ Schema::table('teams', function (Blueprint $table) {
   - **Regola**: docs_project solo per documentazione generale del progetto, file specifici di moduli nelle rispettive cartelle docs
 
 ## Collegamenti
+<<<<<<< HEAD
+>>>>>>> e234d51 (.)
+
+## Aggiornamenti Recenti
+
+### 27 Gennaio 2025
+- ✅ **Riorganizzazione Documentazione**: Spostati file specifici da docs_project alle cartelle docs dei moduli
+  - **File spostati in User/docs/**: 
+    - `doctor-registration-widget.md` - Widget registrazione dottori
+    - `doctor-registration.md` - Sistema registrazione dottori
+    - `email-doctor-registration.md` - Email registrazione dottori
+  - **Motivazione**: Separazione responsabilità, principio modulare, manutenibilità
+  - **Regola**: docs_project solo per documentazione generale del progetto, file specifici di moduli nelle rispettive cartelle docs
+
+## Collegamenti
+=======
+>>>>>>> 11b9b29 (.)
 
