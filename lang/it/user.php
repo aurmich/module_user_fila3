@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -23,6 +24,10 @@ declare(strict_types=1);
 
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+declare(strict_types=1);
+
+>>>>>>> 469a9e0 (.)
 return array (
   'navigation' => 
   array (
@@ -30,6 +35,7 @@ return array (
     'plural' => 'Utenti',
     'group' => 
     array (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -40,6 +46,8 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
       'name' => 'Gestione Utenti',
       'description' => 'Gestione degli utenti e dei loro permessi',
     ),
@@ -47,6 +55,7 @@ return array (
     'sort' => 26,
     'icon' => 'user-main',
   ),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -62,10 +71,13 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
   'fields' => 
   array (
     'id' => 
     array (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -76,11 +88,14 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
       'label' => 'ID',
       'help' => 'Identificativo univoco dell\'utente',
       'tooltip' => 'ID utente',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'name' => 
     array (
@@ -103,11 +118,16 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'name' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Nome',
       'placeholder' => 'Inserisci il nome completo',
       'help' => 'Nome completo dell\'utente',
       'tooltip' => 'Nome e cognome dell\'utente',
       'helper_text' => '',
+<<<<<<< HEAD
 <<<<<<< HEAD
     ),
     'first_name' => 
@@ -136,12 +156,18 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    ),
+    'first_name' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Nome',
       'placeholder' => 'Inserisci il nome',
       'help' => 'Nome dell\'utente',
       'tooltip' => 'Nome dell\'utente',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'last_name' => 
     array (
@@ -164,12 +190,17 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'last_name' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Cognome',
       'placeholder' => 'Inserisci il cognome',
       'help' => 'Cognome dell\'utente',
       'tooltip' => 'Cognome dell\'utente',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'email' => 
     array (
@@ -192,11 +223,16 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'email' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Email',
       'placeholder' => 'Inserisci l\'indirizzo email',
       'help' => 'Indirizzo email dell\'utente',
       'tooltip' => 'Email per l\'accesso e le comunicazioni',
       'helper_text' => '',
+<<<<<<< HEAD
 <<<<<<< HEAD
     ),
     'password' => 
@@ -225,11 +261,17 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    ),
+    'password' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Password',
       'placeholder' => 'Inserisci la password',
       'help' => 'Password per l\'accesso al sistema',
       'tooltip' => 'Password di accesso',
       'helper_text' => '',
+<<<<<<< HEAD
 <<<<<<< HEAD
     ),
     'password_confirmation' => 
@@ -258,12 +300,18 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    ),
+    'password_confirmation' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Conferma Password',
       'placeholder' => 'Conferma la password',
       'help' => 'Ripeti la password per conferma',
       'tooltip' => 'Conferma della password',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'current_password' => 
     array (
@@ -286,12 +334,17 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'current_password' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Password Attuale',
       'placeholder' => 'Inserisci la password attuale',
       'help' => 'Password corrente per la verifica',
       'tooltip' => 'Password attuale',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'new_password' => 
     array (
@@ -314,12 +367,17 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'new_password' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Nuova Password',
       'placeholder' => 'Inserisci la nuova password',
       'help' => 'Nuova password desiderata',
       'tooltip' => 'Nuova password',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'role' => 
     array (
@@ -342,12 +400,17 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'role' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Ruolo',
       'placeholder' => 'Seleziona il ruolo',
       'help' => 'Ruolo dell\'utente nel sistema',
       'tooltip' => 'Ruolo e permessi',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'roles' => 
     array (
@@ -370,12 +433,17 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'roles' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Ruoli',
       'placeholder' => 'Seleziona i ruoli',
       'help' => 'Ruoli assegnati all\'utente',
       'tooltip' => 'Ruoli multipli',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'permissions' => 
     array (
@@ -398,12 +466,17 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'permissions' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Permessi',
       'placeholder' => 'Seleziona i permessi',
       'help' => 'Permessi specifici dell\'utente',
       'tooltip' => 'Permessi diretti',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'status' => 
     array (
@@ -426,11 +499,16 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'status' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Stato',
       'placeholder' => 'Seleziona lo stato',
       'help' => 'Stato dell\'account utente',
       'tooltip' => 'Stato dell\'utente',
       'helper_text' => '',
+<<<<<<< HEAD
 <<<<<<< HEAD
       'options' => 
       array (
@@ -453,6 +531,10 @@ return array (
       array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+      'options' => 
+      array (
+>>>>>>> 469a9e0 (.)
         'active' => 'Attivo',
         'inactive' => 'Inattivo',
         'blocked' => 'Bloccato',
@@ -460,6 +542,7 @@ return array (
         'suspended' => 'Sospeso',
       ),
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'type' => 
     array (
@@ -482,11 +565,16 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'type' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Tipo',
       'placeholder' => 'Seleziona il tipo',
       'help' => 'Tipo di utente',
       'tooltip' => 'Tipo di account',
       'helper_text' => '',
+<<<<<<< HEAD
 <<<<<<< HEAD
       'options' => 
       array (
@@ -509,6 +597,10 @@ return array (
       array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+      'options' => 
+      array (
+>>>>>>> 469a9e0 (.)
         'admin' => 'Amministratore',
         'user' => 'Utente',
         'doctor' => 'Medico',
@@ -516,6 +608,7 @@ return array (
         'staff' => 'Personale',
       ),
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'last_login' => 
     array (
@@ -538,11 +631,16 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'last_login' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Ultimo Accesso',
       'help' => 'Data e ora dell\'ultimo accesso',
       'tooltip' => 'Ultimo login',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'created_at' => 
     array (
@@ -565,11 +663,16 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'created_at' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Data Creazione',
       'help' => 'Data di creazione dell\'account',
       'tooltip' => 'Quando è stato creato',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'updated_at' => 
     array (
@@ -592,11 +695,16 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'updated_at' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Ultima Modifica',
       'help' => 'Data dell\'ultimo aggiornamento',
       'tooltip' => 'Ultimo aggiornamento',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'avatar' => 
     array (
@@ -619,12 +727,17 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'avatar' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Avatar',
       'placeholder' => 'Carica un\'immagine',
       'help' => 'Immagine del profilo',
       'tooltip' => 'Foto profilo',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'language' => 
     array (
@@ -647,11 +760,16 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'language' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Lingua',
       'placeholder' => 'Seleziona la lingua',
       'help' => 'Lingua preferita dell\'utente',
       'tooltip' => 'Lingua interfaccia',
       'helper_text' => '',
+<<<<<<< HEAD
 <<<<<<< HEAD
       'options' => 
       array (
@@ -674,6 +792,10 @@ return array (
       array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+      'options' => 
+      array (
+>>>>>>> 469a9e0 (.)
         'it' => 'Italiano',
         'en' => 'English',
         'es' => 'Español',
@@ -681,6 +803,7 @@ return array (
         'de' => 'Deutsch',
       ),
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'timezone' => 
     array (
@@ -703,12 +826,17 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'timezone' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Fuso Orario',
       'placeholder' => 'Seleziona il fuso orario',
       'help' => 'Fuso orario dell\'utente',
       'tooltip' => 'Zona oraria',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'password_expires_at' => 
     array (
@@ -731,11 +859,16 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'password_expires_at' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Scadenza Password',
       'help' => 'Data di scadenza della password',
       'tooltip' => 'Scadenza password',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'verified' => 
     array (
@@ -758,11 +891,16 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'verified' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Verificato',
       'help' => 'Indica se l\'email è verificata',
       'tooltip' => 'Email verificata',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'unverified' => 
     array (
@@ -785,11 +923,16 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'unverified' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Non Verificato',
       'help' => 'Indica se l\'email non è verificata',
       'tooltip' => 'Email non verificata',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'email_verified_at' => 
     array (
@@ -812,11 +955,16 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'email_verified_at' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Email Verificata il',
       'help' => 'Data di verifica dell\'email',
       'tooltip' => 'Data verifica email',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'provider' => 
     array (
@@ -839,12 +987,17 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'provider' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Provider',
       'placeholder' => 'Inserisci il nome del provider',
       'help' => 'Provider di autenticazione (es. Google, Facebook)',
       'tooltip' => 'Provider OAuth',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'provider_id' => 
     array (
@@ -867,12 +1020,17 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'provider_id' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'ID Provider',
       'placeholder' => 'Inserisci l\'ID del provider',
       'help' => 'ID utente nel provider esterno',
       'tooltip' => 'ID provider esterno',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'provider_name' => 
     array (
@@ -895,12 +1053,17 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'provider_name' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Nome Provider',
       'placeholder' => 'Inserisci il nome associato al provider',
       'help' => 'Nome dell\'utente nel provider',
       'tooltip' => 'Nome nel provider',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'provider_email' => 
     array (
@@ -923,12 +1086,17 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'provider_email' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Email Provider',
       'placeholder' => 'Inserisci l\'email del provider',
       'help' => 'Email associata al provider',
       'tooltip' => 'Email nel provider',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'provider_avatar' => 
     array (
@@ -951,12 +1119,17 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'provider_avatar' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Avatar Provider',
       'placeholder' => 'URL dell\'avatar',
       'help' => 'URL dell\'immagine profilo del provider',
       'tooltip' => 'Avatar del provider',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'uuid' => 
     array (
@@ -979,11 +1152,16 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'uuid' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'UUID',
       'help' => 'Identificativo univoco universale',
       'tooltip' => 'UUID dispositivo',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'mobile_id' => 
     array (
@@ -1006,11 +1184,16 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'mobile_id' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Mobile ID',
       'help' => 'Identificativo del dispositivo mobile',
       'tooltip' => 'ID dispositivo mobile',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'languages' => 
     array (
@@ -1033,12 +1216,17 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'languages' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Lingue',
       'placeholder' => 'Seleziona le lingue',
       'help' => 'Lingue supportate dal dispositivo',
       'tooltip' => 'Lingue dispositivo',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'guard_name' => 
     array (
@@ -1061,11 +1249,16 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'guard_name' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Guard Name',
       'help' => 'Nome del guard di autenticazione',
       'tooltip' => 'Guard autenticazione',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'active' => 
     array (
@@ -1088,11 +1281,16 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'active' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Attivo',
       'help' => 'Indica se il record è attivo',
       'tooltip' => 'Stato attivo',
       'helper_text' => '',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1125,6 +1323,8 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
     'resetFilters' => 
     array (
       'label' => 'resetFilters',
@@ -1143,6 +1343,7 @@ return array (
     'create' => 
     array (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1152,10 +1353,13 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
       'label' => 'Crea Utente',
       'icon' => 'heroicon-o-plus',
       'tooltip' => 'Crea un nuovo utente',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'edit' => 
     array (
@@ -1178,10 +1382,15 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'edit' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Modifica Utente',
       'icon' => 'heroicon-o-pencil',
       'tooltip' => 'Modifica l\'utente',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'delete' => 
     array (
@@ -1204,10 +1413,15 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'delete' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Elimina Utente',
       'icon' => 'heroicon-o-trash',
       'tooltip' => 'Elimina l\'utente',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'view' => 
     array (
@@ -1230,10 +1444,15 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'view' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Visualizza Utente',
       'icon' => 'heroicon-o-eye',
       'tooltip' => 'Visualizza i dettagli dell\'utente',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'impersonate' => 
     array (
@@ -1256,10 +1475,15 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'impersonate' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Impersona Utente',
       'icon' => 'heroicon-o-user-circle',
       'tooltip' => 'Accedi come questo utente',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'stop_impersonating' => 
     array (
@@ -1282,10 +1506,15 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'stop_impersonating' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Termina Impersonificazione',
       'icon' => 'heroicon-o-arrow-left',
       'tooltip' => 'Torna al tuo account',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'block' => 
     array (
@@ -1308,10 +1537,15 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'block' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Blocca',
       'icon' => 'heroicon-o-lock-closed',
       'tooltip' => 'Blocca l\'utente',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'unblock' => 
     array (
@@ -1334,10 +1568,15 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'unblock' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Sblocca',
       'icon' => 'heroicon-o-lock-open',
       'tooltip' => 'Sblocca l\'utente',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'send_reset_link' => 
     array (
@@ -1360,10 +1599,15 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'send_reset_link' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Invia Link Reset Password',
       'icon' => 'heroicon-o-envelope',
       'tooltip' => 'Invia link per reset password',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'verify_email' => 
     array (
@@ -1386,10 +1630,15 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'verify_email' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Verifica Email',
       'icon' => 'heroicon-o-check-circle',
       'tooltip' => 'Verifica l\'email dell\'utente',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'attach' => 
     array (
@@ -1412,10 +1661,15 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'attach' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Collega',
       'icon' => 'heroicon-o-link',
       'tooltip' => 'Collega record',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'detach' => 
     array (
@@ -1438,10 +1692,15 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'detach' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Scollega',
       'icon' => 'heroicon-o-link-slash',
       'tooltip' => 'Scollega record',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'activate' => 
     array (
@@ -1464,10 +1723,15 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'activate' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Attiva',
       'icon' => 'heroicon-o-check',
       'tooltip' => 'Attiva l\'utente',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'deactivate' => 
     array (
@@ -1490,11 +1754,16 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'deactivate' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'label' => 'Disattiva',
       'icon' => 'heroicon-o-x-circle',
       'tooltip' => 'Disattiva l\'utente',
     ),
   ),
+<<<<<<< HEAD
 <<<<<<< HEAD
   'messages' => 
   array (
@@ -1517,6 +1786,10 @@ return array (
   array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+  'messages' => 
+  array (
+>>>>>>> 469a9e0 (.)
     'created' => 'Utente creato con successo',
     'updated' => 'Utente aggiornato con successo',
     'deleted' => 'Utente eliminato con successo',
@@ -1535,6 +1808,7 @@ return array (
     'password_fields_required' => 'Tutti i campi password sono obbligatori',
     'password_current_incorrect' => 'La password attuale non è corretta',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'credentials_incorrect' => 'Le credenziali fornite non sono corrette...',
 =======
 <<<<<<< HEAD
@@ -1547,6 +1821,9 @@ return array (
     'credentials_incorrect' => 'Le credenziali fornite non sono corrette...',
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'credentials_incorrect' => 'Le credenziali fornite non sono corrette...',
+>>>>>>> 469a9e0 (.)
     'login_error' => 'Si è verificato un errore durante il login. Riprova più tardi',
     'logout_error_generic' => 'Errore durante il logout. Riprova.',
     'team_switched' => 'Team cambiato con successo',
@@ -1557,6 +1834,7 @@ return array (
     'password_reset_success' => 'Password reimpostata con successo',
     'password_reset_error' => 'Errore durante il reset della password',
     'email_already_taken' => 'Questa email è già in uso',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1572,6 +1850,8 @@ return array (
 =======
 =======
 >>>>>>> 11b9b29 (.)
+=======
+>>>>>>> 469a9e0 (.)
     // Added keys for LoginWidget
 >>>>>>> e234d51 (.)
     'login_success' => 'Accesso effettuato con successo',
@@ -1580,12 +1860,15 @@ return array (
   'validation' => 
   array (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> f3bab43 (.)
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
     'required' => 'Il campo :attribute è obbligatorio',
     'email' => 'Il campo :attribute deve essere un indirizzo email valido',
     'unique' => 'Il campo :attribute è già in uso',
@@ -1599,6 +1882,7 @@ return array (
     'current_password' => 'La password attuale non è corretta',
     'password_complexity' => 'La password deve contenere almeno 8 caratteri, una lettera maiuscola, una minuscola, un numero e un carattere speciale',
   ),
+<<<<<<< HEAD
 <<<<<<< HEAD
   'permissions' => 
   array (
@@ -1621,6 +1905,10 @@ return array (
   array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+  'permissions' => 
+  array (
+>>>>>>> 469a9e0 (.)
     'view_users' => 'Visualizza utenti',
     'create_users' => 'Crea utenti',
     'edit_users' => 'Modifica utenti',
@@ -1633,6 +1921,7 @@ return array (
     'edit_roles' => 'Modifica ruoli',
     'delete_roles' => 'Elimina ruoli',
   ),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1653,6 +1942,8 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
   'auth' => 
   array (
     'login' => 
@@ -1663,6 +1954,7 @@ return array (
       'fields' => 
       array (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1672,10 +1964,13 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
         'email' => 'Email',
         'password' => 'Password',
         'remember' => 'Ricordami',
       ),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1696,6 +1991,8 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
       'help' => 
       array (
         'email' => 'Inserisci la tua email registrata',
@@ -1706,6 +2003,7 @@ return array (
         'password' => 
         array (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1715,10 +2013,13 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
           'complexity' => 'La password deve contenere almeno 8 caratteri, una lettera maiuscola, una minuscola, un numero e un carattere speciale',
         ),
       ),
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1737,6 +2038,8 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
     'register' => 
     array (
       'title' => 'Registrati',
@@ -1744,6 +2047,7 @@ return array (
       'button' => 'Registrati',
       'fields' => 
       array (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1754,12 +2058,15 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
         'first_name' => 'Nome',
         'last_name' => 'Cognome',
         'email' => 'Email',
         'password' => 'Password',
         'password_confirmation' => 'Conferma Password',
       ),
+<<<<<<< HEAD
 <<<<<<< HEAD
       'help' => 
       array (
@@ -1782,12 +2089,17 @@ return array (
       array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+      'help' => 
+      array (
+>>>>>>> 469a9e0 (.)
         'email' => 'Inserisci un indirizzo email valido',
         'password' => 'La password deve essere sicura',
       ),
       'success' => 'Registrazione completata con successo',
       'error_occurred' => 'Si è verificato un errore durante la registrazione',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'logout' => 
     array (
@@ -1810,12 +2122,17 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'logout' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'title' => 'Logout',
       'button' => 'Esci',
       'success' => 'Logout effettuato con successo',
       'error' => 'Errore durante il logout',
       'confirmation' => 'Sei sicuro di voler uscire?',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
     'password_reset' => 
     array (
@@ -1838,10 +2155,15 @@ return array (
     array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    'password_reset' => 
+    array (
+>>>>>>> 469a9e0 (.)
       'title' => 'Reset Password',
       'subtitle' => 'Reimposta la tua password',
       'button' => 'Invia Link Reset',
       'confirm_button' => 'Reimposta Password',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1860,6 +2182,8 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
       'email_sent' => 
       array (
         'title' => 'Email inviata',
@@ -1867,6 +2191,7 @@ return array (
       ),
       'email_failed' => 
       array (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1877,10 +2202,13 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
         'title' => 'Errore invio email',
         'message' => 'Impossibile inviare l\'email di reset',
         'generic' => 'Si è verificato un errore',
       ),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1899,6 +2227,8 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
       'success' => 
       array (
         'title' => 'Password reimpostata',
@@ -1906,6 +2236,7 @@ return array (
       ),
       'errors' => 
       array (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1916,6 +2247,8 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
         'invalid_token' => 'Token non valido',
         'invalid_user' => 'Utente non trovato',
         'generic' => 'Si è verificato un errore',
@@ -1930,6 +2263,7 @@ return array (
     'logout_title' => 'Conferma Logout',
     'logout_confirmation' => 'Sei sicuro di voler uscire?',
   ),
+<<<<<<< HEAD
 <<<<<<< HEAD
   'profile' => 
   array (
@@ -1952,6 +2286,10 @@ return array (
   array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+  'profile' => 
+  array (
+>>>>>>> 469a9e0 (.)
     'profile' => 'Profilo',
     'my_profile' => 'Il Mio Profilo',
     'subheading' => 'Gestisci le informazioni del tuo profilo',
@@ -1962,6 +2300,7 @@ return array (
     'notifications' => 'Notifiche',
     'preferences' => 'Preferenze',
   ),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1984,6 +2323,8 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
   'tenancy' => 
   array (
     'navigation' => 
@@ -1996,6 +2337,7 @@ return array (
     'mail' => 
     array (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2005,6 +2347,8 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
       'subject' => 'Codice OTP per l\'accesso',
       'greeting' => 'Ciao :name',
       'line1' => 'Il tuo codice OTP è: :code',
@@ -2012,6 +2356,7 @@ return array (
       'line3' => 'Non condividere questo codice con nessuno',
       'salutation' => 'Cordiali saluti, :app_name',
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2037,6 +2382,8 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
     'notifications' => 
     array (
       'otp_expired' => 
@@ -2052,6 +2399,7 @@ return array (
   'reset_password' => 
   array (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2061,6 +2409,8 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
     'password_reset_subject' => 'Reset Password',
     'password_cause_of_email' => 'Hai ricevuto questa email perché abbiamo ricevuto una richiesta di reset password per il tuo account',
     'reset_password' => 'Reset Password',
@@ -2068,6 +2418,7 @@ return array (
     'thank_you_for_using_app' => 'Grazie per utilizzare la nostra applicazione',
     'regards' => 'Cordiali saluti',
   ),
+<<<<<<< HEAD
 <<<<<<< HEAD
   'verify_email' => 
   array (
@@ -2090,6 +2441,10 @@ return array (
   array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+  'verify_email' => 
+  array (
+>>>>>>> 469a9e0 (.)
     'subject' => 'Verifica Email',
     'greeting' => 'Ciao :name',
     'line1' => 'Clicca sul pulsante qui sotto per verificare il tuo indirizzo email',
@@ -2097,6 +2452,7 @@ return array (
     'line2' => 'Se non hai creato un account, non è necessaria alcuna azione',
     'salutation' => 'Cordiali saluti, :app_name',
   ),
+<<<<<<< HEAD
 <<<<<<< HEAD
   'model' => 
   array (
@@ -2119,10 +2475,15 @@ return array (
   array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+  'model' => 
+  array (
+>>>>>>> 469a9e0 (.)
     'label' => 'Utente',
     'plural' => 'Utenti',
     'description' => 'Gestione degli utenti del sistema',
   ),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2153,6 +2514,8 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
   'filters' => 
   array (
     'status' => 
@@ -2173,6 +2536,7 @@ return array (
     'verified' => 
     array (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2182,10 +2546,13 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
       'label' => 'Email Verificata',
       'tooltip' => 'Mostra solo utenti con email verificata',
     ),
   ),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2221,6 +2588,8 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
   'bulk_actions' => 
   array (
     'activate_selected' => 
@@ -2246,6 +2615,7 @@ return array (
     'unblock_selected' => 
     array (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2255,10 +2625,13 @@ return array (
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
       'label' => 'Sblocca Selezionati',
       'icon' => 'heroicon-o-lock-open',
     ),
   ),
+<<<<<<< HEAD
 <<<<<<< HEAD
   'notifications' => 
   array (
@@ -2281,6 +2654,10 @@ return array (
   array (
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+  'notifications' => 
+  array (
+>>>>>>> 469a9e0 (.)
     'created' => 'Utente creato con successo',
     'updated' => 'Utente aggiornato con successo',
     'deleted' => 'Utente eliminato con successo',

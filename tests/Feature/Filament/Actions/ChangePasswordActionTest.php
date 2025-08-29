@@ -13,6 +13,7 @@ uses(Tests\TestCase::class);
 
 beforeEach(function (): void {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,10 +24,13 @@ beforeEach(function (): void {
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
     // Use in-memory model to avoid DB constraints between tests
     $this->user = User::factory()->make([
         'type' => UserType::MasterAdmin,
         'email' => 'admin+' . uniqid('', true) . '@example.com',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -34,6 +38,8 @@ beforeEach(function (): void {
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
         'password' => Hash::make('oldpassword'),
     ]);
     

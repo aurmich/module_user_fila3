@@ -17,6 +17,7 @@ use Modules\User\Tests\TestCase;
 
 pest()->extend(TestCase::class)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,6 +27,8 @@ pest()->extend(TestCase::class)
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
     ->in('Feature', 'Unit');
 
 /*

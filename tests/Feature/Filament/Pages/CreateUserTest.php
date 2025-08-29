@@ -7,6 +7,7 @@ use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Models\User;
 use Modules\User\Enums\UserType;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,6 +18,8 @@ use Livewire\Livewire;
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
 
 uses(Tests\TestCase::class);
 
@@ -25,6 +28,7 @@ beforeEach(function (): void {
 });
 
 test('create user page has correct resource', function (): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
     expect($this->createUserPage->getResource())->toBe(UserResource::class);
 =======
@@ -38,6 +42,9 @@ test('create user page has correct resource', function (): void {
     expect($this->createUserPage->getResource())->toBe(UserResource::class);
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    expect($this->createUserPage->getResource())->toBe(UserResource::class);
+>>>>>>> 469a9e0 (.)
 });
 
 test('create user page extends correct base class', function (): void {
@@ -49,6 +56,7 @@ test('create user page can be instantiated', function (): void {
 });
 
 test('create user page has correct navigation label', function (): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
     $label = $this->createUserPage->getNavigationLabel();
 =======
@@ -62,12 +70,16 @@ test('create user page has correct navigation label', function (): void {
     $label = $this->createUserPage->getNavigationLabel();
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    $label = $this->createUserPage->getNavigationLabel();
+>>>>>>> 469a9e0 (.)
     
     // The label should be defined or fall back to default
     expect($label)->not->toBeNull();
 });
 
 test('create user page has correct title', function (): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
     $title = $this->createUserPage->getTitle();
 =======
@@ -81,11 +93,15 @@ test('create user page has correct title', function (): void {
     $title = $this->createUserPage->getTitle();
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    $title = $this->createUserPage->getTitle();
+>>>>>>> 469a9e0 (.)
     
     // The title should be defined or fall back to default
     expect($title)->not->toBeNull();
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -99,6 +115,8 @@ test('create user page has correct breadcrumbs', function (): void {
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
 test('create user page has correct breadcrumbs structure', function (): void {
     // Breadcrumbs generation might fail due to route parameters in multi-tenant setup
     // Instead, test that the method exists and returns the expected type
@@ -113,12 +131,15 @@ test('create user page has correct breadcrumbs structure', function (): void {
         expect(true)->toBeTrue();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> f3bab43 (.)
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
 });
 
 test('create user page can be accessed', function (): void {
@@ -127,6 +148,7 @@ test('create user page can be accessed', function (): void {
     expect($this->createUserPage)->toBeInstanceOf(CreateUser::class);
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 test('create user page can create user with valid data', function (): void {
     // Test that the page can handle user creation with valid data structure
@@ -171,6 +193,10 @@ test('create user page can create user with valid data', function (): void {
     // Test that the page can handle user creation with valid data structure
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+test('create user page can create user with valid data', function (): void {
+    // Test that the page can handle user creation with valid data structure
+>>>>>>> 469a9e0 (.)
     $userData = [
         'name' => 'Test User',
         'email' => 'test@example.com',
@@ -178,6 +204,7 @@ test('create user page can create user with valid data', function (): void {
         'type' => UserType::MasterAdmin,
     ];
     
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Test that the data structure is correct for user creation
 =======
@@ -191,12 +218,16 @@ test('create user page can create user with valid data', function (): void {
     // Test that the data structure is correct for user creation
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+    // Test that the data structure is correct for user creation
+>>>>>>> 469a9e0 (.)
     expect($userData['name'])->toBe('Test User');
     expect($userData['email'])->toBe('test@example.com');
     expect($userData['password'])->toBe('password123');
     expect($userData['type'])->toBe(UserType::MasterAdmin);
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 test('create user page handles form submission structure', function (): void {
     // Test form data structure that would be submitted
@@ -272,6 +303,10 @@ test('create user page handles form submission structure', function (): void {
     // Test form data structure that would be submitted
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+test('create user page handles form submission structure', function (): void {
+    // Test form data structure that would be submitted
+>>>>>>> 469a9e0 (.)
     $formData = [
         'name' => 'New User',
         'email' => 'newuser@example.com',
@@ -291,6 +326,7 @@ test('create user page handles form submission structure', function (): void {
     expect($formData['type'])->toBe(UserType::BoUser);
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -298,6 +334,8 @@ test('create user page handles form submission structure', function (): void {
 =======
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+>>>>>>> 469a9e0 (.)
 
 test('create user page has basic form functionality', function (): void {
     // Test that the page has basic form capabilities
@@ -310,6 +348,7 @@ test('create user page follows filament conventions', function (): void {
     expect($this->createUserPage->getResource())->toBe(UserResource::class);
     expect($this->createUserPage->getModel())->toBe(User::class);
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 =======
 <<<<<<< HEAD
@@ -319,3 +358,6 @@ test('create user page follows filament conventions', function (): void {
 });
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+});
+>>>>>>> 469a9e0 (.)

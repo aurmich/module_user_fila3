@@ -77,6 +77,7 @@ class ChangeTypeCommand extends Command
         $options = [];
         foreach ($childTypes as $key => $item) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (is_object($item) && method_exists($item, 'getLabel') && app(\Modules\Xot\Actions\Cast\SafeObjectCastAction::class)->hasNonNullProperty($item, 'value')) {
                 $value = app(\Modules\Xot\Actions\Cast\SafeObjectCastAction::class)->getStringProperty($item, 'value', '');
                 $options[$value] = (string)$item->getLabel();
@@ -100,6 +101,11 @@ class ChangeTypeCommand extends Command
                 $options[$value] = (string)$item->getLabel();
 >>>>>>> 11b9b29 (.)
 >>>>>>> e234d51 (.)
+=======
+            if (is_object($item) && method_exists($item, 'getLabel') && app(\Modules\Xot\Actions\Cast\SafeObjectCastAction::class)->hasNonNullProperty($item, 'value')) {
+                $value = app(\Modules\Xot\Actions\Cast\SafeObjectCastAction::class)->getStringProperty($item, 'value', '');
+                $options[$value] = (string)$item->getLabel();
+>>>>>>> 469a9e0 (.)
             } else {
                 $options[(string)$key] = 'Unknown';
             }
