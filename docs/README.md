@@ -941,6 +941,7 @@ Schema::table('teams', function (Blueprint $table) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8055579 (.)
@@ -964,6 +965,8 @@ Schema::table('teams', function (Blueprint $table) {
 =======
 >>>>>>> a0c18bc (.)
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> d51888e (.)
 ## Aggiornamenti Recenti
 
 ### 27 Gennaio 2025
