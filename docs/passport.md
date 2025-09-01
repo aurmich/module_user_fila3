@@ -1575,6 +1575,7 @@ trait HasPassportConfiguration
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # Changelog
 
@@ -1604,6 +1605,11 @@ trait HasPassportConfiguration
 =======
 >>>>>>> 933fcfe (.)
 >>>>>>> e67649e (.)
+=======
+# Changelog
+
+## [1.0.0] - 2024-03-20
+>>>>>>> 7113f04 (.)
 
 ### Added
 - Implementazione iniziale dei trait di configurazione

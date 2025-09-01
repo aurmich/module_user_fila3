@@ -359,6 +359,7 @@ class PermissionTest extends TestCase
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 8a21b63 (.)
@@ -381,3 +382,6 @@ class PermissionTest extends TestCase
 =======
 >>>>>>> 933fcfe (.)
 >>>>>>> e67649e (.)
+=======
+
+>>>>>>> 7113f04 (.)

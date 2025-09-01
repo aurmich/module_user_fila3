@@ -370,6 +370,7 @@ php artisan test --filter=ChangePasswordCommandIntegrationTest
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8055579 (.)
@@ -379,11 +380,14 @@ php artisan test --filter=ChangePasswordCommandIntegrationTest
 >>>>>>> 8055579 (.)
 =======
 >>>>>>> e67649e (.)
+=======
+>>>>>>> 7113f04 (.)
 
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -403,3 +407,5 @@ php artisan test --filter=ChangePasswordCommandIntegrationTest
 =======
 >>>>>>> 933fcfe (.)
 >>>>>>> e67649e (.)
+=======
+>>>>>>> 7113f04 (.)

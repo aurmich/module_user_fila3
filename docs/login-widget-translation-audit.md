@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # LoginWidget Translation Audit - 2025-01-06
 
 ## Audit Overview
@@ -27,6 +28,8 @@ __('user::messages.login_success')
 >>>>>>> 8055579 (.)
 =======
 >>>>>>> e67649e (.)
+=======
+>>>>>>> 7113f04 (.)
 # LoginWidget Translation Audit - Gennaio 2025
 
 ## Obiettivo
@@ -44,6 +47,7 @@ __('user::messages.login_success')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8a21b63 (.)
 =======
 =======
@@ -79,10 +83,13 @@ __('user::messages.login_success')
 =======
 >>>>>>> 933fcfe (.)
 >>>>>>> e67649e (.)
+=======
+>>>>>>> 7113f04 (.)
 __('user::messages.validation_error')
 __('user::messages.login_error')
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,6 +116,8 @@ __('user::messages.login_error')
 >>>>>>> 8055579 (.)
 =======
 >>>>>>> e67649e (.)
+=======
+>>>>>>> 7113f04 (.)
 ### Stato Pre-Audit
 - ❌ File `messages.php` **non esisteva** in nessuna lingua
 - ✅ File `auth.php` esistenti ma con chiavi diverse
@@ -120,6 +129,7 @@ __('user::messages.login_error')
 Creati i seguenti file di traduzione mancanti:
 
 #### Italiano (`/Modules/User/lang/it/messages.php`)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -155,11 +165,14 @@ Creati i seguenti file di traduzione mancanti:
 =======
 >>>>>>> 933fcfe (.)
 >>>>>>> e67649e (.)
+=======
+>>>>>>> 7113f04 (.)
 ```php
 return [
     // Messaggi di autenticazione per LoginWidget
     'credentials_incorrect' => 'Le credenziali inserite non sono corrette.',
     'login_success' => 'Accesso effettuato con successo.',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -280,6 +293,8 @@ Questo audit dimostra l'importanza di:
 >>>>>>> 8055579 (.)
 =======
 >>>>>>> e67649e (.)
+=======
+>>>>>>> 7113f04 (.)
     'login_error' => 'Si è verificato un errore durante l\'accesso. Riprova più tardi.',
     'validation_error' => 'Errore di validazione.',
     // ... 60+ altre chiavi per completezza
@@ -447,6 +462,7 @@ Il pattern può essere applicato a tutti i widget del sistema per garantire cons
 **Translation keys aggiunte**: 60+ per lingua  
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 **LoginWidget status**: ✅ Fully functional in all languages
 <<<<<<< HEAD
 >>>>>>> 8a21b63 (.)
@@ -577,3 +593,6 @@ Questo audit dimostra l'importanza di:
 =======
 >>>>>>> 933fcfe (.)
 >>>>>>> e67649e (.)
+=======
+**LoginWidget status**: ✅ Fully functional in all languages
+>>>>>>> 7113f04 (.)

@@ -461,6 +461,7 @@ private function getPasswordLegacy(): string
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8055579 (.)
@@ -470,11 +471,14 @@ private function getPasswordLegacy(): string
 >>>>>>> 8055579 (.)
 =======
 >>>>>>> e67649e (.)
+=======
+>>>>>>> 7113f04 (.)
 
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -494,3 +498,5 @@ private function getPasswordLegacy(): string
 =======
 >>>>>>> 933fcfe (.)
 >>>>>>> e67649e (.)
+=======
+>>>>>>> 7113f04 (.)
