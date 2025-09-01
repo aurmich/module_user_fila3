@@ -9,16 +9,23 @@ namespace Modules\User\Filament\Resources\TenantResource\RelationManagers;
 
 use Filament\Forms;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Filament\Forms\Form;
 >>>>>>> 8055579 (.)
+=======
+use Filament\Forms\Form;
+>>>>>>> 8d82f8c (.)
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Support\Str;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8d82f8c (.)
 
 
 
@@ -27,7 +34,10 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
 class DomainsRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'domains';

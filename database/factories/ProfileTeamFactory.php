@@ -12,10 +12,14 @@ use Modules\User\Models\Team;
 /**
  * ProfileTeam Factory
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
  * 
 >>>>>>> 8055579 (.)
+=======
+ * 
+>>>>>>> 8d82f8c (.)
  * @extends Factory<ProfileTeam>
  */
 class ProfileTeamFactory extends Factory

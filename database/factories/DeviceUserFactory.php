@@ -12,6 +12,7 @@ use Modules\User\Models\User;
 /**
  * DeviceUser Factory
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * Factory for creating DeviceUser model instances for testing and seeding.
  *
@@ -20,6 +21,11 @@ use Modules\User\Models\User;
  * Factory for creating DeviceUser model instances for testing and seeding.
  * 
 >>>>>>> 8055579 (.)
+=======
+ * 
+ * Factory for creating DeviceUser model instances for testing and seeding.
+ * 
+>>>>>>> 8d82f8c (.)
  * @extends Factory<DeviceUser>
  */
 class DeviceUserFactory extends Factory
@@ -27,10 +33,14 @@ class DeviceUserFactory extends Factory
     /**
      * The name of the factory's corresponding model.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> 8055579 (.)
+=======
+     * 
+>>>>>>> 8d82f8c (.)
      * @var class-string<DeviceUser>
      */
     protected $model = DeviceUser::class;
@@ -44,10 +54,14 @@ class DeviceUserFactory extends Factory
     {
         $loginAt = $this->faker->optional(0.8)->dateTimeBetween('-1 year', 'now');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> 8055579 (.)
+=======
+        
+>>>>>>> 8d82f8c (.)
         return [
             'device_id' => Device::factory(),
             'user_id' => User::factory(),
@@ -61,11 +75,17 @@ class DeviceUserFactory extends Factory
     /**
      * Create a device-user relationship for a specific user.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @param User $user
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @param User $user
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function forUser(User $user): static
     {
@@ -77,11 +97,17 @@ class DeviceUserFactory extends Factory
     /**
      * Create a device-user relationship for a specific device.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @param Device $device
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @param Device $device
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function forDevice(Device $device): static
     {
@@ -93,10 +119,15 @@ class DeviceUserFactory extends Factory
     /**
      * Indicate that the user is currently logged in.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function loggedIn(): static
     {
@@ -109,19 +140,28 @@ class DeviceUserFactory extends Factory
     /**
      * Indicate that the user is logged out.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function loggedOut(): static
     {
         $loginAt = $this->faker->dateTimeBetween('-1 month', '-1 day');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> 8055579 (.)
+=======
+        
+>>>>>>> 8d82f8c (.)
         return $this->state(fn (array $attributes): array => [
             'login_at' => $loginAt,
             'logout_at' => $this->faker->dateTimeBetween($loginAt, 'now'),

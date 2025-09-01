@@ -12,6 +12,7 @@ use Modules\User\Models\User;
 /**
  * Membership Factory
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * Factory for creating Membership model instances for testing and seeding.
  *
@@ -20,6 +21,11 @@ use Modules\User\Models\User;
  * Factory for creating Membership model instances for testing and seeding.
  * 
 >>>>>>> 8055579 (.)
+=======
+ * 
+ * Factory for creating Membership model instances for testing and seeding.
+ * 
+>>>>>>> 8d82f8c (.)
  * @extends Factory<Membership>
  */
 class MembershipFactory extends Factory
@@ -27,10 +33,14 @@ class MembershipFactory extends Factory
     /**
      * The name of the factory's corresponding model.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> 8055579 (.)
+=======
+     * 
+>>>>>>> 8d82f8c (.)
      * @var class-string<Membership>
      */
     protected $model = Membership::class;
@@ -53,11 +63,17 @@ class MembershipFactory extends Factory
     /**
      * Create membership for a specific team.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @param Team $team
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @param Team $team
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function forTeam(Team $team): static
     {
@@ -69,11 +85,17 @@ class MembershipFactory extends Factory
     /**
      * Create membership for a specific user.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @param User $user
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @param User $user
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function forUser(User $user): static
     {
@@ -85,10 +107,15 @@ class MembershipFactory extends Factory
     /**
      * Set the role to admin.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function admin(): static
     {
@@ -100,10 +127,15 @@ class MembershipFactory extends Factory
     /**
      * Set the role to editor.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function editor(): static
     {
@@ -115,10 +147,15 @@ class MembershipFactory extends Factory
     /**
      * Set the role to member.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function member(): static
     {
@@ -130,10 +167,15 @@ class MembershipFactory extends Factory
     /**
      * Set the role to viewer.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function viewer(): static
     {
@@ -142,7 +184,11 @@ class MembershipFactory extends Factory
         ]);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> 8055579 (.)
+=======
+}
+>>>>>>> 8d82f8c (.)

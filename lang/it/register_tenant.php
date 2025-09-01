@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 return [
     'navigation' => [
         'label' => 'Registrazione Studio',
@@ -240,6 +241,8 @@ return [
     ],
 ];
 =======
+=======
+>>>>>>> 8d82f8c (.)
 return array (
   'navigation' => 
   array (
@@ -521,4 +524,7 @@ return array (
     'data_protection' => 'Tutti i dati sono protetti secondo le normative europee GDPR',
   ),
 );
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)

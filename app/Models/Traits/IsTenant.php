@@ -5,10 +5,15 @@ declare(strict_types=1);
 namespace Modules\User\Models\Traits;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
+=======
+>>>>>>> 8d82f8c (.)
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Modules\User\Contracts\TeamContract;
+use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
+<<<<<<< HEAD
 =======
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Modules\User\Contracts\TeamContract;
@@ -16,6 +21,9 @@ use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Illuminate\Database\Eloquent\Model;
 >>>>>>> 8055579 (.)
+=======
+use Illuminate\Database\Eloquent\Model;
+>>>>>>> 8d82f8c (.)
 
 /**
  * Undocumented trait.
@@ -27,10 +35,14 @@ trait IsTenant
     /**
      * Get all users associated with this tenant.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> 8055579 (.)
+=======
+     * 
+>>>>>>> 8d82f8c (.)
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Illuminate\Database\Eloquent\Model&\Modules\Xot\Contracts\UserContract, static>
      */
     public function users(): BelongsToMany
@@ -47,6 +59,7 @@ trait IsTenant
     /*
      * Method to create a belongsToMany relationship.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
      * @template TRelatedModel of \Illuminate\Database\Eloquent\Model
      *
@@ -55,6 +68,11 @@ trait IsTenant
      * @template TRelatedModel of \Illuminate\Database\Eloquent\Model
      * 
 >>>>>>> 8055579 (.)
+=======
+     * 
+     * @template TRelatedModel of \Illuminate\Database\Eloquent\Model
+     * 
+>>>>>>> 8d82f8c (.)
      * @param class-string<TRelatedModel> $related The related model class
      * @param string|null $table The pivot table name
      * @param string $foreignPivotKey The foreign key in pivot table
@@ -62,6 +80,7 @@ trait IsTenant
      * @param string|null $parentKey The parent key
      * @param string|null $relatedKey The related key
      * @param string|null $relation The relation name
+<<<<<<< HEAD
 <<<<<<< HEAD
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<TRelatedModel, static>
@@ -71,6 +90,11 @@ trait IsTenant
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<TRelatedModel, static>
      
 >>>>>>> 8055579 (.)
+=======
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<TRelatedModel, static>
+     
+>>>>>>> 8d82f8c (.)
     public function belongsToManyX(
         string $related,
         ?string $table = null,

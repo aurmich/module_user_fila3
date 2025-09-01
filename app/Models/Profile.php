@@ -6,6 +6,7 @@ namespace Modules\User\Models;
 
 use Modules\User\Contracts\UserContract;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Contracts\ProfileContract;
 =======
 use Modules\User\Database\Factories\ProfileFactory;
@@ -14,10 +15,18 @@ use Modules\User\Models\Pivots\ProfileTeam;
 use Modules\Xot\Contracts\ProfileContract;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 >>>>>>> 8055579 (.)
+=======
+use Modules\User\Database\Factories\ProfileFactory;
+use Modules\User\Models\Pivots\DeviceProfile;
+use Modules\User\Models\Pivots\ProfileTeam;
+use Modules\Xot\Contracts\ProfileContract;
+use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
+>>>>>>> 8d82f8c (.)
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Permission\Traits\HasRoles;
 use Spatie\SchemalessAttributes\SchemalessAttributesTrait as HasSchemalessAttributes;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 /**
@@ -31,6 +40,14 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
  * User Profile Model
  * 
 >>>>>>> 8055579 (.)
+=======
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
+
+/**
+ * User Profile Model
+ * 
+>>>>>>> 8d82f8c (.)
  * Represents a user profile with relationships to devices, teams, and roles.
  *
  * @property int $id
@@ -74,9 +91,12 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
  * @property-read UserContract|null $user
  * @property-read string|null $user_name
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @method static \Modules\User\Database\Factories\ProfileFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile newQuery()
@@ -87,9 +107,12 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutPermission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutRole($roles, $guard = null)
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @mixin IdeHelperProfile
  * @mixin \Eloquent
  */
@@ -97,12 +120,17 @@ class Profile extends BaseProfile implements HasMedia
 {
     use HasRoles;
 <<<<<<< HEAD
+<<<<<<< HEAD
     use HasSchemalessAttributes;
     use InteractsWithMedia;
 =======
     use InteractsWithMedia;
     use HasSchemalessAttributes;
 >>>>>>> 8055579 (.)
+=======
+    use InteractsWithMedia;
+    use HasSchemalessAttributes;
+>>>>>>> 8d82f8c (.)
 
     /**
      * The schemaless attributes.

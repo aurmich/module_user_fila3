@@ -1,12 +1,16 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
 declare(strict_types=1);
 
 namespace Modules\User\Livewire;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
@@ -18,6 +22,12 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Contracts\View\View;
 >>>>>>> 8055579 (.)
+=======
+use Livewire\Component;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Contracts\View\View;
+>>>>>>> 8d82f8c (.)
 
 /**
  * Logout component for handling user logout functionality.
@@ -46,9 +56,12 @@ class Logout extends Component
             $this->processing = false;
             session()->flash('error', __('Errore durante il logout. Riprova.'));
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
             return null;
         }
     }

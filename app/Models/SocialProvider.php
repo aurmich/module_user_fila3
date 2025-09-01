@@ -25,9 +25,12 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @method static \Modules\User\Database\Factories\SocialProviderFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider newQuery()
@@ -43,25 +46,34 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereStateless($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereSvg($value)
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @property string|null $created_at
  * @property string|null $updated_at
  * @property string|null $created_by
  * @property string|null $updated_by
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereUpdatedBy($value)
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @mixin IdeHelperSocialProvider
  * @mixin \Eloquent
  */

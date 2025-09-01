@@ -10,10 +10,15 @@ use Modules\User\Filament\Resources\SocialProviderResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 8055579 (.)
+=======
+
+
+>>>>>>> 8d82f8c (.)
 /**
  * --.
  */

@@ -29,9 +29,12 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @method static \Modules\User\Database\Factories\AuthenticationLogFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|AuthenticationLog newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|AuthenticationLog newQuery()
@@ -51,9 +54,12 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
  * @method static \Illuminate\Database\Eloquent\Builder|AuthenticationLog whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|AuthenticationLog whereUserAgent($value)
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @mixin IdeHelperAuthenticationLog
  * @mixin \Eloquent
  */

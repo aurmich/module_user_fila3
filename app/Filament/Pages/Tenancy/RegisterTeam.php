@@ -6,9 +6,13 @@ namespace Modules\User\Filament\Pages\Tenancy;
 
 use Filament\Forms\Components\TextInput;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Filament\Forms\Form;
 >>>>>>> 8055579 (.)
+=======
+use Filament\Forms\Form;
+>>>>>>> 8d82f8c (.)
 use Filament\Pages\Tenancy\RegisterTenant;
 use Illuminate\Database\Eloquent\Model;
 use Modules\User\Contracts\TeamContract;
@@ -23,6 +27,7 @@ class RegisterTeam extends RegisterTenant
 
     public function getFormSchema(): array
 <<<<<<< HEAD
+<<<<<<< HEAD
     {
 
         return [
@@ -33,6 +38,8 @@ class RegisterTeam extends RegisterTenant
         ];
     }
 =======
+=======
+>>>>>>> 8d82f8c (.)
 {
     
         
@@ -43,7 +50,10 @@ class RegisterTeam extends RegisterTenant
                 
       ];
 }
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
 
     /**
      * @param  array<string, mixed>  $data

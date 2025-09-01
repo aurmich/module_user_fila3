@@ -9,10 +9,14 @@ uses(Tests\TestCase::class);
 test('user type enum has correct cases', function (): void {
     expect(UserType::cases())->toHaveCount(5);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     expect(UserType::MasterAdmin->value)->toBe('master_admin');
     expect(UserType::BoUser->value)->toBe('backoffice_user');
     expect(UserType::CustomerUser->value)->toBe('customer_user');
@@ -23,10 +27,14 @@ test('user type enum has correct cases', function (): void {
 test('user type enum implements required interfaces', function (): void {
     $reflection = new ReflectionClass(UserType::class);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     expect($reflection->implementsInterface(\Filament\Support\Contracts\HasColor::class))->toBeTrue();
     expect($reflection->implementsInterface(\Filament\Support\Contracts\HasIcon::class))->toBeTrue();
     expect($reflection->implementsInterface(\Filament\Support\Contracts\HasLabel::class))->toBeTrue();
@@ -68,10 +76,14 @@ test('user type enum can be used in database queries', function (): void {
     $masterAdmin = UserType::MasterAdmin;
     $boUser = UserType::BoUser;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     expect($masterAdmin->value)->toBe('master_admin');
     expect($boUser->value)->toBe('backoffice_user');
 });
@@ -81,10 +93,14 @@ test('user type enum can be compared', function (): void {
     $type2 = UserType::MasterAdmin;
     $type3 = UserType::BoUser;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     expect($type1)->toBe($type2);
     expect($type1)->not->toBe($type3);
 });
@@ -92,10 +108,14 @@ test('user type enum can be compared', function (): void {
 test('user type enum can be used in switch statements', function (): void {
     $type = UserType::MasterAdmin;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     $result = match ($type) {
         UserType::MasterAdmin => 'admin',
         UserType::BoUser => 'backoffice',
@@ -104,20 +124,28 @@ test('user type enum can be used in switch statements', function (): void {
         UserType::Technician => 'technician',
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     expect($result)->toBe('admin');
 });
 
 test('user type enum can be serialized', function (): void {
     $type = UserType::MasterAdmin;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     expect(serialize($type))->toBe('O:32:"Modules\User\Enums\UserType":1:{s:4:"name";s:11:"MasterAdmin";}');
 });
 
@@ -125,10 +153,14 @@ test('user type enum can be unserialized', function (): void {
     $serialized = 'O:32:"Modules\User\Enums\UserType":1:{s:4:"name";s:11:"MasterAdmin";}';
     $unserialized = unserialize($serialized);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     expect($unserialized)->toBe(UserType::MasterAdmin);
 });
 

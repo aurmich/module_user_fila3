@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Http\Livewire\Auth;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use DanHarrin\LivewireRateLimiting\WithRateLimiting;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Auth;
@@ -13,13 +14,19 @@ use Illuminate\Support\Facades\Log;
 use Livewire\Component;
 =======
 use Livewire\Component;
+=======
+use Livewire\Component;
+>>>>>>> 8d82f8c (.)
 use DanHarrin\LivewireRateLimiting\WithRateLimiting;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
 
 /**
  * Componente Livewire per la gestione del logout.
@@ -37,9 +44,12 @@ class Logout extends Component
     /**
      * Esegui logout, invalidazione sessione e redirect.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
      * @return \Illuminate\Http\RedirectResponse|null
      */
     public function mount()
@@ -54,16 +64,21 @@ class Logout extends Component
             // Emetti evento pre-logout
             Event::dispatch('auth.logout.attempting', [$user]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 8d82f8c (.)
             // Esegui logout
             Auth::logout();
-
+            
             // Invalida e rigenera la sessione
             session()->invalidate();
             session()->regenerateToken();
-
+            
             // Emetti evento post-logout
             Event::dispatch('auth.logout.successful');
+<<<<<<< HEAD
 
 =======
             
@@ -78,10 +93,14 @@ class Logout extends Component
             Event::dispatch('auth.logout.successful');
             
 >>>>>>> 8055579 (.)
+=======
+            
+>>>>>>> 8d82f8c (.)
             // Log per audit
             if ($user) {
                 Log::info('User logged out successfully', [
                     'user_id' => $user->id,
+<<<<<<< HEAD
 <<<<<<< HEAD
                     'email' => $user->email,
                 ]);
@@ -93,11 +112,18 @@ class Logout extends Component
             }
             
 >>>>>>> 8055579 (.)
+=======
+                    'email' => $user->email
+                ]);
+            }
+            
+>>>>>>> 8d82f8c (.)
             // Redirect alla pagina di login
             return redirect()->route('login');
         } catch (\Exception $e) {
             Log::error('Logout failed', [
                 'error' => $e->getMessage(),
+<<<<<<< HEAD
 <<<<<<< HEAD
                 'user_id' => Auth::id(),
             ]);
@@ -110,6 +136,12 @@ class Logout extends Component
 
             session()->flash('error', __('Si è verificato un errore durante il logout'));
 >>>>>>> 8055579 (.)
+=======
+                'user_id' => Auth::id()
+            ]);
+
+            session()->flash('error', __('Si è verificato un errore durante il logout'));
+>>>>>>> 8d82f8c (.)
             return redirect()->back();
         }
     }
@@ -117,10 +149,15 @@ class Logout extends Component
     /**
      * Renderizza il componente.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return \Illuminate\Contracts\View\View
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @return \Illuminate\Contracts\View\View
+>>>>>>> 8d82f8c (.)
      */
     public function render(): View
     {

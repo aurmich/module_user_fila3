@@ -14,9 +14,12 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser query()
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @property int $id
  * @property string|null $tenant_id
  * @property string|null $user_id
@@ -25,9 +28,12 @@ use Illuminate\Support\Carbon;
  * @property string|null $created_by
  * @property string|null $updated_by
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereCustomerId($value)
@@ -39,16 +45,18 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereUuid($value)
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 8d82f8c (.)
  * @property string|null $deleted_at
  * @property string|null $deleted_by
- *
  * @method static \Illuminate\Database\Eloquent\Builder|TenantUser whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TenantUser whereDeletedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TenantUser whereTenantId($value)
- *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+<<<<<<< HEAD
  *
 =======
  * @property string|null $deleted_at
@@ -59,6 +67,8 @@ use Illuminate\Support\Carbon;
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @mixin IdeHelperTenantUser
  * @mixin \Eloquent
  */
@@ -66,10 +76,14 @@ class TenantUser extends BasePivot
 {
     use HasFactory;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     protected $connection = 'user';
 
     // public $incrementing = false;

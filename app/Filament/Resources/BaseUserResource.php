@@ -60,10 +60,14 @@ abstract class BaseUserResource extends XotBaseResource
                             return new HtmlString('&mdash;');
                         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                         
 >>>>>>> 8055579 (.)
+=======
+                        
+>>>>>>> 8d82f8c (.)
                         return $record->created_at->diffForHumans();
                     }),
             ])->columnSpan(4),

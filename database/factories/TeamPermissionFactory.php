@@ -11,10 +11,14 @@ use Modules\User\Models\TeamPermission;
 /**
  * TeamPermission Factory
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
  * 
 >>>>>>> 8055579 (.)
+=======
+ * 
+>>>>>>> 8d82f8c (.)
  * @extends Factory<TeamPermission>
  */
 class TeamPermissionFactory extends Factory

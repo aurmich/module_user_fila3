@@ -13,7 +13,10 @@ use Modules\User\Models\BaseProfile;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8d82f8c (.)
 
 
 
@@ -23,7 +26,10 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
 abstract class BaseProfileResource extends XotBaseResource
 {
     use Translatable;

@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 return [
     'fields' => [
         'name' => [
@@ -36,6 +37,8 @@ return [
     ],
 ];
 =======
+=======
+>>>>>>> 8d82f8c (.)
 return array (
   'fields' => 
   array (
@@ -77,4 +80,7 @@ return array (
     'icon' => 'heroicon-o-shield-check',
   ),
 );
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)

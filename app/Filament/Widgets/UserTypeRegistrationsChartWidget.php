@@ -13,12 +13,16 @@ class UserTypeRegistrationsChartWidget extends XotBaseChartWidget
 {
     protected static ?string $heading = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     protected static ?int $sort = 1;
 
 =======
     protected static ?int $sort = 1;
 >>>>>>> 8055579 (.)
+=======
+    protected static ?int $sort = 1;
+>>>>>>> 8d82f8c (.)
     protected static bool $isLazy = true;
 
     public string $model;
@@ -47,6 +51,7 @@ class UserTypeRegistrationsChartWidget extends XotBaseChartWidget
 
         // Fallback ai valori di default se i filtri non sono disponibili
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($startDate === null) {
             $startDate = now()->subDays(30);
         }
@@ -57,6 +62,12 @@ class UserTypeRegistrationsChartWidget extends XotBaseChartWidget
         }
         if (null === $endDate) {
 >>>>>>> 8055579 (.)
+=======
+        if (null === $startDate) {
+            $startDate = now()->subDays(30);
+        }
+        if (null === $endDate) {
+>>>>>>> 8d82f8c (.)
             $endDate = now();
         }
 

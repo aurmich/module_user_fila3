@@ -11,10 +11,14 @@ use Modules\User\Models\OauthRefreshToken;
 /**
  * OauthRefreshToken Factory
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
  * 
 >>>>>>> 8055579 (.)
+=======
+ * 
+>>>>>>> 8d82f8c (.)
  * @extends Factory<OauthRefreshToken>
  */
 class OauthRefreshTokenFactory extends Factory

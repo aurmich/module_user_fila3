@@ -5,13 +5,17 @@ declare(strict_types=1);
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Hash;
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
 use Modules\User\Models\User;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 use function Pest\Laravel\actingAs;
@@ -20,6 +24,10 @@ use function Pest\Laravel\post;
 use Illuminate\Support\Facades\Hash;
 use function Pest\Laravel\{actingAs, post};
 >>>>>>> 8055579 (.)
+=======
+use Illuminate\Support\Facades\Hash;
+use function Pest\Laravel\{actingAs, post};
+>>>>>>> 8d82f8c (.)
 
 uses(Tests\TestCase::class);
 
@@ -86,7 +94,11 @@ test('cannot change password with wrong current password', function (): void {
     // Verifica che la password non sia stata cambiata
     expect(Hash::check('old_password', $user->fresh()->password))->toBeTrue();
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 =======
 }); 
 >>>>>>> 8055579 (.)
+=======
+}); 
+>>>>>>> 8d82f8c (.)

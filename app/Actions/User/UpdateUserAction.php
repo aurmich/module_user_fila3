@@ -5,16 +5,21 @@ declare(strict_types=1);
 namespace Modules\User\Actions\User;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
+=======
+>>>>>>> 8d82f8c (.)
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Database\Eloquent\Model;
+use Spatie\QueueableAction\QueueableAction;
 use Illuminate\Validation\ValidationException;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
-use Spatie\QueueableAction\QueueableAction;
 
 /**
  * UpdateUserAction: Action generica per l'aggiornamento dei dati utente.
+<<<<<<< HEAD
  *
 =======
 use Illuminate\Support\Facades\DB;
@@ -29,6 +34,9 @@ use Modules\Xot\Actions\Cast\SafeStringCastAction;
  * UpdateUserAction: Action generica per l'aggiornamento dei dati utente.
  * 
 >>>>>>> 8055579 (.)
+=======
+ * 
+>>>>>>> 8d82f8c (.)
  * Questa action gestisce l'aggiornamento dei dati di base dell'utente.
  * Può essere estesa dai moduli specifici per aggiungere logica personalizzata.
  */
@@ -36,13 +44,17 @@ class UpdateUserAction
 {
     use QueueableAction;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8d82f8c (.)
     /**
      * Esegue l'aggiornamento dell'utente.
-     *
-     * @param  Model  $user  L'utente da aggiornare
-     * @param  array<string, mixed>  $data  I dati da aggiornare
+     * 
+     * @param Model $user L'utente da aggiornare
+     * @param array<string, mixed> $data I dati da aggiornare
      * @return Model L'utente aggiornato
+<<<<<<< HEAD
      *
 =======
     /**
@@ -53,6 +65,9 @@ class UpdateUserAction
      * @return Model L'utente aggiornato
      * 
 >>>>>>> 8055579 (.)
+=======
+     * 
+>>>>>>> 8d82f8c (.)
      * @throws \Exception Se l'aggiornamento fallisce
      */
     public function execute(Model $user, array $data): Model
@@ -60,49 +75,54 @@ class UpdateUserAction
         try {
             DB::beginTransaction();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 8d82f8c (.)
             // Prepara i dati per l'aggiornamento
             $updateData = $this->prepareUpdateData($data);
-
+            
             // Valida i dati specifici per l'aggiornamento
             $this->validateUpdateData($user, $updateData);
-
+            
             // Aggiorna l'utente
             $user->fill($updateData);
             $user->save();
-
+            
             // Esegue operazioni post-aggiornamento se necessarie
             $this->afterUpdate($user, $updateData);
-
+            
             DB::commit();
-
-            Log::info('Utente aggiornato con successo', [
+            
+            Log::info("Utente aggiornato con successo", [
                 'user_id' => $user->getKey(),
-                'updated_fields' => array_keys($updateData),
+                'updated_fields' => array_keys($updateData)
             ]);
-
+            
             $updatedUser = $user->fresh();
-            if (! $updatedUser instanceof Model) {
+            if (!$updatedUser instanceof Model) {
                 throw new \Exception('Failed to refresh user model after update');
             }
-
+            
             return $updatedUser;
-
+            
         } catch (\Exception $e) {
             DB::rollBack();
-
+            
             Log::error("Errore nell'aggiornamento utente", [
                 'user_id' => $user->getKey(),
                 'error' => $e->getMessage(),
-                'data' => $updateData ?? [],
+                'data' => $updateData ?? []
             ]);
-
+            
             throw $e;
         }
     }
-
+    
     /**
      * Prepara i dati per l'aggiornamento rimuovendo campi non aggiornabili.
+<<<<<<< HEAD
      *
      * @param  array<string, mixed>  $data
 =======
@@ -152,6 +172,10 @@ class UpdateUserAction
      * 
      * @param array<string, mixed> $data
 >>>>>>> 8055579 (.)
+=======
+     * 
+     * @param array<string, mixed> $data
+>>>>>>> 8d82f8c (.)
      * @return array<string, mixed>
      */
     protected function prepareUpdateData(array $data): array
@@ -165,6 +189,7 @@ class UpdateUserAction
             'updated_at',
         ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         $updateData = array_diff_key($data, array_flip($excludeFields));
 
@@ -173,6 +198,11 @@ class UpdateUserAction
         $updateData = array_diff_key($data, array_flip($excludeFields));
         
 >>>>>>> 8055579 (.)
+=======
+        
+        $updateData = array_diff_key($data, array_flip($excludeFields));
+        
+>>>>>>> 8d82f8c (.)
         // Gestione speciale per la password
         if (isset($updateData['password'])) {
             if (empty($updateData['password'])) {
@@ -184,22 +214,31 @@ class UpdateUserAction
             }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> 8055579 (.)
+=======
+        
+>>>>>>> 8d82f8c (.)
         // Gestione dell'email per evitare duplicati
         if (isset($updateData['email'])) {
             $email = SafeStringCastAction::cast($updateData['email']);
             $updateData['email'] = strtolower($email);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 8d82f8c (.)
         return $updateData;
     }
-
+    
     /**
      * Valida i dati di aggiornamento.
+<<<<<<< HEAD
      *
      * @param  array<string, mixed>  $data
      *
@@ -210,12 +249,17 @@ class UpdateUserAction
     
     /**
      * Valida i dati di aggiornamento.
+=======
+>>>>>>> 8d82f8c (.)
      * 
      * @param Model $user
      * @param array<string, mixed> $data
      * @return void
      * 
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
      * @throws ValidationException
      */
     protected function validateUpdateData(Model $user, array $data): void
@@ -227,21 +271,26 @@ class UpdateUserAction
                 ->where('id', '!=', $user->getKey())
                 ->first();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> 8d82f8c (.)
             if ($existingUser) {
                 throw ValidationException::withMessages([
-                    'email' => __('user::validation.email_already_taken'),
+                    'email' => __('user::validation.email_already_taken')
                 ]);
             }
         }
-
+        
         // Validazioni aggiuntive possono essere aggiunte qui
         // o nelle classi che estendono questa action
     }
-
+    
     /**
      * Operazioni da eseguire dopo l'aggiornamento.
      * Può essere sovrascritto dalle classi che estendono questa action.
+<<<<<<< HEAD
      *
      * @param  array<string, mixed>  $data
 =======
@@ -260,11 +309,16 @@ class UpdateUserAction
     /**
      * Operazioni da eseguire dopo l'aggiornamento.
      * Può essere sovrascritto dalle classi che estendono questa action.
+=======
+>>>>>>> 8d82f8c (.)
      * 
      * @param Model $user
      * @param array<string, mixed> $data
      * @return void
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
      */
     protected function afterUpdate(Model $user, array $data): void
     {
@@ -276,7 +330,11 @@ class UpdateUserAction
         // - Gestire relazioni
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 } 
 >>>>>>> 8055579 (.)
+=======
+} 
+>>>>>>> 8d82f8c (.)

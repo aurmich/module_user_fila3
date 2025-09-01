@@ -11,9 +11,13 @@ use Filament\Forms\Components\Component;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Contracts\HasForms;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Filament\Forms\Form;
 >>>>>>> 8055579 (.)
+=======
+use Filament\Forms\Form;
+>>>>>>> 8d82f8c (.)
 use Filament\Notifications\Notification;
 use Filament\Pages\Concerns\InteractsWithFormActions;
 use Filament\Pages\Page;
@@ -22,9 +26,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Illuminate\Validation\Rules\Password as PasswordRule;
 >>>>>>> 8055579 (.)
+=======
+use Illuminate\Validation\Rules\Password as PasswordRule;
+>>>>>>> 8d82f8c (.)
 use Modules\User\Datas\PasswordData;
 use Modules\User\Events\NewPasswordSet;
 use Modules\User\Http\Response\PasswordResetResponse;
@@ -126,10 +134,14 @@ class PasswordExpired extends Page implements HasForms
 
         // Verificare che l'utente esistante e che sia un modello Eloquent
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! ($user instanceof \Illuminate\Database\Eloquent\Model)) {
 =======
         if (!($user instanceof \Illuminate\Database\Eloquent\Model)) {
 >>>>>>> 8055579 (.)
+=======
+        if (!($user instanceof \Illuminate\Database\Eloquent\Model)) {
+>>>>>>> 8d82f8c (.)
             throw new \InvalidArgumentException('L\'utente deve essere un modello Eloquent con il metodo update');
         }
 
@@ -142,10 +154,14 @@ class PasswordExpired extends Page implements HasForms
 
         // Verificare che l'utente implementi l'interfaccia UserContract prima di passarlo all'evento
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! $user instanceof \Modules\Xot\Contracts\UserContract) {
 =======
         if (!$user instanceof \Modules\Xot\Contracts\UserContract) {
 >>>>>>> 8055579 (.)
+=======
+        if (!$user instanceof \Modules\Xot\Contracts\UserContract) {
+>>>>>>> 8d82f8c (.)
             throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia UserContract');
         }
 
@@ -157,10 +173,14 @@ class PasswordExpired extends Page implements HasForms
             ->send();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return new PasswordResetResponse;
 =======
         return new PasswordResetResponse();
 >>>>>>> 8055579 (.)
+=======
+        return new PasswordResetResponse();
+>>>>>>> 8d82f8c (.)
     }
 
     protected function getCurrentPasswordFormComponent(): Component

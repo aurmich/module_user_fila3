@@ -7,12 +7,19 @@ uses(\Tests\TestCase::class);
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\User\Models\AuthenticationLog;
 use Modules\User\Models\Profile;
 use Modules\User\Models\Team;
+=======
+>>>>>>> 8d82f8c (.)
 use Modules\User\Models\User;
+use Modules\User\Models\Team;
+use Modules\User\Models\Profile;
+use Modules\User\Models\AuthenticationLog;
 
 // In-memory helper: build a User without touching DB
+<<<<<<< HEAD
 function stubUser(array $attributes = []): User
 {
 =======
@@ -24,6 +31,9 @@ use Modules\User\Models\AuthenticationLog;
 // In-memory helper: build a User without touching DB
 function stubUser(array $attributes = []): User {
 >>>>>>> 8055579 (.)
+=======
+function stubUser(array $attributes = []): User {
+>>>>>>> 8d82f8c (.)
     $defaults = [
         'first_name' => 'John',
         'last_name' => 'Doe',
@@ -42,12 +52,17 @@ function stubUser(array $attributes = []): User {
     if (array_key_exists('password', $attributes) && is_string($attributes['password'])) {
         $plain = $attributes['password'];
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! str_starts_with($plain, '$2y$') && ! str_starts_with($plain, '$argon2')) {
+=======
+        if (!str_starts_with($plain, '$2y$') && !str_starts_with($plain, '$argon2')) {
+>>>>>>> 8d82f8c (.)
             $attributes['password'] = password_hash($plain, PASSWORD_BCRYPT);
         }
     }
-    $u = new User;
+    $u = new User();
     $u->forceFill(array_merge($defaults, $attributes));
+<<<<<<< HEAD
 
 =======
         if (!str_starts_with($plain, '$2y$') && !str_starts_with($plain, '$argon2')) {
@@ -57,6 +72,8 @@ function stubUser(array $attributes = []): User {
     $u = new User();
     $u->forceFill(array_merge($defaults, $attributes));
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
     return $u;
 }
 
@@ -74,10 +91,14 @@ describe('User Model', function () {
     it('can be created (in-memory)', function () {
         $user = stubUser();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> 8055579 (.)
+=======
+        
+>>>>>>> 8d82f8c (.)
         expect($user)->toBeInstanceOf(User::class)
             ->and($user->exists)->toBeFalse()
             ->and($user->email)->toBeString();
@@ -104,10 +125,14 @@ describe('User Model', function () {
 
     it('declares sensitive attributes as hidden (without serialization)', function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $hidden = (new User)->getHidden();
 =======
         $hidden = (new User())->getHidden();
 >>>>>>> 8055579 (.)
+=======
+        $hidden = (new User())->getHidden();
+>>>>>>> 8d82f8c (.)
         expect($hidden)->toContain('password')
             ->and($hidden)->toContain('remember_token');
     });
@@ -120,10 +145,14 @@ describe('User Model', function () {
             'is_otp' => false,
         ]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> 8055579 (.)
+=======
+        
+>>>>>>> 8d82f8c (.)
         expect($user->email_verified_at)->toBeInstanceOf(\Carbon\Carbon::class)
             ->and($user->created_at)->toBeInstanceOf(\Carbon\Carbon::class)
             ->and($user->is_active)->toBeBool()
@@ -133,6 +162,7 @@ describe('User Model', function () {
     describe('Relationships', function () {
         it('has profile relationship (in-memory)', function () {
             $user = stubUser();
+<<<<<<< HEAD
 <<<<<<< HEAD
             $profile = new Profile;
             $profile->forceFill(['user_id' => 'test-user-id']);
@@ -146,16 +176,27 @@ describe('User Model', function () {
             $user->setRelation('profile', $profile);
             
 >>>>>>> 8055579 (.)
+=======
+            $profile = new Profile();
+            $profile->forceFill(['user_id' => 'test-user-id']);
+            // Set relation without touching DB
+            $user->setRelation('profile', $profile);
+            
+>>>>>>> 8d82f8c (.)
             expect($user->profile)->toBeInstanceOf(Profile::class);
         });
 
         it('can attach authentication logs in-memory', function () {
             $user = stubUser();
 <<<<<<< HEAD
+<<<<<<< HEAD
             $log = new AuthenticationLog;
 =======
             $log = new AuthenticationLog();
 >>>>>>> 8055579 (.)
+=======
+            $log = new AuthenticationLog();
+>>>>>>> 8d82f8c (.)
             $user->setRelation('authentications', collect([$log]));
             expect($user->authentications)->toHaveCount(1);
         });
@@ -163,10 +204,14 @@ describe('User Model', function () {
         it('can expose ownedTeams relation when preset', function () {
             $user = stubUser();
 <<<<<<< HEAD
+<<<<<<< HEAD
             $team = new Team;
 =======
             $team = new Team();
 >>>>>>> 8055579 (.)
+=======
+            $team = new Team();
+>>>>>>> 8d82f8c (.)
             $user->setRelation('ownedTeams', collect([$team]));
             expect($user->ownedTeams)->toHaveCount(1);
         });
@@ -174,10 +219,14 @@ describe('User Model', function () {
         it('can expose teams relation when preset', function () {
             $user = stubUser();
 <<<<<<< HEAD
+<<<<<<< HEAD
             $team = new Team;
 =======
             $team = new Team();
 >>>>>>> 8055579 (.)
+=======
+            $team = new Team();
+>>>>>>> 8d82f8c (.)
             $user->setRelation('teams', collect([$team]));
             expect($user->teams)->toHaveCount(1);
         });
@@ -188,6 +237,7 @@ describe('User Model', function () {
             $user = stubUser([
                 'first_name' => 'John',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'last_name' => 'Doe',
             ]);
 
@@ -196,12 +246,18 @@ describe('User Model', function () {
             ]);
             
 >>>>>>> 8055579 (.)
+=======
+                'last_name' => 'Doe'
+            ]);
+            
+>>>>>>> 8d82f8c (.)
             expect($user->full_name)->toBe('John Doe');
         });
 
         it('handles null names in full_name accessor', function () {
             $user = stubUser([
                 'first_name' => 'John',
+<<<<<<< HEAD
 <<<<<<< HEAD
                 'last_name' => null,
             ]);
@@ -211,6 +267,11 @@ describe('User Model', function () {
             ]);
             
 >>>>>>> 8055579 (.)
+=======
+                'last_name' => null
+            ]);
+            
+>>>>>>> 8d82f8c (.)
             // Some implementations may include a trailing space when last_name is null
             expect(rtrim($user->full_name))->toBe('John');
         });
@@ -218,10 +279,14 @@ describe('User Model', function () {
         it('hashes password when set', function () {
             $user = stubUser(['password' => 'plain-password']);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
 >>>>>>> 8055579 (.)
+=======
+            
+>>>>>>> 8d82f8c (.)
             expect($user->password)->not->toBe('plain-password')
                 ->and(password_verify('plain-password', $user->password))->toBeTrue();
         });
@@ -246,10 +311,14 @@ describe('User Model', function () {
         it('supports OTP authentication', function () {
             $user = stubUser(['is_otp' => true]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
 >>>>>>> 8055579 (.)
+=======
+            
+>>>>>>> 8d82f8c (.)
             expect($user->is_otp)->toBeTrue();
         });
     });
@@ -259,6 +328,7 @@ describe('User Model', function () {
             $u1 = stubUser(['is_active' => true]);
             $u2 = stubUser(['is_active' => false]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             $active = collect([$u1, $u2])->filter(fn (User $u) => $u->is_active === true);
             $inactive = collect([$u1, $u2])->filter(fn (User $u) => $u->is_active === false);
@@ -269,6 +339,12 @@ describe('User Model', function () {
             $inactive = collect([$u1, $u2])->filter(fn (User $u) => $u->is_active === false);
             
 >>>>>>> 8055579 (.)
+=======
+            
+            $active = collect([$u1, $u2])->filter(fn (User $u) => $u->is_active === true);
+            $inactive = collect([$u1, $u2])->filter(fn (User $u) => $u->is_active === false);
+            
+>>>>>>> 8d82f8c (.)
             expect($active)->toHaveCount(1)
                 ->and($inactive)->toHaveCount(1);
         });
@@ -277,6 +353,7 @@ describe('User Model', function () {
             $u1 = stubUser(['email_verified_at' => Carbon::now()]);
             $u2 = stubUser(['email_verified_at' => null]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             $verified = collect([$u1, $u2])->filter(fn (User $u) => $u->email_verified_at !== null);
             $unverified = collect([$u1, $u2])->filter(fn (User $u) => $u->email_verified_at === null);
@@ -287,6 +364,12 @@ describe('User Model', function () {
             $unverified = collect([$u1, $u2])->filter(fn (User $u) => $u->email_verified_at === null);
             
 >>>>>>> 8055579 (.)
+=======
+            
+            $verified = collect([$u1, $u2])->filter(fn (User $u) => $u->email_verified_at !== null);
+            $unverified = collect([$u1, $u2])->filter(fn (User $u) => $u->email_verified_at === null);
+            
+>>>>>>> 8d82f8c (.)
             expect($verified)->toHaveCount(1)
                 ->and($unverified)->toHaveCount(1);
         });
@@ -295,10 +378,14 @@ describe('User Model', function () {
             $u1 = stubUser(['lang' => 'it']);
             $u2 = stubUser(['lang' => 'en']);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
 >>>>>>> 8055579 (.)
+=======
+            
+>>>>>>> 8d82f8c (.)
             $italians = collect([$u1, $u2])->where('lang', 'it');
             expect($italians)->toHaveCount(1);
         });
@@ -308,20 +395,28 @@ describe('User Model', function () {
         it('has password expiration', function () {
             $user = stubUser(['password_expires_at' => Carbon::now()->addDays(30)]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
 >>>>>>> 8055579 (.)
+=======
+            
+>>>>>>> 8d82f8c (.)
             expect($user->password_expires_at)->toBeInstanceOf(\Carbon\Carbon::class);
         });
 
         it('tracks creation and updates (in-memory)', function () {
             $user = stubUser();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
 >>>>>>> 8055579 (.)
+=======
+            
+>>>>>>> 8d82f8c (.)
             // created_by/updated_by may be null in-memory; assert timestamps typing only
             expect($user->created_at)->toBeInstanceOf(\Carbon\Carbon::class)
                 ->and($user->updated_at)->toBeInstanceOf(\Carbon\Carbon::class);
@@ -337,13 +432,18 @@ describe('User Model', function () {
         it('can own teams (in-memory)', function () {
             $user = stubUser();
 <<<<<<< HEAD
+<<<<<<< HEAD
             $team = new Team;
+=======
+            $team = new Team();
+>>>>>>> 8d82f8c (.)
             $team->forceFill(['user_id' => 'owner-id']);
             $user->setRelation('ownedTeams', collect([$team]));
-
+            
             expect($user->ownedTeams)->toHaveCount(1);
         });
     });
+<<<<<<< HEAD
 });
 =======
             $team = new Team();
@@ -355,3 +455,6 @@ describe('User Model', function () {
     });
 });
 >>>>>>> 8055579 (.)
+=======
+});
+>>>>>>> 8d82f8c (.)

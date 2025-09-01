@@ -35,10 +35,14 @@ class Change extends Component
 
         // Verifica che l'utente implementi l'interfaccia UserContract
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! ($authUser instanceof UserContract)) {
 =======
         if (!($authUser instanceof UserContract)) {
 >>>>>>> 8055579 (.)
+=======
+        if (!($authUser instanceof UserContract)) {
+>>>>>>> 8d82f8c (.)
             throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia UserContract');
         }
 

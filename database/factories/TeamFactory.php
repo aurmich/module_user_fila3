@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Database\Factories;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\User\Models\Team;
 use Modules\User\Models\User;
@@ -15,6 +16,12 @@ use Modules\User\Models\User;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Illuminate\Database\Eloquent\Factories\Factory;
 >>>>>>> 8055579 (.)
+=======
+use Modules\User\Models\Team;
+use Modules\User\Models\User;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+use Illuminate\Database\Eloquent\Factories\Factory;
+>>>>>>> 8d82f8c (.)
 
 /**
  * Factory per il modello Team del modulo User.
@@ -48,6 +55,7 @@ class TeamFactory extends Factory
             'Produzione',
             'Qualità',
 <<<<<<< HEAD
+<<<<<<< HEAD
             'Logistica',
         ];
 
@@ -60,6 +68,13 @@ class TeamFactory extends Factory
         return [
             'name' => app(SafeStringCastAction::class)->execute($this->faker->randomElement($teamTypes)) . ' Team',
 >>>>>>> 8055579 (.)
+=======
+            'Logistica'
+        ];
+
+        return [
+            'name' => app(SafeStringCastAction::class)->execute($this->faker->randomElement($teamTypes)) . ' Team',
+>>>>>>> 8d82f8c (.)
             'user_id' => User::factory(),
             'personal_team' => false,
         ];
@@ -68,31 +83,46 @@ class TeamFactory extends Factory
     /**
      * Indica che il team è un team personale.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function personal(): static
     {
         return $this->state(fn (array $attributes) => [
             'personal_team' => true,
 <<<<<<< HEAD
+<<<<<<< HEAD
             'name' => $this->faker->firstName()."'s Team",
 =======
             'name' => $this->faker->firstName() . "'s Team",
 >>>>>>> 8055579 (.)
+=======
+            'name' => $this->faker->firstName() . "'s Team",
+>>>>>>> 8d82f8c (.)
         ]);
     }
 
     /**
      * Crea un team con un owner specifico.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @param int $userId
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @param int $userId
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function ownedBy(int $userId): static
     {
@@ -104,15 +134,22 @@ class TeamFactory extends Factory
     /**
      * Crea un team con un nome specifico.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @param string $name
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @param string $name
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function withName(string $name): static
     {
         return $this->state(fn (array $attributes) => [
+<<<<<<< HEAD
 <<<<<<< HEAD
             'name' => $name.' Team',
         ]);
@@ -124,3 +161,9 @@ class TeamFactory extends Factory
     }
 }
 >>>>>>> 8055579 (.)
+=======
+            'name' => $name . ' Team',
+        ]);
+    }
+}
+>>>>>>> 8d82f8c (.)

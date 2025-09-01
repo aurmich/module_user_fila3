@@ -16,9 +16,12 @@ use Modules\Xot\Contracts\UserContract;
  * @method static \Illuminate\Database\Eloquent\Builder|Tenant newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Tenant query()
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @property EloquentCollection<int, Model&UserContract> $members
  * @property int|null $members_count
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
@@ -29,9 +32,12 @@ use Modules\Xot\Contracts\UserContract;
  * @property EloquentCollection<int, User> $users
  * @property int|null $users_count
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @mixin IdeHelperTenant
  * @mixin \Eloquent
  */

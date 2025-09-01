@@ -97,10 +97,14 @@ interface TeamContract extends ModelContract
      * Reload a fresh model instance from the database.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array|string  $with
 =======
      * @param  array|string $with
 >>>>>>> 8055579 (.)
+=======
+     * @param  array|string $with
+>>>>>>> 8d82f8c (.)
      * @return static|null
      */
     public function fresh($with = []);

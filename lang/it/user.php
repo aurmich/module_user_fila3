@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 return [
     'navigation' => [
         'name' => 'Utenti',
@@ -587,6 +588,8 @@ return [
     'search_placeholder' => 'Cerca per nome, email o ruolo...',
 ];
 =======
+=======
+>>>>>>> 8d82f8c (.)
 return array (
   'navigation' => 
   array (
@@ -1271,4 +1274,7 @@ return array (
   ),
   'search_placeholder' => 'Cerca per nome, email o ruolo...',
 );
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)

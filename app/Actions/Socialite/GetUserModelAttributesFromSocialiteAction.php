@@ -34,6 +34,7 @@ class GetUserModelAttributesFromSocialiteAction
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! is_string($nameFieldsResolver->name)) {
             throw new \RuntimeException('Il nome deve essere una stringa');
         }
@@ -44,6 +45,12 @@ class GetUserModelAttributesFromSocialiteAction
         }
         if (!is_string($nameFieldsResolver->last_name)) {
 >>>>>>> 8055579 (.)
+=======
+        if (!is_string($nameFieldsResolver->name)) {
+            throw new \RuntimeException('Il nome deve essere una stringa');
+        }
+        if (!is_string($nameFieldsResolver->last_name)) {
+>>>>>>> 8d82f8c (.)
             throw new \RuntimeException('Il cognome deve essere una stringa');
         }
 
@@ -53,10 +60,14 @@ class GetUserModelAttributesFromSocialiteAction
 
         $email = $this->oauthUser->getEmail();
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! is_string($email) || empty($email)) {
 =======
         if (!is_string($email) || empty($email)) {
 >>>>>>> 8055579 (.)
+=======
+        if (!is_string($email) || empty($email)) {
+>>>>>>> 8d82f8c (.)
             throw new \RuntimeException('L\'email deve essere una stringa non vuota');
         }
         $this->email = $email;

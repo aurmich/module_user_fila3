@@ -10,12 +10,15 @@ namespace Modules\User\Filament\Actions\Header;
 
 use Filament\Actions\Action;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
+=======
+>>>>>>> 8d82f8c (.)
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\Rules\Password;
 use Modules\User\Datas\PasswordData;
 use Modules\Xot\Contracts\UserContract;
+<<<<<<< HEAD
 =======
 use Illuminate\Support\Facades\Hash;
 use Modules\User\Datas\PasswordData;
@@ -24,6 +27,11 @@ use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Illuminate\Validation\Rules\Password;
 >>>>>>> 8055579 (.)
+=======
+use Filament\Forms\Components\TextInput;
+use Filament\Notifications\Notification;
+use Illuminate\Validation\Rules\Password;
+>>>>>>> 8d82f8c (.)
 
 class ChangePasswordHeaderAction extends Action
 {
@@ -35,6 +43,7 @@ class ChangePasswordHeaderAction extends Action
             ->action(function (UserContract $record, array $data): void {
                 $old_password = $record->getAttribute('password');
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $res = tap($record)->update([
                     'password' => Hash::make($data['new_password']),
                 ]);
@@ -45,6 +54,12 @@ class ChangePasswordHeaderAction extends Action
                 ]);
                 
 >>>>>>> 8055579 (.)
+=======
+                $res=tap($record)->update([
+                    'password' => Hash::make($data['new_password']),
+                ]);
+                
+>>>>>>> 8d82f8c (.)
                 Notification::make()
                     ->success()
                     ->title(__('user::notifications.password_changed_successfully.title'))

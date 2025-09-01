@@ -12,10 +12,14 @@ use Modules\User\Models\RoleHasPermission;
 /**
  * RoleHasPermission Factory
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
  * 
 >>>>>>> 8055579 (.)
+=======
+ * 
+>>>>>>> 8d82f8c (.)
  * @extends Factory<RoleHasPermission>
  */
 class RoleHasPermissionFactory extends Factory

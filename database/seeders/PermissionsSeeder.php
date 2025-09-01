@@ -44,7 +44,11 @@ class PermissionsSeeder extends Seeder
         ]);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 } 
 >>>>>>> 8055579 (.)
+=======
+} 
+>>>>>>> 8d82f8c (.)

@@ -9,7 +9,10 @@ use Filament\Pages\Actions\ViewAction;
 use Modules\User\Filament\Resources\TeamResource;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8d82f8c (.)
 
 
 
@@ -19,7 +22,10 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
 class EditTeam extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord
 {
     // //

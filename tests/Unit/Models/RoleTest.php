@@ -5,10 +5,14 @@ declare(strict_types=1);
 namespace Modules\User\Tests\Unit\Models;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 =======
 use Illuminate\Foundation\Testing\RefreshDatabase;
 >>>>>>> 8055579 (.)
+=======
+use Illuminate\Foundation\Testing\RefreshDatabase;
+>>>>>>> 8d82f8c (.)
 use Modules\User\Models\Role;
 use Modules\User\Models\Team;
 use Tests\TestCase;
@@ -16,10 +20,14 @@ use Tests\TestCase;
 class RoleTest extends TestCase
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     use RefreshDatabase;
 >>>>>>> 8055579 (.)
+=======
+    use RefreshDatabase;
+>>>>>>> 8d82f8c (.)
 
     public function test_can_create_role_with_minimal_data(): void
     {
@@ -39,10 +47,14 @@ class RoleTest extends TestCase
     {
         $team = Team::factory()->create();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> 8055579 (.)
+=======
+        
+>>>>>>> 8d82f8c (.)
         $roleData = [
             'name' => 'Full Role',
             'guard_name' => 'web',
@@ -64,6 +76,7 @@ class RoleTest extends TestCase
     public function test_role_has_connection_attribute(): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $role = new Role;
 
         expect('user', $role->connection);
@@ -72,10 +85,16 @@ class RoleTest extends TestCase
 
         $this->assertEquals('user', $role->connection);
 >>>>>>> 8055579 (.)
+=======
+        $role = new Role();
+
+        $this->assertEquals('user', $role->connection);
+>>>>>>> 8d82f8c (.)
     }
 
     public function test_role_has_key_type_attribute(): void
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         $role = new Role;
 
@@ -85,10 +104,16 @@ class RoleTest extends TestCase
 
         $this->assertEquals('string', $role->keyType);
 >>>>>>> 8055579 (.)
+=======
+        $role = new Role();
+
+        $this->assertEquals('string', $role->keyType);
+>>>>>>> 8d82f8c (.)
     }
 
     public function test_role_constants_are_defined(): void
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         expect(1, Role::ROLE_ADMINISTRATOR);
         expect(2, Role::ROLE_OWNER);
@@ -98,6 +123,11 @@ class RoleTest extends TestCase
         $this->assertEquals(2, Role::ROLE_OWNER);
         $this->assertEquals(3, Role::ROLE_USER);
 >>>>>>> 8055579 (.)
+=======
+        $this->assertEquals(1, Role::ROLE_ADMINISTRATOR);
+        $this->assertEquals(2, Role::ROLE_OWNER);
+        $this->assertEquals(3, Role::ROLE_USER);
+>>>>>>> 8d82f8c (.)
     }
 
     public function test_can_find_role_by_name(): void
@@ -107,12 +137,17 @@ class RoleTest extends TestCase
         $foundRole = Role::where('name', 'Unique Role Name')->first();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect($foundRole);
         expect($role->id, $foundRole->id);
 =======
         $this->assertNotNull($foundRole);
         $this->assertEquals($role->id, $foundRole->id);
 >>>>>>> 8055579 (.)
+=======
+        $this->assertNotNull($foundRole);
+        $this->assertEquals($role->id, $foundRole->id);
+>>>>>>> 8d82f8c (.)
     }
 
     public function test_can_find_role_by_guard_name(): void
@@ -124,12 +159,17 @@ class RoleTest extends TestCase
         $webRoles = Role::where('guard_name', 'web')->get();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect(2, $webRoles);
         expect($webRoles->every(fn ($role) => $role->guard_name === 'web'));
 =======
         $this->assertCount(2, $webRoles);
         $this->assertTrue($webRoles->every(fn ($role) => $role->guard_name === 'web'));
 >>>>>>> 8055579 (.)
+=======
+        $this->assertCount(2, $webRoles);
+        $this->assertTrue($webRoles->every(fn ($role) => $role->guard_name === 'web'));
+>>>>>>> 8d82f8c (.)
     }
 
     public function test_can_find_role_by_team_id(): void
@@ -140,12 +180,17 @@ class RoleTest extends TestCase
         $foundRole = Role::where('team_id', $team->id)->first();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect($foundRole);
         expect($role->id, $foundRole->id);
 =======
         $this->assertNotNull($foundRole);
         $this->assertEquals($role->id, $foundRole->id);
 >>>>>>> 8055579 (.)
+=======
+        $this->assertNotNull($foundRole);
+        $this->assertEquals($role->id, $foundRole->id);
+>>>>>>> 8d82f8c (.)
     }
 
     public function test_can_find_role_by_uuid(): void
@@ -156,12 +201,17 @@ class RoleTest extends TestCase
         $foundRole = Role::where('uuid', $uuid)->first();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect($foundRole);
         expect($role->id, $foundRole->id);
 =======
         $this->assertNotNull($foundRole);
         $this->assertEquals($role->id, $foundRole->id);
 >>>>>>> 8055579 (.)
+=======
+        $this->assertNotNull($foundRole);
+        $this->assertEquals($role->id, $foundRole->id);
+>>>>>>> 8d82f8c (.)
     }
 
     public function test_can_find_roles_by_name_pattern(): void
@@ -173,12 +223,17 @@ class RoleTest extends TestCase
         $adminRoles = Role::where('name', 'like', '%Role%')->get();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect(3, $adminRoles);
         expect($adminRoles->every(fn ($role) => str_contains($role->name, 'Role')));
 =======
         $this->assertCount(3, $adminRoles);
         $this->assertTrue($adminRoles->every(fn ($role) => str_contains($role->name, 'Role')));
 >>>>>>> 8055579 (.)
+=======
+        $this->assertCount(3, $adminRoles);
+        $this->assertTrue($adminRoles->every(fn ($role) => str_contains($role->name, 'Role')));
+>>>>>>> 8d82f8c (.)
     }
 
     public function test_can_update_role(): void
@@ -229,6 +284,7 @@ class RoleTest extends TestCase
             ->get();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect(1, $roles);
         expect('Admin Role', $roles->first()->name);
         expect('web', $roles->first()->guard_name);
@@ -237,6 +293,11 @@ class RoleTest extends TestCase
         $this->assertEquals('Admin Role', $roles->first()->name);
         $this->assertEquals('web', $roles->first()->guard_name);
 >>>>>>> 8055579 (.)
+=======
+        $this->assertCount(1, $roles);
+        $this->assertEquals('Admin Role', $roles->first()->name);
+        $this->assertEquals('web', $roles->first()->guard_name);
+>>>>>>> 8d82f8c (.)
     }
 
     public function test_role_has_permissions_relationship(): void
@@ -244,10 +305,14 @@ class RoleTest extends TestCase
         $role = Role::factory()->create();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect(method_exists($role, 'permissions'));
 =======
         $this->assertTrue(method_exists($role, 'permissions'));
 >>>>>>> 8055579 (.)
+=======
+        $this->assertTrue(method_exists($role, 'permissions'));
+>>>>>>> 8d82f8c (.)
     }
 
     public function test_role_has_team_relationship(): void
@@ -255,10 +320,14 @@ class RoleTest extends TestCase
         $role = Role::factory()->create();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect(method_exists($role, 'team'));
 =======
         $this->assertTrue(method_exists($role, 'team'));
 >>>>>>> 8055579 (.)
+=======
+        $this->assertTrue(method_exists($role, 'team'));
+>>>>>>> 8d82f8c (.)
     }
 
     public function test_role_has_users_relationship(): void
@@ -266,10 +335,14 @@ class RoleTest extends TestCase
         $role = Role::factory()->create();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect(method_exists($role, 'users'));
 =======
         $this->assertTrue(method_exists($role, 'users'));
 >>>>>>> 8055579 (.)
+=======
+        $this->assertTrue(method_exists($role, 'users'));
+>>>>>>> 8d82f8c (.)
     }
 
     public function test_role_can_use_permission_scopes(): void
@@ -277,18 +350,24 @@ class RoleTest extends TestCase
         $role = Role::factory()->create();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect(method_exists($role, 'permission'));
         expect(method_exists($role, 'withoutPermission'));
 =======
         $this->assertTrue(method_exists($role, 'permission'));
         $this->assertTrue(method_exists($role, 'withoutPermission'));
 >>>>>>> 8055579 (.)
+=======
+        $this->assertTrue(method_exists($role, 'permission'));
+        $this->assertTrue(method_exists($role, 'withoutPermission'));
+>>>>>>> 8d82f8c (.)
     }
 
     public function test_role_can_use_role_scopes(): void
     {
         $role = Role::factory()->create();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         expect(method_exists($role, 'role'));
         expect(method_exists($role, 'withoutRole'));
@@ -334,3 +413,13 @@ class RoleTest extends TestCase
 =======
 
 >>>>>>> 7113f04 (.)
+=======
+        $this->assertTrue(method_exists($role, 'role'));
+        $this->assertTrue(method_exists($role, 'withoutRole'));
+    }
+}
+
+
+
+
+>>>>>>> 8d82f8c (.)

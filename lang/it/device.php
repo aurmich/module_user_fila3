@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 return [
     'fields' => [
         'uuid' => [
@@ -77,6 +78,8 @@ return [
     ],
 ];
 =======
+=======
+>>>>>>> 8d82f8c (.)
 return array (
   'fields' => 
   array (
@@ -167,4 +170,7 @@ return array (
     'icon' => 'heroicon-o-device-phone-mobile',
   ),
 );
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)

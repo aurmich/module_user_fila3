@@ -105,10 +105,14 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
     /**
      * Ottiene l'URL dell'avatar dell'utente.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> 8055579 (.)
+=======
+     * 
+>>>>>>> 8d82f8c (.)
      * @return string L'URL dell'avatar
      */
     public function getAvatarUrl(): string
@@ -125,10 +129,14 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         // 'myemailaddress@example.com'
         $hash = hash('sha256', $email);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $avatar = 'https://gravatar.com/avatar/'.$hash.'?s=64';
 =======
         $avatar = 'https://gravatar.com/avatar/' . $hash . '?s=64';
 >>>>>>> 8055579 (.)
+=======
+        $avatar = 'https://gravatar.com/avatar/' . $hash . '?s=64';
+>>>>>>> 8d82f8c (.)
 
         return $avatar;
 
@@ -146,10 +154,14 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
     /**
      * Ottiene la lingua dell'utente.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> 8055579 (.)
+=======
+     * 
+>>>>>>> 8d82f8c (.)
      * @return string Il codice della lingua
      */
     public function getUserLang(): string
@@ -158,20 +170,28 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         $defaultLocale = 'it';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($locale === null || ! is_string($locale)) {
 =======
         if ($locale === null || !is_string($locale)) {
 >>>>>>> 8055579 (.)
+=======
+        if ($locale === null || !is_string($locale)) {
+>>>>>>> 8d82f8c (.)
             $locale = $defaultLocale;
         }
 
         $userLang = $this->lang;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($userLang === null || ! is_string($userLang)) {
 =======
         if ($userLang === null || !is_string($userLang)) {
 >>>>>>> 8055579 (.)
+=======
+        if ($userLang === null || !is_string($userLang)) {
+>>>>>>> 8d82f8c (.)
             return $locale;
         }
 

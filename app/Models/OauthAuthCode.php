@@ -12,6 +12,7 @@ use Laravel\Passport\AuthCode as PassportAuthCode;
  *
  * @property OauthClient|null $client
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode newQuery()
@@ -22,6 +23,11 @@ use Laravel\Passport\AuthCode as PassportAuthCode;
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode query()
 >>>>>>> 8055579 (.)
+=======
+ * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode query()
+>>>>>>> 8d82f8c (.)
  * @property string $id
  * @property string|null $user_id
  * @property string|null $client_id
@@ -29,9 +35,12 @@ use Laravel\Passport\AuthCode as PassportAuthCode;
  * @property bool $revoked
  * @property Carbon|null $expires_at
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode whereClientId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode whereExpiresAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode whereId($value)
@@ -39,9 +48,12 @@ use Laravel\Passport\AuthCode as PassportAuthCode;
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode whereScopes($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAuthCode whereUserId($value)
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @mixin IdeHelperOauthAuthCode
  * @mixin \Eloquent
  */

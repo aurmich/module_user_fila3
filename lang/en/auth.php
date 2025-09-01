@@ -33,10 +33,14 @@ return [
         'unauthorized' => 'You are not authorized to access this resource.',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     // Password Reset Widget - specific translations
     'password_reset' => [
         'email_placeholder' => 'Enter your email address',

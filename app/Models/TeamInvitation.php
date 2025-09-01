@@ -22,9 +22,12 @@ use Modules\Xot\Datas\XotData;
  * @property Team|null $team
  * @property TeamContract|null $team
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @method static TeamInvitationFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|TeamInvitation newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|TeamInvitation newQuery()
@@ -36,23 +39,30 @@ use Modules\Xot\Datas\XotData;
  * @method static \Illuminate\Database\Eloquent\Builder|TeamInvitation whereTeamId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamInvitation whereUpdatedAt($value)
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @property string $uuid
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamInvitation whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamInvitation whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamInvitation whereDeletedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamInvitation whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamInvitation whereUuid($value)
+<<<<<<< HEAD
 <<<<<<< HEAD
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
@@ -62,6 +72,10 @@ use Modules\Xot\Datas\XotData;
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
 >>>>>>> 8055579 (.)
+=======
+ * @property \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+>>>>>>> 8d82f8c (.)
  * @mixin IdeHelperTeamInvitation
  * @mixin \Eloquent
  */

@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
 use Modules\User\Enums\UserType;
 use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
@@ -13,15 +14,25 @@ use Modules\User\Models\User;
 use Modules\User\Enums\UserType;
 use Illuminate\Database\Eloquent\Model;
 >>>>>>> 8055579 (.)
+=======
+use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
+use Modules\User\Models\User;
+use Modules\User\Enums\UserType;
+use Illuminate\Database\Eloquent\Model;
+>>>>>>> 8d82f8c (.)
 
 uses(Tests\TestCase::class);
 
 beforeEach(function (): void {
 <<<<<<< HEAD
+<<<<<<< HEAD
     $this->widget = new UserOverview;
 =======
     $this->widget = new UserOverview();
 >>>>>>> 8055579 (.)
+=======
+    $this->widget = new UserOverview();
+>>>>>>> 8d82f8c (.)
     $this->user = User::factory()->create([
         'type' => UserType::MasterAdmin,
         'email' => 'admin@example.com',
@@ -37,10 +48,14 @@ test('user overview widget has correct view', function (): void {
     $viewProperty = $reflection->getProperty('view');
     $viewProperty->setAccessible(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     expect($viewProperty->getValue($this->widget))->toBe('user::filament.resources.user-resource.widgets.user-overview');
 });
 
@@ -52,10 +67,14 @@ test('user overview widget has record property', function (): void {
 test('user overview widget can set record', function (): void {
     $this->widget->record = $this->user;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     expect($this->widget->record)->toBe($this->user);
     expect($this->widget->record)->toBeInstanceOf(Model::class);
 });
@@ -64,10 +83,14 @@ test('user overview widget record property is nullable', function (): void {
     $reflection = new ReflectionClass(UserOverview::class);
     $recordProperty = $reflection->getProperty('record');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     expect($recordProperty->getType()->allowsNull())->toBeTrue();
 });
 
@@ -84,10 +107,14 @@ test('user overview widget has correct static properties', function (): void {
     $viewProperty = $reflection->getProperty('view');
     $viewProperty->setAccessible(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     expect($viewProperty->isStatic())->toBeTrue();
 });
 
@@ -96,10 +123,14 @@ test('user overview widget view path is correct', function (): void {
     $viewProperty = $reflection->getProperty('view');
     $viewProperty->setAccessible(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     $viewPath = $viewProperty->getValue($this->widget);
     expect($viewPath)->toContain('user::');
     expect($viewPath)->toContain('widgets.user-overview');

@@ -6,6 +6,7 @@ namespace Modules\User\Contracts;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -14,6 +15,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Collection;
 >>>>>>> 8055579 (.)
+=======
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Collection;
+>>>>>>> 8d82f8c (.)
 
 interface UserContract extends Authenticatable
 {
@@ -87,10 +93,14 @@ interface UserContract extends Authenticatable
      * Determine if the user has the given role.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  string|array|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection  $roles
 =======
      * @param string|array|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection $roles
 >>>>>>> 8055579 (.)
+=======
+     * @param string|array|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection $roles
+>>>>>>> 8d82f8c (.)
      */
     public function hasRole($roles, ?string $guard = null): bool;
 

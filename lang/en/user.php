@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 declare(strict_types=1);
 
@@ -268,6 +269,10 @@ return [
 =======
 declare(strict_types=1);
 
+=======
+declare(strict_types=1);
+
+>>>>>>> 8d82f8c (.)
 return array (
   'actions' => 
   array (
@@ -589,4 +594,7 @@ return array (
     'label' => 'Utente',
   ),
 );
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)

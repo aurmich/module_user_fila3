@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 return [
     'navigation' => [
         'name' => 'Password',
@@ -81,6 +82,8 @@ return [
     ],
 ];
 =======
+=======
+>>>>>>> 8d82f8c (.)
 return array (
   'navigation' => 
   array (
@@ -184,4 +187,7 @@ return array (
     ),
   ),
 );
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)

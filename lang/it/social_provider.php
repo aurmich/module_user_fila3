@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 return [
     'resources' => 'Risorse',
     'pages' => 'Pagine',
@@ -55,6 +56,8 @@ return [
     ],
 ];
 =======
+=======
+>>>>>>> 8d82f8c (.)
 return array (
   'resources' => 'Risorse',
   'pages' => 'Pagine',
@@ -121,4 +124,7 @@ return array (
     ),
   ),
 );
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)

@@ -11,6 +11,7 @@ use Modules\User\Models\User;
 /**
  * OauthClient Factory
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * Factory for creating OauthClient model instances for testing and seeding.
  *
@@ -19,6 +20,11 @@ use Modules\User\Models\User;
  * Factory for creating OauthClient model instances for testing and seeding.
  * 
 >>>>>>> 8055579 (.)
+=======
+ * 
+ * Factory for creating OauthClient model instances for testing and seeding.
+ * 
+>>>>>>> 8d82f8c (.)
  * @extends Factory<OauthClient>
  */
 class OauthClientFactory extends Factory
@@ -26,10 +32,14 @@ class OauthClientFactory extends Factory
     /**
      * The name of the factory's corresponding model.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> 8055579 (.)
+=======
+     * 
+>>>>>>> 8d82f8c (.)
      * @var class-string<OauthClient>
      */
     protected $model = OauthClient::class;
@@ -45,10 +55,14 @@ class OauthClientFactory extends Factory
             'id' => $this->faker->uuid(),
             'user_id' => $this->faker->optional()->randomElement([User::factory(), null]),
 <<<<<<< HEAD
+<<<<<<< HEAD
             'name' => $this->faker->company().' App',
 =======
             'name' => $this->faker->company() . ' App',
 >>>>>>> 8055579 (.)
+=======
+            'name' => $this->faker->company() . ' App',
+>>>>>>> 8d82f8c (.)
             'secret' => $this->faker->sha256(),
             'provider' => $this->faker->optional()->randomElement(['users', 'admins']),
             'redirect' => $this->faker->url(),
@@ -60,6 +74,7 @@ class OauthClientFactory extends Factory
                 'client_credentials',
                 'password',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'refresh_token',
             ], $this->faker->numberBetween(1, 3)),
             'scopes' => $this->faker->optional()->randomElements([
@@ -70,6 +85,12 @@ class OauthClientFactory extends Factory
             'scopes' => $this->faker->optional()->randomElements([
                 'read', 'write', 'admin', 'user'
 >>>>>>> 8055579 (.)
+=======
+                'refresh_token'
+            ], $this->faker->numberBetween(1, 3)),
+            'scopes' => $this->faker->optional()->randomElements([
+                'read', 'write', 'admin', 'user'
+>>>>>>> 8d82f8c (.)
             ], $this->faker->numberBetween(1, 3)),
         ];
     }
@@ -77,10 +98,15 @@ class OauthClientFactory extends Factory
     /**
      * Create a personal access client.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function personalAccess(): static
     {
@@ -94,10 +120,15 @@ class OauthClientFactory extends Factory
     /**
      * Create a password client.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function password(): static
     {
@@ -111,10 +142,15 @@ class OauthClientFactory extends Factory
     /**
      * Create a revoked client.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function revoked(): static
     {
@@ -126,10 +162,15 @@ class OauthClientFactory extends Factory
     /**
      * Create an active client.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function active(): static
     {
@@ -141,11 +182,17 @@ class OauthClientFactory extends Factory
     /**
      * Create client for a specific user.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @param User $user
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @param User $user
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function forUser(User $user): static
     {
@@ -157,11 +204,17 @@ class OauthClientFactory extends Factory
     /**
      * Create client with specific redirect URI.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @param string $redirectUri
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @param string $redirectUri
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function withRedirectUri(string $redirectUri): static
     {
@@ -174,11 +227,16 @@ class OauthClientFactory extends Factory
      * Create client with specific scopes.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<string>  $scopes
 =======
      * @param array<string> $scopes
      * @return static
 >>>>>>> 8055579 (.)
+=======
+     * @param array<string> $scopes
+     * @return static
+>>>>>>> 8d82f8c (.)
      */
     public function withScopes(array $scopes): static
     {
@@ -187,7 +245,11 @@ class OauthClientFactory extends Factory
         ]);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> 8055579 (.)
+=======
+}
+>>>>>>> 8d82f8c (.)

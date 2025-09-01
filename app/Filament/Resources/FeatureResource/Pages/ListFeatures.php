@@ -5,12 +5,18 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Resources\FeatureResource\Pages;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8d82f8c (.)
 use Filament\Actions\CreateAction;
 use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Actions\ViewAction;
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Modules\User\Filament\Resources\FeatureResource;
@@ -40,8 +46,13 @@ class ListFeatures extends XotBaseListRecords
         ];
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
    
 >>>>>>> 8055579 (.)
+=======
+
+   
+>>>>>>> 8d82f8c (.)
 }

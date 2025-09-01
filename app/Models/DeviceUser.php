@@ -17,6 +17,7 @@ use Modules\Xot\Datas\XotData;
  *
  * @property Device|null $device
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser newQuery()
@@ -27,6 +28,11 @@ use Modules\Xot\Datas\XotData;
  * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser query()
 >>>>>>> 8055579 (.)
+=======
+ * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser query()
+>>>>>>> 8d82f8c (.)
  * @property string $id
  * @property string $device_id
  * @property string $user_id
@@ -39,9 +45,12 @@ use Modules\Xot\Datas\XotData;
  * @property string|null $updated_by
  * @property string|null $created_by
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser whereDeviceId($value)
@@ -54,17 +63,23 @@ use Modules\Xot\Datas\XotData;
  * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeviceUser whereUserId($value)
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @property ProfileContract|null $profile
  * @property UserContract|null $user
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @mixin IdeHelperDeviceUser
  * @mixin \Eloquent
  */
@@ -72,9 +87,12 @@ class DeviceUser extends BasePivot
 {
     use HasFactory;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
     /** @var list<string> */
     protected $fillable = [
         'id',

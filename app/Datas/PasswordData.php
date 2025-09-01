@@ -11,11 +11,17 @@ namespace Modules\User\Datas;
 use Filament\Forms\Components\Component;
 use Filament\Forms\Components\TextInput;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Forms\Components\TextInput as FormsTextInput;
+=======
+>>>>>>> 8d82f8c (.)
 use Filament\Forms\Get;
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\HtmlString;
 use Illuminate\Validation\Rules\Password;
 use Modules\Tenant\Services\TenantService;
 use Spatie\LaravelData\Data;
+<<<<<<< HEAD
 =======
 use Filament\Forms\Get;
 use Illuminate\Support\Facades\Blade;
@@ -26,6 +32,10 @@ use Spatie\LaravelData\Data;
 use Filament\Forms\Components\TextInput as FilamentTextInput;
 use Filament\Forms\Components\TextInput as FormsTextInput;
 >>>>>>> 8055579 (.)
+=======
+use Filament\Forms\Components\TextInput as FilamentTextInput;
+use Filament\Forms\Components\TextInput as FormsTextInput;
+>>>>>>> 8d82f8c (.)
 
 /**
  * Classe per la gestione dei dati relativi alle password.
@@ -46,21 +56,31 @@ class PasswordData extends Data
         public ?string $failMessage = null,
         private ?string $field_name = null,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ) {}
 =======
     ) {
     }
 >>>>>>> 8055579 (.)
+=======
+    ) {
+    }
+>>>>>>> 8d82f8c (.)
 
     private static ?self $instance = null;
 
     /**
      * Crea un'istanza della classe PasswordData.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return self
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @return self
+>>>>>>> 8d82f8c (.)
      */
     public static function make(): self
     {
@@ -149,9 +169,12 @@ class PasswordData extends Data
     {
         $this->field_name = $field_name;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
         return $this;
     }
 
@@ -200,10 +223,14 @@ class PasswordData extends Data
 
         $this->setFieldName($field_name);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> 8055579 (.)
+=======
+        
+>>>>>>> 8d82f8c (.)
         return [
             $this->getPasswordFormComponent($field_name),
             $this->getPasswordConfirmationFormComponent(),

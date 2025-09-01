@@ -12,6 +12,7 @@ use Illuminate\Support\Carbon;
  *
  * @property string $role
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @method static \Illuminate\Database\Eloquent\Builder|Membership newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Membership newQuery()
@@ -22,6 +23,11 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|Membership newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Membership query()
 >>>>>>> 8055579 (.)
+=======
+ * @method static \Illuminate\Database\Eloquent\Builder|Membership newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Membership newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Membership query()
+>>>>>>> 8d82f8c (.)
  * @property int $id
  * @property string $uuid
  * @property string|null $team_id
@@ -32,9 +38,12 @@ use Illuminate\Support\Carbon;
  * @property string|null $updated_by
  * @property string|null $customer_id
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @method static \Illuminate\Database\Eloquent\Builder|Membership whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Membership whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Membership whereCustomerId($value)
@@ -46,15 +55,17 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|Membership whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Membership whereUuid($value)
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 8d82f8c (.)
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
- *
  * @method static \Illuminate\Database\Eloquent\Builder|Membership whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Membership whereDeletedBy($value)
- *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+<<<<<<< HEAD
  *
 =======
  * @property Carbon|null $deleted_at
@@ -64,6 +75,8 @@ use Illuminate\Support\Carbon;
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @mixin IdeHelperMembership
  * @mixin \Eloquent
  */
@@ -71,9 +84,12 @@ class Membership extends BasePivot
 {
     use HasFactory;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
     /** @var bool */
     public $incrementing = true;
 

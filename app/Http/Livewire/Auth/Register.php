@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Http\Livewire\Auth;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Forms\ComponentContainer;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
@@ -16,13 +17,20 @@ use Modules\Xot\Datas\XotData;
 =======
 use Livewire\Component;
 use Modules\Xot\Datas\XotData;
+=======
+use Livewire\Component;
+use Modules\Xot\Datas\XotData;
+>>>>>>> 8d82f8c (.)
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\RedirectResponse;
 use Filament\Forms\ComponentContainer;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Validation\Rules\Password as PasswordRule;
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
 
 /**
  * @property ComponentContainer $form
@@ -40,10 +48,15 @@ class Register extends Component
     /**
      * Execute the action.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return RedirectResponse|\Livewire\Features\SupportRedirects\Redirector
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @return RedirectResponse|\Livewire\Features\SupportRedirects\Redirector
+>>>>>>> 8d82f8c (.)
      */
     public function register(): RedirectResponse|\Livewire\Features\SupportRedirects\Redirector
     {
@@ -75,10 +88,15 @@ class Register extends Component
      * In Livewire components, the render method ultimately returns a view,
      * but it's processed through Livewire's component system.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return mixed
 >>>>>>> 8055579 (.)
+=======
+     *
+     * @return mixed
+>>>>>>> 8d82f8c (.)
      */
     public function render(): mixed
     {
@@ -87,10 +105,14 @@ class Register extends Component
         app(\Modules\Xot\Actions\File\ViewCopyAction::class)->execute('user::layouts.auth', 'pub_theme::layouts.auth');
         app(\Modules\Xot\Actions\File\ViewCopyAction::class)->execute('user::layouts.base', 'pub_theme::layouts.base');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> 8055579 (.)
+=======
+        
+>>>>>>> 8d82f8c (.)
         /**
          * @phpstan-var view-string
          */

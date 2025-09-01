@@ -5,15 +5,23 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Resources\TeamResource\Pages;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Infolists\Components\Section;
+=======
+>>>>>>> 8d82f8c (.)
 use Filament\Infolists\Components\TextEntry;
+use Filament\Infolists\Components\Section;
 use Modules\User\Filament\Resources\TeamResource;
+<<<<<<< HEAD
 =======
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Components\Section;
 use Modules\User\Filament\Resources\TeamResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 >>>>>>> 8055579 (.)
+=======
+use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+>>>>>>> 8d82f8c (.)
 
 class ViewTeam extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
 {
@@ -35,6 +43,7 @@ class ViewTeam extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
                     TextEntry::make('created_at'),
                     TextEntry::make('updated_at'),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ]),
         ];
     }
@@ -45,4 +54,11 @@ class ViewTeam extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
 
    
 >>>>>>> 8055579 (.)
+=======
+                ])
+        ];
+    }
+
+   
+>>>>>>> 8d82f8c (.)
 }

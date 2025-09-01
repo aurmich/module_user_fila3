@@ -6,16 +6,23 @@ namespace Modules\User\Filament\Resources\RoleResource\Pages;
 
 use Filament\Forms;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Filament\Forms\Form;
 >>>>>>> 8055579 (.)
+=======
+use Filament\Forms\Form;
+>>>>>>> 8d82f8c (.)
 use Filament\Resources\Pages\ManageRelatedRecords;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Modules\User\Filament\Resources\RoleResource;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8d82f8c (.)
 
 
 
@@ -25,7 +32,10 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
 class ManageRolePermissions extends ManageRelatedRecords
 {
     protected static string $resource = RoleResource::class;
@@ -41,14 +51,16 @@ class ManageRolePermissions extends ManageRelatedRecords
 
     public function getFormSchema(): array
 <<<<<<< HEAD
+<<<<<<< HEAD
     {
+=======
+{
+>>>>>>> 8d82f8c (.)
 
-        return [
 
-            Forms\Components\TextInput::make('name')
-                ->required()
-                ->maxLength(255),
+    return [
 
+<<<<<<< HEAD
         ];
     }
 =======
@@ -57,13 +69,18 @@ class ManageRolePermissions extends ManageRelatedRecords
 
     return [
 
+=======
+>>>>>>> 8d82f8c (.)
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
 
       ];
 }
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
 
     public function table(Table $table): Table
     {

@@ -7,9 +7,13 @@ namespace Modules\User\Filament\Resources\PermissionResource\Pages;
 use Filament\Infolists\Components\TextEntry;
 use Modules\User\Filament\Resources\PermissionResource;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 >>>>>>> 8055579 (.)
+=======
+use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+>>>>>>> 8d82f8c (.)
 
 class ViewPermission extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
 {

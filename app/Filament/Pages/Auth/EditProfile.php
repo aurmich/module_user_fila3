@@ -17,6 +17,7 @@ class EditProfile extends BaseEditProfile
      */
     public function getFormSchema(): array
 <<<<<<< HEAD
+<<<<<<< HEAD
     {
 
         return [
@@ -28,6 +29,8 @@ class EditProfile extends BaseEditProfile
         ];
     }
 =======
+=======
+>>>>>>> 8d82f8c (.)
 {
     
         
@@ -39,5 +42,8 @@ class EditProfile extends BaseEditProfile
             
       ];
 }
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
 }

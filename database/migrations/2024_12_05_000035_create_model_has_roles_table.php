@@ -4,12 +4,18 @@ declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
 <<<<<<< HEAD
+<<<<<<< HEAD
 // ---- models ---
 =======
 use Illuminate\Support\Facades\Schema;
 // ---- models ---
 use Modules\User\Models\Role;
 >>>>>>> 8055579 (.)
+=======
+use Illuminate\Support\Facades\Schema;
+// ---- models ---
+use Modules\User\Models\Role;
+>>>>>>> 8d82f8c (.)
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 use Modules\Xot\Datas\XotData;
 

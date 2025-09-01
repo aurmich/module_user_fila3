@@ -31,11 +31,16 @@ class LogoutController extends XotBaseController
     {
         Assert::notNull($user = $request->user(), '['.__LINE__.']['.class_basename($this).']');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 8d82f8c (.)
         // Verificare che l'utente implementi l'interfaccia UserContract
-        if (! ($user instanceof \Modules\Xot\Contracts\UserContract)) {
+        if (!($user instanceof \Modules\Xot\Contracts\UserContract)) {
             throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia UserContract');
         }
+<<<<<<< HEAD
 
 =======
         
@@ -45,6 +50,9 @@ class LogoutController extends XotBaseController
         }
         
 >>>>>>> 8055579 (.)
+=======
+        
+>>>>>>> 8d82f8c (.)
         app(LogoutUserAction::class)->execute($user);
 
         // TODO: Implement token cleanup logic here

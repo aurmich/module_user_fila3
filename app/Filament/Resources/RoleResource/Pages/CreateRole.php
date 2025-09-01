@@ -9,7 +9,10 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Modules\User\Filament\Resources\RoleResource;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8d82f8c (.)
 use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 
 
@@ -20,7 +23,10 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
 
 class CreateRole extends \Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord
 {

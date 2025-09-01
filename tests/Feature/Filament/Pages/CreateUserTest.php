@@ -3,25 +3,37 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\User\Enums\UserType;
 use Modules\User\Filament\Resources\UserResource;
+=======
+>>>>>>> 8d82f8c (.)
 use Modules\User\Filament\Resources\UserResource\Pages\CreateUser;
+use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Models\User;
+<<<<<<< HEAD
 =======
 use Modules\User\Filament\Resources\UserResource\Pages\CreateUser;
 use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Models\User;
 use Modules\User\Enums\UserType;
 >>>>>>> 8055579 (.)
+=======
+use Modules\User\Enums\UserType;
+>>>>>>> 8d82f8c (.)
 
 uses(Tests\TestCase::class);
 
 beforeEach(function (): void {
 <<<<<<< HEAD
+<<<<<<< HEAD
     $this->createUserPage = new CreateUser;
 =======
     $this->createUserPage = new CreateUser();
 >>>>>>> 8055579 (.)
+=======
+    $this->createUserPage = new CreateUser();
+>>>>>>> 8d82f8c (.)
 });
 
 test('create user page has correct resource', function (): void {
@@ -39,10 +51,14 @@ test('create user page can be instantiated', function (): void {
 test('create user page has correct navigation label', function (): void {
     $label = $this->createUserPage->getNavigationLabel();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     // The label should be defined or fall back to default
     expect($label)->not->toBeNull();
 });
@@ -50,10 +66,14 @@ test('create user page has correct navigation label', function (): void {
 test('create user page has correct title', function (): void {
     $title = $this->createUserPage->getTitle();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     // The title should be defined or fall back to default
     expect($title)->not->toBeNull();
 });
@@ -63,10 +83,14 @@ test('create user page has correct breadcrumbs structure', function (): void {
     // Instead, test that the method exists and returns the expected type
     expect(method_exists($this->createUserPage, 'getBreadcrumbs'))->toBeTrue();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     try {
         $breadcrumbs = $this->createUserPage->getBreadcrumbs();
         expect($breadcrumbs)->toBeArray();
@@ -92,10 +116,14 @@ test('create user page can create user with valid data', function (): void {
         'type' => UserType::MasterAdmin,
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     // Test that the data structure is correct for user creation
     expect($userData['name'])->toBe('Test User');
     expect($userData['email'])->toBe('test@example.com');
@@ -112,20 +140,28 @@ test('create user page handles form submission structure', function (): void {
         'type' => UserType::BoUser,
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     // Test form data structure
     expect($formData)->toHaveKey('name');
     expect($formData)->toHaveKey('email');
     expect($formData)->toHaveKey('password');
     expect($formData)->toHaveKey('type');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 8055579 (.)
+=======
+    
+>>>>>>> 8d82f8c (.)
     expect($formData['name'])->toBe('New User');
     expect($formData['email'])->toBe('newuser@example.com');
     expect($formData['password'])->toBe('newpassword123');
@@ -143,7 +179,11 @@ test('create user page follows filament conventions', function (): void {
     expect($this->createUserPage->getResource())->toBe(UserResource::class);
     expect($this->createUserPage->getModel())->toBe(User::class);
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 =======
 });
 >>>>>>> 8055579 (.)
+=======
+});
+>>>>>>> 8d82f8c (.)

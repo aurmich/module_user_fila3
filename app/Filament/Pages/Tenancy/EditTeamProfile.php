@@ -6,9 +6,13 @@ namespace Modules\User\Filament\Pages\Tenancy;
 
 use Filament\Forms\Components\TextInput;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Filament\Forms\Form;
 >>>>>>> 8055579 (.)
+=======
+use Filament\Forms\Form;
+>>>>>>> 8d82f8c (.)
 use Filament\Pages\Tenancy\EditTenantProfile;
 
 class EditTeamProfile extends EditTenantProfile
@@ -20,6 +24,7 @@ class EditTeamProfile extends EditTenantProfile
 
     public function getFormSchema(): array
 <<<<<<< HEAD
+<<<<<<< HEAD
     {
 
         return [
@@ -30,6 +35,8 @@ class EditTeamProfile extends EditTenantProfile
         ];
     }
 =======
+=======
+>>>>>>> 8d82f8c (.)
 {
     
         
@@ -40,5 +47,8 @@ class EditTeamProfile extends EditTenantProfile
                 
       ];
 }
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
 }

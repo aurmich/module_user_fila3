@@ -16,7 +16,10 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 use Modules\Xot\Filament\Traits\HasXotTable;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8d82f8c (.)
 
 
 
@@ -25,7 +28,10 @@ use Modules\Xot\Filament\Traits\HasXotTable;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
 /**
  * Class Modules\User\Filament\Resources\UserResource\RelationManagers\SocialiteUsersRelationManager.
  */
@@ -40,9 +46,13 @@ class SocialiteUsersRelationManager extends XotBaseRelationManager
      */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 8055579 (.)
+=======
+
+>>>>>>> 8d82f8c (.)
     /**
      * Define form fields in a dedicated method for reusability.
      *

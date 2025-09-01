@@ -25,9 +25,12 @@ class PasswordResetWidget extends XotBaseWidget
 {
     public ?array $data = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
     public bool $emailSent = false;
 
     /**
@@ -79,10 +82,14 @@ class PasswordResetWidget extends XotBaseWidget
         ]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($response === Password::RESET_LINK_SENT) {
 =======
         if (Password::RESET_LINK_SENT === $response) {
 >>>>>>> 8055579 (.)
+=======
+        if (Password::RESET_LINK_SENT === $response) {
+>>>>>>> 8d82f8c (.)
             $this->emailSent = true;
 
             Notification::make()

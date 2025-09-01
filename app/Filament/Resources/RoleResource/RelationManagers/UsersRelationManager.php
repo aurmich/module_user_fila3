@@ -11,10 +11,15 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\Filter;
 use Illuminate\Database\Eloquent\Builder;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 =======
 use Modules\UI\Enums\TableLayoutEnum;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+=======
+use Modules\UI\Enums\TableLayoutEnum;
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+>>>>>>> 8d82f8c (.)
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Modules\Xot\Filament\Traits\TransTrait;
 
@@ -25,7 +30,10 @@ use Modules\Xot\Filament\Traits\TransTrait;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
 
 /**
  * UsersRelationManager.
@@ -36,21 +44,31 @@ use Modules\Xot\Filament\Traits\TransTrait;
 final class UsersRelationManager extends XotBaseRelationManager
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 8055579 (.)
+=======
+
+>>>>>>> 8d82f8c (.)
     protected static string $relationship = 'users';
 
     protected static ?string $inverseRelationship = 'roles';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8d82f8c (.)
 
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
     /**
      * Returns the form schema structure, defining the input fields for user data.
      *
@@ -128,12 +146,18 @@ final class UsersRelationManager extends XotBaseRelationManager
         ];
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8d82f8c (.)
 
 
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
 }

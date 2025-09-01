@@ -9,17 +9,23 @@ use Modules\Xot\Models\Extra as XotBaseExtra;
 /**
  * @property \Spatie\SchemalessAttributes\SchemalessAttributes $extra_attributes
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @method static \Illuminate\Database\Eloquent\Builder|Extra newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Extra newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Extra query()
  * @method static \Illuminate\Database\Eloquent\Builder|Extra withExtraAttributes()
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @property int $id
  * @property string $model_type
  * @property string $model_id
@@ -30,9 +36,12 @@ use Modules\Xot\Models\Extra as XotBaseExtra;
  * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property string|null $deleted_by
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @method static \Illuminate\Database\Eloquent\Builder|Extra whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Extra whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Extra whereDeletedAt($value)
@@ -44,17 +53,22 @@ use Modules\Xot\Models\Extra as XotBaseExtra;
  * @method static \Illuminate\Database\Eloquent\Builder|Extra whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Extra whereUpdatedBy($value)
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 8d82f8c (.)
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
- *
  * @method static \Modules\User\Database\Factories\ExtraFactory factory($count = null, $state = [])
+<<<<<<< HEAD
  *
 =======
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  * @method static \Modules\User\Database\Factories\ExtraFactory factory($count = null, $state = [])
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @mixin IdeHelperExtra
  * @mixin \Eloquent
  */

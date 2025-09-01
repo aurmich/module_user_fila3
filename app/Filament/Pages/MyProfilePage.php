@@ -200,10 +200,14 @@ class MyProfilePage extends Page implements HasForms
             request()->session()->put([
                 'password_hash_'.Filament::getAuthGuard() => $data['password'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
 >>>>>>> 8055579 (.)
+=======
+            
+>>>>>>> 8d82f8c (.)
             ]);
         }
 

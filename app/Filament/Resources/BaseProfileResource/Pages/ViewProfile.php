@@ -5,9 +5,15 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Resources\BaseProfileResource\Pages;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use Filament\Actions\DeleteAction;
+>>>>>>> 8d82f8c (.)
 use Filament\Infolists\Components;
 use Filament\Infolists\Components\TextEntry;
+use Filament\Infolists\Infolist;
 use Modules\User\Filament\Resources\BaseProfileResource;
+<<<<<<< HEAD
 =======
 use Filament\Actions\DeleteAction;
 use Filament\Infolists\Components;
@@ -17,15 +23,23 @@ use Modules\User\Filament\Resources\BaseProfileResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 >>>>>>> 8055579 (.)
+=======
+use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+>>>>>>> 8d82f8c (.)
 
 class ViewProfile extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
 {
     protected static string $resource = BaseProfileResource::class;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 8055579 (.)
+=======
+
+>>>>>>> 8d82f8c (.)
     /**
      * @return array<string, \Filament\Infolists\Components\Component>
      */

@@ -25,11 +25,16 @@ class LoginController extends XotBaseController
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             Assert::notNull($user = Auth::user(), '['.__LINE__.']['.class_basename($this).']');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 8d82f8c (.)
             // Verificare che l'utente implementi l'interfaccia PassportHasApiTokensContract
-            if (! ($user instanceof PassportHasApiTokensContract)) {
+            if (!($user instanceof PassportHasApiTokensContract)) {
                 return $this->sendError('User model must implement PassportHasApiTokensContract interface', ['error' => 'Configuration Error']);
             }
+<<<<<<< HEAD
 
 =======
             
@@ -39,6 +44,9 @@ class LoginController extends XotBaseController
             }
             
 >>>>>>> 8055579 (.)
+=======
+            
+>>>>>>> 8d82f8c (.)
             $success = [];
             $success['token'] = $user->createToken('MyApp')->accessToken;
             $success['name'] = $user->name;

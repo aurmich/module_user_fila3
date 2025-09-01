@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 declare(strict_types=1);
 
@@ -72,6 +73,10 @@ return [
 =======
 declare(strict_types=1);
 
+=======
+declare(strict_types=1);
+
+>>>>>>> 8d82f8c (.)
 return array (
   'fields' => 
   array (
@@ -150,4 +155,7 @@ return array (
     'unauthorized' => 'You do not have the necessary permissions for this operation.',
   ),
 );
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)

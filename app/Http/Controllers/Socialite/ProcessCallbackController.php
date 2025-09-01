@@ -11,9 +11,12 @@ namespace Modules\User\Http\Controllers\Socialite;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Controller;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
 use Illuminate\Support\Facades\Request;
 use Modules\User\Actions\Socialite\IsProviderConfiguredAction;
 use Modules\User\Actions\Socialite\IsRegistrationEnabledAction;
@@ -31,9 +34,13 @@ use Modules\User\Events\UserNotAllowed;
 use Modules\User\Exceptions\ProviderNotConfigured;
 use Modules\Xot\Datas\XotData;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Illuminate\Support\Facades\Auth;
 >>>>>>> 8055579 (.)
+=======
+use Illuminate\Support\Facades\Auth;
+>>>>>>> 8d82f8c (.)
 
 class ProcessCallbackController extends Controller
 {
@@ -66,10 +73,14 @@ class ProcessCallbackController extends Controller
         if ($socialiteUser) {
             $socialiteUserObj = $socialiteUser->user;
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($socialiteUserObj === null || ! $socialiteUserObj->canAccessSocialite()) {
 =======
             if ($socialiteUserObj === null || !$socialiteUserObj->canAccessSocialite()) {
 >>>>>>> 8055579 (.)
+=======
+            if ($socialiteUserObj === null || !$socialiteUserObj->canAccessSocialite()) {
+>>>>>>> 8d82f8c (.)
                 return app(RedirectToLoginAction::class)->execute('auth.user-not-allowed');
             }
             // Associate default roles to the existing "real" user, if needed
@@ -105,10 +116,14 @@ class ProcessCallbackController extends Controller
 
         $socialiteUserObj = $socialiteUser->user;
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($socialiteUserObj === null || ! $socialiteUserObj->canAccessSocialite()) {
 =======
         if ($socialiteUserObj === null || !$socialiteUserObj->canAccessSocialite()) {
 >>>>>>> 8055579 (.)
+=======
+        if ($socialiteUserObj === null || !$socialiteUserObj->canAccessSocialite()) {
+>>>>>>> 8d82f8c (.)
             return app(RedirectToLoginAction::class)->execute('auth.user-not-allowed');
         }
 
@@ -116,10 +131,14 @@ class ProcessCallbackController extends Controller
         /** @var \Modules\Xot\Contracts\UserContract|null $authUser */
         $authUser = Auth::user();
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($authUser !== null && method_exists($authUser, 'canAccessSocialite') && ! $authUser->canAccessSocialite()) {
 =======
         if ($authUser !== null && method_exists($authUser, 'canAccessSocialite') && !$authUser->canAccessSocialite()) {
 >>>>>>> 8055579 (.)
+=======
+        if ($authUser !== null && method_exists($authUser, 'canAccessSocialite') && !$authUser->canAccessSocialite()) {
+>>>>>>> 8d82f8c (.)
             return redirect()->route(
                 optional(Auth::check()) ? 'filament.user.pages.dashboard' : 'filament.user.auth.login'
             );

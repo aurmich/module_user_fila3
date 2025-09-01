@@ -10,9 +10,12 @@ use Illuminate\Notifications\DatabaseNotification as BaseNotification;
 /**
  * @property \Illuminate\Database\Eloquent\Model|\Eloquent $notifiable
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @method static \Illuminate\Notifications\DatabaseNotificationCollection<int, static> all($columns = ['*'])
  * @method static \Illuminate\Notifications\DatabaseNotificationCollection<int, static> get($columns = ['*'])
  * @method static \Illuminate\Database\Eloquent\Builder|Notification newModelQuery()
@@ -25,9 +28,12 @@ use Illuminate\Notifications\DatabaseNotification as BaseNotification;
  * @method static \Illuminate\Notifications\DatabaseNotificationCollection<int, static> all($columns = ['*'])
  * @method static \Illuminate\Notifications\DatabaseNotificationCollection<int, static> get($columns = ['*'])
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
  * @mixin IdeHelperNotification
  * @mixin \Eloquent
  */
@@ -35,9 +41,12 @@ class Notification extends BaseNotification
 {
     use HasFactory;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> 8d82f8c (.)
     /** @var string */
     protected $connection = 'user';
 

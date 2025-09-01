@@ -8,9 +8,13 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\Route;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Modules\Xot\Datas\XotData;
 >>>>>>> 8055579 (.)
+=======
+use Modules\Xot\Datas\XotData;
+>>>>>>> 8d82f8c (.)
 
 Route::namespace('Socialite')
     ->name('socialite.')
@@ -29,7 +33,11 @@ Route::namespace('Socialite')
                 ->name('oauth.callback');
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
     );
 =======
     );
 >>>>>>> 8055579 (.)
+=======
+    );
+>>>>>>> 8d82f8c (.)
