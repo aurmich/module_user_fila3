@@ -29,25 +29,6 @@ class VerifyEmailController extends Controller
         if ($routeHash === null) {
             throw new \InvalidArgumentException('Hash di verifica mancante');
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> 8d82f8c (.)
-        $stringRouteHash = is_string($routeHash) ? $routeHash : '';
-        
-        // Utilizziamo getEmailForVerification() solo se disponibile
-        $userEmail = method_exists($user, 'getEmailForVerification') 
-            ? $user->getEmailForVerification() 
-            : ($user->email ?? '');
-        
-        if (! hash_equals(sha1($userEmail), $stringRouteHash)) {
-            throw new AuthorizationException();
-        }
-<<<<<<< HEAD
-
-=======
         
         $stringRouteHash = is_string($routeHash) ? $routeHash : '';
         
@@ -60,38 +41,18 @@ class VerifyEmailController extends Controller
             throw new AuthorizationException();
         }
         
->>>>>>> 8055579 (.)
-=======
-        
->>>>>>> 8d82f8c (.)
         // Verifichiamo l'email solo se il metodo esiste
         if (method_exists($user, 'hasVerifiedEmail') && $user->hasVerifiedEmail()) {
             return redirect()->intended(Filament::getUrl());
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 8055579 (.)
-=======
-        
->>>>>>> 8d82f8c (.)
         // Contrassegna l'email come verificata solo se il metodo esiste
         if (method_exists($user, 'markEmailAsVerified')) {
             $user->markEmailAsVerified();
         }
 
         // Verificare che l'utente implementi l'interfaccia MustVerifyEmail
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (! ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail)) {
-=======
         if (!($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail)) {
->>>>>>> 8055579 (.)
-=======
-        if (!($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail)) {
->>>>>>> 8d82f8c (.)
             throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia MustVerifyEmail');
         }
 

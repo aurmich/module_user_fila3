@@ -5,33 +5,17 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Resources;
 
 use Filament\Forms\Components\TextInput;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8d82f8c (.)
 use Modules\User\Filament\Resources\TeamResource\Pages\CreateTeam;
 use Modules\User\Filament\Resources\TeamResource\Pages\EditTeam;
 use Modules\User\Filament\Resources\TeamResource\Pages\ListTeams;
 use Modules\User\Filament\Resources\TeamResource\Pages\ViewTeam;
 use Modules\User\Filament\Resources\TeamResource\RelationManagers\UsersRelationManager;
-<<<<<<< HEAD
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class TeamResource extends XotBaseResource
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> 8055579 (.)
-=======
-    
->>>>>>> 8d82f8c (.)
     /**
      * Get the model class name for this resource.
      *
@@ -57,14 +41,6 @@ class TeamResource extends XotBaseResource
                 ->maxLength(255),
         ];
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
    
->>>>>>> 8055579 (.)
-=======
-
-   
->>>>>>> 8d82f8c (.)
 }

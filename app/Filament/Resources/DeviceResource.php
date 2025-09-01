@@ -7,11 +7,6 @@ namespace Modules\User\Filament\Resources;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Modules\User\Models\Device;
-use Modules\Xot\Filament\Resources\XotBaseResource;
-=======
 use Modules\User\Filament\Resources\DeviceResource\Pages\CreateDevice;
 use Modules\User\Filament\Resources\DeviceResource\Pages\EditDevice;
 use Modules\User\Filament\Resources\DeviceResource\Pages\ListDevices;
@@ -19,16 +14,6 @@ use Modules\User\Filament\Resources\DeviceResource\RelationManagers\UsersRelatio
 use Modules\User\Models\Device;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
->>>>>>> 8055579 (.)
-=======
-use Modules\User\Filament\Resources\DeviceResource\Pages\CreateDevice;
-use Modules\User\Filament\Resources\DeviceResource\Pages\EditDevice;
-use Modules\User\Filament\Resources\DeviceResource\Pages\ListDevices;
-use Modules\User\Filament\Resources\DeviceResource\RelationManagers\UsersRelationManager;
-use Modules\User\Models\Device;
-use Modules\Xot\Filament\Resources\XotBaseResource;
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
->>>>>>> 8d82f8c (.)
 
 class DeviceResource extends XotBaseResource
 {
@@ -84,14 +69,6 @@ class DeviceResource extends XotBaseResource
                 ->label(__('user::device.fields.is_phone.label')),
         ];
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 8055579 (.)
-=======
-
-
->>>>>>> 8d82f8c (.)
 }

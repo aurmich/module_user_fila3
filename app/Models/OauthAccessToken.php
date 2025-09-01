@@ -22,13 +22,6 @@ use Laravel\Passport\Token as PassportToken;
  * @property \Illuminate\Support\Carbon|null $expires_at
  * @property OauthClient|null $client
  * @property \Modules\Xot\Contracts\UserContract|null $user
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAccessToken newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAccessToken newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAccessToken query()
@@ -41,49 +34,21 @@ use Laravel\Passport\Token as PassportToken;
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAccessToken whereScopes($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAccessToken whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthAccessToken whereUserId($value)
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
  * @property OauthRefreshToken|null $refreshToken
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property string|null $deleted_at
  * @property string|null $deleted_by
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthAccessToken whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthAccessToken whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthAccessToken whereDeletedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthAccessToken whereUpdatedBy($value)
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
  * @mixin IdeHelperOauthAccessToken
  * @mixin \Eloquent
  */
 class OauthAccessToken extends PassportToken
 {
     use HasFactory;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
     /** @var string */
     protected $connection = 'user';
 

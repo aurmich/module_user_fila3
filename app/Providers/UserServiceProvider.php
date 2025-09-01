@@ -8,27 +8,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Providers;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Illuminate\Auth\Notifications\ResetPassword;
-use Illuminate\Auth\Notifications\VerifyEmail;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Notifications\Messages\MailMessage;
-use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\Gate;
-use Illuminate\Validation\Rules\Password;
-use Laravel\Passport\Passport;
-use Modules\Notify\Emails\SpatieEmail;
-use Modules\User\Datas\PasswordData;
-use Modules\Xot\Contracts\UserContract;
-use Modules\Xot\Providers\XotBaseServiceProvider;
-use SocialiteProviders\Manager\ServiceProvider as SocialiteServiceProvider;
 use Webmozart\Assert\Assert;
-=======
-use Webmozart\Assert\Assert;
-=======
-use Webmozart\Assert\Assert;
->>>>>>> 8d82f8c (.)
 use Laravel\Passport\Passport;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Gate;
@@ -50,25 +30,11 @@ use Modules\Xot\Providers\XotBaseServiceProvider;
 use Illuminate\Notifications\Messages\MailMessage;
 use Modules\User\Models\OauthPersonalAccessClient;
 use SocialiteProviders\Manager\ServiceProvider as SocialiteServiceProvider;
-<<<<<<< HEAD
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
 
 class UserServiceProvider extends XotBaseServiceProvider
 {
     public string $name = 'User';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
     protected string $module_dir = __DIR__;
-
-=======
-    protected string $module_dir = __DIR__;
->>>>>>> 8055579 (.)
-=======
-    protected string $module_dir = __DIR__;
->>>>>>> 8d82f8c (.)
     protected string $module_ns = __NAMESPACE__;
 
     public function boot(): void
@@ -125,15 +91,7 @@ class UserServiceProvider extends XotBaseServiceProvider
                 'token' => $token,
                 'reset_password_url' => url(route('password.reset', ['token' => $token], false)),
             ]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 8055579 (.)
-=======
-            
->>>>>>> 8d82f8c (.)
             // ✅ FIX CRITICO: Imposta il destinatario dell'email con metodo Laravel standard
             if (method_exists($notifiable, 'getEmailForPasswordReset')) {
                 $email->to($notifiable->getEmailForPasswordReset());
@@ -143,20 +101,6 @@ class UserServiceProvider extends XotBaseServiceProvider
                 // Fallback per debug
                 \Illuminate\Support\Facades\Log::error('SpatieEmail: Destinatario email non trovato', [
                     'notifiable_class' => get_class($notifiable),
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    'notifiable_id' => $notifiable->id ?? 'unknown',
-=======
-                    'notifiable_id' => $notifiable->id ?? 'unknown'
->>>>>>> 8d82f8c (.)
-                ]);
-            }
-            
-            return $email;
-        });
-
-<<<<<<< HEAD
-=======
                     'notifiable_id' => $notifiable->id ?? 'unknown'
                 ]);
             }
@@ -165,10 +109,6 @@ class UserServiceProvider extends XotBaseServiceProvider
         });
 
         
->>>>>>> 8055579 (.)
-=======
-        
->>>>>>> 8d82f8c (.)
         /*
         $salutation = __('user::verify_email.salutation', ['app_name' => $app_name]);
         VerifyEmail::toMailUsing(function (object $notifiable, string $url) use ($salutation): MailMessage {
@@ -193,13 +133,6 @@ class UserServiceProvider extends XotBaseServiceProvider
             } elseif (isset($notifiable->email)) {
                 $email->to($notifiable->email);
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
             return $email;
         });
     }
@@ -216,13 +149,6 @@ class UserServiceProvider extends XotBaseServiceProvider
     {
         Password::defaults(function (): Password {
             $pwd = PasswordData::make();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
             return $pwd->getPasswordRule();
         });
     }

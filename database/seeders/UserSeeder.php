@@ -4,23 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Database\Seeders;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-=======
->>>>>>> 8d82f8c (.)
-use Illuminate\Database\Seeder;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Modules\User\Models\Role;
-use Modules\User\Models\Permission;
-use Modules\User\Models\Team;
-use Illuminate\Support\Facades\DB;
-
-/**
- * Seeder per il modulo User.
-<<<<<<< HEAD
- *
-=======
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Modules\User\Models\Role;
@@ -31,10 +14,6 @@ use Illuminate\Support\Facades\DB;
 /**
  * Seeder per il modulo User.
  * 
->>>>>>> 8055579 (.)
-=======
- * 
->>>>>>> 8d82f8c (.)
  * Popola il database con dati di base per:
  * - Ruoli e permessi di sistema
  * - Team di default
@@ -58,15 +37,7 @@ class UserSeeder extends Seeder
         try {
             $this->seedSystemRolesAndPermissions();
             $this->seedSystemTeams();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 8055579 (.)
-=======
-            
->>>>>>> 8d82f8c (.)
             $this->command->info('✅ Seeding User completato con successo!');
         } finally {
             // Riabilita i controlli di foreign key (solo per MySQL)
@@ -92,45 +63,21 @@ class UserSeeder extends Seeder
             'delete users',
             'view users',
             'impersonate users',
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 8055579 (.)
-=======
-            
->>>>>>> 8d82f8c (.)
             // Role management
             'manage roles',
             'create roles',
             'edit roles',
             'delete roles',
             'view roles',
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 8055579 (.)
-=======
-            
->>>>>>> 8d82f8c (.)
             // Permission management
             'manage permissions',
             'create permissions',
             'edit permissions',
             'delete permissions',
             'view permissions',
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 8055579 (.)
-=======
-            
->>>>>>> 8d82f8c (.)
             // Team management
             'manage teams',
             'create teams',
@@ -139,30 +86,14 @@ class UserSeeder extends Seeder
             'view teams',
             'join teams',
             'leave teams',
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 8055579 (.)
-=======
-            
->>>>>>> 8d82f8c (.)
             // System settings
             'manage system settings',
             'view system settings',
             'manage modules',
             'view system logs',
             'manage backups',
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 8055579 (.)
-=======
-            
->>>>>>> 8d82f8c (.)
             // Analytics and reporting
             'view analytics',
             'export data',
@@ -199,15 +130,7 @@ class UserSeeder extends Seeder
 
         // Assegna permessi ai ruoli
         $superAdminRole->givePermissionTo(Permission::all());
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 8055579 (.)
-=======
-        
->>>>>>> 8d82f8c (.)
         $systemAdminRole->givePermissionTo([
             'manage users',
             'create users',
@@ -239,18 +162,8 @@ class UserSeeder extends Seeder
             'leave teams',
         ]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $this->command->info('   ✓ Creati '.count($systemPermissions).' permessi di sistema');
-        $this->command->info('   ✓ Creati 4 ruoli di sistema (super-admin, system-admin, moderator, user)');
-=======
         $this->command->info("   ✓ Creati " . count($systemPermissions) . " permessi di sistema");
         $this->command->info("   ✓ Creati 4 ruoli di sistema (super-admin, system-admin, moderator, user)");
->>>>>>> 8055579 (.)
-=======
-        $this->command->info("   ✓ Creati " . count($systemPermissions) . " permessi di sistema");
-        $this->command->info("   ✓ Creati 4 ruoli di sistema (super-admin, system-admin, moderator, user)");
->>>>>>> 8d82f8c (.)
     }
 
     /**
@@ -295,20 +208,7 @@ class UserSeeder extends Seeder
                 'personal_team' => false,
             ]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $this->command->info('   ✓ Creati 5 team di sistema');
-    }
-}
-=======
         $this->command->info("   ✓ Creati 5 team di sistema");
     }
 }
 
->>>>>>> 8055579 (.)
-=======
-        $this->command->info("   ✓ Creati 5 team di sistema");
-    }
-}
-
->>>>>>> 8d82f8c (.)

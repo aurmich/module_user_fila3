@@ -34,15 +34,7 @@ class Change extends Component
         Assert::notNull($authUser = Filament::auth()->user(), '['.__LINE__.']['.class_basename($this).']');
 
         // Verifica che l'utente implementi l'interfaccia UserContract
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (! ($authUser instanceof UserContract)) {
-=======
         if (!($authUser instanceof UserContract)) {
->>>>>>> 8055579 (.)
-=======
-        if (!($authUser instanceof UserContract)) {
->>>>>>> 8d82f8c (.)
             throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia UserContract');
         }
 

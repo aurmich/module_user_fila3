@@ -15,13 +15,6 @@ use Modules\Xot\Datas\XotData;
  *
  * @property EloquentCollection<int, \Illuminate\Database\Eloquent\Model&UserContract> $users
  * @property int|null $users_count
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
  * @method static DeviceFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Device newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Device newQuery()
@@ -43,13 +36,6 @@ use Modules\Xot\Datas\XotData;
  * @method static \Illuminate\Database\Eloquent\Builder|Device whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Device whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Device whereVersion($value)
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
  * @property DeviceUser $pivot
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
@@ -71,17 +57,7 @@ use Modules\Xot\Datas\XotData;
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property string|null $uuid
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Device whereUuid($value)
- *
-=======
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Device whereUuid($value)
->>>>>>> 8055579 (.)
-=======
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Device whereUuid($value)
->>>>>>> 8d82f8c (.)
  * @mixin IdeHelperDevice
  * @mixin \Eloquent
  */

@@ -11,14 +11,7 @@ use Modules\User\Filament\Resources\FeatureResource\Pages\EditFeature;
 use Modules\User\Filament\Resources\FeatureResource\Pages\ListFeatures;
 use Modules\User\Models\Feature;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
->>>>>>> 8055579 (.)
-=======
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
->>>>>>> 8d82f8c (.)
 
 /**
  * @property Feature $record

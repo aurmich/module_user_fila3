@@ -1,44 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-return [
-    'fields' => [
-        'name' => [
-            'label' => 'Nome',
-            'placeholder' => 'Inserisci il nome del permesso',
-            'help' => 'Nome univoco del permesso',
-        ],
-        'guard_name' => [
-            'label' => 'Guard Name',
-            'placeholder' => 'Inserisci il nome del guard',
-            'help' => 'Nome del guard per il permesso',
-        ],
-        'active' => [
-            'label' => 'Attivo',
-            'placeholder' => 'Seleziona lo stato',
-            'help' => 'Indica se il permesso è attivo',
-        ],
-        'created_at' => [
-            'label' => 'Data Creazione',
-            'placeholder' => 'Data di creazione',
-            'help' => 'Data di creazione del permesso',
-        ],
-    ],
-    'common' => [
-        'yes' => 'Sì',
-        'no' => 'No',
-    ],
-    'navigation' => [
-        'sort' => 80,
-        'label' => 'Permessi',
-        'group' => 'Sicurezza',
-        'icon' => 'heroicon-o-shield-check',
-    ],
-];
-=======
-=======
->>>>>>> 8d82f8c (.)
 return array (
   'fields' => 
   array (
@@ -80,7 +41,3 @@ return array (
     'icon' => 'heroicon-o-shield-check',
   ),
 );
-<<<<<<< HEAD
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)

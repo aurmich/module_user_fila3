@@ -29,15 +29,7 @@ interface ModelContract
     /**
      * Fill the model with an array of attributes. Force mass assignment.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  array<string, mixed>  $attributes  Gli attributi da assegnare al modello
-=======
      * @param array<string, mixed> $attributes Gli attributi da assegnare al modello
->>>>>>> 8055579 (.)
-=======
-     * @param array<string, mixed> $attributes Gli attributi da assegnare al modello
->>>>>>> 8d82f8c (.)
      * @return static Il modello stesso
      */
     public function forceFill(array $attributes);
@@ -45,15 +37,7 @@ interface ModelContract
     /**
      * Save the model to the database.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  array<string, mixed>  $options  Opzioni per il salvataggio
-=======
      * @param array<string, mixed> $options Opzioni per il salvataggio
->>>>>>> 8055579 (.)
-=======
-     * @param array<string, mixed> $options Opzioni per il salvataggio
->>>>>>> 8d82f8c (.)
      * @return bool True se il salvataggio è avvenuto con successo, false altrimenti
      */
     public function save(array $options = []);

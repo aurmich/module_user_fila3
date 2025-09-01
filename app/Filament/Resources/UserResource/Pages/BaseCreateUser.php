@@ -7,14 +7,7 @@ namespace Modules\User\Filament\Resources\UserResource\Pages;
 use Modules\User\Filament\Resources\UserResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 8055579 (.)
-=======
-
->>>>>>> 8d82f8c (.)
 abstract class BaseCreateUser extends XotBaseCreateRecord
 {
     // //

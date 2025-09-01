@@ -6,16 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-return new class extends Migration
-{
-=======
 return new class extends Migration {
->>>>>>> 8055579 (.)
-=======
-return new class extends Migration {
->>>>>>> 8d82f8c (.)
     public function up(): void
     {
         Schema::create('authentications', function (Blueprint $table) {

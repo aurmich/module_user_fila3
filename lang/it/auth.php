@@ -98,21 +98,6 @@ return [
         'remember' => 'Ricordami',
         'email_structured' => [
             'label' => 'Email',
-<<<<<<< HEAD
-<<<<<<< HEAD
-            'placeholder' => 'Inserisci la tua email',
-=======
-            'placeholder' => 'Inserisci la tua email'
->>>>>>> 8d82f8c (.)
-        ],
-        'password_structured' => [
-            'label' => 'Password',
-            'placeholder' => 'Inserisci la tua password'
-        ],
-        'remember_structured' => [
-<<<<<<< HEAD
-            'label' => 'Ricordami',
-=======
             'placeholder' => 'Inserisci la tua email'
         ],
         'password_structured' => [
@@ -121,10 +106,6 @@ return [
         ],
         'remember_structured' => [
             'label' => 'Ricordami'
->>>>>>> 8055579 (.)
-=======
-            'label' => 'Ricordami'
->>>>>>> 8d82f8c (.)
         ],
         'submit' => 'Accedi',
         'forgot_password' => 'Password dimenticata?',
@@ -169,26 +150,6 @@ return [
         // Structured version
         'name_structured' => [
             'label' => 'Nome',
-<<<<<<< HEAD
-<<<<<<< HEAD
-            'placeholder' => 'Inserisci il tuo nome completo',
-=======
-            'placeholder' => 'Inserisci il tuo nome completo'
->>>>>>> 8d82f8c (.)
-        ],
-        'email_structured' => [
-            'label' => 'Email',
-            'placeholder' => 'Inserisci la tua email'
-        ],
-        'password_structured' => [
-            'label' => 'Password',
-            'placeholder' => 'Inserisci la password'
-        ],
-        'password_confirmation_structured' => [
-            'label' => 'Conferma Password',
-<<<<<<< HEAD
-            'placeholder' => 'Conferma la password',
-=======
             'placeholder' => 'Inserisci il tuo nome completo'
         ],
         'email_structured' => [
@@ -202,10 +163,6 @@ return [
         'password_confirmation_structured' => [
             'label' => 'Conferma Password',
             'placeholder' => 'Conferma la password'
->>>>>>> 8055579 (.)
-=======
-            'placeholder' => 'Conferma la password'
->>>>>>> 8d82f8c (.)
         ],
     ],
 
@@ -222,15 +179,7 @@ return [
         // Structured version
         'email_structured' => [
             'label' => 'Email',
-<<<<<<< HEAD
-<<<<<<< HEAD
-            'placeholder' => 'Inserisci la tua email',
-=======
             'placeholder' => 'Inserisci la tua email'
->>>>>>> 8055579 (.)
-=======
-            'placeholder' => 'Inserisci la tua email'
->>>>>>> 8d82f8c (.)
         ],
     ],
 
@@ -261,22 +210,6 @@ return [
         // Structured version
         'email_structured' => [
             'label' => 'Email',
-<<<<<<< HEAD
-<<<<<<< HEAD
-            'placeholder' => 'Inserisci la tua email',
-=======
-            'placeholder' => 'Inserisci la tua email'
->>>>>>> 8d82f8c (.)
-        ],
-        'password_structured' => [
-            'label' => 'Nuova Password',
-            'placeholder' => 'Inserisci la nuova password'
-        ],
-        'password_confirmation_structured' => [
-            'label' => 'Conferma Password',
-<<<<<<< HEAD
-            'placeholder' => 'Conferma la nuova password',
-=======
             'placeholder' => 'Inserisci la tua email'
         ],
         'password_structured' => [
@@ -286,10 +219,6 @@ return [
         'password_confirmation_structured' => [
             'label' => 'Conferma Password',
             'placeholder' => 'Conferma la nuova password'
->>>>>>> 8055579 (.)
-=======
-            'placeholder' => 'Conferma la nuova password'
->>>>>>> 8d82f8c (.)
         ],
     ],
 
@@ -368,15 +297,7 @@ return [
             'try_again' => 'Riprova',
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     
->>>>>>> 8055579 (.)
-=======
-    
->>>>>>> 8d82f8c (.)
     // Reset Password
     'passwords' => [
         'reset' => 'La tua password è stata reimpostata!',

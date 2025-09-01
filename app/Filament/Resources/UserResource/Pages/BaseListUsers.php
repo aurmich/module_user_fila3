@@ -6,22 +6,6 @@ namespace Modules\User\Filament\Resources\UserResource\Pages;
 
 use Filament\Tables;
 use Filament\Tables\Actions\Action;
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Filament\Tables\Columns\TextColumn;
-=======
->>>>>>> 8d82f8c (.)
-use Filament\Tables\Filters\Filter;
-use Illuminate\Database\Query\Builder;
-use Filament\Tables\Columns\TextColumn;
-use Modules\Xot\Contracts\UserContract;
-use Filament\Tables\Actions\ExportBulkAction;
-use Modules\User\Filament\Resources\UserResource;
-use Modules\User\Filament\Actions\ChangePasswordAction;
-use Modules\Xot\Filament\Actions\Header\ExportXlsAction;
-use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-<<<<<<< HEAD
-=======
 use Filament\Tables\Filters\Filter;
 use Illuminate\Database\Query\Builder;
 use Filament\Tables\Columns\TextColumn;
@@ -33,11 +17,6 @@ use Modules\Xot\Filament\Actions\Header\ExportXlsAction;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
->>>>>>> 8055579 (.)
-=======
-use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
->>>>>>> 8d82f8c (.)
 
 abstract class BaseListUsers extends XotBaseListRecords
 {
@@ -58,15 +37,7 @@ abstract class BaseListUsers extends XotBaseListRecords
         ];
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    /**
-=======
      /**
->>>>>>> 8055579 (.)
-=======
-     /**
->>>>>>> 8d82f8c (.)
      * Get the header actions.
      *
      * @return array<string, \Filament\Actions\Action>
@@ -74,15 +45,7 @@ abstract class BaseListUsers extends XotBaseListRecords
     protected function getHeaderActions(): array
     {
         return [
-<<<<<<< HEAD
-<<<<<<< HEAD
-            'export_xls' => ExportXlsAction::make('export_xls'),
-=======
            'export_xls' => ExportXlsAction::make('export_xls'),
->>>>>>> 8055579 (.)
-=======
-           'export_xls' => ExportXlsAction::make('export_xls'),
->>>>>>> 8d82f8c (.)
         ];
     }
 
@@ -108,13 +71,6 @@ abstract class BaseListUsers extends XotBaseListRecords
      * Get table actions for user records.
      *
      * @return array<string, \Filament\Tables\Actions\Action|\Filament\Tables\Actions\ActionGroup>
-<<<<<<< HEAD
-<<<<<<< HEAD
-     *
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
      * @phpstan-ignore-next-line
      */
     /** @phpstan-ignore-next-line */
@@ -125,27 +81,11 @@ abstract class BaseListUsers extends XotBaseListRecords
                 ->tooltip('Cambio Password')
                 ->iconButton(),
         ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        // Add parent actions - merge arrays
-        $parentActions = parent::getTableActions();
-        $actions = array_merge($actions, $parentActions);
-
-=======
         
         // Add parent actions - merge arrays
         $parentActions = parent::getTableActions();
         $actions = array_merge($actions, $parentActions);
         
->>>>>>> 8055579 (.)
-=======
-        
-        // Add parent actions - merge arrays
-        $parentActions = parent::getTableActions();
-        $actions = array_merge($actions, $parentActions);
-        
->>>>>>> 8d82f8c (.)
         /*
         // Add deactivate action
         $actions['deactivate'] = Action::make('deactivate')
@@ -153,15 +93,7 @@ abstract class BaseListUsers extends XotBaseListRecords
             ->color('danger')
             ->icon('heroicon-o-trash')
             ->action(static fn (UserContract $user) => $user->delete());
-<<<<<<< HEAD
-<<<<<<< HEAD
-        */
-=======
         */   
->>>>>>> 8055579 (.)
-=======
-        */   
->>>>>>> 8d82f8c (.)
         /** @phpstan-ignore-next-line */
         return $actions;
     }
@@ -174,23 +106,9 @@ abstract class BaseListUsers extends XotBaseListRecords
     protected function getHeaderWidgets(): array
     {
         return [
-<<<<<<< HEAD
-<<<<<<< HEAD
-            // UserOverview::class
-        ];
-    }
-=======
             //UserOverview::class
         ];
     }
 
     
->>>>>>> 8055579 (.)
-=======
-            //UserOverview::class
-        ];
-    }
-
-    
->>>>>>> 8d82f8c (.)
 }

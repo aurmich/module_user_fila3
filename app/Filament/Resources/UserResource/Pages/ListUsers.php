@@ -6,24 +6,10 @@ namespace Modules\User\Filament\Resources\UserResource\Pages;
 
 use Filament\Tables;
 use Filament\Tables\Actions\Action;
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Filament\Tables\Actions\ExportBulkAction;
-use Filament\Tables\Columns\TextColumn;
-=======
->>>>>>> 8d82f8c (.)
 use Filament\Tables\Filters\Filter;
 use Illuminate\Database\Query\Builder;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Xot\Contracts\UserContract;
-<<<<<<< HEAD
-=======
-use Filament\Tables\Filters\Filter;
-use Illuminate\Database\Query\Builder;
-use Filament\Tables\Columns\TextColumn;
-use Modules\Xot\Contracts\UserContract;
-=======
->>>>>>> 8d82f8c (.)
 use Filament\Tables\Actions\ExportBulkAction;
 use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Filament\Actions\ChangePasswordAction;
@@ -31,10 +17,6 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Modules\User\Filament\Resources\UserResource\Pages\BaseListUsers;
 use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
-<<<<<<< HEAD
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
 
 class ListUsers extends BaseListUsers
 {
@@ -43,34 +25,14 @@ class ListUsers extends BaseListUsers
     public function getTableColumns(): array
     {
         return [
-<<<<<<< HEAD
-<<<<<<< HEAD
-            // 'id' => TextColumn::make('id'),
-=======
             //'id' => TextColumn::make('id'),
->>>>>>> 8055579 (.)
-=======
-            //'id' => TextColumn::make('id'),
->>>>>>> 8d82f8c (.)
             'name' => TextColumn::make('name')
                 ->searchable(),
             'email' => TextColumn::make('email')
                 ->searchable(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-            // 'email_verified_at' => TextColumn::make('email_verified_at')
-            //    ->dateTime(),
-            // 'created_at' => TextColumn::make('created_at')
-=======
             //'email_verified_at' => TextColumn::make('email_verified_at')
             //    ->dateTime(),
             //'created_at' => TextColumn::make('created_at')
->>>>>>> 8055579 (.)
-=======
-            //'email_verified_at' => TextColumn::make('email_verified_at')
-            //    ->dateTime(),
-            //'created_at' => TextColumn::make('created_at')
->>>>>>> 8d82f8c (.)
             //    ->dateTime(),
         ];
     }

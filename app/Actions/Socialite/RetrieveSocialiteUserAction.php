@@ -27,15 +27,7 @@ class RetrieveSocialiteUserAction
         }
 
         $providerId = $user->getId();
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (! is_string($providerId) && ! is_int($providerId)) {
-=======
         if (!is_string($providerId) && !is_int($providerId)) {
->>>>>>> 8055579 (.)
-=======
-        if (!is_string($providerId) && !is_int($providerId)) {
->>>>>>> 8d82f8c (.)
             throw new \RuntimeException('L\'ID del provider deve essere una stringa o un intero');
         }
 
@@ -51,27 +43,11 @@ class RetrieveSocialiteUserAction
 
         // Accesso sicuro alla proprietà token in modo type-safe
         $token = '';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        // Utilizzo ReflectionClass per accedere in modo sicuro alle proprietà/metodi
-        try {
-            $reflection = new \ReflectionClass($user);
-
-=======
         
         // Utilizzo ReflectionClass per accedere in modo sicuro alle proprietà/metodi
         try {
             $reflection = new \ReflectionClass($user);
             
->>>>>>> 8055579 (.)
-=======
-        
-        // Utilizzo ReflectionClass per accedere in modo sicuro alle proprietà/metodi
-        try {
-            $reflection = new \ReflectionClass($user);
-            
->>>>>>> 8d82f8c (.)
             // Prova prima i metodi standard
             if ($reflection->hasMethod('getToken')) {
                 $method = $reflection->getMethod('getToken');
@@ -87,15 +63,7 @@ class RetrieveSocialiteUserAction
                 if (is_string($tokenValue)) {
                     $token = $tokenValue;
                 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-            }
-=======
             } 
->>>>>>> 8055579 (.)
-=======
-            } 
->>>>>>> 8d82f8c (.)
             // Prova poi ad accedere alla proprietà
             elseif ($reflection->hasProperty('token')) {
                 $property = $reflection->getProperty('token');
@@ -115,15 +83,7 @@ class RetrieveSocialiteUserAction
 
         if (empty($token)) {
             // Se non riusciamo a ottenere un token valido, utilizziamo un valore predefinito
-<<<<<<< HEAD
-<<<<<<< HEAD
-            $token = 'no_token_'.time();
-=======
             $token = 'no_token_' . time();
->>>>>>> 8055579 (.)
-=======
-            $token = 'no_token_' . time();
->>>>>>> 8d82f8c (.)
         }
 
         $res->update([

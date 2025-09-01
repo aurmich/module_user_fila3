@@ -9,24 +9,10 @@ use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables\Actions\AttachAction;
 use Filament\Tables\Actions\DetachAction;
 use Filament\Tables\Actions\DetachBulkAction;
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Filament\Tables\Columns\IconColumn;
-=======
->>>>>>> 8d82f8c (.)
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Columns\IconColumn;
-use Filament\Tables\Table;
-<<<<<<< HEAD
-=======
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Model;
->>>>>>> 8055579 (.)
-=======
-use Illuminate\Database\Eloquent\Model;
->>>>>>> 8d82f8c (.)
 
 class TeamsRelationManager extends RelationManager
 {

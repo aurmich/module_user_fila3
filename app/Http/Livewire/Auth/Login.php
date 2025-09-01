@@ -137,32 +137,14 @@ class Login extends Component implements HasForms
 
     /**
      * Determina l'URL di redirect appropriato per l'utente autenticato.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
      *
      * @return RedirectResponse
->>>>>>> 8055579 (.)
-=======
-     *
-     * @return RedirectResponse
->>>>>>> 8d82f8c (.)
      */
     protected function getRedirectUrl(): RedirectResponse
     {
         $user = Auth::user();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        if (! $user) {
-=======
         
         if (!$user) {
->>>>>>> 8055579 (.)
-=======
-        
-        if (!$user) {
->>>>>>> 8d82f8c (.)
             return redirect()->to('/');
         }
 
@@ -176,13 +158,6 @@ class Login extends Component implements HasForms
             $role = $adminRoles->first();
             if ($role !== null) {
                 $moduleName = str_replace('::admin', '', $role->name);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
                 return redirect()->to("/{$moduleName}/admin");
             }
         } elseif ($adminRoles->count() > 1) {
@@ -191,41 +166,17 @@ class Login extends Component implements HasForms
         }
 
         // Utente senza ruoli admin - redirect alla homepage
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return redirect()->to('/'.app()->getLocale());
-=======
         return redirect()->to('/' . app()->getLocale());
->>>>>>> 8055579 (.)
-=======
-        return redirect()->to('/' . app()->getLocale());
->>>>>>> 8d82f8c (.)
     }
 
     /**
      * Renderizza il componente.
-<<<<<<< HEAD
-<<<<<<< HEAD
-     */
-    public function render(): \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
-    {
-        // app(ViewCopyAction::class)->execute('user::livewire.auth.login', 'pub_theme::livewire.auth.login');
-=======
      *
      * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
      */
     public function render(): \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
     {
         //app(ViewCopyAction::class)->execute('user::livewire.auth.login', 'pub_theme::livewire.auth.login');
->>>>>>> 8055579 (.)
-=======
-     *
-     * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
-     */
-    public function render(): \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
-    {
-        //app(ViewCopyAction::class)->execute('user::livewire.auth.login', 'pub_theme::livewire.auth.login');
->>>>>>> 8d82f8c (.)
         return view('user::livewire.auth.login');
     }
 }

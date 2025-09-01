@@ -8,52 +8,20 @@ use Illuminate\Auth\Events\Failed;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Auth\Events\OtherDeviceLogout;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
->>>>>>> 8055579 (.)
-=======
-use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
->>>>>>> 8d82f8c (.)
 use Modules\User\Listeners\FailedLoginListener;
 use Modules\User\Listeners\LoginListener;
 use Modules\User\Listeners\LogoutListener;
 use Modules\User\Listeners\OtherDeviceLogoutListener;
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Modules\Xot\Providers\XotBaseEventServiceProvider;
-use SocialiteProviders\Auth0\Auth0ExtendSocialite;
-use SocialiteProviders\Manager\SocialiteWasCalled;
-=======
 use SocialiteProviders\Auth0\Auth0ExtendSocialite;
 use SocialiteProviders\Manager\SocialiteWasCalled;
 use Modules\Xot\Providers\XotBaseEventServiceProvider;
->>>>>>> 8055579 (.)
-=======
-use SocialiteProviders\Auth0\Auth0ExtendSocialite;
-use SocialiteProviders\Manager\SocialiteWasCalled;
-use Modules\Xot\Providers\XotBaseEventServiceProvider;
->>>>>>> 8d82f8c (.)
 
 class EventServiceProvider extends XotBaseEventServiceProvider
 {
     public string $name = 'User';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 8d82f8c (.)
     public string $nameLower = 'user';
     protected string $module_dir = __DIR__;
-<<<<<<< HEAD
-
-=======
-    public string $nameLower = 'user';
-    protected string $module_dir = __DIR__;
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
     protected string $module_ns = __NAMESPACE__;
 
     /**

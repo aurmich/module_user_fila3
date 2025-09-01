@@ -27,23 +27,9 @@ use Webmozart\Assert\Assert;
 class PasswordResetConfirmWidget extends XotBaseWidget
 {
     public ?array $data = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 8d82f8c (.)
     public ?string $token = null;
     public ?string $email = null;
     public string $currentState = 'form'; // form, success, error, expired
-<<<<<<< HEAD
-
-=======
-    public ?string $token = null;
-    public ?string $email = null;
-    public string $currentState = 'form'; // form, success, error, expired
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
     public ?string $errorMessage = null;
 
     /**
@@ -78,15 +64,7 @@ class PasswordResetConfirmWidget extends XotBaseWidget
                 ->required()
                 ->autocomplete('email')
                 ->maxLength(255)
-<<<<<<< HEAD
-<<<<<<< HEAD
-                ->disabled($this->currentState !== 'form')
-=======
                 ->disabled('form' !== $this->currentState)
->>>>>>> 8055579 (.)
-=======
-                ->disabled('form' !== $this->currentState)
->>>>>>> 8d82f8c (.)
                 ->extraInputAttributes(['class' => 'text-center'])
                 ->suffixIcon('heroicon-o-envelope'),
 
@@ -95,15 +73,7 @@ class PasswordResetConfirmWidget extends XotBaseWidget
                 ->required()
                 ->revealable()
                 ->minLength(8)
-<<<<<<< HEAD
-<<<<<<< HEAD
-                ->disabled($this->currentState !== 'form')
-=======
                 ->disabled('form' !== $this->currentState)
->>>>>>> 8055579 (.)
-=======
-                ->disabled('form' !== $this->currentState)
->>>>>>> 8d82f8c (.)
                 ->extraInputAttributes(['class' => 'text-center'])
                 ->suffixIcon('heroicon-o-key'),
 
@@ -111,15 +81,7 @@ class PasswordResetConfirmWidget extends XotBaseWidget
                 ->password()
                 ->required()
                 ->same('password')
-<<<<<<< HEAD
-<<<<<<< HEAD
-                ->disabled($this->currentState !== 'form')
-=======
                 ->disabled('form' !== $this->currentState)
->>>>>>> 8055579 (.)
-=======
-                ->disabled('form' !== $this->currentState)
->>>>>>> 8d82f8c (.)
                 ->extraInputAttributes(['class' => 'text-center'])
                 ->suffixIcon('heroicon-o-key'),
         ];
@@ -130,15 +92,7 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function confirmPasswordReset(): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($this->currentState !== 'form') {
-=======
         if ('form' !== $this->currentState) {
->>>>>>> 8055579 (.)
-=======
-        if ('form' !== $this->currentState) {
->>>>>>> 8d82f8c (.)
             return;
         }
 
@@ -162,15 +116,7 @@ class PasswordResetConfirmWidget extends XotBaseWidget
                 }
             );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if ($response === Password::PASSWORD_RESET) {
-=======
             if (Password::PASSWORD_RESET === $response) {
->>>>>>> 8055579 (.)
-=======
-            if (Password::PASSWORD_RESET === $response) {
->>>>>>> 8d82f8c (.)
                 $this->currentState = 'success';
 
                 Notification::make()
@@ -262,15 +208,7 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function isLoading(): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return $this->currentState === 'loading';
-=======
         return 'loading' === $this->currentState;
->>>>>>> 8055579 (.)
-=======
-        return 'loading' === $this->currentState;
->>>>>>> 8d82f8c (.)
     }
 
     /**
@@ -278,15 +216,7 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function isSuccess(): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return $this->currentState === 'success';
-=======
         return 'success' === $this->currentState;
->>>>>>> 8055579 (.)
-=======
-        return 'success' === $this->currentState;
->>>>>>> 8d82f8c (.)
     }
 
     /**
@@ -294,14 +224,6 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function hasError(): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return $this->currentState === 'error';
-=======
         return 'error' === $this->currentState;
->>>>>>> 8055579 (.)
-=======
-        return 'error' === $this->currentState;
->>>>>>> 8d82f8c (.)
     }
 }

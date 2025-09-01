@@ -54,13 +54,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property int|null $tenants_count
  * @property \Illuminate\Database\Eloquent\Collection<int, OauthAccessToken> $tokens
  * @property int|null $tokens_count
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
  * @method static \Modules\User\Database\Factories\UserFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()
@@ -87,13 +80,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User withoutPermission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|User withoutRole($roles, $guard = null)
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
  * @property string $last_name
  * @property-read \Modules\User\Models\Team|null $currentTeam
  * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Modules\Media\Models\Media> $media
@@ -112,13 +98,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $moderation_data
  * @property string|null $certifications
  * @property string|null $type
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereAddress($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereCertifications($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereCity($value)
@@ -130,13 +109,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereState($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereType($value)
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
  * @mixin IdeHelperUser
  * @mixin \Eloquent
  */

@@ -11,36 +11,16 @@ use Modules\User\Models\User;
 
 /**
  * OauthAccessToken Factory
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
- * Factory for creating OauthAccessToken model instances for testing and seeding.
- *
-=======
  * 
  * Factory for creating OauthAccessToken model instances for testing and seeding.
  * 
->>>>>>> 8055579 (.)
-=======
- * 
- * Factory for creating OauthAccessToken model instances for testing and seeding.
- * 
->>>>>>> 8d82f8c (.)
  * @extends Factory<OauthAccessToken>
  */
 class OauthAccessTokenFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
-<<<<<<< HEAD
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 8055579 (.)
-=======
-     * 
->>>>>>> 8d82f8c (.)
      * @var class-string<OauthAccessToken>
      */
     protected $model = OauthAccessToken::class;
@@ -58,15 +38,7 @@ class OauthAccessTokenFactory extends Factory
             'client_id' => OauthClient::factory(),
             'name' => $this->faker->optional()->words(2, true),
             'scopes' => $this->faker->optional()->randomElements([
-<<<<<<< HEAD
-<<<<<<< HEAD
-                'read', 'write', 'admin', 'user',
-=======
                 'read', 'write', 'admin', 'user'
->>>>>>> 8055579 (.)
-=======
-                'read', 'write', 'admin', 'user'
->>>>>>> 8d82f8c (.)
             ], $this->faker->numberBetween(1, 3)),
             'revoked' => $this->faker->boolean(10), // 10% revoked
             'expires_at' => $this->faker->dateTimeBetween('now', '+1 year'),
@@ -75,16 +47,8 @@ class OauthAccessTokenFactory extends Factory
 
     /**
      * Create a revoked token.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
      *
      * @return static
->>>>>>> 8055579 (.)
-=======
-     *
-     * @return static
->>>>>>> 8d82f8c (.)
      */
     public function revoked(): static
     {
@@ -95,16 +59,8 @@ class OauthAccessTokenFactory extends Factory
 
     /**
      * Create an active token.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
      *
      * @return static
->>>>>>> 8055579 (.)
-=======
-     *
-     * @return static
->>>>>>> 8d82f8c (.)
      */
     public function active(): static
     {
@@ -116,18 +72,9 @@ class OauthAccessTokenFactory extends Factory
 
     /**
      * Create token for a specific user.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
      *
      * @param User $user
      * @return static
->>>>>>> 8055579 (.)
-=======
-     *
-     * @param User $user
-     * @return static
->>>>>>> 8d82f8c (.)
      */
     public function forUser(User $user): static
     {
@@ -138,18 +85,9 @@ class OauthAccessTokenFactory extends Factory
 
     /**
      * Create token for a specific client.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
      *
      * @param OauthClient $client
      * @return static
->>>>>>> 8055579 (.)
-=======
-     *
-     * @param OauthClient $client
-     * @return static
->>>>>>> 8d82f8c (.)
      */
     public function forClient(OauthClient $client): static
     {
@@ -161,17 +99,8 @@ class OauthAccessTokenFactory extends Factory
     /**
      * Create token with specific scopes.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  array<string>  $scopes
-=======
      * @param array<string> $scopes
      * @return static
->>>>>>> 8055579 (.)
-=======
-     * @param array<string> $scopes
-     * @return static
->>>>>>> 8d82f8c (.)
      */
     public function withScopes(array $scopes): static
     {
@@ -179,12 +108,4 @@ class OauthAccessTokenFactory extends Factory
             'scopes' => $scopes,
         ]);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 8055579 (.)
-=======
-}
->>>>>>> 8d82f8c (.)

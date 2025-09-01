@@ -47,35 +47,14 @@ class AssignModuleCommand extends Command
     public function handle(): void
     {
         $email = text('email ?');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 8055579 (.)
-=======
-        
->>>>>>> 8d82f8c (.)
         /**
          * @var UserContract $user
          */
         $user = XotData::make()->getUserByEmail($email);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        if (! $user) {
-            $this->error("User with email '{$email}' not found.");
-
-=======
         
         if (!$user) {
             $this->error("User with email '{$email}' not found.");
->>>>>>> 8055579 (.)
-=======
-        
-        if (!$user) {
-            $this->error("User with email '{$email}' not found.");
->>>>>>> 8d82f8c (.)
             return;
         }
 
@@ -88,15 +67,7 @@ class AssignModuleCommand extends Command
         $currentModules = array_keys($userModuleRoles);
 
         // Show current modules as default selected
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $this->info("Current modules for {$email}: ".implode(', ', $currentModules));
-=======
         $this->info("Current modules for {$email}: " . implode(', ', $currentModules));
->>>>>>> 8055579 (.)
-=======
-        $this->info("Current modules for {$email}: " . implode(', ', $currentModules));
->>>>>>> 8d82f8c (.)
 
         $selectedModules = multiselect(
             label: 'Select modules (checked = assigned, unchecked = will be revoked)',
@@ -123,15 +94,7 @@ class AssignModuleCommand extends Command
 
             // Assign the role to the user
             $user->assignRole($role);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 8055579 (.)
-=======
-            
->>>>>>> 8d82f8c (.)
             $this->info("✓ Assigned module: {$module}");
         }
 
@@ -142,29 +105,13 @@ class AssignModuleCommand extends Command
 
             // Revoke the role from the user
             $user->removeRole($role_name);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 8055579 (.)
-=======
-            
->>>>>>> 8d82f8c (.)
             $this->warn("✗ Revoked module: {$module}");
         }
 
         // Summary
         if (empty($modulesToAssign) && empty($modulesToRevoke)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            $this->info('No changes made to user modules.');
-=======
             $this->info("No changes made to user modules.");
->>>>>>> 8055579 (.)
-=======
-            $this->info("No changes made to user modules.");
->>>>>>> 8d82f8c (.)
         } else {
             $this->info("Module assignment updated for {$email}");
         }
@@ -173,43 +120,20 @@ class AssignModuleCommand extends Command
     /**
      * Get user's current module roles.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
      * @param UserContract $user
->>>>>>> 8055579 (.)
-=======
-     * @param UserContract $user
->>>>>>> 8d82f8c (.)
      * @return array<string, string>
      */
     private function getUserModuleRoles(UserContract $user): array
     {
         $moduleRoles = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 8055579 (.)
-=======
-        
->>>>>>> 8d82f8c (.)
         foreach ($user->roles as $role) {
             if (Str::endsWith($role->name, '::admin')) {
                 $moduleName = Str::before($role->name, '::admin');
                 $moduleRoles[$moduleName] = $role->name;
             }
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 8055579 (.)
-=======
-        
->>>>>>> 8d82f8c (.)
         return $moduleRoles;
     }
 

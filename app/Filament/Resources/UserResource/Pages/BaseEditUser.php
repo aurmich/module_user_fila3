@@ -9,20 +9,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources\UserResource\Pages;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Filament\Actions\DeleteAction;
-use Filament\Resources\Pages\EditRecord;
-use Illuminate\Support\Facades\Hash;
-use Modules\User\Filament\Actions\Header\ChangePasswordHeaderAction;
-use Modules\User\Filament\Resources\UserResource;
-use Modules\User\Models\User;
 use Webmozart\Assert\Assert;
-=======
-use Webmozart\Assert\Assert;
-=======
-use Webmozart\Assert\Assert;
->>>>>>> 8d82f8c (.)
 use Modules\User\Models\User;
 use Filament\Actions\DeleteAction;
 use Illuminate\Support\Facades\Hash;
@@ -32,10 +19,6 @@ use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Filament\Actions\ChangePasswordAction;
 use Modules\User\Filament\Actions\Header\ChangePasswordHeaderAction;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
-<<<<<<< HEAD
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
 
 /**
  * Pagina per la modifica degli utenti con particolare gestione della password.
@@ -60,31 +43,14 @@ abstract class BaseEditUser extends EditRecord
         $newPassword = $data['new_password'];
 
         // Verifichiamo il tipo e convertiamo in modo sicuro
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (! is_string($newPassword)) {
-            if (! is_scalar($newPassword)) {
-=======
         if (!is_string($newPassword)) {
             if (!is_scalar($newPassword)) {
->>>>>>> 8055579 (.)
-=======
-        if (!is_string($newPassword)) {
-            if (!is_scalar($newPassword)) {
->>>>>>> 8d82f8c (.)
                 throw new \InvalidArgumentException('La password deve essere una stringa');
             }
             $newPassword = (string) $newPassword;
         }
 
         $this->record->update(['password' => Hash::make($newPassword)]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
         return $data;
     }
 

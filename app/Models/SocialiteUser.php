@@ -28,13 +28,6 @@ use Modules\Xot\Datas\XotData;
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property \Modules\Xot\Contracts\UserContract|null $user
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialiteUser newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|SocialiteUser newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|SocialiteUser query()
@@ -50,41 +43,17 @@ use Modules\Xot\Datas\XotData;
  * @method static \Illuminate\Database\Eloquent\Builder|SocialiteUser whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialiteUser whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialiteUser whereUserId($value)
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
->>>>>>> 8d82f8c (.)
  * @property string $uuid (DC2Type:guid)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialiteUser whereUuid($value)
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  * @mixin IdeHelperSocialiteUser
  * @method static \Modules\User\Database\Factories\SocialiteUserFactory factory($count = null, $state = [])
-<<<<<<< HEAD
- *
-=======
- * @property string $uuid (DC2Type:guid)
- * @method static \Illuminate\Database\Eloquent\Builder|SocialiteUser whereUuid($value)
- * @property \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property \Modules\Xot\Contracts\ProfileContract|null $updater
- * @mixin IdeHelperSocialiteUser
- * @method static \Modules\User\Database\Factories\SocialiteUserFactory factory($count = null, $state = [])
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
  * @mixin \Eloquent
  */
 class SocialiteUser extends BaseModel
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 8055579 (.)
-=======
-
->>>>>>> 8d82f8c (.)
     /** @var list<string> */
     protected $fillable = [
         // 'id',

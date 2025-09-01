@@ -10,11 +10,6 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8d82f8c (.)
 
 
 
@@ -23,10 +18,6 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 
 
-<<<<<<< HEAD
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
 class PermissionsRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'permissions';

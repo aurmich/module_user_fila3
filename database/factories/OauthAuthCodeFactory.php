@@ -11,15 +11,7 @@ use Modules\User\Models\User;
 
 /**
  * OauthAuthCode Factory
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> 8055579 (.)
-=======
- * 
->>>>>>> 8d82f8c (.)
  * @extends Factory<OauthAuthCode>
  */
 class OauthAuthCodeFactory extends Factory

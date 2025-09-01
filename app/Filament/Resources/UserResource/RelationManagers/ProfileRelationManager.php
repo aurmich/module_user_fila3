@@ -5,14 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Resources\UserResource\RelationManagers;
 
 use Filament\Forms\Components\TextInput;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 use Filament\Forms\Form;
->>>>>>> 8055579 (.)
-=======
-use Filament\Forms\Form;
->>>>>>> 8d82f8c (.)
 use Filament\Tables\Actions\CreateAction;
 use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Actions\DeleteBulkAction;
@@ -22,11 +15,6 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8d82f8c (.)
 
 
 
@@ -35,10 +23,6 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 
 
-<<<<<<< HEAD
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
 class ProfileRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'profile';

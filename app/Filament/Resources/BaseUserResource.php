@@ -59,15 +59,7 @@ abstract class BaseUserResource extends XotBaseResource
                         if ($record === null || $record->created_at === null) {
                             return new HtmlString('&mdash;');
                         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
                         
->>>>>>> 8055579 (.)
-=======
-                        
->>>>>>> 8d82f8c (.)
                         return $record->created_at->diffForHumans();
                     }),
             ])->columnSpan(4),

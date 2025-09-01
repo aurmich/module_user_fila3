@@ -9,23 +9,11 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Resources\PermissionResource\RelationManager;
 
 use Filament\Forms\Components\TextInput;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 use Filament\Forms\Form;
->>>>>>> 8055579 (.)
-=======
-use Filament\Forms\Form;
->>>>>>> 8d82f8c (.)
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8d82f8c (.)
 
 
 
@@ -34,10 +22,6 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 
 
-<<<<<<< HEAD
->>>>>>> 8055579 (.)
-=======
->>>>>>> 8d82f8c (.)
 class RoleRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'roles';
