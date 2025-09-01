@@ -457,10 +457,18 @@ private function getPasswordLegacy(): string
 
 *Ultimo aggiornamento: 2025-01-27*
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8055579 (.)
 
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 8a21b63 (.)
+=======
+=======
+>>>>>>> a0c18bc (.)
+>>>>>>> 8055579 (.)

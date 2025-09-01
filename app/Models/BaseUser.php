@@ -15,9 +15,15 @@ use Filament\Models\Contracts\HasName;
 use Illuminate\Support\Facades\Schema;
 use Spatie\Permission\Traits\HasRoles;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Spatie\Permission\Traits\HasPermissions;
 =======
 >>>>>>> 8a21b63 (.)
+=======
+=======
+use Spatie\Permission\Traits\HasPermissions;
+>>>>>>> a0c18bc (.)
+>>>>>>> 8055579 (.)
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Contracts\UserContract;
 use Illuminate\Notifications\Notifiable;
@@ -134,9 +140,15 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     use HasFactory;
     use HasRoles;
 <<<<<<< HEAD
+<<<<<<< HEAD
     use HasPermissions;
 =======
 >>>>>>> 8a21b63 (.)
+=======
+=======
+    use HasPermissions;
+>>>>>>> a0c18bc (.)
+>>>>>>> 8055579 (.)
     // Guard coerente con Spatie/Permission
     use HasUuids;
     use Notifiable;
