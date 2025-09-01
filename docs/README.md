@@ -943,12 +943,18 @@ Schema::table('teams', function (Blueprint $table) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8055579 (.)
 =======
 =======
 >>>>>>> 8055579 (.)
+=======
+=======
+=======
+>>>>>>> 933fcfe (.)
+>>>>>>> e67649e (.)
 
 ## Aggiornamenti Recenti
 
@@ -965,6 +971,7 @@ Schema::table('teams', function (Blueprint $table) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8a21b63 (.)
 =======
@@ -975,6 +982,11 @@ Schema::table('teams', function (Blueprint $table) {
 =======
 >>>>>>> a0c18bc (.)
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> a0c18bc (.)
+=======
+>>>>>>> 933fcfe (.)
+>>>>>>> e67649e (.)
 ## Aggiornamenti Recenti
 
 ### 27 Gennaio 2025

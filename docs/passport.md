@@ -1574,6 +1574,7 @@ trait HasPassportConfiguration
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # Changelog
 
@@ -1582,11 +1583,14 @@ trait HasPassportConfiguration
 =======
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> e67649e (.)
 # Changelog
 
 ## [1.0.0] - 2024-03-20
 =======
 >>>>>>> a0c18bc (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 8055579 (.)
 =======
@@ -1596,6 +1600,10 @@ trait HasPassportConfiguration
 >>>>>>> d51888e (.)
 =======
 >>>>>>> 8055579 (.)
+=======
+=======
+>>>>>>> 933fcfe (.)
+>>>>>>> e67649e (.)
 
 ### Added
 - Implementazione iniziale dei trait di configurazione

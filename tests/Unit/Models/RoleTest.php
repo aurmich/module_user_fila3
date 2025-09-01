@@ -307,6 +307,7 @@ class RoleTest extends TestCase
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 8a21b63 (.)
@@ -322,3 +323,10 @@ class RoleTest extends TestCase
 =======
 >>>>>>> a0c18bc (.)
 >>>>>>> 8055579 (.)
+=======
+
+=======
+>>>>>>> a0c18bc (.)
+=======
+>>>>>>> 933fcfe (.)
+>>>>>>> e67649e (.)

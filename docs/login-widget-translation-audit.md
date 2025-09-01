@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # LoginWidget Translation Audit - 2025-01-06
 
 ## Audit Overview
@@ -24,6 +25,8 @@ __('user::messages.login_success')
 >>>>>>> d51888e (.)
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> e67649e (.)
 # LoginWidget Translation Audit - Gennaio 2025
 
 ## Obiettivo
@@ -46,6 +49,8 @@ __('user::messages.login_success')
 =======
 >>>>>>> 8055579 (.)
 =======
+=======
+>>>>>>> 933fcfe (.)
 # LoginWidget Translation Audit - 2025-01-06
 
 ## Audit Overview
@@ -61,17 +66,24 @@ Il `LoginWidget` utilizzava le seguenti traduzioni nel namespace `user::messages
 // Traduzioni utilizzate nel LoginWidget
 __('user::messages.credentials_incorrect')
 __('user::messages.login_success')
+<<<<<<< HEAD
 >>>>>>> a0c18bc (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 8055579 (.)
 =======
 >>>>>>> d51888e (.)
 =======
 >>>>>>> 8055579 (.)
+=======
+=======
+>>>>>>> 933fcfe (.)
+>>>>>>> e67649e (.)
 __('user::messages.validation_error')
 __('user::messages.login_error')
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -95,6 +107,8 @@ __('user::messages.login_error')
 >>>>>>> d51888e (.)
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> e67649e (.)
 ### Stato Pre-Audit
 - ❌ File `messages.php` **non esisteva** in nessuna lingua
 - ✅ File `auth.php` esistenti ma con chiavi diverse
@@ -114,6 +128,8 @@ Creati i seguenti file di traduzione mancanti:
 =======
 >>>>>>> 8055579 (.)
 =======
+=======
+>>>>>>> 933fcfe (.)
 ### File Mancante
 - **File**: `Modules/User/lang/{locale}/messages.php`
 - **Stato**: Non esisteva in nessuna lingua
@@ -126,18 +142,25 @@ Creati i seguenti file di traduzione mancanti:
 3. `laravel/Modules/User/lang/de/messages.php` - Traduzioni tedesche
 
 ### Struttura Implementata
+<<<<<<< HEAD
 >>>>>>> a0c18bc (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 8055579 (.)
 =======
 >>>>>>> d51888e (.)
 =======
 >>>>>>> 8055579 (.)
+=======
+=======
+>>>>>>> 933fcfe (.)
+>>>>>>> e67649e (.)
 ```php
 return [
     // Messaggi di autenticazione per LoginWidget
     'credentials_incorrect' => 'Le credenziali inserite non sono corrette.',
     'login_success' => 'Accesso effettuato con successo.',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -255,6 +278,8 @@ Questo audit dimostra l'importanza di:
 >>>>>>> d51888e (.)
 =======
 >>>>>>> 8055579 (.)
+=======
+>>>>>>> e67649e (.)
     'login_error' => 'Si è verificato un errore durante l\'accesso. Riprova più tardi.',
     'validation_error' => 'Errore di validazione.',
     // ... 60+ altre chiavi per completezza
@@ -430,6 +455,8 @@ Il pattern può essere applicato a tutti i widget del sistema per garantire cons
 **LoginWidget status**: ✅ Fully functional in all languages
 >>>>>>> 8055579 (.)
 =======
+=======
+>>>>>>> 933fcfe (.)
     'login_error' => 'Si è verificato un errore durante l\'accesso.',
     'validation_error' => 'Errore di validazione.',
     
@@ -536,7 +563,9 @@ Questo audit dimostra l'importanza di:
 4. **Collegamenti**: documentazione interconnessa per facilità di navigazione
 
 *Ultimo aggiornamento: 2025-01-06*
+<<<<<<< HEAD
 >>>>>>> a0c18bc (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 8055579 (.)
 =======
@@ -544,3 +573,7 @@ Questo audit dimostra l'importanza di:
 >>>>>>> d51888e (.)
 =======
 >>>>>>> 8055579 (.)
+=======
+=======
+>>>>>>> 933fcfe (.)
+>>>>>>> e67649e (.)
