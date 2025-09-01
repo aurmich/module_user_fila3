@@ -5,22 +5,37 @@ declare(strict_types=1);
 namespace Modules\User\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+<<<<<<< HEAD
 use Modules\User\Models\Permission;
 use Modules\User\Models\PermissionRole;
+=======
+use Modules\User\Models\PermissionRole;
+use Modules\User\Models\Permission;
+>>>>>>> 8055579 (.)
 use Modules\User\Models\Role;
 
 /**
  * PermissionRole Factory
+<<<<<<< HEAD
  *
  * Factory for creating PermissionRole model instances for testing and seeding.
  *
+=======
+ * 
+ * Factory for creating PermissionRole model instances for testing and seeding.
+ * 
+>>>>>>> 8055579 (.)
  * @extends Factory<PermissionRole>
  */
 class PermissionRoleFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> 8055579 (.)
      * @var class-string<PermissionRole>
      */
     protected $model = PermissionRole::class;
@@ -40,6 +55,12 @@ class PermissionRoleFactory extends Factory
 
     /**
      * Create permission-role relationship for a specific permission.
+<<<<<<< HEAD
+=======
+     *
+     * @param Permission $permission
+     * @return static
+>>>>>>> 8055579 (.)
      */
     public function forPermission(Permission $permission): static
     {
@@ -50,6 +71,12 @@ class PermissionRoleFactory extends Factory
 
     /**
      * Create permission-role relationship for a specific role.
+<<<<<<< HEAD
+=======
+     *
+     * @param Role $role
+     * @return static
+>>>>>>> 8055579 (.)
      */
     public function forRole(Role $role): static
     {
@@ -57,4 +84,8 @@ class PermissionRoleFactory extends Factory
             'role_id' => $role->id,
         ]);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 8055579 (.)

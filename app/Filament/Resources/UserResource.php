@@ -59,7 +59,11 @@ class UserResource extends XotBaseResource
                         if ($record === null || $record->created_at === null) {
                             return new HtmlString('&mdash;');
                         }
+<<<<<<< HEAD
 
+=======
+                        
+>>>>>>> 8055579 (.)
                         return $record->created_at->diffForHumans();
                     }),
             ])->columnSpan(4),

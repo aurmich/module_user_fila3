@@ -5,6 +5,10 @@ declare(strict_types=1);
 namespace Modules\User\Console\Commands;
 
 use Illuminate\Console\Command;
+<<<<<<< HEAD
+=======
+use Modules\Xot\Contracts\UserContract;
+>>>>>>> 8055579 (.)
 use Modules\Xot\Datas\XotData;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -38,7 +42,10 @@ class SetCurrentTeamCommand extends Command
         $email = text('email ?');
         if (empty($email)) {
             $this->error('Email non valida!');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
             return;
         }
 
@@ -47,14 +54,22 @@ class SetCurrentTeamCommand extends Command
 
         if (! $user instanceof \Illuminate\Database\Eloquent\Model) {
             $this->error('Utente non trovato o non valido!');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
             return;
         }
 
         $teamClass = $xot->getTeamClass();
+<<<<<<< HEAD
         if (! class_exists($teamClass)) {
             $this->error('Classe team non trovata!');
 
+=======
+        if (!class_exists($teamClass)) {
+            $this->error('Classe team non trovata!');
+>>>>>>> 8055579 (.)
             return;
         }
 
@@ -63,7 +78,10 @@ class SetCurrentTeamCommand extends Command
 
         if (empty($opts)) {
             $this->error('Nessun team disponibile!');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
             return;
         }
 
@@ -74,9 +92,14 @@ class SetCurrentTeamCommand extends Command
             scroll: 10,
         );
 
+<<<<<<< HEAD
         if (! is_numeric($team_id)) {
             $this->error('ID team non valido!');
 
+=======
+        if (!is_numeric($team_id)) {
+            $this->error('ID team non valido!');
+>>>>>>> 8055579 (.)
             return;
         }
 
@@ -85,7 +108,11 @@ class SetCurrentTeamCommand extends Command
             $user->save();
             $this->info('OK');
         } catch (\Exception $e) {
+<<<<<<< HEAD
             $this->error('Errore durante il salvataggio: '.$e->getMessage());
+=======
+            $this->error('Errore durante il salvataggio: ' . $e->getMessage());
+>>>>>>> 8055579 (.)
         }
     }
 

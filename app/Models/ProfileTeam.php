@@ -8,7 +8,11 @@ use Modules\Xot\Contracts\ProfileContract;
 
 /**
  * ProfileTeam Model
+<<<<<<< HEAD
  *
+=======
+ * 
+>>>>>>> 8055579 (.)
  * Represents the relationship between a profile and a team, including the user's role.
  *
  * @property ProfileContract|null $creator
@@ -23,7 +27,10 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $created_by
  * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property string|null $deleted_by
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 8055579 (.)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam query()
@@ -37,7 +44,10 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam whereUserId($value)
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 8055579 (.)
  * @mixin IdeHelperProfileTeam
  * @mixin \Eloquent
  */

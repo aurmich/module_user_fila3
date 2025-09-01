@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
 declare(strict_types=1);
 
 return [

@@ -6,6 +6,7 @@ namespace Modules\User\Filament\Resources\UserResource\Pages;
 
 use Filament\Tables;
 use Filament\Tables\Actions\Action;
+<<<<<<< HEAD
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\Filter;
 use Illuminate\Database\Query\Builder;
@@ -15,6 +16,19 @@ use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Filament\Actions\Header\ExportXlsAction;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
+=======
+use Filament\Tables\Filters\Filter;
+use Illuminate\Database\Query\Builder;
+use Filament\Tables\Columns\TextColumn;
+use Modules\Xot\Contracts\UserContract;
+use Filament\Tables\Actions\ExportBulkAction;
+use Modules\User\Filament\Resources\UserResource;
+use Modules\User\Filament\Actions\ChangePasswordAction;
+use Modules\Xot\Filament\Actions\Header\ExportXlsAction;
+use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
+use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+>>>>>>> 8055579 (.)
 
 abstract class BaseListUsers extends XotBaseListRecords
 {
@@ -35,7 +49,11 @@ abstract class BaseListUsers extends XotBaseListRecords
         ];
     }
 
+<<<<<<< HEAD
     /**
+=======
+     /**
+>>>>>>> 8055579 (.)
      * Get the header actions.
      *
      * @return array<string, \Filament\Actions\Action>
@@ -43,7 +61,11 @@ abstract class BaseListUsers extends XotBaseListRecords
     protected function getHeaderActions(): array
     {
         return [
+<<<<<<< HEAD
             'export_xls' => ExportXlsAction::make('export_xls'),
+=======
+           'export_xls' => ExportXlsAction::make('export_xls'),
+>>>>>>> 8055579 (.)
         ];
     }
 
@@ -69,7 +91,10 @@ abstract class BaseListUsers extends XotBaseListRecords
      * Get table actions for user records.
      *
      * @return array<string, \Filament\Tables\Actions\Action|\Filament\Tables\Actions\ActionGroup>
+<<<<<<< HEAD
      *
+=======
+>>>>>>> 8055579 (.)
      * @phpstan-ignore-next-line
      */
     /** @phpstan-ignore-next-line */
@@ -80,11 +105,19 @@ abstract class BaseListUsers extends XotBaseListRecords
                 ->tooltip('Cambio Password')
                 ->iconButton(),
         ];
+<<<<<<< HEAD
 
         // Add parent actions - merge arrays
         $parentActions = parent::getTableActions();
         $actions = array_merge($actions, $parentActions);
 
+=======
+        
+        // Add parent actions - merge arrays
+        $parentActions = parent::getTableActions();
+        $actions = array_merge($actions, $parentActions);
+        
+>>>>>>> 8055579 (.)
         /*
         // Add deactivate action
         $actions['deactivate'] = Action::make('deactivate')
@@ -92,7 +125,11 @@ abstract class BaseListUsers extends XotBaseListRecords
             ->color('danger')
             ->icon('heroicon-o-trash')
             ->action(static fn (UserContract $user) => $user->delete());
+<<<<<<< HEAD
         */
+=======
+        */   
+>>>>>>> 8055579 (.)
         /** @phpstan-ignore-next-line */
         return $actions;
     }
@@ -105,7 +142,15 @@ abstract class BaseListUsers extends XotBaseListRecords
     protected function getHeaderWidgets(): array
     {
         return [
+<<<<<<< HEAD
             // UserOverview::class
         ];
     }
+=======
+            //UserOverview::class
+        ];
+    }
+
+    
+>>>>>>> 8055579 (.)
 }

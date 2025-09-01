@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources\UserResource\Pages;
 
+<<<<<<< HEAD
 use Filament\Infolists;
 use Modules\User\Filament\Resources\UserResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
@@ -11,6 +12,15 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 /**
  * Base class for viewing user resources.
  *
+=======
+use Modules\User\Filament\Resources\UserResource;
+use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+use Filament\Infolists;
+
+/**
+ * Base class for viewing user resources.
+ * 
+>>>>>>> 8055579 (.)
  * This class provides the base configuration for viewing user resources
  * across the application. It should be extended by specific user type
  * view classes rather than used directly.
@@ -29,6 +39,7 @@ abstract class BaseViewUser extends XotBaseViewRecord
         return [
             'name' => Infolists\Components\TextEntry::make('name')
                 ->label(trans('user::resource.fields.name')),
+<<<<<<< HEAD
 
             'email' => Infolists\Components\TextEntry::make('email')
                 ->label(trans('user::resource.fields.email')),
@@ -43,6 +54,22 @@ abstract class BaseViewUser extends XotBaseViewRecord
                 ->label(trans('user::resource.fields.created_at'))
                 ->dateTime(),
 
+=======
+                
+            'email' => Infolists\Components\TextEntry::make('email')
+                ->label(trans('user::resource.fields.email')),
+                
+            'type' => Infolists\Components\TextEntry::make('type')
+                ->label(trans('user::resource.fields.type')),
+                
+            'state' => Infolists\Components\TextEntry::make('state')
+                ->label(trans('user::resource.fields.state')),
+                
+            'created_at' => Infolists\Components\TextEntry::make('created_at')
+                ->label(trans('user::resource.fields.created_at'))
+                ->dateTime(),
+                
+>>>>>>> 8055579 (.)
             'updated_at' => Infolists\Components\TextEntry::make('updated_at')
                 ->label(trans('user::resource.fields.updated_at'))
                 ->dateTime(),

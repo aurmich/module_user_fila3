@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # LoginWidget Translation Audit - 2025-01-06
 
 ## Audit Overview
@@ -21,6 +22,8 @@ __('user::messages.login_success')
 >>>>>>> 8055579 (.)
 =======
 >>>>>>> d51888e (.)
+=======
+>>>>>>> 8055579 (.)
 # LoginWidget Translation Audit - Gennaio 2025
 
 ## Obiettivo
@@ -37,8 +40,11 @@ __('user::messages.credentials_incorrect')
 __('user::messages.login_success') 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8a21b63 (.)
 =======
+=======
+>>>>>>> 8055579 (.)
 =======
 # LoginWidget Translation Audit - 2025-01-06
 
@@ -56,13 +62,17 @@ Il `LoginWidget` utilizzava le seguenti traduzioni nel namespace `user::messages
 __('user::messages.credentials_incorrect')
 __('user::messages.login_success')
 >>>>>>> a0c18bc (.)
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
 =======
 >>>>>>> d51888e (.)
+=======
+>>>>>>> 8055579 (.)
 __('user::messages.validation_error')
 __('user::messages.login_error')
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -83,6 +93,8 @@ __('user::messages.login_error')
 >>>>>>> 8055579 (.)
 =======
 >>>>>>> d51888e (.)
+=======
+>>>>>>> 8055579 (.)
 ### Stato Pre-Audit
 - ❌ File `messages.php` **non esisteva** in nessuna lingua
 - ✅ File `auth.php` esistenti ma con chiavi diverse
@@ -96,8 +108,11 @@ Creati i seguenti file di traduzione mancanti:
 #### Italiano (`/Modules/User/lang/it/messages.php`)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8a21b63 (.)
 =======
+=======
+>>>>>>> 8055579 (.)
 =======
 ### File Mancante
 - **File**: `Modules/User/lang/{locale}/messages.php`
@@ -112,14 +127,18 @@ Creati i seguenti file di traduzione mancanti:
 
 ### Struttura Implementata
 >>>>>>> a0c18bc (.)
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
 =======
 >>>>>>> d51888e (.)
+=======
+>>>>>>> 8055579 (.)
 ```php
 return [
     // Messaggi di autenticazione per LoginWidget
     'credentials_incorrect' => 'Le credenziali inserite non sono corrette.',
     'login_success' => 'Accesso effettuato con successo.',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -234,6 +253,8 @@ Questo audit dimostra l'importanza di:
 >>>>>>> 8055579 (.)
 =======
 >>>>>>> d51888e (.)
+=======
+>>>>>>> 8055579 (.)
     'login_error' => 'Si è verificato un errore durante l\'accesso. Riprova più tardi.',
     'validation_error' => 'Errore di validazione.',
     // ... 60+ altre chiavi per completezza
@@ -400,10 +421,14 @@ Il pattern può essere applicato a tutti i widget del sistema per garantire cons
 **File modificati**: 3 (it/messages.php, en/messages.php, de/messages.php)  
 **Translation keys aggiunte**: 60+ per lingua  
 <<<<<<< HEAD
+<<<<<<< HEAD
 **LoginWidget status**: ✅ Fully functional in all languages
 <<<<<<< HEAD
 >>>>>>> 8a21b63 (.)
 =======
+=======
+**LoginWidget status**: ✅ Fully functional in all languages
+>>>>>>> 8055579 (.)
 =======
     'login_error' => 'Si è verificato un errore durante l\'accesso.',
     'validation_error' => 'Errore di validazione.',
@@ -512,7 +537,10 @@ Questo audit dimostra l'importanza di:
 
 *Ultimo aggiornamento: 2025-01-06*
 >>>>>>> a0c18bc (.)
+<<<<<<< HEAD
 >>>>>>> 8055579 (.)
 =======
 **LoginWidget status**: ✅ Fully functional in all languages
 >>>>>>> d51888e (.)
+=======
+>>>>>>> 8055579 (.)

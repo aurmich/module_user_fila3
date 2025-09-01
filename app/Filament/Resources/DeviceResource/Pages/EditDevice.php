@@ -7,6 +7,18 @@ namespace Modules\User\Filament\Resources\DeviceResource\Pages;
 use Filament\Actions\DeleteAction;
 use Modules\User\Filament\Resources\DeviceResource;
 
+<<<<<<< HEAD
+=======
+
+
+
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
+
+
+
+
+>>>>>>> 8055579 (.)
 class EditDevice extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord
 {
     protected static string $resource = DeviceResource::class;

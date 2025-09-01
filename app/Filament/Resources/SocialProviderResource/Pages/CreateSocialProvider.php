@@ -5,6 +5,12 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Resources\SocialProviderResource\Pages;
 
 use Modules\User\Filament\Resources\SocialProviderResource;
+<<<<<<< HEAD
+=======
+use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
+
+
+>>>>>>> 8055579 (.)
 
 class CreateSocialProvider extends \Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord
 {

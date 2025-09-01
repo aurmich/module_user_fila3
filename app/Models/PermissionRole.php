@@ -9,11 +9,17 @@ use Webmozart\Assert\Assert;
 /**
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+<<<<<<< HEAD
  *
  * @method static \Illuminate\Database\Eloquent\Builder|PermissionRole newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PermissionRole newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PermissionRole query()
  *
+=======
+ * @method static \Illuminate\Database\Eloquent\Builder|PermissionRole newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PermissionRole newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PermissionRole query()
+>>>>>>> 8055579 (.)
  * @property string $id
  * @property string|null $permission_id
  * @property string|null $role_id
@@ -21,7 +27,10 @@ use Webmozart\Assert\Assert;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 8055579 (.)
  * @method static \Illuminate\Database\Eloquent\Builder|PermissionRole whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PermissionRole whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PermissionRole whereId($value)
@@ -29,7 +38,10 @@ use Webmozart\Assert\Assert;
  * @method static \Illuminate\Database\Eloquent\Builder|PermissionRole whereRoleId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PermissionRole whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PermissionRole whereUpdatedBy($value)
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 8055579 (.)
  * @mixin IdeHelperPermissionRole
  * @mixin \Eloquent
  */

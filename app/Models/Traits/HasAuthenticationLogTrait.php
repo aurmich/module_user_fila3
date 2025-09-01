@@ -16,8 +16,13 @@ use Modules\User\Models\AuthenticationLog;
  * It includes methods for retrieving the latest authentication logs, login timestamps, IP addresses,
  * and other related information, including tracking consecutive login days.
  *
+<<<<<<< HEAD
  * @property MorphMany<AuthenticationLog, $this> $authentications The authentication logs related to the model.
  * @property MorphOne<AuthenticationLog, $this> $latestAuthentication The most recent authentication log entry.
+=======
+ * @property MorphMany<AuthenticationLog, $this> $authentications      The authentication logs related to the model.
+ * @property MorphOne<AuthenticationLog, $this>  $latestAuthentication The most recent authentication log entry.
+>>>>>>> 8055579 (.)
  * @property-read string|null $login_at The timestamp of the last login.
  * @property-read string|null $ip_address The IP address of the last login.
  * @property MorphMany<AuthenticationLog> $authentications
@@ -68,7 +73,10 @@ trait HasAuthenticationLogTrait
     {
         /** @var AuthenticationLog|null $auth */
         $auth = $this->authentications()->first();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
         return $auth !== null ? $auth->login_at : null;
     }
 
@@ -81,7 +89,10 @@ trait HasAuthenticationLogTrait
     {
         /** @var AuthenticationLog|null $auth */
         $auth = $this->authentications()->where('login_successful', true)->first();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
         return $auth !== null ? $auth->login_at : null;
     }
 
@@ -94,7 +105,10 @@ trait HasAuthenticationLogTrait
     {
         /** @var AuthenticationLog|null $auth */
         $auth = $this->authentications()->first();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
         return $auth !== null ? $auth->ip_address : null;
     }
 
@@ -107,7 +121,10 @@ trait HasAuthenticationLogTrait
     {
         /** @var AuthenticationLog|null $auth */
         $auth = $this->authentications()->where('login_successful', true)->first();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
         return $auth !== null ? $auth->ip_address : null;
     }
 
@@ -120,7 +137,10 @@ trait HasAuthenticationLogTrait
     {
         /** @var AuthenticationLog|null $auth */
         $auth = $this->authentications()->skip(1)->first();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
         return $auth !== null ? $auth->login_at : null;
     }
 
@@ -133,7 +153,10 @@ trait HasAuthenticationLogTrait
     {
         /** @var AuthenticationLog|null $auth */
         $auth = $this->authentications()->skip(1)->first();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
         return $auth !== null ? $auth->ip_address : null;
     }
 

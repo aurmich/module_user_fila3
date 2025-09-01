@@ -6,6 +6,10 @@ namespace Modules\User\Filament\Resources\UserResource\RelationManagers;
 
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+<<<<<<< HEAD
+=======
+use Filament\Forms\Form;
+>>>>>>> 8055579 (.)
 use Filament\Tables\Actions\AttachAction;
 use Filament\Tables\Actions\DeleteBulkAction;
 use Filament\Tables\Actions\DetachAction;
@@ -15,6 +19,17 @@ use Filament\Tables\Table;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+>>>>>>> 8055579 (.)
 class RolesRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'roles';

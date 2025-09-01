@@ -27,7 +27,10 @@ namespace Modules\User\Models;
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  * @property \Illuminate\Database\Eloquent\Collection<int, User> $users
  * @property int|null $users_count
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 8055579 (.)
  * @method static \Modules\User\Database\Factories\TeamFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Team newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Team newQuery()
@@ -42,6 +45,7 @@ namespace Modules\User\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Team whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Team whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Team whereUserId($value)
+<<<<<<< HEAD
  *
  * @property string|null $code
  *
@@ -55,6 +59,14 @@ namespace Modules\User\Models;
  *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Team whereOwnerId($value)
  *
+=======
+ * @property string|null $code
+ * @method static \Illuminate\Database\Eloquent\Builder|Team whereCode($value)
+ * @property string|null $uuid
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Team whereUuid($value)
+ * @property string|null $owner_id
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Team whereOwnerId($value)
+>>>>>>> 8055579 (.)
  * @mixin IdeHelperTeam
  * @mixin \Eloquent
  */

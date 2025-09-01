@@ -4,20 +4,37 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Traits;
 
+<<<<<<< HEAD
+=======
+use Illuminate\Database\Eloquent\Model;
+>>>>>>> 8055579 (.)
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Collection;
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Str;
+use Modules\User\Contracts\HasTeamsContract;
+>>>>>>> 8055579 (.)
 use Modules\User\Contracts\TeamContract;
 use Modules\User\Models\Membership;
 use Modules\User\Models\Role;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Webmozart\Assert\Assert;
+<<<<<<< HEAD
 
 /**
  * Trait HasTeams
  *
+=======
+use Illuminate\Support\Facades\Schema;
+
+/**
+ * Trait HasTeams
+ * 
+>>>>>>> 8055579 (.)
  * Provides team functionality for User models implementing team-based organization.
  * This trait handles team ownership, membership, permissions, and relationships.
  *
@@ -77,7 +94,10 @@ trait HasTeams
             return false;
         }
         Assert::isInstanceOf($found, TeamContract::class, 'Team must implement TeamContract.');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
         return true;
     }
 
@@ -179,12 +199,21 @@ trait HasTeams
         if ($owner === null) {
             return $this->teamUsers;
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
         return $this->teamUsers->merge([$owner]);
     }
 
     /**
      * Determine if the given user is on the team.
+<<<<<<< HEAD
+=======
+     *
+     * @param UserContract $user
+     * @return bool
+>>>>>>> 8055579 (.)
      */
     public function hasTeamMember(UserContract $user): bool
     {
@@ -226,7 +255,10 @@ trait HasTeams
         }
 
         $teamRole = $this->teamRole($team);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
         return $teamRole !== null && isset($teamRole->name) && $teamRole->name === $role;
     }
 
@@ -261,7 +293,11 @@ trait HasTeams
     {
         $xot = XotData::make();
         $teamClass = $xot->getTeamClass();
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 8055579 (.)
         return $this->hasMany($teamClass, 'user_id');
     }
 
@@ -274,7 +310,10 @@ trait HasTeams
     {
         /** @var \Illuminate\Database\Eloquent\Relations\HasMany<\Modules\User\Models\Membership, $this> $relation */
         $relation = $this->hasMany(\Modules\User\Models\Membership::class, 'user_id');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
         return $relation;
     }
 
@@ -292,20 +331,32 @@ trait HasTeams
 
         // Accesso sicuro alla proprietà role usando getAttribute
         $role = $teamUser->getAttribute('role');
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 8055579 (.)
         return $role instanceof Role ? $role : null;
     }
 
     /**
      * Get permissions for a specific team.
      *
+<<<<<<< HEAD
+=======
+     * @param TeamContract $team
+>>>>>>> 8055579 (.)
      * @return array<int, string>
      */
     public function teamPermissions(TeamContract $team): array
     {
         $role = $this->teamRole($team);
 
+<<<<<<< HEAD
         if ($role === null || ! $role->permissions) {
+=======
+        if ($role === null || !$role->permissions) {
+>>>>>>> 8055579 (.)
             return [];
         }
 
@@ -330,6 +381,11 @@ trait HasTeams
 
     /**
      * Get the user's personal team.
+<<<<<<< HEAD
+=======
+     *
+     * @return \Modules\User\Contracts\TeamContract|null
+>>>>>>> 8055579 (.)
      */
     public function personalTeam(): ?TeamContract
     {
@@ -341,6 +397,11 @@ trait HasTeams
 
     /**
      * Switch the user's context to the given team.
+<<<<<<< HEAD
+=======
+     *
+     * @param TeamContract $team
+>>>>>>> 8055579 (.)
      */
     public function switchTeam(?TeamContract $team): bool
     {
@@ -372,6 +433,11 @@ trait HasTeams
 
     /**
      * Determine if the user owns the given team.
+<<<<<<< HEAD
+=======
+     *
+     * @param TeamContract $team
+>>>>>>> 8055579 (.)
      */
     public function ownsTeam(TeamContract $team): bool
     {
@@ -484,6 +550,11 @@ trait HasTeams
 
     /**
      * Determine if the user owns the given team.
+<<<<<<< HEAD
+=======
+     *
+     * @param TeamContract $team
+>>>>>>> 8055579 (.)
      */
     public function checkTeamOwnership(TeamContract $team): bool
     {

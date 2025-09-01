@@ -66,12 +66,18 @@ class Reset extends Component
 
         if ($response === Password::PASSWORD_RESET) {
             session()->flash($response_lang);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
             return redirect(route('home'));
         }
 
         $this->addError('email', $response_lang);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
         return null;
     }
 
@@ -95,7 +101,11 @@ class Reset extends Component
         $view = 'pub_theme::livewire.auth.passwords.reset';
 
         return view($view, [
+<<<<<<< HEAD
             'layout' => 'pub_theme::layouts.auth',
+=======
+            'layout' => 'pub_theme::layouts.auth'
+>>>>>>> 8055579 (.)
         ]);
     }
 

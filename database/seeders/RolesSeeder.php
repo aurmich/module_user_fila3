@@ -5,6 +5,11 @@ declare(strict_types=1);
 namespace Modules\User\Database\Seeders;
 
 use Illuminate\Database\Seeder;
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Collection;
+use Modules\User\Enums\UserTypeEnum;
+>>>>>>> 8055579 (.)
 use Modules\User\Models\Role;
 
 class RolesSeeder extends Seeder
@@ -20,6 +25,11 @@ class RolesSeeder extends Seeder
         'Guard',
     ];
 
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> 8055579 (.)
     /**
      * Run the database seeds.
      */
@@ -27,6 +37,11 @@ class RolesSeeder extends Seeder
     {
         $roles = [];
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 8055579 (.)
         // Display results in a table format
         $this->displayResults($roles);
     }
@@ -34,7 +49,11 @@ class RolesSeeder extends Seeder
     /**
      * Display the seeding results in a table format.
      *
+<<<<<<< HEAD
      * @param  array<int, Role>  $roles
+=======
+     * @param array<int, Role> $roles
+>>>>>>> 8055579 (.)
      */
     private function displayResults(array $roles): void
     {

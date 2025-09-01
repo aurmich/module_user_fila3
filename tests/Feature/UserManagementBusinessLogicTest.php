@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Feature;
 
+<<<<<<< HEAD
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\Hash;
 use Modules\User\Models\Permission;
@@ -15,6 +16,19 @@ use Tests\TestCase;
 class UserManagementBusinessLogicTest extends TestCase
 {
 
+=======
+use Modules\User\Models\User;
+use Modules\User\Models\Profile;
+use Modules\User\Models\Role;
+use Modules\User\Models\Permission;
+use Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Hash;
+
+class UserManagementBusinessLogicTest extends TestCase
+{
+    use RefreshDatabase;
+>>>>>>> 8055579 (.)
 
     /** @test */
     public function it_can_create_user_with_profile(): void
@@ -52,8 +66,13 @@ class UserManagementBusinessLogicTest extends TestCase
             'address' => 'Via Roma 123, Milano',
         ]);
 
+<<<<<<< HEAD
         expect(Profile::class, $user->profile);
         expect($user->id, $profile->user_id);
+=======
+        $this->assertInstanceOf(Profile::class, $user->profile);
+        $this->assertEquals($user->id, $profile->user_id);
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -67,8 +86,13 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->assignRole($role);
 
         // Assert
+<<<<<<< HEAD
         expect($user->hasRole('doctor'));
         expect($user->hasRole($role));
+=======
+        $this->assertTrue($user->hasRole('doctor'));
+        $this->assertTrue($user->hasRole($role));
+>>>>>>> 8055579 (.)
         $this->assertContains($role->name, $user->getRoleNames()->toArray());
     }
 
@@ -84,11 +108,19 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->assignRole([$role1, $role2]);
 
         // Assert
+<<<<<<< HEAD
         expect($user->hasRole('doctor'));
         expect($user->hasRole('admin'));
         expect($user->hasRole($role1));
         expect($user->hasRole($role2));
         expect(2, $user->getRoleNames());
+=======
+        $this->assertTrue($user->hasRole('doctor'));
+        $this->assertTrue($user->hasRole('admin'));
+        $this->assertTrue($user->hasRole($role1));
+        $this->assertTrue($user->hasRole($role2));
+        $this->assertCount(2, $user->getRoleNames());
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -103,9 +135,15 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->removeRole($role);
 
         // Assert
+<<<<<<< HEAD
         expect($user->hasRole('doctor'));
         expect($user->hasRole($role));
         expect(0, $user->getRoleNames());
+=======
+        $this->assertFalse($user->hasRole('doctor'));
+        $this->assertFalse($user->hasRole($role));
+        $this->assertCount(0, $user->getRoleNames());
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -123,10 +161,17 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->syncRoles([$role2, $role3]);
 
         // Assert
+<<<<<<< HEAD
         expect($user->hasRole('doctor'));
         expect($user->hasRole('admin'));
         expect($user->hasRole('nurse'));
         expect(2, $user->getRoleNames());
+=======
+        $this->assertFalse($user->hasRole('doctor'));
+        $this->assertTrue($user->hasRole('admin'));
+        $this->assertTrue($user->hasRole('nurse'));
+        $this->assertCount(2, $user->getRoleNames());
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -141,9 +186,15 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->assignRole($role);
 
         // Act & Assert
+<<<<<<< HEAD
         expect($user->hasPermissionTo('patients.read'));
         expect($user->hasPermissionTo($permission));
         expect($user->can('patients.read'));
+=======
+        $this->assertTrue($user->hasPermissionTo('patients.read'));
+        $this->assertTrue($user->hasPermissionTo($permission));
+        $this->assertTrue($user->can('patients.read'));
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -157,9 +208,15 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->givePermissionTo($permission);
 
         // Assert
+<<<<<<< HEAD
         expect($user->hasPermissionTo('special.permission'));
         expect($user->hasPermissionTo($permission));
         expect($user->can('special.permission'));
+=======
+        $this->assertTrue($user->hasPermissionTo('special.permission'));
+        $this->assertTrue($user->hasPermissionTo($permission));
+        $this->assertTrue($user->can('special.permission'));
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -174,9 +231,15 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->revokePermissionTo($permission);
 
         // Assert
+<<<<<<< HEAD
         expect($user->hasPermissionTo('special.permission'));
         expect($user->hasPermissionTo($permission));
         expect($user->can('special.permission'));
+=======
+        $this->assertFalse($user->hasPermissionTo('special.permission'));
+        $this->assertFalse($user->hasPermissionTo($permission));
+        $this->assertFalse($user->can('special.permission'));
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -190,9 +253,15 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->assignRole($role1);
 
         // Act & Assert
+<<<<<<< HEAD
         expect($user->hasAnyRole(['doctor', 'nurse']));
         expect($user->hasAnyRole(['nurse', 'admin']));
         expect($user->hasAnyRole(['nurse', 'admin']));
+=======
+        $this->assertTrue($user->hasAnyRole(['doctor', 'nurse']));
+        $this->assertTrue($user->hasAnyRole(['nurse', 'admin']));
+        $this->assertFalse($user->hasAnyRole(['nurse', 'admin']));
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -206,8 +275,13 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->assignRole([$role1, $role2]);
 
         // Act & Assert
+<<<<<<< HEAD
         expect($user->hasAllRoles(['doctor', 'admin']));
         expect($user->hasAllRoles(['doctor', 'nurse']));
+=======
+        $this->assertTrue($user->hasAllRoles(['doctor', 'admin']));
+        $this->assertFalse($user->hasAllRoles(['doctor', 'nurse']));
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -226,9 +300,15 @@ class UserManagementBusinessLogicTest extends TestCase
         $permissions = $user->getAllPermissions();
 
         // Assert
+<<<<<<< HEAD
         expect(2, $permissions);
         expect($permissions->contains($permission1));
         expect($permissions->contains($permission2));
+=======
+        $this->assertCount(2, $permissions);
+        $this->assertTrue($permissions->contains($permission1));
+        $this->assertTrue($permissions->contains($permission2));
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -245,7 +325,11 @@ class UserManagementBusinessLogicTest extends TestCase
         $roles = $user->getRoleNames();
 
         // Assert
+<<<<<<< HEAD
         expect(2, $roles);
+=======
+        $this->assertCount(2, $roles);
+>>>>>>> 8055579 (.)
         $this->assertContains('doctor', $roles);
         $this->assertContains('admin', $roles);
     }
@@ -260,8 +344,13 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->assignRole($superAdminRole);
 
         // Act & Assert
+<<<<<<< HEAD
         expect($user->hasRole('super-admin'));
         expect($user->isSuperAdmin());
+=======
+        $this->assertTrue($user->hasRole('super-admin'));
+        $this->assertTrue($user->isSuperAdmin());
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -274,8 +363,13 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->assignRole($adminRole);
 
         // Act & Assert
+<<<<<<< HEAD
         expect($user->hasRole('admin'));
         expect($user->isAdmin());
+=======
+        $this->assertTrue($user->hasRole('admin'));
+        $this->assertTrue($user->isAdmin());
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -288,8 +382,13 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->assignRole($doctorRole);
 
         // Act & Assert
+<<<<<<< HEAD
         expect($user->hasRole('doctor'));
         expect($user->isDoctor());
+=======
+        $this->assertTrue($user->hasRole('doctor'));
+        $this->assertTrue($user->isDoctor());
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -302,8 +401,13 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->assignRole($patientRole);
 
         // Act & Assert
+<<<<<<< HEAD
         expect($user->hasRole('patient'));
         expect($user->isPatient());
+=======
+        $this->assertTrue($user->hasRole('patient'));
+        $this->assertTrue($user->isPatient());
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -409,10 +513,17 @@ class UserManagementBusinessLogicTest extends TestCase
         $results = User::where('name', 'like', '%Rossi%')->get();
 
         // Assert
+<<<<<<< HEAD
         expect(2, $results);
         expect($results->contains($user1));
         expect($results->contains($user3));
         expect($results->contains($user2));
+=======
+        $this->assertCount(2, $results);
+        $this->assertTrue($results->contains($user1));
+        $this->assertTrue($results->contains($user3));
+        $this->assertFalse($results->contains($user2));
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -427,10 +538,17 @@ class UserManagementBusinessLogicTest extends TestCase
         $results = User::where('email', 'like', '%@example%')->get();
 
         // Assert
+<<<<<<< HEAD
         expect(2, $results);
         expect($results->contains($user1));
         expect($results->contains($user3));
         expect($results->contains($user2));
+=======
+        $this->assertCount(2, $results);
+        $this->assertTrue($results->contains($user1));
+        $this->assertTrue($results->contains($user3));
+        $this->assertFalse($results->contains($user2));
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -452,10 +570,17 @@ class UserManagementBusinessLogicTest extends TestCase
         $doctors = User::role('doctor')->get();
 
         // Assert
+<<<<<<< HEAD
         expect(2, $doctors);
         expect($doctors->contains($user1));
         expect($doctors->contains($user3));
         expect($doctors->contains($user2));
+=======
+        $this->assertCount(2, $doctors);
+        $this->assertTrue($doctors->contains($user1));
+        $this->assertTrue($doctors->contains($user3));
+        $this->assertFalse($doctors->contains($user2));
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -476,9 +601,15 @@ class UserManagementBusinessLogicTest extends TestCase
         $usersWithPermission = User::permission('patients.read')->get();
 
         // Assert
+<<<<<<< HEAD
         expect(1, $usersWithPermission);
         expect($usersWithPermission->contains($user1));
         expect($usersWithPermission->contains($user2));
+=======
+        $this->assertCount(1, $usersWithPermission);
+        $this->assertTrue($usersWithPermission->contains($user1));
+        $this->assertFalse($usersWithPermission->contains($user2));
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -497,11 +628,19 @@ class UserManagementBusinessLogicTest extends TestCase
         $userWithRelations = User::with(['roles', 'permissions'])->find($user->id);
 
         // Assert
+<<<<<<< HEAD
         expect($userWithRelations);
         expect($userWithRelations->relationLoaded('roles'));
         expect($userWithRelations->relationLoaded('permissions'));
         expect(1, $userWithRelations->roles);
         expect(1, $userWithRelations->permissions);
+=======
+        $this->assertNotNull($userWithRelations);
+        $this->assertTrue($userWithRelations->relationLoaded('roles'));
+        $this->assertTrue($userWithRelations->relationLoaded('permissions'));
+        $this->assertCount(1, $userWithRelations->roles);
+        $this->assertCount(1, $userWithRelations->permissions);
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -563,8 +702,13 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->markEmailAsVerified();
 
         // Assert
+<<<<<<< HEAD
         expect($user->email_verified_at);
         expect($user->hasVerifiedEmail());
+=======
+        $this->assertNotNull($user->email_verified_at);
+        $this->assertTrue($user->hasVerifiedEmail());
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -594,13 +738,21 @@ class UserManagementBusinessLogicTest extends TestCase
         $user->update(['status' => 'inactive']);
 
         // Assert
+<<<<<<< HEAD
         expect('inactive', $user->fresh()->status);
+=======
+        $this->assertEquals('inactive', $user->fresh()->status);
+>>>>>>> 8055579 (.)
 
         // Act - Activate user
         $user->update(['status' => 'active']);
 
         // Assert
+<<<<<<< HEAD
         expect('active', $user->fresh()->status);
+=======
+        $this->assertEquals('active', $user->fresh()->status);
+>>>>>>> 8055579 (.)
     }
 
     /** @test */
@@ -624,9 +776,19 @@ class UserManagementBusinessLogicTest extends TestCase
             'preferences' => json_encode($preferences),
         ]);
 
+<<<<<<< HEAD
         expect('it', $user->fresh()->preferences['language']);
         expect('Europe/Rome', $user->fresh()->preferences['timezone']);
         expect($user->fresh()->preferences['notifications']);
         expect('dark', $user->fresh()->preferences['theme']);
     }
 }
+=======
+        $this->assertEquals('it', $user->fresh()->preferences['language']);
+        $this->assertEquals('Europe/Rome', $user->fresh()->preferences['timezone']);
+        $this->assertTrue($user->fresh()->preferences['notifications']);
+        $this->assertEquals('dark', $user->fresh()->preferences['theme']);
+    }
+}
+
+>>>>>>> 8055579 (.)

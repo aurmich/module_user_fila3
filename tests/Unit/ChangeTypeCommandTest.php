@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 use Illuminate\Console\Command;
 use Modules\User\Console\Commands\ChangeTypeCommand;
 use Modules\Xot\Datas\XotData;
@@ -9,6 +10,16 @@ use Modules\Xot\Datas\XotData;
 describe('ChangeTypeCommand', function () {
     beforeEach(function () {
         $this->command = new ChangeTypeCommand;
+=======
+use Modules\User\Console\Commands\ChangeTypeCommand;
+use Modules\Xot\Datas\XotData;
+use Modules\Xot\Contracts\UserContract;
+use Illuminate\Console\Command;
+
+describe('ChangeTypeCommand', function () {
+    beforeEach(function () {
+        $this->command = new ChangeTypeCommand();
+>>>>>>> 8055579 (.)
     });
 
     it('can be instantiated', function () {
@@ -28,14 +39,22 @@ describe('ChangeTypeCommand', function () {
         $reflection = new ReflectionClass($this->command);
         $nameProperty = $reflection->getProperty('name');
         $nameProperty->setAccessible(true);
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 8055579 (.)
         expect($nameProperty->getValue($this->command))->toBe('user:change-type');
     });
 
     it('can access XotData instance', function () {
         // Test that XotData can be instantiated (basic dependency check)
         $xotData = XotData::make();
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 8055579 (.)
         expect($xotData)->toBeInstanceOf(XotData::class);
     });
 
@@ -62,7 +81,11 @@ describe('ChangeTypeCommand', function () {
         // Mock the basic flow without actual user interaction
         $reflection = new ReflectionClass($this->command);
         $method = $reflection->getMethod('handle');
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 8055579 (.)
         expect($method->isPublic())->toBeTrue()
             ->and($method->getReturnType()?->getName())->toBe('void');
     });
@@ -70,7 +93,11 @@ describe('ChangeTypeCommand', function () {
     it('validates command constructor', function () {
         $reflection = new ReflectionClass($this->command);
         $constructor = $reflection->getConstructor();
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 8055579 (.)
         expect($constructor)->not->toBeNull()
             ->and($constructor->isPublic())->toBeTrue();
     });
@@ -79,7 +106,11 @@ describe('ChangeTypeCommand', function () {
         // Test that the command has the necessary structure for error handling
         $reflection = new ReflectionClass($this->command);
         $handleMethod = $reflection->getMethod('handle');
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 8055579 (.)
         expect($handleMethod)->not->toBeNull();
     });
 
@@ -91,15 +122,22 @@ describe('ChangeTypeCommand', function () {
     it('implements proper type checking', function () {
         // Verify that the command structure supports proper type checking
         $reflection = new ReflectionClass($this->command);
+<<<<<<< HEAD
 
         expect($reflection->hasMethod('handle'))->toBeTrue();
 
+=======
+        
+        expect($reflection->hasMethod('handle'))->toBeTrue();
+        
+>>>>>>> 8055579 (.)
         $handleMethod = $reflection->getMethod('handle');
         expect($handleMethod->getReturnType()?->getName())->toBe('void');
     });
 
     it('has proper command properties structure', function () {
         $reflection = new ReflectionClass($this->command);
+<<<<<<< HEAD
 
         // Check for name property
         expect($reflection->hasProperty('name'))->toBeTrue();
@@ -110,6 +148,18 @@ describe('ChangeTypeCommand', function () {
         // Check for description property
         expect($reflection->hasProperty('description'))->toBeTrue();
 
+=======
+        
+        // Check for name property
+        expect($reflection->hasProperty('name'))->toBeTrue();
+        
+        $nameProperty = $reflection->getProperty('name');
+        expect($nameProperty->isProtected())->toBeTrue();
+        
+        // Check for description property
+        expect($reflection->hasProperty('description'))->toBeTrue();
+        
+>>>>>>> 8055579 (.)
         $descriptionProperty = $reflection->getProperty('description');
         expect($descriptionProperty->isProtected())->toBeTrue();
     });
@@ -129,7 +179,11 @@ describe('ChangeTypeCommand', function () {
     it('has proper docblock documentation', function () {
         $reflection = new ReflectionClass($this->command);
         $docComment = $reflection->getDocComment();
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 8055579 (.)
         expect($docComment)->toBeString()
             ->and($docComment)->toContain('Command to change user type');
     });

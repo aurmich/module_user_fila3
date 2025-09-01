@@ -29,6 +29,10 @@ use Illuminate\Support\Collection;
 use Modules\User\Models\Device;
 use Modules\User\Models\DeviceUser;
 use Modules\User\Models\Role;
+<<<<<<< HEAD
+=======
+use Modules\Xot\Contracts\UserContract;
+>>>>>>> 8055579 (.)
 use Modules\Xot\Datas\XotData;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Permission\Exceptions\RoleDoesNotExist;
@@ -61,7 +65,12 @@ trait IsProfileTrait
      * Ottiene il nome completo dell'utente.
      * Utilizza prima i dati del profilo, altrimenti ricade sul nome dell'utente.
      *
+<<<<<<< HEAD
      * @param  string|null  $value  Il valore attuale dell'attributo
+=======
+     * @param string|null $value Il valore attuale dell'attributo
+     * 
+>>>>>>> 8055579 (.)
      * @return string|null Il nome completo dell'utente
      */
     public function getFullNameAttribute(?string $value): ?string
@@ -75,7 +84,11 @@ trait IsProfileTrait
             return null;
         }
 
+<<<<<<< HEAD
         $res = $this->first_name.' '.$this->last_name;
+=======
+        $res = $this->first_name . ' ' . $this->last_name;
+>>>>>>> 8055579 (.)
         if (mb_strlen($res) > 2) {
             return $res;
         }
@@ -87,7 +100,12 @@ trait IsProfileTrait
      * Ottiene il nome dell'utente.
      * Se non presente nel profilo, lo recupera dall'utente collegato.
      *
+<<<<<<< HEAD
      * @param  string|null  $value  Il valore attuale dell'attributo
+=======
+     * @param string|null $value Il valore attuale dell'attributo
+     * 
+>>>>>>> 8055579 (.)
      * @return string|null Il nome dell'utente
      */
     public function getFirstNameAttribute(?string $value): ?string
@@ -114,7 +132,12 @@ trait IsProfileTrait
      * Ottiene il cognome dell'utente.
      * Se non presente nel profilo, lo recupera dall'utente collegato.
      *
+<<<<<<< HEAD
      * @param  string|null  $value  Il valore attuale dell'attributo
+=======
+     * @param string|null $value Il valore attuale dell'attributo
+     * 
+>>>>>>> 8055579 (.)
      * @return string|null Il cognome dell'utente
      */
     public function getLastNameAttribute(?string $value): ?string
@@ -171,12 +194,21 @@ trait IsProfileTrait
      * Se l'utente non è super-admin, assegna super-admin e rimuove negate-super-admin.
      *
      * @throws \Exception Se l'utente non è disponibile
+<<<<<<< HEAD
+=======
+     * 
+     * @return void
+>>>>>>> 8055579 (.)
      */
     public function toggleSuperAdmin(): void
     {
         $user = $this->user;
         if ($user === null) {
+<<<<<<< HEAD
             throw new \Exception('['.__LINE__.']['.class_basename($this).']');
+=======
+            throw new \Exception('[' . __LINE__ . '][' . class_basename($this) . ']');
+>>>>>>> 8055579 (.)
         }
         $to_assign = 'super-admin';
         $to_remove = 'negate-super-admin';
@@ -258,12 +290,21 @@ trait IsProfileTrait
         // PHPStan livello 9 richiede il controllo che il risultato sia del tipo corretto
         $tokens = $this->mobileDeviceUsers()
             ->pluck('token')
+<<<<<<< HEAD
             ->filter(fn ($value) => $value !== null && is_string($value));
+=======
+            ->filter(fn($value) => $value !== null && is_string($value));
+>>>>>>> 8055579 (.)
 
         /** @var \Illuminate\Support\Collection<int|string, string> */
         return $tokens;
     }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 8055579 (.)
     /**
      * Get the user's user_name.
      * Ottiene il nome utente dal modello utente collegato.
@@ -278,7 +319,10 @@ trait IsProfileTrait
                 if ($user === null) {
                     return null;
                 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
                 return $user->name;
             }
         );

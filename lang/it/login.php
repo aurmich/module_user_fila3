@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 return [
     'fields' => [
         'email' => [
@@ -22,3 +23,31 @@ return [
         ],
     ],
 ];
+=======
+return array (
+  'fields' =>
+  array (
+    'email' =>
+    array (
+      'label' => 'email',
+      'description' => 'email',
+      'helper_text' => '',
+      'placeholder' => 'email',
+    ),
+    'password' =>
+    array (
+      'label' => 'password',
+      'description' => 'password',
+      'helper_text' => '',
+      'placeholder' => 'password',
+    ),
+    'remember' =>
+    array (
+      'label' => 'remember',
+      'description' => 'remember',
+      'helper_text' => '',
+      'placeholder' => 'remember',
+    ),
+  ),
+);
+>>>>>>> 8055579 (.)

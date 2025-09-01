@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Widgets;
 
+<<<<<<< HEAD
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Facades\Filament;
@@ -28,6 +29,41 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 /**
  * Widget for handling expired password reset.
  *
+=======
+use Filament\Forms;
+use Filament\Forms\Form;
+use Illuminate\Support\Arr;
+use Filament\Actions\Action;
+use Filament\Widgets\Widget;
+use Webmozart\Assert\Assert;
+use Filament\Facades\Filament;
+use Filament\Actions\ActionGroup;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Modules\User\Datas\PasswordData;
+use Filament\Forms\ComponentContainer;
+use Filament\Forms\Contracts\HasForms;
+use Illuminate\Support\Facades\Schema;
+use Modules\User\Events\NewPasswordSet;
+use Filament\Forms\Components\Component;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Form as FilamentForm;
+use Filament\Notifications\Notification;
+use Modules\User\Rules\CheckOtpExpiredRule;
+use Modules\Xot\Filament\Traits\TransTrait;
+use Filament\Forms\Concerns\InteractsWithForms;
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+use Filament\Pages\Concerns\InteractsWithFormActions;
+use Modules\User\Http\Response\PasswordResetResponse;
+use Illuminate\Validation\Rules\Password as PasswordRule;
+use Illuminate\Auth\Events\PasswordReset as PasswordResetResponseEvent; 
+
+
+/**
+ * Widget for handling expired password reset.
+ * 
+>>>>>>> 8055579 (.)
  * @property ComponentContainer $form
  * @property string|null $current_password
  * @property string|null $password
@@ -40,9 +76,13 @@ class PasswordExpiredWidget extends XotBaseWidget implements HasForms
     use TransTrait;
 
     public ?string $current_password = '';
+<<<<<<< HEAD
 
     public ?string $password = '';
 
+=======
+    public ?string $password = '';
+>>>>>>> 8055579 (.)
     public ?string $passwordConfirmation = '';
 
     /** @var array<string, mixed>|null */
@@ -70,6 +110,11 @@ class PasswordExpiredWidget extends XotBaseWidget implements HasForms
 
     /**
      * Get the reset password form action.
+<<<<<<< HEAD
+=======
+     *
+     * @return Action
+>>>>>>> 8055579 (.)
      */
     public function getResetPasswordFormAction(): Action
     {
@@ -79,6 +124,11 @@ class PasswordExpiredWidget extends XotBaseWidget implements HasForms
 
     /**
      * Check if the widget should display a logo.
+<<<<<<< HEAD
+=======
+     *
+     * @return bool
+>>>>>>> 8055579 (.)
      */
     public function hasLogo(): bool
     {
@@ -87,15 +137,25 @@ class PasswordExpiredWidget extends XotBaseWidget implements HasForms
 
     /**
      * Reset the user's password.
+<<<<<<< HEAD
+=======
+     *
+     * @return PasswordResetResponse|null
+>>>>>>> 8055579 (.)
      */
     public function resetPassword(): ?PasswordResetResponse
     {
         $this->validate();
 
         $user = Auth::user();
+<<<<<<< HEAD
         if (! $user || ! ($user instanceof \Illuminate\Database\Eloquent\Model)) {
             $this->addError('current_password', __('user::auth.user_not_found'));
 
+=======
+        if (!$user || !($user instanceof \Illuminate\Database\Eloquent\Model)) {
+            $this->addError('current_password', __('user::auth.user_not_found'));
+>>>>>>> 8055579 (.)
             return null;
         }
 
@@ -103,31 +163,52 @@ class PasswordExpiredWidget extends XotBaseWidget implements HasForms
         $data = $this->data ?? [];
         $currentPassword = SafeStringCastAction::cast($data['current_password'] ?? '');
         $newPassword = SafeStringCastAction::cast($data['password'] ?? '');
+<<<<<<< HEAD
 
         if (empty($currentPassword) || empty($newPassword)) {
             $this->addError('current_password', __('user::auth.password_fields_required'));
 
+=======
+        
+        if (empty($currentPassword) || empty($newPassword)) {
+            $this->addError('current_password', __('user::auth.password_fields_required'));
+>>>>>>> 8055579 (.)
             return null;
         }
 
         $userPassword = SafeStringCastAction::cast($user->getAttribute('password'));
         // Cast esplicito di mixed a string per PHPStan
         $userPasswordString = $userPassword;
+<<<<<<< HEAD
 
         if (! Hash::check($currentPassword, $userPasswordString)) {
             $this->addError('current_password', __('user::auth.password_current_incorrect'));
 
+=======
+        
+        if (!Hash::check($currentPassword, $userPasswordString)) {
+            $this->addError('current_password', __('user::auth.password_current_incorrect'));
+>>>>>>> 8055579 (.)
             return null;
         }
 
         $user->setAttribute('password', Hash::make($newPassword));
         $user->save();
 
+<<<<<<< HEAD
         return new PasswordResetResponse;
+=======
+        return new PasswordResetResponse();
+>>>>>>> 8055579 (.)
     }
 
     /**
      * Get the current password form component.
+<<<<<<< HEAD
+=======
+     *
+     * @return Component
+>>>>>>> 8055579 (.)
      */
     protected function getCurrentPasswordFormComponent(): Component
     {

@@ -12,27 +12,41 @@ use Illuminate\Support\Carbon;
  * @property int $id
  * @property int $permission_id
  * @property int $role_id
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 8055579 (.)
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission query()
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission wherePermissionId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission whereRoleId($value)
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 8055579 (.)
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 8055579 (.)
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RoleHasPermission whereUpdatedBy($value)
+<<<<<<< HEAD
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
+=======
+ * @property \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+>>>>>>> 8055579 (.)
  * @mixin IdeHelperRoleHasPermission
  * @mixin \Eloquent
  */

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Models;
 
+<<<<<<< HEAD
 use Filament\Models\Contracts\HasName;
 <<<<<<< HEAD
 use Illuminate\Support\Facades\Schema;
@@ -18,11 +19,28 @@ use Spatie\Permission\Traits\HasPermissions;
 use Spatie\Permission\Traits\HasPermissions;
 >>>>>>> a0c18bc (.)
 >>>>>>> 8055579 (.)
+=======
+use Filament\Panel;
+use Parental\HasChildren;
+use Illuminate\Support\Str;
+use Modules\Xot\Datas\XotData;
+use Spatie\MediaLibrary\HasMedia;
+use Laravel\Passport\HasApiTokens;
+use Illuminate\Support\Facades\Hash;
+use Filament\Models\Contracts\HasName;
+use Illuminate\Support\Facades\Schema;
+use Spatie\Permission\Traits\HasRoles;
+<<<<<<< HEAD
+=======
+use Spatie\Permission\Traits\HasPermissions;
+>>>>>>> a0c18bc (.)
+>>>>>>> 8055579 (.)
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Contracts\UserContract;
 use Illuminate\Notifications\Notifiable;
 use Modules\User\Models\Traits\HasTeams;
 use Modules\Xot\Models\Traits\RelationX;
+<<<<<<< HEAD
 =======
 >>>>>>> d51888e (.)
 use Filament\Models\Contracts\HasTenants;
@@ -52,6 +70,25 @@ use Parental\HasChildren;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Permission\Traits\HasRoles;
+=======
+use Filament\Models\Contracts\HasTenants;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Illuminate\Database\Eloquent\Collection;
+use Modules\User\Database\Factories\UserFactory;
+use Modules\Xot\Actions\Factory\GetFactoryAction;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Notifications\DatabaseNotification;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Notifications\DatabaseNotificationCollection;
+>>>>>>> 8055579 (.)
 
 /**
  * Base User Model
@@ -59,7 +96,10 @@ use Spatie\Permission\Traits\HasRoles;
  * This is the base user model that provides the core authentication and authorization
  * functionality for the application. It extends Laravel's Authenticatable class
  * and implements the required interfaces for Filament and multi-tenancy.
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 8055579 (.)
  * @property Collection<int, OauthClient> $clients
  * @property int|null $clients_count
  * @property Team|null $currentTeam
@@ -139,6 +179,7 @@ use Spatie\Permission\Traits\HasRoles;
  *
  * @mixin \Eloquent
  */
+<<<<<<< HEAD
 abstract class BaseUser extends Authenticatable implements HasMedia, HasName, HasTenants, UserContract
 {
     use HasApiTokens;
@@ -167,6 +208,29 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
     use Traits\HasAuthenticationLogTrait;
     use Traits\HasTeams;
     use Traits\HasTenants;
+=======
+abstract class BaseUser extends Authenticatable implements HasName, HasTenants, UserContract,HasMedia
+{
+
+
+    use HasApiTokens;
+    use HasFactory;
+    use HasRoles;
+<<<<<<< HEAD
+=======
+    use HasPermissions;
+>>>>>>> a0c18bc (.)
+    // Guard coerente con Spatie/Permission
+    use HasUuids;
+    use Notifiable;
+    use RelationX;
+    use Traits\HasAuthenticationLogTrait;
+    use Traits\HasTenants;
+    use Traits\HasTeams;
+    use HasChildren;
+    use InteractsWithMedia;
+
+>>>>>>> 8055579 (.)
 
     public $incrementing = false;
 
@@ -221,17 +285,29 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
     ];
 
+<<<<<<< HEAD
     /** @var array<string, mixed> */
     protected $attributes = [
         // 'state' => Pending::class,
         // 'state' => 'pending',
         'is_otp' => false,
         'is_active' => true,
+=======
+    /** @var array<string, mixed>  */
+    protected $attributes = [
+        //'state' => Pending::class,
+        //'state' => 'pending',
+        'is_otp'=>false,
+        'is_active'=>true,
+>>>>>>> 8055579 (.)
     ];
 
     /**
      * Guard coerente con Spatie/Permission: deve essere 'web'.
+<<<<<<< HEAD
      *
+=======
+>>>>>>> 8055579 (.)
      * @var string
      */
     protected $guard_name = 'web';
@@ -262,6 +338,11 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
     /**
      * Get the user's name for Filament.
+<<<<<<< HEAD
+=======
+     *
+     * @return string
+>>>>>>> 8055579 (.)
      */
     public function getFilamentName(): string
     {
@@ -301,12 +382,22 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
     }
 
     public function assignModule(string $module): void
+<<<<<<< HEAD
     {
         $role_name = $module.'::admin';
         $role = Role::firstOrCreate(['name' => $role_name]);
         $this->assignRole($role);
     }
 
+=======
+    {   
+        $role_name=$module.'::admin';
+        $role=Role::firstOrCreate(['name' => $role_name]);
+        $this->assignRole($role);
+    }
+
+
+>>>>>>> 8055579 (.)
     public function canAccessPanel(Panel $panel): bool
     {
         // $panel->default('admin');
@@ -356,7 +447,11 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
     public function treeSons(): Collection
     {
+<<<<<<< HEAD
         return $this->teams ?? new Collection;
+=======
+        return $this->teams ?? new Collection();
+>>>>>>> 8055579 (.)
     }
 
     /**
@@ -388,7 +483,10 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
         }
 
         $res = $socialiteUser->{$field};
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
         return (string) $res;
     }
 
@@ -417,7 +515,11 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
     public function getFullNameAttribute(?string $value): ?string
     {
+<<<<<<< HEAD
         return $value ?? $this->first_name.' '.$this->last_name;
+=======
+        return $value ?? $this->first_name . ' ' . $this->last_name;
+>>>>>>> 8055579 (.)
     }
 
     public function getNameAttribute(?string $value): ?string
@@ -428,7 +530,11 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
         $name = Str::of((string) $this->email)->before('@')->toString();
         $i = 1;
+<<<<<<< HEAD
         $candidate = $name.'-'.$i;
+=======
+        $candidate = $name . '-' . $i;
+>>>>>>> 8055579 (.)
 
         // During unit tests, avoid any DB interaction.
         $isTesting = (function (): bool {
@@ -436,13 +542,20 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
             if (method_exists($app, 'environment') && $app->environment('testing')) {
                 return true;
             }
+<<<<<<< HEAD
 
             return PHP_SAPI === 'cli' && (getenv('APP_ENV') === 'testing' || getenv('ENV') === 'testing');
+=======
+            return (PHP_SAPI === 'cli' && (getenv('APP_ENV') === 'testing' || getenv('ENV') === 'testing'));
+>>>>>>> 8055579 (.)
         })();
         if ($isTesting) {
             // Do not call update() here to avoid hitting the database.
             $this->attributes['name'] = $candidate;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
             return $candidate;
         }
 
@@ -450,7 +563,11 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
             $value = $candidate;
             while (self::firstWhere(['name' => $value]) !== null) {
                 $i++;
+<<<<<<< HEAD
                 $value = $name.'-'.$i;
+=======
+                $value = $name . '-' . $i;
+>>>>>>> 8055579 (.)
             }
             $this->update(['name' => $value]);
 
@@ -458,7 +575,10 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
         } catch (\Throwable $e) {
             // If any issue occurs (e.g., missing connection/table), fall back without DB.
             $this->attributes['name'] = $candidate;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
             return $candidate;
         }
     }
@@ -498,15 +618,31 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
         ];
     }
 
+<<<<<<< HEAD
     // public function authentications(): MorphMany
     // {
     //    return $this->morphMany(\Modules\User\Models\Authentication::class, 'authenticatable');
     // }
+=======
+
+
+
+    //public function authentications(): MorphMany
+    //{
+    //    return $this->morphMany(\Modules\User\Models\Authentication::class, 'authenticatable');
+    //}
+>>>>>>> 8055579 (.)
 
     /**
      * Check if the user has a specific role.
      *
+<<<<<<< HEAD
      * @param  array|\Illuminate\Support\Collection|int|\Spatie\Permission\Contracts\Role|string  $roles
+=======
+     * @param array|\Illuminate\Support\Collection|int|\Spatie\Permission\Contracts\Role|string $roles
+     * @param string|null $guard
+     * @return bool
+>>>>>>> 8055579 (.)
      */
     public function hasRole($roles, ?string $guard = null): bool
     {
@@ -524,7 +660,10 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
                     return true;
                 }
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
             return false;
         }
 
@@ -539,6 +678,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
         return false;
     }
 
+<<<<<<< HEAD
     public function setPasswordAttribute(?string $value): void
     {
         if (empty($value)) {
@@ -553,4 +693,18 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
         }
         $this->attributes['password'] = $value;
     }
+=======
+    public function setPasswordAttribute(?string $value): void{
+        if(empty($value)){
+            unset($this->attributes['password']);
+            return;
+        }
+        if(strlen($value)<32){
+            $this->attributes['password']=Hash::make($value);
+            return;
+        }
+        $this->attributes['password']=$value;
+    }
+
+>>>>>>> 8055579 (.)
 }

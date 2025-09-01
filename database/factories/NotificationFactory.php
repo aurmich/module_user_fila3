@@ -10,16 +10,26 @@ use Modules\User\Models\User;
 
 /**
  * Notification Factory
+<<<<<<< HEAD
  *
  * Factory for creating Notification model instances for testing and seeding.
  *
+=======
+ * 
+ * Factory for creating Notification model instances for testing and seeding.
+ * 
+>>>>>>> 8055579 (.)
  * @extends Factory<Notification>
  */
 class NotificationFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> 8055579 (.)
      * @var class-string<Notification>
      */
     protected $model = Notification::class;
@@ -53,6 +63,11 @@ class NotificationFactory extends Factory
 
     /**
      * Create an unread notification.
+<<<<<<< HEAD
+=======
+     *
+     * @return static
+>>>>>>> 8055579 (.)
      */
     public function unread(): static
     {
@@ -63,6 +78,11 @@ class NotificationFactory extends Factory
 
     /**
      * Create a read notification.
+<<<<<<< HEAD
+=======
+     *
+     * @return static
+>>>>>>> 8055579 (.)
      */
     public function read(): static
     {
@@ -73,6 +93,12 @@ class NotificationFactory extends Factory
 
     /**
      * Create notification for a specific user.
+<<<<<<< HEAD
+=======
+     *
+     * @param User $user
+     * @return static
+>>>>>>> 8055579 (.)
      */
     public function forUser(User $user): static
     {
@@ -82,6 +108,7 @@ class NotificationFactory extends Factory
         ]);
     }
 
+<<<<<<< HEAD
     /**
      * Create notification with high priority.
      */
@@ -104,6 +131,35 @@ class NotificationFactory extends Factory
 
     /**
      * Create notification with specific type.
+=======
+         /**
+      * Create notification with high priority.
+      *
+      * @return static
+      */
+     public function highPriority(): static
+     {
+         return $this->state(fn (array $attributes): array => [
+             'data' => array_merge(
+                 is_array($attributes['data'] ?? null) ? $attributes['data'] : [
+                     'title' => $this->faker->sentence(4),
+                     'message' => $this->faker->text(200),
+                     'action_url' => $this->faker->optional()->url(),
+                     'priority' => 'medium',
+                 ],
+                 [
+                     'priority' => 'high',
+                 ]
+             ),
+         ]);
+     }
+
+    /**
+     * Create notification with specific type.
+     *
+     * @param string $type
+     * @return static
+>>>>>>> 8055579 (.)
      */
     public function ofType(string $type): static
     {
@@ -111,4 +167,8 @@ class NotificationFactory extends Factory
             'type' => $type,
         ]);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 8055579 (.)

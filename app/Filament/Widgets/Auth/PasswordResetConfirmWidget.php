@@ -27,6 +27,7 @@ use Webmozart\Assert\Assert;
 class PasswordResetConfirmWidget extends XotBaseWidget
 {
     public ?array $data = [];
+<<<<<<< HEAD
 
     public ?string $token = null;
 
@@ -34,6 +35,11 @@ class PasswordResetConfirmWidget extends XotBaseWidget
 
     public string $currentState = 'form'; // form, success, error, expired
 
+=======
+    public ?string $token = null;
+    public ?string $email = null;
+    public string $currentState = 'form'; // form, success, error, expired
+>>>>>>> 8055579 (.)
     public ?string $errorMessage = null;
 
     /**
@@ -68,7 +74,11 @@ class PasswordResetConfirmWidget extends XotBaseWidget
                 ->required()
                 ->autocomplete('email')
                 ->maxLength(255)
+<<<<<<< HEAD
                 ->disabled($this->currentState !== 'form')
+=======
+                ->disabled('form' !== $this->currentState)
+>>>>>>> 8055579 (.)
                 ->extraInputAttributes(['class' => 'text-center'])
                 ->suffixIcon('heroicon-o-envelope'),
 
@@ -77,7 +87,11 @@ class PasswordResetConfirmWidget extends XotBaseWidget
                 ->required()
                 ->revealable()
                 ->minLength(8)
+<<<<<<< HEAD
                 ->disabled($this->currentState !== 'form')
+=======
+                ->disabled('form' !== $this->currentState)
+>>>>>>> 8055579 (.)
                 ->extraInputAttributes(['class' => 'text-center'])
                 ->suffixIcon('heroicon-o-key'),
 
@@ -85,7 +99,11 @@ class PasswordResetConfirmWidget extends XotBaseWidget
                 ->password()
                 ->required()
                 ->same('password')
+<<<<<<< HEAD
                 ->disabled($this->currentState !== 'form')
+=======
+                ->disabled('form' !== $this->currentState)
+>>>>>>> 8055579 (.)
                 ->extraInputAttributes(['class' => 'text-center'])
                 ->suffixIcon('heroicon-o-key'),
         ];
@@ -96,7 +114,11 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function confirmPasswordReset(): void
     {
+<<<<<<< HEAD
         if ($this->currentState !== 'form') {
+=======
+        if ('form' !== $this->currentState) {
+>>>>>>> 8055579 (.)
             return;
         }
 
@@ -120,7 +142,11 @@ class PasswordResetConfirmWidget extends XotBaseWidget
                 }
             );
 
+<<<<<<< HEAD
             if ($response === Password::PASSWORD_RESET) {
+=======
+            if (Password::PASSWORD_RESET === $response) {
+>>>>>>> 8055579 (.)
                 $this->currentState = 'success';
 
                 Notification::make()
@@ -212,7 +238,11 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function isLoading(): bool
     {
+<<<<<<< HEAD
         return $this->currentState === 'loading';
+=======
+        return 'loading' === $this->currentState;
+>>>>>>> 8055579 (.)
     }
 
     /**
@@ -220,7 +250,11 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function isSuccess(): bool
     {
+<<<<<<< HEAD
         return $this->currentState === 'success';
+=======
+        return 'success' === $this->currentState;
+>>>>>>> 8055579 (.)
     }
 
     /**
@@ -228,6 +262,10 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function hasError(): bool
     {
+<<<<<<< HEAD
         return $this->currentState === 'error';
+=======
+        return 'error' === $this->currentState;
+>>>>>>> 8055579 (.)
     }
 }

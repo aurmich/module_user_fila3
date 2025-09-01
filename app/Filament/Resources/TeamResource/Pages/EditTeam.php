@@ -8,6 +8,18 @@ use Filament\Actions\DeleteAction;
 use Filament\Pages\Actions\ViewAction;
 use Modules\User\Filament\Resources\TeamResource;
 
+<<<<<<< HEAD
+=======
+
+
+
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
+
+
+
+
+>>>>>>> 8055579 (.)
 class EditTeam extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord
 {
     // //

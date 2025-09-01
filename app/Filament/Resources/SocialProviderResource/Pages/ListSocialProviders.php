@@ -9,6 +9,11 @@ use Filament\Tables\Columns\TextColumn;
 use Modules\User\Filament\Resources\SocialProviderResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 8055579 (.)
 /**
  * --.
  */

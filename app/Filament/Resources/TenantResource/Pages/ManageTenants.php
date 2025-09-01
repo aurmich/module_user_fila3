@@ -7,6 +7,18 @@ namespace Modules\User\Filament\Resources\TenantResource\Pages;
 use Filament\Resources\Pages\ManageRecords;
 use Modules\User\Filament\Resources\TenantResource;
 
+<<<<<<< HEAD
+=======
+
+
+
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
+
+
+
+
+>>>>>>> 8055579 (.)
 class ManageTenants extends ManageRecords
 {
     protected static string $resource = TenantResource::class;

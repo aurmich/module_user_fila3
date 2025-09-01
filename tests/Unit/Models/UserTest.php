@@ -4,14 +4,22 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Unit\Models;
 
+<<<<<<< HEAD
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+=======
+use Illuminate\Foundation\Testing\RefreshDatabase;
+>>>>>>> 8055579 (.)
 use Illuminate\Support\Facades\Hash;
 use Modules\User\Models\User;
 use Tests\TestCase;
 
 class UserTest extends TestCase
 {
+<<<<<<< HEAD
 
+=======
+    use RefreshDatabase;
+>>>>>>> 8055579 (.)
 
     public function test_can_create_user_with_minimal_data(): void
     {
@@ -25,7 +33,11 @@ class UserTest extends TestCase
             'email' => 'test@example.com',
         ]);
 
+<<<<<<< HEAD
         expect(Hash::check('password', $user->password));
+=======
+        $this->assertTrue(Hash::check('password', $user->password));
+>>>>>>> 8055579 (.)
     }
 
     public function test_can_create_user_with_all_fields(): void
@@ -92,7 +104,11 @@ class UserTest extends TestCase
         $restoredUser->restore();
 
         $this->assertDatabaseHas('users', ['id' => $userId]);
+<<<<<<< HEAD
         expect($restoredUser->deleted_at);
+=======
+        $this->assertNull($restoredUser->deleted_at);
+>>>>>>> 8055579 (.)
     }
 
     public function test_can_find_user_by_email(): void
@@ -101,8 +117,13 @@ class UserTest extends TestCase
 
         $foundUser = User::where('email', 'unique@example.com')->first();
 
+<<<<<<< HEAD
         expect($foundUser);
         expect($user->id, $foundUser->id);
+=======
+        $this->assertNotNull($foundUser);
+        $this->assertEquals($user->id, $foundUser->id);
+>>>>>>> 8055579 (.)
     }
 
     public function test_can_find_user_by_name_pattern(): void
@@ -113,8 +134,13 @@ class UserTest extends TestCase
 
         $doeUsers = User::where('name', 'like', '%Doe%')->get();
 
+<<<<<<< HEAD
         expect(2, $doeUsers);
         expect($doeUsers->every(fn ($user) => str_contains($user->name, 'Doe')));
+=======
+        $this->assertCount(2, $doeUsers);
+        $this->assertTrue($doeUsers->every(fn ($user) => str_contains($user->name, 'Doe')));
+>>>>>>> 8055579 (.)
     }
 
     public function test_can_find_user_by_status(): void
@@ -125,8 +151,13 @@ class UserTest extends TestCase
 
         $activeUsers = User::where('status', 'active')->get();
 
+<<<<<<< HEAD
         expect(1, $activeUsers);
         expect('active', $activeUsers->first()->status);
+=======
+        $this->assertCount(1, $activeUsers);
+        $this->assertEquals('active', $activeUsers->first()->status);
+>>>>>>> 8055579 (.)
     }
 
     public function test_can_find_user_by_type(): void
@@ -137,8 +168,13 @@ class UserTest extends TestCase
 
         $individualUsers = User::where('type', 'individual')->get();
 
+<<<<<<< HEAD
         expect(1, $individualUsers);
         expect('individual', $individualUsers->first()->type);
+=======
+        $this->assertCount(1, $individualUsers);
+        $this->assertEquals('individual', $individualUsers->first()->type);
+>>>>>>> 8055579 (.)
     }
 
     public function test_can_find_user_by_city(): void
@@ -149,8 +185,13 @@ class UserTest extends TestCase
 
         $nyUsers = User::where('city', 'New York')->get();
 
+<<<<<<< HEAD
         expect(1, $nyUsers);
         expect('New York', $nyUsers->first()->city);
+=======
+        $this->assertCount(1, $nyUsers);
+        $this->assertEquals('New York', $nyUsers->first()->city);
+>>>>>>> 8055579 (.)
     }
 
     public function test_can_find_user_by_registration_number(): void
@@ -159,8 +200,13 @@ class UserTest extends TestCase
 
         $foundUser = User::where('registration_number', 'REG123456')->first();
 
+<<<<<<< HEAD
         expect($foundUser);
         expect($user->id, $foundUser->id);
+=======
+        $this->assertNotNull($foundUser);
+        $this->assertEquals($user->id, $foundUser->id);
+>>>>>>> 8055579 (.)
     }
 
     public function test_can_find_user_by_phone(): void
@@ -169,8 +215,13 @@ class UserTest extends TestCase
 
         $foundUser = User::where('phone', '+1234567890')->first();
 
+<<<<<<< HEAD
         expect($foundUser);
         expect($user->id, $foundUser->id);
+=======
+        $this->assertNotNull($foundUser);
+        $this->assertEquals($user->id, $foundUser->id);
+>>>>>>> 8055579 (.)
     }
 
     public function test_can_find_user_by_language(): void
@@ -181,8 +232,13 @@ class UserTest extends TestCase
 
         $englishUsers = User::where('lang', 'en')->get();
 
+<<<<<<< HEAD
         expect(1, $englishUsers);
         expect('en', $englishUsers->first()->lang);
+=======
+        $this->assertCount(1, $englishUsers);
+        $this->assertEquals('en', $englishUsers->first()->lang);
+>>>>>>> 8055579 (.)
     }
 
     public function test_can_find_active_users(): void
@@ -193,8 +249,13 @@ class UserTest extends TestCase
 
         $activeUsers = User::where('is_active', true)->get();
 
+<<<<<<< HEAD
         expect(2, $activeUsers);
         expect($activeUsers->every(fn ($user) => $user->is_active));
+=======
+        $this->assertCount(2, $activeUsers);
+        $this->assertTrue($activeUsers->every(fn ($user) => $user->is_active));
+>>>>>>> 8055579 (.)
     }
 
     public function test_can_find_otp_users(): void
@@ -205,8 +266,13 @@ class UserTest extends TestCase
 
         $otpUsers = User::where('is_otp', true)->get();
 
+<<<<<<< HEAD
         expect(2, $otpUsers);
         expect($otpUsers->every(fn ($user) => $user->is_otp));
+=======
+        $this->assertCount(2, $otpUsers);
+        $this->assertTrue($otpUsers->every(fn ($user) => $user->is_otp));
+>>>>>>> 8055579 (.)
     }
 
     public function test_can_update_user(): void
@@ -225,14 +291,24 @@ class UserTest extends TestCase
     {
         $user = User::factory()->create();
 
+<<<<<<< HEAD
         expect($user->canAccessSocialite());
+=======
+        $this->assertTrue($user->canAccessSocialite());
+>>>>>>> 8055579 (.)
     }
 
     public function test_user_has_connection_attribute(): void
     {
+<<<<<<< HEAD
         $user = new User;
 
         expect('user', $user->connection);
+=======
+        $user = new User();
+
+        $this->assertEquals('user', $user->connection);
+>>>>>>> 8055579 (.)
     }
 
     public function test_can_find_users_by_multiple_criteria(): void
@@ -259,8 +335,13 @@ class UserTest extends TestCase
             ->where('city', 'New York')
             ->get();
 
+<<<<<<< HEAD
         expect(2, $users);
         expect($users->every(fn ($user) => $user->status === 'active' && $user->city === 'New York'));
+=======
+        $this->assertCount(2, $users);
+        $this->assertTrue($users->every(fn ($user) => $user->status === 'active' && $user->city === 'New York'));
+>>>>>>> 8055579 (.)
     }
 
     public function test_can_handle_null_values(): void

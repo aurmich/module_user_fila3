@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 return [
     'actions' => [
         'edit' => [
@@ -7,3 +8,14 @@ return [
         ],
     ],
 ];
+=======
+return array (
+  'actions' => 
+  array (
+    'edit' => 
+    array (
+      'label' => 'edit',
+    ),
+  ),
+);
+>>>>>>> 8055579 (.)

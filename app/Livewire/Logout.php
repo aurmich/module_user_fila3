@@ -1,13 +1,23 @@
 <?php
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
 declare(strict_types=1);
 
 namespace Modules\User\Livewire;
 
+<<<<<<< HEAD
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
+=======
+use Livewire\Component;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Contracts\View\View;
+>>>>>>> 8055579 (.)
 
 /**
  * Logout component for handling user logout functionality.
@@ -35,7 +45,10 @@ class Logout extends Component
         } catch (\Exception $e) {
             $this->processing = false;
             session()->flash('error', __('Errore durante il logout. Riprova.'));
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
             return null;
         }
     }

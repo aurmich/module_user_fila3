@@ -8,11 +8,26 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Resources\TenantResource\RelationManagers;
 
 use Filament\Forms;
+<<<<<<< HEAD
+=======
+use Filament\Forms\Form;
+>>>>>>> 8055579 (.)
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Support\Str;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+>>>>>>> 8055579 (.)
 class DomainsRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'domains';

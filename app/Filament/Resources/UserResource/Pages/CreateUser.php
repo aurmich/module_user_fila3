@@ -5,6 +5,12 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Resources\UserResource\Pages;
 
 use Modules\User\Filament\Resources\UserResource;
+<<<<<<< HEAD
+=======
+use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
+
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+>>>>>>> 8055579 (.)
 
 class CreateUser extends \Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord
 {

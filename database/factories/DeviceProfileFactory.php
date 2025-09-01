@@ -8,15 +8,26 @@ use Modules\User\Models\DeviceProfile;
 
 /**
  * DeviceProfile Factory
+<<<<<<< HEAD
  *
  * Factory for creating DeviceProfile model instances for testing and seeding.
  * Extends DeviceUserFactory since DeviceProfile extends DeviceUser.
+=======
+ * 
+ * Factory for creating DeviceProfile model instances for testing and seeding.
+ * Extends DeviceUserFactory since DeviceProfile extends DeviceUser.
+ * 
+>>>>>>> 8055579 (.)
  */
 class DeviceProfileFactory extends DeviceUserFactory
 {
     /**
      * The name of the factory's corresponding model.
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> 8055579 (.)
      * @var class-string<DeviceProfile>
      */
     protected $model = DeviceProfile::class;

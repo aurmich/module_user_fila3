@@ -64,4 +64,8 @@ return [
             'description' => 'Il valore inserito è troppo corto.',
         ],
     ],
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> 8055579 (.)

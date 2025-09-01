@@ -11,7 +11,11 @@ use Modules\User\Models\RoleHasPermission;
 
 /**
  * RoleHasPermission Factory
+<<<<<<< HEAD
  *
+=======
+ * 
+>>>>>>> 8055579 (.)
  * @extends Factory<RoleHasPermission>
  */
 class RoleHasPermissionFactory extends Factory

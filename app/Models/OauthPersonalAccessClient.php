@@ -15,7 +15,10 @@ use Laravel\Passport\PersonalAccessClient as PassportPersonalAccessClient;
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property OauthClient|null $client
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 8055579 (.)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthPersonalAccessClient newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|OauthPersonalAccessClient newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|OauthPersonalAccessClient query()
@@ -23,6 +26,7 @@ use Laravel\Passport\PersonalAccessClient as PassportPersonalAccessClient;
  * @method static \Illuminate\Database\Eloquent\Builder|OauthPersonalAccessClient whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthPersonalAccessClient whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthPersonalAccessClient whereUuid($value)
+<<<<<<< HEAD
  *
  * @property int $id
  *
@@ -34,6 +38,14 @@ use Laravel\Passport\PersonalAccessClient as PassportPersonalAccessClient;
  * @method static \Illuminate\Database\Eloquent\Builder|OauthPersonalAccessClient whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthPersonalAccessClient whereUpdatedBy($value)
  *
+=======
+ * @property int $id
+ * @method static \Illuminate\Database\Eloquent\Builder|OauthPersonalAccessClient whereId($value)
+ * @property string|null $updated_by
+ * @property string|null $created_by
+ * @method static \Illuminate\Database\Eloquent\Builder|OauthPersonalAccessClient whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OauthPersonalAccessClient whereUpdatedBy($value)
+>>>>>>> 8055579 (.)
  * @mixin IdeHelperOauthPersonalAccessClient
  * @mixin \Eloquent
  */

@@ -16,6 +16,11 @@ use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Models\User;
 use Webmozart\Assert\Assert;
 
+<<<<<<< HEAD
+=======
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
+>>>>>>> 8055579 (.)
 /**
  * Pagina per la modifica degli utenti con particolare gestione della password.
  */
@@ -39,15 +44,23 @@ class EditUser extends EditRecord
         $newPassword = $data['new_password'];
 
         // Verifichiamo il tipo e convertiamo in modo sicuro
+<<<<<<< HEAD
         if (! is_string($newPassword)) {
             if (! is_scalar($newPassword)) {
+=======
+        if (!is_string($newPassword)) {
+            if (!is_scalar($newPassword)) {
+>>>>>>> 8055579 (.)
                 throw new \InvalidArgumentException('La password deve essere una stringa');
             }
             $newPassword = (string) $newPassword;
         }
 
         $this->record->update(['password' => Hash::make($newPassword)]);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8055579 (.)
         return $data;
     }
 

@@ -11,16 +11,26 @@ use Modules\User\Models\User;
 
 /**
  * OauthAccessToken Factory
+<<<<<<< HEAD
  *
  * Factory for creating OauthAccessToken model instances for testing and seeding.
  *
+=======
+ * 
+ * Factory for creating OauthAccessToken model instances for testing and seeding.
+ * 
+>>>>>>> 8055579 (.)
  * @extends Factory<OauthAccessToken>
  */
 class OauthAccessTokenFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> 8055579 (.)
      * @var class-string<OauthAccessToken>
      */
     protected $model = OauthAccessToken::class;
@@ -38,7 +48,11 @@ class OauthAccessTokenFactory extends Factory
             'client_id' => OauthClient::factory(),
             'name' => $this->faker->optional()->words(2, true),
             'scopes' => $this->faker->optional()->randomElements([
+<<<<<<< HEAD
                 'read', 'write', 'admin', 'user',
+=======
+                'read', 'write', 'admin', 'user'
+>>>>>>> 8055579 (.)
             ], $this->faker->numberBetween(1, 3)),
             'revoked' => $this->faker->boolean(10), // 10% revoked
             'expires_at' => $this->faker->dateTimeBetween('now', '+1 year'),
@@ -47,6 +61,11 @@ class OauthAccessTokenFactory extends Factory
 
     /**
      * Create a revoked token.
+<<<<<<< HEAD
+=======
+     *
+     * @return static
+>>>>>>> 8055579 (.)
      */
     public function revoked(): static
     {
@@ -57,6 +76,11 @@ class OauthAccessTokenFactory extends Factory
 
     /**
      * Create an active token.
+<<<<<<< HEAD
+=======
+     *
+     * @return static
+>>>>>>> 8055579 (.)
      */
     public function active(): static
     {
@@ -68,6 +92,12 @@ class OauthAccessTokenFactory extends Factory
 
     /**
      * Create token for a specific user.
+<<<<<<< HEAD
+=======
+     *
+     * @param User $user
+     * @return static
+>>>>>>> 8055579 (.)
      */
     public function forUser(User $user): static
     {
@@ -78,6 +108,12 @@ class OauthAccessTokenFactory extends Factory
 
     /**
      * Create token for a specific client.
+<<<<<<< HEAD
+=======
+     *
+     * @param OauthClient $client
+     * @return static
+>>>>>>> 8055579 (.)
      */
     public function forClient(OauthClient $client): static
     {
@@ -89,7 +125,12 @@ class OauthAccessTokenFactory extends Factory
     /**
      * Create token with specific scopes.
      *
+<<<<<<< HEAD
      * @param  array<string>  $scopes
+=======
+     * @param array<string> $scopes
+     * @return static
+>>>>>>> 8055579 (.)
      */
     public function withScopes(array $scopes): static
     {
@@ -97,4 +138,8 @@ class OauthAccessTokenFactory extends Factory
             'scopes' => $scopes,
         ]);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 8055579 (.)
