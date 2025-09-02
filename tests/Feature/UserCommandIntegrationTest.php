@@ -2,7 +2,15 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Feature\UserCommandIntegrationTest;
+=======
+use Modules\User\Console\Commands\ChangeTypeCommand;
+use Modules\Xot\Datas\XotData;
+use Modules\Xot\Contracts\UserContract;
+use Illuminate\Console\Application;
+use Illuminate\Support\Facades\Artisan;
+>>>>>>> 03c98ee (.)
 
 
     });
