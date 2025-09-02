@@ -2,21 +2,23 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-namespace Modules\User\Tests\Feature\UserCommandIntegrationTest;
-=======
 use Modules\User\Console\Commands\ChangeTypeCommand;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Contracts\UserContract;
 use Illuminate\Console\Application;
 use Illuminate\Support\Facades\Artisan;
->>>>>>> 03c98ee (.)
 
-
+describe('User Command Integration', function () {
+    beforeEach(function () {
+        $this->command = new ChangeTypeCommand();
+        $application = new Application(app());
+        $application->add($this->command);
     });
 
     it('can be registered with Laravel artisan', function () {
         // Test that the command can be registered
+        $application = new Application(app());
+        $application->add($this->command);
 
         expect($application->has('user:change-type'))->toBeTrue();
     });
@@ -47,7 +49,7 @@ use Illuminate\Support\Facades\Artisan;
 
     it('validates Webmozart Assert integration', function () {
         // Test that Assert class is available and usable
-        expect(class_exists('Webmozart\Assert\Assert'))->toBeTrue();
+        expect(class_exists('Webmozart\\Assert\\Assert'))->toBeTrue();
 
         // Test basic assertion functionality
         expect(fn () => \Webmozart\Assert\Assert::notNull('test'))
@@ -57,7 +59,8 @@ use Illuminate\Support\Facades\Artisan;
     it('integrates with Illuminate Support Arr', function () {
         // Test Arr helper functionality
         $testArray = ['a' => 1, 'b' => 2, 'c' => 3];
-
+        $result = \Illuminate\Support\Arr::mapWithKeys($testArray, function ($value, $key) {
+            return ["{$key}_mapped" => $value * 2];
         });
 
         expect($result)->toBeArray()
@@ -91,9 +94,9 @@ use Illuminate\Support\Facades\Artisan;
 
     it('validates user contract integration', function () {
         // Test UserContract interface
-        expect(interface_exists('Modules\Xot\Contracts\UserContract'))->toBeTrue();
+        expect(interface_exists('Modules\\Xot\\Contracts\\UserContract'))->toBeTrue();
 
-        $reflection = new ReflectionClass('Modules\Xot\Contracts\UserContract');
+        $reflection = new ReflectionClass('Modules\\Xot\\Contracts\\UserContract');
         expect($reflection->isInterface())->toBeTrue();
     });
 
@@ -113,7 +116,7 @@ use Illuminate\Support\Facades\Artisan;
 
     it('can work with type checking utilities', function () {
         // Test type checking functions used in the command
-
+        $testObject = (object) ['value' => 123];
 
         expect(is_object($testObject))->toBeTrue()
             ->and(property_exists($testObject, 'value'))->toBeTrue()
@@ -132,14 +135,16 @@ use Illuminate\Support\Facades\Artisan;
     it('handles string manipulation correctly', function () {
         // Test string operations used in the command
         $testString = 'TestValue';
-
+        expect(strlen($testString) > 0)->toBeTrue()
             ->and(is_string($testString))->toBeTrue();
     });
 
     it('validates array operations', function () {
         // Test array operations used in the command
         $testArray = ['key1' => 'value1', 'key2' => 'value2'];
-
+        $mapped = [];
+        foreach ($testArray as $k => $v) {
+            $mapped["{$k}_suffix"] = $v === 'value1' ? 'value1_modified' : $v;
         }
 
         expect($mapped)->toBeArray()
@@ -174,7 +179,7 @@ use Illuminate\Support\Facades\Artisan;
 
     it('can access Laravel facades', function () {
         // Test that Laravel facades are available
-        expect(class_exists('Illuminate\Support\Facades\Facade'))->toBeTrue();
+        expect(class_exists('Illuminate\\Support\\Facades\\Facade'))->toBeTrue();
     });
 
     it('handles reflection operations correctly', function () {
@@ -193,6 +198,7 @@ use Illuminate\Support\Facades\Artisan;
 
     it('can handle object property access safely', function () {
         // Test safe property access patterns
+        $testObject = (object) ['testProperty' => 'ok'];
 
         expect(property_exists($testObject, 'testProperty'))->toBeTrue()
             ->and(property_exists($testObject, 'nonExistentProperty'))->toBeFalse();

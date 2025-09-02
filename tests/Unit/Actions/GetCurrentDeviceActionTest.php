@@ -6,9 +6,6 @@ namespace Modules\User\Tests\Unit\Actions\GetCurrentDeviceActionTest;
 
 namespace Modules\User\Tests\Unit\Actions;
 
-<<<<<<< HEAD
-
-=======
 use Modules\User\Actions\GetCurrentDeviceAction;
 use Modules\User\Models\Device;
 use Tests\TestCase;
@@ -19,7 +16,6 @@ class GetCurrentDeviceActionTest extends TestCase
 {
 
     private GetCurrentDeviceAction $action;
->>>>>>> 03c98ee (.)
     private Agent $mockAgent;
 
     protected function setUp(): void
