@@ -55,3 +55,4 @@ echo \Modules\User\Models\User::count();
 ```
 
 Ultimo aggiornamento: Gennaio 2025
+
