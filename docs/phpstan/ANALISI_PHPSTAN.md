@@ -191,6 +191,6 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli u
 - Verificare l'impatto delle correzioni sugli altri moduli
 
 ## Collegamenti Correlati
-- [Documentazione Generale PHPStan](/docs/phpstan/INDEX.md)
+- [Documentazione Generale PHPStan](/project_docs/phpstan/INDEX.md)
 - [Best Practices User](../INDEX.md#best-practices)
-- [Gestione Errori](/docs/errors/README.md) 
+- [Gestione Errori](/project_docs/errors/README.md) 

@@ -49,5 +49,5 @@
 ## Versione di Filament
 
 - Versione supportata: 3.x
-- Breaking changes: [Documentazione ufficiale](https://filamentphp.com/docs/3.x/panels/upgrade-guide)
+- Breaking changes: [Documentazione ufficiale](https://filamentphp.com/project_docs/3.x/panels/upgrade-guide)
 - Compatibilità: Laravel 10.x/11.x 

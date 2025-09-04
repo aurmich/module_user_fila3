@@ -44,7 +44,7 @@ return [
 
 ## Collegamenti
 - [Widget Translation Rules](widget-translation-rules.md)
-- [Root Translation Guidelines](../../../../docs/translation-standards.md)
+- [Root Translation Guidelines](../../../../project_docs/translation-standards.md)
 
 Ultimo aggiornamento: 2025-01-06
 

@@ -4,12 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
-<<<<<<< HEAD
 use Modules\User\Contracts\UserContract;
 use Modules\User\Models\TeamPermission;
-=======
-
->>>>>>> aurmich/dev
 
 class TeamPermissionPolicy extends UserBasePolicy
 {
@@ -26,13 +22,7 @@ class TeamPermissionPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, TeamPermission $teamPermission): bool
     {
-<<<<<<< HEAD
         return $user->hasRole('super-admin');
-=======
-
-               $user->teams->contains($teamPermission->team_id) ||
-               $user->hasRole('super-admin');
->>>>>>> aurmich/dev
     }
 
     /**
@@ -48,12 +38,7 @@ class TeamPermissionPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, TeamPermission $teamPermission): bool
     {
-<<<<<<< HEAD
         return $user->hasRole('super-admin');
-=======
-
-               $user->hasRole('super-admin');
->>>>>>> aurmich/dev
     }
 
     /**
@@ -61,12 +46,7 @@ class TeamPermissionPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, TeamPermission $teamPermission): bool
     {
-<<<<<<< HEAD
         return $user->hasRole('super-admin');
-=======
-
-               $user->hasRole('super-admin');
->>>>>>> aurmich/dev
     }
 
     /**
@@ -74,12 +54,7 @@ class TeamPermissionPolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, TeamPermission $teamPermission): bool
     {
-<<<<<<< HEAD
         return $user->hasRole('super-admin');
-=======
-
-               $user->hasRole('super-admin');
->>>>>>> aurmich/dev
     }
 
     /**
@@ -87,10 +62,6 @@ class TeamPermissionPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, TeamPermission $teamPermission): bool
     {
-<<<<<<< HEAD
         return $user->hasRole('super-admin');
     }
 }
-=======
-
->>>>>>> aurmich/dev

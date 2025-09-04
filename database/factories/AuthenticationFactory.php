@@ -10,22 +10,14 @@ use Modules\User\Models\User;
 
 /**
  * Authentication Factory
-<<<<<<< HEAD
  *
-=======
-
->>>>>>> aurmich/dev
  * @extends Factory<Authentication>
  */
 class AuthenticationFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
-<<<<<<< HEAD
      *
-=======
-
->>>>>>> aurmich/dev
      * @var class-string<Authentication>
      */
     protected $model = Authentication::class;
@@ -44,14 +36,9 @@ class AuthenticationFactory extends Factory
             'type' => $this->faker->randomElement(['login', 'logout', 'password_reset', 'email_verification']),
             'ip_address' => $this->faker->ipv4(),
             'user_agent' => $this->faker->userAgent(),
-<<<<<<< HEAD
             'login_successful' => $loginSuccessful,
             'login_at' => $loginAt,
             'logout_at' => $loginSuccessful ? $this->faker->dateTimeBetween($loginAt, 'now') : null,
-=======
-
-                : null,
->>>>>>> aurmich/dev
             'authenticatable_type' => User::class,
             'authenticatable_id' => User::factory(),
         ];
@@ -59,10 +46,6 @@ class AuthenticationFactory extends Factory
 
     /**
      * Indicate that the authentication was successful.
-<<<<<<< HEAD
-=======
-
->>>>>>> aurmich/dev
      */
     public function successful(): static
     {
@@ -73,10 +56,6 @@ class AuthenticationFactory extends Factory
 
     /**
      * Indicate that the authentication failed.
-<<<<<<< HEAD
-=======
-
->>>>>>> aurmich/dev
      */
     public function failed(): static
     {
@@ -88,10 +67,6 @@ class AuthenticationFactory extends Factory
 
     /**
      * Set the authentication type to login.
-<<<<<<< HEAD
-=======
-
->>>>>>> aurmich/dev
      */
     public function login(): static
     {
@@ -102,10 +77,6 @@ class AuthenticationFactory extends Factory
 
     /**
      * Set the authentication type to logout.
-<<<<<<< HEAD
-=======
-
->>>>>>> aurmich/dev
      */
     public function logout(): static
     {
@@ -117,10 +88,6 @@ class AuthenticationFactory extends Factory
 
     /**
      * Create authentication record for a specific user.
-<<<<<<< HEAD
-=======
-
->>>>>>> aurmich/dev
      */
     public function forUser(User $user): static
     {
@@ -129,8 +96,4 @@ class AuthenticationFactory extends Factory
             'authenticatable_id' => $user->id,
         ]);
     }
-<<<<<<< HEAD
 }
-=======
-
->>>>>>> aurmich/dev

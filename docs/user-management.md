@@ -22,7 +22,7 @@ SaluteOra utilizza il pattern Single Table Inheritance tramite il pacchetto `par
 - **Flessibilità**: Facile aggiunta di nuovi tipi di utenti
 - **Polimorfismo**: Trattare diversi tipi di utenti in modo uniforme quando necessario
 
-Per una documentazione dettagliata sul pattern di ereditarietà, consulta il [Pattern di Ereditarietà dei Modelli](/docs/model-inheritance-patterns.md).
+Per una documentazione dettagliata sul pattern di ereditarietà, consulta il [Pattern di Ereditarietà dei Modelli](/project_docs/model-inheritance-patterns.md).
 
 ### Struttura dei Modelli
 
@@ -38,7 +38,7 @@ BaseUser (Modules\User\Models\BaseUser)
 
 ### Campi del Database
 
-La tabella `users` contiene campi comuni a tutti i tipi di utenti, oltre a campi specifici per ciascun tipo. Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md).
+La tabella `users` contiene campi comuni a tutti i tipi di utenti, oltre a campi specifici per ciascun tipo. Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/project_docs/DATABASE_FIELD_MAPPING.md).
 
 ## Registrazione degli Utenti
 
@@ -65,19 +65,19 @@ I dottori devono passare attraverso un processo di moderazione:
 7. Invio email di approvazione/rifiuto
 8. Accesso al sistema (se approvato)
 
-Per una documentazione dettagliata sul processo di registrazione dei dottori, consulta il [Processo di Registrazione dei Dottori](/laravel/Modules/Patient/docs/DOCTOR_REGISTRATION_PROCESS.md).
+Per una documentazione dettagliata sul processo di registrazione dei dottori, consulta il [Processo di Registrazione dei Dottori](/laravel/Modules/Patient/project_docs/DOCTOR_REGISTRATION_PROCESS.md).
 
 ## Gestione dei File
 
 Gli utenti possono caricare vari tipi di file, come avatar, certificazioni e documenti. Questi file sono gestiti tramite il componente `FileUpload` di Filament e memorizzati nel database come percorsi o array JSON.
 
-Per una documentazione dettagliata sulla gestione dei file, consulta la [Gestione dei File Upload in Filament](/docs/filament-file-uploads.md).
+Per una documentazione dettagliata sulla gestione dei file, consulta la [Gestione dei File Upload in Filament](/project_docs/filament-file-uploads.md).
 
 ## Best Practices
 
 ### 1. Utilizzo dei Campi Corretti
 
-Assicurarsi di utilizzare i campi corretti per ciascun tipo di utente, come documentato nella [Mappatura dei Campi Database](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md).
+Assicurarsi di utilizzare i campi corretti per ciascun tipo di utente, come documentato nella [Mappatura dei Campi Database](/laravel/Modules/Patient/project_docs/DATABASE_FIELD_MAPPING.md).
 
 ### 2. Gestione degli Stati
 
@@ -104,8 +104,8 @@ $request->validate([
 
 ## Documentazione Correlata
 
-- [Pattern di Ereditarietà dei Modelli](/docs/model-inheritance-patterns.md)
-- [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md)
-- [Processo di Registrazione dei Dottori](/laravel/Modules/Patient/docs/DOCTOR_REGISTRATION_PROCESS.md)
-- [Gestione dei File Upload in Filament](/docs/filament-file-uploads.md)
-- [Migrazioni del Database](/docs/database-migrations.md)
+- [Pattern di Ereditarietà dei Modelli](/project_docs/model-inheritance-patterns.md)
+- [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/project_docs/DATABASE_FIELD_MAPPING.md)
+- [Processo di Registrazione dei Dottori](/laravel/Modules/Patient/project_docs/DOCTOR_REGISTRATION_PROCESS.md)
+- [Gestione dei File Upload in Filament](/project_docs/filament-file-uploads.md)
+- [Migrazioni del Database](/project_docs/database-migrations.md)

@@ -93,8 +93,8 @@ Definire il comportamento tramite trait che implementa il metodo.
 **ALTA** - Questo errore blocca l'analisi statica del codice e potrebbe causare errori runtime.
 
 ## Collegamenti
-- [Documentazione Root - Errori PHPStan](../../../docs/troubleshooting/phpstan-errors.md)
-- [Contratti Xot](../../Xot/docs/contracts.md)
-- [Spatie Permission Documentation](https://spatie.be/docs/laravel-permission)
+- [Documentazione Root - Errori PHPStan](../../../project_docs/troubleshooting/phpstan-errors.md)
+- [Contratti Xot](../../Xot/project_docs/contracts.md)
+- [Spatie Permission Documentation](https://spatie.be/project_docs/laravel-permission)
 
 *Ultimo aggiornamento: 2025-01-06*

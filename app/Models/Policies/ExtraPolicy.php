@@ -4,12 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
-<<<<<<< HEAD
 use Modules\User\Contracts\UserContract;
 use Modules\User\Models\Extra;
-=======
-
->>>>>>> aurmich/dev
 
 class ExtraPolicy extends UserBasePolicy
 {
@@ -26,11 +22,7 @@ class ExtraPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, Extra $extra): bool
     {
-<<<<<<< HEAD
         return $user->id === $extra->user_id ||
-=======
-
->>>>>>> aurmich/dev
                $user->hasRole('super-admin');
     }
 
@@ -47,11 +39,7 @@ class ExtraPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, Extra $extra): bool
     {
-<<<<<<< HEAD
         return $user->id === $extra->user_id ||
-=======
-
->>>>>>> aurmich/dev
                $user->hasRole('super-admin');
     }
 
@@ -60,11 +48,7 @@ class ExtraPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, Extra $extra): bool
     {
-<<<<<<< HEAD
         return $user->id === $extra->user_id ||
-=======
-
->>>>>>> aurmich/dev
                $user->hasRole('super-admin');
     }
 
@@ -73,12 +57,7 @@ class ExtraPolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, Extra $extra): bool
     {
-<<<<<<< HEAD
         return $user->hasRole('super-admin');
-=======
-
-               $user->hasRole('super-admin');
->>>>>>> aurmich/dev
     }
 
     /**
@@ -86,10 +65,6 @@ class ExtraPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, Extra $extra): bool
     {
-<<<<<<< HEAD
         return $user->hasRole('super-admin');
     }
 }
-=======
-
->>>>>>> aurmich/dev

@@ -195,7 +195,7 @@ class LoginWidget extends XotBaseWidget
 
 - [best-practices/filament-widgets.md](best-practices/filament-widgets.md)
 - [login_filament_widget_error.md](login_filament_widget_error.md)
-- [../../Themes/Sixteen/docs/login-agid-correct-implementation.md](../../Themes/Sixteen/docs/login-agid-correct-implementation.md)
+- [../../Themes/Sixteen/project_docs/login-agid-correct-implementation.md](../../Themes/Sixteen/project_docs/login-agid-correct-implementation.md)
 
 ---
 

@@ -1,7 +1,7 @@
 # Utilizzo dei componenti Blade di Filament
 
 > **NOTA IMPORTANTE**: Questo documento è un riferimento specifico per il modulo User.
-> La documentazione completa sui componenti Blade si trova nel [modulo UI](../../../UI/docs/blade/component-registration.md).
+> La documentazione completa sui componenti Blade si trova nel [modulo UI](../../../UI/project_docs/blade/component-registration.md).
 
 ## Regola fondamentale: utilizzare i componenti Filament
 
@@ -52,8 +52,8 @@ Il componente `<x-profile.dropdown>` è un esempio di componente personalizzato 
 
 ## Documentazione di riferimento
 
-- [Documentazione ufficiale Filament Dropdown](https://filamentphp.com/docs/3.x/support/blade-components/dropdown)
-- [Filament Blade Components](https://filamentphp.com/docs/3.x/support/blade-components)
+- [Documentazione ufficiale Filament Dropdown](https://filamentphp.com/project_docs/3.x/support/blade-components/dropdown)
+- [Filament Blade Components](https://filamentphp.com/project_docs/3.x/support/blade-components)
 
 ## Errori comuni da evitare
 

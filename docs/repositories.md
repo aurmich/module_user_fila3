@@ -25,8 +25,8 @@ https://github.com/antonioribeiro/tracker
 
 ## Collegamenti tra versioni di repositories.md
 * [repositories.md](docs/repositories.md)
-* [repositories.md](../../../Notify/docs/repositories.md)
-* [repositories.md](../../../User/docs/repositories.md)
+* [repositories.md](../../../Notify/project_docs/repositories.md)
+* [repositories.md](../../../User/project_docs/repositories.md)
 
 
 ### Versione Incoming

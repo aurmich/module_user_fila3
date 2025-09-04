@@ -63,8 +63,4 @@ return [
             'color' => 'danger',
         ],
     ],
-<<<<<<< HEAD
 ];
-=======
-
->>>>>>> aurmich/dev

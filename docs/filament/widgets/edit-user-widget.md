@@ -131,7 +131,7 @@ __('user::profile.no_permission')
 - [UpdateUserAction.php](../../app/Actions/User/UpdateUserAction.php)
 - [View Template](../../../../Themes/One/resources/views/filament/widgets/edit-user.blade.php)
 - [Documentazione RegistrationWidget](./registration-widget.md)
-- [Documentazione Xot sulla proprietà $data](../../../Xot/docs/filament/widgets/data-property.md)
+- [Documentazione Xot sulla proprietà $data](../../../Xot/project_docs/filament/widgets/data-property.md)
 
 ## Esempi di implementazione specifica
 

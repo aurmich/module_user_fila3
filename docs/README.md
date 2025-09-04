@@ -109,17 +109,17 @@ User/
 - [Filosofia Comandi Console](./console_commands/console_commands_philosophy.md)
 
 ## Collegamenti Bidirezionali
-- [Modulo Xot](../Xot/docs/README.md)
-- [Modulo Patient](../Patient/docs/README.md)
-- [Modulo Dental](../Dental/docs/README.md)
+- [Modulo Xot](../Xot/project_docs/README.md)
+- [Modulo Patient](../Patient/project_docs/README.md)
+- [Modulo Dental](../Dental/project_docs/README.md)
 - [Linee guida Actions](./actions.mdc)
 - [Linee guida Activitylog](./activitylog.mdc)
 
 ## Vedi Anche
-- [Documentazione Principale](../../docs/INDEX.md)
-- [Architettura Moduli](../../docs/architecture/modules-structure.md)
-- [Convenzioni di Nomenclatura](../../docs/standards/file_naming_conventions.md)
-- [Struttura del Progetto](../Xot/docs/architecture/struttura-progetto.md)
+- [Documentazione Principale](../../project_docs/INDEX.md)
+- [Architettura Moduli](../../project_docs/architecture/modules-structure.md)
+- [Convenzioni di Nomenclatura](../../project_docs/standards/file_naming_conventions.md)
+- [Struttura del Progetto](../Xot/project_docs/architecture/struttura-progetto.md)
 
 ## Collegamenti Principali
 
@@ -133,9 +133,9 @@ User/
 - [Bottlenecks](bottlenecks.md)
 
 ### Integrazioni
-- [Integrazione con Xot](../Xot/docs/README.md)
-- [Integrazione con Lang](../Lang/docs/README.md)
-- [Integrazione con Notify](../Notify/docs/README.md)
+- [Integrazione con Xot](../Xot/project_docs/README.md)
+- [Integrazione con Lang](../Lang/project_docs/README.md)
+- [Integrazione con Notify](../Notify/project_docs/README.md)
 
 ### Autenticazione
 - [Login Personalizzato](custom_login.md)
@@ -149,8 +149,8 @@ User/
 - [Team e Collaborazioni](teams.md)
 
 ## Collegamenti
-- [Indice Documentazione](../../../docs/INDEX.md)
+- [Indice Documentazione](../../../project_docs/INDEX.md)
 - [README Principale](../../../README.md)
-- [API Reference](../docs/api.md)
-- [Changelog](../docs/CHANGELOG.md) 
+- [API Reference](../project_docs/api.md)
+- [Changelog](../project_docs/CHANGELOG.md) 
 

@@ -9,10 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 
-<<<<<<< HEAD
 /**
-=======
->>>>>>> aurmich/dev
  * Tracks user authentication attempts and sessions.
  *
  * @property int $id

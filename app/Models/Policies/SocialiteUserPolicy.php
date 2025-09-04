@@ -4,12 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
-<<<<<<< HEAD
 use Modules\User\Contracts\UserContract;
 use Modules\User\Models\SocialiteUser;
-=======
-
->>>>>>> aurmich/dev
 
 class SocialiteUserPolicy extends UserBasePolicy
 {
@@ -26,14 +22,8 @@ class SocialiteUserPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, SocialiteUser $socialiteUser): bool
     {
-<<<<<<< HEAD
         return $user->id === $socialiteUser->user_id ||
             $user->hasRole('super-admin');
-=======
-
-               $user->id === $socialiteUser->user_id ||
-               $user->hasRole('super-admin');
->>>>>>> aurmich/dev
     }
 
     /**
@@ -49,14 +39,8 @@ class SocialiteUserPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, SocialiteUser $socialiteUser): bool
     {
-<<<<<<< HEAD
         return $user->id === $socialiteUser->user_id ||
             $user->hasRole('super-admin');
-=======
-
-               $user->id === $socialiteUser->user_id ||
-               $user->hasRole('super-admin');
->>>>>>> aurmich/dev
     }
 
     /**
@@ -64,14 +48,8 @@ class SocialiteUserPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, SocialiteUser $socialiteUser): bool
     {
-<<<<<<< HEAD
         return $user->id === $socialiteUser->user_id ||
             $user->hasRole('super-admin');
-=======
-
-               $user->id === $socialiteUser->user_id ||
-               $user->hasRole('super-admin');
->>>>>>> aurmich/dev
     }
 
     /**
@@ -79,12 +57,7 @@ class SocialiteUserPolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, SocialiteUser $socialiteUser): bool
     {
-<<<<<<< HEAD
         return $user->hasRole('super-admin');
-=======
-
-               $user->hasRole('super-admin');
->>>>>>> aurmich/dev
     }
 
     /**
@@ -92,11 +65,6 @@ class SocialiteUserPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, SocialiteUser $socialiteUser): bool
     {
-<<<<<<< HEAD
         return $user->hasRole('super-admin');
-=======
-
-               $user->hasRole('super-admin');
->>>>>>> aurmich/dev
     }
 }
