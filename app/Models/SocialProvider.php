@@ -12,8 +12,6 @@ use Modules\Tenant\Models\Traits\SushiToPhpArray;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
- * 
- *
  * @property int|null $id
  * @property string|null $name
  * @property array|null $scopes
@@ -48,6 +46,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialProvider whereUpdatedBy($value)
+ * @mixin IdeHelperSocialProvider
  * @mixin \Eloquent
  */
 class SocialProvider extends BaseModel

@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="- La piattaforma per la gestione della tua salute">
-        <meta name="keywords" content="salute, medici, studi, appuntamenti, prenotazioni">
+        <meta name="description" content="- La piattaforma">
+        <meta name="keywords" content="">
         <meta name="author" content="il progetto">
 
         <!-- Favicon -->
@@ -28,19 +28,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        <title>{{ $title ?? '- La tua salute, ora' }}</title>
+        <title>{{ $title ?? '-' }}</title>
     </head>
-<<<<<<< HEAD
     <body>
         <div>
             <!-- Contenuto principale -->
             <main>
-=======
-    <body class="min-h-screen antialiased bg-gray-50 dark:bg-gradient-to-b dark:from-gray-950 dark:to-gray-900 font-sans">
-        <div class="flex flex-col min-h-screen">
-            <!-- Contenuto principale -->
-            <main class="flex-grow">
->>>>>>> aurmich/dev
                 {{ $slot }}
             </main>
 

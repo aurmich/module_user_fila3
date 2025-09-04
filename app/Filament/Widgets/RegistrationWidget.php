@@ -26,6 +26,7 @@ use Filament\Forms\Components\Wizard\Step;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use Filament\Actions\Concerns\InteractsWithRecord;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 
 class RegistrationWidget extends XotBaseWidget
@@ -39,6 +40,10 @@ class RegistrationWidget extends XotBaseWidget
     public string $action;
     public Model $record;
     
+    /**
+     * @phpstan-var class-string
+     * @phpstan-ignore-next-line
+     */
     protected static string $view = 'pub_theme::filament.widgets.registration';
 
     public function mount(string $type, Request $request): void
@@ -58,6 +63,7 @@ class RegistrationWidget extends XotBaseWidget
 
     public function getFormModel(): Model
     {
+       
         $data = request()->all();
         $email = Arr::get($data, 'email');
         $token = Arr::get($data, 'token');
@@ -100,6 +106,8 @@ class RegistrationWidget extends XotBaseWidget
      */
     public function register(): \Illuminate\Http\RedirectResponse|\Livewire\Features\SupportRedirects\Redirector
     {
+        $lang=app()->getLocale();
+        
         $data = $this->form->getState();
         
         $data=array_merge($this->data ?? [],$data);
@@ -107,21 +115,13 @@ class RegistrationWidget extends XotBaseWidget
        
         $user = app($this->action)->execute($record, $data);
 
-        return redirect()->route('pages.view', ['slug' => $this->type . '_register_complete']);
-    }
-
-    /**
-     * Invia l'email di conferma della registrazione.
-     */
-    protected function sendConfirmationEmail(\Modules\SaluteOra\Models\Doctor $doctor): void
-    {
-        $email = new \Modules\Notify\Emails\SpatieEmail($doctor, 'registration_pending');
-
-        \Illuminate\Support\Facades\Mail::to($doctor->email)
-            ->locale(app()->getLocale())
-            ->send($email);
+        $lang=app()->getLocale();
+        $route=route('pages.view', ['slug' => $this->type . '_register_complete']);
+        $route=LaravelLocalization::localizeUrl($route,$lang);
         
-        session()->flash('message', 'Registrazione completata con successo. La tua richiesta è in attesa di moderazione.');
-        $this->form->fill();
+        //return redirect()->route('pages.view', ['slug' => $this->type . '_register_complete','lang'=>$lang]);
+        return redirect($route);
     }
+
+    
 }

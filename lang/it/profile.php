@@ -41,19 +41,9 @@ return [
         ],
         'gender' => [
             'label' => 'Genere',
-<<<<<<< HEAD
             'male' => 'Maschio',
             'female' => 'Femmina',
             'other' => 'Altro',
-=======
-            'placeholder' => 'Seleziona il genere',
-            'help' => 'Genere dell\'utente',
-            'options' => [
-                'male' => 'Maschio',
-                'female' => 'Femmina',
-                'other' => 'Altro',
-            ],
->>>>>>> aurmich/dev
         ],
         'is_active' => [
             'label' => 'Attivo',
@@ -61,27 +51,12 @@ return [
         ],
         'id' => [
             'label' => 'ID',
-<<<<<<< HEAD
         ],
         'ente' => [
             'label' => 'Ente',
         ],
         'matr' => [
             'label' => 'Matricola',
-=======
-            'placeholder' => 'Identificativo automatico',
-            'help' => 'Identificativo univoco del profilo',
-        ],
-        'ente' => [
-            'label' => 'Ente',
-            'placeholder' => 'Seleziona l\'ente',
-            'help' => 'Ente di appartenenza dell\'utente',
-        ],
-        'matr' => [
-            'label' => 'Matricola',
-            'placeholder' => 'Inserisci la matricola',
-            'help' => 'Codice matricola dell\'utente',
->>>>>>> aurmich/dev
         ],
         // ... altri campi ...
     ],

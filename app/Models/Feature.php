@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Modules\User\Models;
 
 /**
- * 
- *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  * @method static \Modules\User\Database\Factories\FeatureFactory factory($count = null, $state = [])
@@ -33,6 +31,7 @@ namespace Modules\User\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Feature whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Feature whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Feature whereValue($value)
+ * @mixin IdeHelperFeature
  * @mixin \Eloquent
  */
 class Feature extends BaseModel

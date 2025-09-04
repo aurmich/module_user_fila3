@@ -54,7 +54,10 @@ class EditUserWidget extends XotBaseWidget
     public string $model;
     public string $action;
     public Model $record;
-    
+
+    /**
+     * @phpstan-ignore-next-line
+     */
     protected static string $view = 'pub_theme::filament.widgets.edit-user';
 
     /**
@@ -131,7 +134,7 @@ class EditUserWidget extends XotBaseWidget
                 $attributes = $model->getAttributes();
                 
                 // Gestisci specificamente gli enum se presenti
-                if (isset($attributes['type']) && property_exists($model, 'type') && $model->type instanceof \BackedEnum) {
+                if (isset($attributes['type']) && ($model->type ?? null) instanceof \BackedEnum) {
                     $attributes['type'] = $model->type->value;
                 }
                 
@@ -192,8 +195,8 @@ class EditUserWidget extends XotBaseWidget
         
         // L'utente può modificare solo il proprio profilo
         return $currentUser && (
-            (property_exists($currentUser, 'id') && property_exists($this->record, 'id') && $currentUser->id === $this->record->id) ||
-            (property_exists($currentUser, 'id') && $currentUser->id === ($this->record->user_id ?? null))
+            (($currentUser->id ?? null) !== null && ($this->record->id ?? null) !== null && $currentUser->id === $this->record->id) ||
+            (($currentUser->id ?? null) !== null && $currentUser->id === ($this->record->user_id ?? null))
         );
     }
 }

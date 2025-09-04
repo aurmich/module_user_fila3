@@ -5,11 +5,12 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Widgets;
 
 use Exception;
-use Filament\Forms\Components\TextInput;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Auth;
 use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form as FilamentForm;
 use Filament\Notifications\Notification;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
@@ -33,7 +34,7 @@ class LoginWidget extends XotBaseWidget
      * @var view-string
      */
     /** @phpstan-ignore-next-line property.defaultValue */
-    protected static string $view = 'user::filament.widgets.login';
+    protected static string $view = 'pub_theme::filament.widgets.auth.login';
     
    
     /**
@@ -60,9 +61,10 @@ class LoginWidget extends XotBaseWidget
                 ->autofocus(),
             TextInput::make('password')
                 ->password()
-                ->required(),
+                ->required()
+                ->revealable(),
             Toggle::make('remember')
-            ->visible(false),
+                ->visible(false),
         ];
     }
 
@@ -103,20 +105,18 @@ class LoginWidget extends XotBaseWidget
             
             // Cast esplicito per type safety PHPStan
             $remember = (bool) ($data['remember'] ?? false);
+            $attempt_data =Arr::only($data,['email','password']);
             
-            if (!Auth::attempt([
-                'email' => (string) $data['email'],
-                'password' => (string) $data['password']
-            ], $remember)) {
+            if (!Auth::attempt($attempt_data, $remember)) {
                 throw ValidationException::withMessages([
-                    'email' => [__('Le credenziali fornite non sono corrette.')],
+                    'email' => [__('user::messages.credentials_incorrect')],
                 ]);
             }
 
             session()->regenerate();
             
             Notification::make()
-                ->title('Accesso effettuato con successo')
+                ->title(__('user::messages.login_success'))
                 ->success()
                 ->send();
                 
@@ -124,7 +124,7 @@ class LoginWidget extends XotBaseWidget
             
         } catch (ValidationException $e) {
             Notification::make()
-                ->title('Errore di validazione')
+                ->title(__('user::messages.validation_error'))
                 ->body($e->getMessage())
                 ->danger()
                 ->send();
@@ -143,8 +143,8 @@ class LoginWidget extends XotBaseWidget
             report($e);
             
             Notification::make()
-                ->title('Errore durante il login')
-                ->body(__('Si è verificato un errore durante il login. Riprova più tardi.'))
+                ->title(__('user::messages.login_error'))
+                ->body(__('user::messages.login_error'))
                 ->danger()
                 ->send();
                 
@@ -152,7 +152,7 @@ class LoginWidget extends XotBaseWidget
             $this->form->saveRelationships();
             //$this->form->callAfter();
             
-            $this->addError('email', __('Si è verificato un errore durante il login. Riprova più tardi.'));
+            $this->addError('email', __('user::messages.login_error'));
         }
     }
     
