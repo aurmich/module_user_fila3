@@ -15,5 +15,8 @@ return [
     'name' => 'Nome',
     'already_registered' => 'Già registrato?',
     'not_registered' => 'Non sei registrato?',
+<<<<<<< HEAD
 ];
+=======
+>>>>>>> aurmich/dev
 

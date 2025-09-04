@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\User\Contracts\UserContract;
 use Modules\User\Models\DeviceProfile;
+=======
+
+>>>>>>> aurmich/dev
 
 class DeviceProfilePolicy extends UserBasePolicy
 {
@@ -22,7 +26,12 @@ class DeviceProfilePolicy extends UserBasePolicy
      */
     public function view(UserContract $user, DeviceProfile $deviceProfile): bool
     {
+<<<<<<< HEAD
         return $user->id === $deviceProfile->user_id ||
+=======
+
+               $user->id === $deviceProfile->user_id ||
+>>>>>>> aurmich/dev
                $user->hasRole('super-admin');
     }
 
@@ -39,7 +48,11 @@ class DeviceProfilePolicy extends UserBasePolicy
      */
     public function update(UserContract $user, DeviceProfile $deviceProfile): bool
     {
+<<<<<<< HEAD
         return $user->id === $deviceProfile->user_id ||
+=======
+
+>>>>>>> aurmich/dev
                $user->hasRole('super-admin');
     }
 
@@ -48,7 +61,11 @@ class DeviceProfilePolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, DeviceProfile $deviceProfile): bool
     {
+<<<<<<< HEAD
         return $user->id === $deviceProfile->user_id ||
+=======
+
+>>>>>>> aurmich/dev
                $user->hasRole('super-admin');
     }
 
@@ -57,7 +74,12 @@ class DeviceProfilePolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, DeviceProfile $deviceProfile): bool
     {
+<<<<<<< HEAD
         return $user->hasRole('super-admin');
+=======
+
+               $user->hasRole('super-admin');
+>>>>>>> aurmich/dev
     }
 
     /**
@@ -65,6 +87,10 @@ class DeviceProfilePolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, DeviceProfile $deviceProfile): bool
     {
+<<<<<<< HEAD
         return $user->hasRole('super-admin');
     }
 }
+=======
+
+>>>>>>> aurmich/dev

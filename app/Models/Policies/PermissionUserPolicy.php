@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\User\Contracts\UserContract;
 use Modules\User\Models\PermissionUser;
+=======
+
+>>>>>>> aurmich/dev
 
 class PermissionUserPolicy extends UserBasePolicy
 {
@@ -22,7 +26,12 @@ class PermissionUserPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, PermissionUser $permissionUser): bool
     {
+<<<<<<< HEAD
         return $user->hasRole('super-admin');
+=======
+
+               $user->hasRole('super-admin');
+>>>>>>> aurmich/dev
     }
 
     /**
@@ -38,7 +47,12 @@ class PermissionUserPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, PermissionUser $permissionUser): bool
     {
+<<<<<<< HEAD
         return $user->hasRole('super-admin');
+=======
+
+               $user->hasRole('super-admin');
+>>>>>>> aurmich/dev
     }
 
     /**
@@ -46,7 +60,12 @@ class PermissionUserPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, PermissionUser $permissionUser): bool
     {
+<<<<<<< HEAD
         return $user->hasRole('super-admin');
+=======
+
+               $user->hasRole('super-admin');
+>>>>>>> aurmich/dev
     }
 
     /**
@@ -54,7 +73,12 @@ class PermissionUserPolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, PermissionUser $permissionUser): bool
     {
+<<<<<<< HEAD
         return $user->hasRole('super-admin');
+=======
+
+               $user->hasRole('super-admin');
+>>>>>>> aurmich/dev
     }
 
     /**
@@ -62,6 +86,10 @@ class PermissionUserPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, PermissionUser $permissionUser): bool
     {
+<<<<<<< HEAD
         return $user->hasRole('super-admin');
     }
 }
+=======
+
+>>>>>>> aurmich/dev

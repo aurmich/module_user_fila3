@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\User\Contracts\UserContract;
 use Modules\User\Models\OauthPersonalAccessClient;
+=======
+
+>>>>>>> aurmich/dev
 
 class OauthPersonalAccessClientPolicy extends UserBasePolicy
 {
@@ -22,7 +26,12 @@ class OauthPersonalAccessClientPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, OauthPersonalAccessClient $oauthPersonalAccessClient): bool
     {
+<<<<<<< HEAD
         return $user->hasRole('super-admin');
+=======
+
+               $user->hasRole('super-admin');
+>>>>>>> aurmich/dev
     }
 
     /**
@@ -38,7 +47,12 @@ class OauthPersonalAccessClientPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, OauthPersonalAccessClient $oauthPersonalAccessClient): bool
     {
+<<<<<<< HEAD
         return $user->hasRole('super-admin');
+=======
+
+               $user->hasRole('super-admin');
+>>>>>>> aurmich/dev
     }
 
     /**
@@ -46,7 +60,12 @@ class OauthPersonalAccessClientPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, OauthPersonalAccessClient $oauthPersonalAccessClient): bool
     {
+<<<<<<< HEAD
         return $user->hasRole('super-admin');
+=======
+
+               $user->hasRole('super-admin');
+>>>>>>> aurmich/dev
     }
 
     /**
@@ -54,7 +73,12 @@ class OauthPersonalAccessClientPolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, OauthPersonalAccessClient $oauthPersonalAccessClient): bool
     {
+<<<<<<< HEAD
         return $user->hasRole('super-admin');
+=======
+
+               $user->hasRole('super-admin');
+>>>>>>> aurmich/dev
     }
 
     /**
@@ -62,6 +86,10 @@ class OauthPersonalAccessClientPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, OauthPersonalAccessClient $oauthPersonalAccessClient): bool
     {
+<<<<<<< HEAD
         return $user->hasRole('super-admin');
     }
 }
+=======
+
+>>>>>>> aurmich/dev
