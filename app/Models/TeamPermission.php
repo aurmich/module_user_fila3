@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\User\Models;
 
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * Team Permission Model
- * 
+ *
  * Represents a permission assigned to a user within a team context.
  *
  * @property string $id
@@ -21,25 +20,34 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property \DateTime|null $updated_at
  * @property Team $team
  * @property User $user
+ *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TeamPermission newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TeamPermission newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|TeamPermission query()
+ * @method static TeamPermission|null first()
+ * @method static \Illuminate\Database\Eloquent\Collection<int, TeamPermission> get()
+ * @method static TeamPermission create(array $attributes = [])
+ * @method static TeamPermission firstOrCreate(array $attributes = [], array $values = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TeamPermission where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TeamPermission whereNotNull(string|\Illuminate\Contracts\Database\Query\Expression $columns)
+ * @method static int count(string $columns = '*')
+ *
  * @mixin IdeHelperTeamPermission
  * @mixin \Eloquent
  */
 class TeamPermission extends Model
 {
-    /** 
+    /**
      * The database connection that should be used by the model.
      *
-     * @var string 
+     * @var string
      */
     protected $connection = 'user';
 
-    /** 
+    /**
      * The attributes that are mass assignable.
      *
-     * @var list<string> 
+     * @var list<string>
      */
     protected $fillable = [
         'team_id',

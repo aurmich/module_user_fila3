@@ -9,12 +9,12 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Actions\Header;
 
 use Filament\Actions\Action;
-use Illuminate\Support\Facades\Hash;
-use Modules\User\Datas\PasswordData;
-use Modules\Xot\Contracts\UserContract;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
+use Modules\User\Datas\PasswordData;
+use Modules\Xot\Contracts\UserContract;
 
 class ChangePasswordHeaderAction extends Action
 {
@@ -25,21 +25,21 @@ class ChangePasswordHeaderAction extends Action
             ->icon('heroicon-o-key')
             ->action(function (UserContract $record, array $data): void {
                 $old_password = $record->getAttribute('password');
-                $res=tap($record)->update([
+                $res = tap($record)->update([
                     'password' => Hash::make($data['new_password']),
                 ]);
-                
+
                 Notification::make()
                     ->success()
-                    ->title(__('user::notifications.password_changed_successfully.title'))
-                    ->body(__('user::notifications.password_changed_successfully.message'));
+                    ->title((string) __('user::notifications.password_changed_successfully.title'))
+                    ->body((string) __('user::notifications.password_changed_successfully.message'));
             })
             ->form([
                 /*
                     TextInput::make('new_password')
                         ->password()
 
-                        ->placeholder(__('user::fields.new_password.placeholder'))
+                        ->placeholder((string) __('user::fields.new_password.placeholder'))
                         ->required()
                         ->rule(Password::default()),
                     */
@@ -47,7 +47,7 @@ class ChangePasswordHeaderAction extends Action
                 TextInput::make('new_password_confirmation')
                     ->password()
 
-                    ->placeholder(__('user::fields.confirm_password.placeholder'))
+                    ->placeholder((string) __('user::fields.confirm_password.placeholder'))
                     ->rule('required', static fn ($get): bool => (bool) $get('new_password'))
                     ->same('new_password'),
             ]);

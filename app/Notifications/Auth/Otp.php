@@ -48,13 +48,13 @@ class Otp extends Notification implements ShouldQueue
         return (new MailMessage)
 
             ->template('user::notifications.email')
-            ->subject(__('user::otp.mail.subject'))
-            ->greeting(__('user::otp.mail.greeting'))
-            ->line(__('user::otp.mail.line1', ['code' => $this->code]))
-            ->line(__('user::otp.mail.line2', ['minutes' => $pwd->otp_expiration_minutes]))
-            ->line(__('user::otp.mail.line3'))
+            ->subject((string) __('user::otp.mail.subject'))
+            ->greeting((string) __('user::otp.mail.greeting'))
+            ->line((string) __('user::otp.mail.line1', ['code' => $this->code]))
+            ->line((string) __('user::otp.mail.line2', ['minutes' => $pwd->otp_expiration_minutes]))
+            ->line((string) __('user::otp.mail.line3'))
             ->action('vai', url('/'))
-            ->salutation(__('user::otp.mail.salutation', ['app_name' => $app_name]));
+            ->salutation((string) __('user::otp.mail.salutation', ['app_name' => $app_name]));
     }
 
     /**

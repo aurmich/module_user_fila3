@@ -3,7 +3,7 @@
         <button @class([
             'flex flex-shrink-0 w-10 h-10 rounded-full bg-gray-200 items-center justify-center',
             'dark:bg-gray-900' => config('filament.dark_mode'),
-        ]) aria-label="{{ __('filament::layout.buttons.user_menu.label') }}">
+        ]) aria-label="{{ (string) __('filament::layout.buttons.user_menu.label') }}">
             @svg('heroicon-o-users', 'w-4 h-4')
         </button>
     </x-slot>

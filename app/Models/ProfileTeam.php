@@ -8,7 +8,7 @@ use Modules\Xot\Contracts\ProfileContract;
 
 /**
  * ProfileTeam Model
- * 
+ *
  * Represents the relationship between a profile and a team, including the user's role.
  *
  * @property ProfileContract|null $creator
@@ -23,6 +23,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $created_by
  * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property string|null $deleted_by
+ *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam query()
@@ -36,6 +37,14 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam whereUserId($value)
+ * @method static ProfileTeam|null first()
+ * @method static \Illuminate\Database\Eloquent\Collection<int, ProfileTeam> get()
+ * @method static ProfileTeam create(array $attributes = [])
+ * @method static ProfileTeam firstOrCreate(array $attributes = [], array $values = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|ProfileTeam whereNotNull(string|\Illuminate\Contracts\Database\Query\Expression $columns)
+ * @method static int count(string $columns = '*')
+ *
  * @mixin IdeHelperProfileTeam
  * @mixin \Eloquent
  */

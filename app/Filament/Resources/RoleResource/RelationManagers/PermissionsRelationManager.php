@@ -10,14 +10,6 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
-
-
-
-
-
-
-
-
 class PermissionsRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'permissions';
@@ -33,7 +25,7 @@ class PermissionsRelationManager extends XotBaseRelationManager
             'name' => Forms\Components\TextInput::make('name')
                 ->required()
                 ->maxLength(255)
-                ->placeholder(__('Inserisci il nome del permesso')),
+                ->placeholder((string) __('Inserisci il nome del permesso')),
         ];
     }
 
@@ -54,20 +46,20 @@ class PermissionsRelationManager extends XotBaseRelationManager
             ->headerActions([
                 Tables\Actions\CreateAction::make()
 
-                    ->tooltip(__('Crea un nuovo permesso')),
+                    ->tooltip((string) __('Crea un nuovo permesso')),
             ])
             ->actions([
                 Tables\Actions\EditAction::make()
 
-                    ->tooltip(__('Modifica permesso')),
+                    ->tooltip((string) __('Modifica permesso')),
                 Tables\Actions\DeleteAction::make()
 
-                    ->tooltip(__('Elimina permesso')),
+                    ->tooltip((string) __('Elimina permesso')),
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make()
 
-                    ->tooltip(__('Elimina i permessi selezionati')),
+                    ->tooltip((string) __('Elimina i permessi selezionati')),
             ]);
     }
 }

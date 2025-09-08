@@ -67,7 +67,7 @@ render(function (View $view, string $slug) {
                 </div>
                 <div class="space-y-2 text-center">
                     <h2 class="text-2xl font-bold md:text-4xl lg:text-6xl">Whooops!</h2>
-                    <p class="text-gray-400">{{ __('pub_theme::404.no_article') }}</p>
+                    <p class="text-gray-400">{{ (string) __('pub_theme::404.no_article') }}</p>
                 </div>
             </div>
         @endif

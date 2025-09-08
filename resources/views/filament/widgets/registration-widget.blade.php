@@ -3,14 +3,14 @@
         {{ $this->form }}
 
         <x-filament::button type="submit" class="w-full">
-            {{ __('user::registration.submit') }}
+            {{ (string) __('user::registration.submit') }}
         </x-filament::button>
     </form>
     
     <div class="text-sm text-center text-gray-600 mt-6">
-        {{ __('user::registration.already_registered') }} 
+        {{ (string) __('user::registration.already_registered') }} 
         <a href="{{ route('login') }}" class="text-primary-600 hover:text-primary-500">
-            {{ __('user::auth.login.title') }}
+            {{ (string) __('user::auth.login.title') }}
         </a>
     </div>
 </div>

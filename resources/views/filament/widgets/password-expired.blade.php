@@ -6,8 +6,8 @@
                class="h-16 w-16 text-red-500 dark:text-red-400 mt-4" 
             />
         </div>
-        <h1 class="mt-4 text-2xl font-bold text-gray-800">{{ __('user::password_expired.title') }}</h1>
-        <p class="mt-2 text-gray-600">{{ __('user::password_expired.sub_heading') }}</p>
+        <h1 class="mt-4 text-2xl font-bold text-gray-800">{{ (string) __('user::password_expired.title') }}</h1>
+        <p class="mt-2 text-gray-600">{{ (string) __('user::password_expired.sub_heading') }}</p>
     </div>
     
     <x-filament-panels::form wire:submit="resetPassword">

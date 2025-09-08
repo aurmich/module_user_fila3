@@ -53,7 +53,7 @@ class MyProfilePage extends Page implements HasForms
 
     public static function getNavigationLabel(): string
     {
-        return __('user::profile.profile');
+        return (string) __('user::profile.profile');
     }
 
     public function mount(): void
@@ -132,17 +132,17 @@ class MyProfilePage extends Page implements HasForms
 
     public function getTitle(): string
     {
-        return __('user::profile.my_profile');
+        return (string) __('user::profile.my_profile');
     }
 
     public function getHeading(): string
     {
-        return __('user::profile.my_profile');
+        return (string) __('user::profile.my_profile');
     }
 
     public function getSubheading(): ?string
     {
-        return __('user::profile.subheading') ?? null;
+        return (string) __('user::profile.subheading') ?? null;
     }
 
     // public static function shouldRegisterNavigation(): bool
@@ -199,7 +199,7 @@ class MyProfilePage extends Page implements HasForms
         if (request()->hasSession() && array_key_exists('password', $data)) {
             request()->session()->put([
                 'password_hash_'.Filament::getAuthGuard() => $data['password'],
-            
+
             ]);
         }
 
@@ -278,7 +278,7 @@ class MyProfilePage extends Page implements HasForms
     {
         Notification::make()
             ->success()
-            ->title(__('filament-panels::pages/auth/edit-profile.notifications.saved.title'))
+            ->title((string) __('filament-panels::pages/auth/edit-profile.notifications.saved.title'))
             ->send();
     }
 }

@@ -21,6 +21,7 @@ use Modules\Xot\Datas\XotData;
  * @property Carbon|null $updated_at
  * @property Team|null $team
  * @property TeamContract|null $team
+ *
  * @method static TeamInvitationFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|TeamInvitation newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|TeamInvitation newQuery()
@@ -31,18 +32,27 @@ use Modules\Xot\Datas\XotData;
  * @method static \Illuminate\Database\Eloquent\Builder|TeamInvitation whereRole($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamInvitation whereTeamId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamInvitation whereUpdatedAt($value)
+ *
  * @property string $uuid
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|TeamInvitation whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamInvitation whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamInvitation whereDeletedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamInvitation whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamInvitation whereUuid($value)
+ *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+ *
+ * @method static TeamInvitation create(array $attributes = [])
+ * @method static TeamInvitation firstOrCreate(array $attributes = [], array $values = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|TeamInvitation where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
+ * @method static int count(string $columns = '*')
+ *
  * @mixin IdeHelperTeamInvitation
  * @mixin \Eloquent
  */

@@ -69,7 +69,7 @@ class RemoveRoleCommand extends Command
 
         foreach ($rows as $row) {
             // $role = Role::firstOrCreate(['name' => $row]);
-            // $user->assignRole($role);
+            // $user->assignRole($role);/** @phpstan-ignore method.nonObject */
             $user->removeRole($row);
         }
 

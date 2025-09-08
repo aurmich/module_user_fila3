@@ -10,14 +10,11 @@ namespace Modules\User\Datas;
 
 use Filament\Forms\Components\Component;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\TextInput as FormsTextInput;
 use Filament\Forms\Get;
-use Illuminate\Support\Facades\Blade;
-use Illuminate\Support\HtmlString;
 use Illuminate\Validation\Rules\Password;
 use Modules\Tenant\Services\TenantService;
 use Spatie\LaravelData\Data;
-use Filament\Forms\Components\TextInput as FilamentTextInput;
-use Filament\Forms\Components\TextInput as FormsTextInput;
 
 /**
  * Classe per la gestione dei dati relativi alle password.
@@ -37,15 +34,12 @@ class PasswordData extends Data
         public int $compromisedThreshold = 0,
         public ?string $failMessage = null,
         private ?string $field_name = null,
-    ) {
-    }
+    ) {}
 
     private static ?self $instance = null;
 
     /**
      * Crea un'istanza della classe PasswordData.
-     *
-     * @return self
      */
     public static function make(): self
     {
@@ -92,8 +86,8 @@ class PasswordData extends Data
     public function getValidationMessages(): array
     {
         return [
-            'required' => __('user::validation.required'),
-            'same' => __('user::validation.same'),
+            'required' => (string) __('user::validation.required'),
+            'same' => (string) __('user::validation.same'),
         ];
     }
 
@@ -133,6 +127,7 @@ class PasswordData extends Data
     public function setFieldName(string $field_name): self
     {
         $this->field_name = $field_name;
+
         return $this;
     }
 
@@ -144,8 +139,8 @@ class PasswordData extends Data
         return TextInput::make($field_name)
             ->password()
             ->required()
-            ->label(__('Password'))
-            ->placeholder(__('Inserisci la tua password'))
+            ->label((string) __('Password'))
+            ->placeholder((string) __('Inserisci la tua password'))
             ->validationMessages($this->getValidationMessages())
             ->helperText($this->getHelperText());
     }
@@ -162,8 +157,8 @@ class PasswordData extends Data
         return TextInput::make('password_confirmation')
             ->password()
             ->required()
-            ->label(__('Conferma Password'))
-            ->placeholder(__('Conferma la tua password'))
+            ->label((string) __('Conferma Password'))
+            ->placeholder((string) __('Conferma la tua password'))
             ->same($this->field_name)
             ->validationMessages($this->getValidationMessages());
     }
@@ -180,7 +175,7 @@ class PasswordData extends Data
         }
 
         $this->setFieldName($field_name);
-        
+
         return [
             $this->getPasswordFormComponent($field_name),
             $this->getPasswordConfirmationFormComponent(),

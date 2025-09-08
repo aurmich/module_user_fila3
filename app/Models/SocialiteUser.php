@@ -28,6 +28,7 @@ use Modules\Xot\Datas\XotData;
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property \Modules\Xot\Contracts\UserContract|null $user
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|SocialiteUser newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|SocialiteUser newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|SocialiteUser query()
@@ -43,17 +44,29 @@ use Modules\Xot\Datas\XotData;
  * @method static \Illuminate\Database\Eloquent\Builder|SocialiteUser whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialiteUser whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SocialiteUser whereUserId($value)
+ *
  * @property string $uuid (DC2Type:guid)
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|SocialiteUser whereUuid($value)
+ *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+ *
+ * @method static SocialiteUser create(array $attributes = [])
+ * @method static SocialiteUser firstOrCreate(array $attributes = [], array $values = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SocialiteUser where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
+ * @method static int count(string $columns = '*')
+ * @method static SocialiteUser|null first()
+ * @method static \Illuminate\Database\Eloquent\Collection<int, SocialiteUser> get()
+ *
  * @mixin IdeHelperSocialiteUser
+ *
  * @method static \Modules\User\Database\Factories\SocialiteUserFactory factory($count = null, $state = [])
+ *
  * @mixin \Eloquent
  */
 class SocialiteUser extends BaseModel
 {
-
     /** @var list<string> */
     protected $fillable = [
         // 'id',

@@ -19,7 +19,7 @@
                         size="lg"
                         class="w-full justify-center"
                         :disabled="$isLoggingOut">
-                        {{ __('Conferma Logout') }}
+                        {{ (string) __('Conferma Logout') }}
                     </x-filament::button>
 
                     <x-filament::button 
@@ -28,7 +28,7 @@
                         color="gray"
                         size="lg"
                         class="w-full justify-center">
-                        {{ __('Annulla') }}
+                        {{ (string) __('Annulla') }}
                     </x-filament::button>
                 </div>
             </form>

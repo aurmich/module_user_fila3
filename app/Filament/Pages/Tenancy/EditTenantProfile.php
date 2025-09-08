@@ -13,7 +13,7 @@ class EditTenantProfile extends BaseEditTenantProfile
 {
     public static function getLabel(): string
     {
-        return __('user::tenancy.navigation.edit');
+        return (string) __('user::tenancy.navigation.edit');
     }
 
     public function form(Form $form): Form

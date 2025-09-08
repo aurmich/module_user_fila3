@@ -10,7 +10,6 @@ use Filament\Forms\ComponentContainer;
 use Filament\Forms\Components\Component;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Contracts\HasForms;
-use Filament\Forms\Form;
 use Filament\Notifications\Notification;
 use Filament\Pages\Concerns\InteractsWithFormActions;
 use Filament\Pages\Page;
@@ -18,7 +17,6 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Validation\Rules\Password as PasswordRule;
 use Modules\User\Datas\PasswordData;
 use Modules\User\Events\NewPasswordSet;
 use Modules\User\Http\Response\PasswordResetResponse;
@@ -81,8 +79,8 @@ class PasswordExpired extends Page implements HasForms
         // check if current password is correct
         if ($user->password === null || ! Hash::check($current_password, $user->password)) {
             Notification::make()
-                ->title(__('user::otp.notifications.wrong_password.title'))
-                ->body(__('user::otp.notifications.wrong_password.body'))
+                ->title((string) __('user::otp.notifications.wrong_password.title'))
+                ->body((string) __('user::otp.notifications.wrong_password.body'))
                 ->danger()
                 ->send();
 
@@ -92,8 +90,8 @@ class PasswordExpired extends Page implements HasForms
         // check if new password is different from the current password
         if ($user->password !== null && Hash::check($password, $user->password)) {
             Notification::make()
-                ->title(__('user::otp.notifications.same_password.title'))
-                ->body(__('user::otp.notifications.same_password.body'))
+                ->title((string) __('user::otp.notifications.same_password.title'))
+                ->body((string) __('user::otp.notifications.same_password.body'))
                 ->danger()
                 ->send();
 
@@ -103,8 +101,8 @@ class PasswordExpired extends Page implements HasForms
         // check if both required columns exist in the database
         if (! Schema::hasColumn('users', 'password_expires_at')) {
             Notification::make()
-                ->title(__('user::otp.notifications.column_not_found.title'))
-                ->body(__('user::otp.notifications.column_not_found.body', [
+                ->title((string) __('user::otp.notifications.column_not_found.title'))
+                ->body((string) __('user::otp.notifications.column_not_found.body', [
                     'column_name' => 'password_expires_at',
                     'password_column_name' => 'password',
                     'table_name' => 'users',
@@ -119,7 +117,7 @@ class PasswordExpired extends Page implements HasForms
         $passwordExpiryDateTime = now()->addDays($pwd->expires_in);
 
         // Verificare che l'utente esistante e che sia un modello Eloquent
-        if (!($user instanceof \Illuminate\Database\Eloquent\Model)) {
+        if (! ($user instanceof \Illuminate\Database\Eloquent\Model)) {
             throw new \InvalidArgumentException('L\'utente deve essere un modello Eloquent con il metodo update');
         }
 
@@ -131,18 +129,18 @@ class PasswordExpired extends Page implements HasForms
         ]);
 
         // Verificare che l'utente implementi l'interfaccia UserContract prima di passarlo all'evento
-        if (!$user instanceof \Modules\Xot\Contracts\UserContract) {
+        if (! $user instanceof \Modules\Xot\Contracts\UserContract) {
             throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia UserContract');
         }
 
         event(new NewPasswordSet($user));
 
         Notification::make()
-            ->title(__('user::otp.notifications.password_reset.success'))
+            ->title((string) __('user::otp.notifications.password_reset.success'))
             ->success()
             ->send();
 
-        return new PasswordResetResponse();
+        return new PasswordResetResponse;
     }
 
     protected function getCurrentPasswordFormComponent(): Component

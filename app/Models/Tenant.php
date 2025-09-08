@@ -15,6 +15,7 @@ use Modules\Xot\Contracts\UserContract;
  * @method static \Illuminate\Database\Eloquent\Builder|Tenant newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Tenant newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Tenant query()
+ *
  * @property EloquentCollection<int, Model&UserContract> $members
  * @property int|null $members_count
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
@@ -24,6 +25,12 @@ use Modules\Xot\Contracts\UserContract;
  * @property TenantUser $pivot
  * @property EloquentCollection<int, User> $users
  * @property int|null $users_count
+ *
+ * @method static Tenant create(array $attributes = [])
+ * @method static Tenant firstOrCreate(array $attributes = [], array $values = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Tenant where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
+ * @method static int count(string $columns = '*')
+ *
  * @mixin IdeHelperTenant
  * @mixin \Eloquent
  */

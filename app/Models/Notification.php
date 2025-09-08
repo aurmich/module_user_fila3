@@ -9,6 +9,7 @@ use Illuminate\Notifications\DatabaseNotification as BaseNotification;
 
 /**
  * @property \Illuminate\Database\Eloquent\Model|\Eloquent $notifiable
+ *
  * @method static \Illuminate\Notifications\DatabaseNotificationCollection<int, static> all($columns = ['*'])
  * @method static \Illuminate\Notifications\DatabaseNotificationCollection<int, static> get($columns = ['*'])
  * @method static \Illuminate\Database\Eloquent\Builder|Notification newModelQuery()
@@ -20,12 +21,18 @@ use Illuminate\Notifications\DatabaseNotification as BaseNotification;
  * @method static \Illuminate\Notifications\DatabaseNotificationCollection<int, static> get($columns = ['*'])
  * @method static \Illuminate\Notifications\DatabaseNotificationCollection<int, static> all($columns = ['*'])
  * @method static \Illuminate\Notifications\DatabaseNotificationCollection<int, static> get($columns = ['*'])
+ * @method static Notification create(array $attributes = [])
+ * @method static Notification firstOrCreate(array $attributes = [], array $values = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
+ * @method static int count(string $columns = '*')
+ *
  * @mixin IdeHelperNotification
  * @mixin \Eloquent
  */
 class Notification extends BaseNotification
 {
     use HasFactory;
+
     /** @var string */
     protected $connection = 'user';
 

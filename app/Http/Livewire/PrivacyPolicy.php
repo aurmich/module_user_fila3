@@ -32,7 +32,7 @@ class PrivacyPolicy extends Component
         $view->layout(
             'filament::components.layouts.base',
             [
-                'title' => __('filament-jet::registration.privacy_policy'),
+                'title' => (string) __('filament-jet::registration.privacy_policy'),
             ]
         );
 

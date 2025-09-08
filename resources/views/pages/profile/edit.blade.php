@@ -528,7 +528,7 @@ $component = new class extends Component {
 <x-layouts.app>
     <x-slot name="header">
         <h2 class="text-lg font-semibold leading-tight text-gray-800 dark:text-gray-200">
-            {{ __('Profile') }}
+            {{ (string) __('Profile') }}
         </h2>
     </x-slot>
 
@@ -541,17 +541,17 @@ $component = new class extends Component {
                     <div class="max-w-xl">
                         <header>
                             <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-                                {{ __('Profile Information') }}
+                                {{ (string) __('Profile Information') }}
                             </h2>
                             <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                                {{ __("Update your account's profile information and email address.") }}
+                                {{ (string) __("Update your account's profile information and email address.") }}
                             </p>
                         </header>
 
                         <form wire:submit="updateProfile" class="mt-6 space-y-6">
                             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                                 <x-ui.input 
-                                    :label="__('First Name')" 
+                                    :label="(string) __('First Name')" 
                                     type="text" 
                                     id="first_name" 
                                     name="first_name" 
@@ -563,7 +563,7 @@ $component = new class extends Component {
                                     autocomplete="given-name"
                                 />
                                 <x-ui.input 
-                                    :label="__('Last Name')" 
+                                    :label="(string) __('Last Name')" 
                                     type="text" 
                                     id="last_name" 
                                     name="last_name" 
@@ -587,7 +587,7 @@ $component = new class extends Component {
                             
                             <div class="flex items-start">
                                 <x-ui.button type="primary" submit="true">
-                                    {{ __('Update Profile') }}
+                                    {{ (string) __('Update Profile') }}
                                 </x-ui.button>
                             </div>
                         </form>
@@ -599,10 +599,10 @@ $component = new class extends Component {
                     <div class="max-w-xl">
                         <header>
                             <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-                                {{ __('Update Password') }}
+                                {{ (string) __('Update Password') }}
                             </h2>
                             <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                                {{ __('Ensure your account is using a long, random password to stay secure.') }}
+                                {{ (string) __('Ensure your account is using a long, random password to stay secure.') }}
                             </p>
                         </header>
 
@@ -641,7 +641,7 @@ $component = new class extends Component {
 
                             <div class="flex items-start">
                                 <x-ui.button type="primary" submit="true">
-                                    {{ __('Update Password') }}
+                                    {{ (string) __('Update Password') }}
                                 </x-ui.button>
                             </div>
                         </form>
@@ -653,10 +653,10 @@ $component = new class extends Component {
                     <div class="max-w-xl">
                         <header>
                             <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-                                {{ __('Delete Account') }}
+                                {{ (string) __('Delete Account') }}
                             </h2>
                             <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                                {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.') }}
+                                {{ (string) __('Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.') }}
                             </p>
                         </header>
 
@@ -666,7 +666,7 @@ $component = new class extends Component {
                                 x-data
                                 @click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"
                             >
-                                {{ __('Delete Account') }}
+                                {{ (string) __('Delete Account') }}
                             </x-ui.button>
                         </div>
 
@@ -674,11 +674,11 @@ $component = new class extends Component {
                         <x-ui.modal name="confirm-user-deletion" maxWidth="lg" :show="$errors->userDeletion->isNotEmpty()" focusable>
                             <form wire:submit="deleteAccount" class="p-6">
                                 <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-                                    {{ __('Are you sure you want to delete your account?') }}
+                                    {{ (string) __('Are you sure you want to delete your account?') }}
                                 </h2>
                                 
                                 <p class="mt-1 mb-6 text-sm text-gray-600 dark:text-gray-400">
-                                    {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.') }}
+                                    {{ (string) __('Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.') }}
                                 </p>
 
                                 <x-ui.input 
@@ -689,16 +689,16 @@ $component = new class extends Component {
                                     wire:model="delete_password"
                                     required
                                     autocomplete="current-password"
-                                    placeholder="{{ __('Enter your password to confirm deletion') }}"
+                                    placeholder="{{ (string) __('Enter your password to confirm deletion') }}"
                                 />
 
                                 <div class="flex justify-end mt-6 space-x-3">
                                     <x-ui.button type="secondary" x-on:click="$dispatch('close')">
-                                        {{ __('Cancel') }}
+                                        {{ (string) __('Cancel') }}
                                     </x-ui.button>
 
                                     <x-ui.button type="danger" submit="true">
-                                        {{ __('Delete Account') }}
+                                        {{ (string) __('Delete Account') }}
                                     </x-ui.button>
                                 </div>
                             </form>

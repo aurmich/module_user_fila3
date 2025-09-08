@@ -129,6 +129,30 @@ Utilizzato per:
 - [ ] EditUserWidget translation audit
 - [ ] User Resources translations
 
+---
+
+## 2025-09-03: Correzione file di traduzione con errori sintattici
+
+### Problema
+PHPStan ha rilevato errori gravi (EOF inatteso, parentesi mancanti) in più file lang del modulo User:
+- `resources/lang/en/registration.php`
+- `resources/lang/it/registration.php`
+- `resources/lang/it/password-data.php`
+- `resources/lang/it/tenant.php`
+- `resources/lang/it/user-resource.php`
+- `resources/lang/it/device.php`
+
+### Azioni
+1. Chiusura corretta degli array `return [...]` e delle parentesi di chiusura.
+2. Aggiunta delle chiavi richieste dallo standard del progetto (label/placeholder/help quando mancanti nei blocchi aperti).
+3. Verifica del rispetto di `declare(strict_types=1);` dove applicabile ai file in `lang/` root del modulo.
+
+### Impatto
+- Rimozione degli errori bloccanti per PHPStan livello 10.
+- Allineamento dei file di traduzione allo standard “struttura espansa”.
+
+*Ultimo aggiornamento: 2025-09-03*
+
 ### 2. Automation (Q2 2025)  
 - [ ] Script per rilevare chiavi translation mancanti
 - [ ] Test automatici per translation resolution

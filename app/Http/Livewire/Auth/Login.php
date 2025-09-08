@@ -69,8 +69,8 @@ class Login extends Component implements HasForms
             TextInput::make('email')
                 ->email()
                 ->required()
-                ->label(__('Email'))
-                ->placeholder(__('Inserisci la tua email'))
+                ->label((string) __('Email'))
+                ->placeholder((string) __('Inserisci la tua email'))
                 ->suffixIcon('heroicon-m-envelope')
                 ->autofocus()
                 ->live()
@@ -80,8 +80,8 @@ class Login extends Component implements HasForms
             TextInput::make('password')
                 ->password()
                 ->required()
-                ->label(__('Password'))
-                ->placeholder(__('Inserisci la tua password'))
+                ->label((string) __('Password'))
+                ->placeholder((string) __('Inserisci la tua password'))
                 ->suffixIcon('heroicon-m-key')
                 ->revealable()
                 ->minLength(8)
@@ -89,7 +89,7 @@ class Login extends Component implements HasForms
                 ->dehydrated(),
 
             Checkbox::make('remember')
-                ->label(__('Ricordami'))
+                ->label((string) __('Ricordami'))
                 ->default(false)
                 ->dehydrated(),
         ];
@@ -128,23 +128,21 @@ class Login extends Component implements HasForms
                 return $this->getRedirectUrl();
             }
 
-            $this->addError('email', __('Le credenziali fornite non sono corrette..'));
+            $this->addError('email', (string) __('Le credenziali fornite non sono corrette..'));
         } catch (\Exception $e) {
-            $this->addError('email', __('Si è verificato un errore durante il login. Riprova più tardi.'));
+            $this->addError('email', (string) __('Si è verificato un errore durante il login. Riprova più tardi.'));
             report($e);
         }
     }
 
     /**
      * Determina l'URL di redirect appropriato per l'utente autenticato.
-     *
-     * @return RedirectResponse
      */
     protected function getRedirectUrl(): RedirectResponse
     {
         $user = Auth::user();
-        
-        if (!$user) {
+
+        if (! $user) {
             return redirect()->to('/');
         }
 
@@ -153,30 +151,29 @@ class Login extends Component implements HasForms
             return str_ends_with($role->name, '::admin');
         });
 
-        if ($adminRoles->count() === 1) {
+        if ($adminRoles->count()/** @phpstan-ignore method.nonObject */ === 1) {
             // Un solo ruolo admin - redirect al modulo specifico
             $role = $adminRoles->first();
             if ($role !== null) {
                 $moduleName = str_replace('::admin', '', $role->name);
+
                 return redirect()->to("/{$moduleName}/admin");
             }
-        } elseif ($adminRoles->count() > 1) {
+        } elseif ($adminRoles->count()/** @phpstan-ignore method.nonObject */ > 1) {
             // Più ruoli admin - redirect alla dashboard principale
             return redirect()->to('/admin');
         }
 
         // Utente senza ruoli admin - redirect alla homepage
-        return redirect()->to('/' . app()->getLocale());
+        return redirect()->to('/'.app()->getLocale());
     }
 
     /**
      * Renderizza il componente.
-     *
-     * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
      */
     public function render(): \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
     {
-        //app(ViewCopyAction::class)->execute('user::livewire.auth.login', 'pub_theme::livewire.auth.login');
+        // app(ViewCopyAction::class)->execute('user::livewire.auth.login', 'pub_theme::livewire.auth.login');
         return view('user::livewire.auth.login');
     }
 }

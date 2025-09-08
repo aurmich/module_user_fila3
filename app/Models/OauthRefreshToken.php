@@ -11,17 +11,30 @@ use Laravel\Passport\RefreshToken as PassportRefreshToken;
  * Modules\User\Models\OauthRefreshToken.
  *
  * @property OauthAccessToken|null $accessToken
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|OauthRefreshToken newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|OauthRefreshToken newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|OauthRefreshToken query()
+ *
  * @property string $id
  * @property string $access_token_id
  * @property bool $revoked
  * @property Carbon|null $expires_at
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|OauthRefreshToken whereAccessTokenId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthRefreshToken whereExpiresAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthRefreshToken whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OauthRefreshToken whereRevoked($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthRefreshToken where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
+ * @method static int count(string $columns = '*')
+ * @method static OauthRefreshToken|null first()
+ * @method static \Illuminate\Database\Eloquent\Collection<int, OauthRefreshToken> get()
+ * @method static OauthRefreshToken create(array $attributes = [])
+ * @method static OauthRefreshToken firstOrCreate(array $attributes = [], array $values = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthRefreshToken where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthRefreshToken whereNotNull(string|\Illuminate\Contracts\Database\Query\Expression $columns)
+ * @method static int count(string $columns = '*')
+ *
  * @mixin IdeHelperOauthRefreshToken
  * @mixin \Eloquent
  */

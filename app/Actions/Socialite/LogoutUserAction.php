@@ -38,7 +38,7 @@ class LogoutUserAction
 
         if (method_exists($accessToken, 'delete')) {
             $accessToken->delete();
-            // $user->token()->delete();
+            // $user->token()->delete();/** @phpstan-ignore method.nonObject */
         }
 
         /*

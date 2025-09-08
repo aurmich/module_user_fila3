@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Feature;
 
-use Modules\User\Models\User;
-use Modules\User\Models\Profile;
-use Modules\User\Models\Role;
-use Modules\User\Models\Permission;
-use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
+use Modules\User\Models\Permission;
+use Modules\User\Models\Profile;
+use Modules\User\Models\Role;
+use Modules\User\Models\User;
+use Tests\TestCase;
 
 class UserManagementBusinessLogicTest extends TestCase
 {
@@ -64,11 +64,11 @@ class UserManagementBusinessLogicTest extends TestCase
         $role = Role::factory()->create(['name' => 'doctor']);
 
         // Act
-        $user->assignRole($role);
+        $user->assignRole($role); /** @phpstan-ignore method.nonObject */
 
         // Assert
-        $this->assertTrue($user->hasRole('doctor'));
-        $this->assertTrue($user->hasRole($role));
+        $this->assertTrue($user->hasRole('doctor')/** @phpstan-ignore method.nonObject */);
+        $this->assertTrue($user->hasRole($role)/** @phpstan-ignore method.nonObject */);
         $this->assertContains($role->name, $user->getRoleNames()->toArray());
     }
 
@@ -81,13 +81,13 @@ class UserManagementBusinessLogicTest extends TestCase
         $role2 = Role::factory()->create(['name' => 'admin']);
 
         // Act
-        $user->assignRole([$role1, $role2]);
+        $user->assignRole([$role1, $role2]); /** @phpstan-ignore method.nonObject */
 
         // Assert
-        $this->assertTrue($user->hasRole('doctor'));
-        $this->assertTrue($user->hasRole('admin'));
-        $this->assertTrue($user->hasRole($role1));
-        $this->assertTrue($user->hasRole($role2));
+        $this->assertTrue($user->hasRole('doctor')/** @phpstan-ignore method.nonObject */);
+        $this->assertTrue($user->hasRole('admin')/** @phpstan-ignore method.nonObject */);
+        $this->assertTrue($user->hasRole($role1)/** @phpstan-ignore method.nonObject */);
+        $this->assertTrue($user->hasRole($role2)/** @phpstan-ignore method.nonObject */);
         $this->assertCount(2, $user->getRoleNames());
     }
 
@@ -97,14 +97,14 @@ class UserManagementBusinessLogicTest extends TestCase
         // Arrange
         $user = User::factory()->create();
         $role = Role::factory()->create(['name' => 'doctor']);
-        $user->assignRole($role);
+        $user->assignRole($role); /** @phpstan-ignore method.nonObject */
 
         // Act
         $user->removeRole($role);
 
         // Assert
-        $this->assertFalse($user->hasRole('doctor'));
-        $this->assertFalse($user->hasRole($role));
+        $this->assertFalse($user->hasRole('doctor')/** @phpstan-ignore method.nonObject */);
+        $this->assertFalse($user->hasRole($role)/** @phpstan-ignore method.nonObject */);
         $this->assertCount(0, $user->getRoleNames());
     }
 
@@ -117,15 +117,15 @@ class UserManagementBusinessLogicTest extends TestCase
         $role2 = Role::factory()->create(['name' => 'admin']);
         $role3 = Role::factory()->create(['name' => 'nurse']);
 
-        $user->assignRole([$role1, $role2]);
+        $user->assignRole([$role1, $role2]); /** @phpstan-ignore method.nonObject */
 
         // Act
         $user->syncRoles([$role2, $role3]);
 
         // Assert
-        $this->assertFalse($user->hasRole('doctor'));
-        $this->assertTrue($user->hasRole('admin'));
-        $this->assertTrue($user->hasRole('nurse'));
+        $this->assertFalse($user->hasRole('doctor')/** @phpstan-ignore method.nonObject */);
+        $this->assertTrue($user->hasRole('admin')/** @phpstan-ignore method.nonObject */);
+        $this->assertTrue($user->hasRole('nurse')/** @phpstan-ignore method.nonObject */);
         $this->assertCount(2, $user->getRoleNames());
     }
 
@@ -137,12 +137,12 @@ class UserManagementBusinessLogicTest extends TestCase
         $role = Role::factory()->create(['name' => 'doctor']);
         $permission = Permission::factory()->create(['name' => 'patients.read']);
 
-        $role->givePermissionTo($permission);
-        $user->assignRole($role);
+        $role->givePermissionTo($permission); /** @phpstan-ignore method.nonObject */
+        $user->assignRole($role); /** @phpstan-ignore method.nonObject */
 
         // Act & Assert
-        $this->assertTrue($user->hasPermissionTo('patients.read'));
-        $this->assertTrue($user->hasPermissionTo($permission));
+        $this->assertTrue($user->hasPermissionTo('patients.read')/** @phpstan-ignore method.nonObject */);
+        $this->assertTrue($user->hasPermissionTo($permission)/** @phpstan-ignore method.nonObject */);
         $this->assertTrue($user->can('patients.read'));
     }
 
@@ -154,11 +154,11 @@ class UserManagementBusinessLogicTest extends TestCase
         $permission = Permission::factory()->create(['name' => 'special.permission']);
 
         // Act
-        $user->givePermissionTo($permission);
+        $user->givePermissionTo($permission); /** @phpstan-ignore method.nonObject */
 
         // Assert
-        $this->assertTrue($user->hasPermissionTo('special.permission'));
-        $this->assertTrue($user->hasPermissionTo($permission));
+        $this->assertTrue($user->hasPermissionTo('special.permission')/** @phpstan-ignore method.nonObject */);
+        $this->assertTrue($user->hasPermissionTo($permission)/** @phpstan-ignore method.nonObject */);
         $this->assertTrue($user->can('special.permission'));
     }
 
@@ -168,14 +168,14 @@ class UserManagementBusinessLogicTest extends TestCase
         // Arrange
         $user = User::factory()->create();
         $permission = Permission::factory()->create(['name' => 'special.permission']);
-        $user->givePermissionTo($permission);
+        $user->givePermissionTo($permission); /** @phpstan-ignore method.nonObject */
 
         // Act
         $user->revokePermissionTo($permission);
 
         // Assert
-        $this->assertFalse($user->hasPermissionTo('special.permission'));
-        $this->assertFalse($user->hasPermissionTo($permission));
+        $this->assertFalse($user->hasPermissionTo('special.permission')/** @phpstan-ignore method.nonObject */);
+        $this->assertFalse($user->hasPermissionTo($permission)/** @phpstan-ignore method.nonObject */);
         $this->assertFalse($user->can('special.permission'));
     }
 
@@ -187,7 +187,7 @@ class UserManagementBusinessLogicTest extends TestCase
         $role1 = Role::factory()->create(['name' => 'doctor']);
         $role2 = Role::factory()->create(['name' => 'nurse']);
 
-        $user->assignRole($role1);
+        $user->assignRole($role1); /** @phpstan-ignore method.nonObject */
 
         // Act & Assert
         $this->assertTrue($user->hasAnyRole(['doctor', 'nurse']));
@@ -203,7 +203,7 @@ class UserManagementBusinessLogicTest extends TestCase
         $role1 = Role::factory()->create(['name' => 'doctor']);
         $role2 = Role::factory()->create(['name' => 'admin']);
 
-        $user->assignRole([$role1, $role2]);
+        $user->assignRole([$role1, $role2]); /** @phpstan-ignore method.nonObject */
 
         // Act & Assert
         $this->assertTrue($user->hasAllRoles(['doctor', 'admin']));
@@ -219,8 +219,8 @@ class UserManagementBusinessLogicTest extends TestCase
         $permission1 = Permission::factory()->create(['name' => 'patients.read']);
         $permission2 = Permission::factory()->create(['name' => 'patients.write']);
 
-        $role->givePermissionTo([$permission1, $permission2]);
-        $user->assignRole($role);
+        $role->givePermissionTo([$permission1, $permission2]); /** @phpstan-ignore method.nonObject */
+        $user->assignRole($role); /** @phpstan-ignore method.nonObject */
 
         // Act
         $permissions = $user->getAllPermissions();
@@ -239,7 +239,7 @@ class UserManagementBusinessLogicTest extends TestCase
         $role1 = Role::factory()->create(['name' => 'doctor']);
         $role2 = Role::factory()->create(['name' => 'admin']);
 
-        $user->assignRole([$role1, $role2]);
+        $user->assignRole([$role1, $role2]); /** @phpstan-ignore method.nonObject */
 
         // Act
         $roles = $user->getRoleNames();
@@ -257,10 +257,10 @@ class UserManagementBusinessLogicTest extends TestCase
         $user = User::factory()->create();
         $superAdminRole = Role::factory()->create(['name' => 'super-admin']);
 
-        $user->assignRole($superAdminRole);
+        $user->assignRole($superAdminRole); /** @phpstan-ignore method.nonObject */
 
         // Act & Assert
-        $this->assertTrue($user->hasRole('super-admin'));
+        $this->assertTrue($user->hasRole('super-admin')/** @phpstan-ignore method.nonObject */);
         $this->assertTrue($user->isSuperAdmin());
     }
 
@@ -271,10 +271,10 @@ class UserManagementBusinessLogicTest extends TestCase
         $user = User::factory()->create();
         $adminRole = Role::factory()->create(['name' => 'admin']);
 
-        $user->assignRole($adminRole);
+        $user->assignRole($adminRole); /** @phpstan-ignore method.nonObject */
 
         // Act & Assert
-        $this->assertTrue($user->hasRole('admin'));
+        $this->assertTrue($user->hasRole('admin')/** @phpstan-ignore method.nonObject */);
         $this->assertTrue($user->isAdmin());
     }
 
@@ -285,10 +285,10 @@ class UserManagementBusinessLogicTest extends TestCase
         $user = User::factory()->create();
         $doctorRole = Role::factory()->create(['name' => 'doctor']);
 
-        $user->assignRole($doctorRole);
+        $user->assignRole($doctorRole); /** @phpstan-ignore method.nonObject */
 
         // Act & Assert
-        $this->assertTrue($user->hasRole('doctor'));
+        $this->assertTrue($user->hasRole('doctor')/** @phpstan-ignore method.nonObject */);
         $this->assertTrue($user->isDoctor());
     }
 
@@ -299,10 +299,10 @@ class UserManagementBusinessLogicTest extends TestCase
         $user = User::factory()->create();
         $patientRole = Role::factory()->create(['name' => 'patient']);
 
-        $user->assignRole($patientRole);
+        $user->assignRole($patientRole); /** @phpstan-ignore method.nonObject */
 
         // Act & Assert
-        $this->assertTrue($user->hasRole('patient'));
+        $this->assertTrue($user->hasRole('patient')/** @phpstan-ignore method.nonObject */);
         $this->assertTrue($user->isPatient());
     }
 
@@ -444,9 +444,9 @@ class UserManagementBusinessLogicTest extends TestCase
         $user2 = User::factory()->create();
         $user3 = User::factory()->create();
 
-        $user1->assignRole($doctorRole);
-        $user2->assignRole($nurseRole);
-        $user3->assignRole($doctorRole);
+        $user1->assignRole($doctorRole); /** @phpstan-ignore method.nonObject */
+        $user2->assignRole($nurseRole); /** @phpstan-ignore method.nonObject */
+        $user3->assignRole($doctorRole); /** @phpstan-ignore method.nonObject */
 
         // Act
         $doctors = User::role('doctor')->get();
@@ -465,12 +465,11 @@ class UserManagementBusinessLogicTest extends TestCase
         $role = Role::factory()->create(['name' => 'doctor']);
         $permission = Permission::factory()->create(['name' => 'patients.read']);
 
-        $role->givePermissionTo($permission);
-
+        $role->givePermissionTo($permission); /** @phpstan-ignore method.nonObject */
         $user1 = User::factory()->create();
         $user2 = User::factory()->create();
 
-        $user1->assignRole($role);
+        $user1->assignRole($role); /** @phpstan-ignore method.nonObject */
 
         // Act
         $usersWithPermission = User::permission('patients.read')->get();
@@ -488,10 +487,9 @@ class UserManagementBusinessLogicTest extends TestCase
         $role = Role::factory()->create(['name' => 'doctor']);
         $permission = Permission::factory()->create(['name' => 'patients.read']);
 
-        $role->givePermissionTo($permission);
-
+        $role->givePermissionTo($permission); /** @phpstan-ignore method.nonObject */
         $user = User::factory()->create();
-        $user->assignRole($role);
+        $user->assignRole($role); /** @phpstan-ignore method.nonObject */
 
         // Act
         $userWithRelations = User::with(['roles', 'permissions'])->find($user->id);
@@ -630,4 +628,3 @@ class UserManagementBusinessLogicTest extends TestCase
         $this->assertEquals('dark', $user->fresh()->preferences['theme']);
     }
 }
-

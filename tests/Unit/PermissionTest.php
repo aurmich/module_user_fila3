@@ -8,7 +8,6 @@ namespace Modules\User\Tests\Unit\Widgets;
 
 use Modules\User\Models\Permission;
 use Modules\User\Models\Role;
-use Modules\User\Models\User;
 
 uses(Tests\TestCase::class);
 
@@ -84,7 +83,7 @@ test('permission can be assigned to roles', function (): void {
         'guard_name' => 'web',
     ]);
 
-    expect($role->hasPermissionTo($this->permission))->toBeTrue();
+    expect($role->hasPermissionTo($this->permission)/** @phpstan-ignore method.nonObject */)->toBeTrue();
     expect($this->permission->roles)->toHaveCount(1);
 });
 

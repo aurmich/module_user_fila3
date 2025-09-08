@@ -26,6 +26,7 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
  * @property Carbon|null $updated_at When the record was last updated
  * @property-read Model|\Eloquent $authenticatable The authenticatable model instance
 
+ *
  * @method static Builder<static>|Authentication newModelQuery()
  * @method static Builder<static>|Authentication newQuery()
  * @method static Builder<static>|Authentication query()
@@ -41,7 +42,14 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
  * @method static Builder<static>|Authentication whereLoginSuccessful($value)
  * @method static Builder<static>|Authentication whereAuthenticatableType($value)
  * @method static Builder<static>|Authentication whereAuthenticatableId($value)
-
+ * @method static Authentication|null first()
+ * @method static \Illuminate\Database\Eloquent\Collection<int, Authentication> get()
+ * @method static Authentication create(array $attributes = [])
+ * @method static Authentication firstOrCreate(array $attributes = [], array $values = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Authentication where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Authentication whereNotNull(string|\Illuminate\Contracts\Database\Query\Expression $columns)
+ * @method static int count(string $columns = '*')
+ *
  * @mixin IdeHelperAuthentication
  * @mixin \Eloquent
  */
@@ -51,7 +59,6 @@ class Authentication extends Model
 
     /**
      * Create a new factory instance for the model.
-
      */
     protected static function newFactory(): AuthenticationFactory
     {
