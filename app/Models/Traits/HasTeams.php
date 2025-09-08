@@ -93,8 +93,8 @@ trait HasTeams
     {
         /*
         static::deleting(function ($team) {
-            $team->teamUsers()->delete(); // @phpstan-ignore method.nonObject
-            $team->teamInvitations()->delete(); // @phpstan-ignore method.nonObject
+            $team->teamUsers()->delete();
+            $team->teamInvitations()->delete();
         });
         */
     }
@@ -112,7 +112,7 @@ trait HasTeams
      */
     public function canCreateTeam(): bool
     {
-        return $this->hasPermissionTo('create team'); // @phpstan-ignore method.nonObject
+        return $this->hasPermissionTo('create team');
     }
 
     /**

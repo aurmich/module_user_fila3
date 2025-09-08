@@ -69,7 +69,7 @@ class AssignRoleCommand extends Command
 
         foreach ($rows as $row) {
             $role = Role::firstOrCreate(['name' => $row]);
-            $user->assignRole($role); /** @phpstan-ignore method.nonObject */
+            $user->assignRole($role);
         }
 
         $this->info(implode(', ', $rows).' assigned to '.$email);

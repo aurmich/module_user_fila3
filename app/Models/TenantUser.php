@@ -13,7 +13,6 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser query()
- *
  * @property int $id
  * @property string|null $tenant_id
  * @property string|null $user_id
@@ -21,7 +20,6 @@ use Illuminate\Support\Carbon;
  * @property Carbon|null $updated_at
  * @property string|null $created_by
  * @property string|null $updated_by
- *
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereCustomerId($value)
@@ -32,29 +30,20 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereUuid($value)
- *
  * @property string|null $deleted_at
  * @property string|null $deleted_by
- *
  * @method static \Illuminate\Database\Eloquent\Builder|TenantUser whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TenantUser whereDeletedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TenantUser whereTenantId($value)
- *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
- *
- * @method static TenantUser create(array $attributes = [])
- * @method static TenantUser firstOrCreate(array $attributes = [], array $values = [])
- * @method static \Illuminate\Database\Eloquent\Builder<static>|TenantUser where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
- * @method static int count(string $columns = '*')
- *
  * @mixin IdeHelperTenantUser
  * @mixin \Eloquent
  */
 class TenantUser extends BasePivot
 {
     use HasFactory;
-
+    
     protected $connection = 'user';
 
     // public $incrementing = false;

@@ -19,7 +19,6 @@ use Modules\User\Database\Factories\ModelHasRoleFactory;
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
- *
  * @method static ModelHasRoleFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|ModelHasRole newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ModelHasRole newQuery()
@@ -33,22 +32,10 @@ use Modules\User\Database\Factories\ModelHasRoleFactory;
  * @method static \Illuminate\Database\Eloquent\Builder|ModelHasRole whereTeamId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ModelHasRole whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ModelHasRole whereUpdatedBy($value)
- *
  * @property string $uuid (DC2Type:guid)
- *
  * @method static \Illuminate\Database\Eloquent\Builder|ModelHasRole whereUuid($value)
- *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
- *
- * @method static ModelHasRole|null first()
- * @method static \Illuminate\Database\Eloquent\Collection<int, ModelHasRole> get()
- * @method static ModelHasRole create(array $attributes = [])
- * @method static ModelHasRole firstOrCreate(array $attributes = [], array $values = [])
- * @method static \Illuminate\Database\Eloquent\Builder<static>|ModelHasRole where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
- * @method static \Illuminate\Database\Eloquent\Builder<static>|ModelHasRole whereNotNull(string|\Illuminate\Contracts\Database\Query\Expression $columns)
- * @method static int count(string $columns = '*')
- *
  * @mixin IdeHelperModelHasRole
  * @mixin \Eloquent
  */

@@ -6,6 +6,7 @@ namespace Modules\User\Filament\Resources\PermissionResource\Pages;
 
 use Filament\Infolists\Components\TextEntry;
 use Modules\User\Filament\Resources\PermissionResource;
+use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 
 class ViewPermission extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
 {
@@ -18,14 +19,14 @@ class ViewPermission extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRe
     {
         return [
             'name' => TextEntry::make('name')
-                ->label((string) __('user::permission.fields.name.label')),
+                ->label(__('user::permission.fields.name.label')),
             'guard_name' => TextEntry::make('guard_name')
-                ->label((string) __('user::permission.fields.guard_name.label')),
+                ->label(__('user::permission.fields.guard_name.label')),
             'active' => TextEntry::make('active')
-                ->label((string) __('user::permission.fields.active.label'))
-                ->formatStateUsing(fn ($state): string => $state ? (string) __('user::common.yes') : (string) __('user::common.no')),
+                ->label(__('user::permission.fields.active.label'))
+                ->formatStateUsing(fn ($state): string => $state ? __('user::common.yes') : __('user::common.no')),
             'created_at' => TextEntry::make('created_at')
-                ->label((string) __('user::permission.fields.created_at.label'))
+                ->label(__('user::permission.fields.created_at.label'))
                 ->dateTime(),
         ];
     }

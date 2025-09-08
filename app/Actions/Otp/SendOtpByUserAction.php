@@ -70,7 +70,7 @@ class SendOtpByUserAction
      * Update user's password with a hashed temporary OTP and set expiration properties.
      *
      * @param  UserContract  $user  user to update
-     * @param  string  $temporaryPassword  generated temporary password
+     * @param  string $temporaryPassword  generated temporary password
      * @param  Carbon  $expirationTime  expiration time for the OTP
      */
     private function updateUserWithOtp(UserContract $user, string $temporaryPassword, Carbon $expirationTime): void
@@ -86,7 +86,7 @@ class SendOtpByUserAction
      * Send OTP notification to user's email.
      *
      * @param  UserContract  $user  user to notify
-     * @param  string  $temporaryPassword  temporary password to include in notification
+     * @param  string $temporaryPassword  temporary password to include in notification
      */
     private function dispatchOtpNotification(UserContract $user, string $temporaryPassword): void
     {
@@ -98,9 +98,8 @@ class SendOtpByUserAction
      */
     private function displaySuccessNotification(): void
     {
-        $title = (string) __('user::otp.actions.send_otp_success');
         FilamentNotification::make()
-            ->title(is_string($title) ? $title : 'OTP sent successfully')
+            ->title(__('user::otp.actions.send_otp_success'))
             ->success()
             ->send();
     }

@@ -62,14 +62,11 @@ return [
 ];
 ```
 
-<<<<<<< HEAD
 ## Collegamenti
 - [Widget Translation Rules](widget-translation-rules.md)
 - [Root Translation Guidelines](../../../../project_docs/translation-standards.md)
-=======
 ### 2. Struttura Completa delle Traduzioni
 Ogni file `messages.php` include categorie complete di messaggi:
->>>>>>> 199538c (.)
 
 - **Autenticazione**: Login, logout, credenziali
 - **Sessione**: Scadenza, validità

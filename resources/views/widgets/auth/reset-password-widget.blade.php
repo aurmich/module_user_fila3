@@ -5,10 +5,10 @@
 <div class="space-y-6">
     <div class="text-center">
         <h2 class="text-2xl font-bold tracking-tight">
-            {{ (string) __('user::auth.reset-password.title') }}
+            {{ __('user::auth.reset-password.title') }}
         </h2>
         <p class="mt-2 text-sm text-gray-600">
-            {{ (string) __('user::auth.reset-password.subtitle') }}
+            {{ __('user::auth.reset-password.subtitle') }}
         </p>
     </div>
 
@@ -20,7 +20,7 @@
                 type="submit"
                 class="w-full"
             >
-                {{ (string) __('user::auth.reset-password.submit') }}
+                {{ __('user::auth.reset-password.submit') }}
             </x-filament::button>
         </div>
     </form>

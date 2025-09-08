@@ -29,7 +29,7 @@ new class extends Component {
 
     <x-slot name="header">
         <h2 class="text-lg font-semibold leading-tight text-gray-800 dark:text-gray-200">
-            {{ (string) __('Learn More') }}
+            {{ __('Learn More') }}
         </h2>
     </x-slot>
 

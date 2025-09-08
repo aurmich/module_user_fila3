@@ -1,11 +1,11 @@
 <div>
     <x-filament::section>
         <x-slot name="heading">
-            {{ (string) __('user::profile.delete_account.title') }}
+            {{ __('user::profile.delete_account.title') }}
         </x-slot>
 
         <x-slot name="description">
-            {{ (string) __('user::profile.delete_account.description') }}
+            {{ __('user::profile.delete_account.description') }}
         </x-slot>
 
         <form wire:submit="destroy" class="space-y-6">
@@ -14,7 +14,7 @@
                     <x-filament::input
                         type="password"
                         wire:model="delete_confirm_password"
-                        :label="(string) __('user::profile.delete_account.password_confirmation')"
+                        :label="__('user::profile.delete_account.password_confirmation')"
                         required
                     />
                 </x-filament::input.wrapper>
@@ -24,7 +24,7 @@
                 <x-filament::button
                     type="submit"
                     color="danger"
-                    :label="(string) __('user::profile.delete_account.button')"
+                    :label="__('user::profile.delete_account.button')"
                 />
             </div>
         </form>

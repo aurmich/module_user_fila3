@@ -4,34 +4,38 @@ declare(strict_types=1);
 
 namespace Modules\User\Models;
 
-use Filament\Models\Contracts\HasName;
-use Filament\Models\Contracts\HasTenants;
 use Filament\Panel;
+use Parental\HasChildren;
+use Illuminate\Support\Str;
+use Modules\Xot\Datas\XotData;
+use Spatie\MediaLibrary\HasMedia;
+use Laravel\Passport\HasApiTokens;
+use Illuminate\Support\Facades\Hash;
+use Filament\Models\Contracts\HasName;
+use Illuminate\Support\Facades\Schema;
+use Spatie\Permission\Traits\HasRoles;
+use Illuminate\Database\Eloquent\Model;
+use Modules\Xot\Contracts\UserContract;
+use Illuminate\Notifications\Notifiable;
+use Modules\User\Models\Traits\HasTeams;
+use Modules\Xot\Models\Traits\RelationX;
+use Filament\Models\Contracts\HasTenants;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\Collection;
+use Modules\User\Database\Factories\UserFactory;
+use Modules\Xot\Actions\Factory\GetFactoryAction;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
-use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\DatabaseNotification;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Notifications\DatabaseNotificationCollection;
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
-use Laravel\Passport\HasApiTokens;
-use Modules\Xot\Actions\Factory\GetFactoryAction;
-use Modules\Xot\Contracts\UserContract;
-use Modules\Xot\Datas\XotData;
-use Modules\Xot\Models\Traits\RelationX;
-use Parental\HasChildren;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\Permission\Traits\HasRoles;
 
 /**
  * Base User Model
@@ -39,7 +43,6 @@ use Spatie\Permission\Traits\HasRoles;
  * This is the base user model that provides the core authentication and authorization
  * functionality for the application. It extends Laravel's Authenticatable class
  * and implements the required interfaces for Filament and multi-tenancy.
- *
  * @property Collection<int, OauthClient> $clients
  * @property int|null $clients_count
  * @property Team|null $currentTeam
@@ -116,31 +119,26 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereIsOtp($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePasswordExpiresAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereSurname($value)
- * @method static BaseUser|null first()
- * @method static \Illuminate\Database\Eloquent\Collection<int, BaseUser> get()
- * @method static BaseUser create(array $attributes = [])
- * @method static BaseUser firstOrCreate(array $attributes = [], array $values = [])
- * @method static \Illuminate\Database\Eloquent\Builder<static>|BaseUser where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
- * @method static \Illuminate\Database\Eloquent\Builder<static>|BaseUser whereNotNull(string|\Illuminate\Contracts\Database\Query\Expression $columns)
- * @method static int count(string $columns = '*')
  *
  * @mixin \Eloquent
  */
-abstract class BaseUser extends Authenticatable implements HasMedia, HasName, HasTenants, UserContract
+abstract class BaseUser extends Authenticatable implements HasName, HasTenants, UserContract,HasMedia
 {
-    use HasApiTokens;
-    use HasChildren;
-    use HasFactory;
 
+
+    use HasApiTokens;
+    use HasFactory;
     use HasRoles;
     // Guard coerente con Spatie/Permission
     use HasUuids;
-    use InteractsWithMedia;
     use Notifiable;
     use RelationX;
     use Traits\HasAuthenticationLogTrait;
-    use Traits\HasTeams;
     use Traits\HasTenants;
+    use Traits\HasTeams;
+    use HasChildren;
+    use InteractsWithMedia;
+
 
     public $incrementing = false;
 
@@ -195,17 +193,16 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
     ];
 
-    /** @var array<string, mixed> */
+    /** @var array<string, mixed>  */
     protected $attributes = [
-        // 'state' => Pending::class,
-        // 'state' => 'pending',
-        'is_otp' => false,
-        'is_active' => true,
+        //'state' => Pending::class,
+        //'state' => 'pending',
+        'is_otp'=>false,
+        'is_active'=>true,
     ];
 
     /**
      * Guard coerente con Spatie/Permission: deve essere 'web'.
-     *
      * @var string
      */
     protected $guard_name = 'web';
@@ -236,6 +233,8 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
     /**
      * Get the user's name for Filament.
+     *
+     * @return string
      */
     public function getFilamentName(): string
     {
@@ -271,15 +270,16 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
      */
     public function isSuperAdmin(): bool
     {
-        return $this->hasRole('super-admin'); /** @phpstan-ignore method.nonObject */
+        return $this->hasRole('super-admin');
     }
 
     public function assignModule(string $module): void
-    {
-        $role_name = $module.'::admin';
-        $role = Role::firstOrCreate(['name' => $role_name]);
-        $this->assignRole($role); /** @phpstan-ignore method.nonObject */
+    {   
+        $role_name=$module.'::admin';
+        $role=Role::firstOrCreate(['name' => $role_name]);
+        $this->assignRole($role);
     }
+
 
     public function canAccessPanel(Panel $panel): bool
     {
@@ -294,7 +294,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
             }
             */
 
-            return $this->hasRole($role); /** @phpstan-ignore method.nonObject */
+            return $this->hasRole($role);
         }
 
         return true; // str_ends_with($this->email, '@yourdomain.com') && $this->hasVerifiedEmail();
@@ -330,7 +330,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
     public function treeSons(): Collection
     {
-        return $this->teams ?? new Collection;
+        return $this->teams ?? new Collection();
     }
 
     /**
@@ -362,7 +362,6 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
         }
 
         $res = $socialiteUser->{$field};
-
         return (string) $res;
     }
 
@@ -391,7 +390,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
     public function getFullNameAttribute(?string $value): ?string
     {
-        return $value ?? $this->first_name.' '.$this->last_name;
+        return $value ?? $this->first_name . ' ' . $this->last_name;
     }
 
     public function getNameAttribute(?string $value): ?string
@@ -402,7 +401,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
         $name = Str::of((string) $this->email)->before('@')->toString();
         $i = 1;
-        $candidate = $name.'-'.$i;
+        $candidate = $name . '-' . $i;
 
         // During unit tests, avoid any DB interaction.
         $isTesting = (function (): bool {
@@ -410,13 +409,11 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
             if (method_exists($app, 'environment') && $app->environment('testing')) {
                 return true;
             }
-
-            return PHP_SAPI === 'cli' && (getenv('APP_ENV') === 'testing' || getenv('ENV') === 'testing');
+            return (PHP_SAPI === 'cli' && (getenv('APP_ENV') === 'testing' || getenv('ENV') === 'testing'));
         })();
         if ($isTesting) {
             // Do not call update() here to avoid hitting the database.
             $this->attributes['name'] = $candidate;
-
             return $candidate;
         }
 
@@ -424,7 +421,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
             $value = $candidate;
             while (self::firstWhere(['name' => $value]) !== null) {
                 $i++;
-                $value = $name.'-'.$i;
+                $value = $name . '-' . $i;
             }
             $this->update(['name' => $value]);
 
@@ -432,7 +429,6 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
         } catch (\Throwable $e) {
             // If any issue occurs (e.g., missing connection/table), fall back without DB.
             $this->attributes['name'] = $candidate;
-
             return $candidate;
         }
     }
@@ -472,15 +468,20 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
         ];
     }
 
-    // public function authentications(): MorphMany
-    // {
+
+
+
+    //public function authentications(): MorphMany
+    //{
     //    return $this->morphMany(\Modules\User\Models\Authentication::class, 'authenticatable');
-    // }
+    //}
 
     /**
      * Check if the user has a specific role.
      *
-     * @param  array|\Illuminate\Support\Collection|int|\Spatie\Permission\Contracts\Role|string  $roles
+     * @param array|\Illuminate\Support\Collection|int|\Spatie\Permission\Contracts\Role|string $roles
+     * @param string|null $guard
+     * @return bool
      */
     public function hasRole($roles, ?string $guard = null): bool
     {
@@ -494,11 +495,10 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
         // Per gli altri tipi, implementiamo una logica di base
         if (is_array($roles) || $roles instanceof \Illuminate\Support\Collection) {
             foreach ($roles as $role) {
-                if ($this->hasRole($role, $guard)/** @phpstan-ignore method.nonObject */) {
+                if ($this->hasRole($role, $guard)) {
                     return true;
                 }
             }
-
             return false;
         }
 
@@ -513,18 +513,16 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
         return false;
     }
 
-    public function setPasswordAttribute(?string $value): void
-    {
-        if (empty($value)) {
+    public function setPasswordAttribute(?string $value): void{
+        if(empty($value)){
             unset($this->attributes['password']);
-
             return;
         }
-        if (strlen($value) < 32) {
-            $this->attributes['password'] = Hash::make($value);
-
+        if(strlen($value)<32){
+            $this->attributes['password']=Hash::make($value);
             return;
         }
-        $this->attributes['password'] = $value;
+        $this->attributes['password']=$value;
     }
+
 }

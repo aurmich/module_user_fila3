@@ -270,15 +270,6 @@ class TenantTest extends TestCase
 
 
 
-<<<<<<< HEAD
 
 
 
-=======
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 09fa59df2d (.)
->>>>>>> 9cfda9d (.)

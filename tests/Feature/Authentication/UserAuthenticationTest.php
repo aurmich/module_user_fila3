@@ -201,7 +201,7 @@ describe('User Authorization', function () {
         $role = Role::factory()->create(['name' => 'editor']);
         $permission = Permission::factory()->create(['name' => 'edit posts']);
 
-        $role->givePermissionTo($permission);/** @phpstan-ignore method.nonObject */
+        $role->givePermissionTo($permission);
         $this->user->assignRole($role);
 
         expect($this->user->hasPermissionTo('edit posts'))->toBe(true);

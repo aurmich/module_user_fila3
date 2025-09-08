@@ -24,7 +24,6 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 class PasswordResetWidget extends XotBaseWidget
 {
     public ?array $data = [];
-
     public bool $emailSent = false;
 
     /**
@@ -75,12 +74,12 @@ class PasswordResetWidget extends XotBaseWidget
             'email' => $data['email'],
         ]);
 
-        if ($response === Password::RESET_LINK_SENT) {
+        if (Password::RESET_LINK_SENT === $response) {
             $this->emailSent = true;
 
             Notification::make()
-                ->title((string) __('user::auth.password_reset.email_sent.title'))
-                ->body((string) __('user::auth.password_reset.email_sent.message'))
+                ->title(__('user::auth.password_reset.email_sent.title'))
+                ->body(__('user::auth.password_reset.email_sent.message'))
                 ->success()
                 ->duration(10000)
                 ->send();
@@ -90,15 +89,15 @@ class PasswordResetWidget extends XotBaseWidget
         } else {
             Session::flash('error', trans('user::errors.'.$response.'.label'));
             Notification::make()
-                ->title((string) __('user::auth.password_reset.email_failed.title'))
+                ->title(__('user::auth.password_reset.email_failed.title'))
                 ->body(trans($response))
                 ->danger()
                 ->send();
         }
         /*} catch (\Exception $e) {
             Notification::make()
-                ->title((string) __('user::auth.password_reset.email_failed.title'))
-                ->body((string) __('user::auth.password_reset.email_failed.generic'))
+                ->title(__('user::auth.password_reset.email_failed.title'))
+                ->body(__('user::auth.password_reset.email_failed.generic'))
                 ->danger()
                 ->send();
         }

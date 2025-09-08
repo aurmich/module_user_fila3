@@ -13,7 +13,6 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser query()
- *
  * @property int $id
  * @property string $uuid
  * @property string|null $team_id
@@ -24,7 +23,6 @@ use Illuminate\Support\Carbon;
  * @property string|null $created_by
  * @property string|null $updated_by
  * @property string|null $customer_id
- *
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereCustomerId($value)
@@ -35,27 +33,17 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereUuid($value)
- *
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
- *
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TeamUser whereDeletedBy($value)
- *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
- *
- * @method static TeamUser create(array $attributes = [])
- * @method static TeamUser firstOrCreate(array $attributes = [], array $values = [])
- * @method static \Illuminate\Database\Eloquent\Builder<static>|TeamUser where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
- * @method static int count(string $columns = '*')
- *
  * @mixin IdeHelperTeamUser
  * @mixin \Eloquent
  */
 class TeamUser extends BaseTeamUser
 {
     use HasFactory;
-
     protected $connection = 'user';
 }

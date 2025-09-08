@@ -18,7 +18,6 @@ use Modules\User\Database\Factories\PasswordResetFactory;
  * @property string|null $user_id
  * @property string|null $updated_by
  * @property string|null $created_by
- *
  * @method static PasswordResetFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|PasswordReset newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PasswordReset newQuery()
@@ -31,20 +30,10 @@ use Modules\User\Database\Factories\PasswordResetFactory;
  * @method static \Illuminate\Database\Eloquent\Builder|PasswordReset whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PasswordReset whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PasswordReset whereUserId($value)
- *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  * @property string|null $uuid
- *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|PasswordReset whereUuid($value)
- * @method static PasswordReset|null first()
- * @method static \Illuminate\Database\Eloquent\Collection<int, PasswordReset> get()
- * @method static PasswordReset create(array $attributes = [])
- * @method static PasswordReset firstOrCreate(array $attributes = [], array $values = [])
- * @method static \Illuminate\Database\Eloquent\Builder<static>|PasswordReset where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
- * @method static \Illuminate\Database\Eloquent\Builder<static>|PasswordReset whereNotNull(string|\Illuminate\Contracts\Database\Query\Expression $columns)
- * @method static int count(string $columns = '*')
- *
  * @mixin IdeHelperPasswordReset
  * @mixin \Eloquent
  */

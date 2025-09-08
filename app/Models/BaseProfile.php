@@ -49,13 +49,6 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|BaseProfile withExtraAttributes()
  * @method static \Illuminate\Database\Eloquent\Builder|ProfileContract withoutPermission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|ProfileContract withoutRole($roles, $guard = null)
- * @method static BaseProfile|null first()
- * @method static \Illuminate\Database\Eloquent\Collection<int, BaseProfile> get()
- * @method static BaseProfile create(array $attributes = [])
- * @method static BaseProfile firstOrCreate(array $attributes = [], array $values = [])
- * @method static \Illuminate\Database\Eloquent\Builder<static>|BaseProfile where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
- * @method static \Illuminate\Database\Eloquent\Builder<static>|BaseProfile whereNotNull(string|\Illuminate\Contracts\Database\Query\Expression $columns)
- * @method static int count(string $columns = '*')
  *
  * @mixin \Eloquent
  */
@@ -111,7 +104,7 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
 
     /**
      * Ottiene l'URL dell'avatar dell'utente.
-     *
+     * 
      * @return string L'URL dell'avatar
      */
     public function getAvatarUrl(): string
@@ -127,7 +120,7 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         $email = mb_strtolower($email);
         // 'myemailaddress@example.com'
         $hash = hash('sha256', $email);
-        $avatar = 'https://gravatar.com/avatar/'.$hash.'?s=64';
+        $avatar = 'https://gravatar.com/avatar/' . $hash . '?s=64';
 
         return $avatar;
 
@@ -144,7 +137,7 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
 
     /**
      * Ottiene la lingua dell'utente.
-     *
+     * 
      * @return string Il codice della lingua
      */
     public function getUserLang(): string
@@ -152,13 +145,13 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         $locale = config('app.locale');
         $defaultLocale = 'it';
 
-        if ($locale === null || ! is_string($locale)) {
+        if ($locale === null || !is_string($locale)) {
             $locale = $defaultLocale;
         }
 
         $userLang = $this->lang;
 
-        if ($userLang === null || ! is_string($userLang)) {
+        if ($userLang === null || !is_string($userLang)) {
             return $locale;
         }
 

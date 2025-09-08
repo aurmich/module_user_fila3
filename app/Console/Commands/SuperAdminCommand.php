@@ -54,7 +54,7 @@ class SuperAdminCommand extends Command
         $role = Role::firstOrCreate(
             ['name' => 'super-admin']
         );
-        $user->assignRole($role); /** @phpstan-ignore method.nonObject */
+        $user->assignRole($role);
 
         // Create module admin roles
         $modules_opts = array_keys(Module::all());
@@ -63,7 +63,7 @@ class SuperAdminCommand extends Command
             $role = Role::firstOrCreate(
                 ['name' => $role_name]
             );
-            $user->assignRole($role); /** @phpstan-ignore method.nonObject */
+            $user->assignRole($role);
         }
 
         $this->info('super-admin assigned to '.$email);

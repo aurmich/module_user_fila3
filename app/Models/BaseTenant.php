@@ -30,14 +30,6 @@ use Spatie\Sluggable\SlugOptions;
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
- * @method static BaseTenant|null first()
- * @method static \Illuminate\Database\Eloquent\Collection<int, BaseTenant> get()
- * @method static BaseTenant create(array $attributes = [])
- * @method static BaseTenant firstOrCreate(array $attributes = [], array $values = [])
- * @method static \Illuminate\Database\Eloquent\Builder<static>|BaseTenant where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
- * @method static \Illuminate\Database\Eloquent\Builder<static>|BaseTenant whereNotNull(string|\Illuminate\Contracts\Database\Query\Expression $columns)
- * @method static int count(string $columns = '*')
- *
  * @mixin \Eloquent
  */
 abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia, TenantContract
@@ -93,7 +85,7 @@ abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia, Tena
         $userClass = $xot->getUserClass();
 
         // $this->setConnection('mysql');
-        // return $this->belongsToManyX($userClass, null, 'tenant_id', 'user_id');
+        //return $this->belongsToManyX($userClass, null, 'tenant_id', 'user_id');
         return $this->belongsToManyX($userClass);
         // ->as('membership')
     }

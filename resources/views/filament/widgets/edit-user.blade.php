@@ -1,10 +1,10 @@
 <x-filament::section>
     <x-slot name="heading">
-        {{ (string) __('user::widgets.edit_user.title') }}
+        {{ __('user::widgets.edit_user.title') }}
     </x-slot>
 
     <x-slot name="description">
-        {{ (string) __('user::widgets.edit_user.description') }}
+        {{ __('user::widgets.edit_user.description') }}
     </x-slot>
 
     <div class="space-y-6">
@@ -17,7 +17,7 @@
                     </svg>
                 </div>
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                    {{ (string) __('user::widgets.edit_user.sections.personal_info.title') }}
+                    {{ __('user::widgets.edit_user.sections.personal_info.title') }}
                 </h3>
             </div>
             
@@ -34,7 +34,7 @@
                     </svg>
                 </div>
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                    {{ (string) __('user::widgets.edit_user.sections.preferences.title') }}
+                    {{ __('user::widgets.edit_user.sections.preferences.title') }}
                 </h3>
             </div>
             
@@ -51,7 +51,7 @@
                     </svg>
                 </div>
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                    {{ (string) __('user::widgets.edit_user.sections.security.title') }}
+                    {{ __('user::widgets.edit_user.sections.security.title') }}
                 </h3>
             </div>
             
@@ -69,7 +69,7 @@
                     </svg>
                 </div>
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                    {{ (string) __('user::widgets.edit_user.sections.admin_settings.title') }}
+                    {{ __('user::widgets.edit_user.sections.admin_settings.title') }}
                 </h3>
             </div>
             

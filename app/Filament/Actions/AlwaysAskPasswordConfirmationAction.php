@@ -12,9 +12,9 @@ class AlwaysAskPasswordConfirmationAction extends Action
     protected function setUp(): void
     {
         $this->requiresConfirmation()
-            ->modalHeading((string) __('filament-jet::jet.password_confirmation_modal.heading'))
+            ->modalHeading(__('filament-jet::jet.password_confirmation_modal.heading'))
             ->modalSubheading(
-                (string) __('filament-jet::jet.password_confirmation_modal.description')
+                __('filament-jet::jet.password_confirmation_modal.description')
             )
             ->form(
                 [

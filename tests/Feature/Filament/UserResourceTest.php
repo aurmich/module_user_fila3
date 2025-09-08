@@ -215,7 +215,7 @@ describe('CreateUser Page', function () {
             ->assertHasNoFormErrors();
 
         $user = User::where('email', 'admin@example.com')->first();
-        expect($user->hasRole($role)/** @phpstan-ignore method.nonObject */)->toBe(true);
+        expect($user->hasRole($role))->toBe(true);
     });
 });
 
@@ -306,7 +306,7 @@ describe('EditUser Page', function () {
         $role1 = Role::factory()->create(['name' => 'Admin']);
         $role2 = Role::factory()->create(['name' => 'Editor']);
 
-        $user->assignRole($role1);/** @phpstan-ignore method.nonObject */
+        $user->assignRole($role1);
 
         Livewire::test(EditUser::class, [
             'record' => $user->getRouteKey(),
@@ -365,7 +365,7 @@ describe('ViewUser Page', function () {
     it('can view user with roles', function () {
         $user = User::factory()->create();
         $role = Role::factory()->create(['name' => 'Admin']);
-        $user->assignRole($role);/** @phpstan-ignore method.nonObject */
+        $user->assignRole($role);
 
         Livewire::test(ViewUser::class, [
             'record' => $user->getRouteKey(),
@@ -378,7 +378,7 @@ describe('ViewUser Page', function () {
     it('can view user with permissions', function () {
         $user = User::factory()->create();
         $permission = Permission::factory()->create(['name' => 'edit posts']);
-        $user->givePermissionTo($permission);/** @phpstan-ignore method.nonObject */
+        $user->givePermissionTo($permission);
 
         Livewire::test(ViewUser::class, [
             'record' => $user->getRouteKey(),
@@ -450,7 +450,7 @@ describe('UserResource Security', function () {
     it('prevents editing super admin user', function () {
         $superAdmin = User::factory()->create();
         $adminRole = Role::factory()->create(['name' => 'Super Admin']);
-        $superAdmin->assignRole($adminRole);/** @phpstan-ignore method.nonObject */
+        $superAdmin->assignRole($adminRole);
 
         // Test that super admin cannot be deactivated
         Livewire::test(EditUser::class, [

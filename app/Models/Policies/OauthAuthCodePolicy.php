@@ -4,11 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
-<<<<<<< HEAD
-use Modules\User\Contracts\UserContract;
-=======
-use Modules\User\Contracts\ProfileContract;
->>>>>>> 9cfda9d (.)
+use Modules\Xot\Contracts\ProfileContract;
 use Modules\User\Models\OauthAuthCode;
 
 class OauthAuthCodePolicy extends UserBasePolicy
@@ -26,11 +22,7 @@ class OauthAuthCodePolicy extends UserBasePolicy
      */
     public function view(ProfileContract $user, OauthAuthCode $oauthAuthCode): bool
     {
-<<<<<<< HEAD
-        return $user->hasRole('super-admin');
-=======
         return $user->hasRole('super-admin'); /** @phpstan-ignore method.nonObject */
->>>>>>> 9cfda9d (.)
     }
 
     /**
@@ -46,11 +38,7 @@ class OauthAuthCodePolicy extends UserBasePolicy
      */
     public function update(ProfileContract $user, OauthAuthCode $oauthAuthCode): bool
     {
-<<<<<<< HEAD
-        return $user->hasRole('super-admin');
-=======
         return $user->hasRole('super-admin'); /** @phpstan-ignore method.nonObject */
->>>>>>> 9cfda9d (.)
     }
 
     /**
@@ -58,11 +46,7 @@ class OauthAuthCodePolicy extends UserBasePolicy
      */
     public function delete(ProfileContract $user, OauthAuthCode $oauthAuthCode): bool
     {
-<<<<<<< HEAD
-        return $user->hasRole('super-admin');
-=======
         return $user->hasRole('super-admin'); /** @phpstan-ignore method.nonObject */
->>>>>>> 9cfda9d (.)
     }
 
     /**
@@ -70,11 +54,7 @@ class OauthAuthCodePolicy extends UserBasePolicy
      */
     public function restore(ProfileContract $user, OauthAuthCode $oauthAuthCode): bool
     {
-<<<<<<< HEAD
-        return $user->hasRole('super-admin');
-=======
         return $user->hasRole('super-admin'); /** @phpstan-ignore method.nonObject */
->>>>>>> 9cfda9d (.)
     }
 
     /**
@@ -82,10 +62,6 @@ class OauthAuthCodePolicy extends UserBasePolicy
      */
     public function forceDelete(ProfileContract $user, OauthAuthCode $oauthAuthCode): bool
     {
-<<<<<<< HEAD
-        return $user->hasRole('super-admin');
-=======
         return $user->hasRole('super-admin'); /** @phpstan-ignore method.nonObject */
->>>>>>> 9cfda9d (.)
     }
 }

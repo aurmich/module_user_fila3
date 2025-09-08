@@ -41,6 +41,6 @@ class PermissionsSeeder extends Seeder
         $role->givePermissionTo([
             'moderate_doctors',
             'view_doctors',
-        ]); /** @phpstan-ignore method.nonObject */
+        ]);
     }
-}
+} 

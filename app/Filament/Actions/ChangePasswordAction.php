@@ -29,15 +29,15 @@ class ChangePasswordAction extends Action
                 ]);
                 Notification::make()
                     ->success()
-                    ->title((string) __('user::notifications.password_changed_successfully.title'))
-                    ->body((string) __('user::notifications.password_changed_successfully.message'));
+                    ->title(__('user::notifications.password_changed_successfully.title'))
+                    ->body(__('user::notifications.password_changed_successfully.message'));
             })
             ->form([
                 PasswordData::make()->getPasswordFormComponent('new_password'),
                 TextInput::make('new_password_confirmation')
                     ->password()
 
-                    ->placeholder((string) __('user::fields.confirm_password.placeholder'))
+                    ->placeholder(__('user::fields.confirm_password.placeholder'))
                     ->rule('required', static fn ($get): bool => (bool) $get('new_password'))
                     ->same('new_password'),
             ]);

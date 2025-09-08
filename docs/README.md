@@ -120,7 +120,6 @@ User/
 - [Architettura Moduli](../../project_docs/architecture/modules-structure.md)
 - [Convenzioni di Nomenclatura](../../project_docs/standards/file_naming_conventions.md)
 - [Struttura del Progetto](../Xot/project_docs/architecture/struttura-progetto.md)
-<<<<<<< HEAD
 
 > **Collegamenti correlati**
 > - [README.md documentazione generale](../../../docs/README.md)
@@ -254,8 +253,6 @@ Il modulo User fornisce funzionalità di autenticazione e autorizzazione attrave
 Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli utenti nell'applicazione. È strettamente integrato con altri moduli come Xot, Lang, e Notify.
 
 ### Versione HEAD
-=======
->>>>>>> 9cfda9d (.)
 
 ## Collegamenti Principali
 
@@ -524,11 +521,8 @@ class UserServiceProvider extends XotBaseServiceProvider
 ## Collegamenti
 - [Indice Documentazione](../../../project_docs/INDEX.md)
 - [README Principale](../../../README.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [API Reference](../project_docs/api.md)
 - [Changelog](../project_docs/CHANGELOG.md) 
-=======
 - [API Reference](../docs/api.md)
 - [Changelog](../docs/CHANGELOG.md) 
 ## Collegamenti tra versioni di README.md
@@ -959,9 +953,4 @@ Schema::table('teams', function (Blueprint $table) {
   - **Regola**: docs_project solo per documentazione generale del progetto, file specifici di moduli nelle rispettive cartelle docs
 
 ## Collegamenti
->>>>>>> 199538c (.)
-=======
-- [API Reference](../project_docs/api.md)
-- [Changelog](../project_docs/CHANGELOG.md) 
->>>>>>> 9cfda9d (.)
 

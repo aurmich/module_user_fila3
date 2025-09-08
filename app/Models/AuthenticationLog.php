@@ -28,7 +28,6 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
  * @property \Illuminate\Database\Eloquent\Model|\Eloquent $authenticatable
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
- *
  * @method static \Modules\User\Database\Factories\AuthenticationLogFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|AuthenticationLog newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|AuthenticationLog newQuery()
@@ -47,11 +46,6 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
  * @method static \Illuminate\Database\Eloquent\Builder|AuthenticationLog whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|AuthenticationLog whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|AuthenticationLog whereUserAgent($value)
- * @method static AuthenticationLog create(array $attributes = [])
- * @method static AuthenticationLog firstOrCreate(array $attributes = [], array $values = [])
- * @method static \Illuminate\Database\Eloquent\Builder<static>|AuthenticationLog where(string|\Closure $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
- * @method static int count(string $columns = '*')
- *
  * @mixin IdeHelperAuthenticationLog
  * @mixin \Eloquent
  */

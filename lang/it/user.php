@@ -1,6 +1,5 @@
 <?php
 
-<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -207,14 +206,12 @@ return [
             'placeholder' => '',
             'help' => 'Nome del guard di autenticazione',
         ],
-<<<<<<< HEAD
     ],
     'actions' => [
         'create' => [
             'label' => 'Crea Utente',
             'icon' => 'heroicon-o-plus',
             'tooltip' => 'Crea un nuovo utente',
-<<<<<<< HEAD
         ],
         'edit' => [
             'label' => 'Modifica Utente',
@@ -240,14 +237,6 @@ return [
             'tooltip' => 'Modifica l\'utente',
         ],
 >>>>>>> 42fc572 (.)
-=======
-        ],
-        'edit' => [
-            'label' => 'Modifica Utente',
-            'icon' => 'heroicon-o-pencil',
-            'tooltip' => 'Modifica i dati dell\'utente',
-        ],
->>>>>>> 9cfda9d (.)
         'delete' => [
             'label' => 'Elimina Utente',
             'icon' => 'heroicon-o-trash',
@@ -438,10 +427,6 @@ return [
                 'title' => 'Errore reset password',
             ],
         ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9cfda9d (.)
         'user_not_found' => 'Utente non trovato',
         'password_fields_required' => 'Tutti i campi password sono obbligatori',
         'password_current_incorrect' => 'La password attuale non è corretta',
@@ -449,11 +434,8 @@ return [
         'logout_error' => 'Errore durante il logout',
         'logout_title' => 'Conferma Logout',
         'logout_confirmation' => 'Sei sicuro di voler uscire?',
-<<<<<<< HEAD
 =======
 >>>>>>> 42fc572 (.)
-=======
->>>>>>> 9cfda9d (.)
     ],
     'profile' => [
         'profile' => 'Profilo',
@@ -505,20 +487,13 @@ return [
         'line2' => 'Se non hai creato un account, non è necessaria alcuna azione',
         'salutation' => 'Cordiali saluti, :app_name',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9cfda9d (.)
     'model' => [
         'label' => 'Utente',
         'plural' => 'Utenti',
         'description' => 'Gestione degli utenti del sistema',
     ],
-<<<<<<< HEAD
 =======
 >>>>>>> 42fc572 (.)
-=======
->>>>>>> 9cfda9d (.)
     'filters' => [
         'status' => [
             'label' => 'Per Stato',
@@ -569,10 +544,6 @@ return [
         'error' => 'Si è verificato un errore',
     ],
     'search_placeholder' => 'Cerca per nome, email o ruolo...',
-<<<<<<< HEAD
-<<<<<<< HEAD
-];
-=======
 ];
 
 >>>>>>> 42fc572 (.)
@@ -1262,6 +1233,3 @@ return array (
   'search_placeholder' => 'Cerca per nome, email o ruolo...',
 );
 >>>>>>> 199538c (.)
-=======
-];
->>>>>>> 9cfda9d (.)

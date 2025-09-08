@@ -28,11 +28,11 @@ trait HasRoles
     /**
      * Determine if the user has the given role.
      *
-     * @param  string|array|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection  $roles
+     * @param string|array|\Spatie\Permission\Contracts\Role|\Illuminate\Support\Collection $roles
      */
     public function hasRole($roles, ?string $guard = null): bool
     {
-        if (is_string($roles) && strpos($roles, '|') !== false) {
+        if (is_string($roles) && false !== strpos($roles, '|')) {
             $roles = explode('|', $roles);
         }
 
@@ -42,7 +42,7 @@ trait HasRoles
 
         if (is_array($roles)) {
             foreach ($roles as $role) {
-                if ($this->hasRole($role)/** @phpstan-ignore method.nonObject */) {
+                if ($this->hasRole($role)) {
                     return true;
                 }
             }

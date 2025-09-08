@@ -5,10 +5,10 @@
 <div class="space-y-6">
     <div class="text-center">
         <h2 class="text-2xl font-bold tracking-tight">
-            {{ (string) __('user::auth.forgot-password.title') }}
+            {{ __('user::auth.forgot-password.title') }}
         </h2>
         <p class="mt-2 text-sm text-gray-600">
-            {{ (string) __('user::auth.forgot-password.subtitle') }}
+            {{ __('user::auth.forgot-password.subtitle') }}
         </p>
     </div>
 
@@ -18,7 +18,7 @@
         <div class="flex items-center justify-between">
             <div class="text-sm">
                 <a href="{{ route('login') }}" class="font-medium text-primary-600 hover:text-primary-500">
-                    {{ (string) __('user::auth.forgot-password.back_to_login') }}
+                    {{ __('user::auth.forgot-password.back_to_login') }}
                 </a>
             </div>
         </div>
@@ -28,7 +28,7 @@
                 type="submit"
                 class="w-full"
             >
-                {{ (string) __('user::auth.forgot-password.submit') }}
+                {{ __('user::auth.forgot-password.submit') }}
             </x-filament::button>
         </div>
     </form>

@@ -15,6 +15,14 @@ use Modules\User\Models\SocialiteUser;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 use Modules\Xot\Filament\Traits\HasXotTable;
 
+
+
+
+
+
+
+
+
 /**
  * Class Modules\User\Filament\Resources\UserResource\RelationManagers\SocialiteUsersRelationManager.
  */
@@ -28,6 +36,7 @@ class SocialiteUsersRelationManager extends XotBaseRelationManager
      * Configure the form schema for managing Socialite User data.
      */
 
+
     /**
      * Define form fields in a dedicated method for reusability.
      *
@@ -40,30 +49,30 @@ class SocialiteUsersRelationManager extends XotBaseRelationManager
 
                 ->required()
                 ->maxLength(255)
-                ->placeholder((string) __('Enter provider name, e.g., Google, Facebook')),
+                ->placeholder(__('Enter provider name, e.g., Google, Facebook')),
 
             Forms\Components\TextInput::make('provider_id')
 
                 ->required()
                 ->maxLength(255)
-                ->placeholder((string) __('Enter the provider ID for the user')),
+                ->placeholder(__('Enter the provider ID for the user')),
 
             Forms\Components\TextInput::make('name')
 
                 ->maxLength(255)
-                ->placeholder((string) __('User’s name associated with the provider')),
+                ->placeholder(__('User’s name associated with the provider')),
 
             Forms\Components\TextInput::make('email')
 
                 ->email()
                 ->maxLength(255)
-                ->placeholder((string) __('User’s email associated with the provider')),
+                ->placeholder(__('User’s email associated with the provider')),
 
             Forms\Components\TextInput::make('avatar')
 
                 ->url()
                 ->maxLength(512)
-                ->placeholder((string) __('URL of the user’s avatar image')),
+                ->placeholder(__('URL of the user’s avatar image')),
         ];
     }
 

@@ -12,14 +12,14 @@
                 icon="heroicon-m-user"
                 :href="route('profile.show')"
             >
-                {{ (string) __('Profile') }}
+                {{ __('Profile') }}
             </x-filament::dropdown.list.item>
 
             <x-filament::dropdown.list.item
                 icon="heroicon-m-cog-6-tooth"
                 :href="route('profile.settings')"
             >
-                {{ (string) __('Settings') }}
+                {{ __('Settings') }}
             </x-filament::dropdown.list.item>
 
             <x-filament::dropdown.list.item
@@ -27,7 +27,7 @@
                 :href="route('profile.edit')"
                 :active="request()->routeIs('profile.edit')"
             >
-                {{ (string) __('ui::navigation.profile') }}
+                {{ __('ui::navigation.profile') }}
             </x-filament::dropdown.list.item>
 
             <x-filament::dropdown.list.item
@@ -35,7 +35,7 @@
                 :href="route('profile.password')"
                 :active="request()->routeIs('profile.password')"
             >
-                {{ (string) __('ui::navigation.password') }}
+                {{ __('ui::navigation.password') }}
             </x-filament::dropdown.list.item>
 
             <x-filament::dropdown.list.item
@@ -43,7 +43,7 @@
                 :href="route('profile.two-factor')"
                 :active="request()->routeIs('profile.two-factor')"
             >
-                {{ (string) __('ui::navigation.two_factor') }}
+                {{ __('ui::navigation.two_factor') }}
             </x-filament::dropdown.list.item>
 
             <div class="border-t border-gray-200 dark:border-gray-700 my-1"></div>
@@ -53,11 +53,11 @@
                 :href="route('logout')"
                 x-on:click.prevent="$el.closest('form').submit()"
             >
-                {{ (string) __('Log Out') }}
+                {{ __('Log Out') }}
             </x-filament::dropdown.list.item>
         </x-filament::dropdown.list>
     </x-filament::dropdown>
 @else
-    <a href="{{ route('login') }}" class="text-sm font-medium text-gray-700 hover:text-gray-900">{{ (string) __('Log in') }}</a>
-    <a href="{{ route('register') }}" class="text-sm font-medium text-gray-700 hover:text-gray-900">{{ (string) __('Register') }}</a>
+    <a href="{{ route('login') }}" class="text-sm font-medium text-gray-700 hover:text-gray-900">{{ __('Log in') }}</a>
+    <a href="{{ route('register') }}" class="text-sm font-medium text-gray-700 hover:text-gray-900">{{ __('Register') }}</a>
 @endauth
