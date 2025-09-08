@@ -4,7 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 
+=======
+use Modules\Xot\Contracts\UserContract;
+use Modules\User\Models\Notification;
+>>>>>>> e5f94125 (.)
 
 class NotificationPolicy extends UserBasePolicy
 {
@@ -21,7 +26,11 @@ class NotificationPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, Notification $notification): bool
     {
+<<<<<<< HEAD
 
+=======
+        return $user->hasPermissionTo('notification.view') || 
+>>>>>>> e5f94125 (.)
                $user->id === $notification->notifiable_id ||
                $user->hasRole('super-admin');
     }
@@ -39,7 +48,11 @@ class NotificationPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, Notification $notification): bool
     {
+<<<<<<< HEAD
 
+=======
+        return $user->hasPermissionTo('notification.update') || 
+>>>>>>> e5f94125 (.)
                $user->hasRole('super-admin');
     }
 
@@ -48,7 +61,11 @@ class NotificationPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, Notification $notification): bool
     {
+<<<<<<< HEAD
 
+=======
+        return $user->hasPermissionTo('notification.delete') || 
+>>>>>>> e5f94125 (.)
                $user->id === $notification->notifiable_id ||
                $user->hasRole('super-admin');
     }
@@ -58,7 +75,11 @@ class NotificationPolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, Notification $notification): bool
     {
+<<<<<<< HEAD
 
+=======
+        return $user->hasPermissionTo('notification.restore') || 
+>>>>>>> e5f94125 (.)
                $user->hasRole('super-admin');
     }
 
@@ -67,7 +88,11 @@ class NotificationPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, Notification $notification): bool
     {
+<<<<<<< HEAD
 
+=======
+        return $user->hasPermissionTo('notification.force-delete') || 
+>>>>>>> e5f94125 (.)
                $user->hasRole('super-admin');
     }
 }

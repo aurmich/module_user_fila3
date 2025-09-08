@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use Modules\User\Models\User;
 use Tests\TestCase;
 
+<<<<<<< HEAD
 class UserTest extends TestCase
 {
     use RefreshDatabase;
@@ -19,6 +20,21 @@ class UserTest extends TestCase
             'email' => 'test@example.com',
             'password' => Hash::make('password'),
         ]);
+=======
+test('user can be created', function () {
+    $user = createUser([
+        'name' => 'Mario Rossi',
+        'email' => 'mario.rossi@example.com',
+        'type' => UserType::CustomerUser,
+    ]);
+
+    expect($user)
+        ->toBeUser()
+        ->and($user->name)->toBe('Mario Rossi')
+        ->and($user->email)->toBe('mario.rossi@example.com')
+        ->and($user->type)->toBe(UserType::CustomerUser);
+});
+>>>>>>> e5f94125 (.)
 
         $this->assertDatabaseHas('users', [
             'id' => $user->id,
@@ -28,6 +44,7 @@ class UserTest extends TestCase
         $this->assertTrue(Hash::check('password', $user->password));
     }
 
+<<<<<<< HEAD
     public function test_can_create_user_with_all_fields(): void
     {
         $userData = [
@@ -68,6 +85,19 @@ class UserTest extends TestCase
             'is_otp' => false,
         ]);
     }
+=======
+test('user can be bo user type', function () {
+    $boUser = createUser(['type' => UserType::BoUser]);
+    
+    expect($boUser->type)->toBe(UserType::BoUser);
+});
+
+test('user can be customer user type', function () {
+    $customerUser = createUser(['type' => UserType::CustomerUser]);
+    
+    expect($customerUser->type)->toBe(UserType::CustomerUser);
+});
+>>>>>>> e5f94125 (.)
 
     public function test_user_has_soft_deletes(): void
     {

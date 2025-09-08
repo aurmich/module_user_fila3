@@ -198,8 +198,14 @@ describe('User Command Integration', function () {
 
     it('can handle object property access safely', function () {
         // Test safe property access patterns
+<<<<<<< HEAD
         $testObject = (object) ['testProperty' => 'ok'];
 
+=======
+        $testObject = new stdClass();
+        $testObject->testProperty = 'test_value';
+        
+>>>>>>> e5f94125 (.)
         expect(property_exists($testObject, 'testProperty'))->toBeTrue()
             ->and(property_exists($testObject, 'nonExistentProperty'))->toBeFalse();
     });

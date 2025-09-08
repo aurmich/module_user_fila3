@@ -4,7 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 
+=======
+use Modules\Xot\Contracts\UserContract;
+use Modules\User\Models\Profile;
+>>>>>>> e5f94125 (.)
 
 class ProfilePolicy extends UserBasePolicy
 {
@@ -21,7 +26,11 @@ class ProfilePolicy extends UserBasePolicy
      */
     public function view(UserContract $user, Profile $profile): bool
     {
+<<<<<<< HEAD
 
+=======
+        return $this->hasPermission($user, 'profile.view') || 
+>>>>>>> e5f94125 (.)
                $user->id === $profile->user_id;
     }
 
@@ -38,7 +47,11 @@ class ProfilePolicy extends UserBasePolicy
      */
     public function update(UserContract $user, Profile $profile): bool
     {
+<<<<<<< HEAD
 
+=======
+        return $this->hasPermission($user, 'profile.update') || 
+>>>>>>> e5f94125 (.)
                $user->id === $profile->user_id;
     }
 
