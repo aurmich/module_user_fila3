@@ -107,17 +107,17 @@ return [
         ],
         'last_login' => [
             'label' => 'Ultimo Accesso',
-            'placeholder' => '',
+            'placeholder' => 'Mai effettuato',
             'help' => 'Data e ora dell\'ultimo accesso',
         ],
         'created_at' => [
             'label' => 'Data Creazione',
-            'placeholder' => '',
+            'placeholder' => 'Data di registrazione',
             'help' => 'Data di creazione dell\'account',
         ],
         'updated_at' => [
             'label' => 'Ultima Modifica',
-            'placeholder' => '',
+            'placeholder' => 'Data ultimo aggiornamento',
             'help' => 'Data dell\'ultimo aggiornamento',
         ],
         'avatar' => [
@@ -144,22 +144,22 @@ return [
         ],
         'password_expires_at' => [
             'label' => 'Scadenza Password',
-            'placeholder' => '',
+            'placeholder' => 'Data di scadenza',
             'help' => 'Data di scadenza della password',
         ],
         'verified' => [
             'label' => 'Verificato',
-            'placeholder' => '',
+            'placeholder' => 'Stato verifica',
             'help' => 'Indica se l\'email è verificata',
         ],
         'unverified' => [
             'label' => 'Non Verificato',
-            'placeholder' => '',
+            'placeholder' => 'Stato verifica',
             'help' => 'Indica se l\'email non è verificata',
         ],
         'email_verified_at' => [
             'label' => 'Email Verificata il',
-            'placeholder' => '',
+            'placeholder' => 'Data di verifica',
             'help' => 'Data di verifica dell\'email',
         ],
         'provider' => [
@@ -189,12 +189,12 @@ return [
         ],
         'uuid' => [
             'label' => 'UUID',
-            'placeholder' => '',
+            'placeholder' => 'Identificativo univoco',
             'help' => 'Identificativo univoco universale',
         ],
         'mobile_id' => [
             'label' => 'Mobile ID',
-            'placeholder' => '',
+            'placeholder' => 'ID dispositivo',
             'help' => 'Identificativo del dispositivo mobile',
         ],
         'languages' => [
@@ -204,9 +204,10 @@ return [
         ],
         'guard_name' => [
             'label' => 'Guard Name',
-            'placeholder' => '',
+            'placeholder' => 'Nome guard',
             'help' => 'Nome del guard di autenticazione',
         ],
+<<<<<<< HEAD
     ],
     'actions' => [
         'create' => [
@@ -220,9 +221,11 @@ return [
             'tooltip' => 'Modifica i dati dell\'utente',
         ],
 =======
+=======
+>>>>>>> 34f454e (.)
         'active' => [
             'label' => 'Attivo',
-            'placeholder' => '',
+            'placeholder' => 'Stato attivo',
             'help' => 'Indica se il record è attivo',
         ],
     ],
@@ -231,72 +234,157 @@ return [
             'label' => 'Crea Utente',
             'icon' => 'heroicon-o-plus',
             'tooltip' => 'Crea un nuovo utente',
+            'modal' => [
+                'heading' => 'Crea Nuovo Utente',
+                'description' => 'Inserisci i dati per creare un nuovo utente',
+            ],
+            'success' => 'Utente creato con successo',
+            'error' => 'Errore durante la creazione dell\'utente',
         ],
         'edit' => [
             'label' => 'Modifica Utente',
             'icon' => 'heroicon-o-pencil',
-            'tooltip' => 'Modifica l\'utente',
+            'tooltip' => 'Modifica i dati dell\'utente',
+            'modal' => [
+                'heading' => 'Modifica Utente',
+                'description' => 'Modifica i dati dell\'utente selezionato',
+            ],
+            'success' => 'Utente modificato con successo',
+            'error' => 'Errore durante la modifica dell\'utente',
         ],
->>>>>>> 42fc572 (.)
         'delete' => [
             'label' => 'Elimina Utente',
             'icon' => 'heroicon-o-trash',
             'tooltip' => 'Elimina l\'utente',
+            'modal' => [
+                'heading' => 'Elimina Utente',
+                'description' => 'Sei sicuro di voler eliminare questo utente? Questa azione è irreversibile.',
+            ],
+            'confirmation' => 'Sei sicuro di voler eliminare questo utente?',
+            'success' => 'Utente eliminato con successo',
+            'error' => 'Errore durante l\'eliminazione dell\'utente',
         ],
         'view' => [
             'label' => 'Visualizza Utente',
             'icon' => 'heroicon-o-eye',
             'tooltip' => 'Visualizza i dettagli dell\'utente',
+            'modal' => [
+                'heading' => 'Dettagli Utente',
+                'description' => 'Visualizza le informazioni complete dell\'utente',
+            ],
         ],
         'impersonate' => [
             'label' => 'Impersona Utente',
             'icon' => 'heroicon-o-user-circle',
             'tooltip' => 'Accedi come questo utente',
+            'modal' => [
+                'heading' => 'Impersona Utente',
+                'description' => 'Sei sicuro di voler impersonare questo utente?',
+            ],
+            'confirmation' => 'Sei sicuro di voler impersonare questo utente?',
+            'success' => 'Impersonificazione avviata con successo',
+            'error' => 'Errore durante l\'impersonificazione',
         ],
         'stop_impersonating' => [
             'label' => 'Termina Impersonificazione',
             'icon' => 'heroicon-o-arrow-left',
             'tooltip' => 'Torna al tuo account',
+            'success' => 'Impersonificazione terminata con successo',
+            'error' => 'Errore durante la terminazione dell\'impersonificazione',
         ],
         'block' => [
             'label' => 'Blocca',
             'icon' => 'heroicon-o-lock-closed',
             'tooltip' => 'Blocca l\'utente',
+            'modal' => [
+                'heading' => 'Blocca Utente',
+                'description' => 'Sei sicuro di voler bloccare questo utente?',
+            ],
+            'confirmation' => 'Sei sicuro di voler bloccare questo utente?',
+            'success' => 'Utente bloccato con successo',
+            'error' => 'Errore durante il blocco dell\'utente',
         ],
         'unblock' => [
             'label' => 'Sblocca',
             'icon' => 'heroicon-o-lock-open',
             'tooltip' => 'Sblocca l\'utente',
+            'modal' => [
+                'heading' => 'Sblocca Utente',
+                'description' => 'Sei sicuro di voler sbloccare questo utente?',
+            ],
+            'confirmation' => 'Sei sicuro di voler sbloccare questo utente?',
+            'success' => 'Utente sbloccato con successo',
+            'error' => 'Errore durante lo sblocco dell\'utente',
         ],
         'send_reset_link' => [
             'label' => 'Invia Link Reset Password',
             'icon' => 'heroicon-o-envelope',
             'tooltip' => 'Invia link per reset password',
+            'modal' => [
+                'heading' => 'Invia Link Reset Password',
+                'description' => 'Invia un link per reimpostare la password all\'utente',
+            ],
+            'success' => 'Link reset password inviato con successo',
+            'error' => 'Errore durante l\'invio del link reset',
         ],
         'verify_email' => [
             'label' => 'Verifica Email',
             'icon' => 'heroicon-o-check-circle',
             'tooltip' => 'Verifica l\'email dell\'utente',
+            'modal' => [
+                'heading' => 'Verifica Email',
+                'description' => 'Sei sicuro di voler verificare l\'email di questo utente?',
+            ],
+            'confirmation' => 'Sei sicuro di voler verificare l\'email di questo utente?',
+            'success' => 'Email verificata con successo',
+            'error' => 'Errore durante la verifica dell\'email',
         ],
         'attach' => [
             'label' => 'Collega',
             'icon' => 'heroicon-o-link',
             'tooltip' => 'Collega record',
+            'modal' => [
+                'heading' => 'Collega Record',
+                'description' => 'Collega questo record a un altro elemento',
+            ],
+            'success' => 'Record collegato con successo',
+            'error' => 'Errore durante il collegamento del record',
         ],
         'detach' => [
             'label' => 'Scollega',
             'icon' => 'heroicon-o-link-slash',
             'tooltip' => 'Scollega record',
+            'modal' => [
+                'heading' => 'Scollega Record',
+                'description' => 'Sei sicuro di voler scollegare questo record?',
+            ],
+            'confirmation' => 'Sei sicuro di voler scollegare questo record?',
+            'success' => 'Record scollegato con successo',
+            'error' => 'Errore durante lo scollegamento del record',
         ],
         'activate' => [
             'label' => 'Attiva',
             'icon' => 'heroicon-o-check',
             'tooltip' => 'Attiva l\'utente',
+            'modal' => [
+                'heading' => 'Attiva Utente',
+                'description' => 'Sei sicuro di voler attivare questo utente?',
+            ],
+            'confirmation' => 'Sei sicuro di voler attivare questo utente?',
+            'success' => 'Utente attivato con successo',
+            'error' => 'Errore durante l\'attivazione dell\'utente',
         ],
         'deactivate' => [
             'label' => 'Disattiva',
             'icon' => 'heroicon-o-x-circle',
             'tooltip' => 'Disattiva l\'utente',
+            'modal' => [
+                'heading' => 'Disattiva Utente',
+                'description' => 'Sei sicuro di voler disattivare questo utente?',
+            ],
+            'confirmation' => 'Sei sicuro di voler disattivare questo utente?',
+            'success' => 'Utente disattivato con successo',
+            'error' => 'Errore durante la disattivazione dell\'utente',
         ],
     ],
     'messages' => [
@@ -435,8 +523,6 @@ return [
         'logout_error' => 'Errore durante il logout',
         'logout_title' => 'Conferma Logout',
         'logout_confirmation' => 'Sei sicuro di voler uscire?',
-=======
->>>>>>> 42fc572 (.)
     ],
     'profile' => [
         'profile' => 'Profilo',
@@ -488,6 +574,7 @@ return [
         'line2' => 'Se non hai creato un account, non è necessaria alcuna azione',
         'salutation' => 'Cordiali saluti, :app_name',
     ],
+<<<<<<< HEAD
     'model' => [
         'label' => 'Utente',
         'plural' => 'Utenti',
@@ -495,6 +582,8 @@ return [
     ],
 =======
 >>>>>>> 42fc572 (.)
+=======
+>>>>>>> 34f454e (.)
     'filters' => [
         'status' => [
             'label' => 'Per Stato',
@@ -517,22 +606,57 @@ return [
         'activate_selected' => [
             'label' => 'Attiva Selezionati',
             'icon' => 'heroicon-o-check',
+            'modal' => [
+                'heading' => 'Attiva Utenti Selezionati',
+                'description' => 'Sei sicuro di voler attivare gli utenti selezionati?',
+            ],
+            'confirmation' => 'Sei sicuro di voler attivare gli utenti selezionati?',
+            'success' => 'Utenti attivati con successo',
+            'error' => 'Errore durante l\'attivazione degli utenti',
         ],
         'deactivate_selected' => [
             'label' => 'Disattiva Selezionati',
             'icon' => 'heroicon-o-x-circle',
+            'modal' => [
+                'heading' => 'Disattiva Utenti Selezionati',
+                'description' => 'Sei sicuro di voler disattivare gli utenti selezionati?',
+            ],
+            'confirmation' => 'Sei sicuro di voler disattivare gli utenti selezionati?',
+            'success' => 'Utenti disattivati con successo',
+            'error' => 'Errore durante la disattivazione degli utenti',
         ],
         'delete_selected' => [
             'label' => 'Elimina Selezionati',
             'icon' => 'heroicon-o-trash',
+            'modal' => [
+                'heading' => 'Elimina Utenti Selezionati',
+                'description' => 'Sei sicuro di voler eliminare gli utenti selezionati? Questa azione è irreversibile.',
+            ],
+            'confirmation' => 'Sei sicuro di voler eliminare gli utenti selezionati?',
+            'success' => 'Utenti eliminati con successo',
+            'error' => 'Errore durante l\'eliminazione degli utenti',
         ],
         'block_selected' => [
             'label' => 'Blocca Selezionati',
             'icon' => 'heroicon-o-lock-closed',
+            'modal' => [
+                'heading' => 'Blocca Utenti Selezionati',
+                'description' => 'Sei sicuro di voler bloccare gli utenti selezionati?',
+            ],
+            'confirmation' => 'Sei sicuro di voler bloccare gli utenti selezionati?',
+            'success' => 'Utenti bloccati con successo',
+            'error' => 'Errore durante il blocco degli utenti',
         ],
         'unblock_selected' => [
             'label' => 'Sblocca Selezionati',
             'icon' => 'heroicon-o-lock-open',
+            'modal' => [
+                'heading' => 'Sblocca Utenti Selezionati',
+                'description' => 'Sei sicuro di voler sbloccare gli utenti selezionati?',
+            ],
+            'confirmation' => 'Sei sicuro di voler sbloccare gli utenti selezionati?',
+            'success' => 'Utenti sbloccati con successo',
+            'error' => 'Errore durante lo sblocco degli utenti',
         ],
     ],
     'notifications' => [
@@ -543,9 +667,37 @@ return [
         'email_verified' => 'Email verificata con successo',
         'otp_sent' => 'Codice OTP inviato',
         'error' => 'Si è verificato un errore',
+        'success' => 'Operazione completata con successo',
+        'warning' => 'Attenzione',
+        'info' => 'Informazione',
+    ],
+    'buttons' => [
+        'save' => 'Salva',
+        'cancel' => 'Annulla',
+        'confirm' => 'Conferma',
+        'close' => 'Chiudi',
+        'back' => 'Indietro',
+        'next' => 'Avanti',
+        'submit' => 'Invia',
+        'reset' => 'Reset',
+        'clear' => 'Pulisci',
+        'search' => 'Cerca',
+        'filter' => 'Filtra',
+        'export' => 'Esporta',
+        'import' => 'Importa',
+        'refresh' => 'Aggiorna',
+        'reload' => 'Ricarica',
+    ],
+    'empty_states' => [
+        'no_users' => 'Nessun utente trovato',
+        'no_results' => 'Nessun risultato trovato',
+        'no_data' => 'Nessun dato disponibile',
+        'create_first' => 'Crea il primo utente',
+        'search_no_results' => 'Nessun risultato per la ricerca',
     ],
     'search_placeholder' => 'Cerca per nome, email o ruolo...',
 ];
+<<<<<<< HEAD
 
 >>>>>>> 42fc572 (.)
 =======
@@ -1242,3 +1394,5 @@ return array (
   'search_placeholder' => 'Cerca per nome, email o ruolo...',
 );
 >>>>>>> 199538c (.)
+=======
+>>>>>>> 34f454e (.)
