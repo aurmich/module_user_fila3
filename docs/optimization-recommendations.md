@@ -144,7 +144,7 @@ protected function createTestUser(): mixed
 #### File Prioritari da Correggere
 1. **Widget Auth**: Tutti i widget in `app/Filament/Widgets/Auth/`
 2. **Test Files**: Tutti i test che usano User diretto
-3. **Documentation**: Rimuovere path hardcoded tipo `/var/www/html/saluteora/`
+3. **Documentation**: Rimuovere path hardcoded tipo `/var/www/html/_bases/base_techplanner_fila3_mono/`
 
 ### 3. Trait e STI Optimization (IMPORTANTE - 1 giorno)
 

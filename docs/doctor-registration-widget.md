@@ -7,7 +7,7 @@ Il widget di registrazione del dottore (`RegistrationWidget.php`) è un componen
 ## Posizione del File
 
 ```
-/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php
+/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php
 ```
 
 ## Architettura
@@ -240,7 +240,7 @@ The SaluteOra Team'
 
 ## Collegamenti Bidirezionali
 
-- [Email Doctor Registration](/var/www/html/saluteora/docs/email-doctor-registration.md)
-- [Registrazione Odontoiatra](/var/www/html/saluteora/docs/roadmap_frontoffice/13-registrazione-odontoiatra.md)
-- [DoctorResource](/var/www/html/saluteora/laravel/Modules/Patient/app/Filament/Resources/DoctorResource.php)
-- [RegistrationWidget](/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php)
+- [Email Doctor Registration](/var/www/html/_bases/base_techplanner_fila3_mono/docs/email-doctor-registration.md)
+- [Registrazione Odontoiatra](/var/www/html/_bases/base_techplanner_fila3_mono/docs/roadmap_frontoffice/13-registrazione-odontoiatra.md)
+- [DoctorResource](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Patient/app/Filament/Resources/DoctorResource.php)
+- [RegistrationWidget](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php)
