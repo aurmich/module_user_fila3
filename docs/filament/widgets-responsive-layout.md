@@ -1,15 +1,7 @@
 # Widget Responsivi per Form di Registrazione
 
 > **NOTA IMPORTANTE**: Questo documento è un riferimento specifico per il modulo User. 
-<<<<<<< HEAD
-<<<<<<< HEAD
 > La documentazione principale e completa si trova nel [modulo UI](../../../UI/docs/blocks/filament-component-integration.md#layout-responsivo-dei-widget-filament).
-=======
-> La documentazione principale e completa si trova nel [modulo UI](../../../UI/project_docs/blocks/filament-component-integration.md#layout-responsivo-dei-widget-filament).
->>>>>>> 079c9da (.)
-=======
-> La documentazione principale e completa si trova nel [modulo UI](../../../UI/docs/blocks/filament-component-integration.md#layout-responsivo-dei-widget-filament).
->>>>>>> 9d96960 (.)
 
 ## Problema
 
@@ -60,18 +52,6 @@ I form Filament complessi, in particolare quelli di registrazione e wizard multi
 
 ## Documentazione Correlata
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Layout Responsivo dei Widget Filament](../../../UI/docs/blocks/filament-component-integration.md#layout-responsivo-dei-widget-filament)
 - [Best Practices per i Form Filament](../../../UI/docs/filament/form-best-practices.md)
 - [Implementazione Corretta dei Widget](../../../Xot/docs/filament-widgets.md)
-=======
-- [Layout Responsivo dei Widget Filament](../../../UI/project_docs/blocks/filament-component-integration.md#layout-responsivo-dei-widget-filament)
-- [Best Practices per i Form Filament](../../../UI/project_docs/filament/form-best-practices.md)
-- [Implementazione Corretta dei Widget](../../../Xot/project_docs/filament-widgets.md)
->>>>>>> 079c9da (.)
-=======
-- [Layout Responsivo dei Widget Filament](../../../UI/docs/blocks/filament-component-integration.md#layout-responsivo-dei-widget-filament)
-- [Best Practices per i Form Filament](../../../UI/docs/filament/form-best-practices.md)
-- [Implementazione Corretta dei Widget](../../../Xot/docs/filament-widgets.md)
->>>>>>> 9d96960 (.)

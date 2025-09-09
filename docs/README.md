@@ -109,42 +109,17 @@ User/
 - [Filosofia Comandi Console](./console_commands/console_commands_philosophy.md)
 
 ## Collegamenti Bidirezionali
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Modulo Xot](../Xot/docs/README.md)
 - [Modulo Patient](../Patient/docs/README.md)
 - [Modulo Dental](../Dental/docs/README.md)
-=======
-- [Modulo Xot](../Xot/project_docs/README.md)
-- [Modulo Patient](../Patient/project_docs/README.md)
-- [Modulo Dental](../Dental/project_docs/README.md)
->>>>>>> 079c9da (.)
-=======
-- [Modulo Xot](../Xot/docs/README.md)
-- [Modulo Patient](../Patient/docs/README.md)
-- [Modulo Dental](../Dental/docs/README.md)
->>>>>>> 9d96960 (.)
 - [Linee guida Actions](./actions.mdc)
 - [Linee guida Activitylog](./activitylog.mdc)
 
 ## Vedi Anche
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9d96960 (.)
 - [Documentazione Principale](../../docs/INDEX.md)
 - [Architettura Moduli](../../docs/architecture/modules-structure.md)
 - [Convenzioni di Nomenclatura](../../docs/standards/file_naming_conventions.md)
 - [Struttura del Progetto](../Xot/docs/architecture/struttura-progetto.md)
-<<<<<<< HEAD
-=======
-- [Documentazione Principale](../../project_docs/INDEX.md)
-- [Architettura Moduli](../../project_docs/architecture/modules-structure.md)
-- [Convenzioni di Nomenclatura](../../project_docs/standards/file_naming_conventions.md)
-- [Struttura del Progetto](../Xot/project_docs/architecture/struttura-progetto.md)
->>>>>>> 079c9da (.)
-=======
->>>>>>> 9d96960 (.)
 
 > **Collegamenti correlati**
 > - [README.md documentazione generale](../../../docs/README.md)
@@ -291,21 +266,9 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli u
 - [Bottlenecks](bottlenecks.md)
 
 ### Integrazioni
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Integrazione con Xot](../Xot/docs/README.md)
 - [Integrazione con Lang](../Lang/docs/README.md)
 - [Integrazione con Notify](../Notify/docs/README.md)
-=======
-- [Integrazione con Xot](../Xot/project_docs/README.md)
-- [Integrazione con Lang](../Lang/project_docs/README.md)
-- [Integrazione con Notify](../Notify/project_docs/README.md)
->>>>>>> 079c9da (.)
-=======
-- [Integrazione con Xot](../Xot/docs/README.md)
-- [Integrazione con Lang](../Lang/docs/README.md)
-- [Integrazione con Notify](../Notify/docs/README.md)
->>>>>>> 9d96960 (.)
 
 ### Autenticazione
 - [Login Personalizzato](custom_login.md)
@@ -556,20 +519,8 @@ class UserServiceProvider extends XotBaseServiceProvider
 
 - Errori di traduzione 
 ## Collegamenti
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Indice Documentazione](../../../docs/INDEX.md)
 - [README Principale](../../../README.md)
-=======
-- [Indice Documentazione](../../../project_docs/INDEX.md)
-- [README Principale](../../../README.md)
-- [API Reference](../project_docs/api.md)
-- [Changelog](../project_docs/CHANGELOG.md) 
->>>>>>> 079c9da (.)
-=======
-- [Indice Documentazione](../../../docs/INDEX.md)
-- [README Principale](../../../README.md)
->>>>>>> 9d96960 (.)
 - [API Reference](../docs/api.md)
 - [Changelog](../docs/CHANGELOG.md) 
 ## Collegamenti tra versioni di README.md
@@ -988,35 +939,6 @@ Schema::table('teams', function (Blueprint $table) {
 - [ ] La documentazione tecnica è aggiornata
 - [ ] I comandi artisan sono lanciati dal path corretto o con namespace modulo
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 933fcfe (.)
-
-## Aggiornamenti Recenti
-
-### 27 Gennaio 2025
-- ✅ **Riorganizzazione Documentazione**: Spostati file specifici da docs_project alle cartelle docs dei moduli
-  - **File spostati in User/docs/**: 
-    - `doctor-registration-widget.md` - Widget registrazione dottori
-    - `doctor-registration.md` - Sistema registrazione dottori
-    - `email-doctor-registration.md` - Email registrazione dottori
-  - **Motivazione**: Separazione responsabilità, principio modulare, manutenibilità
-  - **Regola**: docs_project solo per documentazione generale del progetto, file specifici di moduli nelle rispettive cartelle docs
-
-## Collegamenti
-
-<<<<<<< HEAD
->>>>>>> a0c18bc (.)
-=======
->>>>>>> 933fcfe (.)
-=======
->>>>>>> 78bb134 (.)
-=======
->>>>>>> 079c9da (.)
 ## Aggiornamenti Recenti
 
 ### 27 Gennaio 2025

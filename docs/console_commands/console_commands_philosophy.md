@@ -456,33 +456,10 @@ private function getPasswordLegacy(): string
 - ✅ **Maintenance Policy**: Versioning, changelog e deprecation
 
 *Ultimo aggiornamento: 2025-01-27*
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 78bb134 (.)
-=======
->>>>>>> 079c9da (.)
 
 
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a0c18bc (.)
-=======
->>>>>>> 933fcfe (.)
-=======
 
 
->>>>>>> 78bb134 (.)
-=======
->>>>>>> 079c9da (.)
-=======
-
-
->>>>>>> 9d96960 (.)

@@ -2,29 +2,10 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Modules\User\Models\User;
-use Modules\User\Models\Team;
-use Modules\User\Models\Membership;
-use Modules\User\Models\TeamInvitation;
-use Modules\User\Models\TeamPermission;
-=======
-namespace Modules\User\Tests\Feature\TeamManagementTest;
-
-namespace Modules\User\Tests\Unit\Widgets;
-
-=======
->>>>>>> 9d96960 (.)
 use Modules\User\Models\Team;
 use Modules\User\Models\TeamInvitation;
 use Modules\User\Models\TeamPermission;
 use Modules\User\Models\User;
-<<<<<<< HEAD
-use Modules\User\Models\Membership;
->>>>>>> 079c9da (.)
-=======
->>>>>>> 9d96960 (.)
 
 beforeEach(function () {
     $this->owner = User::factory()->create();
@@ -259,15 +240,7 @@ describe('Team Scopes and Queries', function () {
 
         $ownerTeams = Team::where('user_id', $this->owner->id)->get();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        expect($ownerTeams->every(fn($team) => $team->user_id === $this->owner->id))->toBe(true);
-=======
-
->>>>>>> 079c9da (.)
-=======
         expect($ownerTeams->every(fn ($team) => $team->user_id === $this->owner->id))->toBe(true);
->>>>>>> 9d96960 (.)
     });
 
     it('can find teams by slug', function () {
@@ -352,12 +325,4 @@ describe('Team Events and Notifications', function () {
         // Test activity logging when members join/leave
         expect($this->team->users)->toContain($this->member);
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
 });
-=======
-
->>>>>>> 079c9da (.)
-=======
-});
->>>>>>> 9d96960 (.)

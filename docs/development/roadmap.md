@@ -148,21 +148,9 @@
 ## Riferimenti
 
 ### Documentazione
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Laravel Authentication](https://laravel.com/docs/12.x/authentication)
 - [Laravel Authorization](https://laravel.com/docs/12.x/authorization)
 - [Laravel Security](https://laravel.com/docs/12.x/security)
-=======
-- [Laravel Authentication](https://laravel.com/project_docs/12.x/authentication)
-- [Laravel Authorization](https://laravel.com/project_docs/12.x/authorization)
-- [Laravel Security](https://laravel.com/project_docs/12.x/security)
->>>>>>> 079c9da (.)
-=======
-- [Laravel Authentication](https://laravel.com/docs/12.x/authentication)
-- [Laravel Authorization](https://laravel.com/docs/12.x/authorization)
-- [Laravel Security](https://laravel.com/docs/12.x/security)
->>>>>>> 9d96960 (.)
 
 ### Collegamenti Interni
 - [Bottlenecks](bottlenecks.md)
@@ -186,8 +174,6 @@
 - Mantenere compatibilità con OAuth2
 
 ## Collegamenti tra versioni di roadmap.md
-<<<<<<< HEAD
-<<<<<<< HEAD
 * [roadmap.md](bashscripts/docs/roadmap.md)
 * [roadmap.md](docs/roadmap.md)
 * [roadmap.md](../../../Gdpr/docs/roadmap.md)
@@ -204,42 +190,6 @@
 * [roadmap.md](../../../Patient/docs/roadmap.md)
 * [roadmap.md](../../../Cms/docs/roadmap.md)
 * [roadmap.md](../../../../Themes/One/docs/roadmap.md)
-=======
-* [roadmap.md](bashscripts/project_docs/roadmap.md)
-* [roadmap.md](docs/roadmap.md)
-* [roadmap.md](../../../Gdpr/project_docs/roadmap.md)
-* [roadmap.md](../../../Notify/project_docs/roadmap.md)
-* [roadmap.md](../../../Xot/project_docs/roadmap.md)
-* [roadmap.md](../../../Dental/project_docs/roadmap.md)
-* [roadmap.md](../../../User/project_docs/roadmap.md)
-* [roadmap.md](../../../UI/project_docs/roadmap.md)
-* [roadmap.md](../../../Lang/project_docs/roadmap.md)
-* [roadmap.md](../../../Job/project_docs/roadmap.md)
-* [roadmap.md](../../../Media/project_docs/roadmap.md)
-* [roadmap.md](../../../Tenant/project_docs/roadmap.md)
-* [roadmap.md](../../../Activity/project_docs/roadmap.md)
-* [roadmap.md](../../../Patient/project_docs/roadmap.md)
-* [roadmap.md](../../../Cms/project_docs/roadmap.md)
-* [roadmap.md](../../../../Themes/One/project_docs/roadmap.md)
->>>>>>> 079c9da (.)
-=======
-* [roadmap.md](bashscripts/docs/roadmap.md)
-* [roadmap.md](docs/roadmap.md)
-* [roadmap.md](../../../Gdpr/docs/roadmap.md)
-* [roadmap.md](../../../Notify/docs/roadmap.md)
-* [roadmap.md](../../../Xot/docs/roadmap.md)
-* [roadmap.md](../../../Dental/docs/roadmap.md)
-* [roadmap.md](../../../User/docs/roadmap.md)
-* [roadmap.md](../../../UI/docs/roadmap.md)
-* [roadmap.md](../../../Lang/docs/roadmap.md)
-* [roadmap.md](../../../Job/docs/roadmap.md)
-* [roadmap.md](../../../Media/docs/roadmap.md)
-* [roadmap.md](../../../Tenant/docs/roadmap.md)
-* [roadmap.md](../../../Activity/docs/roadmap.md)
-* [roadmap.md](../../../Patient/docs/roadmap.md)
-* [roadmap.md](../../../Cms/docs/roadmap.md)
-* [roadmap.md](../../../../Themes/One/docs/roadmap.md)
->>>>>>> 9d96960 (.)
 
 
 ---

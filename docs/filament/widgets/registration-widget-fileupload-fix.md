@@ -186,15 +186,7 @@ Questo pattern può essere riutilizzato in altri widget che:
 - [RegistrationWidget.php](../../app/Filament/Widgets/RegistrationWidget.php) - Widget corretto
 - [XotBaseResource.php](../../../Xot/app/Filament/Resources/XotBaseResource.php) - Schema attachments migliorato
 - [PatientResource.php](../../../SaluteOra/app/Filament/Resources/PatientResource.php) - Risorsa paziente
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Widget Error Troubleshooting](../../../Xot/docs/troubleshooting/widget-errors.md) - Guide generali
-=======
-- [Widget Error Troubleshooting](../../../Xot/project_docs/troubleshooting/widget-errors.md) - Guide generali
->>>>>>> 079c9da (.)
-=======
-- [Widget Error Troubleshooting](../../../Xot/docs/troubleshooting/widget-errors.md) - Guide generali
->>>>>>> 9d96960 (.)
 
 ---
 

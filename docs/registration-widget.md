@@ -61,15 +61,5 @@ protected function getConfirmationRoute(): string
 
 ## References
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Namespace Issues](../../../docs/references/namespace-issues.md)
 - [Filament Resource Guidelines](../../../Modules/Xot/docs/rules/filament-resource-guidelines.md)
-=======
-- [Namespace Issues](../../../project_docs/references/namespace-issues.md)
-- [Filament Resource Guidelines](../../../Modules/Xot/project_docs/rules/filament-resource-guidelines.md)
->>>>>>> 079c9da (.)
-=======
-- [Namespace Issues](../../../docs/references/namespace-issues.md)
-- [Filament Resource Guidelines](../../../Modules/Xot/docs/rules/filament-resource-guidelines.md)
->>>>>>> 9d96960 (.)

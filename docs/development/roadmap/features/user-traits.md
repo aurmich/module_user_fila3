@@ -96,14 +96,6 @@ trait PasswordValidationRules
    - Test database operations
 
 ## Links
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Back to Roadmap](../../docs/roadmap.md)
-=======
-- [Back to Roadmap](../../project_docs/roadmap.md)
->>>>>>> 079c9da (.)
-=======
-- [Back to Roadmap](../../docs/roadmap.md)
->>>>>>> 9d96960 (.)
 - Related: [PHPStan Level 7 Compliance](./phpstan-level7-compliance.md)
 - Related: [Authentication Log Enhancement](./auth-log-enhancement.md)

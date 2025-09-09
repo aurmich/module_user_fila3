@@ -256,18 +256,8 @@ Creare test per verificare:
 
 ### 3. **Documentazione Collegamenti**
 Aggiornare:
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [docs/USER_MODULE.md](../../../docs/USER_MODULE.md)
 - [Modules/User/docs/traits.md](traits.md)
-=======
-- [docs/USER_MODULE.md](../../../project_docs/USER_MODULE.md)
-- [Modules/User/project_docs/traits.md](traits.md)
->>>>>>> 079c9da (.)
-=======
-- [docs/USER_MODULE.md](../../../docs/USER_MODULE.md)
-- [Modules/User/docs/traits.md](traits.md)
->>>>>>> 9d96960 (.)
 - File .mdc per Cursor e Windsurf
 
 ## 🎯 **RISULTATO FINALE**
@@ -284,23 +274,10 @@ Il trait `HasTeams` ora è:
 ## 🔗 **Collegamenti Bidirezionali**
 
 ### **📚 Documentazione Root**
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9d96960 (.)
 - [docs/laraxot_conventions.md](../../../docs/laraxot_conventions.md) - Convenzioni Laraxot generali
 - [docs/USER_MODULE.md](../../../docs/USER_MODULE.md) - Documentazione generale modulo User
 - [docs/phpstan_fixes.md](../../../docs/phpstan_fixes.md) - Guide PHPStan
 - [docs/TRAIT_BEST_PRACTICES.md](../../../docs/TRAIT_BEST_PRACTICES.md) - Best practices per trait
-<<<<<<< HEAD
-=======
-- [docs/laraxot_conventions.md](../../../project_docs/laraxot_conventions.md) - Convenzioni Laraxot generali
-- [docs/USER_MODULE.md](../../../project_docs/USER_MODULE.md) - Documentazione generale modulo User
-- [docs/phpstan_fixes.md](../../../project_docs/phpstan_fixes.md) - Guide PHPStan
-- [docs/TRAIT_BEST_PRACTICES.md](../../../project_docs/TRAIT_BEST_PRACTICES.md) - Best practices per trait
->>>>>>> 079c9da (.)
-=======
->>>>>>> 9d96960 (.)
 
 ### **📁 Documentazione Modulo User**
 - [traits.md](traits.md) - Documentazione completa trait modulo User

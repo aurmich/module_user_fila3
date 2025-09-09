@@ -101,15 +101,7 @@ Funzionalità team includono:
 
 ## Collegamenti
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Documentazione Root User](../../../docs/modules/user.md)
-=======
-- [Documentazione Root User](../../../project_docs/modules/user.md)
->>>>>>> 079c9da (.)
-=======
-- [Documentazione Root User](../../../docs/modules/user.md)
->>>>>>> 9d96960 (.)
 - [BaseUser Documentation](./baseuser.md)
 - [Registration Widget](./registration-widget.md)
 - [PHPStan Fixes](./phpstan_fixes.md)

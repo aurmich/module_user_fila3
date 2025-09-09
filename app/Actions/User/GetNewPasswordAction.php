@@ -29,15 +29,7 @@ class GetNewPasswordAction
         //$password=trim(Str::random(10));
         //$password='Pgn7T8Bppf';
         [$password,$password_hash] = once(function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $password=trim(Str::password(10));
-=======
-            $password=trim(Str::random(10));
->>>>>>> 079c9da (.)
-=======
-            $password=trim(Str::password(10));
->>>>>>> 9d96960 (.)
             $password_hash=Hash::make($password);
             return [$password,$password_hash];
         });

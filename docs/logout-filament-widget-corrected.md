@@ -1,31 +1,13 @@
 # Implementazione Corretta del Logout con Widget Filament
 
 ## Collegamenti correlati
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Documentazione centrale](/docs/README.md)
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
-=======
-- [Documentazione centrale](/project_docs/README.md)
-- [Collegamenti documentazione](/project_docs/collegamenti-documentazione.md)
->>>>>>> 079c9da (.)
-=======
-- [Documentazione centrale](/docs/README.md)
-- [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
->>>>>>> 9d96960 (.)
 - [Implementazione Auth Pages](AUTH_PAGES_IMPLEMENTATION.md)
 - [Implementazione Logout](LOGOUT_BLADE_IMPLEMENTATION.md)
 - [Analisi Errore Logout](LOGOUT_BLADE_ERROR_ANALYSIS.md)
 - [Struttura Widget](WIDGETS_STRUCTURE.md)
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Documentazione Auth Tema One](/laravel/Themes/One/docs/AUTH.md)
-=======
-- [Documentazione Auth Tema One](/laravel/Themes/One/project_docs/AUTH.md)
->>>>>>> 079c9da (.)
-=======
-- [Documentazione Auth Tema One](/laravel/Themes/One/docs/AUTH.md)
->>>>>>> 9d96960 (.)
 
 ## Introduzione
 

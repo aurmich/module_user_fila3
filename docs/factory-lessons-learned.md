@@ -145,24 +145,10 @@ done
 
 ## Collegamenti
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [Factory Audit Root](../../../docs/factory-audit-2025.md)
 - [Missing Factories Audit](./missing-factories-audit.md)
 - [Geo Factory Audit](../../Geo/docs/missing-factories-audit.md)
 - [Laravel Factory Best Practices](../../../docs/laravel-factory-best-practices.md)
-=======
-- [Factory Audit Root](../../../project_docs/factory-audit-2025.md)
-- [Missing Factories Audit](./missing-factories-audit.md)
-- [Geo Factory Audit](../../Geo/project_docs/missing-factories-audit.md)
-- [Laravel Factory Best Practices](../../../project_docs/laravel-factory-best-practices.md)
->>>>>>> 079c9da (.)
-=======
-- [Factory Audit Root](../../../docs/factory-audit-2025.md)
-- [Missing Factories Audit](./missing-factories-audit.md)
-- [Geo Factory Audit](../../Geo/docs/missing-factories-audit.md)
-- [Laravel Factory Best Practices](../../../docs/laravel-factory-best-practices.md)
->>>>>>> 9d96960 (.)
 
 ---
 

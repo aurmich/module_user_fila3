@@ -1,15 +1,7 @@
 # Registrazione dei componenti Blade
 
 > **NOTA IMPORTANTE**: Questo documento è un riferimento specifico per il modulo User. 
-<<<<<<< HEAD
-<<<<<<< HEAD
 > La documentazione principale e completa si trova nel [modulo UI](../../../UI/docs/components/blade-component-registration.md).
-=======
-> La documentazione principale e completa si trova nel [modulo UI](../../../UI/project_docs/components/blade-component-registration.md).
->>>>>>> 079c9da (.)
-=======
-> La documentazione principale e completa si trova nel [modulo UI](../../../UI/docs/components/blade-component-registration.md).
->>>>>>> 9d96960 (.)
 
 ## Automatic Blade Component Registration
 
@@ -44,13 +36,5 @@ Utilizzare direttamente i componenti nei template:
 - Cercare tutte le occorrenze di `<x-profile.dropdown>` e `<x-profile.dropdown-link>` e sostituirle con la nuova convenzione.
 
 **Collegamenti aggiuntivi**:
-<<<<<<< HEAD
-<<<<<<< HEAD
 - [UI Module Blade Components Registration](../../../UI/docs/components/blade-component-registration.md)
-=======
-- [UI Module Blade Components Registration](../../../UI/project_docs/components/blade-component-registration.md)
->>>>>>> 079c9da (.)
-=======
-- [UI Module Blade Components Registration](../../../UI/docs/components/blade-component-registration.md)
->>>>>>> 9d96960 (.)
 - [Regole LangServiceProvider](../langserviceprovider-labels.md)
