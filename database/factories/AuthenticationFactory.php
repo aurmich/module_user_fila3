@@ -16,7 +16,12 @@ use Modules\User\Models\User;
  * 
 =======
  *
+<<<<<<< HEAD
 >>>>>>> 079c9da (.)
+=======
+ * Factory for creating Authentication model instances for testing and seeding.
+ *
+>>>>>>> 9d96960 (.)
  * @extends Factory<Authentication>
  */
 class AuthenticationFactory extends Factory
@@ -51,6 +56,7 @@ class AuthenticationFactory extends Factory
             'ip_address' => $this->faker->ipv4(),
             'user_agent' => $this->faker->userAgent(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             'location' => $this->faker->optional(0.7)->city() . ', ' . $this->faker->optional(0.7)->country(),
             'login_successful' => $loginSuccessful,
             'login_at' => $loginAt,
@@ -62,6 +68,14 @@ class AuthenticationFactory extends Factory
             'login_at' => $loginAt,
             'logout_at' => $loginSuccessful ? $this->faker->dateTimeBetween($loginAt, 'now') : null,
 >>>>>>> 079c9da (.)
+=======
+            'location' => $this->faker->optional(0.7)->city().', '.$this->faker->optional(0.7)->country(),
+            'login_successful' => $loginSuccessful,
+            'login_at' => $loginAt,
+            'logout_at' => $loginSuccessful && $this->faker->boolean(60)
+                ? $this->faker->dateTimeBetween($loginAt, 'now')
+                : null,
+>>>>>>> 9d96960 (.)
             'authenticatable_type' => User::class,
             'authenticatable_id' => User::factory(),
         ];

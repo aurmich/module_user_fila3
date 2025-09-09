@@ -3,10 +3,13 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\WithFaker;
 >>>>>>> 079c9da (.)
+=======
+>>>>>>> 9d96960 (.)
 use Modules\User\Tests\TestCase;
 
 /*
@@ -21,6 +24,7 @@ use Modules\User\Tests\TestCase;
 */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 pest()->extend(TestCase::class)
 =======
 uses(
@@ -30,6 +34,9 @@ uses(
 )->in('Feature', 'Unit');
 
 >>>>>>> 079c9da (.)
+=======
+pest()->extend(TestCase::class)
+>>>>>>> 9d96960 (.)
     ->in('Feature', 'Unit');
 
 /*
@@ -38,12 +45,18 @@ uses(
 |--------------------------------------------------------------------------
 |
 <<<<<<< HEAD
+<<<<<<< HEAD
 | When you're writing tests, you often need to check that values meet certain conditions. The
 | "expect()" function gives you access to a set of "expectations" methods that you can use
 | to assert different things. Of course, you may extend the Expectation API at any time.
 =======
 | Here you may define your custom expectations to be used in your tests.
 >>>>>>> 079c9da (.)
+=======
+| When you're writing tests, you often need to check that values meet certain conditions. The
+| "expect()" function gives you access to a set of "expectations" methods that you can use
+| to assert different things. Of course, you may extend the Expectation API at any time.
+>>>>>>> 9d96960 (.)
 |
 */
 
@@ -51,6 +64,7 @@ expect()->extend('toBeUser', function () {
     return $this->toBeInstanceOf(\Modules\User\Models\User::class);
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 expect()->extend('toBeTeam', function () {
     return $this->toBeInstanceOf(\Modules\User\Models\Team::class);
@@ -74,6 +88,14 @@ expect()->extend('toHavePermission', function (string $permissionName) {
 expect()->extend('toHaveTeamRole', function (\Modules\User\Models\Team $team, string $role) {
     return expect($this->value->hasTeamRole($team, $role))->toBeTrue();
 >>>>>>> 079c9da (.)
+=======
+expect()->extend('toBeTeam', function () {
+    return $this->toBeInstanceOf(\Modules\User\Models\Team::class);
+});
+
+expect()->extend('toBeProfile', function () {
+    return $this->toBeInstanceOf(\Modules\User\Models\Profile::class);
+>>>>>>> 9d96960 (.)
 });
 
 /*
@@ -82,12 +104,18 @@ expect()->extend('toHaveTeamRole', function (\Modules\User\Models\Team $team, st
 |--------------------------------------------------------------------------
 |
 <<<<<<< HEAD
+<<<<<<< HEAD
 | While Pest is very powerful out-of-the-box, you may have some testing code specific to your
 | project that you don't want to repeat in every file. Here you can also expose helpers as
 | global functions to help you to reduce the number of lines of code in your test files.
 =======
 | Here you may define your custom helper functions to be used in your tests.
 >>>>>>> 079c9da (.)
+=======
+| While Pest is very powerful out-of-the-box, you may have some testing code specific to your
+| project that you don't want to repeat in every file. Here you can also expose helpers as
+| global functions to help you to reduce the number of lines of code in your test files.
+>>>>>>> 9d96960 (.)
 |
 */
 
@@ -102,6 +130,7 @@ function makeUser(array $attributes = []): \Modules\User\Models\User
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 function createRole(array $attributes = []): \Modules\User\Models\Role
 {
@@ -114,6 +143,8 @@ function createPermission(array $attributes = []): \Modules\User\Models\Permissi
 }
 
 >>>>>>> 079c9da (.)
+=======
+>>>>>>> 9d96960 (.)
 function createTeam(array $attributes = []): \Modules\User\Models\Team
 {
     return \Modules\User\Models\Team::factory()->create($attributes);
@@ -126,6 +157,7 @@ function createProfile(array $attributes = []): \Modules\User\Models\Profile
 }
 =======
 }
+<<<<<<< HEAD
 
 function createTenant(array $attributes = []): \Modules\User\Models\Tenant
 {
@@ -137,3 +169,5 @@ function createAuthenticationLog(array $attributes = []): \Modules\User\Models\A
     return \Modules\User\Models\AuthenticationLog::factory()->create($attributes);
 }
 >>>>>>> 079c9da (.)
+=======
+>>>>>>> 9d96960 (.)

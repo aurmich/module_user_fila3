@@ -5,11 +5,16 @@ declare(strict_types=1);
 namespace Modules\User\Models\Policies;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 use Modules\User\Models\Feature;
 =======
 
 >>>>>>> 079c9da (.)
+=======
+use Modules\User\Models\Feature;
+use Modules\Xot\Contracts\UserContract;
+>>>>>>> 9d96960 (.)
 
 class FeaturePolicy extends UserBasePolicy
 {
@@ -27,10 +32,14 @@ class FeaturePolicy extends UserBasePolicy
     public function view(UserContract $user, Feature $feature): bool
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $user->hasPermissionTo('feature.view') || 
 =======
 
 >>>>>>> 079c9da (.)
+=======
+        return $user->hasPermissionTo('feature.view') ||
+>>>>>>> 9d96960 (.)
                $user->hasRole('super-admin');
     }
 
@@ -48,10 +57,14 @@ class FeaturePolicy extends UserBasePolicy
     public function update(UserContract $user, Feature $feature): bool
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $user->hasPermissionTo('feature.update') || 
 =======
 
 >>>>>>> 079c9da (.)
+=======
+        return $user->hasPermissionTo('feature.update') ||
+>>>>>>> 9d96960 (.)
                $user->hasRole('super-admin');
     }
 
@@ -61,10 +74,14 @@ class FeaturePolicy extends UserBasePolicy
     public function delete(UserContract $user, Feature $feature): bool
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $user->hasPermissionTo('feature.delete') || 
 =======
 
 >>>>>>> 079c9da (.)
+=======
+        return $user->hasPermissionTo('feature.delete') ||
+>>>>>>> 9d96960 (.)
                $user->hasRole('super-admin');
     }
 
@@ -74,10 +91,14 @@ class FeaturePolicy extends UserBasePolicy
     public function restore(UserContract $user, Feature $feature): bool
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $user->hasPermissionTo('feature.restore') || 
 =======
 
 >>>>>>> 079c9da (.)
+=======
+        return $user->hasPermissionTo('feature.restore') ||
+>>>>>>> 9d96960 (.)
                $user->hasRole('super-admin');
     }
 
@@ -87,10 +108,14 @@ class FeaturePolicy extends UserBasePolicy
     public function forceDelete(UserContract $user, Feature $feature): bool
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $user->hasPermissionTo('feature.force-delete') || 
 =======
 
 >>>>>>> 079c9da (.)
+=======
+        return $user->hasPermissionTo('feature.force-delete') ||
+>>>>>>> 9d96960 (.)
                $user->hasRole('super-admin');
     }
 }

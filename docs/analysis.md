@@ -61,6 +61,9 @@ Modules/User/
 
 ## Collegamenti tra versioni di analysis.md
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9d96960 (.)
 * [analysis.md](../../../Notify/docs/analysis.md)
 * [analysis.md](../../../Notify/docs/phpstan/analysis.md)
 * [analysis.md](../../../Xot/docs/analysis.md)
@@ -74,6 +77,7 @@ Modules/User/
 * [analysis.md](../../../Media/docs/analysis.md)
 * [analysis.md](../../../Media/docs/phpstan/analysis.md)
 * [analysis.md](../../../../Themes/One/docs/analysis.md)
+<<<<<<< HEAD
 =======
 * [analysis.md](../../../Notify/project_docs/analysis.md)
 * [analysis.md](../../../Notify/project_docs/phpstan/analysis.md)
@@ -89,6 +93,8 @@ Modules/User/
 * [analysis.md](../../../Media/project_docs/phpstan/analysis.md)
 * [analysis.md](../../../../Themes/One/project_docs/analysis.md)
 >>>>>>> 079c9da (.)
+=======
+>>>>>>> 9d96960 (.)
 
 
 ### Versione Incoming

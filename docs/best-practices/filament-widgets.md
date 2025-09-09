@@ -174,6 +174,7 @@ class UserStatsWidget extends XotBaseWidget
 
 ### Modulo Xot (Core)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [README.md](../../../Xot/docs/README.md) - Indice principale della documentazione
 - [Widget Filament](../../../Xot/docs/filament/widgets/xot-base-widget.md) - Documentazione su XotBaseWidget
 - [Polling nei Widget](../../../Xot/docs/filament/widgets/FILAMENT_WIDGETS_POLLING.md) - Implementazione del polling
@@ -192,6 +193,16 @@ class UserStatsWidget extends XotBaseWidget
 - [Lang - Filament Translations](../../../Lang/project_docs/filament-translations.md) - Traduzioni in Filament
 - [UI - Form Filament Widgets](../../../UI/project_docs/form_filament_widgets.md) - Widget per form Filament
 >>>>>>> 079c9da (.)
+=======
+- [README.md](../../../Xot/docs/README.md) - Indice principale della documentazione
+- [Widget Filament](../../../Xot/docs/filament/widgets/xot-base-widget.md) - Documentazione su XotBaseWidget
+- [Polling nei Widget](../../../Xot/docs/filament/widgets/FILAMENT_WIDGETS_POLLING.md) - Implementazione del polling
+
+### Moduli Correlati
+- [Cms - Convenzioni Namespace Filament](../../../Cms/docs/convenzioni-namespace-filament.md) - Convenzioni per i namespace Filament
+- [Lang - Filament Translations](../../../Lang/docs/filament-translations.md) - Traduzioni in Filament
+- [UI - Form Filament Widgets](../../../UI/docs/form_filament_widgets.md) - Widget per form Filament
+>>>>>>> 9d96960 (.)
 
 ### Documentazione Interna
 - [README del modulo User](../README.md) - Indice principale del modulo User
@@ -200,8 +211,12 @@ class UserStatsWidget extends XotBaseWidget
 ## Risorse Utili
 - [Documentazione Filament](https://filamentphp.com/docs)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Laravel Blade](https://laravel.com/docs/blade)
 =======
 - [Laravel Blade](https://laravel.com/project_docs/blade)
 >>>>>>> 079c9da (.)
+=======
+- [Laravel Blade](https://laravel.com/docs/blade)
+>>>>>>> 9d96960 (.)
 - [Livewire](https://livewire.laravel.com/docs) 

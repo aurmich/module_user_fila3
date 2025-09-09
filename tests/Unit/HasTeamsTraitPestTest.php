@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use function Pest\Laravel\assertDatabaseHas;
 use function Pest\Laravel\assertDatabaseMissing;
 use function Pest\Laravel\assertDatabaseCount;
@@ -14,6 +15,13 @@ use Modules\User\Contracts\TeamContract;
 =======
 
 >>>>>>> 079c9da (.)
+=======
+use Illuminate\Support\Collection;
+use Modules\User\Contracts\TeamContract;
+use Modules\User\Models\Role;
+use Modules\User\Models\Team;
+use Modules\User\Models\User;
+>>>>>>> 9d96960 (.)
 
 beforeEach(function () {
     $this->user = User::factory()->create();
@@ -209,10 +217,15 @@ test('it correctly manages team permissions', function () {
     $this->user->teams()->attach($this->team->id, [
         'role' => 'editor',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'permissions' => json_encode(['edit-content' => true])
     ]);
     
 =======
+=======
+        'permissions' => json_encode(['edit-content' => true]),
+    ]);
+>>>>>>> 9d96960 (.)
 
 >>>>>>> 079c9da (.)
     expect($this->user->hasTeamPermission($this->team, 'edit-content'))->toBeTrue()
@@ -222,10 +235,14 @@ test('it correctly manages team permissions', function () {
 test('it handles edge cases', function () {
     // Test: User without ID
 <<<<<<< HEAD
+<<<<<<< HEAD
     $newUser = new User();
 =======
 
 >>>>>>> 079c9da (.)
+=======
+    $newUser = new User;
+>>>>>>> 9d96960 (.)
     expect($newUser->belongsToTeams())->toBeFalse();
 
     // Test: Team without owner

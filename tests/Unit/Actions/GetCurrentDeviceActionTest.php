@@ -4,9 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Unit\Actions;
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Jenssegers\Agent\Agent;
+use Mockery;
 use Modules\User\Actions\GetCurrentDeviceAction;
 use Modules\User\Models\Device;
 use Tests\TestCase;
+<<<<<<< HEAD
 <<<<<<< HEAD
 use Illuminate\Foundation\Testing\RefreshDatabase;
 =======
@@ -20,17 +24,28 @@ class GetCurrentDeviceActionTest extends TestCase
     use RefreshDatabase;
 =======
 >>>>>>> 079c9da (.)
+=======
+
+class GetCurrentDeviceActionTest extends TestCase
+{
+    use RefreshDatabase;
+>>>>>>> 9d96960 (.)
 
     private GetCurrentDeviceAction $action;
+
     private Agent $mockAgent;
 
     protected function setUp(): void
     {
         parent::setUp();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->action = new GetCurrentDeviceAction();
         
 =======
+=======
+        $this->action = new GetCurrentDeviceAction;
+>>>>>>> 9d96960 (.)
 
 >>>>>>> 079c9da (.)
         // Mock the Agent class

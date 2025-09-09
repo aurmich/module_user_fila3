@@ -48,6 +48,7 @@ Questo file contiene le traduzioni in inglese per tutte le stringhe relative al 
 - Aggiunta di nuovi messaggi di sistema 
 ## Collegamenti tra versioni di auth.md
 <<<<<<< HEAD
+<<<<<<< HEAD
 * [auth.md](../../../Xot/docs/install/auth.md)
 * [auth.md](../../../User/docs/lang/en/auth.md)
 * [auth.md](../../../Tenant/docs/it/config/auth.md)
@@ -56,4 +57,9 @@ Questo file contiene le traduzioni in inglese per tutte le stringhe relative al 
 * [auth.md](../../../User/project_docs/lang/en/auth.md)
 * [auth.md](../../../Tenant/project_docs/it/config/auth.md)
 >>>>>>> 079c9da (.)
+=======
+* [auth.md](../../../Xot/docs/install/auth.md)
+* [auth.md](../../../User/docs/lang/en/auth.md)
+* [auth.md](../../../Tenant/docs/it/config/auth.md)
+>>>>>>> 9d96960 (.)
 

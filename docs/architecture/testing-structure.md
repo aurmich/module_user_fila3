@@ -287,10 +287,14 @@ dump($variable);
 
 - [README Modulo User](../README.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Best Practices Testing](../../../docs/testing-best-practices.md)
 =======
 - [Best Practices Testing](../../../project_docs/testing-best-practices.md)
 >>>>>>> 079c9da (.)
+=======
+- [Best Practices Testing](../../../docs/testing-best-practices.md)
+>>>>>>> 9d96960 (.)
 - [Architettura Modulo User](../architecture/README.md)
 - [Factory e Seeder](../models/factory-seeder-status.md)
 

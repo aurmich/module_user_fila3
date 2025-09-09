@@ -75,6 +75,7 @@ $userPasswordString = SafeStringCastAction::cast($userPassword);
 ## Collegamenti
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Report Generale](/docs/phpstan/README.md)
 
 ## Collegamenti tra versioni di README.md
@@ -87,6 +88,13 @@ $userPasswordString = SafeStringCastAction::cast($userPassword);
 * [README.md](bashscripts/project_docs/README.md)
 * [README.md](bashscripts/project_docs/it/README.md)
 >>>>>>> 079c9da (.)
+=======
+- [Report Generale](/docs/phpstan/README.md)
+
+## Collegamenti tra versioni di README.md
+* [README.md](bashscripts/docs/README.md)
+* [README.md](bashscripts/docs/it/README.md)
+>>>>>>> 9d96960 (.)
 * [README.md](docs/laravel-app/phpstan/README.md)
 * [README.md](docs/laravel-app/README.md)
 * [README.md](docs/moduli/struttura/README.md)
@@ -118,6 +126,9 @@ $userPasswordString = SafeStringCastAction::cast($userPassword);
 * [README.md](docs/implementazione/isee/README.md)
 * [README.md](docs/it/README.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9d96960 (.)
 * [README.md](laravel/vendor/mockery/mockery/docs/README.md)
 * [README.md](../../../Chart/docs/README.md)
 * [README.md](../../../Reporting/docs/README.md)
@@ -162,6 +173,7 @@ $userPasswordString = SafeStringCastAction::cast($userPassword);
 * [README.md](../../../Cms/docs/components/README.md)
 * [README.md](../../../../Themes/Two/docs/README.md)
 * [README.md](../../../../Themes/One/docs/README.md)
+<<<<<<< HEAD
 =======
 * [README.md](laravel/vendor/mockery/mockery/project_docs/README.md)
 * [README.md](../../../Chart/project_docs/README.md)
@@ -208,4 +220,6 @@ $userPasswordString = SafeStringCastAction::cast($userPassword);
 * [README.md](../../../../Themes/Two/project_docs/README.md)
 * [README.md](../../../../Themes/One/project_docs/README.md)
 >>>>>>> 079c9da (.)
+=======
+>>>>>>> 9d96960 (.)
 

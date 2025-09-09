@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Models\Policies;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 =======
 use Modules\User\Contracts\UserContract;
@@ -97,3 +98,6 @@ class TeamPermissionPolicy extends UserBasePolicy
     }
 }
 >>>>>>> 079c9da (.)
+=======
+class TeamPermissionPolicy extends UserBasePolicy {}
+>>>>>>> 9d96960 (.)

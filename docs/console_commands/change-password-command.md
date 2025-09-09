@@ -380,6 +380,7 @@ php artisan test --filter=ChangePasswordCommandIntegrationTest
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a0c18bc (.)
 =======
@@ -390,3 +391,7 @@ php artisan test --filter=ChangePasswordCommandIntegrationTest
 >>>>>>> 78bb134 (.)
 =======
 >>>>>>> 079c9da (.)
+=======
+
+
+>>>>>>> 9d96960 (.)

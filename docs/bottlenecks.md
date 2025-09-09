@@ -1020,6 +1020,7 @@ Implementando queste soluzioni, il modulo User potrà superare i principali coll
 - [Best Practices Filament](./FILAMENT_BEST_PRACTICES.md)
 - [Best Practices Widget](./best-practices/filament-widgets.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Struttura Moduli](../Xot/docs/MODULE_STRUCTURE.md)
 
 ## Collegamenti tra versioni di BOTTLENECKS.md
@@ -1052,25 +1053,29 @@ Implementando queste soluzioni, il modulo User potrà superare i principali coll
 * [bottlenecks.md](../../Cms/docs/bottlenecks.md)
 =======
 - [Struttura Moduli](../Xot/project_docs/MODULE_STRUCTURE.md)
+=======
+- [Struttura Moduli](../Xot/docs/MODULE_STRUCTURE.md)
+>>>>>>> 9d96960 (.)
 
 ## Collegamenti tra versioni di BOTTLENECKS.md
-* [BOTTLENECKS.md](../../../Xot/project_docs/BOTTLENECKS.md)
-* [BOTTLENECKS.md](../../../User/project_docs/BOTTLENECKS.md)
-* [BOTTLENECKS.md](../../../Media/project_docs/BOTTLENECKS.md)
-* [BOTTLENECKS.md](../../../Cms/project_docs/BOTTLENECKS.md)
+* [BOTTLENECKS.md](../../../Xot/docs/BOTTLENECKS.md)
+* [BOTTLENECKS.md](../../../User/docs/BOTTLENECKS.md)
+* [BOTTLENECKS.md](../../../Media/docs/BOTTLENECKS.md)
+* [BOTTLENECKS.md](../../../Cms/docs/BOTTLENECKS.md)
 
 
 ## Collegamenti tra versioni di bottlenecks.md
-* [bottlenecks.md](../../../../bashscripts/project_docs/bottlenecks.md)
-* [bottlenecks.md](../../Chart/project_docs/bottlenecks.md)
-* [bottlenecks.md](../../Chart/project_docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../Gdpr/project_docs/bottlenecks.md)
-* [bottlenecks.md](../../Gdpr/project_docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../Xot/project_docs/bottlenecks.md)
-* [bottlenecks.md](../../Xot/project_docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../Xot/project_docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../Dental/project_docs/bottlenecks.md)
+* [bottlenecks.md](../../../../bashscripts/docs/bottlenecks.md)
+* [bottlenecks.md](../../Chart/docs/bottlenecks.md)
+* [bottlenecks.md](../../Chart/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../Gdpr/docs/bottlenecks.md)
+* [bottlenecks.md](../../Gdpr/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../Xot/docs/bottlenecks.md)
+* [bottlenecks.md](../../Xot/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../Xot/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../Dental/docs/bottlenecks.md)
 * [bottlenecks.md](roadmap/bottlenecks.md)
+<<<<<<< HEAD
 * [bottlenecks.md](../../UI/project_docs/bottlenecks.md)
 * [bottlenecks.md](../../UI/project_docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../Lang/project_docs/bottlenecks.md)
@@ -1082,4 +1087,16 @@ Implementando queste soluzioni, il modulo User potrà superare i principali coll
 * [bottlenecks.md](../../Patient/project_docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../Cms/project_docs/bottlenecks.md)
 >>>>>>> 079c9da (.)
+=======
+* [bottlenecks.md](../../UI/docs/bottlenecks.md)
+* [bottlenecks.md](../../UI/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../Lang/docs/bottlenecks.md)
+* [bottlenecks.md](../../Lang/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../Job/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../Media/docs/bottlenecks.md)
+* [bottlenecks.md](../../Media/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../Activity/docs/bottlenecks.md)
+* [bottlenecks.md](../../Patient/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../Cms/docs/bottlenecks.md)
+>>>>>>> 9d96960 (.)
 

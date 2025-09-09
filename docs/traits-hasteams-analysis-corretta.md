@@ -526,15 +526,21 @@ trait HasTeams
 ## Backlink e Riferimenti
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9d96960 (.)
 - [docs/USER_MODULE.md](../../../docs/USER_MODULE.md)
 - [Modules/User/docs/traits.md](traits.md)  
 - [docs/phpstan_fixes.md](../../../docs/phpstan_fixes.md)
 - [Modules/Xot/docs/RELATION_X.md](../../Xot/docs/RELATION_X.md)
+<<<<<<< HEAD
 =======
 - [docs/USER_MODULE.md](../../../project_docs/USER_MODULE.md)
 - [Modules/User/project_docs/traits.md](traits.md)  
 - [docs/phpstan_fixes.md](../../../project_docs/phpstan_fixes.md)
 - [Modules/Xot/project_docs/RELATION_X.md](../../Xot/project_docs/RELATION_X.md)
 >>>>>>> 079c9da (.)
+=======
+>>>>>>> 9d96960 (.)
 
 *Ultimo aggiornamento: gennaio 2025* 

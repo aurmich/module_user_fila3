@@ -42,6 +42,7 @@ Queste Action devono occuparsi di:
 - [EditUserWidget.php](../../app/Filament/Widgets/EditUserWidget.php) - Widget per modifica dati utente
 - [Documentazione EditUserWidget](./edit-user-widget.md) - Documentazione completa dell'EditUserWidget
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Documentazione Xot sulla proprietà $data](../../../Xot/docs/filament/widgets/data-property.md)
 - [Esempio di Action di registrazione Doctor](../../../../Patient/app/Actions/Doctor/RegisterAction.php)
 - [Esempio di Action di registrazione Patient](../../../../Patient/app/Actions/Patient/RegisterAction.php)
@@ -52,6 +53,12 @@ Queste Action devono occuparsi di:
 - [Esempio di Action di registrazione Patient](../../../../Patient/app/Actions/Patient/RegisterAction.php)
 - [Documentazione generale: Registrazione Odontoiatra](../../../../../project_docs/doctor-registration.md)
 >>>>>>> 079c9da (.)
+=======
+- [Documentazione Xot sulla proprietà $data](../../../Xot/docs/filament/widgets/data-property.md)
+- [Esempio di Action di registrazione Doctor](../../../../Patient/app/Actions/Doctor/RegisterAction.php)
+- [Esempio di Action di registrazione Patient](../../../../Patient/app/Actions/Patient/RegisterAction.php)
+- [Documentazione generale: Registrazione Odontoiatra](../../../../../docs/doctor-registration.md)
+>>>>>>> 9d96960 (.)
 
 ---
 
@@ -150,6 +157,7 @@ public function register()
 ## Collegamenti
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Documentazione sulla proprietà `$data` in XotBaseWidget](../../../Xot/docs/filament/widgets/data-property.md)
 - [Filament Forms Documentation](https://filamentphp.com/docs/3.x/forms/installation)
 - [Livewire Data Binding](https://livewire.laravel.com/docs/properties)
@@ -158,6 +166,11 @@ public function register()
 - [Filament Forms Documentation](https://filamentphp.com/project_docs/3.x/forms/installation)
 - [Livewire Data Binding](https://livewire.laravel.com/project_docs/properties)
 >>>>>>> 079c9da (.)
+=======
+- [Documentazione sulla proprietà `$data` in XotBaseWidget](../../../Xot/docs/filament/widgets/data-property.md)
+- [Filament Forms Documentation](https://filamentphp.com/docs/3.x/forms/installation)
+- [Livewire Data Binding](https://livewire.laravel.com/docs/properties)
+>>>>>>> 9d96960 (.)
 
 ## Gestione dinamica del salvataggio e delle azioni
 
@@ -194,10 +207,14 @@ Queste Action devono occuparsi di:
 ### Collegamenti
 - [RegistrationWidget.php](../../app/Filament/Widgets/RegistrationWidget.php)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Documentazione Xot sulla proprietà $data](../../../Xot/docs/filament/widgets/data-property.md)
 =======
 - [Documentazione Xot sulla proprietà $data](../../../Xot/project_docs/filament/widgets/data-property.md)
 >>>>>>> 079c9da (.)
+=======
+- [Documentazione Xot sulla proprietà $data](../../../Xot/docs/filament/widgets/data-property.md)
+>>>>>>> 9d96960 (.)
 - [Esempio di Action di registrazione (da creare)](../../../../Patient/app/Actions/Doctor/RegisterAction.php)
 
 ---

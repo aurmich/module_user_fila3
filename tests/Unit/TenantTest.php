@@ -3,15 +3,16 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 namespace Modules\User\Tests\Unit\TenantTest;
 
 namespace Modules\User\Tests\Unit\Widgets;
 
 >>>>>>> 079c9da (.)
+=======
+>>>>>>> 9d96960 (.)
 use Modules\User\Models\Tenant;
-use Modules\User\Models\User;
-use Illuminate\Support\Str;
 
 uses(Tests\TestCase::class);
 
@@ -167,7 +168,12 @@ test('tenant can be updated', function (): void {
     
 =======
 
+<<<<<<< HEAD
 >>>>>>> 079c9da (.)
+=======
+    $this->tenant->refresh();
+
+>>>>>>> 9d96960 (.)
     expect($this->tenant->name)->toBe('Updated Tenant Name');
     expect($this->tenant->email_address)->toBe('updated@tenant.com');
     expect($this->tenant->slug)->toBe('updated-tenant-name');
@@ -181,6 +187,11 @@ test('tenant can be deleted', function (): void {
     
 =======
 
+<<<<<<< HEAD
 >>>>>>> 079c9da (.)
+=======
+    $this->tenant->delete();
+
+>>>>>>> 9d96960 (.)
     expect(Tenant::find($tenantId))->toBeNull();
 });

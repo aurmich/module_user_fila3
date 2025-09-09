@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Models\Policies;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 =======
 use Modules\User\Contracts\UserContract;
@@ -136,3 +137,6 @@ class TenantUserPolicy extends UserBasePolicy
 	}
 >>>>>>> 079c9da (.)
 }
+=======
+class TenantUserPolicy extends UserBasePolicy {}
+>>>>>>> 9d96960 (.)

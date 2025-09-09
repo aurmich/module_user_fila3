@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\User\Models\User;
 use Modules\User\Models\Role;
 use Modules\User\Models\Permission;
@@ -15,14 +16,19 @@ namespace Modules\User\Tests\Feature\Authentication\UserAuthenticationTest;
 
 namespace Modules\User\Tests\Unit\Widgets;
 
+=======
+>>>>>>> 9d96960 (.)
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Laravel\Passport\Passport;
 use Modules\User\Models\Permission;
 use Modules\User\Models\Role;
 use Modules\User\Models\User;
+<<<<<<< HEAD
 use Modules\User\Models\AuthenticationLog;
 >>>>>>> 079c9da (.)
+=======
+>>>>>>> 9d96960 (.)
 
 beforeEach(function () {
     $this->user = User::factory()->create([
@@ -335,7 +341,11 @@ describe('User Two Factor Authentication', function () {
         expect($user->is_otp)->toBe(true);
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 =======
 
 >>>>>>> 079c9da (.)
+=======
+});
+>>>>>>> 9d96960 (.)

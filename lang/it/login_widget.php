@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 079c9da (.)
 return array (
@@ -55,6 +56,8 @@ return array (
 );
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 9d96960 (.)
 declare(strict_types=1);
 
 return [
@@ -96,6 +99,9 @@ return [
         'errors_title' => 'Si sono verificati degli errori',
     ],
 ];
+<<<<<<< HEAD
 >>>>>>> 78bb134 (.)
 =======
 >>>>>>> 079c9da (.)
+=======
+>>>>>>> 9d96960 (.)

@@ -140,11 +140,14 @@ return [
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ## Collegamenti
 - [Widget Translation Rules](widget-translation-rules.md)
 - [Root Translation Guidelines](../../../../project_docs/translation-standards.md)
 >>>>>>> 079c9da (.)
+=======
+>>>>>>> 9d96960 (.)
 ### 2. Struttura Completa delle Traduzioni
 Ogni file `messages.php` include categorie complete di messaggi:
 
@@ -282,6 +285,7 @@ Il pattern può essere applicato a tutti i widget del sistema per garantire cons
 **Translation keys aggiunte**: 60+ per lingua  
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 **LoginWidget status**: ✅ Fully functional in all languages
 =======
 =======
@@ -402,3 +406,6 @@ Questo audit dimostra l'importanza di:
 =======
 **LoginWidget status**: ✅ Fully functional in all languages
 >>>>>>> 079c9da (.)
+=======
+**LoginWidget status**: ✅ Fully functional in all languages
+>>>>>>> 9d96960 (.)

@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 declare(strict_types=1);
 
@@ -551,6 +552,8 @@ return [
 >>>>>>> 42fc572 (.)
 =======
 >>>>>>> 079c9da (.)
+=======
+>>>>>>> 9d96960 (.)
 return array (
   'navigation' => 
   array (
@@ -1236,6 +1239,9 @@ return array (
   'search_placeholder' => 'Cerca per nome, email o ruolo...',
 );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 199538c (.)
 >>>>>>> 079c9da (.)
+=======
+>>>>>>> 9d96960 (.)

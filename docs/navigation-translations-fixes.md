@@ -76,6 +76,7 @@
 ## Collegamenti
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Audit Generale Traduzioni Navigation](../../docs/navigation-translations-audit.md)
 - [Regole Traduzioni Laraxot](../Xot/docs/translation-rules.md)
 - [Standard Qualità Traduzioni](../SaluteOra/docs/translation-quality-standards.md)
@@ -84,6 +85,11 @@
 - [Regole Traduzioni Laraxot](../Xot/project_docs/translation-rules.md)
 - [Standard Qualità Traduzioni](../SaluteOra/project_docs/translation-quality-standards.md)
 >>>>>>> 079c9da (.)
+=======
+- [Audit Generale Traduzioni Navigation](../../docs/navigation-translations-audit.md)
+- [Regole Traduzioni Laraxot](../Xot/docs/translation-rules.md)
+- [Standard Qualità Traduzioni](../SaluteOra/docs/translation-quality-standards.md)
+>>>>>>> 9d96960 (.)
 - [Documentazione Modulo User](README.md)
 
 ## Note Tecniche

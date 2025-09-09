@@ -94,6 +94,7 @@ Definire il comportamento tramite trait che implementa il metodo.
 
 ## Collegamenti
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Documentazione Root - Errori PHPStan](../../../docs/troubleshooting/phpstan-errors.md)
 - [Contratti Xot](../../Xot/docs/contracts.md)
 - [Spatie Permission Documentation](https://spatie.be/docs/laravel-permission)
@@ -102,5 +103,10 @@ Definire il comportamento tramite trait che implementa il metodo.
 - [Contratti Xot](../../Xot/project_docs/contracts.md)
 - [Spatie Permission Documentation](https://spatie.be/project_docs/laravel-permission)
 >>>>>>> 079c9da (.)
+=======
+- [Documentazione Root - Errori PHPStan](../../../docs/troubleshooting/phpstan-errors.md)
+- [Contratti Xot](../../Xot/docs/contracts.md)
+- [Spatie Permission Documentation](https://spatie.be/docs/laravel-permission)
+>>>>>>> 9d96960 (.)
 
 *Ultimo aggiornamento: 2025-01-06*

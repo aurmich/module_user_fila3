@@ -130,10 +130,14 @@ protected function orphanMethod(): array
 - [Widget Auth Best Practices](../filament/widgets/registration-widget.md)
 - [Git Conflicts Resolution](../git-conflicts-resolution-2025-01-27.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Bug Fix Guidelines](../../../../docs/bug-fixing-guidelines.md)
 =======
 - [Bug Fix Guidelines](../../../../project_docs/bug-fixing-guidelines.md)
 >>>>>>> 079c9da (.)
+=======
+- [Bug Fix Guidelines](../../../../docs/bug-fixing-guidelines.md)
+>>>>>>> 9d96960 (.)
 
 ## Status
 ✅ **RISOLTO** - RegisterWidget funziona correttamente con tutte le migliorie di qualità implementate

@@ -12,10 +12,14 @@ Sia il modulo User che il modulo Cms seguono le stesse convenzioni di namespace 
 Per dettagli specifici, consulta:
 - [Convenzioni di Namespace](./namespace-conventions.md) in questo modulo
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Convenzioni Namespace Filament](../../Cms/docs/convenzioni-namespace-filament.md) nel modulo Cms
 =======
 - [Convenzioni Namespace Filament](../../Cms/project_docs/convenzioni-namespace-filament.md) nel modulo Cms
 >>>>>>> 079c9da (.)
+=======
+- [Convenzioni Namespace Filament](../../Cms/docs/convenzioni-namespace-filament.md) nel modulo Cms
+>>>>>>> 9d96960 (.)
 
 ## Punti di Integrazione
 
@@ -26,12 +30,17 @@ Per dettagli specifici, consulta:
 ## Collegamenti Bidirezionali
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Convenzioni Namespace Filament nel modulo Cms](../../Cms/docs/convenzioni-namespace-filament.md)
 - [Collegamento User-Cms nel modulo Cms](../../Cms/docs/user-link.md)
 =======
 - [Convenzioni Namespace Filament nel modulo Cms](../../Cms/project_docs/convenzioni-namespace-filament.md)
 - [Collegamento User-Cms nel modulo Cms](../../Cms/project_docs/user-link.md)
 >>>>>>> 079c9da (.)
+=======
+- [Convenzioni Namespace Filament nel modulo Cms](../../Cms/docs/convenzioni-namespace-filament.md)
+- [Collegamento User-Cms nel modulo Cms](../../Cms/docs/user-link.md)
+>>>>>>> 9d96960 (.)
 
 ---
 
@@ -43,14 +52,20 @@ Quando aggiungi nuovi componenti Filament nel modulo User, assicurati di:
 
 ## Collegamenti tra versioni di cms-link.md
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9d96960 (.)
 * [cms-link.md](../../../Xot/docs/cms-link.md)
 * [cms-link.md](../../../User/docs/cms-link.md)
 * [cms-link.md](../../../UI/docs/cms-link.md)
 * [cms-link.md](../../../Lang/docs/cms-link.md)
+<<<<<<< HEAD
 =======
 * [cms-link.md](../../../Xot/project_docs/cms-link.md)
 * [cms-link.md](../../../User/project_docs/cms-link.md)
 * [cms-link.md](../../../UI/project_docs/cms-link.md)
 * [cms-link.md](../../../Lang/project_docs/cms-link.md)
 >>>>>>> 079c9da (.)
+=======
+>>>>>>> 9d96960 (.)
 

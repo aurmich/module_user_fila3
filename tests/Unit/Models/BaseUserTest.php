@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Models;
 
 use Modules\User\Models\BaseUser;
@@ -17,10 +18,24 @@ beforeEach(function () {
 =======
 namespace Modules\User\Tests\Unit\Models\BaseUserTest;
 
+=======
+>>>>>>> 9d96960 (.)
 namespace Modules\User\Tests\Unit\Models;
 
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Modules\User\Models\BaseUser;
+use Modules\User\Tests\TestCase;
 
+<<<<<<< HEAD
 >>>>>>> 079c9da (.)
+=======
+uses(TestCase::class, RefreshDatabase::class);
+
+beforeEach(function () {
+    $this->baseUser = new class extends BaseUser
+    {
+>>>>>>> 9d96960 (.)
         protected $table = 'test_users';
     };
 });

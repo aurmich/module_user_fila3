@@ -8,11 +8,15 @@ Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i fi
 
 ## Collegamenti correlati
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9d96960 (.)
 - [Indice documentazione User](/laravel/Modules/User/docs/index.md)
 - [README User](/laravel/Modules/User/docs/README.md)
 - [Auth Components Best Practices](/laravel/Modules/User/docs/auth_components_best_practices.md)
 - [Filament Widgets Structure](/laravel/Modules/User/docs/widgets_structure.md)
 - [BaseUser Documentation](/laravel/Modules/User/docs/BaseUser.md)
+<<<<<<< HEAD
 =======
 - [Indice documentazione User](/laravel/Modules/User/project_docs/index.md)
 - [README User](/laravel/Modules/User/project_docs/README.md)
@@ -20,6 +24,8 @@ Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i fi
 - [Filament Widgets Structure](/laravel/Modules/User/project_docs/widgets_structure.md)
 - [BaseUser Documentation](/laravel/Modules/User/project_docs/BaseUser.md)
 >>>>>>> 079c9da (.)
+=======
+>>>>>>> 9d96960 (.)
 
 ## File Risolti
 

@@ -3,21 +3,22 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 namespace Modules\User\Tests\Feature\Filament\UserResourceTest;
 
 namespace Modules\User\Tests\Unit\Widgets;
 
 >>>>>>> 079c9da (.)
+=======
+>>>>>>> 9d96960 (.)
 use Livewire\Livewire;
-use Modules\User\Models\User;
-use Modules\User\Models\Role;
-use Modules\User\Models\Permission;
 use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Filament\Resources\UserResource\Pages\CreateUser;
 use Modules\User\Filament\Resources\UserResource\Pages\EditUser;
 use Modules\User\Filament\Resources\UserResource\Pages\ListUsers;
 use Modules\User\Filament\Resources\UserResource\Pages\ViewUser;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 beforeEach(function () {
@@ -25,6 +26,11 @@ beforeEach(function () {
     $this->user = User::factory()->create();
     
 =======
+=======
+use Modules\User\Models\Permission;
+use Modules\User\Models\Role;
+use Modules\User\Models\User;
+>>>>>>> 9d96960 (.)
 
 beforeEach(function () {
     $this->admin = User::factory()->create();
@@ -498,7 +504,11 @@ describe('UserResource Security', function () {
             ->assertHasFormErrors(['password']);
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 =======
 
 >>>>>>> 079c9da (.)
+=======
+});
+>>>>>>> 9d96960 (.)
