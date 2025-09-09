@@ -329,8 +329,15 @@ class ProfileTest extends TestCase
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> a0c18bc (.)
 =======
 >>>>>>> 933fcfe (.)
+=======
+
+
+
+
+>>>>>>> 78bb134 (.)

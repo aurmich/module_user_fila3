@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 78bb134 (.)
 # LoginWidget Translation Audit - Gennaio 2025
 
 ## Obiettivo
@@ -14,6 +17,7 @@ Il `LoginWidget` (`/Modules/User/app/Filament/Widgets/LoginWidget.php`) utilizza
 // Linee 112, 127, 146, 149, 155
 __('user::messages.credentials_incorrect')
 __('user::messages.login_success') 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 933fcfe (.)
@@ -36,12 +40,17 @@ __('user::messages.login_success')
 >>>>>>> a0c18bc (.)
 =======
 >>>>>>> 933fcfe (.)
+=======
+>>>>>>> 78bb134 (.)
 __('user::messages.validation_error')
 __('user::messages.login_error')
 ```
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 78bb134 (.)
 ### Stato Pre-Audit
 - ❌ File `messages.php` **non esisteva** in nessuna lingua
 - ✅ File `auth.php` esistenti ma con chiavi diverse
@@ -53,6 +62,7 @@ __('user::messages.login_error')
 Creati i seguenti file di traduzione mancanti:
 
 #### Italiano (`/Modules/User/lang/it/messages.php`)
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 933fcfe (.)
@@ -72,6 +82,8 @@ Creati i seguenti file di traduzione mancanti:
 >>>>>>> a0c18bc (.)
 =======
 >>>>>>> 933fcfe (.)
+=======
+>>>>>>> 78bb134 (.)
 ```php
 return [
     // Messaggi di autenticazione per LoginWidget
@@ -79,6 +91,9 @@ return [
     'login_success' => 'Accesso effettuato con successo.',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 78bb134 (.)
     'login_error' => 'Si è verificato un errore durante l\'accesso. Riprova più tardi.',
     'validation_error' => 'Errore di validazione.',
     // ... 60+ altre chiavi per completezza
@@ -244,6 +259,7 @@ Il pattern può essere applicato a tutti i widget del sistema per garantire cons
 **Audit completato**: Gennaio 2025  
 **File modificati**: 3 (it/messages.php, en/messages.php, de/messages.php)  
 **Translation keys aggiunte**: 60+ per lingua  
+<<<<<<< HEAD
 **LoginWidget status**: ✅ Fully functional in all languages
 =======
 =======
@@ -358,3 +374,6 @@ Questo audit dimostra l'importanza di:
 >>>>>>> a0c18bc (.)
 =======
 >>>>>>> 933fcfe (.)
+=======
+**LoginWidget status**: ✅ Fully functional in all languages
+>>>>>>> 78bb134 (.)
