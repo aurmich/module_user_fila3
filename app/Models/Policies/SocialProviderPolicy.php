@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 use Modules\User\Models\SocialProvider;
+=======
+
+>>>>>>> 079c9da (.)
 
 class SocialProviderPolicy extends UserBasePolicy
 {
@@ -22,7 +26,11 @@ class SocialProviderPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, SocialProvider $socialProvider): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('social-provider.view') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 
@@ -39,7 +47,11 @@ class SocialProviderPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, SocialProvider $socialProvider): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('social-provider.update') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 
@@ -48,7 +60,11 @@ class SocialProviderPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, SocialProvider $socialProvider): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('social-provider.delete') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 
@@ -57,7 +73,11 @@ class SocialProviderPolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, SocialProvider $socialProvider): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('social-provider.restore') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 
@@ -66,7 +86,11 @@ class SocialProviderPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, SocialProvider $socialProvider): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('social-provider.force-delete') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 }

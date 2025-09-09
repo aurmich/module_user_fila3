@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 use Modules\User\Models\PasswordReset;
+=======
+
+>>>>>>> 079c9da (.)
 
 class PasswordResetPolicy extends UserBasePolicy
 {
@@ -22,7 +26,11 @@ class PasswordResetPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, PasswordReset $passwordReset): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('password-reset.view') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->email === $passwordReset->email ||
                $user->hasRole('super-admin');
     }
@@ -40,7 +48,11 @@ class PasswordResetPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, PasswordReset $passwordReset): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('password-reset.update') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 
@@ -49,7 +61,11 @@ class PasswordResetPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, PasswordReset $passwordReset): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('password-reset.delete') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 
@@ -58,7 +74,11 @@ class PasswordResetPolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, PasswordReset $passwordReset): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('password-reset.restore') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 
@@ -67,7 +87,11 @@ class PasswordResetPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, PasswordReset $passwordReset): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('password-reset.force-delete') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 }

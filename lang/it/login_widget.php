@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 079c9da (.)
 return array (
   'fields' => 
   array (
@@ -50,6 +53,7 @@ return array (
     'errors_title' => 'Si sono verificati degli errori',
   ),
 );
+<<<<<<< HEAD
 =======
 declare(strict_types=1);
 
@@ -93,3 +97,5 @@ return [
     ],
 ];
 >>>>>>> 78bb134 (.)
+=======
+>>>>>>> 079c9da (.)

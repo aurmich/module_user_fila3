@@ -9,11 +9,15 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\XotData;
 use Modules\User\Models\Permission;
 use Modules\Xot\Contracts\UserContract;
 use Illuminate\Auth\Access\HandlesAuthorization;
+=======
+
+>>>>>>> 079c9da (.)
 
 // use Modules\Xot\Datas\XotData;
 
@@ -23,6 +27,7 @@ abstract class UserPermissionBasePolicy
 
     public function before(UserContract $user, string $ability): ?bool
     {
+<<<<<<< HEAD
         
         if ($user->hasRole('super-admin')) {
             return true;
@@ -44,6 +49,9 @@ abstract class UserPermissionBasePolicy
             return true;
         }
         
+=======
+
+>>>>>>> 079c9da (.)
 
         return null;
     }

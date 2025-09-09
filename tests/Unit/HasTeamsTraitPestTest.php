@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 use function Pest\Laravel\assertDatabaseHas;
 use function Pest\Laravel\assertDatabaseMissing;
 use function Pest\Laravel\assertDatabaseCount;
@@ -10,6 +11,9 @@ use Modules\User\Models\User;
 use Modules\User\Models\Team;
 use Modules\User\Models\Role;
 use Modules\User\Contracts\TeamContract;
+=======
+
+>>>>>>> 079c9da (.)
 
 beforeEach(function () {
     $this->user = User::factory()->create();
@@ -73,7 +77,11 @@ test('it correctly manages current team', function () {
     // Test: Switch to valid team
     $this->user->teams()->attach($this->team->id, ['role' => 'member']);
     $result = $this->user->switchTeam($this->team);
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 079c9da (.)
     expect($result)->toBeTrue()
         ->and($this->user->current_team_id)->toBe($this->team->id);
 
@@ -90,7 +98,11 @@ test('it correctly manages current team', function () {
 
 test('it correctly identifies current team', function () {
     $this->user->switchTeam($this->personalTeam);
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 079c9da (.)
     expect($this->user->isCurrentTeam($this->personalTeam))->toBeTrue()
         ->and($this->user->isCurrentTeam($this->team))->toBeFalse();
 });
@@ -100,7 +112,11 @@ test('it returns all teams user owns or belongs to', function () {
     $this->user->teams()->attach($this->team->id, ['role' => 'member']);
 
     $allTeams = $this->user->allTeams();
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 079c9da (.)
     expect($allTeams)
         ->toBeInstanceOf(Collection::class)
         ->toHaveCount(2) // personal team + member team
@@ -110,7 +126,11 @@ test('it returns all teams user owns or belongs to', function () {
 
 test('it returns owned teams', function () {
     $ownedTeams = $this->user->ownedTeams;
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 079c9da (.)
     expect($ownedTeams)
         ->toBeInstanceOf(Collection::class)
         ->toHaveCount(1)
@@ -119,7 +139,11 @@ test('it returns owned teams', function () {
 
 test('it returns personal team', function () {
     $personalTeam = $this->user->personalTeam();
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 079c9da (.)
     expect($personalTeam)
         ->toBeInstanceOf(TeamContract::class)
         ->id->toBe($this->personalTeam->id)
@@ -184,16 +208,24 @@ test('it correctly manages team permissions', function () {
     // Test: Member with specific permission
     $this->user->teams()->attach($this->team->id, [
         'role' => 'editor',
+<<<<<<< HEAD
         'permissions' => json_encode(['edit-content' => true])
     ]);
     
+=======
+
+>>>>>>> 079c9da (.)
     expect($this->user->hasTeamPermission($this->team, 'edit-content'))->toBeTrue()
         ->and($this->user->hasTeamPermission($this->team, 'delete-content'))->toBeFalse();
 });
 
 test('it handles edge cases', function () {
     // Test: User without ID
+<<<<<<< HEAD
     $newUser = new User();
+=======
+
+>>>>>>> 079c9da (.)
     expect($newUser->belongsToTeams())->toBeFalse();
 
     // Test: Team without owner

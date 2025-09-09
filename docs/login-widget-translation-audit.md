@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 78bb134 (.)
+=======
+>>>>>>> 079c9da (.)
 # LoginWidget Translation Audit - Gennaio 2025
 
 ## Obiettivo
@@ -17,6 +20,7 @@ Il `LoginWidget` (`/Modules/User/app/Filament/Widgets/LoginWidget.php`) utilizza
 // Linee 112, 127, 146, 149, 155
 __('user::messages.credentials_incorrect')
 __('user::messages.login_success') 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -42,6 +46,8 @@ __('user::messages.login_success')
 >>>>>>> 933fcfe (.)
 =======
 >>>>>>> 78bb134 (.)
+=======
+>>>>>>> 079c9da (.)
 __('user::messages.validation_error')
 __('user::messages.login_error')
 ```
@@ -49,8 +55,11 @@ __('user::messages.login_error')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 78bb134 (.)
+=======
+>>>>>>> 079c9da (.)
 ### Stato Pre-Audit
 - ❌ File `messages.php` **non esisteva** in nessuna lingua
 - ✅ File `auth.php` esistenti ma con chiavi diverse
@@ -62,6 +71,7 @@ __('user::messages.login_error')
 Creati i seguenti file di traduzione mancanti:
 
 #### Italiano (`/Modules/User/lang/it/messages.php`)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -84,6 +94,8 @@ Creati i seguenti file di traduzione mancanti:
 >>>>>>> 933fcfe (.)
 =======
 >>>>>>> 78bb134 (.)
+=======
+>>>>>>> 079c9da (.)
 ```php
 return [
     // Messaggi di autenticazione per LoginWidget
@@ -92,8 +104,11 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 78bb134 (.)
+=======
+>>>>>>> 079c9da (.)
     'login_error' => 'Si è verificato un errore durante l\'accesso. Riprova più tardi.',
     'validation_error' => 'Errore di validazione.',
     // ... 60+ altre chiavi per completezza
@@ -124,6 +139,12 @@ return [
 ];
 ```
 
+<<<<<<< HEAD
+=======
+## Collegamenti
+- [Widget Translation Rules](widget-translation-rules.md)
+- [Root Translation Guidelines](../../../../project_docs/translation-standards.md)
+>>>>>>> 079c9da (.)
 ### 2. Struttura Completa delle Traduzioni
 Ogni file `messages.php` include categorie complete di messaggi:
 
@@ -260,6 +281,7 @@ Il pattern può essere applicato a tutti i widget del sistema per garantire cons
 **File modificati**: 3 (it/messages.php, en/messages.php, de/messages.php)  
 **Translation keys aggiunte**: 60+ per lingua  
 <<<<<<< HEAD
+<<<<<<< HEAD
 **LoginWidget status**: ✅ Fully functional in all languages
 =======
 =======
@@ -377,3 +399,6 @@ Questo audit dimostra l'importanza di:
 =======
 **LoginWidget status**: ✅ Fully functional in all languages
 >>>>>>> 78bb134 (.)
+=======
+**LoginWidget status**: ✅ Fully functional in all languages
+>>>>>>> 079c9da (.)

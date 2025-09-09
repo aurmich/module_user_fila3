@@ -99,7 +99,11 @@ class DeviceProfileFactory extends DeviceUserFactory
 
 ## 🔗 COLLEGAMENTI
 
+<<<<<<< HEAD
 - [Factory Lessons Learned CRITICAL](../../../docs/factory-lessons-learned-CRITICAL.md)
+=======
+- [Factory Lessons Learned CRITICAL](../../../project_docs/factory-lessons-learned-CRITICAL.md)
+>>>>>>> 079c9da (.)
 - [Factory Creation Status](./factory-creation-status.md)
 - [User Module README](./README.md)
 

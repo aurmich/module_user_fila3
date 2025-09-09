@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 use Modules\User\Models\OauthAccessToken;
+=======
+
+>>>>>>> 079c9da (.)
 
 class OauthAccessTokenPolicy extends UserBasePolicy
 {
@@ -22,7 +26,11 @@ class OauthAccessTokenPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, OauthAccessToken $oauthAccessToken): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('oauth-access-token.view') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->id === $oauthAccessToken->user_id ||
                $user->hasRole('super-admin');
     }
@@ -40,7 +48,11 @@ class OauthAccessTokenPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, OauthAccessToken $oauthAccessToken): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('oauth-access-token.update') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 
@@ -49,7 +61,11 @@ class OauthAccessTokenPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, OauthAccessToken $oauthAccessToken): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('oauth-access-token.delete') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->id === $oauthAccessToken->user_id ||
                $user->hasRole('super-admin');
     }
@@ -59,7 +75,11 @@ class OauthAccessTokenPolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, OauthAccessToken $oauthAccessToken): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('oauth-access-token.restore') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 
@@ -68,7 +88,11 @@ class OauthAccessTokenPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, OauthAccessToken $oauthAccessToken): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('oauth-access-token.force-delete') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 }

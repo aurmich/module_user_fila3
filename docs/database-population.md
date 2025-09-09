@@ -303,12 +303,16 @@ echo "User roles: " . $user->roles()->count() . "\n";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 78bb134 (.)
+=======
+>>>>>>> 079c9da (.)
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> a0c18bc (.)
@@ -318,3 +322,6 @@ echo "User roles: " . $user->roles()->count() . "\n";
 
 
 >>>>>>> 78bb134 (.)
+=======
+
+>>>>>>> 079c9da (.)

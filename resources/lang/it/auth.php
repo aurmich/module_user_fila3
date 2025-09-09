@@ -15,4 +15,9 @@ return [
     'name' => 'Nome',
     'already_registered' => 'Già registrato?',
     'not_registered' => 'Non sei registrato?',
+<<<<<<< HEAD
 ]; 
+=======
+];
+
+>>>>>>> 079c9da (.)

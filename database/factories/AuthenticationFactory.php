@@ -10,16 +10,24 @@ use Modules\User\Models\User;
 
 /**
  * Authentication Factory
+<<<<<<< HEAD
  * 
  * Factory for creating Authentication model instances for testing and seeding.
  * 
+=======
+ *
+>>>>>>> 079c9da (.)
  * @extends Factory<Authentication>
  */
 class AuthenticationFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
+<<<<<<< HEAD
      * 
+=======
+     *
+>>>>>>> 079c9da (.)
      * @var class-string<Authentication>
      */
     protected $model = Authentication::class;
@@ -33,17 +41,27 @@ class AuthenticationFactory extends Factory
     {
         $loginSuccessful = $this->faker->boolean(85); // 85% success rate
         $loginAt = $this->faker->dateTimeBetween('-1 year', 'now');
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 079c9da (.)
         return [
             'type' => $this->faker->randomElement(['login', 'logout', 'password_reset', 'email_verification']),
             'ip_address' => $this->faker->ipv4(),
             'user_agent' => $this->faker->userAgent(),
+<<<<<<< HEAD
             'location' => $this->faker->optional(0.7)->city() . ', ' . $this->faker->optional(0.7)->country(),
             'login_successful' => $loginSuccessful,
             'login_at' => $loginAt,
             'logout_at' => $loginSuccessful && $this->faker->boolean(60) 
                 ? $this->faker->dateTimeBetween($loginAt, 'now') 
                 : null,
+=======
+            'login_successful' => $loginSuccessful,
+            'login_at' => $loginAt,
+            'logout_at' => $loginSuccessful ? $this->faker->dateTimeBetween($loginAt, 'now') : null,
+>>>>>>> 079c9da (.)
             'authenticatable_type' => User::class,
             'authenticatable_id' => User::factory(),
         ];
@@ -51,8 +69,11 @@ class AuthenticationFactory extends Factory
 
     /**
      * Indicate that the authentication was successful.
+<<<<<<< HEAD
      *
      * @return static
+=======
+>>>>>>> 079c9da (.)
      */
     public function successful(): static
     {
@@ -63,8 +84,11 @@ class AuthenticationFactory extends Factory
 
     /**
      * Indicate that the authentication failed.
+<<<<<<< HEAD
      *
      * @return static
+=======
+>>>>>>> 079c9da (.)
      */
     public function failed(): static
     {
@@ -76,8 +100,11 @@ class AuthenticationFactory extends Factory
 
     /**
      * Set the authentication type to login.
+<<<<<<< HEAD
      *
      * @return static
+=======
+>>>>>>> 079c9da (.)
      */
     public function login(): static
     {
@@ -88,8 +115,11 @@ class AuthenticationFactory extends Factory
 
     /**
      * Set the authentication type to logout.
+<<<<<<< HEAD
      *
      * @return static
+=======
+>>>>>>> 079c9da (.)
      */
     public function logout(): static
     {
@@ -101,9 +131,12 @@ class AuthenticationFactory extends Factory
 
     /**
      * Create authentication record for a specific user.
+<<<<<<< HEAD
      *
      * @param User $user
      * @return static
+=======
+>>>>>>> 079c9da (.)
      */
     public function forUser(User $user): static
     {
@@ -112,4 +145,8 @@ class AuthenticationFactory extends Factory
             'authenticatable_id' => $user->id,
         ]);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 079c9da (.)

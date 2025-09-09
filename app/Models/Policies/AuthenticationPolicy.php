@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 use Modules\User\Models\Authentication;
+=======
+
+>>>>>>> 079c9da (.)
 
 class AuthenticationPolicy extends UserBasePolicy
 {
@@ -22,7 +26,11 @@ class AuthenticationPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, Authentication $authentication): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('authentication.view') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->id === $authentication->user_id ||
                $user->hasRole('super-admin');
     }
@@ -40,7 +48,11 @@ class AuthenticationPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, Authentication $authentication): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('authentication.update') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 
@@ -49,7 +61,11 @@ class AuthenticationPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, Authentication $authentication): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('authentication.delete') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 
@@ -58,7 +74,11 @@ class AuthenticationPolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, Authentication $authentication): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('authentication.restore') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 
@@ -67,7 +87,11 @@ class AuthenticationPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, Authentication $authentication): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('authentication.force-delete') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 }

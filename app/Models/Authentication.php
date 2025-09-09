@@ -8,12 +8,17 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+<<<<<<< HEAD
 use Modules\User\Database\Factories\AuthenticationFactory;
 use Illuminate\Support\Carbon;
 
 /**
  * Authentication Model
  * 
+=======
+
+/**
+>>>>>>> 079c9da (.)
  * Tracks user authentication attempts and sessions.
  *
  * @property int $id
@@ -29,6 +34,10 @@ use Illuminate\Support\Carbon;
  * @property Carbon|null $created_at When the record was created
  * @property Carbon|null $updated_at When the record was last updated
  * @property-read Model|\Eloquent $authenticatable The authenticatable model instance
+<<<<<<< HEAD
+=======
+
+>>>>>>> 079c9da (.)
  * @method static Builder<static>|Authentication newModelQuery()
  * @method static Builder<static>|Authentication newQuery()
  * @method static Builder<static>|Authentication query()
@@ -44,6 +53,10 @@ use Illuminate\Support\Carbon;
  * @method static Builder<static>|Authentication whereLoginSuccessful($value)
  * @method static Builder<static>|Authentication whereAuthenticatableType($value)
  * @method static Builder<static>|Authentication whereAuthenticatableId($value)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 079c9da (.)
  * @mixin IdeHelperAuthentication
  * @mixin \Eloquent
  */
@@ -53,8 +66,12 @@ class Authentication extends Model
 
     /**
      * Create a new factory instance for the model.
+<<<<<<< HEAD
      *
      * @return \Modules\User\Database\Factories\AuthenticationFactory
+=======
+
+>>>>>>> 079c9da (.)
      */
     protected static function newFactory(): AuthenticationFactory
     {

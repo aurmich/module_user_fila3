@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 use Modules\User\Models\DeviceUser;
+=======
+
+>>>>>>> 079c9da (.)
 
 class DeviceUserPolicy extends UserBasePolicy
 {
@@ -22,7 +26,11 @@ class DeviceUserPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, DeviceUser $deviceUser): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('device-user.view') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->id === $deviceUser->user_id ||
                $user->hasRole('super-admin');
     }
@@ -40,7 +48,11 @@ class DeviceUserPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, DeviceUser $deviceUser): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('device-user.update') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 
@@ -49,7 +61,11 @@ class DeviceUserPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, DeviceUser $deviceUser): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('device-user.delete') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 
@@ -58,7 +74,11 @@ class DeviceUserPolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, DeviceUser $deviceUser): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('device-user.restore') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 
@@ -67,7 +87,11 @@ class DeviceUserPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, DeviceUser $deviceUser): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('device-user.force-delete') || 
+=======
+
+>>>>>>> 079c9da (.)
                $user->hasRole('super-admin');
     }
 }
