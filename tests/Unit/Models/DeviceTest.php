@@ -320,11 +320,7 @@ class DeviceTest extends TestCase
 
     public function test_device_has_fillable_attributes(): void
     {
-<<<<<<< HEAD
-        $device = new Device;
-=======
         $device = new Device();
->>>>>>> 48bb11d (.)
 
         $expectedFillable = [
             'id',
@@ -348,11 +344,7 @@ class DeviceTest extends TestCase
 
     public function test_device_has_casts(): void
     {
-<<<<<<< HEAD
-        $device = new Device;
-=======
         $device = new Device();
->>>>>>> 48bb11d (.)
 
         $expectedCasts = [
             'id' => 'string',
@@ -374,8 +366,6 @@ class DeviceTest extends TestCase
         $this->assertEquals($expectedCasts, $device->getCasts());
     }
 }
-<<<<<<< HEAD
-=======
 
 
 
@@ -383,4 +373,3 @@ class DeviceTest extends TestCase
 
 
 
->>>>>>> 48bb11d (.)

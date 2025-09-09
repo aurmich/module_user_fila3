@@ -2,18 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-namespace Modules\User\Tests\Unit\Models\BaseUserTest;
-
-namespace Modules\User\Tests\Unit\Models;
-
-
-=======
-=======
-namespace Modules\User\Tests\Unit\Models\BaseUserTest;
-
->>>>>>> a291521 (.)
 namespace Modules\User\Tests\Unit\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -26,7 +14,6 @@ uses(TestCase::class, RefreshDatabase::class);
 beforeEach(function () {
     $this->baseUser = new class extends BaseUser
     {
->>>>>>> 48bb11d (.)
         protected $table = 'test_users';
     };
 });

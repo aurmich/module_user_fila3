@@ -171,17 +171,6 @@ The implementation serves as a reference pattern for future widget development i
 - `Modules/User/lang/en/widgets.php`
 
 ### Documentation Files
-<<<<<<< HEAD
-- `Modules/User/project_docs/widgets/edit-user-widget.md`
-- `Modules/User/project_docs/widgets/translation-guidelines.md`
-- `Modules/User/project_docs/widget-translation-rules.md`
-- `Modules/User/project_docs/widgets/implementation-summary.md` (this file)
-
-### Related Documentation
-- `Modules/User/project_docs/widgets_structure.md`
-- `Modules/Xot/project_docs/filament-widgets.md`
-- `Modules/Xot/project_docs/translations.md`
-=======
 - `Modules/User/docs/widgets/edit-user-widget.md`
 - `Modules/User/docs/widgets/translation-guidelines.md`
 - `Modules/User/docs/widget-translation-rules.md`
@@ -191,4 +180,3 @@ The implementation serves as a reference pattern for future widget development i
 - `Modules/User/docs/widgets_structure.md`
 - `Modules/Xot/docs/filament-widgets.md`
 - `Modules/Xot/docs/translations.md`
->>>>>>> 48bb11d (.)

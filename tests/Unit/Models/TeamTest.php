@@ -16,11 +16,7 @@ class TeamTest extends TestCase
     public function test_can_create_team_with_minimal_data(): void
     {
         $user = User::factory()->create();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 48bb11d (.)
         $team = Team::factory()->create([
             'user_id' => $user->id,
             'name' => 'Test Team',
@@ -36,11 +32,7 @@ class TeamTest extends TestCase
     public function test_can_create_team_with_all_fields(): void
     {
         $user = User::factory()->create();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 48bb11d (.)
         $teamData = [
             'user_id' => $user->id,
             'name' => 'Full Team',
@@ -170,11 +162,7 @@ class TeamTest extends TestCase
     {
         $user1 = User::factory()->create();
         $user2 = User::factory()->create();
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 48bb11d (.)
         Team::factory()->create(['user_id' => $user1->id]);
         Team::factory()->create(['user_id' => $user1->id]);
         Team::factory()->create(['user_id' => $user2->id]);
@@ -257,8 +245,6 @@ class TeamTest extends TestCase
         $this->assertEquals(0, $teams->first()->personal_team);
     }
 }
-<<<<<<< HEAD
-=======
 
 
 
@@ -266,4 +252,3 @@ class TeamTest extends TestCase
 
 
 
->>>>>>> 48bb11d (.)

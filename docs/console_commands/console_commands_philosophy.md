@@ -461,8 +461,5 @@ private function getPasswordLegacy(): string
 
 
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 48bb11d (.)

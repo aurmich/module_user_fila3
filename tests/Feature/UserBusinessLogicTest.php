@@ -349,8 +349,3 @@ describe('User Business Logic Integration', function () {
         });
     });
 });
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 48bb11d (.)

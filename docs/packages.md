@@ -3,15 +3,9 @@
 ## Pacchetti Utilizzati
 
 ### Core
-<<<<<<< HEAD
-- [laraxot/module_xot_fila3](../Xot/project_docs/packages.md) - Modulo base per funzionalità comuni
-- [laraxot/module_ui](../UI/project_docs/packages.md) - Componenti UI e temi
-- [laraxot/module_tenant_fila3](../Tenant/project_docs/packages.md) - Gestione multi-tenant
-=======
 - [laraxot/module_xot_fila3](../Xot/docs/packages.md) - Modulo base per funzionalità comuni
 - [laraxot/module_ui](../UI/docs/packages.md) - Componenti UI e temi
 - [laraxot/module_tenant_fila3](../Tenant/docs/packages.md) - Gestione multi-tenant
->>>>>>> 48bb11d (.)
 
 ### Autenticazione
 - [laravel/fortify](https://github.com/laravel/fortify)
@@ -69,17 +63,6 @@
 
 
 ## Collegamenti tra versioni di packages.md
-<<<<<<< HEAD
-* [packages.md](../../../Gdpr/project_docs/packages.md)
-* [packages.md](../../../Notify/project_docs/packages.md)
-* [packages.md](../../../Xot/project_docs/packages.md)
-* [packages.md](../../../User/project_docs/packages.md)
-* [packages.md](../../../UI/project_docs/packages.md)
-* [packages.md](../../../Lang/project_docs/packages.md)
-* [packages.md](../../../Job/project_docs/packages.md)
-* [packages.md](../../../Media/project_docs/packages.md)
-* [packages.md](../../../Tenant/project_docs/packages.md)
-=======
 * [packages.md](../../../Gdpr/docs/packages.md)
 * [packages.md](../../../Notify/docs/packages.md)
 * [packages.md](../../../Xot/docs/packages.md)
@@ -89,7 +72,6 @@
 * [packages.md](../../../Job/docs/packages.md)
 * [packages.md](../../../Media/docs/packages.md)
 * [packages.md](../../../Tenant/docs/packages.md)
->>>>>>> 48bb11d (.)
 
 
 ### Versione Incoming

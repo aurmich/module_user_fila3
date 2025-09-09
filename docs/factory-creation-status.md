@@ -96,11 +96,7 @@ Questo errore è **GRAVISSIMO** perché:
 
 ## COLLEGAMENTI
 
-<<<<<<< HEAD
-- [Factory Audit Complete Analysis](../../../project_docs/factory-audit-complete-analysis.md)
-=======
 - [Factory Audit Complete Analysis](../../../docs/factory-audit-complete-analysis.md)
->>>>>>> 48bb11d (.)
 - [User Module README](./README.md)
 - [Factory PHPStan Fixes](./phpstan/factory-fixes.md)
 - [Database Documentation](./database/README.md)

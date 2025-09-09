@@ -22,10 +22,7 @@ abstract class UserPermissionBasePolicy
 
     public function before(UserContract $user, string $ability): ?bool
     {
-<<<<<<< HEAD
-=======
 
->>>>>>> 48bb11d (.)
         if ($user->hasRole('super-admin')) {
             return true;
         }

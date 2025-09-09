@@ -2,16 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Foundation\Testing\WithFaker;
-=======
->>>>>>> 48bb11d (.)
-=======
-use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Foundation\Testing\WithFaker;
->>>>>>> a291521 (.)
 use Modules\User\Tests\TestCase;
 
 /*
@@ -25,40 +15,17 @@ use Modules\User\Tests\TestCase;
 |
 */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a291521 (.)
-uses(
-    TestCase::class,
-    DatabaseTransactions::class, // ✅ CORRETTO - Rollback automatico
-    WithFaker::class,
-)->in('Feature', 'Unit');
-<<<<<<< HEAD
-=======
 pest()->extend(TestCase::class)
-=======
-
->>>>>>> a291521 (.)
     ->in('Feature', 'Unit');
->>>>>>> 48bb11d (.)
 
 /*
 |--------------------------------------------------------------------------
 | Expectations
 |--------------------------------------------------------------------------
 |
-<<<<<<< HEAD
-<<<<<<< HEAD
-| Here you may define your custom expectations to be used in your tests.
-=======
 | When you're writing tests, you often need to check that values meet certain conditions. The
 | "expect()" function gives you access to a set of "expectations" methods that you can use
 | to assert different things. Of course, you may extend the Expectation API at any time.
->>>>>>> 48bb11d (.)
-=======
-| Here you may define your custom expectations to be used in your tests.
->>>>>>> a291521 (.)
 |
 */
 
@@ -66,46 +33,12 @@ expect()->extend('toBeUser', function () {
     return $this->toBeInstanceOf(\Modules\User\Models\User::class);
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-expect()->extend('toHaveProperty', function (string $property) {
-    return expect(property_exists($this->value, $property))->toBeTrue();
-});
-
-expect()->extend('toHaveRole', function (string $roleName) {
-    return expect($this->value->hasRole($roleName))->toBeTrue();
-});
-
-expect()->extend('toHavePermission', function (string $permissionName) {
-    return expect($this->value->hasPermissionTo($permissionName))->toBeTrue();
-});
-
-expect()->extend('toHaveTeamRole', function (\Modules\User\Models\Team $team, string $role) {
-    return expect($this->value->hasTeamRole($team, $role))->toBeTrue();
-=======
 expect()->extend('toBeTeam', function () {
     return $this->toBeInstanceOf(\Modules\User\Models\Team::class);
 });
 
 expect()->extend('toBeProfile', function () {
     return $this->toBeInstanceOf(\Modules\User\Models\Profile::class);
->>>>>>> 48bb11d (.)
-=======
-expect()->extend('toHaveProperty', function (string $property) {
-    return expect(property_exists($this->value, $property))->toBeTrue();
-});
-
-expect()->extend('toHaveRole', function (string $roleName) {
-    return expect($this->value->hasRole($roleName))->toBeTrue();
-});
-
-expect()->extend('toHavePermission', function (string $permissionName) {
-    return expect($this->value->hasPermissionTo($permissionName))->toBeTrue();
-});
-
-expect()->extend('toHaveTeamRole', function (\Modules\User\Models\Team $team, string $role) {
-    return expect($this->value->hasTeamRole($team, $role))->toBeTrue();
->>>>>>> a291521 (.)
 });
 
 /*
@@ -113,17 +46,9 @@ expect()->extend('toHaveTeamRole', function (\Modules\User\Models\Team $team, st
 | Functions
 |--------------------------------------------------------------------------
 |
-<<<<<<< HEAD
-<<<<<<< HEAD
-| Here you may define your custom helper functions to be used in your tests.
-=======
 | While Pest is very powerful out-of-the-box, you may have some testing code specific to your
 | project that you don't want to repeat in every file. Here you can also expose helpers as
 | global functions to help you to reduce the number of lines of code in your test files.
->>>>>>> 48bb11d (.)
-=======
-| Here you may define your custom helper functions to be used in your tests.
->>>>>>> a291521 (.)
 |
 */
 
@@ -137,25 +62,6 @@ function makeUser(array $attributes = []): \Modules\User\Models\User
     return \Modules\User\Models\User::factory()->make($attributes);
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a291521 (.)
-function createRole(array $attributes = []): \Modules\User\Models\Role
-{
-    return \Modules\User\Models\Role::factory()->create($attributes);
-}
-
-function createPermission(array $attributes = []): \Modules\User\Models\Permission
-{
-    return \Modules\User\Models\Permission::factory()->create($attributes);
-}
-
-<<<<<<< HEAD
-=======
->>>>>>> 48bb11d (.)
-=======
->>>>>>> a291521 (.)
 function createTeam(array $attributes = []): \Modules\User\Models\Team
 {
     return \Modules\User\Models\Team::factory()->create($attributes);
@@ -165,16 +71,3 @@ function createProfile(array $attributes = []): \Modules\User\Models\Profile
 {
     return \Modules\User\Models\Profile::factory()->create($attributes);
 }
-<<<<<<< HEAD
-
-function createTenant(array $attributes = []): \Modules\User\Models\Tenant
-{
-    return \Modules\User\Models\Tenant::factory()->create($attributes);
-}
-
-function createAuthenticationLog(array $attributes = []): \Modules\User\Models\AuthenticationLog
-{
-    return \Modules\User\Models\AuthenticationLog::factory()->create($attributes);
-}
-=======
->>>>>>> 48bb11d (.)

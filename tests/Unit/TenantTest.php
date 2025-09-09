@@ -2,20 +2,7 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a291521 (.)
-namespace Modules\User\Tests\Unit\TenantTest;
-
-namespace Modules\User\Tests\Unit\Widgets;
-
 use Modules\User\Models\Tenant;
-use Modules\User\Models\User;
-use Illuminate\Support\Str;
-=======
-use Modules\User\Models\Tenant;
->>>>>>> 48bb11d (.)
 
 uses(Tests\TestCase::class);
 
@@ -134,11 +121,8 @@ test('tenant can be updated', function (): void {
         'email_address' => 'updated@tenant.com',
     ]);
 
-<<<<<<< HEAD
-=======
     $this->tenant->refresh();
 
->>>>>>> 48bb11d (.)
     expect($this->tenant->name)->toBe('Updated Tenant Name');
     expect($this->tenant->email_address)->toBe('updated@tenant.com');
     expect($this->tenant->slug)->toBe('updated-tenant-name');
@@ -147,10 +131,7 @@ test('tenant can be updated', function (): void {
 test('tenant can be deleted', function (): void {
     $tenantId = $this->tenant->id;
 
-<<<<<<< HEAD
-=======
     $this->tenant->delete();
 
->>>>>>> 48bb11d (.)
     expect(Tenant::find($tenantId))->toBeNull();
 });

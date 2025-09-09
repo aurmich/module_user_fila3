@@ -29,39 +29,17 @@
 ## Collegamenti ai Moduli Correlati
 
 ### Moduli Core
-<<<<<<< HEAD
-<<<<<<< HEAD
-- [Modulo Lang](../../../Lang/project_docs/links.md)
-  > Gestione delle traduzioni per l'interfaccia utente. Internazionalizzazione del sistema di autenticazione.
-
-- [Modulo GDPR](../../../Gdpr/project_docs/links.md)
-  > Gestione della privacy e dei consensi utente. Conformità con le normative sulla protezione dei dati.
-
-### Moduli di Supporto
-- [Modulo Notify](../../../Notify/project_docs/links.md)
-  > Sistema di notifiche per gli utenti. Gestione delle notifiche di autenticazione e sicurezza.
-
-- [Modulo Profile](../../../Profile/project_docs/links.md)
-=======
 - [Modulo Lang](../../../Lang/docs/links.md)
-=======
-- [Modulo Lang](../../../Lang/project_docs/links.md)
->>>>>>> a291521 (.)
   > Gestione delle traduzioni per l'interfaccia utente. Internazionalizzazione del sistema di autenticazione.
 
-- [Modulo GDPR](../../../Gdpr/project_docs/links.md)
+- [Modulo GDPR](../../../Gdpr/docs/links.md)
   > Gestione della privacy e dei consensi utente. Conformità con le normative sulla protezione dei dati.
 
 ### Moduli di Supporto
-- [Modulo Notify](../../../Notify/project_docs/links.md)
+- [Modulo Notify](../../../Notify/docs/links.md)
   > Sistema di notifiche per gli utenti. Gestione delle notifiche di autenticazione e sicurezza.
 
-<<<<<<< HEAD
 - [Modulo Profile](../../../Profile/docs/links.md)
->>>>>>> 48bb11d (.)
-=======
-- [Modulo Profile](../../../Profile/project_docs/links.md)
->>>>>>> a291521 (.)
   > Gestione dei profili utente. Personalizzazione e gestione delle informazioni utente.
 
 ## Implementazioni di Esempio

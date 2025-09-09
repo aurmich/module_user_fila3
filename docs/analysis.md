@@ -60,21 +60,6 @@ Modules/User/
 
 
 ## Collegamenti tra versioni di analysis.md
-<<<<<<< HEAD
-* [analysis.md](../../../Notify/project_docs/analysis.md)
-* [analysis.md](../../../Notify/project_docs/phpstan/analysis.md)
-* [analysis.md](../../../Xot/project_docs/analysis.md)
-* [analysis.md](../../../Xot/project_docs/phpstan/analysis.md)
-* [analysis.md](../../../User/project_docs/analysis.md)
-* [analysis.md](../../../User/project_docs/phpstan/analysis.md)
-* [analysis.md](../../../UI/project_docs/analysis.md)
-* [analysis.md](../../../UI/project_docs/phpstan/analysis.md)
-* [analysis.md](../../../Job/project_docs/analysis.md)
-* [analysis.md](../../../Job/project_docs/phpstan/analysis.md)
-* [analysis.md](../../../Media/project_docs/analysis.md)
-* [analysis.md](../../../Media/project_docs/phpstan/analysis.md)
-* [analysis.md](../../../../Themes/One/project_docs/analysis.md)
-=======
 * [analysis.md](../../../Notify/docs/analysis.md)
 * [analysis.md](../../../Notify/docs/phpstan/analysis.md)
 * [analysis.md](../../../Xot/docs/analysis.md)
@@ -88,7 +73,6 @@ Modules/User/
 * [analysis.md](../../../Media/docs/analysis.md)
 * [analysis.md](../../../Media/docs/phpstan/analysis.md)
 * [analysis.md](../../../../Themes/One/docs/analysis.md)
->>>>>>> 48bb11d (.)
 
 
 ### Versione Incoming

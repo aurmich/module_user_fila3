@@ -1,14 +1,6 @@
 # Integrazione Laravel Passport in Architettura Modulare (nwidart/laravel-modules)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-> **Questa guida è generica e riutilizzabile per qualsiasi applicazione Laravel che utilizzi una struttura modulare basata su [nwidart/laravel-modules](https://laravelmodules.com/project_docs/12/getting-started/introduction).**
-=======
 > **Questa guida è generica e riutilizzabile per qualsiasi applicazione Laravel che utilizzi una struttura modulare basata su [nwidart/laravel-modules](https://laravelmodules.com/docs/12/getting-started/introduction).**
->>>>>>> 48bb11d (.)
-=======
-> **Questa guida è generica e riutilizzabile per qualsiasi applicazione Laravel che utilizzi una struttura modulare basata su [nwidart/laravel-modules](https://laravelmodules.com/project_docs/12/getting-started/introduction).**
->>>>>>> a291521 (.)
 
 ## Regole Fondamentali di Estensione
 
@@ -1658,15 +1650,7 @@ trait HasPassportConfiguration
 // ... existing code ...
 
 ## Collegamenti tra versioni di passport.md
-<<<<<<< HEAD
-<<<<<<< HEAD
-* [passport.md](../../Tenant/project_docs/it/config/passport.md)
-=======
 * [passport.md](../../Tenant/docs/it/config/passport.md)
->>>>>>> 48bb11d (.)
-=======
-* [passport.md](../../Tenant/project_docs/it/config/passport.md)
->>>>>>> a291521 (.)
 
 
 ---
