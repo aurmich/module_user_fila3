@@ -370,3 +370,8 @@ php artisan test --filter=ChangePasswordCommandIntegrationTest
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 48bb11d (.)

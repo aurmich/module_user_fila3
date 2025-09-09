@@ -1,5 +1,10 @@
 <?php
 
+<<<<<<< HEAD
+=======
+declare(strict_types=1);
+
+>>>>>>> 48bb11d (.)
 return [
     'fields' => [
         'email' => [
@@ -13,14 +18,20 @@ return [
             'placeholder' => 'Inserisci la tua password',
             'help' => 'Inserisci la password del tuo account',
             'description' => 'Password per l\'accesso',
+<<<<<<< HEAD
             'helper_text' => 'password',
+=======
+>>>>>>> 48bb11d (.)
         ],
         'remember' => [
             'label' => 'Ricordami',
             'placeholder' => 'Mantieni la sessione attiva',
             'help' => 'Seleziona per mantenere la sessione attiva per 30 giorni',
             'description' => 'Opzione per ricordare l\'accesso',
+<<<<<<< HEAD
             'helper_text' => 'remember',
+=======
+>>>>>>> 48bb11d (.)
         ],
     ],
     'actions' => [

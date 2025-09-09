@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\User\Tests\Feature\Filament\UserResourceTest;
 
 namespace Modules\User\Tests\Unit\Widgets;
@@ -10,12 +11,21 @@ use Livewire\Livewire;
 use Modules\User\Models\User;
 use Modules\User\Models\Role;
 use Modules\User\Models\Permission;
+=======
+use Livewire\Livewire;
+>>>>>>> 48bb11d (.)
 use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Filament\Resources\UserResource\Pages\CreateUser;
 use Modules\User\Filament\Resources\UserResource\Pages\EditUser;
 use Modules\User\Filament\Resources\UserResource\Pages\ListUsers;
 use Modules\User\Filament\Resources\UserResource\Pages\ViewUser;
+<<<<<<< HEAD
 
+=======
+use Modules\User\Models\Permission;
+use Modules\User\Models\Role;
+use Modules\User\Models\User;
+>>>>>>> 48bb11d (.)
 
 beforeEach(function () {
     $this->admin = User::factory()->create();
@@ -487,4 +497,8 @@ describe('UserResource Security', function () {
             ->call('create')
             ->assertHasFormErrors(['password']);
     });
+<<<<<<< HEAD
 
+=======
+});
+>>>>>>> 48bb11d (.)

@@ -48,21 +48,33 @@ class PermissionTest extends TestCase
 
     public function test_permission_has_connection_attribute(): void
     {
+<<<<<<< HEAD
         $permission = new Permission;
+=======
+        $permission = new Permission();
+>>>>>>> 48bb11d (.)
 
         $this->assertEquals('user', $permission->connection);
     }
 
     public function test_permission_has_key_type_attribute(): void
     {
+<<<<<<< HEAD
         $permission = new Permission;
+=======
+        $permission = new Permission();
+>>>>>>> 48bb11d (.)
 
         $this->assertEquals('string', $permission->keyType);
     }
 
     public function test_permission_has_fillable_attributes(): void
     {
+<<<<<<< HEAD
         $permission = new Permission;
+=======
+        $permission = new Permission();
+>>>>>>> 48bb11d (.)
 
         $expectedFillable = [
             'id',
@@ -79,7 +91,11 @@ class PermissionTest extends TestCase
 
     public function test_permission_has_casts(): void
     {
+<<<<<<< HEAD
         $permission = new Permission;
+=======
+        $permission = new Permission();
+>>>>>>> 48bb11d (.)
 
         $expectedCasts = [
             'id' => 'string',
@@ -195,7 +211,12 @@ class PermissionTest extends TestCase
             ->get();
 
         $this->assertCount(2, $permissions);
+<<<<<<< HEAD
         $this->assertTrue($permissions->every(fn ($permission) => str_starts_with($permission->name, 'admin.user.') && $permission->created_by === 'admin'
+=======
+        $this->assertTrue($permissions->every(fn ($permission) => 
+            str_starts_with($permission->name, 'admin.user.') && $permission->created_by === 'admin'
+>>>>>>> 48bb11d (.)
         ));
     }
 
@@ -237,15 +258,33 @@ class PermissionTest extends TestCase
 
     public function test_permission_has_factory_method(): void
     {
+<<<<<<< HEAD
         $permission = new Permission;
+=======
+        $permission = new Permission();
+>>>>>>> 48bb11d (.)
 
         $this->assertTrue(method_exists($permission, 'newFactory'));
     }
 
     public function test_permission_has_get_table_method(): void
     {
+<<<<<<< HEAD
         $permission = new Permission;
+=======
+        $permission = new Permission();
+>>>>>>> 48bb11d (.)
 
         $this->assertTrue(method_exists($permission, 'getTable'));
     }
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+>>>>>>> 48bb11d (.)

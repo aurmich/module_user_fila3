@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\User\Models\Device;
 use Modules\Xot\Contracts\UserContract;
 
@@ -71,3 +72,6 @@ class DevicePolicy extends UserBasePolicy
                $user->hasRole('super-admin');
     }
 }
+=======
+class DevicePolicy extends UserBasePolicy {}
+>>>>>>> 48bb11d (.)

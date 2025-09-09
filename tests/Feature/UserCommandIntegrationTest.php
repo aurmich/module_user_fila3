@@ -3,21 +3,37 @@
 declare(strict_types=1);
 
 use Illuminate\Console\Application;
+<<<<<<< HEAD
+=======
+use Illuminate\Foundation\Testing\RefreshDatabase;
+>>>>>>> 48bb11d (.)
 use Illuminate\Support\Facades\Artisan;
 use Modules\User\Console\Commands\ChangeTypeCommand;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 
+<<<<<<< HEAD
 describe('User Command Integration', function () {
     beforeEach(function () {
         $this->command = new ChangeTypeCommand;
         $application = new Application(app());
         $application->add($this->command);
+=======
+uses(RefreshDatabase::class);
+
+describe('User Command Integration', function () {
+    beforeEach(function () {
+        $this->command = new ChangeTypeCommand;
+>>>>>>> 48bb11d (.)
     });
 
     it('can be registered with Laravel artisan', function () {
         // Test that the command can be registered
+<<<<<<< HEAD
         $application = new Application(app());
+=======
+        $application = new Application;
+>>>>>>> 48bb11d (.)
         $application->add($this->command);
 
         expect($application->has('user:change-type'))->toBeTrue();
@@ -27,6 +43,11 @@ describe('User Command Integration', function () {
         // Test XotData integration
         $xotData = XotData::make();
 
+<<<<<<< HEAD
+=======
+        expect($xotData)->toBeInstanceOf(XotData::class);
+
+>>>>>>> 48bb11d (.)
         // Test that required methods exist
         expect(method_exists($xotData, 'getUserByEmail'))->toBeTrue()
             ->and(method_exists($xotData, 'getUserChildTypes'))->toBeTrue()
@@ -49,7 +70,11 @@ describe('User Command Integration', function () {
 
     it('validates Webmozart Assert integration', function () {
         // Test that Assert class is available and usable
+<<<<<<< HEAD
         expect(class_exists('Webmozart\\Assert\\Assert'))->toBeTrue();
+=======
+        expect(class_exists('Webmozart\Assert\Assert'))->toBeTrue();
+>>>>>>> 48bb11d (.)
 
         // Test basic assertion functionality
         expect(fn () => \Webmozart\Assert\Assert::notNull('test'))
@@ -59,8 +84,14 @@ describe('User Command Integration', function () {
     it('integrates with Illuminate Support Arr', function () {
         // Test Arr helper functionality
         $testArray = ['a' => 1, 'b' => 2, 'c' => 3];
+<<<<<<< HEAD
         $result = \Illuminate\Support\Arr::mapWithKeys($testArray, function ($value, $key) {
             return ["{$key}_mapped" => $value * 2];
+=======
+
+        $result = \Illuminate\Support\Arr::mapWithKeys($testArray, function ($value, $key) {
+            return [$key.'_mapped' => $value * 2];
+>>>>>>> 48bb11d (.)
         });
 
         expect($result)->toBeArray()
@@ -81,6 +112,13 @@ describe('User Command Integration', function () {
     it('validates command signature and options', function () {
         $reflection = new ReflectionClass($this->command);
 
+<<<<<<< HEAD
+=======
+        // Check command properties
+        expect($reflection->hasProperty('name'))->toBeTrue()
+            ->and($reflection->hasProperty('description'))->toBeTrue();
+
+>>>>>>> 48bb11d (.)
         $nameProperty = $reflection->getProperty('name');
         $nameProperty->setAccessible(true);
         expect($nameProperty->getValue($this->command))->toBe('user:change-type');
@@ -94,9 +132,15 @@ describe('User Command Integration', function () {
 
     it('validates user contract integration', function () {
         // Test UserContract interface
+<<<<<<< HEAD
         expect(interface_exists('Modules\\Xot\\Contracts\\UserContract'))->toBeTrue();
 
         $reflection = new ReflectionClass('Modules\\Xot\\Contracts\\UserContract');
+=======
+        expect(interface_exists('Modules\Xot\Contracts\UserContract'))->toBeTrue();
+
+        $reflection = new ReflectionClass('Modules\Xot\Contracts\UserContract');
+>>>>>>> 48bb11d (.)
         expect($reflection->isInterface())->toBeTrue();
     });
 
@@ -116,7 +160,13 @@ describe('User Command Integration', function () {
 
     it('can work with type checking utilities', function () {
         // Test type checking functions used in the command
+<<<<<<< HEAD
         $testObject = (object) ['value' => 123];
+=======
+        $testObject = new stdClass;
+        $testObject->value = 'test';
+        $testObject->getLabel = fn () => 'Test Label';
+>>>>>>> 48bb11d (.)
 
         expect(is_object($testObject))->toBeTrue()
             ->and(property_exists($testObject, 'value'))->toBeTrue()
@@ -135,16 +185,28 @@ describe('User Command Integration', function () {
     it('handles string manipulation correctly', function () {
         // Test string operations used in the command
         $testString = 'TestValue';
+<<<<<<< HEAD
         expect(strlen($testString) > 0)->toBeTrue()
+=======
+
+        expect((string) $testString)->toBe('TestValue')
+>>>>>>> 48bb11d (.)
             ->and(is_string($testString))->toBeTrue();
     });
 
     it('validates array operations', function () {
         // Test array operations used in the command
         $testArray = ['key1' => 'value1', 'key2' => 'value2'];
+<<<<<<< HEAD
         $mapped = [];
         foreach ($testArray as $k => $v) {
             $mapped["{$k}_suffix"] = $v === 'value1' ? 'value1_modified' : $v;
+=======
+
+        $mapped = [];
+        foreach ($testArray as $key => $value) {
+            $mapped[$key.'_suffix'] = $value.'_modified';
+>>>>>>> 48bb11d (.)
         }
 
         expect($mapped)->toBeArray()
@@ -179,7 +241,11 @@ describe('User Command Integration', function () {
 
     it('can access Laravel facades', function () {
         // Test that Laravel facades are available
+<<<<<<< HEAD
         expect(class_exists('Illuminate\\Support\\Facades\\Facade'))->toBeTrue();
+=======
+        expect(class_exists('Illuminate\Support\Facades\Facade'))->toBeTrue();
+>>>>>>> 48bb11d (.)
     });
 
     it('handles reflection operations correctly', function () {

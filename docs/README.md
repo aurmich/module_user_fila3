@@ -109,17 +109,30 @@ User/
 - [Filosofia Comandi Console](./console_commands/console_commands_philosophy.md)
 
 ## Collegamenti Bidirezionali
+<<<<<<< HEAD
 - [Modulo Xot](../Xot/project_docs/README.md)
 - [Modulo Patient](../Patient/project_docs/README.md)
 - [Modulo Dental](../Dental/project_docs/README.md)
+=======
+- [Modulo Xot](../Xot/docs/README.md)
+- [Modulo Patient](../Patient/docs/README.md)
+- [Modulo Dental](../Dental/docs/README.md)
+>>>>>>> 48bb11d (.)
 - [Linee guida Actions](./actions.mdc)
 - [Linee guida Activitylog](./activitylog.mdc)
 
 ## Vedi Anche
+<<<<<<< HEAD
 - [Documentazione Principale](../../project_docs/INDEX.md)
 - [Architettura Moduli](../../project_docs/architecture/modules-structure.md)
 - [Convenzioni di Nomenclatura](../../project_docs/standards/file_naming_conventions.md)
 - [Struttura del Progetto](../Xot/project_docs/architecture/struttura-progetto.md)
+=======
+- [Documentazione Principale](../../docs/INDEX.md)
+- [Architettura Moduli](../../docs/architecture/modules-structure.md)
+- [Convenzioni di Nomenclatura](../../docs/standards/file_naming_conventions.md)
+- [Struttura del Progetto](../Xot/docs/architecture/struttura-progetto.md)
+>>>>>>> 48bb11d (.)
 
 > **Collegamenti correlati**
 > - [README.md documentazione generale](../../../docs/README.md)
@@ -210,10 +223,14 @@ User/
 ### Traduzioni
 - Utilizzare il LangServiceProvider per le traduzioni
 - Non usare ->label() direttamente
+<<<<<<< HEAD
 - Struttura corretta espansa: 'source' => ['label'=>'Sorgente', 'placeholder'=>'Inserisci...', 'help'=>'Testo di aiuto']
 - Tutti i campi devono avere label, placeholder e help
 - Tutte le azioni devono avere label, modal, success, error
 - Mai stringhe hardcoded nelle interfacce
+=======
+- Struttura corretta: 'source' => ['label'=>'Sorgente']
+>>>>>>> 48bb11d (.)
 
 ## Esempi
 
@@ -251,6 +268,7 @@ Il modulo User fornisce funzionalità di autenticazione e autorizzazione attrave
 - Sistema ruoli e permessi
 - Profili utente personalizzabili
 - Interfaccia Filament
+<<<<<<< HEAD
 # Modulo User - Sistema di Gestione Utenti e Autenticazione
 
 ## Panoramica
@@ -258,6 +276,15 @@ Il modulo User fornisce funzionalità di autenticazione e autorizzazione attrave
 Il modulo User gestisce l'autenticazione, autorizzazione e gestione degli utenti per l'applicazione Laraxot PTVX. Fornisce un sistema completo di gestione utenti con supporto per ruoli, permessi, team e tenant, integrato con Filament per l'amministrazione.
 
 ## Caratteristiche Principali
+=======
+
+## Panoramica
+Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli utenti nell'applicazione. È strettamente integrato con altri moduli come Xot, Lang, e Notify.
+
+### Versione HEAD
+
+## Collegamenti Principali
+>>>>>>> 48bb11d (.)
 
 ### Documentazione Core
 - [Architettura del Modulo](structure.md)
@@ -269,9 +296,15 @@ Il modulo User gestisce l'autenticazione, autorizzazione e gestione degli utenti
 - [Bottlenecks](bottlenecks.md)
 
 ### Integrazioni
+<<<<<<< HEAD
 - [Integrazione con Xot](../Xot/project_docs/README.md)
 - [Integrazione con Lang](../Lang/project_docs/README.md)
 - [Integrazione con Notify](../Notify/project_docs/README.md)
+=======
+- [Integrazione con Xot](../Xot/docs/README.md)
+- [Integrazione con Lang](../Lang/docs/README.md)
+- [Integrazione con Notify](../Notify/docs/README.md)
+>>>>>>> 48bb11d (.)
 
 ### Autenticazione
 - [Login Personalizzato](custom_login.md)
@@ -331,6 +364,7 @@ Il modulo User gestisce l'autenticazione, autorizzazione e gestione degli utenti
 - [PHPStan Fixes](./phpstan_fixes.md)
 - [PHPStan Level 9](./PHPSTAN_LEVEL9_FIXES.md)
 - [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md)
+<<<<<<< HEAD
 - **Gestione Utenti**: CRUD completo per utenti e profili
 - **Sistema Ruoli**: Gestione ruoli e permessi con Spatie Laravel Permission
 - **Gestione Team**: Supporto per team e organizzazioni
@@ -1054,11 +1088,119 @@ if (auth()->user()->can('manage-users')) {
 // Verifica team
 if (auth()->user()->belongsToTeam($team)) {
     // Logica per membri del team
+=======
+
+## Struttura del Modulo
+
+## Regola fondamentale sulle migration
+
+> **Tutte le migration che riguardano tabelle, colonne o relazioni di un modulo devono essere SEMPRE nella cartella `database/migrations` del modulo stesso (es: `Modules/User/database/migrations/`).**
+> Mettere migration in `laravel/database/migrations` è un errore grave che rompe la modularità, il rollback e la chiarezza del progetto.
+> Vedi dettagli e motivazione in [PATH_CONVENTIONS.md](./PATH_CONVENTIONS.md).
+
+```
+Modules/User/
+├── app/
+│   ├── Models/
+│   │   ├── User.php
+│   │   ├── OauthAccessToken.php
+│   │   ├── OauthAuthCode.php
+│   │   ├── OauthClient.php
+│   │   ├── OauthPersonalAccessClient.php
+│   │   └── OauthRefreshToken.php
+│   ├── Providers/
+│   │   ├── Traits/
+│   │   │   ├── HasPassportConfiguration.php
+│   │   │   └── HasSocialiteConfiguration.php
+│   │   ├── UserServiceProvider.php
+│   │   ├── EventServiceProvider.php
+│   │   ├── RouteServiceProvider.php
+│   │   └── Filament/
+│   │       └── AdminPanelProvider.php
+│   ├── Filament/
+│   │   ├── Resources/
+│   │   │   └── UserResource.php
+│   │   ├── Widgets/
+│   │   │   ├── Auth/
+│   │   │   │   ├── LoginWidget.php
+
+│   │   │   │   └── SocialLoginWidget.php
+│   │   │   └── User/
+│   │   │       ├── UserStatsWidget.php
+│   │   │       └── UserActivityWidget.php
+│   │   └── Pages/
+│   │       └── Auth/
+│   │           ├── LoginPage.php
+│   │           └── RegisterPage.php
+│   └── Http/
+│       └── Controllers/
+│           └── Auth/
+├── config/
+│   └── auth.php
+├── database/
+│   └── migrations/
+└── resources/
+    └── views/
+        └── pages/
+            └── auth/
+```
+
+## Dipendenze Principali
+
+### Moduli
+- **Xot**: Fornisce le classi base e l'infrastruttura core
+- **Lang**: Gestione delle traduzioni
+- **Notify**: Sistema di notifiche
+- **UI**: Componenti di interfaccia utente
+
+### Pacchetti
+- Laravel Passport
+- Laravel Socialite
+- Spatie Permission
+- Filament
+
+## Best Practices
+
+### 1. Estensione delle Classi
+```php
+// ❌ NON FARE QUESTO
+use Filament\Widgets\Widget;
+class LoginForm extends Widget { ... }
+
+// ✅ FARE QUESTO
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
+class LoginWidget extends XotBaseWidget { ... }
+```
+
+### 2. Gestione delle Traduzioni
+```php
+// ❌ NON FARE QUESTO
+->label('Sorgente')
+
+// ✅ FARE QUESTO
+->label(['label' => 'Sorgente'])
+```
+
+### 3. Configurazione dei Provider
+```php
+// In Modules/User/app/Providers/UserServiceProvider.php
+use Modules\User\Providers\Traits\HasPassportConfiguration;
+
+class UserServiceProvider extends XotBaseServiceProvider
+{
+    use HasPassportConfiguration;
+
+    public function boot(): void
+    {
+        $this->configurePassport();
+    }
+>>>>>>> 48bb11d (.)
 }
 ```
 
 ## Roadmap
 
+<<<<<<< HEAD
 ### Funzionalità Future
 
 - [ ] Autenticazione a due fattori
@@ -1098,6 +1240,63 @@ if (auth()->user()->belongsToTeam($team)) {
 Questo modulo è rilasciato sotto la licenza MIT. Vedi il file LICENSE per i dettagli.
 
 ## Supporto
+=======
+### Prossime Feature
+1. Miglioramento della gestione dei token OAuth
+2. Integrazione con nuovi provider social
+3. Ottimizzazione delle performance
+
+### Miglioramenti Pianificati
+1. Refactoring del sistema di autenticazione
+2. Miglioramento della gestione dei profili
+3. Ottimizzazione delle query
+
+## Contribuire
+
+### Setup Sviluppo
+1. Clona il repository
+2. Installa le dipendenze
+3. Configura l'ambiente
+4. Esegui i test
+
+### Convenzioni di Codice
+- Seguire PSR-12
+- Utilizzare type hints
+- Documentare il codice
+- Scrivere test unitari
+
+### Processo di Pull Request
+1. Crea un branch feature
+2. Implementa le modifiche
+3. Aggiungi i test
+4. Aggiorna la documentazione
+5. Crea la PR
+
+## Troubleshooting
+
+### Problemi Comuni
+1. Conflitti di autenticazione
+2. Problemi di performance
+3. Errori di configurazione
+
+### Soluzioni
+1. Verifica la configurazione
+2. Controlla i log
+3. Consulta la documentazione
+
+## Riferimenti
+
+### Documentazione
+- [Laravel Passport](https://laravel.com/docs/12.x/passport)
+- [Laravel Socialite](https://laravel.com/docs/12.x/socialite)
+- [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel)
+- [Filament](https://filamentphp.com/docs)
+
+### Collegamenti Interni
+- [Xot Base Classes](../Xot/docs/base-classes.md)
+- [Lang Integration](../Lang/docs/lang-link.md)
+- [Notify Setup](../Notify/docs/README.md)
+>>>>>>> 48bb11d (.)
 
 ## Changelog
 
@@ -1124,10 +1323,15 @@ Questo modulo è rilasciato sotto la licenza MIT. Vedi il file LICENSE per i det
 
 - Errori di traduzione 
 ## Collegamenti
+<<<<<<< HEAD
 - [Indice Documentazione](../../../project_docs/INDEX.md)
 - [README Principale](../../../README.md)
 - [API Reference](../project_docs/api.md)
 - [Changelog](../project_docs/CHANGELOG.md) 
+=======
+- [Indice Documentazione](../../../docs/INDEX.md)
+- [README Principale](../../../README.md)
+>>>>>>> 48bb11d (.)
 - [API Reference](../docs/api.md)
 - [Changelog](../docs/CHANGELOG.md) 
 ## Collegamenti tra versioni di README.md
@@ -1207,6 +1411,7 @@ Questo modulo è rilasciato sotto la licenza MIT. Vedi il file LICENSE per i det
 * [README.md](../../../Cms/docs/components/README.md)
 * [README.md](../../../../Themes/Two/docs/README.md)
 * [README.md](../../../../Themes/One/docs/README.md)
+<<<<<<< HEAD
 Per supporto tecnico o domande:
 
 - **Issues**: GitHub Issues
@@ -1239,6 +1444,61 @@ Durante l'aggiornamento del modulo sono stati risolti conflitti Git nei seguenti
 2. **Consolidamento logica**: Mantenuta la logica di test più recente e completa
 3. **Verifica coerenza**: Controllata la coerenza tra tutti i file di test
 4. **Aggiornamento documentazione**: Documentate le modifiche e le best practices
+=======
+
+
+---
+
+## Moderazione Utente Generica dal Modulo User
+
+### Premessa e Neutralità
+In questo modulo, la gestione della moderazione non deve mai fare riferimento a ruoli o tipi specifici (es. "dentista", "paziente"). Tutti i tipi di utente sono rappresentati come varianti (type/parental) del modello User, secondo il pattern Single Table Inheritance (STI) o Parental, utilizzando SEMPRE la colonna `type` (vedi [tighten/parental](https://github.com/tighten/parental)). Questo garantisce la massima riusabilità del modulo User in qualsiasi progetto.
+
+### Architettura proposta
+- **Model**: User è la base, ogni tipo di utente (es. admin, operator, specialist, ...), è un parental/type di User. La colonna di discriminazione è SEMPRE `type`.
+- **Enum/ModelStates**: Lo stato di moderazione è gestito tramite enum o Spatie Model States, utilizzando SEMPRE la colonna `state` (vedi [spatie/laravel-model-states](https://spatie.be/docs/laravel-model-states/v2/working-with-states)), con valori come `pending`, `approved`, `rejected`, applicabile a qualunque tipo di utente.
+- **Action**: Azioni queueable (spatie/laravel-queueable-action) per approve/reject, generiche e parametrizzate sul tipo di utente.
+- **Notifiche**: Notifiche di stato centralizzate, con template e destinatari dinamici in base al type.
+- **UI**: Pannello Filament unico per la moderazione, con filtri per type e stato.
+- **Policy**: Policy centralizzate per la moderazione, con possibilità di override per type specifici.
+- **Eventi/Listener**: Eventi per transizioni di stato, listener per notifiche e logging, generici e riutilizzabili.
+
+### Flusso Moderazione Utente (Generico)
+1. **Registrazione**: L'utente si registra tramite wizard unico, che raccoglie i dati base e quelli specifici del type. Il campo `type` viene valorizzato secondo la variante.
+2. **Stato iniziale**: L'utente viene creato in stato `pending` (moderazione richiesta), valorizzando la colonna `state`.
+3. **Moderazione**: Un moderatore visualizza la richiesta, può approvare o rifiutare (UI e azioni generiche).
+4. **Transizione di stato**: Azione queueable aggiorna la colonna `state`, invia notifica, logga l'evento (tutto generico).
+5. **Notifica**: L'utente riceve email con esito e, se approvato, link per completare la registrazione (template dinamico).
+6. **Completamento**: L'utente può accedere e completare i dati solo se approvato.
+
+### Percentuali di riuso logica
+- Azioni di moderazione: **90%**
+- Gestione stati: **100%**
+- Notifiche: **80%**
+- UI Filament: **80%**
+- Eventi/listener: **90%**
+- Policy: **80%**
+
+### Dettagli implementativi
+- **Wizard di registrazione**: Unico, con step dinamici in base al type (pattern strategy/factory per step specifici). Il campo `type` è centrale.
+- **ModerationAction**: Un'unica action queueable, che riceve l'istanza User e il type, e applica la logica di moderazione aggiornando la colonna `state`.
+- **Enum/ModelStates**: Enum generico (UserState) con metodi helper per label, colore, icona, ecc., sempre mappato su `state`.
+- **Notifiche**: Classe base Notification, con metodi overridabili per type specifici.
+- **UI Filament**: Resource/Panel unico, con filtri per type e stato, e policy generiche.
+- **Policy**: Policy generica UserModerationPolicy, con possibilità di override tramite strategy pattern.
+- **Eventi/Listener**: Eventi generici (UserApproved, UserRejected, ecc.), listener che gestiscono notifiche e side-effect.
+- **Documentazione**: Tutte le transizioni di stato, policy e override vanno documentate in modo neutro e generico.
+- **Test**: Test end-to-end che coprano il flusso per tutti i type, senza riferimenti a ruoli specifici.
+
+### Esempio di struttura
+- `User.php` (modello base, con type/parental e state)
+- `UserState.php` (enum generico, mappato su `state`)
+- `ModerationAction.php` (action queueable generica)
+- `UserModerationNotification.php` (notifica base)
+- `UserModerationPolicy.php` (policy generica)
+- `UserModerationResource.php` (Filament resource/panel generico)
+- `UserApproved.php`, `UserRejected.php` (eventi generici)
+>>>>>>> 48bb11d (.)
 
 ### Vantaggi
 - Massima riusabilità del modulo User in qualsiasi progetto
@@ -1537,8 +1797,12 @@ Schema::table('teams', function (Blueprint $table) {
   - **Regola**: docs_project solo per documentazione generale del progetto, file specifici di moduli nelle rispettive cartelle docs
 
 ## Collegamenti
+<<<<<<< HEAD
 ### Prevenzione Futura
 
 - Utilizzare sempre `git pull --rebase` per evitare merge commits
 - Verificare i conflitti prima di ogni commit
 - Mantenere la struttura dei test coerente e documentata
+=======
+
+>>>>>>> 48bb11d (.)

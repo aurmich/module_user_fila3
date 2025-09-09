@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\User\Models\Notification;
 use Modules\Xot\Contracts\UserContract;
 
@@ -72,3 +73,6 @@ class NotificationPolicy extends UserBasePolicy
                $user->hasRole('super-admin');
     }
 }
+=======
+class NotificationPolicy extends UserBasePolicy {}
+>>>>>>> 48bb11d (.)

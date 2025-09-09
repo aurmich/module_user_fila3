@@ -70,7 +70,11 @@ class ProfileTest extends TestCase
 
     public function test_profile_has_schemaless_attributes(): void
     {
+<<<<<<< HEAD
         $profile = new Profile;
+=======
+        $profile = new Profile();
+>>>>>>> 48bb11d (.)
 
         $expectedAttributes = ['extra'];
         $this->assertEquals($expectedAttributes, $profile->getSchemalessAttributes());
@@ -78,7 +82,11 @@ class ProfileTest extends TestCase
 
     public function test_profile_has_table_name(): void
     {
+<<<<<<< HEAD
         $profile = new Profile;
+=======
+        $profile = new Profile();
+>>>>>>> 48bb11d (.)
 
         $this->assertEquals('profiles', $profile->getTable());
     }
@@ -324,3 +332,13 @@ class ProfileTest extends TestCase
         $this->assertInstanceOf(Profile::class, $profile);
     }
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+>>>>>>> 48bb11d (.)

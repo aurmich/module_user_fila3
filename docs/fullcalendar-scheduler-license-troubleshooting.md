@@ -401,7 +401,11 @@ const calendarOptions = {
 ### FullCalendar Support
 - **Sales:** sales@fullcalendar.io
 - **Support:** [FullCalendar Support](https://fullcalendar.io/support/)
+<<<<<<< HEAD
 - **Documentation:** [FullCalendar Docs](https://fullcalendar.io/project_docs/)
+=======
+- **Documentation:** [FullCalendar Docs](https://fullcalendar.io/docs/)
+>>>>>>> 48bb11d (.)
 
 ### Risorse Utili
 - [Pricing](https://fullcalendar.io/pricing/)

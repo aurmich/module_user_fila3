@@ -8,6 +8,10 @@ return [
             'help' => 'Il nome dell\'utente',
             'validation' => [
                 'required' => 'Il nome è obbligatorio',
+<<<<<<< HEAD
+=======
+                'max' => 'Il nome non può superare i 255 caratteri',
+>>>>>>> 48bb11d (.)
             ],
         ],
         'email' => [
@@ -18,6 +22,10 @@ return [
                 'required' => 'L\'email è obbligatoria',
                 'email' => 'Inserisci un\'email valida',
                 'max' => 'L\'email non può superare i 255 caratteri',
+<<<<<<< HEAD
+=======
+                'unique' => 'Questa email è già registrata',
+>>>>>>> 48bb11d (.)
             ],
         ],
         'password' => [
@@ -27,6 +35,10 @@ return [
             'validation' => [
                 'required' => 'La password è obbligatoria',
                 'min' => 'La password deve essere di almeno 8 caratteri',
+<<<<<<< HEAD
+=======
+                'max' => 'La password non può superare i 255 caratteri',
+>>>>>>> 48bb11d (.)
             ],
         ],
         'password_confirmation' => [
@@ -37,23 +49,65 @@ return [
                 'required' => 'La conferma della password è obbligatoria',
                 'min' => 'La password deve essere di almeno 8 caratteri',
                 'max' => 'La password non può superare i 255 caratteri',
+<<<<<<< HEAD
             ],
         ],
+=======
+                'same' => 'Le password non coincidono',
+            ],
+        ],
+        'remember_me' => [
+            'label' => 'Ricordami',
+            'help' => 'Mantieni la sessione attiva',
+        ],
+>>>>>>> 48bb11d (.)
     ],
     'actions' => [
         'create' => [
             'label' => 'Nuovo Utente',
+<<<<<<< HEAD
+=======
+            'tooltip' => 'Crea un nuovo utente',
+        ],
+        'edit' => [
+            'label' => 'Modifica',
+            'tooltip' => 'Modifica l\'utente',
+        ],
+        'delete' => [
+            'label' => 'Elimina',
+            'tooltip' => 'Elimina l\'utente',
+>>>>>>> 48bb11d (.)
         ],
     ],
     'teams' => [
         'personal_team' => [
             'label' => 'Team Personale',
+<<<<<<< HEAD
+=======
+            'help' => 'Il team personale dell\'utente',
+>>>>>>> 48bb11d (.)
         ],
     ],
     'devices' => [
         'fields' => [
             'uuid' => [
                 'label' => 'UUID',
+<<<<<<< HEAD
+=======
+                'help' => 'Identificativo univoco del dispositivo',
+            ],
+            'mobile_id' => [
+                'label' => 'Mobile ID',
+                'help' => 'Identificativo del dispositivo mobile',
+            ],
+            'languages' => [
+                'label' => 'Lingue',
+                'help' => 'Le lingue supportate dal dispositivo',
+            ],
+            'device_name' => [
+                'label' => 'Nome Dispositivo',
+                'help' => 'Il nome del dispositivo',
+>>>>>>> 48bb11d (.)
             ],
         ],
     ],
@@ -61,6 +115,22 @@ return [
         'fields' => [
             'name' => [
                 'label' => 'Nome',
+<<<<<<< HEAD
+=======
+                'help' => 'Il nome del permesso',
+            ],
+            'guard_name' => [
+                'label' => 'Guard Name',
+                'help' => 'Il nome della guardia',
+            ],
+            'active' => [
+                'label' => 'Attivo',
+                'help' => 'Stato di attivazione del permesso',
+            ],
+            'created_at' => [
+                'label' => 'Data Creazione',
+                'help' => 'Data di creazione del permesso',
+>>>>>>> 48bb11d (.)
             ],
         ],
     ],
@@ -69,6 +139,22 @@ return [
             'fields' => [
                 'user' => [
                     'label' => 'Utente',
+<<<<<<< HEAD
+=======
+                    'help' => 'L\'utente che ha effettuato l\'accesso',
+                ],
+                'login_at' => [
+                    'label' => 'Data Accesso',
+                    'help' => 'Data e ora dell\'accesso',
+                ],
+                'ip_address' => [
+                    'label' => 'Indirizzo IP',
+                    'help' => 'L\'indirizzo IP dell\'utente',
+                ],
+                'user_agent' => [
+                    'label' => 'User Agent',
+                    'help' => 'Il browser dell\'utente',
+>>>>>>> 48bb11d (.)
                 ],
             ],
         ],

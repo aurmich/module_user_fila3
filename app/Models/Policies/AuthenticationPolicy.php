@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\User\Models\Authentication;
 use Modules\Xot\Contracts\UserContract;
 
@@ -71,3 +72,6 @@ class AuthenticationPolicy extends UserBasePolicy
                $user->hasRole('super-admin');
     }
 }
+=======
+class AuthenticationPolicy extends UserBasePolicy {}
+>>>>>>> 48bb11d (.)

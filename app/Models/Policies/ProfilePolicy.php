@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\User\Models\Profile;
 use Modules\Xot\Contracts\UserContract;
 
@@ -67,3 +68,6 @@ class ProfilePolicy extends UserBasePolicy
         return $this->hasPermission($user, 'profile.force-delete');
     }
 }
+=======
+class ProfilePolicy extends UserBasePolicy {}
+>>>>>>> 48bb11d (.)
