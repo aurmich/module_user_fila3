@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Modulo User
 
 ## Introduzione
@@ -211,7 +210,10 @@ User/
 ### Traduzioni
 - Utilizzare il LangServiceProvider per le traduzioni
 - Non usare ->label() direttamente
-- Struttura corretta: 'source' => ['label'=>'Sorgente']
+- Struttura corretta espansa: 'source' => ['label'=>'Sorgente', 'placeholder'=>'Inserisci...', 'help'=>'Testo di aiuto']
+- Tutti i campi devono avere label, placeholder e help
+- Tutte le azioni devono avere label, modal, success, error
+- Mai stringhe hardcoded nelle interfacce
 
 ## Esempi
 
@@ -249,9 +251,7 @@ Il modulo User fornisce funzionalità di autenticazione e autorizzazione attrave
 - Sistema ruoli e permessi
 - Profili utente personalizzabili
 - Interfaccia Filament
-=======
 # Modulo User - Sistema di Gestione Utenti e Autenticazione
->>>>>>> e5f94125 (.)
 
 ## Panoramica
 
@@ -259,7 +259,6 @@ Il modulo User gestisce l'autenticazione, autorizzazione e gestione degli utenti
 
 ## Caratteristiche Principali
 
-<<<<<<< HEAD
 ### Documentazione Core
 - [Architettura del Modulo](structure.md)
 - [Configurazione Passport](passport.md)
@@ -332,14 +331,12 @@ Il modulo User gestisce l'autenticazione, autorizzazione e gestione degli utenti
 - [PHPStan Fixes](./phpstan_fixes.md)
 - [PHPStan Level 9](./PHPSTAN_LEVEL9_FIXES.md)
 - [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md)
-=======
 - **Gestione Utenti**: CRUD completo per utenti e profili
 - **Sistema Ruoli**: Gestione ruoli e permessi con Spatie Laravel Permission
 - **Gestione Team**: Supporto per team e organizzazioni
 - **Multi-Tenant**: Supporto per applicazioni multi-tenant
 - **Autenticazione**: Sistema di autenticazione robusto e sicuro
 - **Integrazione Filament**: Interfacce amministrative complete
->>>>>>> e5f94125 (.)
 
 ## Struttura del Modulo
 
@@ -1102,7 +1099,6 @@ Questo modulo è rilasciato sotto la licenza MIT. Vedi il file LICENSE per i det
 
 ## Supporto
 
-<<<<<<< HEAD
 ## Changelog
 
 ### [1.0.0] - 2024-03-20
@@ -1211,9 +1207,7 @@ Questo modulo è rilasciato sotto la licenza MIT. Vedi il file LICENSE per i det
 * [README.md](../../../Cms/docs/components/README.md)
 * [README.md](../../../../Themes/Two/docs/README.md)
 * [README.md](../../../../Themes/One/docs/README.md)
-=======
 Per supporto tecnico o domande:
->>>>>>> e5f94125 (.)
 
 - **Issues**: GitHub Issues
 - **Documentazione**: Questa documentazione
@@ -1246,7 +1240,6 @@ Durante l'aggiornamento del modulo sono stati risolti conflitti Git nei seguenti
 3. **Verifica coerenza**: Controllata la coerenza tra tutti i file di test
 4. **Aggiornamento documentazione**: Documentate le modifiche e le best practices
 
-<<<<<<< HEAD
 ### Vantaggi
 - Massima riusabilità del modulo User in qualsiasi progetto
 - Facilità di estensione per nuovi type/ruoli
@@ -1544,9 +1537,7 @@ Schema::table('teams', function (Blueprint $table) {
   - **Regola**: docs_project solo per documentazione generale del progetto, file specifici di moduli nelle rispettive cartelle docs
 
 ## Collegamenti
-=======
 ### Prevenzione Futura
->>>>>>> e5f94125 (.)
 
 - Utilizzare sempre `git pull --rebase` per evitare merge commits
 - Verificare i conflitti prima di ogni commit

@@ -4,12 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
-<<<<<<< HEAD
-
-=======
-use Modules\Xot\Contracts\UserContract;
 use Modules\User\Models\OauthClient;
->>>>>>> e5f94125 (.)
+use Modules\Xot\Contracts\UserContract;
 
 class OauthClientPolicy extends UserBasePolicy
 {
@@ -26,11 +22,7 @@ class OauthClientPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, OauthClient $oauthClient): bool
     {
-<<<<<<< HEAD
-
-=======
-        return $user->hasPermissionTo('oauth-client.view') || 
->>>>>>> e5f94125 (.)
+        return $user->hasPermissionTo('oauth-client.view') ||
                $user->id === $oauthClient->user_id ||
                $user->hasRole('super-admin');
     }
@@ -48,11 +40,7 @@ class OauthClientPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, OauthClient $oauthClient): bool
     {
-<<<<<<< HEAD
-
-=======
-        return $user->hasPermissionTo('oauth-client.update') || 
->>>>>>> e5f94125 (.)
+        return $user->hasPermissionTo('oauth-client.update') ||
                $user->hasRole('super-admin');
     }
 
@@ -61,11 +49,7 @@ class OauthClientPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, OauthClient $oauthClient): bool
     {
-<<<<<<< HEAD
-
-=======
-        return $user->hasPermissionTo('oauth-client.delete') || 
->>>>>>> e5f94125 (.)
+        return $user->hasPermissionTo('oauth-client.delete') ||
                $user->hasRole('super-admin');
     }
 
@@ -74,11 +58,7 @@ class OauthClientPolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, OauthClient $oauthClient): bool
     {
-<<<<<<< HEAD
-
-=======
-        return $user->hasPermissionTo('oauth-client.restore') || 
->>>>>>> e5f94125 (.)
+        return $user->hasPermissionTo('oauth-client.restore') ||
                $user->hasRole('super-admin');
     }
 
@@ -87,11 +67,7 @@ class OauthClientPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, OauthClient $oauthClient): bool
     {
-<<<<<<< HEAD
-
-=======
-        return $user->hasPermissionTo('oauth-client.force-delete') || 
->>>>>>> e5f94125 (.)
+        return $user->hasPermissionTo('oauth-client.force-delete') ||
                $user->hasRole('super-admin');
     }
 }

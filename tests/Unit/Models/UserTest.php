@@ -9,18 +9,6 @@ use Illuminate\Support\Facades\Hash;
 use Modules\User\Models\User;
 use Tests\TestCase;
 
-<<<<<<< HEAD
-class UserTest extends TestCase
-{
-    use RefreshDatabase;
-
-    public function test_can_create_user_with_minimal_data(): void
-    {
-        $user = User::factory()->create([
-            'email' => 'test@example.com',
-            'password' => Hash::make('password'),
-        ]);
-=======
 test('user can be created', function () {
     $user = createUser([
         'name' => 'Mario Rossi',
@@ -34,7 +22,6 @@ test('user can be created', function () {
         ->and($user->email)->toBe('mario.rossi@example.com')
         ->and($user->type)->toBe(UserType::CustomerUser);
 });
->>>>>>> e5f94125 (.)
 
         $this->assertDatabaseHas('users', [
             'id' => $user->id,
@@ -44,48 +31,6 @@ test('user can be created', function () {
         $this->assertTrue(Hash::check('password', $user->password));
     }
 
-<<<<<<< HEAD
-    public function test_can_create_user_with_all_fields(): void
-    {
-        $userData = [
-            'name' => 'John Doe',
-            'first_name' => 'John',
-            'last_name' => 'Doe',
-            'email' => 'john@example.com',
-            'password' => Hash::make('password'),
-            'phone' => '+1234567890',
-            'address' => '123 Main St',
-            'city' => 'New York',
-            'state' => 'NY',
-            'registration_number' => 'REG123',
-            'status' => 'active',
-            'type' => 'individual',
-            'lang' => 'en',
-            'is_active' => true,
-            'is_otp' => false,
-        ];
-
-        $user = User::factory()->create($userData);
-
-        $this->assertDatabaseHas('users', [
-            'id' => $user->id,
-            'email' => 'john@example.com',
-            'name' => 'John Doe',
-            'first_name' => 'John',
-            'last_name' => 'Doe',
-            'phone' => '+1234567890',
-            'address' => '123 Main St',
-            'city' => 'New York',
-            'state' => 'NY',
-            'registration_number' => 'REG123',
-            'status' => 'active',
-            'type' => 'individual',
-            'lang' => 'en',
-            'is_active' => true,
-            'is_otp' => false,
-        ]);
-    }
-=======
 test('user can be bo user type', function () {
     $boUser = createUser(['type' => UserType::BoUser]);
     
@@ -97,7 +42,6 @@ test('user can be customer user type', function () {
     
     expect($customerUser->type)->toBe(UserType::CustomerUser);
 });
->>>>>>> e5f94125 (.)
 
     public function test_user_has_soft_deletes(): void
     {

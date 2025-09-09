@@ -4,12 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
-<<<<<<< HEAD
-
-=======
-use Modules\Xot\Contracts\UserContract;
 use Modules\User\Models\SocialProvider;
->>>>>>> e5f94125 (.)
+use Modules\Xot\Contracts\UserContract;
 
 class SocialProviderPolicy extends UserBasePolicy
 {
@@ -26,11 +22,7 @@ class SocialProviderPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, SocialProvider $socialProvider): bool
     {
-<<<<<<< HEAD
-
-=======
-        return $user->hasPermissionTo('social-provider.view') || 
->>>>>>> e5f94125 (.)
+        return $user->hasPermissionTo('social-provider.view') ||
                $user->hasRole('super-admin');
     }
 
@@ -47,11 +39,7 @@ class SocialProviderPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, SocialProvider $socialProvider): bool
     {
-<<<<<<< HEAD
-
-=======
-        return $user->hasPermissionTo('social-provider.update') || 
->>>>>>> e5f94125 (.)
+        return $user->hasPermissionTo('social-provider.update') ||
                $user->hasRole('super-admin');
     }
 
@@ -60,11 +48,7 @@ class SocialProviderPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, SocialProvider $socialProvider): bool
     {
-<<<<<<< HEAD
-
-=======
-        return $user->hasPermissionTo('social-provider.delete') || 
->>>>>>> e5f94125 (.)
+        return $user->hasPermissionTo('social-provider.delete') ||
                $user->hasRole('super-admin');
     }
 
@@ -73,11 +57,7 @@ class SocialProviderPolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, SocialProvider $socialProvider): bool
     {
-<<<<<<< HEAD
-
-=======
-        return $user->hasPermissionTo('social-provider.restore') || 
->>>>>>> e5f94125 (.)
+        return $user->hasPermissionTo('social-provider.restore') ||
                $user->hasRole('super-admin');
     }
 
@@ -86,11 +66,7 @@ class SocialProviderPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, SocialProvider $socialProvider): bool
     {
-<<<<<<< HEAD
-
-=======
-        return $user->hasPermissionTo('social-provider.force-delete') || 
->>>>>>> e5f94125 (.)
+        return $user->hasPermissionTo('social-provider.force-delete') ||
                $user->hasRole('super-admin');
     }
 }

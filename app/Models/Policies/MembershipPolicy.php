@@ -4,12 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
-<<<<<<< HEAD
-
-=======
-use Modules\Xot\Contracts\UserContract;
 use Modules\User\Models\Membership;
->>>>>>> e5f94125 (.)
+use Modules\Xot\Contracts\UserContract;
 
 class MembershipPolicy extends UserBasePolicy
 {
@@ -26,11 +22,7 @@ class MembershipPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, Membership $membership): bool
     {
-<<<<<<< HEAD
-
-=======
-        return $user->hasPermissionTo('membership.view') || 
->>>>>>> e5f94125 (.)
+        return $user->hasPermissionTo('membership.view') ||
                $user->id === $membership->user_id ||
                $user->hasRole('super-admin');
     }
@@ -48,11 +40,7 @@ class MembershipPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, Membership $membership): bool
     {
-<<<<<<< HEAD
-
-=======
-        return $user->hasPermissionTo('membership.update') || 
->>>>>>> e5f94125 (.)
+        return $user->hasPermissionTo('membership.update') ||
                $user->hasRole('super-admin');
     }
 
@@ -61,11 +49,7 @@ class MembershipPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, Membership $membership): bool
     {
-<<<<<<< HEAD
-
-=======
-        return $user->hasPermissionTo('membership.delete') || 
->>>>>>> e5f94125 (.)
+        return $user->hasPermissionTo('membership.delete') ||
                $user->hasRole('super-admin');
     }
 
@@ -74,11 +58,7 @@ class MembershipPolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, Membership $membership): bool
     {
-<<<<<<< HEAD
-
-=======
-        return $user->hasPermissionTo('membership.restore') || 
->>>>>>> e5f94125 (.)
+        return $user->hasPermissionTo('membership.restore') ||
                $user->hasRole('super-admin');
     }
 
@@ -87,11 +67,7 @@ class MembershipPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, Membership $membership): bool
     {
-<<<<<<< HEAD
-
-=======
-        return $user->hasPermissionTo('membership.force-delete') || 
->>>>>>> e5f94125 (.)
+        return $user->hasPermissionTo('membership.force-delete') ||
                $user->hasRole('super-admin');
     }
 }

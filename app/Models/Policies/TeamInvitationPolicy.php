@@ -4,12 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
-<<<<<<< HEAD
-use Modules\User\Contracts\UserContract;
-=======
-use Modules\Xot\Contracts\UserContract;
->>>>>>> e5f94125 (.)
 use Modules\User\Models\TeamInvitation;
+use Modules\Xot\Contracts\UserContract;
 
 class TeamInvitationPolicy extends UserBasePolicy
 {
@@ -26,14 +22,9 @@ class TeamInvitationPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, TeamInvitation $teamInvitation): bool
     {
-<<<<<<< HEAD
-        return $user->teams->contains($teamInvitation->team_id) ||
-            $user->hasRole('super-admin');
-=======
-        return $user->hasPermissionTo('team-invitation.view') || 
+        return $user->hasPermissionTo('team-invitation.view') ||
                $user->teams->contains($teamInvitation->team_id) ||
                $user->hasRole('super-admin');
->>>>>>> e5f94125 (.)
     }
 
     /**
@@ -49,12 +40,8 @@ class TeamInvitationPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, TeamInvitation $teamInvitation): bool
     {
-<<<<<<< HEAD
-        return $user->hasRole('super-admin');
-=======
-        return $user->hasPermissionTo('team-invitation.update') || 
+        return $user->hasPermissionTo('team-invitation.update') ||
                $user->hasRole('super-admin');
->>>>>>> e5f94125 (.)
     }
 
     /**
@@ -62,12 +49,8 @@ class TeamInvitationPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, TeamInvitation $teamInvitation): bool
     {
-<<<<<<< HEAD
-        return $user->hasRole('super-admin');
-=======
-        return $user->hasPermissionTo('team-invitation.delete') || 
+        return $user->hasPermissionTo('team-invitation.delete') ||
                $user->hasRole('super-admin');
->>>>>>> e5f94125 (.)
     }
 
     /**
@@ -75,12 +58,8 @@ class TeamInvitationPolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, TeamInvitation $teamInvitation): bool
     {
-<<<<<<< HEAD
-        return $user->hasRole('super-admin');
-=======
-        return $user->hasPermissionTo('team-invitation.restore') || 
+        return $user->hasPermissionTo('team-invitation.restore') ||
                $user->hasRole('super-admin');
->>>>>>> e5f94125 (.)
     }
 
     /**
@@ -88,11 +67,7 @@ class TeamInvitationPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, TeamInvitation $teamInvitation): bool
     {
-<<<<<<< HEAD
-        return $user->hasRole('super-admin');
-=======
-        return $user->hasPermissionTo('team-invitation.force-delete') || 
+        return $user->hasPermissionTo('team-invitation.force-delete') ||
                $user->hasRole('super-admin');
->>>>>>> e5f94125 (.)
     }
 }

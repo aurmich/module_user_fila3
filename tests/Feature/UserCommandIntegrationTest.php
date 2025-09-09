@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-use Modules\User\Console\Commands\ChangeTypeCommand;
-use Modules\Xot\Datas\XotData;
-use Modules\Xot\Contracts\UserContract;
 use Illuminate\Console\Application;
 use Illuminate\Support\Facades\Artisan;
+use Modules\User\Console\Commands\ChangeTypeCommand;
+use Modules\Xot\Contracts\UserContract;
+use Modules\Xot\Datas\XotData;
 
 describe('User Command Integration', function () {
     beforeEach(function () {
-        $this->command = new ChangeTypeCommand();
+        $this->command = new ChangeTypeCommand;
         $application = new Application(app());
         $application->add($this->command);
     });
@@ -198,14 +198,9 @@ describe('User Command Integration', function () {
 
     it('can handle object property access safely', function () {
         // Test safe property access patterns
-<<<<<<< HEAD
-        $testObject = (object) ['testProperty' => 'ok'];
-
-=======
-        $testObject = new stdClass();
+        $testObject = new stdClass;
         $testObject->testProperty = 'test_value';
-        
->>>>>>> e5f94125 (.)
+
         expect(property_exists($testObject, 'testProperty'))->toBeTrue()
             ->and(property_exists($testObject, 'nonExistentProperty'))->toBeFalse();
     });

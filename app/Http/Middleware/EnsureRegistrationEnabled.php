@@ -16,10 +16,10 @@ class EnsureRegistrationEnabled
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $enabled=Config::boolean('auth.registration_enabled', true);
+        $enabled = Config::boolean('auth.registration_enabled', true);
         // Controlla se la registrazione è disabilitata
-        if (!$enabled) {
-            return redirect()->route('pages.view', ['slug'=>'register_disabled']);
+        if (! $enabled) {
+            return redirect()->route('pages.view', ['slug' => 'register_disabled']);
         }
 
         return $next($request);

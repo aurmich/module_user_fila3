@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-# Autenticazione in Predict
+# Autenticazione 
 
 ## Panoramica
-Il sistema di autenticazione in Predict è basato su Laravel Volt e supporta sia l'autenticazione tradizionale che quella sociale.
+Il sistema di autenticazione  è basato su Laravel Volt e supporta sia l'autenticazione tradizionale che quella sociale.
 
 ## Configurazione
 
@@ -130,7 +129,6 @@ Route::middleware('guest')->group(function () {
 
 ### Logout con Volt e Folio
 Per dettagli sull'implementazione del logout utilizzando Volt e Folio, consultare la [documentazione del modulo User](../laravel/Modules/User/project_docs/VOLT_FOLIO_LOGOUT_ERROR.md). 
-=======
 # Sistema di Autenticazione - Modulo User
 
 ## Panoramica
@@ -285,4 +283,3 @@ if ($request->bearerToken()) {
 ---
 
 *Ultimo aggiornamento: giugno 2025*
->>>>>>> e5f94125 (.)
