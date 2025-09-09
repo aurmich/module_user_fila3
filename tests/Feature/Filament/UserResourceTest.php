@@ -3,6 +3,9 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a291521 (.)
 namespace Modules\User\Tests\Feature\Filament\UserResourceTest;
 
 namespace Modules\User\Tests\Unit\Widgets;
@@ -26,6 +29,7 @@ use Modules\User\Models\Permission;
 use Modules\User\Models\Role;
 use Modules\User\Models\User;
 >>>>>>> 48bb11d (.)
+
 
 beforeEach(function () {
     $this->admin = User::factory()->create();

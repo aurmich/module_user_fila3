@@ -227,12 +227,17 @@ php artisan lang:missing --locale=it,en,de
 
 ### Collegamenti Esterni
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Translation Standards](../../../project_docs/translation-standards.md)
 - [Theme Documentation](../../../Themes/Two/project_docs/README.md)
 =======
 - [Translation Standards](../../../docs/translation-standards.md)
 - [Theme Documentation](../../../Themes/Two/docs/README.md)
 >>>>>>> 48bb11d (.)
+=======
+- [Translation Standards](../../../project_docs/translation-standards.md)
+- [Theme Documentation](../../../Themes/Two/project_docs/README.md)
+>>>>>>> a291521 (.)
 
 ## Note per Sviluppatori
 

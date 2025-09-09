@@ -19,10 +19,14 @@
 
 <div align="center">
 <<<<<<< HEAD
+<<<<<<< HEAD
   <img src="https://raw.githubusercontent.com/laraxot/user/main/project_docs/assets/user-banner.png" alt="User Banner" width="800">
 =======
   <img src="https://raw.githubusercontent.com/laraxot/user/main/docs/assets/user-banner.png" alt="User Banner" width="800">
 >>>>>>> 48bb11d (.)
+=======
+  <img src="https://raw.githubusercontent.com/laraxot/user/main/project_docs/assets/user-banner.png" alt="User Banner" width="800">
+>>>>>>> a291521 (.)
   <br>
   <em>🎯 Il sistema di gestione utenti più completo e sicuro per Laravel!</em>
 </div>

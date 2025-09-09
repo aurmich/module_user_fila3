@@ -13,6 +13,7 @@ use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 describe('User Command Integration', function () {
     beforeEach(function () {
         $this->command = new ChangeTypeCommand;
@@ -21,6 +22,8 @@ describe('User Command Integration', function () {
 =======
 uses(RefreshDatabase::class);
 
+=======
+>>>>>>> a291521 (.)
 describe('User Command Integration', function () {
     beforeEach(function () {
         $this->command = new ChangeTypeCommand;
@@ -242,10 +245,14 @@ describe('User Command Integration', function () {
     it('can access Laravel facades', function () {
         // Test that Laravel facades are available
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect(class_exists('Illuminate\\Support\\Facades\\Facade'))->toBeTrue();
 =======
         expect(class_exists('Illuminate\Support\Facades\Facade'))->toBeTrue();
 >>>>>>> 48bb11d (.)
+=======
+        expect(class_exists('Illuminate\\Support\\Facades\\Facade'))->toBeTrue();
+>>>>>>> a291521 (.)
     });
 
     it('handles reflection operations correctly', function () {

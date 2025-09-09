@@ -149,6 +149,7 @@
 
 ### Documentazione
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Laravel Authentication](https://laravel.com/project_docs/12.x/authentication)
 - [Laravel Authorization](https://laravel.com/project_docs/12.x/authorization)
 - [Laravel Security](https://laravel.com/project_docs/12.x/security)
@@ -157,6 +158,11 @@
 - [Laravel Authorization](https://laravel.com/docs/12.x/authorization)
 - [Laravel Security](https://laravel.com/docs/12.x/security)
 >>>>>>> 48bb11d (.)
+=======
+- [Laravel Authentication](https://laravel.com/project_docs/12.x/authentication)
+- [Laravel Authorization](https://laravel.com/project_docs/12.x/authorization)
+- [Laravel Security](https://laravel.com/project_docs/12.x/security)
+>>>>>>> a291521 (.)
 
 ### Collegamenti Interni
 - [Bottlenecks](bottlenecks.md)
@@ -180,6 +186,7 @@
 - Mantenere compatibilità con OAuth2
 
 ## Collegamenti tra versioni di roadmap.md
+<<<<<<< HEAD
 <<<<<<< HEAD
 * [roadmap.md](bashscripts/project_docs/roadmap.md)
 * [roadmap.md](docs/roadmap.md)
@@ -215,6 +222,24 @@
 * [roadmap.md](../../../Cms/docs/roadmap.md)
 * [roadmap.md](../../../../Themes/One/docs/roadmap.md)
 >>>>>>> 48bb11d (.)
+=======
+* [roadmap.md](bashscripts/project_docs/roadmap.md)
+* [roadmap.md](docs/roadmap.md)
+* [roadmap.md](../../../Gdpr/project_docs/roadmap.md)
+* [roadmap.md](../../../Notify/project_docs/roadmap.md)
+* [roadmap.md](../../../Xot/project_docs/roadmap.md)
+* [roadmap.md](../../../Dental/project_docs/roadmap.md)
+* [roadmap.md](../../../User/project_docs/roadmap.md)
+* [roadmap.md](../../../UI/project_docs/roadmap.md)
+* [roadmap.md](../../../Lang/project_docs/roadmap.md)
+* [roadmap.md](../../../Job/project_docs/roadmap.md)
+* [roadmap.md](../../../Media/project_docs/roadmap.md)
+* [roadmap.md](../../../Tenant/project_docs/roadmap.md)
+* [roadmap.md](../../../Activity/project_docs/roadmap.md)
+* [roadmap.md](../../../Patient/project_docs/roadmap.md)
+* [roadmap.md](../../../Cms/project_docs/roadmap.md)
+* [roadmap.md](../../../../Themes/One/project_docs/roadmap.md)
+>>>>>>> a291521 (.)
 
 
 ---

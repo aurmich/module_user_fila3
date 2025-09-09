@@ -4,10 +4,14 @@ declare(strict_types=1);
 
 return [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a291521 (.)
     'account' => 'Account',
     'profile' => 'Profilo',
     'my_profile' => 'Il mio profilo',
     'subheading' => 'Gestisci il tuo profilo.',
+<<<<<<< HEAD
     'fields' => [
         'type' => [
             'label' => 'Tipo',
@@ -38,14 +42,12 @@ return [
         'help' => 'Mantieni aggiornate le tue informazioni per un\'esperienza ottimale',
     ],
 
+=======
+>>>>>>> a291521 (.)
     'fields' => [
-        'id' => [
-            'label' => 'ID',
-            'placeholder' => 'Identificativo univoco',
-            'help' => 'Identificativo univoco dell\'utente nel sistema',
-        ],
         'type' => [
             'label' => 'Tipo',
+<<<<<<< HEAD
             'placeholder' => 'Seleziona il tipo',
             'help' => 'Tipologia di utente nel sistema',
             'options' => [
@@ -54,11 +56,16 @@ return [
                 'moderator' => 'Moderatore',
                 'guest' => 'Ospite',
 >>>>>>> 48bb11d (.)
+=======
+            'fields' => [
+                'label' => 'Tipo',
+>>>>>>> a291521 (.)
             ],
         ],
         'user' => [
             'name' => [
                 'label' => 'Nome Utente',
+<<<<<<< HEAD
 <<<<<<< HEAD
                 'fields' => [
                     'label' => 'Nome Utente',
@@ -77,17 +84,26 @@ return [
                 'placeholder' => '+39 123 456 7890',
                 'help' => 'Numero di telefono per contatti',
 >>>>>>> 48bb11d (.)
+=======
+                'fields' => [
+                    'label' => 'Nome Utente',
+                ],
+>>>>>>> a291521 (.)
             ],
         ],
         'photo' => [
             'label' => 'Foto',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a291521 (.)
             'fields' => [
                 'label' => 'Foto',
             ],
         ],
         'id' => [
             'label' => 'id',
+<<<<<<< HEAD
         ],
         'ente' => [
             'label' => 'ente',
@@ -131,129 +147,49 @@ return [
 =======
             'placeholder' => 'Carica una foto profilo',
             'help' => 'Immagine del profilo utente (formato JPG, PNG)',
+=======
+>>>>>>> a291521 (.)
         ],
         'ente' => [
-            'label' => 'Ente',
-            'placeholder' => 'Seleziona l\'ente',
-            'help' => 'Ente di appartenenza dell\'utente',
+            'label' => 'ente',
         ],
         'matr' => [
-            'label' => 'Matricola',
-            'placeholder' => 'Inserisci la matricola',
-            'help' => 'Numero di matricola dell\'utente',
+            'label' => 'matr',
         ],
         'first_name' => [
-            'label' => 'Nome',
-            'placeholder' => 'Inserisci il nome',
-            'help' => 'Nome di battesimo dell\'utente',
+            'label' => 'first_name',
+            'fields' => [
+                'label' => 'first_name',
+            ],
         ],
         'last_name' => [
-            'label' => 'Cognome',
-            'placeholder' => 'Inserisci il cognome',
-            'help' => 'Cognome dell\'utente',
+            'label' => 'last_name',
+            'fields' => [
+                'label' => 'last_name',
+            ],
         ],
         'email' => [
-            'label' => 'Email',
-            'placeholder' => 'utente@email.com',
-            'help' => 'Indirizzo email principale',
+            'fields' => 'email',
+            'label' => [
+                'fields' => 'email',
+            ],
         ],
         'is_active' => [
-            'label' => 'Attivo',
-            'placeholder' => 'Stato di attivazione',
-            'help' => 'Indica se l\'utente è attivo nel sistema',
-        ],
-        'birth_date' => [
-            'label' => 'Data di Nascita',
-            'placeholder' => 'Seleziona la data di nascita',
-            'help' => 'Data di nascita dell\'utente',
-        ],
-        'gender' => [
-            'label' => 'Genere',
-            'placeholder' => 'Seleziona il genere',
-            'help' => 'Genere dell\'utente',
-            'options' => [
-                'male' => 'Maschile',
-                'female' => 'Femminile',
-                'other' => 'Altro',
-                'prefer_not_to_say' => 'Preferisco non dirlo',
+            'fields' => 'is_active',
+            'label' => [
+                'fields' => 'is_active',
             ],
-        ],
-        'address' => [
-            'label' => 'Indirizzo',
-            'placeholder' => 'Via Roma, 123',
-            'help' => 'Indirizzo di residenza',
-        ],
-        'city' => [
-            'label' => 'Città',
-            'placeholder' => 'Inserisci la città',
-            'help' => 'Città di residenza',
-        ],
-        'postal_code' => [
-            'label' => 'Codice Postale',
-            'placeholder' => '00100',
-            'help' => 'Codice postale della città',
-        ],
-        'country' => [
-            'label' => 'Paese',
-            'placeholder' => 'Seleziona il paese',
-            'help' => 'Paese di residenza',
-        ],
-        'bio' => [
-            'label' => 'Biografia',
-            'placeholder' => 'Scrivi una breve biografia',
-            'help' => 'Descrizione personale o professionale',
-        ],
-        'website' => [
-            'label' => 'Sito Web',
-            'placeholder' => 'https://tuosito.com',
-            'help' => 'Sito web personale o professionale',
-        ],
-        'social_links' => [
-            'label' => 'Link Social',
-            'placeholder' => 'Collegamenti ai social media',
-            'help' => 'Link ai tuoi profili social media',
-        ],
-        'language' => [
-            'label' => 'Lingua',
-            'placeholder' => 'Seleziona la lingua',
-            'help' => 'Lingua preferita per l\'interfaccia',
-            'options' => [
-                'it' => 'Italiano',
-                'en' => 'Inglese',
-                'fr' => 'Francese',
-                'de' => 'Tedesco',
-                'es' => 'Spagnolo',
-            ],
-        ],
-        'timezone' => [
-            'label' => 'Fuso Orario',
-            'placeholder' => 'Seleziona il fuso orario',
-            'help' => 'Fuso orario di riferimento',
-        ],
-        'created_at' => [
-            'label' => 'Data Creazione',
-            'placeholder' => 'Data di registrazione',
-            'help' => 'Data di registrazione dell\'account',
-        ],
-        'updated_at' => [
-            'label' => 'Ultima Modifica',
-            'placeholder' => 'Data ultima modifica',
-            'help' => 'Data dell\'ultimo aggiornamento del profilo',
         ],
     ],
-
     'personal_info' => [
         'heading' => 'Informazioni personali',
         'subheading' => 'Gestisci le tue informazioni personali.',
-        'description' => 'Aggiorna i tuoi dati anagrafici e di contatto',
         'submit' => [
             'label' => 'Aggiorna',
-            'tooltip' => 'Salva le modifiche alle informazioni personali',
-            'success' => 'Informazioni personali aggiornate con successo',
-            'error' => 'Errore durante l\'aggiornamento delle informazioni',
         ],
         'notify' => 'Profilo aggiornato correttamente!',
     ],
+<<<<<<< HEAD
 
     'security' => [
         'heading' => 'Sicurezza',
@@ -411,4 +347,6 @@ return [
         'no_changes' => 'Nessuna modifica da salvare',
     ],
 >>>>>>> 48bb11d (.)
+=======
+>>>>>>> a291521 (.)
 ];

@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a291521 (.)
 declare(strict_types=1);
 
 return [
@@ -107,17 +110,29 @@ return [
         ],
         'last_login' => [
             'label' => 'Ultimo Accesso',
+<<<<<<< HEAD
             'placeholder' => 'Mai effettuato',
+=======
+            'placeholder' => '',
+>>>>>>> a291521 (.)
             'help' => 'Data e ora dell\'ultimo accesso',
         ],
         'created_at' => [
             'label' => 'Data Creazione',
+<<<<<<< HEAD
             'placeholder' => 'Data di registrazione',
+=======
+            'placeholder' => '',
+>>>>>>> a291521 (.)
             'help' => 'Data di creazione dell\'account',
         ],
         'updated_at' => [
             'label' => 'Ultima Modifica',
+<<<<<<< HEAD
             'placeholder' => 'Data ultimo aggiornamento',
+=======
+            'placeholder' => '',
+>>>>>>> a291521 (.)
             'help' => 'Data dell\'ultimo aggiornamento',
         ],
         'avatar' => [
@@ -144,22 +159,38 @@ return [
         ],
         'password_expires_at' => [
             'label' => 'Scadenza Password',
+<<<<<<< HEAD
             'placeholder' => 'Data di scadenza',
+=======
+            'placeholder' => '',
+>>>>>>> a291521 (.)
             'help' => 'Data di scadenza della password',
         ],
         'verified' => [
             'label' => 'Verificato',
+<<<<<<< HEAD
             'placeholder' => 'Stato verifica',
+=======
+            'placeholder' => '',
+>>>>>>> a291521 (.)
             'help' => 'Indica se l\'email è verificata',
         ],
         'unverified' => [
             'label' => 'Non Verificato',
+<<<<<<< HEAD
             'placeholder' => 'Stato verifica',
+=======
+            'placeholder' => '',
+>>>>>>> a291521 (.)
             'help' => 'Indica se l\'email non è verificata',
         ],
         'email_verified_at' => [
             'label' => 'Email Verificata il',
+<<<<<<< HEAD
             'placeholder' => 'Data di verifica',
+=======
+            'placeholder' => '',
+>>>>>>> a291521 (.)
             'help' => 'Data di verifica dell\'email',
         ],
         'provider' => [
@@ -189,12 +220,20 @@ return [
         ],
         'uuid' => [
             'label' => 'UUID',
+<<<<<<< HEAD
             'placeholder' => 'Identificativo univoco',
+=======
+            'placeholder' => '',
+>>>>>>> a291521 (.)
             'help' => 'Identificativo univoco universale',
         ],
         'mobile_id' => [
             'label' => 'Mobile ID',
+<<<<<<< HEAD
             'placeholder' => 'ID dispositivo',
+=======
+            'placeholder' => '',
+>>>>>>> a291521 (.)
             'help' => 'Identificativo del dispositivo mobile',
         ],
         'languages' => [
@@ -204,12 +243,34 @@ return [
         ],
         'guard_name' => [
             'label' => 'Guard Name',
+<<<<<<< HEAD
             'placeholder' => 'Nome guard',
             'help' => 'Nome del guard di autenticazione',
         ],
         'active' => [
             'label' => 'Attivo',
             'placeholder' => 'Stato attivo',
+=======
+            'placeholder' => '',
+            'help' => 'Nome del guard di autenticazione',
+        ],
+    ],
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Utente',
+            'icon' => 'heroicon-o-plus',
+            'tooltip' => 'Crea un nuovo utente',
+        ],
+        'edit' => [
+            'label' => 'Modifica Utente',
+            'icon' => 'heroicon-o-pencil',
+            'tooltip' => 'Modifica i dati dell\'utente',
+        ],
+=======
+        'active' => [
+            'label' => 'Attivo',
+            'placeholder' => '',
+>>>>>>> a291521 (.)
             'help' => 'Indica se il record è attivo',
         ],
     ],
@@ -218,16 +279,20 @@ return [
             'label' => 'Crea Utente',
             'icon' => 'heroicon-o-plus',
             'tooltip' => 'Crea un nuovo utente',
+<<<<<<< HEAD
             'modal' => [
                 'heading' => 'Crea Nuovo Utente',
                 'description' => 'Inserisci i dati per creare un nuovo utente',
             ],
             'success' => 'Utente creato con successo',
             'error' => 'Errore durante la creazione dell\'utente',
+=======
+>>>>>>> a291521 (.)
         ],
         'edit' => [
             'label' => 'Modifica Utente',
             'icon' => 'heroicon-o-pencil',
+<<<<<<< HEAD
             'tooltip' => 'Modifica i dati dell\'utente',
             'modal' => [
                 'heading' => 'Modifica Utente',
@@ -236,10 +301,16 @@ return [
             'success' => 'Utente modificato con successo',
             'error' => 'Errore durante la modifica dell\'utente',
         ],
+=======
+            'tooltip' => 'Modifica l\'utente',
+        ],
+>>>>>>> 42fc572 (.)
+>>>>>>> a291521 (.)
         'delete' => [
             'label' => 'Elimina Utente',
             'icon' => 'heroicon-o-trash',
             'tooltip' => 'Elimina l\'utente',
+<<<<<<< HEAD
             'modal' => [
                 'heading' => 'Elimina Utente',
                 'description' => 'Sei sicuro di voler eliminare questo utente? Questa azione è irreversibile.',
@@ -247,20 +318,26 @@ return [
             'confirmation' => 'Sei sicuro di voler eliminare questo utente?',
             'success' => 'Utente eliminato con successo',
             'error' => 'Errore durante l\'eliminazione dell\'utente',
+=======
+>>>>>>> a291521 (.)
         ],
         'view' => [
             'label' => 'Visualizza Utente',
             'icon' => 'heroicon-o-eye',
             'tooltip' => 'Visualizza i dettagli dell\'utente',
+<<<<<<< HEAD
             'modal' => [
                 'heading' => 'Dettagli Utente',
                 'description' => 'Visualizza le informazioni complete dell\'utente',
             ],
+=======
+>>>>>>> a291521 (.)
         ],
         'impersonate' => [
             'label' => 'Impersona Utente',
             'icon' => 'heroicon-o-user-circle',
             'tooltip' => 'Accedi come questo utente',
+<<<<<<< HEAD
             'modal' => [
                 'heading' => 'Impersona Utente',
                 'description' => 'Sei sicuro di voler impersonare questo utente?',
@@ -268,18 +345,24 @@ return [
             'confirmation' => 'Sei sicuro di voler impersonare questo utente?',
             'success' => 'Impersonificazione avviata con successo',
             'error' => 'Errore durante l\'impersonificazione',
+=======
+>>>>>>> a291521 (.)
         ],
         'stop_impersonating' => [
             'label' => 'Termina Impersonificazione',
             'icon' => 'heroicon-o-arrow-left',
             'tooltip' => 'Torna al tuo account',
+<<<<<<< HEAD
             'success' => 'Impersonificazione terminata con successo',
             'error' => 'Errore durante la terminazione dell\'impersonificazione',
+=======
+>>>>>>> a291521 (.)
         ],
         'block' => [
             'label' => 'Blocca',
             'icon' => 'heroicon-o-lock-closed',
             'tooltip' => 'Blocca l\'utente',
+<<<<<<< HEAD
             'modal' => [
                 'heading' => 'Blocca Utente',
                 'description' => 'Sei sicuro di voler bloccare questo utente?',
@@ -287,11 +370,14 @@ return [
             'confirmation' => 'Sei sicuro di voler bloccare questo utente?',
             'success' => 'Utente bloccato con successo',
             'error' => 'Errore durante il blocco dell\'utente',
+=======
+>>>>>>> a291521 (.)
         ],
         'unblock' => [
             'label' => 'Sblocca',
             'icon' => 'heroicon-o-lock-open',
             'tooltip' => 'Sblocca l\'utente',
+<<<<<<< HEAD
             'modal' => [
                 'heading' => 'Sblocca Utente',
                 'description' => 'Sei sicuro di voler sbloccare questo utente?',
@@ -299,22 +385,28 @@ return [
             'confirmation' => 'Sei sicuro di voler sbloccare questo utente?',
             'success' => 'Utente sbloccato con successo',
             'error' => 'Errore durante lo sblocco dell\'utente',
+=======
+>>>>>>> a291521 (.)
         ],
         'send_reset_link' => [
             'label' => 'Invia Link Reset Password',
             'icon' => 'heroicon-o-envelope',
             'tooltip' => 'Invia link per reset password',
+<<<<<<< HEAD
             'modal' => [
                 'heading' => 'Invia Link Reset Password',
                 'description' => 'Invia un link per reimpostare la password all\'utente',
             ],
             'success' => 'Link reset password inviato con successo',
             'error' => 'Errore durante l\'invio del link reset',
+=======
+>>>>>>> a291521 (.)
         ],
         'verify_email' => [
             'label' => 'Verifica Email',
             'icon' => 'heroicon-o-check-circle',
             'tooltip' => 'Verifica l\'email dell\'utente',
+<<<<<<< HEAD
             'modal' => [
                 'heading' => 'Verifica Email',
                 'description' => 'Sei sicuro di voler verificare l\'email di questo utente?',
@@ -322,22 +414,28 @@ return [
             'confirmation' => 'Sei sicuro di voler verificare l\'email di questo utente?',
             'success' => 'Email verificata con successo',
             'error' => 'Errore durante la verifica dell\'email',
+=======
+>>>>>>> a291521 (.)
         ],
         'attach' => [
             'label' => 'Collega',
             'icon' => 'heroicon-o-link',
             'tooltip' => 'Collega record',
+<<<<<<< HEAD
             'modal' => [
                 'heading' => 'Collega Record',
                 'description' => 'Collega questo record a un altro elemento',
             ],
             'success' => 'Record collegato con successo',
             'error' => 'Errore durante il collegamento del record',
+=======
+>>>>>>> a291521 (.)
         ],
         'detach' => [
             'label' => 'Scollega',
             'icon' => 'heroicon-o-link-slash',
             'tooltip' => 'Scollega record',
+<<<<<<< HEAD
             'modal' => [
                 'heading' => 'Scollega Record',
                 'description' => 'Sei sicuro di voler scollegare questo record?',
@@ -345,11 +443,14 @@ return [
             'confirmation' => 'Sei sicuro di voler scollegare questo record?',
             'success' => 'Record scollegato con successo',
             'error' => 'Errore durante lo scollegamento del record',
+=======
+>>>>>>> a291521 (.)
         ],
         'activate' => [
             'label' => 'Attiva',
             'icon' => 'heroicon-o-check',
             'tooltip' => 'Attiva l\'utente',
+<<<<<<< HEAD
             'modal' => [
                 'heading' => 'Attiva Utente',
                 'description' => 'Sei sicuro di voler attivare questo utente?',
@@ -357,11 +458,14 @@ return [
             'confirmation' => 'Sei sicuro di voler attivare questo utente?',
             'success' => 'Utente attivato con successo',
             'error' => 'Errore durante l\'attivazione dell\'utente',
+=======
+>>>>>>> a291521 (.)
         ],
         'deactivate' => [
             'label' => 'Disattiva',
             'icon' => 'heroicon-o-x-circle',
             'tooltip' => 'Disattiva l\'utente',
+<<<<<<< HEAD
             'modal' => [
                 'heading' => 'Disattiva Utente',
                 'description' => 'Sei sicuro di voler disattivare questo utente?',
@@ -369,6 +473,8 @@ return [
             'confirmation' => 'Sei sicuro di voler disattivare questo utente?',
             'success' => 'Utente disattivato con successo',
             'error' => 'Errore durante la disattivazione dell\'utente',
+=======
+>>>>>>> a291521 (.)
         ],
     ],
     'messages' => [
@@ -507,6 +613,11 @@ return [
         'logout_error' => 'Errore durante il logout',
         'logout_title' => 'Conferma Logout',
         'logout_confirmation' => 'Sei sicuro di voler uscire?',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 42fc572 (.)
+>>>>>>> a291521 (.)
     ],
     'profile' => [
         'profile' => 'Profilo',
@@ -558,6 +669,16 @@ return [
         'line2' => 'Se non hai creato un account, non è necessaria alcuna azione',
         'salutation' => 'Cordiali saluti, :app_name',
     ],
+<<<<<<< HEAD
+=======
+    'model' => [
+        'label' => 'Utente',
+        'plural' => 'Utenti',
+        'description' => 'Gestione degli utenti del sistema',
+    ],
+=======
+>>>>>>> 42fc572 (.)
+>>>>>>> a291521 (.)
     'filters' => [
         'status' => [
             'label' => 'Per Stato',
@@ -580,6 +701,7 @@ return [
         'activate_selected' => [
             'label' => 'Attiva Selezionati',
             'icon' => 'heroicon-o-check',
+<<<<<<< HEAD
             'modal' => [
                 'heading' => 'Attiva Utenti Selezionati',
                 'description' => 'Sei sicuro di voler attivare gli utenti selezionati?',
@@ -587,10 +709,13 @@ return [
             'confirmation' => 'Sei sicuro di voler attivare gli utenti selezionati?',
             'success' => 'Utenti attivati con successo',
             'error' => 'Errore durante l\'attivazione degli utenti',
+=======
+>>>>>>> a291521 (.)
         ],
         'deactivate_selected' => [
             'label' => 'Disattiva Selezionati',
             'icon' => 'heroicon-o-x-circle',
+<<<<<<< HEAD
             'modal' => [
                 'heading' => 'Disattiva Utenti Selezionati',
                 'description' => 'Sei sicuro di voler disattivare gli utenti selezionati?',
@@ -598,10 +723,13 @@ return [
             'confirmation' => 'Sei sicuro di voler disattivare gli utenti selezionati?',
             'success' => 'Utenti disattivati con successo',
             'error' => 'Errore durante la disattivazione degli utenti',
+=======
+>>>>>>> a291521 (.)
         ],
         'delete_selected' => [
             'label' => 'Elimina Selezionati',
             'icon' => 'heroicon-o-trash',
+<<<<<<< HEAD
             'modal' => [
                 'heading' => 'Elimina Utenti Selezionati',
                 'description' => 'Sei sicuro di voler eliminare gli utenti selezionati? Questa azione è irreversibile.',
@@ -609,10 +737,13 @@ return [
             'confirmation' => 'Sei sicuro di voler eliminare gli utenti selezionati?',
             'success' => 'Utenti eliminati con successo',
             'error' => 'Errore durante l\'eliminazione degli utenti',
+=======
+>>>>>>> a291521 (.)
         ],
         'block_selected' => [
             'label' => 'Blocca Selezionati',
             'icon' => 'heroicon-o-lock-closed',
+<<<<<<< HEAD
             'modal' => [
                 'heading' => 'Blocca Utenti Selezionati',
                 'description' => 'Sei sicuro di voler bloccare gli utenti selezionati?',
@@ -620,10 +751,13 @@ return [
             'confirmation' => 'Sei sicuro di voler bloccare gli utenti selezionati?',
             'success' => 'Utenti bloccati con successo',
             'error' => 'Errore durante il blocco degli utenti',
+=======
+>>>>>>> a291521 (.)
         ],
         'unblock_selected' => [
             'label' => 'Sblocca Selezionati',
             'icon' => 'heroicon-o-lock-open',
+<<<<<<< HEAD
             'modal' => [
                 'heading' => 'Sblocca Utenti Selezionati',
                 'description' => 'Sei sicuro di voler sbloccare gli utenti selezionati?',
@@ -631,6 +765,8 @@ return [
             'confirmation' => 'Sei sicuro di voler sbloccare gli utenti selezionati?',
             'success' => 'Utenti sbloccati con successo',
             'error' => 'Errore durante lo sblocco degli utenti',
+=======
+>>>>>>> a291521 (.)
         ],
     ],
     'notifications' => [
@@ -641,6 +777,7 @@ return [
         'email_verified' => 'Email verificata con successo',
         'otp_sent' => 'Codice OTP inviato',
         'error' => 'Si è verificato un errore',
+<<<<<<< HEAD
         'success' => 'Operazione completata con successo',
         'warning' => 'Attenzione',
         'info' => 'Informazione',
@@ -671,6 +808,13 @@ return [
     ],
     'search_placeholder' => 'Cerca per nome, email o ruolo...',
 ];
+=======
+    ],
+    'search_placeholder' => 'Cerca per nome, email o ruolo...',
+];
+
+>>>>>>> 42fc572 (.)
+>>>>>>> a291521 (.)
 =======
 return array (
   'navigation' => 
@@ -1356,4 +1500,8 @@ return array (
   ),
   'search_placeholder' => 'Cerca per nome, email o ruolo...',
 );
+<<<<<<< HEAD
 >>>>>>> 48bb11d (.)
+=======
+>>>>>>> 199538c (.)
+>>>>>>> a291521 (.)

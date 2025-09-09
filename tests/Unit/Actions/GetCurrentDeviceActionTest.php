@@ -13,7 +13,6 @@ use Tests\TestCase;
 
 class GetCurrentDeviceActionTest extends TestCase
 {
-    use RefreshDatabase;
 
     private GetCurrentDeviceAction $action;
 

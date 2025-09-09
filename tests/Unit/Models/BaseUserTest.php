@@ -3,12 +3,17 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace Modules\User\Tests\Unit\Models\BaseUserTest;
 
 namespace Modules\User\Tests\Unit\Models;
 
 
 =======
+=======
+namespace Modules\User\Tests\Unit\Models\BaseUserTest;
+
+>>>>>>> a291521 (.)
 namespace Modules\User\Tests\Unit\Models;
 
 use Illuminate\Database\Eloquent\Model;

@@ -3,6 +3,9 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a291521 (.)
 namespace Modules\User\Tests\Unit\PermissionTest;
 
 namespace Modules\User\Tests\Unit\Widgets;

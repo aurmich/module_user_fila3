@@ -16,9 +16,12 @@ use Illuminate\Support\Carbon;
 use Modules\User\Database\Factories\AuthenticationFactory;
 
 /**
+<<<<<<< HEAD
  * Authentication Model
  * 
 >>>>>>> 48bb11d (.)
+=======
+>>>>>>> a291521 (.)
  * Tracks user authentication attempts and sessions.
  *
  * @property int $id
@@ -35,9 +38,13 @@ use Modules\User\Database\Factories\AuthenticationFactory;
  * @property Carbon|null $updated_at When the record was last updated
  * @property-read Model|\Eloquent $authenticatable The authenticatable model instance
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 48bb11d (.)
+=======
+
+>>>>>>> a291521 (.)
  * @method static Builder<static>|Authentication newModelQuery()
  * @method static Builder<static>|Authentication newQuery()
  * @method static Builder<static>|Authentication query()
@@ -54,9 +61,13 @@ use Modules\User\Database\Factories\AuthenticationFactory;
  * @method static Builder<static>|Authentication whereAuthenticatableType($value)
  * @method static Builder<static>|Authentication whereAuthenticatableId($value)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
  * @mixin IdeHelperAuthentication
 =======
+=======
+
+>>>>>>> a291521 (.)
  * @mixin IdeHelperAuthentication
  * @method static \Modules\User\Database\Factories\AuthenticationFactory factory($count = null, $state = [])
 >>>>>>> 48bb11d (.)
