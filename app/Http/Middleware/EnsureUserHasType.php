@@ -34,8 +34,13 @@ class EnsureUserHasType
         if ($userTypeValue !== $type) {
 =======
         
+<<<<<<< HEAD
         if ($request->user()?->type->value !== $type) {
 >>>>>>> 4b721437 (.)
+=======
+        $user = $request->user();
+        if ($user === null || (isset($user->type->value) && $user->type->value !== $type)) {
+>>>>>>> 44c1616b (.)
             // Redirect...
             return redirect()->route('home');
         }
