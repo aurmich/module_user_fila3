@@ -9,10 +9,14 @@ Trovati 64 errori al livello 1.
 ## Errori e suggerimenti
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/Auth/BaseAuthWidget.php`
 =======
 ### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/BaseAuthWidget.php`
 >>>>>>> 4b721437 (.)
+=======
+### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/Auth/BaseAuthWidget.php`
+>>>>>>> f068de88 (.)
 
 #### Linea 20: Access to an undefined property Modules\User\Filament\Widgets\Auth\BaseAuthWidget::$form.
 
@@ -31,10 +35,14 @@ Trovati 64 errori al livello 1.
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/Auth/ForgotPasswordWidget.php`
 =======
 ### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/ForgotPasswordWidget.php`
 >>>>>>> 4b721437 (.)
+=======
+### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/Auth/ForgotPasswordWidget.php`
+>>>>>>> f068de88 (.)
 
 #### Linea 36: Access to an undefined property Modules\User\Filament\Widgets\Auth\ForgotPasswordWidget::$form.
 
@@ -45,10 +53,14 @@ Trovati 64 errori al livello 1.
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/Auth/LoginWidget.php`
 =======
 ### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/LoginWidget.php`
 >>>>>>> 4b721437 (.)
+=======
+### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/Auth/LoginWidget.php`
+>>>>>>> f068de88 (.)
 
 #### Linea 25: Access to an undefined property Modules\User\App\Filament\Widgets\Auth\LoginWidget::$form.
 
@@ -67,10 +79,14 @@ Trovati 64 errori al livello 1.
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/Auth/RegisterWidget.php`
 =======
 ### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/RegisterWidget.php`
 >>>>>>> 4b721437 (.)
+=======
+### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/Auth/RegisterWidget.php`
+>>>>>>> f068de88 (.)
 
 #### Linea 22: Access to an undefined property Modules\User\App\Filament\Widgets\Auth\RegisterWidget::$form.
 
@@ -89,10 +105,14 @@ Trovati 64 errori al livello 1.
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/Auth/ResetPasswordWidget.php`
 =======
 ### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/ResetPasswordWidget.php`
 >>>>>>> 4b721437 (.)
+=======
+### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/Auth/ResetPasswordWidget.php`
+>>>>>>> f068de88 (.)
 
 #### Linea 54: Access to an undefined property Modules\User\Filament\Widgets\Auth\ResetPasswordWidget::$form.
 
@@ -103,10 +123,14 @@ Trovati 64 errori al livello 1.
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Models/BaseUser.php`
 =======
 ### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/BaseUser.php`
 >>>>>>> 4b721437 (.)
+=======
+### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Models/BaseUser.php`
+>>>>>>> f068de88 (.)
 
 #### Linea 229: Call to an undefined method Modules\User\Models\BaseUser<TModel of Illuminate\Database\Eloquent\Model, TRelatedModel of Illuminate\Database\Eloquent\Model>::hasRole().
 
@@ -413,10 +437,14 @@ Trovati 64 errori al livello 1.
 - Se ci sono errori di digitazione nel nome del metodo
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Models/Traits/HasAuthenticationLogTrait.php (in context of class Modules\User\Models\BaseUser)`
 =======
 ### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/Traits/HasAuthenticationLogTrait.php (in context of class Modules\User\Models\BaseUser)`
 >>>>>>> 4b721437 (.)
+=======
+### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Models/Traits/HasAuthenticationLogTrait.php (in context of class Modules\User\Models\BaseUser)`
+>>>>>>> f068de88 (.)
 
 #### Linea 72: Call to an undefined method Modules\User\Models\BaseUser<TModel of Illuminate\Database\Eloquent\Model, TRelatedModel of Illuminate\Database\Eloquent\Model>::authentications().
 
@@ -483,10 +511,14 @@ Trovati 64 errori al livello 1.
 - Se ci sono errori di digitazione nel nome del metodo
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Models/Traits/HasTeams.php (in context of class Modules\User\Models\BaseUser)`
 =======
 ### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/Traits/HasTeams.php (in context of class Modules\User\Models\BaseUser)`
 >>>>>>> 4b721437 (.)
+=======
+### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Models/Traits/HasTeams.php (in context of class Modules\User\Models\BaseUser)`
+>>>>>>> f068de88 (.)
 
 #### Linea 35: Access to an undefined property Modules\User\Models\BaseUser<TModel of Illuminate\Database\Eloquent\Model, TRelatedModel of Illuminate\Database\Eloquent\Model>::$currentTeam.
 
@@ -553,10 +585,14 @@ Trovati 64 errori al livello 1.
 - Se ci sono errori di digitazione nel nome del metodo
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Models/Traits/HasTenants.php (in context of class Modules\User\Models\BaseUser)`
 =======
 ### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/Traits/HasTenants.php (in context of class Modules\User\Models\BaseUser)`
 >>>>>>> 4b721437 (.)
+=======
+### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Models/Traits/HasTenants.php (in context of class Modules\User\Models\BaseUser)`
+>>>>>>> f068de88 (.)
 
 #### Linea 27: Call to an undefined method Modules\User\Models\BaseUser<TModel of Illuminate\Database\Eloquent\Model, TRelatedModel of Illuminate\Database\Eloquent\Model>::tenants().
 

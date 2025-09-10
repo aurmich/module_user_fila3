@@ -116,10 +116,14 @@ I componenti `FileUpload` si aspettano array:
 ### Comandi Test
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
 =======
 cd /var/www/html/_bases/base_saluteora/laravel
 >>>>>>> 4b721437 (.)
+=======
+cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
+>>>>>>> f068de88 (.)
 php artisan test --filter=RegistrationWidget
 ./vendor/bin/phpstan analyze Modules/User/app/Filament/Widgets/RegistrationWidget.php --level=9
 ```

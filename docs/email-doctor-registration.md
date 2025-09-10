@@ -382,10 +382,14 @@ Questo URL viene incluso nell'email solo se la moderazione è stata approvata.
 Il template dell'email si trova in:
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Patient/resources/views/emails/doctor-registration-moderated.blade.php
 =======
 /var/www/html/saluteora/laravel/Modules/Patient/resources/views/emails/doctor-registration-moderated.blade.php
 >>>>>>> 4b721437 (.)
+=======
+/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Patient/resources/views/emails/doctor-registration-moderated.blade.php
+>>>>>>> f068de88 (.)
 ```
 
 Il template visualizza:
@@ -441,10 +445,14 @@ Il processo di registrazione iniziale del dottore utilizza il widget di registra
 
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php
 =======
 /var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php
 >>>>>>> 4b721437 (.)
+=======
+/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php
+>>>>>>> f068de88 (.)
 ```
 
 Questo widget è progettato per gestire la registrazione di diversi tipi di utenti, non solo i dottori. Per maggiori dettagli sul funzionamento del widget e su come completarlo correttamente, consultare la [documentazione del widget di registrazione](./registration-widget.md).

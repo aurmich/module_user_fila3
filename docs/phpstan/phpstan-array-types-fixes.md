@@ -3,10 +3,14 @@
 ## 🚨 REGOLA CRITICA RISPETTATA 🚨
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 **NON è stato modificato** `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/phpstan.neon`
 =======
 **NON è stato modificato** `/var/www/html/_bases/base_saluteora/laravel/phpstan.neon`
 >>>>>>> 4b721437 (.)
+=======
+**NON è stato modificato** `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/phpstan.neon`
+>>>>>>> f068de88 (.)
 
 ## Problema Identificato
 

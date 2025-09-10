@@ -162,10 +162,14 @@ protected function createTestUser(): mixed
 1. **Widget Auth**: Tutti i widget in `app/Filament/Widgets/Auth/`
 2. **Test Files**: Tutti i test che usano User diretto
 <<<<<<< HEAD
+<<<<<<< HEAD
 3. **Documentation**: Rimuovere path hardcoded tipo `/var/www/html/_bases/base_techplanner_fila3_mono/`
 =======
 3. **Documentation**: Rimuovere path hardcoded tipo `/var/www/html/saluteora/`
 >>>>>>> 4b721437 (.)
+=======
+3. **Documentation**: Rimuovere path hardcoded tipo `/var/www/html/_bases/base_techplanner_fila3_mono/`
+>>>>>>> f068de88 (.)
 
 ### 3. Trait e STI Optimization (IMPORTANTE - 1 giorno)
 
