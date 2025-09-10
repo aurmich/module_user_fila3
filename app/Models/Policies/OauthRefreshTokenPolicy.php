@@ -4,16 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
-<<<<<<< HEAD
-use Modules\Xot\Contracts\UserContract;
-use Modules\User\Models\OauthRefreshToken;
-
-class OauthRefreshTokenPolicy extends UserBasePolicy
-{
-    
-}
-
-=======
 use Modules\User\Models\OauthRefreshToken;
 use Modules\Xot\Contracts\UserContract;
 
@@ -80,4 +70,3 @@ class OauthRefreshTokenPolicy extends UserBasePolicy
                $user->hasRole('super-admin');
     }
 }
->>>>>>> 4b721437 (.)

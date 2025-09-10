@@ -4,14 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
-<<<<<<< HEAD
-use Modules\Xot\Contracts\UserContract;
-use Modules\User\Models\OauthAuthCode;
-
-class OauthAuthCodePolicy extends UserBasePolicy
-{
-
-=======
 use Modules\User\Models\OauthAuthCode;
 use Modules\Xot\Contracts\UserContract;
 
@@ -77,5 +69,4 @@ class OauthAuthCodePolicy extends UserBasePolicy
         return $user->hasPermissionTo('oauth-auth-code.force-delete') ||
                $user->hasRole('super-admin');
     }
->>>>>>> 4b721437 (.)
 }

@@ -6,92 +6,52 @@ return [
             'label' => 'First Name',
             'placeholder' => 'Enter your first name',
             'tooltip' => 'Enter your first name',
-<<<<<<< HEAD
-            'help' => 'Enter your first name',
-=======
->>>>>>> 4b721437 (.)
         ],
         'last_name' => [
             'label' => 'Last Name',
             'placeholder' => 'Enter your last name',
             'tooltip' => 'Enter your last name',
-<<<<<<< HEAD
-            'help' => 'Enter your last name',
-=======
->>>>>>> 4b721437 (.)
         ],
         'email' => [
             'label' => 'Email',
             'placeholder' => 'Enter your email',
             'tooltip' => 'Enter a valid email address',
-<<<<<<< HEAD
-            'help' => 'Enter your email address',
-=======
->>>>>>> 4b721437 (.)
         ],
         'phone' => [
             'label' => 'Phone',
             'placeholder' => 'Enter your phone number',
             'tooltip' => 'Enter a valid phone number',
-<<<<<<< HEAD
-            'help' => 'Enter your phone number',
-=======
->>>>>>> 4b721437 (.)
         ],
         'address' => [
             'label' => 'Address',
             'placeholder' => 'Enter your address',
             'tooltip' => 'Enter your residential address',
-<<<<<<< HEAD
-            'help' => 'Enter your address',
-=======
->>>>>>> 4b721437 (.)
         ],
         'city' => [
             'label' => 'City',
             'placeholder' => 'Enter your city',
             'tooltip' => 'Enter your city of residence',
-<<<<<<< HEAD
-            'help' => 'Enter your city',
-=======
->>>>>>> 4b721437 (.)
         ],
         'postal_code' => [
             'label' => 'Postal Code',
             'placeholder' => 'Enter postal code',
             'tooltip' => 'Enter your postal code',
-<<<<<<< HEAD
-            'help' => 'Enter postal code',
-=======
->>>>>>> 4b721437 (.)
         ],
         'province' => [
             'label' => 'Province',
             'placeholder' => 'Enter province',
             'tooltip' => 'Enter your province of residence',
-<<<<<<< HEAD
-            'help' => 'Enter province',
-=======
->>>>>>> 4b721437 (.)
         ],
         'country' => [
             'label' => 'Country',
             'placeholder' => 'Enter country',
             'tooltip' => 'Enter your country of residence',
             'default' => 'Italy',
-<<<<<<< HEAD
-            'help' => 'Enter your country of residence',
-=======
->>>>>>> 4b721437 (.)
         ],
         'password' => [
             'label' => 'Password',
             'placeholder' => 'Enter your password',
             'tooltip' => 'Password must be at least 8 characters long',
-<<<<<<< HEAD
-            'help' => 'Enter your password',
-=======
->>>>>>> 4b721437 (.)
         ],
         'password_confirmation' => [
             'label' => 'Confirm Password',
@@ -105,10 +65,6 @@ return [
         'newsletter' => [
             'label' => 'Subscribe to newsletter',
             'tooltip' => 'Receive updates and news via email',
-<<<<<<< HEAD
-            'help' => 'Confirm your password',
-=======
->>>>>>> 4b721437 (.)
         ],
     ],
     'buttons' => [

@@ -9,9 +9,6 @@ use Modules\Xot\Contracts\UserContract as Post;
 
 class PermissionPolicy extends UserBasePolicy
 {
-<<<<<<< HEAD
-    
-=======
     /**
      * Determine whether the user can view any models.
      */
@@ -52,5 +49,4 @@ class PermissionPolicy extends UserBasePolicy
         // return $user->ownsTeam($team);
         return true;
     }
->>>>>>> 4b721437 (.)
 }

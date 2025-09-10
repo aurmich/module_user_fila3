@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Correzioni PHPStan Livello 7 - Modulo User
 
 Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo User e le relative soluzioni implementate.
@@ -51,7 +50,6 @@ Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` ut
 
 ---
 
-=======
 # PHPStan Fixes and Type System Improvements
 
 ## Overview
@@ -236,4 +234,3 @@ After applying fixes:
 - Safe functions provide exception-throwing alternatives to standard PHP functions
 - All Filament components should extend XotBase classes for consistency
 - Type system improvements enhance code reliability and maintainability 
->>>>>>> 4b721437 (.)

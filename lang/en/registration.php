@@ -8,133 +8,82 @@ return [
             'label' => 'First Name',
             'placeholder' => 'Enter your first name',
             'tooltip' => 'Enter your first name',
-<<<<<<< HEAD
-            'help' => 'Enter your first name',
-=======
->>>>>>> 4b721437 (.)
         ],
         'last_name' => [
             'label' => 'Last Name',
             'placeholder' => 'Enter your last name',
             'tooltip' => 'Enter your last name',
-<<<<<<< HEAD
-            'help' => 'Enter your last name',
-=======
             'help' => 'Your family name',
->>>>>>> 4b721437 (.)
         ],
         'email' => [
             'label' => 'Email',
             'placeholder' => 'Enter your email',
             'tooltip' => 'Enter a valid email address',
-<<<<<<< HEAD
-            'help' => 'Enter your email address',
-=======
             'help' => 'Valid email address you will use to sign in',
->>>>>>> 4b721437 (.)
         ],
         'phone' => [
             'label' => 'Phone',
             'placeholder' => 'Enter your phone number',
             'tooltip' => 'Enter a valid phone number',
-<<<<<<< HEAD
-            'help' => 'Enter your phone number',
-=======
             'help' => 'Phone number to be contacted',
->>>>>>> 4b721437 (.)
         ],
         'address' => [
             'label' => 'Address',
             'placeholder' => 'Enter your address',
             'tooltip' => 'Enter your residential address',
-<<<<<<< HEAD
-            'help' => 'Enter your address',
-=======
             'help' => 'Street and house number of residence',
->>>>>>> 4b721437 (.)
         ],
         'city' => [
             'label' => 'City',
             'placeholder' => 'Enter your city',
-<<<<<<< HEAD
-            'tooltip' => 'Enter your city of residence',
-            'help' => 'Enter your city',
-=======
             'tooltip' => 'City of residence or location',
             'helper_text' => 'Enter the name of the city where you reside or are located',
             'description' => 'Field to specify the user\'s city of residence for registration',
             'icon' => 'heroicon-o-map-pin',
             'color' => 'primary',
->>>>>>> 4b721437 (.)
         ],
         'postal_code' => [
             'label' => 'Postal Code',
             'placeholder' => 'Enter postal code',
             'tooltip' => 'Enter your postal code',
-<<<<<<< HEAD
-            'help' => 'Enter postal code',
-=======
->>>>>>> 4b721437 (.)
         ],
         'province' => [
             'label' => 'Province',
             'placeholder' => 'Enter province',
-<<<<<<< HEAD
-            'tooltip' => 'Enter your province of residence',
-            'help' => 'Enter province',
-=======
             'tooltip' => 'Province of residence or state',
             'helper_text' => 'Enter the name of your province or state of residence',
             'description' => 'Field to specify the user\'s province or state for registration and location purposes',
             'icon' => 'heroicon-o-map',
             'color' => 'secondary',
->>>>>>> 4b721437 (.)
         ],
         'country' => [
             'label' => 'Country',
             'placeholder' => 'Enter country',
             'tooltip' => 'Enter your country of residence',
             'default' => 'Italy',
-<<<<<<< HEAD
-            'help' => 'Enter your country of residence',
-=======
             'help' => 'Country of residence',
->>>>>>> 4b721437 (.)
         ],
         'password' => [
             'label' => 'Password',
             'placeholder' => 'Enter your password',
             'tooltip' => 'Password must be at least 8 characters long',
-<<<<<<< HEAD
-            'help' => 'Enter your password',
-=======
             'help' => 'At least 8 characters with letters, numbers, and symbols',
->>>>>>> 4b721437 (.)
         ],
         'password_confirmation' => [
             'label' => 'Confirm Password',
             'placeholder' => 'Confirm your password',
             'tooltip' => 'Re-enter your password for confirmation',
-<<<<<<< HEAD
-=======
             'help' => 'Re-enter the password to confirm it',
->>>>>>> 4b721437 (.)
         ],
         'terms' => [
             'label' => 'I accept the terms and conditions',
             'tooltip' => 'You must accept the terms and conditions to proceed',
-<<<<<<< HEAD
-=======
             'placeholder' => 'Accept the terms and conditions',
             'help' => 'You must accept the terms and conditions to continue',
->>>>>>> 4b721437 (.)
         ],
         'newsletter' => [
             'label' => 'Subscribe to newsletter',
             'tooltip' => 'Receive updates and news via email',
-<<<<<<< HEAD
-            'help' => 'Confirm your password',
-=======
         ],
         'name' => [
             'label' => 'Name',
@@ -253,7 +202,6 @@ return [
             'label' => 'Moderation Notes',
             'placeholder' => 'Moderator notes',
             'help' => 'Any notes by the moderation team',
->>>>>>> 4b721437 (.)
         ],
     ],
     'buttons' => [
@@ -263,11 +211,6 @@ return [
         'complete' => 'Complete Registration',
     ],
     'messages' => [
-<<<<<<< HEAD
-        'success' => 'Registration completed successfully!',
-        'error' => 'An error occurred during registration.',
-        'validation_error' => 'Please fill in all required fields to proceed.',
-=======
         'success' => [
             'registration' => 'Registration completed successfully! You will receive a confirmation email.',
             'step' => 'Step completed successfully',
@@ -285,7 +228,6 @@ return [
             'email_exists' => 'This email address is already registered',
             'validation' => 'Some fields contain errors; please review and try again',
         ],
->>>>>>> 4b721437 (.)
     ],
     'steps' => [
         'personal_data' => [
@@ -295,12 +237,9 @@ return [
         'contacts' => [
             'title' => 'Contacts and Address',
             'description' => 'Enter your contact information and address',
-<<<<<<< HEAD
-=======
             'label' => 'Contatti',
             'icon' => 'heroicon-o-phone',
             'help' => 'Fornisci i tuoi recapiti per essere contattato',
->>>>>>> 4b721437 (.)
         ],
         'isee' => [
             'title' => 'ISEE Data',
@@ -310,8 +249,6 @@ return [
             'title' => 'Confirm Data',
             'description' => 'Verify your information before completing registration',
         ],
-<<<<<<< HEAD
-=======
         'personal_info' => [
             'label' => 'Dati Personali',
             'description' => 'Inserisci i tuoi dati anagrafici personali',
@@ -408,6 +345,5 @@ return [
             'success' => 'Draft saved successfully',
             'error' => 'Error while saving the draft',
         ],
->>>>>>> 4b721437 (.)
     ],
 ];

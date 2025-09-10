@@ -9,10 +9,6 @@ use Modules\Xot\Contracts\UserContract;
 
 class PermissionUserPolicy extends UserBasePolicy
 {
-<<<<<<< HEAD
-}
-
-=======
     /**
      * Determine whether the user can view any models.
      */
@@ -74,4 +70,3 @@ class PermissionUserPolicy extends UserBasePolicy
                $user->hasRole('super-admin');
     }
 }
->>>>>>> 4b721437 (.)

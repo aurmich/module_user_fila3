@@ -9,9 +9,6 @@ use Modules\Xot\Contracts\UserContract;
 
 class OauthClientPolicy extends UserBasePolicy
 {
-<<<<<<< HEAD
-
-=======
     /**
      * Determine whether the user can view any models.
      */
@@ -73,5 +70,4 @@ class OauthClientPolicy extends UserBasePolicy
         return $user->hasPermissionTo('oauth-client.force-delete') ||
                $user->hasRole('super-admin');
     }
->>>>>>> 4b721437 (.)
 }

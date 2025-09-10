@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 # Widget Translation Rules -  Project
-=======
 # Widget Translation Rules - SaluteOra Project
->>>>>>> 4b721437 (.)
 
 ## Core Principles
 
@@ -187,17 +184,14 @@ protected static string $view = 'user::widgets.edit-user';
 
 ## Related Documentation
 
-<<<<<<< HEAD
 - [User Module Widget Structure](../Modules/User/project_docs/widgets_structure.md)
 - [EditUserWidget Documentation](../Modules/User/project_docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../Modules/User/project_docs/widgets/translation-guidelines.md)
 - [Filament Widget Conventions](../Modules/Xot/project_docs/filament-widgets.md)
-=======
 - [User Module Widget Structure](../Modules/User/docs/widgets_structure.md)
 - [EditUserWidget Documentation](../Modules/User/docs/widgets/edit-user-widget.md)
 - [Widget Translation Guidelines](../Modules/User/docs/widgets/translation-guidelines.md)
 - [Filament Widget Conventions](../Modules/Xot/docs/filament-widgets.md)
->>>>>>> 4b721437 (.)
 
 ## Memory Integration
 
@@ -207,8 +201,5 @@ This document serves as a reference for:
 - Code quality requirements
 - Documentation standards
 
-<<<<<<< HEAD
 All widget development should follow these rules to maintain consistency and quality across the  project.
-=======
 All widget development should follow these rules to maintain consistency and quality across the SaluteOra project.
->>>>>>> 4b721437 (.)

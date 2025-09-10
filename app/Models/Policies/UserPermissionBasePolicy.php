@@ -16,11 +16,6 @@ use Modules\Xot\Contracts\UserContract;
 
 // use Modules\Xot\Datas\XotData;
 
-<<<<<<< HEAD
-abstract class UserPermissionBasePolicy extends UserBasePolicy
-{
-   
-=======
 abstract class UserPermissionBasePolicy
 {
     use HandlesAuthorization;
@@ -50,5 +45,4 @@ abstract class UserPermissionBasePolicy
 
         return null;
     }
->>>>>>> 4b721437 (.)
 }

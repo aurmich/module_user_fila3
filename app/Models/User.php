@@ -110,11 +110,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereType($value)
  * @mixin IdeHelperUser
-<<<<<<< HEAD
- * @property string $surname
- * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereSurname($value)
-=======
->>>>>>> 4b721437 (.)
  * @mixin \Eloquent
  */
 class User extends BaseUser

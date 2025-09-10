@@ -187,11 +187,8 @@ Il template Blade associato al componente Volt dovrebbe gestire i diversi stati 
 
 ## Chiavi di Traduzione
 
-<<<<<<< HEAD
 Le chiavi di traduzione per il processo di logout devono seguire la struttura gerarchica definita nelle best practices di :
-=======
 Le chiavi di traduzione per il processo di logout devono seguire la struttura gerarchica definita nelle best practices di SaluteOra:
->>>>>>> 4b721437 (.)
 
 ```php
 'logout' => [

@@ -9,9 +9,6 @@ use Modules\Xot\Contracts\UserContract;
 
 class DeviceUserPolicy extends UserBasePolicy
 {
-<<<<<<< HEAD
-
-=======
     /**
      * Determine whether the user can view any models.
      */
@@ -73,5 +70,4 @@ class DeviceUserPolicy extends UserBasePolicy
         return $user->hasPermissionTo('device-user.force-delete') ||
                $user->hasRole('super-admin');
     }
->>>>>>> 4b721437 (.)
 }

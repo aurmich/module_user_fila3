@@ -8,10 +8,6 @@ use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Collection;
-<<<<<<< HEAD
-use Modules\User\Contracts\TeamContract;
-=======
->>>>>>> 4b721437 (.)
 
 interface UserContract extends Authenticatable
 {

@@ -9,8 +9,6 @@ use Modules\Xot\Contracts\UserContract;
 
 class RoleHasPermissionPolicy extends UserBasePolicy
 {
-<<<<<<< HEAD
-=======
     /**
      * Determine whether the user can view any models.
      */
@@ -71,5 +69,4 @@ class RoleHasPermissionPolicy extends UserBasePolicy
         return $user->hasPermissionTo('role-has-permission.force-delete') ||
                $user->hasRole('super-admin');
     }
->>>>>>> 4b721437 (.)
 }

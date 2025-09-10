@@ -9,9 +9,6 @@ use Modules\Xot\Contracts\UserContract;
 
 class TeamPolicy extends UserBasePolicy
 {
-<<<<<<< HEAD
-
-=======
     /**
      * Determine whether the user can view any models.
      */
@@ -75,5 +72,4 @@ class TeamPolicy extends UserBasePolicy
     {
         return $user->ownsTeam($team);
     }
->>>>>>> 4b721437 (.)
 }
