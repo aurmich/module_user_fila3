@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 # LoginWidget Translation Audit - 2025-01-06
 
 ## Audit Overview
@@ -18,12 +13,6 @@ Il `LoginWidget` utilizzava le seguenti traduzioni nel namespace `user::messages
 // Traduzioni utilizzate nel LoginWidget
 __('user::messages.credentials_incorrect')
 __('user::messages.login_success')
-=======
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> d51888e (.)
->>>>>>> 9831a351 (.)
 # LoginWidget Translation Audit - Gennaio 2025
 
 ## Obiettivo
@@ -38,13 +27,6 @@ Il `LoginWidget` (`/Modules/User/app/Filament/Widgets/LoginWidget.php`) utilizza
 // Linee 112, 127, 146, 149, 155
 __('user::messages.credentials_incorrect')
 __('user::messages.login_success') 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 8a21b63 (.)
-=======
-=======
 # LoginWidget Translation Audit - 2025-01-06
 
 ## Audit Overview
@@ -60,20 +42,10 @@ Il `LoginWidget` utilizzava le seguenti traduzioni nel namespace `user::messages
 // Traduzioni utilizzate nel LoginWidget
 __('user::messages.credentials_incorrect')
 __('user::messages.login_success')
->>>>>>> a0c18bc (.)
->>>>>>> 8055579 (.)
-=======
->>>>>>> d51888e (.)
->>>>>>> 9831a351 (.)
 __('user::messages.validation_error')
 __('user::messages.login_error')
 ```
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ### File Mancante
 - **File**: `Modules/User/lang/{locale}/messages.php`
 - **Stato**: Non esisteva in nessuna lingua
@@ -86,12 +58,6 @@ __('user::messages.login_error')
 3. `laravel/Modules/User/lang/de/messages.php` - Traduzioni tedesche
 
 ### Struttura Implementata
-=======
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> d51888e (.)
->>>>>>> 9831a351 (.)
 ### Stato Pre-Audit
 - ❌ File `messages.php` **non esisteva** in nessuna lingua
 - ✅ File `auth.php` esistenti ma con chiavi diverse
@@ -103,13 +69,6 @@ __('user::messages.login_error')
 Creati i seguenti file di traduzione mancanti:
 
 #### Italiano (`/Modules/User/lang/it/messages.php`)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 8a21b63 (.)
-=======
-=======
 ### File Mancante
 - **File**: `Modules/User/lang/{locale}/messages.php`
 - **Stato**: Non esisteva in nessuna lingua
@@ -122,21 +81,11 @@ Creati i seguenti file di traduzione mancanti:
 3. `laravel/Modules/User/lang/de/messages.php` - Traduzioni tedesche
 
 ### Struttura Implementata
->>>>>>> a0c18bc (.)
->>>>>>> 8055579 (.)
-=======
->>>>>>> d51888e (.)
->>>>>>> 9831a351 (.)
 ```php
 return [
     // Messaggi di autenticazione per LoginWidget
     'credentials_incorrect' => 'Le credenziali inserite non sono corrette.',
     'login_success' => 'Accesso effettuato con successo.',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     'login_error' => 'Si è verificato un errore durante l\'accesso.',
     'validation_error' => 'Errore di validazione.',
     
@@ -243,12 +192,6 @@ Questo audit dimostra l'importanza di:
 4. **Collegamenti**: documentazione interconnessa per facilità di navigazione
 
 *Ultimo aggiornamento: 2025-01-06*
-=======
-=======
->>>>>>> 8055579 (.)
-=======
->>>>>>> d51888e (.)
->>>>>>> 9831a351 (.)
     'login_error' => 'Si è verificato un errore durante l\'accesso. Riprova più tardi.',
     'validation_error' => 'Errore di validazione.',
     // ... 60+ altre chiavi per completezza
@@ -414,15 +357,8 @@ Il pattern può essere applicato a tutti i widget del sistema per garantire cons
 **Audit completato**: Gennaio 2025  
 **File modificati**: 3 (it/messages.php, en/messages.php, de/messages.php)  
 **Translation keys aggiunte**: 60+ per lingua  
-<<<<<<< HEAD
 **LoginWidget status**: ✅ Fully functional in all languages
-=======
-<<<<<<< HEAD
 **LoginWidget status**: ✅ Fully functional in all languages
-<<<<<<< HEAD
->>>>>>> 8a21b63 (.)
-=======
-=======
     'login_error' => 'Si è verificato un errore durante l\'accesso.',
     'validation_error' => 'Errore di validazione.',
     
@@ -529,9 +465,4 @@ Questo audit dimostra l'importanza di:
 4. **Collegamenti**: documentazione interconnessa per facilità di navigazione
 
 *Ultimo aggiornamento: 2025-01-06*
->>>>>>> a0c18bc (.)
->>>>>>> 8055579 (.)
-=======
 **LoginWidget status**: ✅ Fully functional in all languages
->>>>>>> d51888e (.)
->>>>>>> 9831a351 (.)

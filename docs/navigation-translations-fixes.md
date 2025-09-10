@@ -77,10 +77,7 @@
 
 - [Audit Generale Traduzioni Navigation](../../docs/navigation-translations-audit.md)
 - [Regole Traduzioni Laraxot](../Xot/docs/translation-rules.md)
-<<<<<<< HEAD
 - [Standard Qualità Traduzioni](../<nome modulo>/docs/translation-quality-standards.md)
-=======
->>>>>>> 9831a351 (.)
 - [Standard Qualità Traduzioni](../SaluteOra/docs/translation-quality-standards.md)
 - [Documentazione Modulo User](README.md)
 

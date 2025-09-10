@@ -124,10 +124,7 @@ done
 1. **Dati Realistici**: Non solo lorem ipsum, ma dati significativi
 2. **Relazioni**: Gestire correttamente foreign key e relazioni
 3. **Stati**: Metodi per creare istanze in stati specifici
-<<<<<<< HEAD
 4. **Localizzazione**: Dati italiani per  (CAP, città, regioni)
-=======
->>>>>>> 9831a351 (.)
 4. **Localizzazione**: Dati italiani per SaluteOra (CAP, città, regioni)
 5. **Variabilità**: Stati diversi per testing completo
 

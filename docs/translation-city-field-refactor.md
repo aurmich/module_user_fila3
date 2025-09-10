@@ -2,10 +2,7 @@
 
 ## Riepilogo Intervento
 
-<<<<<<< HEAD
 Sono stati identificati e corretti tutti i file di traduzione non italiani contenenti "Città" nel modulo User, applicando la struttura completa a 7 elementi secondo gli standard Laraxot .
-=======
->>>>>>> 9831a351 (.)
 Sono stati identificati e corretti tutti i file di traduzione non italiani contenenti "Città" nel modulo User, applicando la struttura completa a 7 elementi secondo gli standard Laraxot SaluteOra.
 
 ## File Corretti
@@ -162,10 +159,7 @@ Tutti i file corretti mantengono:
 ## Collegamenti Bidirezionali
 
 - [Struttura Completa Campi Traduzione](../../../docs/translation-field-structure-complete.md)
-<<<<<<< HEAD
 - [ Translation Audit](../../<nome modulo>/docs/translation_audit_city_fields.md)
-=======
->>>>>>> 9831a351 (.)
 - [SaluteOra Translation Audit](../../SaluteOra/docs/translation_audit_city_fields.md)
 - [Translation Syntax Fixes](../../../docs/translation_syntax_fixes.md)
 - [User Module Widget Translation Rules](widget-translation-rules.md)
@@ -187,8 +181,5 @@ Utilizzare la documentazione centrale [`translation-field-structure-complete.md`
 ## Ultimo Aggiornamento
 2025-08-08 - Refactor completo campi "Città" modulo User ✅ COMPLETATO
 
-<<<<<<< HEAD
 *Intervento eseguito seguendo rigorosamente i principi DRY + KISS e gli standard Laraxot *
-=======
->>>>>>> 9831a351 (.)
 *Intervento eseguito seguendo rigorosamente i principi DRY + KISS e gli standard Laraxot SaluteOra*
