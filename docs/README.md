@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-# Modulo User
-
-## Introduzione
-
-Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli utenti nel sistema. Fornisce funzionalità base per la registrazione, il login, la gestione dei ruoli e dei permessi.
-=======
 # User Module Documentation
 
 **Ultima modifica**: 2025-01-15  
@@ -22,7 +15,6 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli u
 - **[Module Namespace Rules](../Xot/docs/module-namespace-rules.md)** - Regole namespace e migrazioni
 - **[Best Practices](../Xot/docs/best-practices.md)** - Best practices generali
 - **[Useful Links](../Xot/docs/useful-links.md)** - Link utili per lo sviluppo
->>>>>>> d95d1a6 (.)
 
 ## File Chiave
 - [BaseUser.php](app/Models/BaseUser.php)
@@ -135,20 +127,12 @@ User/
 - [Linee guida Actions](./actions.mdc)
 - [Linee guida Activitylog](./activitylog.mdc)
 
-<<<<<<< HEAD
-## Vedi Anche
-- [Documentazione Principale](../../docs/INDEX.md)
-- [Architettura Moduli](../../docs/architecture/modules-structure.md)
-- [Convenzioni di Nomenclatura](../../docs/standards/file_naming_conventions.md)
-- [Struttura del Progetto](../Xot/docs/architecture/struttura-progetto.md)
-=======
 ## 🏗️ Architettura Framework
 
 ### Regole Base XotBase
 - **Policies**: Estendono sempre `UserBasePolicy` (MAI direttamente Filament)
 - **Resources**: Estendono sempre `XotBaseResource`
 - **Models**: Estendono sempre `BaseModel` con tipizzazione rigorosa
->>>>>>> d95d1a6 (.)
 
 > **Collegamenti correlati**
 > - [README.md documentazione generale](../../../docs/README.md)
@@ -310,10 +294,6 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli u
 - [Gestione Ruoli](repositories.md)
 - [Team e Collaborazioni](teams.md)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d95d1a6 (.)
 ### Versione Incoming
 
 ## Collegamenti Bidirezionali
@@ -982,9 +962,6 @@ Schema::table('teams', function (Blueprint $table) {
   - **Motivazione**: Separazione responsabilità, principio modulare, manutenibilità
   - **Regola**: docs_project solo per documentazione generale del progetto, file specifici di moduli nelle rispettive cartelle docs
 
-<<<<<<< HEAD
-## Collegamenti
-=======
 ## 🔗 Collegamenti Moduli
 - [Xot Core Framework](../Xot/docs/README.md)
 - [Lang Translations](../Lang/docs/README.md)
@@ -992,5 +969,4 @@ Schema::table('teams', function (Blueprint $table) {
 
 ---
 *User Module Documentation - Framework Laraxot*
->>>>>>> d95d1a6 (.)
 

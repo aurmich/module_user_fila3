@@ -306,7 +306,3 @@ echo "User roles: " . $user->roles()->count() . "\n";
 
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d95d1a6 (.)

@@ -1,11 +1,20 @@
-*:Zone.Identifier
+
+# Build and compiled files
 .php-cs-fixer.cache
-**/*.Zone.Identifier
 
-
+# Temporary and system files
+*:Zone.Identifier
 
 # Backup files
+*.backup
+*.backup.*
 *.bak
--e 
-# PHPStan documentation
+*.old
+*.old1
+
+# Documentation and cache
 docs/phpstan/
+
+# Other
+**/*.Zone.Identifier
+-e

@@ -152,10 +152,6 @@ const calendarOptions = {
 
 ### 1. Variabili Ambiente (.env)
 ```env
-<<<<<<< HEAD
-
-=======
->>>>>>> d95d1a6 (.)
 # Licenza FullCalendar Scheduler
 FULLCALENDAR_SCHEDULER_LICENSE_KEY=XXXXXXXXXX-XXX-XXXXXXXXXX
 
@@ -191,11 +187,7 @@ return [
 ```php
 <?php
 
-<<<<<<< HEAD
-namespace Modules\SaluteOra\app\Providers\Filament;
-=======
 namespace Modules\<nome modulo>\app\Providers\Filament;
->>>>>>> d95d1a6 (.)
 
 use Saade\FilamentFullCalendar\FilamentFullCalendarPlugin;
 
@@ -242,11 +234,7 @@ class AdminPanelProvider extends XotBasePanelProvider
                 'resourceTimeGrid',
             ],
             
-<<<<<<< HEAD
-            // Configurazioni specifiche per SaluteOra
-=======
             // Configurazioni specifiche per 
->>>>>>> d95d1a6 (.)
             'locale' => 'it',
             'timezone' => 'Europe/Rome',
             'firstDay' => 1,
@@ -274,10 +262,6 @@ class AdminPanelProvider extends XotBasePanelProvider
 
 ### 1. Verifica Configurazione
 ```bash
-<<<<<<< HEAD
-
-=======
->>>>>>> d95d1a6 (.)
 # Verificare variabili ambiente
 php artisan config:show fullcalendar
 
@@ -332,11 +316,7 @@ class FullCalendarDebug extends Command
 }
 ```
 
-<<<<<<< HEAD
-## Best Practices per SaluteOra
-=======
 ## Best Practices per 
->>>>>>> d95d1a6 (.)
 
 ### 1. Sicurezza Licenza
 ```php
@@ -419,11 +399,7 @@ const calendarOptions = {
 ### FullCalendar Support
 - **Sales:** sales@fullcalendar.io
 - **Support:** [FullCalendar Support](https://fullcalendar.io/support/)
-<<<<<<< HEAD
-- **Documentation:** [FullCalendar Docs](https://fullcalendar.io/docs/)
-=======
 - **Documentation:** [FullCalendar Docs](https://fullcalendar.io/project_docs/)
->>>>>>> d95d1a6 (.)
 
 ### Risorse Utili
 - [Pricing](https://fullcalendar.io/pricing/)
@@ -433,11 +409,7 @@ const calendarOptions = {
 
 ## Conclusioni
 
-<<<<<<< HEAD
-La gestione delle licenze FullCalendar Scheduler richiede attenzione particolare, specialmente in ambienti di produzione sanitari come SaluteOra. Seguire questa guida garantisce una configurazione corretta e la risoluzione dei problemi più comuni.
-=======
 La gestione delle licenze FullCalendar Scheduler richiede attenzione particolare, specialmente in ambienti di produzione sanitari come . Seguire questa guida garantisce una configurazione corretta e la risoluzione dei problemi più comuni.
->>>>>>> d95d1a6 (.)
 
 **Punti Chiave:**
 1. **Licenza obbligatoria** per uso commerciale in produzione

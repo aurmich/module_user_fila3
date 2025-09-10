@@ -10,7 +10,7 @@ Trovati 69 errori al livello 8.
 
 ## Errori e suggerimenti
 
-### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Resources/UserResource/Actions/SendOtpAction.php`
+### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Filament/Resources/UserResource/Actions/SendOtpAction.php`
 
 #### Linea 30: Parameter #1 $user of method Modules\User\Actions\Otp\SendOtpByUserAction::execute() expects Modules\Xot\Contracts\UserContract, Modules\User\Models\User given.
 
@@ -20,7 +20,7 @@ Trovati 69 errori al livello 8.
 - Le variabili siano inizializzate prima dell'uso
 - I nomi di metodi e proprietà siano corretti
 
-### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/BaseAuthWidget.php`
+### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Filament/Widgets/Auth/BaseAuthWidget.php`
 
 #### Linea 20: Access to an undefined property Modules\User\Filament\Widgets\Auth\BaseAuthWidget::$form.
 
@@ -38,7 +38,7 @@ Trovati 69 errori al livello 8.
 - Se stai usando un trait che definisce questa proprietà
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
-### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/ForgotPasswordWidget.php`
+### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Filament/Widgets/Auth/ForgotPasswordWidget.php`
 
 #### Linea 36: Access to an undefined property Modules\User\Filament\Widgets\Auth\ForgotPasswordWidget::$form.
 
@@ -48,7 +48,7 @@ Trovati 69 errori al livello 8.
 - Se stai usando un trait che definisce questa proprietà
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
-### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/LoginWidget.php`
+### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Filament/Widgets/Auth/LoginWidget.php`
 
 #### Linea 25: Access to an undefined property Modules\User\App\Filament\Widgets\Auth\LoginWidget::$form.
 
@@ -66,7 +66,7 @@ Trovati 69 errori al livello 8.
 - Se stai usando un trait che definisce questa proprietà
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
-### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/RegisterWidget.php`
+### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Filament/Widgets/Auth/RegisterWidget.php`
 
 #### Linea 22: Access to an undefined property Modules\User\App\Filament\Widgets\Auth\RegisterWidget::$form.
 
@@ -84,7 +84,7 @@ Trovati 69 errori al livello 8.
 - Se stai usando un trait che definisce questa proprietà
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
-### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/ResetPasswordWidget.php`
+### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Filament/Widgets/Auth/ResetPasswordWidget.php`
 
 #### Linea 54: Access to an undefined property Modules\User\Filament\Widgets\Auth\ResetPasswordWidget::$form.
 
@@ -94,7 +94,7 @@ Trovati 69 errori al livello 8.
 - Se stai usando un trait che definisce questa proprietà
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
-### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/BaseUser.php`
+### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Models/BaseUser.php`
 
 #### Linea 229: Call to an undefined method Modules\User\Models\BaseUser<TModel of Illuminate\Database\Eloquent\Model, TRelatedModel of Illuminate\Database\Eloquent\Model>::hasRole().
 
@@ -399,7 +399,7 @@ Trovati 69 errori al livello 8.
 - Se stai importando la classe corretta
 - Se ci sono errori di digitazione nel nome del metodo
 
-### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/Models/BaseUser.php`
+### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Models/Models/BaseUser.php`
 
 #### Linea 20: Unable to resolve the template type TRelatedModel in call to method Illuminate\Database\Eloquent\Model::morphMany()
 
@@ -409,7 +409,7 @@ Trovati 69 errori al livello 8.
 - Le variabili siano inizializzate prima dell'uso
 - I nomi di metodi e proprietà siano corretti
 
-### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/Profile.php`
+### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Models/Profile.php`
 
 #### Linea 49: PHPDoc tag @property-read for property Modules\User\Models\Profile::$creator contains unknown class Modules\Broker\Models\Profile.
 
@@ -435,7 +435,7 @@ Trovati 69 errori al livello 8.
 - Le variabili siano inizializzate prima dell'uso
 - I nomi di metodi e proprietà siano corretti
 
-### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/Traits/HasAuthenticationLogTrait.php (in context of class Modules\User\Models\BaseUser)`
+### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Models/Traits/HasAuthenticationLogTrait.php (in context of class Modules\User\Models\BaseUser)`
 
 #### Linea 72: Call to an undefined method Modules\User\Models\BaseUser<TModel of Illuminate\Database\Eloquent\Model, TRelatedModel of Illuminate\Database\Eloquent\Model>::authentications().
 
@@ -501,7 +501,7 @@ Trovati 69 errori al livello 8.
 - Se stai importando la classe corretta
 - Se ci sono errori di digitazione nel nome del metodo
 
-### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/Traits/HasTeams.php (in context of class Modules\User\Models\BaseUser)`
+### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Models/Traits/HasTeams.php (in context of class Modules\User\Models\BaseUser)`
 
 #### Linea 35: Access to an undefined property Modules\User\Models\BaseUser<TModel of Illuminate\Database\Eloquent\Model, TRelatedModel of Illuminate\Database\Eloquent\Model>::$currentTeam.
 
@@ -567,7 +567,7 @@ Trovati 69 errori al livello 8.
 - Se stai importando la classe corretta
 - Se ci sono errori di digitazione nel nome del metodo
 
-### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/Traits/HasTenants.php (in context of class Modules\User\Models\BaseUser)`
+### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Models/Traits/HasTenants.php (in context of class Modules\User\Models\BaseUser)`
 
 #### Linea 27: Call to an undefined method Modules\User\Models\BaseUser<TModel of Illuminate\Database\Eloquent\Model, TRelatedModel of Illuminate\Database\Eloquent\Model>::tenants().
 

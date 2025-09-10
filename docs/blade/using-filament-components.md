@@ -5,11 +5,7 @@
 
 ## Regola fondamentale: utilizzare i componenti Filament
 
-<<<<<<< HEAD
-Nel progetto SaluteOra, **abbiamo l'obbligo di utilizzare i componenti Blade forniti da Filament quando disponibili**, invece di creare componenti personalizzati che duplicano funzionalità già esistenti.
-=======
 Nel progetto , **abbiamo l'obbligo di utilizzare i componenti Blade forniti da Filament quando disponibili**, invece di creare componenti personalizzati che duplicano funzionalità già esistenti.
->>>>>>> d95d1a6 (.)
 
 ## Migrazione da componenti personalizzati a componenti Filament
 

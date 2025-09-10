@@ -4,7 +4,7 @@
     "file_errors": 64
   },
   "files": {
-    "/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/BaseAuthWidget.php": {
+    "/var/www/html/<nome progetto>/laravel/Modules/User/app/Filament/Widgets/Auth/BaseAuthWidget.php": {
       "errors": 2,
       "messages": [
         {
@@ -23,7 +23,7 @@
         }
       ]
     },
-    "/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/ForgotPasswordWidget.php": {
+    "/var/www/html/<nome progetto>/laravel/Modules/User/app/Filament/Widgets/Auth/ForgotPasswordWidget.php": {
       "errors": 1,
       "messages": [
         {
@@ -35,7 +35,7 @@
         }
       ]
     },
-    "/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/LoginWidget.php": {
+    "/var/www/html/<nome progetto>/laravel/Modules/User/app/Filament/Widgets/Auth/LoginWidget.php": {
       "errors": 2,
       "messages": [
         {
@@ -54,7 +54,7 @@
         }
       ]
     },
-    "/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/RegisterWidget.php": {
+    "/var/www/html/<nome progetto>/laravel/Modules/User/app/Filament/Widgets/Auth/RegisterWidget.php": {
       "errors": 2,
       "messages": [
         {
@@ -73,7 +73,7 @@
         }
       ]
     },
-    "/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/ResetPasswordWidget.php": {
+    "/var/www/html/<nome progetto>/laravel/Modules/User/app/Filament/Widgets/Auth/ResetPasswordWidget.php": {
       "errors": 1,
       "messages": [
         {
@@ -85,7 +85,7 @@
         }
       ]
     },
-    "/var/www/html/saluteora/laravel/Modules/User/app/Models/BaseUser.php": {
+    "/var/www/html/<nome progetto>/laravel/Modules/User/app/Models/BaseUser.php": {
       "errors": 38,
       "messages": [
         {
@@ -321,7 +321,7 @@
         }
       ]
     },
-    "/var/www/html/saluteora/laravel/Modules/User/app/Models/Traits/HasAuthenticationLogTrait.php (in context of class Modules\\User\\Models\\BaseUser)": {
+    "/var/www/html/<nome progetto>/laravel/Modules/User/app/Models/Traits/HasAuthenticationLogTrait.php (in context of class Modules\\User\\Models\\BaseUser)": {
       "errors": 8,
       "messages": [
         {
@@ -374,7 +374,7 @@
         }
       ]
     },
-    "/var/www/html/saluteora/laravel/Modules/User/app/Models/Traits/HasTeams.php (in context of class Modules\\User\\Models\\BaseUser)": {
+    "/var/www/html/<nome progetto>/laravel/Modules/User/app/Models/Traits/HasTeams.php (in context of class Modules\\User\\Models\\BaseUser)": {
       "errors": 8,
       "messages": [
         {
@@ -428,7 +428,7 @@
         }
       ]
     },
-    "/var/www/html/saluteora/laravel/Modules/User/app/Models/Traits/HasTenants.php (in context of class Modules\\User\\Models\\BaseUser)": {
+    "/var/www/html/<nome progetto>/laravel/Modules/User/app/Models/Traits/HasTenants.php (in context of class Modules\\User\\Models\\BaseUser)": {
       "errors": 2,
       "messages": [
         {

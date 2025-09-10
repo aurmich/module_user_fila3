@@ -28,25 +28,12 @@ use Illuminate\Notifications\DatabaseNotification as BaseNotification;
  * @property array<array-key, mixed> $data
  * @property \Illuminate\Support\Carbon|null $read_at
  * @property \Illuminate\Support\Carbon|null $created_at
-<<<<<<< HEAD
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property string|null $deleted_at
- * @property string|null $deleted_by
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification whereData($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification whereDeletedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification whereDeletedBy($value)
-=======
  * @property string|null $created_by
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property string|null $updated_by
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification whereData($value)
->>>>>>> d95d1a6 (.)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification whereNotifiableId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification whereNotifiableType($value)

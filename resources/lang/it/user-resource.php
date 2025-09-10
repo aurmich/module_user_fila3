@@ -106,10 +106,6 @@ return [
                 'label' => 'Data Creazione',
                 'help' => 'Data di creazione del permesso',
             ],
-<<<<<<< HEAD
-        ],
-=======
->>>>>>> d95d1a6 (.)
     ],
     'widgets' => [
         'recent_logins' => [
@@ -133,8 +129,5 @@ return [
             ],
         ],
     ],
-<<<<<<< HEAD
-=======
     ],
->>>>>>> d95d1a6 (.)
 ];
