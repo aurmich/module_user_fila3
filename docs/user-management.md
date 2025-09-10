@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Gestione degli Utenti in 
 
 ## Panoramica
@@ -7,6 +8,8 @@ Questo documento descrive il sistema di gestione degli utenti in , con particola
 ## Tipi di Utenti
 
  supporta diversi tipi di utenti, ciascuno con caratteristiche e funzionalità specifiche:
+=======
+>>>>>>> 9831a351 (.)
 # Gestione degli Utenti in SaluteOra
 
 ## Panoramica
@@ -25,7 +28,10 @@ SaluteOra supporta diversi tipi di utenti, ciascuno con caratteristiche e funzio
 
 ### Single Table Inheritance (STI)
 
+<<<<<<< HEAD
  utilizza il pattern Single Table Inheritance tramite il pacchetto `parental` per gestire diversi tipi di utenti in un'unica tabella `users`. Questo approccio offre diversi vantaggi:
+=======
+>>>>>>> 9831a351 (.)
 SaluteOra utilizza il pattern Single Table Inheritance tramite il pacchetto `parental` per gestire diversi tipi di utenti in un'unica tabella `users`. Questo approccio offre diversi vantaggi:
 
 - **Efficienza del Database**: Tutti gli utenti sono memorizzati in un'unica tabella

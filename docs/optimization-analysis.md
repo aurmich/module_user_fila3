@@ -30,7 +30,10 @@ enum UserType: string implements HasColor, HasIcon, HasLabel
 }
 ```
 
+<<<<<<< HEAD
 Il modulo User ha un enum generico che non rispecchia il dominio sanitario di .
+=======
+>>>>>>> 9831a351 (.)
 Il modulo User ha un enum generico che non rispecchia il dominio sanitario di SaluteOra.
 
 **✅ Soluzione DOMAIN-DRIVEN + DRY:**
@@ -43,8 +46,11 @@ enum UserType: string implements HasColor, HasIcon, HasLabel
     case SYSTEM = 'system';
 }
 
+<<<<<<< HEAD
 // Nel modulo  - enum specifico del dominio
 enum UserType: string implements HasColor, HasIcon, HasLabel
+=======
+>>>>>>> 9831a351 (.)
 // Nel modulo SaluteOra - enum specifico del dominio
 enum SaluteOraUserType: string implements HasColor, HasIcon, HasLabel
 {

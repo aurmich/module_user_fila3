@@ -365,10 +365,33 @@ php artisan test --filter=ChangePasswordCommandIntegrationTest
 - ✅ **Eventi**: Dispatched NewPasswordSet
 
 *Ultimo aggiornamento: 2025-01-27*
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8055579 (.)
+=======
+>>>>>>> d51888e (.)
+>>>>>>> 9831a351 (.)
 
 
 
 
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 8a21b63 (.)
+=======
+=======
+>>>>>>> a0c18bc (.)
+>>>>>>> 8055579 (.)
+=======
+>>>>>>> d51888e (.)
+>>>>>>> 9831a351 (.)

@@ -11,7 +11,10 @@
 - **Struttura**: Informazioni sparse senza organizzazione logica
 
 #### 2. Riusabilità Compromessa  
+<<<<<<< HEAD
 - **141+ occorrenze hardcoded** di "<nome progetto>" 
+=======
+>>>>>>> 9831a351 (.)
 - **141+ occorrenze hardcoded** di "saluteora" 
 - **210+ occorrenze** di `User::` senza XotData
 - **Import diretti** da moduli project-specific
@@ -126,7 +129,10 @@ User/docs/
 #### Pattern di Correzione per Test
 ```php
 // ❌ PROBLEMI ATTUALI
+<<<<<<< HEAD
 use Modules\<nome progetto>\Models\User;
+=======
+>>>>>>> 9831a351 (.)
 use Modules\SaluteOra\Models\User;
 $user = User::factory()->create();
 
@@ -146,9 +152,13 @@ protected function createTestUser(): mixed
 #### File Prioritari da Correggere
 1. **Widget Auth**: Tutti i widget in `app/Filament/Widgets/Auth/`
 2. **Test Files**: Tutti i test che usano User diretto
+<<<<<<< HEAD
 3. **Documentation**: Rimuovere path hardcoded tipo `/var/www/html/<nome progetto>/`
 3. **Documentation**: Rimuovere path hardcoded tipo `/var/www/html/saluteora/`
 3. **Documentation**: Rimuovere path hardcoded tipo `/var/www/html/_bases/base_techplanner_fila3_mono/`
+=======
+3. **Documentation**: Rimuovere path hardcoded tipo `/var/www/html/saluteora/`
+>>>>>>> 9831a351 (.)
 
 ### 3. Trait e STI Optimization (IMPORTANTE - 1 giorno)
 
@@ -216,7 +226,10 @@ class UserServiceProvider extends XotBaseServiceProvider
 - [ ] **Collegamenti** ridotti a essenziali (max 20)
 
 ### Riusabilità
+<<<<<<< HEAD
 - [ ] **0 occorrenze** hardcoded "<nome progetto>"
+=======
+>>>>>>> 9831a351 (.)
 - [ ] **0 occorrenze** hardcoded "saluteora"
 - [ ] **0 utilizzi** User:: senza XotData
 - [ ] **100% pattern** dinamici nei test
@@ -252,7 +265,10 @@ class UserServiceProvider extends XotBaseServiceProvider
 find Modules/User/docs -name "*.md" | wc -l
 
 # Verifica riusabilità
+<<<<<<< HEAD
 grep -r -i "<nome progetto>" Modules/User/ --include="*.php" | wc -l
+=======
+>>>>>>> 9831a351 (.)
 grep -r -i "saluteora" Modules/User/ --include="*.php" | wc -l
 ```
 
