@@ -115,7 +115,11 @@ I componenti `FileUpload` si aspettano array:
 
 ### Comandi Test
 ```bash
+<<<<<<< HEAD
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
+=======
+cd /var/www/html/_bases/base_saluteora/laravel
+>>>>>>> 4b721437 (.)
 php artisan test --filter=RegistrationWidget
 ./vendor/bin/phpstan analyze Modules/User/app/Filament/Widgets/RegistrationWidget.php --level=9
 ```
@@ -185,7 +189,11 @@ Questo pattern può essere riutilizzato in altri widget che:
 
 - [RegistrationWidget.php](../../app/Filament/Widgets/RegistrationWidget.php) - Widget corretto
 - [XotBaseResource.php](../../../Xot/app/Filament/Resources/XotBaseResource.php) - Schema attachments migliorato
+<<<<<<< HEAD
 - [PatientResource.php](../../../<nome modulo>/app/Filament/Resources/PatientResource.php) - Risorsa paziente
+=======
+- [PatientResource.php](../../../SaluteOra/app/Filament/Resources/PatientResource.php) - Risorsa paziente
+>>>>>>> 4b721437 (.)
 - [Widget Error Troubleshooting](../../../Xot/docs/troubleshooting/widget-errors.md) - Guide generali
 
 ---

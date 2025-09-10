@@ -21,6 +21,7 @@ use Illuminate\Notifications\DatabaseNotification as BaseNotification;
  * @method static \Illuminate\Notifications\DatabaseNotificationCollection<int, static> all($columns = ['*'])
  * @method static \Illuminate\Notifications\DatabaseNotificationCollection<int, static> get($columns = ['*'])
  * @mixin IdeHelperNotification
+<<<<<<< HEAD
  * @property string $id
  * @property string $type
  * @property string $notifiable_type
@@ -41,6 +42,8 @@ use Illuminate\Notifications\DatabaseNotification as BaseNotification;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Notification whereUpdatedBy($value)
+=======
+>>>>>>> 4b721437 (.)
  * @mixin \Eloquent
  */
 class Notification extends BaseNotification

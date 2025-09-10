@@ -10,7 +10,11 @@ Trovati 69 errori al livello 8.
 
 ## Errori e suggerimenti
 
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Resources/UserResource/Actions/SendOtpAction.php`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Resources/UserResource/Actions/SendOtpAction.php`
+>>>>>>> 4b721437 (.)
 
 #### Linea 30: Parameter #1 $user of method Modules\User\Actions\Otp\SendOtpByUserAction::execute() expects Modules\Xot\Contracts\UserContract, Modules\User\Models\User given.
 
@@ -20,7 +24,11 @@ Trovati 69 errori al livello 8.
 - Le variabili siano inizializzate prima dell'uso
 - I nomi di metodi e proprietà siano corretti
 
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/Auth/BaseAuthWidget.php`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/BaseAuthWidget.php`
+>>>>>>> 4b721437 (.)
 
 #### Linea 20: Access to an undefined property Modules\User\Filament\Widgets\Auth\BaseAuthWidget::$form.
 
@@ -38,7 +46,11 @@ Trovati 69 errori al livello 8.
 - Se stai usando un trait che definisce questa proprietà
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/Auth/ForgotPasswordWidget.php`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/ForgotPasswordWidget.php`
+>>>>>>> 4b721437 (.)
 
 #### Linea 36: Access to an undefined property Modules\User\Filament\Widgets\Auth\ForgotPasswordWidget::$form.
 
@@ -48,7 +60,11 @@ Trovati 69 errori al livello 8.
 - Se stai usando un trait che definisce questa proprietà
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/Auth/LoginWidget.php`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/LoginWidget.php`
+>>>>>>> 4b721437 (.)
 
 #### Linea 25: Access to an undefined property Modules\User\App\Filament\Widgets\Auth\LoginWidget::$form.
 
@@ -66,7 +82,11 @@ Trovati 69 errori al livello 8.
 - Se stai usando un trait che definisce questa proprietà
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/Auth/RegisterWidget.php`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/RegisterWidget.php`
+>>>>>>> 4b721437 (.)
 
 #### Linea 22: Access to an undefined property Modules\User\App\Filament\Widgets\Auth\RegisterWidget::$form.
 
@@ -84,7 +104,11 @@ Trovati 69 errori al livello 8.
 - Se stai usando un trait che definisce questa proprietà
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/Auth/ResetPasswordWidget.php`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/ResetPasswordWidget.php`
+>>>>>>> 4b721437 (.)
 
 #### Linea 54: Access to an undefined property Modules\User\Filament\Widgets\Auth\ResetPasswordWidget::$form.
 
@@ -94,7 +118,11 @@ Trovati 69 errori al livello 8.
 - Se stai usando un trait che definisce questa proprietà
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Models/BaseUser.php`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/BaseUser.php`
+>>>>>>> 4b721437 (.)
 
 #### Linea 229: Call to an undefined method Modules\User\Models\BaseUser<TModel of Illuminate\Database\Eloquent\Model, TRelatedModel of Illuminate\Database\Eloquent\Model>::hasRole().
 
@@ -399,7 +427,11 @@ Trovati 69 errori al livello 8.
 - Se stai importando la classe corretta
 - Se ci sono errori di digitazione nel nome del metodo
 
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Models/Models/BaseUser.php`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/Models/BaseUser.php`
+>>>>>>> 4b721437 (.)
 
 #### Linea 20: Unable to resolve the template type TRelatedModel in call to method Illuminate\Database\Eloquent\Model::morphMany()
 
@@ -409,7 +441,11 @@ Trovati 69 errori al livello 8.
 - Le variabili siano inizializzate prima dell'uso
 - I nomi di metodi e proprietà siano corretti
 
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Models/Profile.php`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/Profile.php`
+>>>>>>> 4b721437 (.)
 
 #### Linea 49: PHPDoc tag @property-read for property Modules\User\Models\Profile::$creator contains unknown class Modules\Broker\Models\Profile.
 
@@ -435,7 +471,11 @@ Trovati 69 errori al livello 8.
 - Le variabili siano inizializzate prima dell'uso
 - I nomi di metodi e proprietà siano corretti
 
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Models/Traits/HasAuthenticationLogTrait.php (in context of class Modules\User\Models\BaseUser)`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/Traits/HasAuthenticationLogTrait.php (in context of class Modules\User\Models\BaseUser)`
+>>>>>>> 4b721437 (.)
 
 #### Linea 72: Call to an undefined method Modules\User\Models\BaseUser<TModel of Illuminate\Database\Eloquent\Model, TRelatedModel of Illuminate\Database\Eloquent\Model>::authentications().
 
@@ -501,7 +541,11 @@ Trovati 69 errori al livello 8.
 - Se stai importando la classe corretta
 - Se ci sono errori di digitazione nel nome del metodo
 
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Models/Traits/HasTeams.php (in context of class Modules\User\Models\BaseUser)`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/Traits/HasTeams.php (in context of class Modules\User\Models\BaseUser)`
+>>>>>>> 4b721437 (.)
 
 #### Linea 35: Access to an undefined property Modules\User\Models\BaseUser<TModel of Illuminate\Database\Eloquent\Model, TRelatedModel of Illuminate\Database\Eloquent\Model>::$currentTeam.
 
@@ -567,7 +611,11 @@ Trovati 69 errori al livello 8.
 - Se stai importando la classe corretta
 - Se ci sono errori di digitazione nel nome del metodo
 
+<<<<<<< HEAD
 ### File: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Models/Traits/HasTenants.php (in context of class Modules\User\Models\BaseUser)`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/Traits/HasTenants.php (in context of class Modules\User\Models\BaseUser)`
+>>>>>>> 4b721437 (.)
 
 #### Linea 27: Call to an undefined method Modules\User\Models\BaseUser<TModel of Illuminate\Database\Eloquent\Model, TRelatedModel of Illuminate\Database\Eloquent\Model>::tenants().
 
@@ -592,6 +640,7 @@ Trovati 69 errori al livello 8.
 - [PSR-12: Standard di codifica](https://www.php-fig.org/psr/psr-12/)
 
 ## Collegamenti tra versioni di level_8.md
+<<<<<<< HEAD
 * [level_8.md](laravel/Modules/Chart/project_docs/phpstan/level_8.md)
 * [level_8.md](laravel/Modules/Reporting/project_docs/phpstan/level_8.md)
 * [level_8.md](laravel/Modules/Gdpr/project_docs/phpstan/level_8.md)
@@ -607,3 +656,20 @@ Trovati 69 errori al livello 8.
 * [level_8.md](laravel/Modules/Activity/project_docs/phpstan/level_8.md)
 * [level_8.md](laravel/Modules/Patient/project_docs/phpstan/level_8.md)
 * [level_8.md](laravel/Modules/Cms/project_docs/phpstan/level_8.md)
+=======
+* [level_8.md](laravel/Modules/Chart/docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Reporting/docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Gdpr/docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Notify/docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Xot/docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Dental/docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/User/docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/UI/docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Lang/docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Job/docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Media/docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Tenant/docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Activity/docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Patient/docs/phpstan/level_8.md)
+* [level_8.md](laravel/Modules/Cms/docs/phpstan/level_8.md)
+>>>>>>> 4b721437 (.)

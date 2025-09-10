@@ -8,7 +8,11 @@ Trovati 64 errori al livello 1.
 
 ## Errori e suggerimenti
 
+<<<<<<< HEAD
 ### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Filament/Widgets/Auth/BaseAuthWidget.php`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/BaseAuthWidget.php`
+>>>>>>> 4b721437 (.)
 
 #### Linea 20: Access to an undefined property Modules\User\Filament\Widgets\Auth\BaseAuthWidget::$form.
 
@@ -26,7 +30,11 @@ Trovati 64 errori al livello 1.
 - Se stai usando un trait che definisce questa proprietà
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
+<<<<<<< HEAD
 ### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Filament/Widgets/Auth/ForgotPasswordWidget.php`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/ForgotPasswordWidget.php`
+>>>>>>> 4b721437 (.)
 
 #### Linea 36: Access to an undefined property Modules\User\Filament\Widgets\Auth\ForgotPasswordWidget::$form.
 
@@ -36,7 +44,11 @@ Trovati 64 errori al livello 1.
 - Se stai usando un trait che definisce questa proprietà
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
+<<<<<<< HEAD
 ### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Filament/Widgets/Auth/LoginWidget.php`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/LoginWidget.php`
+>>>>>>> 4b721437 (.)
 
 #### Linea 25: Access to an undefined property Modules\User\App\Filament\Widgets\Auth\LoginWidget::$form.
 
@@ -54,7 +66,11 @@ Trovati 64 errori al livello 1.
 - Se stai usando un trait che definisce questa proprietà
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
+<<<<<<< HEAD
 ### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Filament/Widgets/Auth/RegisterWidget.php`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/RegisterWidget.php`
+>>>>>>> 4b721437 (.)
 
 #### Linea 22: Access to an undefined property Modules\User\App\Filament\Widgets\Auth\RegisterWidget::$form.
 
@@ -72,7 +88,11 @@ Trovati 64 errori al livello 1.
 - Se stai usando un trait che definisce questa proprietà
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
+<<<<<<< HEAD
 ### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Filament/Widgets/Auth/ResetPasswordWidget.php`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/Auth/ResetPasswordWidget.php`
+>>>>>>> 4b721437 (.)
 
 #### Linea 54: Access to an undefined property Modules\User\Filament\Widgets\Auth\ResetPasswordWidget::$form.
 
@@ -82,7 +102,11 @@ Trovati 64 errori al livello 1.
 - Se stai usando un trait che definisce questa proprietà
 - Se la proprietà è impostata nel costruttore o in altri metodi
 
+<<<<<<< HEAD
 ### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Models/BaseUser.php`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/BaseUser.php`
+>>>>>>> 4b721437 (.)
 
 #### Linea 229: Call to an undefined method Modules\User\Models\BaseUser<TModel of Illuminate\Database\Eloquent\Model, TRelatedModel of Illuminate\Database\Eloquent\Model>::hasRole().
 
@@ -388,7 +412,11 @@ Trovati 64 errori al livello 1.
 - Se stai importando la classe corretta
 - Se ci sono errori di digitazione nel nome del metodo
 
+<<<<<<< HEAD
 ### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Models/Traits/HasAuthenticationLogTrait.php (in context of class Modules\User\Models\BaseUser)`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/Traits/HasAuthenticationLogTrait.php (in context of class Modules\User\Models\BaseUser)`
+>>>>>>> 4b721437 (.)
 
 #### Linea 72: Call to an undefined method Modules\User\Models\BaseUser<TModel of Illuminate\Database\Eloquent\Model, TRelatedModel of Illuminate\Database\Eloquent\Model>::authentications().
 
@@ -454,7 +482,11 @@ Trovati 64 errori al livello 1.
 - Se stai importando la classe corretta
 - Se ci sono errori di digitazione nel nome del metodo
 
+<<<<<<< HEAD
 ### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Models/Traits/HasTeams.php (in context of class Modules\User\Models\BaseUser)`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/Traits/HasTeams.php (in context of class Modules\User\Models\BaseUser)`
+>>>>>>> 4b721437 (.)
 
 #### Linea 35: Access to an undefined property Modules\User\Models\BaseUser<TModel of Illuminate\Database\Eloquent\Model, TRelatedModel of Illuminate\Database\Eloquent\Model>::$currentTeam.
 
@@ -520,7 +552,11 @@ Trovati 64 errori al livello 1.
 - Se stai importando la classe corretta
 - Se ci sono errori di digitazione nel nome del metodo
 
+<<<<<<< HEAD
 ### File: `/var/www/html/<nome progetto>/laravel/Modules/User/app/Models/Traits/HasTenants.php (in context of class Modules\User\Models\BaseUser)`
+=======
+### File: `/var/www/html/saluteora/laravel/Modules/User/app/Models/Traits/HasTenants.php (in context of class Modules\User\Models\BaseUser)`
+>>>>>>> 4b721437 (.)
 
 #### Linea 27: Call to an undefined method Modules\User\Models\BaseUser<TModel of Illuminate\Database\Eloquent\Model, TRelatedModel of Illuminate\Database\Eloquent\Model>::tenants().
 

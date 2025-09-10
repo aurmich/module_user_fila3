@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\User\Models;
 
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
+=======
+use Modules\User\Contracts\UserContract;
+>>>>>>> 4b721437 (.)
 use Modules\User\Database\Factories\ProfileFactory;
 use Modules\User\Models\Pivots\DeviceProfile;
 use Modules\User\Models\Pivots\ProfileTeam;
@@ -72,6 +76,7 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutPermission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutRole($roles, $guard = null)
  * @mixin IdeHelperProfile
+<<<<<<< HEAD
  * @property string|null $post_type
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
@@ -153,6 +158,8 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile whereUserId($value)
+=======
+>>>>>>> 4b721437 (.)
  * @mixin \Eloquent
  */
 class Profile extends BaseProfile implements HasMedia

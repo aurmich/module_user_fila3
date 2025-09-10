@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Build and compiled files
 .php-cs-fixer.cache
@@ -18,3 +19,16 @@ docs/phpstan/
 # Other
 **/*.Zone.Identifier
 -e
+=======
+*:Zone.Identifier
+.php-cs-fixer.cache
+**/*.Zone.Identifier
+
+
+
+# Backup files
+*.bak
+-e 
+# PHPStan documentation
+docs/phpstan/
+>>>>>>> 4b721437 (.)

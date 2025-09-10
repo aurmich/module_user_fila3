@@ -8,15 +8,25 @@
 
 ## Panoramica
 
+<<<<<<< HEAD
 Questo documento descrive come implementare nell'header di :
+=======
+Questo documento descrive come implementare nell'header di SaluteOra:
+>>>>>>> 4b721437 (.)
 1. Un selettore di lingua
 2. Un dropdown con l'avatar dell'utente contenente il link di logout
 
 ## Struttura Attuale dell'Header
 
+<<<<<<< HEAD
 L'header di  è gestito tramite:
 - **Componente Blade**: `/Themes/One/resources/views/components/sections/header.blade.php`
 - **Configurazione JSON**: `/config/local/<nome progetto>/database/content/sections/1.json`
+=======
+L'header di SaluteOra è gestito tramite:
+- **Componente Blade**: `/Themes/One/resources/views/components/sections/header.blade.php`
+- **Configurazione JSON**: `/config/local/saluteora/database/content/sections/1.json`
+>>>>>>> 4b721437 (.)
 
 Il componente header legge i blocchi dal file JSON e li renderizza in base alla lingua corrente. Attualmente l'header contiene:
 - Un logo
@@ -206,7 +216,11 @@ Ecco come dovrebbe apparire il file JSON completo dell'header dopo le modifiche:
                 "data": {
                     "view": "pub_theme::components.blocks.logo",
                     "src": "patient::images/logo.svg",
+<<<<<<< HEAD
                     "alt": "Logo ",
+=======
+                    "alt": "Logo SaluteOra",
+>>>>>>> 4b721437 (.)
                     "width": 150,
                     "height": 32
                 }
@@ -280,7 +294,11 @@ Ecco come dovrebbe apparire il file JSON completo dell'header dopo le modifiche:
                 "data": {
                     "view": "pub_theme::components.blocks.logo",
                     "src": "patient::images/logo.svg",
+<<<<<<< HEAD
                     "alt": " Logo",
+=======
+                    "alt": "SaluteOra Logo",
+>>>>>>> 4b721437 (.)
                     "width": 150,
                     "height": 32
                 }
