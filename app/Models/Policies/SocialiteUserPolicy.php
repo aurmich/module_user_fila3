@@ -9,6 +9,7 @@ use Modules\Xot\Contracts\UserContract;
 
 class SocialiteUserPolicy extends UserBasePolicy
 {
+<<<<<<< HEAD
     /**
      * Determine whether the user can view any models.
      */
@@ -72,4 +73,7 @@ class SocialiteUserPolicy extends UserBasePolicy
         return $user->hasPermissionTo('socialite-user.force-delete') ||
                $user->hasRole('super-admin');
     }
+=======
+
+>>>>>>> d95d1a6 (.)
 }

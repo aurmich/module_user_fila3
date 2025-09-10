@@ -8,82 +8,131 @@ return [
             'label' => 'First Name',
             'placeholder' => 'Enter your first name',
             'tooltip' => 'Enter your first name',
+<<<<<<< HEAD
+=======
+            'help' => 'Enter your first name',
+>>>>>>> d95d1a6 (.)
         ],
         'last_name' => [
             'label' => 'Last Name',
             'placeholder' => 'Enter your last name',
             'tooltip' => 'Enter your last name',
+<<<<<<< HEAD
             'help' => 'Your family name',
+=======
+            'help' => 'Enter your last name',
+>>>>>>> d95d1a6 (.)
         ],
         'email' => [
             'label' => 'Email',
             'placeholder' => 'Enter your email',
             'tooltip' => 'Enter a valid email address',
+<<<<<<< HEAD
             'help' => 'Valid email address you will use to sign in',
+=======
+            'help' => 'Enter your email address',
+>>>>>>> d95d1a6 (.)
         ],
         'phone' => [
             'label' => 'Phone',
             'placeholder' => 'Enter your phone number',
             'tooltip' => 'Enter a valid phone number',
+<<<<<<< HEAD
             'help' => 'Phone number to be contacted',
+=======
+            'help' => 'Enter your phone number',
+>>>>>>> d95d1a6 (.)
         ],
         'address' => [
             'label' => 'Address',
             'placeholder' => 'Enter your address',
             'tooltip' => 'Enter your residential address',
+<<<<<<< HEAD
             'help' => 'Street and house number of residence',
+=======
+            'help' => 'Enter your address',
+>>>>>>> d95d1a6 (.)
         ],
         'city' => [
             'label' => 'City',
             'placeholder' => 'Enter your city',
+<<<<<<< HEAD
             'tooltip' => 'City of residence or location',
             'helper_text' => 'Enter the name of the city where you reside or are located',
             'description' => 'Field to specify the user\'s city of residence for registration',
             'icon' => 'heroicon-o-map-pin',
             'color' => 'primary',
+=======
+            'tooltip' => 'Enter your city of residence',
+            'help' => 'Enter your city',
+>>>>>>> d95d1a6 (.)
         ],
         'postal_code' => [
             'label' => 'Postal Code',
             'placeholder' => 'Enter postal code',
             'tooltip' => 'Enter your postal code',
+<<<<<<< HEAD
+=======
+            'help' => 'Enter postal code',
+>>>>>>> d95d1a6 (.)
         ],
         'province' => [
             'label' => 'Province',
             'placeholder' => 'Enter province',
+<<<<<<< HEAD
             'tooltip' => 'Province of residence or state',
             'helper_text' => 'Enter the name of your province or state of residence',
             'description' => 'Field to specify the user\'s province or state for registration and location purposes',
             'icon' => 'heroicon-o-map',
             'color' => 'secondary',
+=======
+            'tooltip' => 'Enter your province of residence',
+            'help' => 'Enter province',
+>>>>>>> d95d1a6 (.)
         ],
         'country' => [
             'label' => 'Country',
             'placeholder' => 'Enter country',
             'tooltip' => 'Enter your country of residence',
             'default' => 'Italy',
+<<<<<<< HEAD
             'help' => 'Country of residence',
+=======
+            'help' => 'Enter your country of residence',
+>>>>>>> d95d1a6 (.)
         ],
         'password' => [
             'label' => 'Password',
             'placeholder' => 'Enter your password',
             'tooltip' => 'Password must be at least 8 characters long',
+<<<<<<< HEAD
             'help' => 'At least 8 characters with letters, numbers, and symbols',
+=======
+            'help' => 'Enter your password',
+>>>>>>> d95d1a6 (.)
         ],
         'password_confirmation' => [
             'label' => 'Confirm Password',
             'placeholder' => 'Confirm your password',
             'tooltip' => 'Re-enter your password for confirmation',
+<<<<<<< HEAD
             'help' => 'Re-enter the password to confirm it',
+=======
+>>>>>>> d95d1a6 (.)
         ],
         'terms' => [
             'label' => 'I accept the terms and conditions',
             'tooltip' => 'You must accept the terms and conditions to proceed',
+<<<<<<< HEAD
             'placeholder' => 'Accept the terms and conditions',
             'help' => 'You must accept the terms and conditions to continue',
+=======
+>>>>>>> d95d1a6 (.)
         ],
         'newsletter' => [
             'label' => 'Subscribe to newsletter',
             'tooltip' => 'Receive updates and news via email',
+<<<<<<< HEAD
         ],
         'name' => [
             'label' => 'Name',
@@ -202,6 +251,9 @@ return [
             'label' => 'Moderation Notes',
             'placeholder' => 'Moderator notes',
             'help' => 'Any notes by the moderation team',
+=======
+            'help' => 'Confirm your password',
+>>>>>>> d95d1a6 (.)
         ],
     ],
     'buttons' => [
@@ -211,6 +263,7 @@ return [
         'complete' => 'Complete Registration',
     ],
     'messages' => [
+<<<<<<< HEAD
         'success' => [
             'registration' => 'Registration completed successfully! You will receive a confirmation email.',
             'step' => 'Step completed successfully',
@@ -228,6 +281,11 @@ return [
             'email_exists' => 'This email address is already registered',
             'validation' => 'Some fields contain errors; please review and try again',
         ],
+=======
+        'success' => 'Registration completed successfully!',
+        'error' => 'An error occurred during registration.',
+        'validation_error' => 'Please fill in all required fields to proceed.',
+>>>>>>> d95d1a6 (.)
     ],
     'steps' => [
         'personal_data' => [
@@ -237,9 +295,12 @@ return [
         'contacts' => [
             'title' => 'Contacts and Address',
             'description' => 'Enter your contact information and address',
+<<<<<<< HEAD
             'label' => 'Contatti',
             'icon' => 'heroicon-o-phone',
             'help' => 'Fornisci i tuoi recapiti per essere contattato',
+=======
+>>>>>>> d95d1a6 (.)
         ],
         'isee' => [
             'title' => 'ISEE Data',
@@ -249,6 +310,7 @@ return [
             'title' => 'Confirm Data',
             'description' => 'Verify your information before completing registration',
         ],
+<<<<<<< HEAD
         'personal_info' => [
             'label' => 'Dati Personali',
             'description' => 'Inserisci i tuoi dati anagrafici personali',
@@ -345,5 +407,7 @@ return [
             'success' => 'Draft saved successfully',
             'error' => 'Error while saving the draft',
         ],
+=======
+>>>>>>> d95d1a6 (.)
     ],
 ];

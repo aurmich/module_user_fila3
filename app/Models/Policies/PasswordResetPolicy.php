@@ -9,6 +9,7 @@ use Modules\Xot\Contracts\UserContract;
 
 class PasswordResetPolicy extends UserBasePolicy
 {
+<<<<<<< HEAD
     /**
      * Determine whether the user can view any models.
      */
@@ -70,4 +71,7 @@ class PasswordResetPolicy extends UserBasePolicy
         return $user->hasPermissionTo('password-reset.force-delete') ||
                $user->hasRole('super-admin');
     }
+=======
+
+>>>>>>> d95d1a6 (.)
 }

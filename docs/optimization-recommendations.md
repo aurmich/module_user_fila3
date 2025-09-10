@@ -63,15 +63,24 @@ Modulo riutilizzabile per gestione utenti, autenticazione e autorizzazione in pr
 - [Testing](testing/) - Test patterns, factory
 
 ## Collegamenti
+<<<<<<< HEAD
 - [Modulo Xot](../Xot/project_docs/) - Framework base
 - [Modulo Notify](../Notify/project_docs/) - Sistema notifiche
+=======
+- [Modulo Xot](../Xot/docs/) - Framework base
+- [Modulo Notify](../Notify/docs/) - Sistema notifiche
+>>>>>>> d95d1a6 (.)
 
 *Modulo riutilizzabile - NON deve contenere riferimenti project-specific*
 ```
 
 #### Struttura Target Proposta
 ```
+<<<<<<< HEAD
 User/project_docs/
+=======
+User/docs/
+>>>>>>> d95d1a6 (.)
 ├── README.md (overview, max 100 righe)
 ├── authentication/
 │   ├── README.md
@@ -144,7 +153,11 @@ protected function createTestUser(): mixed
 #### File Prioritari da Correggere
 1. **Widget Auth**: Tutti i widget in `app/Filament/Widgets/Auth/`
 2. **Test Files**: Tutti i test che usano User diretto
+<<<<<<< HEAD
 3. **Documentation**: Rimuovere path hardcoded tipo `/var/www/html/saluteora/`
+=======
+3. **Documentation**: Rimuovere path hardcoded tipo `/var/www/html/_bases/base_techplanner_fila3_mono/`
+>>>>>>> d95d1a6 (.)
 
 ### 3. Trait e STI Optimization (IMPORTANTE - 1 giorno)
 
@@ -271,8 +284,13 @@ php artisan user:benchmark  # Target: < 100ms
 
 ## Collegamenti
 
+<<<<<<< HEAD
 - [Analisi Moduli Globale](../../../project_docs/modules_analysis_and_optimization.md)
 - [Linee Guida Riusabilità](../../../project_docs/module_reusability_guidelines.md)
+=======
+- [Analisi Moduli Globale](../../../docs/modules_analysis_and_optimization.md)
+- [Linee Guida Riusabilità](../../../docs/module_reusability_guidelines.md)
+>>>>>>> d95d1a6 (.)
 - [Best Practices User](best-practices/)
 
 *Ultimo aggiornamento: gennaio 2025*

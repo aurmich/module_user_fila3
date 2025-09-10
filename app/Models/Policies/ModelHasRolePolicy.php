@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\User\Models\ModelHasRole;
 use Modules\Xot\Contracts\UserContract;
 
@@ -70,3 +71,13 @@ class ModelHasRolePolicy extends UserBasePolicy
                $user->hasRole('super-admin');
     }
 }
+=======
+use Modules\Xot\Contracts\UserContract;
+use Modules\User\Models\ModelHasRole;
+
+class ModelHasRolePolicy extends UserBasePolicy
+{
+
+}
+
+>>>>>>> d95d1a6 (.)

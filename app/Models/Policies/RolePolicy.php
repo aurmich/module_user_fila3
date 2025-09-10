@@ -9,6 +9,7 @@ use Modules\Xot\Contracts\UserContract;
 
 class RolePolicy extends UserBasePolicy
 {
+<<<<<<< HEAD
     /**
      * Determine whether the user can view any models.
      */
@@ -72,4 +73,7 @@ class RolePolicy extends UserBasePolicy
     {
         return true;
     }
+=======
+
+>>>>>>> d95d1a6 (.)
 }

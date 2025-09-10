@@ -4,8 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\User\Models\Extra;
 use Modules\Xot\Contracts\UserContract;
+=======
+use Modules\Xot\Contracts\UserContract;
+use Modules\User\Models\Extra;
+>>>>>>> d95d1a6 (.)
 
 class ExtraPolicy extends UserBasePolicy
 {
@@ -22,8 +27,12 @@ class ExtraPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, Extra $extra): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('extra.view') ||
                $user->hasRole('super-admin');
+=======
+        return $user->hasRole('super-admin');
+>>>>>>> d95d1a6 (.)
     }
 
     /**
@@ -39,8 +48,12 @@ class ExtraPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, Extra $extra): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('extra.update') ||
                $user->hasRole('super-admin');
+=======
+        return $user->hasRole('super-admin');
+>>>>>>> d95d1a6 (.)
     }
 
     /**
@@ -48,8 +61,12 @@ class ExtraPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, Extra $extra): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('extra.delete') ||
                $user->hasRole('super-admin');
+=======
+        return $user->hasRole('super-admin');
+>>>>>>> d95d1a6 (.)
     }
 
     /**
@@ -57,8 +74,12 @@ class ExtraPolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, Extra $extra): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('extra.restore') ||
                $user->hasRole('super-admin');
+=======
+        return $user->hasRole('super-admin');
+>>>>>>> d95d1a6 (.)
     }
 
     /**
@@ -66,7 +87,11 @@ class ExtraPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, Extra $extra): bool
     {
+<<<<<<< HEAD
         return $user->hasPermissionTo('extra.force-delete') ||
                $user->hasRole('super-admin');
+=======
+        return $user->hasRole('super-admin');
+>>>>>>> d95d1a6 (.)
     }
 }

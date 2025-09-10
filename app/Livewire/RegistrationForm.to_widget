@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\HtmlString;
 use Livewire\Component;
+<<<<<<< HEAD
 use Modules\User\Contracts\UserContract;
+=======
+use Modules\Xot\Contracts\UserContract;
+>>>>>>> d95d1a6 (.)
 
 class RegistrationForm extends Component
 {
