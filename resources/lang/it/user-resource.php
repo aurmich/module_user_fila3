@@ -47,8 +47,6 @@ return [
             'label' => 'Ricordami',
             'help' => 'Mantieni la sessione attiva',
         ],
-            ],
-        ],
     ],
     'actions' => [
         'create' => [
@@ -108,7 +106,6 @@ return [
                 'label' => 'Data Creazione',
                 'help' => 'Data di creazione del permesso',
             ],
-        ],
     ],
     'widgets' => [
         'recent_logins' => [
@@ -132,5 +129,5 @@ return [
             ],
         ],
     ],
-];
+    ],
 ];

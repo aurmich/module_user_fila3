@@ -167,7 +167,7 @@ if (app()->environment('local') && empty($licenseKey)) {
 
 - **Sales:** sales@fullcalendar.io
 - **Pricing:** https://fullcalendar.io/pricing/
-- **Docs:** https://fullcalendar.io/docs/schedulerLicenseKey
+- **Docs:** https://fullcalendar.io/project_docs/schedulerLicenseKey
 - **GitHub:** https://github.com/fullcalendar/fullcalendar/issues
 
 ## 🎯 Checklist Rapida

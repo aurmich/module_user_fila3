@@ -108,7 +108,3 @@ return [
         ],
     ],
 ];
-            'description' => 'Inserisci le tue informazioni personali',
-        ],
-    ],
-];

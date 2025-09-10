@@ -152,7 +152,6 @@ const calendarOptions = {
 
 ### 1. Variabili Ambiente (.env)
 ```env
-
 # Licenza FullCalendar Scheduler
 FULLCALENDAR_SCHEDULER_LICENSE_KEY=XXXXXXXXXX-XXX-XXXXXXXXXX
 
@@ -263,7 +262,6 @@ class AdminPanelProvider extends XotBasePanelProvider
 
 ### 1. Verifica Configurazione
 ```bash
-
 # Verificare variabili ambiente
 php artisan config:show fullcalendar
 
@@ -401,7 +399,7 @@ const calendarOptions = {
 ### FullCalendar Support
 - **Sales:** sales@fullcalendar.io
 - **Support:** [FullCalendar Support](https://fullcalendar.io/support/)
-- **Documentation:** [FullCalendar Docs](https://fullcalendar.io/docs/)
+- **Documentation:** [FullCalendar Docs](https://fullcalendar.io/project_docs/)
 
 ### Risorse Utili
 - [Pricing](https://fullcalendar.io/pricing/)
