@@ -9,14 +9,8 @@ use Modules\Xot\Contracts\UserContract;
 
 class TenantPolicy extends UserBasePolicy
 {
-    /**
-     * Determine whether the user can view any models.
-     */
-    public function viewAny(UserContract $user): bool
-    {
-        return $user->hasPermissionTo('tenant.view.any');
-    }
 
+<<<<<<< HEAD
     /**
      * Determine whether the user can view the model.
      */
@@ -70,4 +64,6 @@ class TenantPolicy extends UserBasePolicy
         return $user->hasPermissionTo('tenant.force-delete') ||
                $user->hasRole('super-admin');
     }
+=======
+>>>>>>> f5b8f58 (.)
 }

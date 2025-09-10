@@ -9,14 +9,8 @@ use Modules\Xot\Contracts\UserContract;
 
 class SocialProviderPolicy extends UserBasePolicy
 {
-    /**
-     * Determine whether the user can view any models.
-     */
-    public function viewAny(UserContract $user): bool
-    {
-        return $user->hasPermissionTo('social-provider.view.any');
-    }
 
+<<<<<<< HEAD
     /**
      * Determine whether the user can view the model.
      */
@@ -69,4 +63,6 @@ class SocialProviderPolicy extends UserBasePolicy
         return $user->hasPermissionTo('social-provider.force-delete') ||
                $user->hasRole('super-admin');
     }
+=======
+>>>>>>> f5b8f58 (.)
 }

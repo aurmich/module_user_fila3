@@ -1,8 +1,11 @@
-# Modulo User
+# User Module Documentation
 
-## Introduzione
+**Ultima modifica**: 2025-09-10  
+**Status**: ✅ Syntax Errors Fixed, ⏳ PHPStan Analysis in corso
 
-Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli utenti nel sistema. Fornisce funzionalità base per la registrazione, il login, la gestione dei ruoli e dei permessi.
+## 🎯 Panoramica
+
+Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli utenti nel framework Laraxot.
 
 ## File Chiave
 - [BaseUser.php](app/Models/BaseUser.php)
@@ -115,11 +118,12 @@ User/
 - [Linee guida Actions](./actions.mdc)
 - [Linee guida Activitylog](./activitylog.mdc)
 
-## Vedi Anche
-- [Documentazione Principale](../../docs/INDEX.md)
-- [Architettura Moduli](../../docs/architecture/modules-structure.md)
-- [Convenzioni di Nomenclatura](../../docs/standards/file_naming_conventions.md)
-- [Struttura del Progetto](../Xot/docs/architecture/struttura-progetto.md)
+## 🏗️ Architettura Framework
+
+### Regole Base XotBase
+- **Policies**: Estendono sempre `UserBasePolicy` (MAI direttamente Filament)
+- **Resources**: Estendono sempre `XotBaseResource`
+- **Models**: Estendono sempre `BaseModel` con tipizzazione rigorosa
 
 > **Collegamenti correlati**
 > - [README.md documentazione generale](../../../docs/README.md)
@@ -281,6 +285,7 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli u
 - [Gestione Ruoli](repositories.md)
 - [Team e Collaborazioni](teams.md)
 
+<<<<<<< HEAD
 
 ### Versione Incoming
 
@@ -951,4 +956,13 @@ Schema::table('teams', function (Blueprint $table) {
   - **Regola**: docs_project solo per documentazione generale del progetto, file specifici di moduli nelle rispettive cartelle docs
 
 ## Collegamenti
+=======
+## 🔗 Collegamenti Moduli
+- [Xot Core Framework](../Xot/docs/README.md)
+- [Lang Translations](../Lang/docs/README.md)
+- [Notify System](../Notify/docs/README.md)
+
+---
+*User Module Documentation - Framework Laraxot* 
+>>>>>>> f5b8f58 (.)
 

@@ -9,14 +9,8 @@ use Modules\Xot\Contracts\UserContract;
 
 class OauthAccessTokenPolicy extends UserBasePolicy
 {
-    /**
-     * Determine whether the user can view any models.
-     */
-    public function viewAny(UserContract $user): bool
-    {
-        return $user->hasPermissionTo('oauth-access-token.view.any');
-    }
 
+<<<<<<< HEAD
     /**
      * Determine whether the user can view the model.
      */
@@ -71,4 +65,6 @@ class OauthAccessTokenPolicy extends UserBasePolicy
         return $user->hasPermissionTo('oauth-access-token.force-delete') ||
                $user->hasRole('super-admin');
     }
+=======
+>>>>>>> f5b8f58 (.)
 }

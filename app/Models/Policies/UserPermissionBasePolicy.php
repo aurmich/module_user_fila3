@@ -16,8 +16,9 @@ use Modules\Xot\Contracts\UserContract;
 
 // use Modules\Xot\Datas\XotData;
 
-abstract class UserPermissionBasePolicy
+abstract class UserPermissionBasePolicy extends UserBasePolicy
 {
+<<<<<<< HEAD
     use HandlesAuthorization;
 
     public function before(UserContract $user, string $ability): ?bool
@@ -45,4 +46,7 @@ abstract class UserPermissionBasePolicy
 
         return null;
     }
+=======
+   
+>>>>>>> f5b8f58 (.)
 }

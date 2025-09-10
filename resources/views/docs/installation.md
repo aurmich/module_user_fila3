@@ -98,7 +98,7 @@ Personalizza la configurazione del tema in `config/theme.php`:
 ```php
 return [
     'name' => 'One',
-    'description' => 'Tema predefinito per SaluteOra',
+    'description' => 'Tema predefinito per ',
     'version' => '1.0.0',
     // ...
 ];

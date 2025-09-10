@@ -9,14 +9,8 @@ use Modules\Xot\Contracts\UserContract;
 
 class PermissionRolePolicy extends UserBasePolicy
 {
-    /**
-     * Determine whether the user can view any models.
-     */
-    public function viewAny(UserContract $user): bool
-    {
-        return $user->hasPermissionTo('permission-role.view.any');
-    }
 
+<<<<<<< HEAD
     /**
      * Determine whether the user can view the model.
      */
@@ -70,3 +64,7 @@ class PermissionRolePolicy extends UserBasePolicy
                $user->hasRole('super-admin');
     }
 }
+=======
+
+}
+>>>>>>> f5b8f58 (.)

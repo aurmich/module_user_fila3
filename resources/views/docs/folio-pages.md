@@ -91,7 +91,7 @@ render(function (View $view) {
 
 ### Prefissi di Lingua negli URL
 
-SaluteOra utilizza prefissi di lingua negli URL. Tutti i link devono includere la locale corrente:
+ utilizza prefissi di lingua negli URL. Tutti i link devono includere la locale corrente:
 
 ```
 /{locale}/percorso/pagina

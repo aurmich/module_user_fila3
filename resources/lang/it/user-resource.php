@@ -8,7 +8,10 @@ return [
             'help' => 'Il nome dell\'utente',
             'validation' => [
                 'required' => 'Il nome è obbligatorio',
+<<<<<<< HEAD
                 'max' => 'Il nome non può superare i 255 caratteri',
+=======
+>>>>>>> f5b8f58 (.)
             ],
         ],
         'email' => [
@@ -19,7 +22,10 @@ return [
                 'required' => 'L\'email è obbligatoria',
                 'email' => 'Inserisci un\'email valida',
                 'max' => 'L\'email non può superare i 255 caratteri',
+<<<<<<< HEAD
                 'unique' => 'Questa email è già registrata',
+=======
+>>>>>>> f5b8f58 (.)
             ],
         ],
         'password' => [
@@ -29,7 +35,10 @@ return [
             'validation' => [
                 'required' => 'La password è obbligatoria',
                 'min' => 'La password deve essere di almeno 8 caratteri',
+<<<<<<< HEAD
                 'max' => 'La password non può superare i 255 caratteri',
+=======
+>>>>>>> f5b8f58 (.)
             ],
         ],
         'password_confirmation' => [
@@ -40,6 +49,7 @@ return [
                 'required' => 'La conferma della password è obbligatoria',
                 'min' => 'La password deve essere di almeno 8 caratteri',
                 'max' => 'La password non può superare i 255 caratteri',
+<<<<<<< HEAD
                 'same' => 'Le password non coincidono',
             ],
         ],
@@ -47,10 +57,15 @@ return [
             'label' => 'Ricordami',
             'help' => 'Mantieni la sessione attiva',
         ],
+=======
+            ],
+        ],
+>>>>>>> f5b8f58 (.)
     ],
     'actions' => [
         'create' => [
             'label' => 'Nuovo Utente',
+<<<<<<< HEAD
             'tooltip' => 'Crea un nuovo utente',
         ],
         'edit' => [
@@ -60,18 +75,24 @@ return [
         'delete' => [
             'label' => 'Elimina',
             'tooltip' => 'Elimina l\'utente',
+=======
+>>>>>>> f5b8f58 (.)
         ],
     ],
     'teams' => [
         'personal_team' => [
             'label' => 'Team Personale',
+<<<<<<< HEAD
             'help' => 'Il team personale dell\'utente',
+=======
+>>>>>>> f5b8f58 (.)
         ],
     ],
     'devices' => [
         'fields' => [
             'uuid' => [
                 'label' => 'UUID',
+<<<<<<< HEAD
                 'help' => 'Identificativo univoco del dispositivo',
             ],
             'mobile_id' => [
@@ -85,6 +106,8 @@ return [
             'device_name' => [
                 'label' => 'Nome Dispositivo',
                 'help' => 'Il nome del dispositivo',
+=======
+>>>>>>> f5b8f58 (.)
             ],
         ],
     ],
@@ -92,6 +115,7 @@ return [
         'fields' => [
             'name' => [
                 'label' => 'Nome',
+<<<<<<< HEAD
                 'help' => 'Il nome del permesso',
             ],
             'guard_name' => [
@@ -105,6 +129,8 @@ return [
             'created_at' => [
                 'label' => 'Data Creazione',
                 'help' => 'Data di creazione del permesso',
+=======
+>>>>>>> f5b8f58 (.)
             ],
         ],
     ],
@@ -113,6 +139,7 @@ return [
             'fields' => [
                 'user' => [
                     'label' => 'Utente',
+<<<<<<< HEAD
                     'help' => 'L\'utente che ha effettuato l\'accesso',
                 ],
                 'login_at' => [
@@ -126,8 +153,14 @@ return [
                 'user_agent' => [
                     'label' => 'User Agent',
                     'help' => 'Il browser dell\'utente',
+=======
+>>>>>>> f5b8f58 (.)
                 ],
             ],
         ],
     ],
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> f5b8f58 (.)

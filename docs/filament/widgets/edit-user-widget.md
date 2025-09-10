@@ -36,8 +36,8 @@ Se l'utente non ha i permessi, viene mostrato un messaggio di errore invece del 
 ## Esempio di estensione nei moduli
 
 Ogni modulo che implementa un tipo di utente deve fornire la propria Action di aggiornamento, ad esempio:
-- `Modules\SaluteOra\Actions\Doctor\UpdateUserAction`
-- `Modules\SaluteOra\Actions\Patient\UpdateUserAction`
+- `Modules\<nome modulo>\Actions\Doctor\UpdateUserAction`
+- `Modules\<nome modulo>\Actions\Patient\UpdateUserAction`
 
 Queste Action devono occuparsi di:
 - Validare i dati ricevuti
@@ -137,7 +137,7 @@ __('user::profile.no_permission')
 
 ### Action per Doctor
 ```php
-namespace Modules\SaluteOra\Actions\Doctor;
+namespace Modules\<nome modulo>\Actions\Doctor;
 
 class UpdateUserAction extends \Modules\User\Actions\User\UpdateUserAction
 {
@@ -151,7 +151,7 @@ class UpdateUserAction extends \Modules\User\Actions\User\UpdateUserAction
 
 ### Action per Patient
 ```php
-namespace Modules\SaluteOra\Actions\Patient;
+namespace Modules\<nome modulo>\Actions\Patient;
 
 class UpdateUserAction extends \Modules\User\Actions\User\UpdateUserAction
 {

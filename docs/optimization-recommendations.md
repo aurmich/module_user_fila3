@@ -125,7 +125,7 @@ User/project_docs/
 #### Pattern di Correzione per Test
 ```php
 // ❌ PROBLEMI ATTUALI
-use Modules\SaluteOra\Models\User;
+use Modules\<nome modulo>\Models\User;
 $user = User::factory()->create();
 
 // ✅ SOLUZIONI RICHIESTE

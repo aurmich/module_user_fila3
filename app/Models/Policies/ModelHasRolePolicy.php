@@ -4,19 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\User\Models\ModelHasRole;
 use Modules\Xot\Contracts\UserContract;
+=======
+use Modules\Xot\Contracts\UserContract;
+use Modules\User\Models\ModelHasRole;
+>>>>>>> f5b8f58 (.)
 
 class ModelHasRolePolicy extends UserBasePolicy
 {
-    /**
-     * Determine whether the user can view any models.
-     */
-    public function viewAny(UserContract $user): bool
-    {
-        return $user->hasPermissionTo('model-has-role.view.any');
-    }
 
+<<<<<<< HEAD
     /**
      * Determine whether the user can view the model.
      */
@@ -70,3 +69,7 @@ class ModelHasRolePolicy extends UserBasePolicy
                $user->hasRole('super-admin');
     }
 }
+=======
+}
+
+>>>>>>> f5b8f58 (.)

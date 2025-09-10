@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\User\Models\OauthPersonalAccessClient;
 use Modules\Xot\Contracts\UserContract;
 
@@ -69,4 +70,12 @@ class OauthPersonalAccessClientPolicy extends UserBasePolicy
         return $user->hasPermissionTo('oauth-personal-access-client.force-delete') ||
                $user->hasRole('super-admin');
     }
+=======
+use Modules\Xot\Contracts\UserContract;
+use Modules\User\Models\OauthPersonalAccessClient;
+
+class OauthPersonalAccessClientPolicy extends UserBasePolicy
+{
+    
+>>>>>>> f5b8f58 (.)
 }

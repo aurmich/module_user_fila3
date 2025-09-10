@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Models;
 
-use Modules\User\Contracts\UserContract;
+use Modules\Xot\Contracts\UserContract;
 use Modules\User\Database\Factories\ProfileFactory;
 use Modules\User\Models\Pivots\DeviceProfile;
 use Modules\User\Models\Pivots\ProfileTeam;

@@ -9,14 +9,8 @@ use Modules\Xot\Contracts\UserContract;
 
 class OauthClientPolicy extends UserBasePolicy
 {
-    /**
-     * Determine whether the user can view any models.
-     */
-    public function viewAny(UserContract $user): bool
-    {
-        return $user->hasPermissionTo('oauth-client.view.any');
-    }
 
+<<<<<<< HEAD
     /**
      * Determine whether the user can view the model.
      */
@@ -70,4 +64,6 @@ class OauthClientPolicy extends UserBasePolicy
         return $user->hasPermissionTo('oauth-client.force-delete') ||
                $user->hasRole('super-admin');
     }
+=======
+>>>>>>> f5b8f58 (.)
 }

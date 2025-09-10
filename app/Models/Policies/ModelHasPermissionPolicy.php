@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
+<<<<<<< HEAD
 use Modules\User\Models\ModelHasPermission;
 use Modules\Xot\Contracts\UserContract;
 
@@ -69,4 +70,12 @@ class ModelHasPermissionPolicy extends UserBasePolicy
         return $user->hasPermissionTo('model-has-permission.force-delete') ||
                $user->hasRole('super-admin');
     }
+=======
+use Modules\Xot\Contracts\UserContract;
+use Modules\User\Models\ModelHasPermission;
+
+class ModelHasPermissionPolicy extends UserBasePolicy
+{
+
+>>>>>>> f5b8f58 (.)
 }

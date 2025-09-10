@@ -8,13 +8,13 @@
 
 ## Panoramica
 
-Questo documento descrive come implementare nell'header di SaluteOra:
+Questo documento descrive come implementare nell'header di :
 1. Un selettore di lingua
 2. Un dropdown con l'avatar dell'utente contenente il link di logout
 
 ## Struttura Attuale dell'Header
 
-L'header di SaluteOra è gestito tramite:
+L'header di  è gestito tramite:
 - **Componente Blade**: `/Themes/One/resources/views/components/sections/header.blade.php`
 - **Configurazione JSON**: `/config/local/saluteora/database/content/sections/1.json`
 
@@ -206,7 +206,7 @@ Ecco come dovrebbe apparire il file JSON completo dell'header dopo le modifiche:
                 "data": {
                     "view": "pub_theme::components.blocks.logo",
                     "src": "patient::images/logo.svg",
-                    "alt": "Logo SaluteOra",
+                    "alt": "Logo ",
                     "width": 150,
                     "height": 32
                 }
@@ -280,7 +280,7 @@ Ecco come dovrebbe apparire il file JSON completo dell'header dopo le modifiche:
                 "data": {
                     "view": "pub_theme::components.blocks.logo",
                     "src": "patient::images/logo.svg",
-                    "alt": "SaluteOra Logo",
+                    "alt": " Logo",
                     "width": 150,
                     "height": 32
                 }

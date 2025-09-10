@@ -24,8 +24,13 @@ class EnsureUserHasType
      */
     public function handle(Request $request, Closure $next, string $type): Response
     {
+        $userType = $request->user()?->type;
+        $userTypeValue = $userType;
+        if($userTypeValue instanceof \BackedEnum){
+            $userTypeValue = $userTypeValue->value;
+        }
         
-        if ($request->user()?->type->value !== $type) {
+        if ($userTypeValue !== $type) {
             // Redirect...
             return redirect()->route('home');
         }

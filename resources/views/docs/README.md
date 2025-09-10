@@ -1,8 +1,8 @@
-# Tema One per SaluteOra
+# Tema One per 
 
 ## Introduzione
 
-Il Tema One è il tema predefinito per SaluteOra, basato su Filament 3.3. Questo tema fornisce un'interfaccia moderna e responsive per il frontend del sito.
+Il Tema One è il tema predefinito per , basato su Filament 3.3. Questo tema fornisce un'interfaccia moderna e responsive per il frontend del sito.
 
 ## Requisiti
 
@@ -76,4 +76,4 @@ Il tema One si integra con il modulo CMS per la gestione dei contenuti. I conten
 
 ## Supporto
 
-Per supporto tecnico, contattare il team SaluteOra. 
+Per supporto tecnico, contattare il team . 
