@@ -8,19 +8,10 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
-<<<<<<< HEAD
-use Illuminate\Support\Carbon;
-use Modules\User\Database\Factories\AuthenticationFactory;
-
-/**
- * Authentication Model
- *
-=======
 use Modules\User\Database\Factories\AuthenticationFactory;
 use Carbon\Carbon;
 
 /**
->>>>>>> f5b8f58 (.)
  * Tracks user authentication attempts and sessions.
  *
  * @property int $id

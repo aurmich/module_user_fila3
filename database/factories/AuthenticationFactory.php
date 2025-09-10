@@ -38,19 +38,10 @@ class AuthenticationFactory extends Factory
             'type' => $this->faker->randomElement(['login', 'logout', 'password_reset', 'email_verification']),
             'ip_address' => $this->faker->ipv4(),
             'user_agent' => $this->faker->userAgent(),
-<<<<<<< HEAD
-            'location' => $this->faker->optional(0.7)->city().', '.$this->faker->optional(0.7)->country(),
-            'login_successful' => $loginSuccessful,
-            'login_at' => $loginAt,
-            'logout_at' => $loginSuccessful && $this->faker->boolean(60)
-                ? $this->faker->dateTimeBetween($loginAt, 'now')
-                : null,
-=======
             'location' => $this->faker->optional()->city(),
             'login_successful' => $loginSuccessful,
             'login_at' => $loginAt,
             'logout_at' => $loginSuccessful ? $this->faker->optional(0.3)->dateTimeBetween($loginAt, 'now') : null,
->>>>>>> f5b8f58 (.)
             'authenticatable_type' => User::class,
             'authenticatable_id' => User::factory(),
         ];
@@ -108,8 +99,4 @@ class AuthenticationFactory extends Factory
             'authenticatable_id' => $user->id,
         ]);
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f5b8f58 (.)
