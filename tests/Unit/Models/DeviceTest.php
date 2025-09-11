@@ -368,11 +368,3 @@ class DeviceTest extends TestCase
 }
 
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> fa2ef607 (.)

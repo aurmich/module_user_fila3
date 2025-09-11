@@ -1573,7 +1573,6 @@ trait HasPassportConfiguration
 # Changelog
 
 ## [1.0.0] - 2024-03-20
-<<<<<<< HEAD
 # Changelog
 
 ## [1.0.0] - 2024-03-20
@@ -1583,8 +1582,6 @@ trait HasPassportConfiguration
 # Changelog
 
 ## [1.0.0] - 2024-03-20
-=======
->>>>>>> fa2ef607 (.)
 
 ### Added
 - Implementazione iniziale dei trait di configurazione

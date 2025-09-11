@@ -294,24 +294,4 @@ echo "User roles: " . $user->roles()->count() . "\n";
 - [Testing Guidelines](./testing.md)
 - [Database Schema](./database-schema.md)
 
----
 
-**Ultimo aggiornamento**: Gennaio 2025
-**Versione**: 1.0
-**Autore**: Sistema Laraxot
-
-
-
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> fa2ef607 (.)
-=======
-
-
->>>>>>> 1a3cd5ac (.)

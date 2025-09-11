@@ -5,16 +5,6 @@ declare(strict_types=1);
 namespace Modules\User\Models;
 
 use Filament\Models\Contracts\HasName;
-<<<<<<< HEAD
-=======
-use Illuminate\Support\Facades\Schema;
-use Spatie\Permission\Traits\HasRoles;
-use Illuminate\Database\Eloquent\Model;
-use Modules\Xot\Contracts\UserContract;
-use Illuminate\Notifications\Notifiable;
-use Modules\User\Models\Traits\HasTeams;
-use Modules\Xot\Models\Traits\RelationX;
->>>>>>> fa2ef607 (.)
 use Filament\Models\Contracts\HasTenants;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Filament\Panel;
@@ -140,13 +130,8 @@ abstract class BaseUser extends Authenticatable implements HasName, HasTenants, 
     use HasApiTokens;
     use HasChildren;
     use HasFactory;
-<<<<<<< HEAD
     use HasPermissions;
     use HasRoles;
-=======
-    use HasRoles;
-    // Guard coerente con Spatie/Permission
->>>>>>> fa2ef607 (.)
     use HasUuids;
     use InteractsWithMedia;
     use Notifiable;

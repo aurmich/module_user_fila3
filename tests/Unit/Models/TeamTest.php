@@ -247,11 +247,3 @@ class TeamTest extends TestCase
 }
 
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> fa2ef607 (.)

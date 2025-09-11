@@ -962,7 +962,6 @@ Schema::table('teams', function (Blueprint $table) {
 - [ ] La documentazione tecnica è aggiornata
 - [ ] I comandi artisan sono lanciati dal path corretto o con namespace modulo
 
-<<<<<<< HEAD
 
 ## Aggiornamenti Recenti
 
@@ -977,8 +976,6 @@ Schema::table('teams', function (Blueprint $table) {
 
 ## Collegamenti
 
-=======
->>>>>>> fa2ef607 (.)
 ## Aggiornamenti Recenti
 
 ### 27 Gennaio 2025

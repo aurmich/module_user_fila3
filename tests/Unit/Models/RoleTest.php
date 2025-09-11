@@ -217,11 +217,3 @@ class RoleTest extends TestCase
 }
 
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> fa2ef607 (.)
