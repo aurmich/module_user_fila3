@@ -252,3 +252,11 @@ class PermissionTest extends TestCase
 }
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> fa2ef607 (.)
