@@ -27,10 +27,13 @@ return array (
       'placeholder' => 'Data di creazione',
       'help' => 'Data di creazione del permesso',
     ),
+<<<<<<< HEAD
     'applyFilters' => 
     array (
       'label' => 'applyFilters',
     ),
+=======
+>>>>>>> 2cca053 (.)
   ),
   'common' => 
   array (

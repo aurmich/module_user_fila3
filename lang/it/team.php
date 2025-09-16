@@ -102,10 +102,13 @@ return array (
     array (
       'label' => 'delete',
     ),
+<<<<<<< HEAD
     'layout' => 
     array (
       'label' => 'layout',
     ),
+=======
+>>>>>>> 2cca053 (.)
   ),
   'actions' => 
   array (

@@ -965,6 +965,7 @@ Schema::table('teams', function (Blueprint $table) {
 
 ## Aggiornamenti Recenti
 
+<<<<<<< HEAD
 ### 16 Gennaio 2025
 - ✅ **Miglioramento File Traduzioni**: Risolto conflitto Git e migliorato `lang/it/device.php`
   - **Conflitto risolto**: Mantenuto TUTTO il contenuto esistente senza perdite
@@ -975,6 +976,8 @@ Schema::table('teams', function (Blueprint $table) {
   - **Documentazione**: Creato `translation-device-improvements.md`
   - **Regola critica**: Mai perdere contenuto + struttura completa obbligatoria
 
+=======
+>>>>>>> 2cca053 (.)
 ### 27 Gennaio 2025
 - ✅ **Riorganizzazione Documentazione**: Spostati file specifici da docs_project alle cartelle docs dei moduli
   - **File spostati in User/docs/**: 
@@ -986,8 +989,21 @@ Schema::table('teams', function (Blueprint $table) {
 
 ## Collegamenti
 
+<<<<<<< HEAD
 ### Documentazione Traduzioni
 - [Translation Device Improvements](./translation-device-improvements.md) - Miglioramenti file traduzioni dispositivi
+=======
+## Aggiornamenti Recenti
+
+### 27 Gennaio 2025
+- ✅ **Riorganizzazione Documentazione**: Spostati file specifici da docs_project alle cartelle docs dei moduli
+  - **File spostati in User/docs/**: 
+    - `doctor-registration-widget.md` - Widget registrazione dottori
+    - `doctor-registration.md` - Sistema registrazione dottori
+    - `email-doctor-registration.md` - Email registrazione dottori
+  - **Motivazione**: Separazione responsabilità, principio modulare, manutenibilità
+  - **Regola**: docs_project solo per documentazione generale del progetto, file specifici di moduli nelle rispettive cartelle docs
+>>>>>>> 2cca053 (.)
 
 ## 🔗 Collegamenti Moduli
 - [Xot Core Framework](../Xot/docs/README.md)
@@ -996,4 +1012,8 @@ Schema::table('teams', function (Blueprint $table) {
 
 ---
 *User Module Documentation - Framework Laraxot*
+<<<<<<< HEAD
+=======
+## Collegamenti
+>>>>>>> 2cca053 (.)
 

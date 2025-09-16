@@ -20,6 +20,7 @@ class GetNewPasswordAction
     {
         //$user = XotData::make()->getUserByEmail($record->email);
         $user=$record;
+<<<<<<< HEAD
         /*
         $password=Str::password(10);
         $user->update([
@@ -30,6 +31,14 @@ class GetNewPasswordAction
         //$password='Pgn7T8Bppf';
         [$password,$password_hash] = once(function () {
             $password=trim(Str::password(10));
+=======
+        
+        //$password=trim(Str::random(10));
+        //$password='Pgn7T8Bppf';
+        [$password,$password_hash] = once(function () {
+            //$password=trim(Str::password(10));
+            $password=app(\Modules\Xot\Actions\String\GetPronounceablePasswordAction::class)->execute();
+>>>>>>> 2cca053 (.)
             $password_hash=Hash::make($password);
             return [$password,$password_hash];
         });

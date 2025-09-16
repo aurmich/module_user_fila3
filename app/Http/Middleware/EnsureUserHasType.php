@@ -26,8 +26,13 @@ class EnsureUserHasType
     {
         
         $userType = $request->user()?->type;
+<<<<<<< HEAD
         if ($userType instanceof \Modules\User\Enums\UserType && $userType->value == $type) {
             // Redirect...
+=======
+       
+        if ($userType instanceof \BackedEnum && $userType->value == $type) {
+>>>>>>> 2cca053 (.)
             return $next($request);
         }
 

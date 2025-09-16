@@ -107,6 +107,7 @@ return array (
     array (
       'label' => 'id',
     ),
+<<<<<<< HEAD
     'values' => 
     array (
       'description' => 'values',
@@ -116,6 +117,8 @@ return array (
     array (
       'description' => 'enabled',
     ),
+=======
+>>>>>>> 2cca053 (.)
   ),
   'roles' => 
   array (
@@ -188,8 +191,11 @@ return array (
     'settings' => 'Impostazioni',
     'reports' => 'Report',
   ),
+<<<<<<< HEAD
   'model' => 
   array (
     'label' => 'role.model',
   ),
+=======
+>>>>>>> 2cca053 (.)
 );
