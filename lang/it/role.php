@@ -107,6 +107,15 @@ return array (
     array (
       'label' => 'id',
     ),
+    'values' => 
+    array (
+      'description' => 'values',
+      'helper_text' => 'values',
+    ),
+    'enabled' => 
+    array (
+      'description' => 'enabled',
+    ),
   ),
   'roles' => 
   array (
@@ -178,5 +187,9 @@ return array (
     'content' => 'Gestione Contenuti',
     'settings' => 'Impostazioni',
     'reports' => 'Report',
+  ),
+  'model' => 
+  array (
+    'label' => 'role.model',
   ),
 );

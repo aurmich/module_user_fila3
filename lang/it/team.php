@@ -102,6 +102,10 @@ return array (
     array (
       'label' => 'delete',
     ),
+    'layout' => 
+    array (
+      'label' => 'layout',
+    ),
   ),
   'actions' => 
   array (

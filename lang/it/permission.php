@@ -27,6 +27,10 @@ return array (
       'placeholder' => 'Data di creazione',
       'help' => 'Data di creazione del permesso',
     ),
+    'applyFilters' => 
+    array (
+      'label' => 'applyFilters',
+    ),
   ),
   'common' => 
   array (
