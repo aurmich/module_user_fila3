@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 return array (
   'navigation' => 
   array (
@@ -76,10 +77,89 @@ return array (
     ),
     'recordId' => 
     array (
+=======
+return  [
+  'navigation' => 
+   [
+    'name' => 'Team',
+    'plural' => 'Teams',
+    'group' => 
+     [
+      'name' => 'Gestione Utenti',
+      'description' => 'Gestione dei team e delle loro autorizzazioni',
+    ],
+    'label' => 'team',
+    'sort' => 18,
+    'icon' => 'user-team',
+  ],
+  'fields' => 
+   [
+    'first_name' => 'Nome',
+    'last_name' => 'Cognome',
+    'detach' => 
+     [
+      'label' => 'detach',
+    ],
+    'toggleColumns' => 
+     [
+      'label' => 'toggleColumns',
+    ],
+    'reorderRecords' => 
+     [
+      'label' => 'reorderRecords',
+    ],
+    'resetFilters' => 
+     [
+      'label' => 'resetFilters',
+    ],
+    'create' => 
+     [
+      'label' => 'create',
+    ],
+    'attach' => 
+     [
+      'label' => 'attach',
+    ],
+    'view' => 
+     [
+      'label' => 'view',
+    ],
+    'edit' => 
+     [
+      'label' => 'edit',
+    ],
+    'openFilters' => 
+     [
+      'label' => 'openFilters',
+    ],
+    'applyFilters' => 
+     [
+      'label' => 'applyFilters',
+    ],
+    'updated_at' => 
+     [
+      'label' => 'updated_at',
+    ],
+    'created_at' => 
+     [
+      'label' => 'created_at',
+    ],
+    'users_count' => 
+     [
+      'label' => 'users_count',
+    ],
+    'name' => 
+     [
+      'label' => 'name',
+    ],
+    'recordId' => 
+     [
+>>>>>>> 14629c0 (.)
       'label' => 'recordId',
       'description' => 'recordId',
       'helper_text' => 'recordId',
       'placeholder' => 'recordId',
+<<<<<<< HEAD
     ),
     'personal_team' => 
     array (
@@ -87,10 +167,20 @@ return array (
     ),
     'role' => 
     array (
+=======
+    ],
+    'personal_team' => 
+     [
+      'label' => 'personal_team',
+    ],
+    'role' => 
+     [
+>>>>>>> 14629c0 (.)
       'label' => 'role',
       'description' => 'role',
       'helper_text' => 'role',
       'placeholder' => 'role',
+<<<<<<< HEAD
     ),
     'description' => 
     array (
@@ -142,3 +232,56 @@ return array (
     'label' => 'team.model',
   ),
 );
+=======
+    ],
+    'description' => 
+     [
+      'description' => 'description',
+      'helper_text' => 'description',
+      'placeholder' => 'description',
+    ],
+    'delete' => 
+     [
+      'label' => 'delete',
+    ],
+    'layout' => 
+     [
+      'label' => 'layout',
+    ],
+  ],
+  'actions' => 
+   [
+    'import' => 
+     [
+      'fields' => 
+       [
+        'import_file' => 'Seleziona un file XLS o CSV da caricare',
+      ],
+    ],
+    'export' => 
+     [
+      'filename_prefix' => 'Aree al',
+      'columns' => 
+       [
+        'name' => 'Nome area',
+        'parent_name' => 'Nome area livello superiore',
+      ],
+    ],
+    'create' => 
+     [
+      'label' => 'create',
+    ],
+  ],
+  'plural' => 
+   [
+    'model' => 
+     [
+      'label' => 'team.plural.model',
+    ],
+  ],
+  'model' => 
+   [
+    'label' => 'team.model',
+  ],
+];
+>>>>>>> 14629c0 (.)

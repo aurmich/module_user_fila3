@@ -21,6 +21,10 @@ class UsersRelationManager extends XotBaseRelationManager
     /**
      * @return array<Forms\Components\Component>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function getFormSchema(): array
     {
         return [
@@ -42,8 +46,13 @@ class UsersRelationManager extends XotBaseRelationManager
                 ->required(fn ($context) => $context === 'create')
                 ->minLength(8)
                 ->same('password_confirmation')
+<<<<<<< HEAD
                 ->dehydrated(fn ($state) => filled($state))
                 ->dehydrateStateUsing(fn ($state) => bcrypt($state)),
+=======
+                ->dehydrated(filled(...))
+                ->dehydrateStateUsing(bcrypt(...)),
+>>>>>>> 14629c0 (.)
 
             Forms\Components\TextInput::make('password_confirmation')
                 ->password()
@@ -55,6 +64,10 @@ class UsersRelationManager extends XotBaseRelationManager
     /**
      * @return array<string, \Filament\Tables\Columns\Column>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function getTableColumns(): array
     {
         return [

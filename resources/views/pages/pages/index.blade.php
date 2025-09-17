@@ -11,6 +11,7 @@ render(function (View $view) {
     $hasCategory = \Schema::hasColumn('pages', 'category');
 
     // Recupero le pagine con paginazione (12 per pagina)
+<<<<<<< HEAD
     $pages = Page::when(request()->has('q'), function($query) {
         return $query->where('title', 'like', '%' . request()->get('q') . '%');
     });
@@ -20,6 +21,13 @@ render(function (View $view) {
         $pages = $pages->when(request()->has('category'), function($query) {
             return $query->where('category', request()->get('category'));
         });
+=======
+    $pages = Page::when(request()->has('q'), fn($query) => $query->where('title', 'like', '%' . request()->get('q') . '%'));
+
+    // Applichiamo il filtro per categoria solo se la colonna esiste
+    if ($hasCategory) {
+        $pages = $pages->when(request()->has('category'), fn($query) => $query->where('category', request()->get('category')));
+>>>>>>> 14629c0 (.)
     }
 
     $pages = $pages->orderBy('created_at', 'desc')

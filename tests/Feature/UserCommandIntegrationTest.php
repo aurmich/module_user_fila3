@@ -63,9 +63,13 @@ describe('User Command Integration', function () {
         // Test Arr helper functionality
         $testArray = ['a' => 1, 'b' => 2, 'c' => 3];
 
+<<<<<<< HEAD
         $result = \Illuminate\Support\Arr::mapWithKeys($testArray, function ($value, $key) {
             return [$key.'_mapped' => $value * 2];
         });
+=======
+        $result = \Illuminate\Support\Arr::mapWithKeys($testArray, fn ($value, $key) => [$key.'_mapped' => $value * 2]);
+>>>>>>> 14629c0 (.)
 
         expect($result)->toBeArray()
             ->and($result)->toHaveKeys(['a_mapped', 'b_mapped', 'c_mapped'])

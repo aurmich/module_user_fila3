@@ -21,6 +21,10 @@ class TeamResource extends XotBaseResource
      *
      * @return class-string<\Illuminate\Database\Eloquent\Model>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public static function getModel(): string
     {
         $xot = XotData::make();
@@ -29,6 +33,10 @@ class TeamResource extends XotBaseResource
         return $xot->getTeamClass();
     }
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public static function getFormSchema(): array
     {
         return [

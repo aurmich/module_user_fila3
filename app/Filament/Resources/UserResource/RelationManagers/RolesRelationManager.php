@@ -32,6 +32,10 @@ class RolesRelationManager extends XotBaseRelationManager
     /**
      * @return array<string, \Filament\Forms\Components\Component>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function getFormSchema(): array
     {
         return [
@@ -45,6 +49,10 @@ class RolesRelationManager extends XotBaseRelationManager
         ];
     }
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function table(Table $table): Table
     {
         $xotData = XotData::make();

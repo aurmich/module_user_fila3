@@ -42,6 +42,10 @@ class Dashboard extends XotBaseDashboard
         ];
     }
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function getFiltersFormSchema():array{
         return [
             DatePicker::make('startDate')

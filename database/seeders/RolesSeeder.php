@@ -43,6 +43,7 @@ class RolesSeeder extends Seeder
     private function displayResults(array $roles): void
     {
         $this->command->info('Roles seeded successfully:');
+<<<<<<< HEAD
         $this->command->table(self::$OUTPUT_TABLE_HEADERS, collect($roles)->map(function (Role $role, int $index) {
             return [
                 $index + 1,
@@ -50,5 +51,12 @@ class RolesSeeder extends Seeder
                 $role->guard_name,
             ];
         })->toArray());
+=======
+        $this->command->table(self::$OUTPUT_TABLE_HEADERS, collect($roles)->map(fn (Role $role, int $index) => [
+                $index + 1,
+                $role->name,
+                $role->guard_name,
+            ])->toArray());
+>>>>>>> 14629c0 (.)
     }
 }

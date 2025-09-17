@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< HEAD
     // ==============================================
     // NAVIGATION & STRUCTURE
     // ==============================================
@@ -30,6 +31,8 @@ return [
     // ==============================================
     // FIELDS - STRUTTURA ESPANSA OBBLIGATORIA
     // ==============================================
+=======
+>>>>>>> 14629c0 (.)
     'fields' => [
         'uuid' => [
             'label' => 'UUID',
@@ -123,10 +126,13 @@ return [
             'help' => 'Indica se è uno smartphone o telefono cellulare',
         ],
     ],
+<<<<<<< HEAD
 
     // ==============================================
     // ACTIONS - STRUTTURA ESPANSA OBBLIGATORIA
     // ==============================================
+=======
+>>>>>>> 14629c0 (.)
     'actions' => [
         'create' => [
             'label' => 'Crea Dispositivo',
@@ -199,24 +205,41 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
 
     // ==============================================
     // SECTIONS - ORGANIZZAZIONE FORM
     // ==============================================
+=======
+    'navigation' => [
+        'sort' => 50,
+        'label' => 'Dispositivi',
+        'group' => 'Sicurezza',
+        'icon' => 'heroicon-o-device-phone-mobile',
+        'badge' => 'Gestione dispositivi utente',
+    ],
+>>>>>>> 14629c0 (.)
     'sections' => [
         'device_info' => [
             'label' => 'Informazioni Dispositivo',
             'description' => 'Dettagli tecnici del dispositivo',
+<<<<<<< HEAD
             'icon' => 'heroicon-o-information-circle',
+=======
+>>>>>>> 14629c0 (.)
         ],
         'device_type' => [
             'label' => 'Tipo Dispositivo',
             'description' => 'Categoria e classificazione del dispositivo',
+<<<<<<< HEAD
             'icon' => 'heroicon-o-device-phone-mobile',
+=======
+>>>>>>> 14629c0 (.)
         ],
         'browser_info' => [
             'label' => 'Informazioni Browser',
             'description' => 'Dettagli del browser utilizzato',
+<<<<<<< HEAD
             'icon' => 'heroicon-o-globe-alt',
         ],
     ],
@@ -224,6 +247,10 @@ return [
     // ==============================================
     // FILTERS - RICERCA E FILTRI
     // ==============================================
+=======
+        ],
+    ],
+>>>>>>> 14629c0 (.)
     'filters' => [
         'platform' => [
             'label' => 'Piattaforma',
@@ -252,14 +279,18 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
 
     // ==============================================
     // MESSAGES - FEEDBACK UTENTE
     // ==============================================
+=======
+>>>>>>> 14629c0 (.)
     'messages' => [
         'empty_state' => 'Nessun dispositivo trovato',
         'search_placeholder' => 'Cerca dispositivi...',
         'loading' => 'Caricamento dispositivi in corso...',
+<<<<<<< HEAD
         'total_count' => 'Totale dispositivi: :count',
         'created' => 'Dispositivo creato con successo',
         'updated' => 'Dispositivo aggiornato con successo',
@@ -305,4 +336,8 @@ return [
             'no' => 'No',
         ],
     ],
+=======
+        'total_devices' => 'Totale dispositivi: :count',
+    ],
+>>>>>>> 14629c0 (.)
 ];

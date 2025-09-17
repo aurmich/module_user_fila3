@@ -59,6 +59,10 @@ class TenantUser extends BasePivot
     ];
 
     /** @return array<string, string> */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     protected function casts(): array
     {
         return [

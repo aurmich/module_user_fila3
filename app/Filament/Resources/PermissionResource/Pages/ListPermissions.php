@@ -25,6 +25,10 @@ class ListPermissions extends XotBaseListRecords
     /**
      * @return array<string, Tables\Columns\Column>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function getTableColumns(): array
     {
         return [
@@ -45,6 +49,10 @@ class ListPermissions extends XotBaseListRecords
     /**
      * @return array<string, Tables\Filters\BaseFilter>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function getTableFilters(): array
     {
         return [
@@ -61,6 +69,10 @@ class ListPermissions extends XotBaseListRecords
     /**
      * @return array<string, Tables\Actions\Action|Tables\Actions\ActionGroup>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function getTableActions(): array
     {
         return [
@@ -73,6 +85,10 @@ class ListPermissions extends XotBaseListRecords
     /**
      * @return array<string, \Filament\Actions\Action>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     protected function getHeaderActions(): array
     {
         return [
@@ -83,6 +99,10 @@ class ListPermissions extends XotBaseListRecords
     /**
      * @return array<string, BulkAction>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function getTableBulkActions(): array
     {
         Assert::classExists($roleModel = config('permission.models.role'));

@@ -39,6 +39,10 @@ class RegisterWidget extends XotBaseWidget
         ]);
     }
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function getFormSchema(): array
     {
         return [
@@ -114,6 +118,10 @@ class RegisterWidget extends XotBaseWidget
         ];
     }
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function form(Form $form): Form
     {
         return $form

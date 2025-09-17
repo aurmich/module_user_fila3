@@ -21,6 +21,10 @@ class ListDevices extends XotBaseListRecords
     /**
      * @return array<string, \Filament\Tables\Columns\Column>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function getTableColumns(): array
     {
         return [

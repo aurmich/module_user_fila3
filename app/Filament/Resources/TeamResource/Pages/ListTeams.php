@@ -13,6 +13,10 @@ class ListTeams extends XotBaseListRecords
     // //
     protected static string $resource = TeamResource::class;
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function getTableColumns(): array
     {
         return [

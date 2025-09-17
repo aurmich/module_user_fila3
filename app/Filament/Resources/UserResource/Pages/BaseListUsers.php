@@ -27,6 +27,10 @@ abstract class BaseListUsers extends XotBaseListRecords
      *
      * @return array<string, \Filament\Tables\Columns\Column>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function getTableColumns(): array
     {
         return [
@@ -42,6 +46,10 @@ abstract class BaseListUsers extends XotBaseListRecords
      *
      * @return array<string, \Filament\Actions\Action>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     protected function getHeaderActions(): array
     {
         return [
@@ -54,6 +62,10 @@ abstract class BaseListUsers extends XotBaseListRecords
      *
      * @return array<Tables\Filters\BaseFilter>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function getTableFilters(): array
     {
         return [
@@ -74,6 +86,10 @@ abstract class BaseListUsers extends XotBaseListRecords
      * @phpstan-ignore-next-line
      */
     /** @phpstan-ignore-next-line */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function getTableActions(): array
     {
         $actions = [

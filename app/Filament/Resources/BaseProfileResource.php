@@ -22,6 +22,10 @@ abstract class BaseProfileResource extends XotBaseResource
 
     protected static ?string $navigationIcon = 'heroicon-o-users';
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public static function getFormSchema(): array
     {
         return [
@@ -47,12 +51,20 @@ abstract class BaseProfileResource extends XotBaseResource
         ];
     }
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public static function getRelations(): array
     {
         return [
         ];
     }
 
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public static function getPages(): array
     {
         return [

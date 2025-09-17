@@ -66,6 +66,10 @@ class PasswordExpiredWidget extends XotBaseWidget implements HasForms
      *
      * @return array<int, Component>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function getFormSchema(): array
     {
         return [
@@ -193,6 +197,10 @@ class PasswordExpiredWidget extends XotBaseWidget implements HasForms
      *
      * @return array<int, Action|ActionGroup>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     protected function getFormActions(): array
     {
         return [

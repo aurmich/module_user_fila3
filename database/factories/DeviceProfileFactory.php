@@ -28,6 +28,10 @@ class DeviceProfileFactory extends DeviceUserFactory
      *
      * @return array<string, mixed>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function definition(): array
     {
         return array_merge(parent::definition(), [

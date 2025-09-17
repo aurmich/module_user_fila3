@@ -29,6 +29,7 @@ pest()->extend(TestCase::class)
 |
 */
 
+<<<<<<< HEAD
 expect()->extend('toBeUser', function () {
     return $this->toBeInstanceOf(\Modules\User\Models\User::class);
 });
@@ -40,6 +41,13 @@ expect()->extend('toBeTeam', function () {
 expect()->extend('toBeProfile', function () {
     return $this->toBeInstanceOf(\Modules\User\Models\Profile::class);
 });
+=======
+expect()->extend('toBeUser', fn () => $this->toBeInstanceOf(\Modules\User\Models\User::class));
+
+expect()->extend('toBeTeam', fn () => $this->toBeInstanceOf(\Modules\User\Models\Team::class));
+
+expect()->extend('toBeProfile', fn () => $this->toBeInstanceOf(\Modules\User\Models\Profile::class));
+>>>>>>> 14629c0 (.)
 
 /*
 |--------------------------------------------------------------------------

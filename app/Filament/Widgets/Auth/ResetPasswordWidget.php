@@ -41,6 +41,10 @@ class ResetPasswordWidget extends XotBaseWidget
      *
      * @return array<string, \Filament\Forms\Components\Component>
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function getFormSchema(): array
     {
         return [
@@ -77,6 +81,10 @@ class ResetPasswordWidget extends XotBaseWidget
      * @param \Filament\Forms\Form $form
      * @return \Filament\Forms\Form
      */
+<<<<<<< HEAD
+=======
+    #[\Override]
+>>>>>>> 14629c0 (.)
     public function form(Form $form): Form
     {
         return $form
