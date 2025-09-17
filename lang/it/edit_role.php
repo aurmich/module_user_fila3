@@ -12,6 +12,7 @@ return array (
       'label' => 'delete',
     ),
 <<<<<<< HEAD
+<<<<<<< HEAD
     'cancel' => 
     array (
       'label' => 'cancel',
@@ -22,5 +23,7 @@ return array (
     ),
 =======
 >>>>>>> 2cca053 (.)
+=======
+>>>>>>> ed0944e (.)
   ),
 );

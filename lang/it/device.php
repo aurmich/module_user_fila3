@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -226,6 +227,8 @@ return [
     ],
 ];
 =======
+=======
+>>>>>>> ed0944e (.)
 return array (
   'fields' => 
   array (
@@ -316,4 +319,7 @@ return array (
     'icon' => 'heroicon-o-device-phone-mobile',
   ),
 );
+<<<<<<< HEAD
 >>>>>>> 2cca053 (.)
+=======
+>>>>>>> ed0944e (.)

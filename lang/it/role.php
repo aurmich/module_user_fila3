@@ -108,6 +108,7 @@ return array (
       'label' => 'id',
     ),
 <<<<<<< HEAD
+<<<<<<< HEAD
     'values' => 
     array (
       'description' => 'values',
@@ -119,6 +120,8 @@ return array (
     ),
 =======
 >>>>>>> 2cca053 (.)
+=======
+>>>>>>> ed0944e (.)
   ),
   'roles' => 
   array (
@@ -192,10 +195,13 @@ return array (
     'reports' => 'Report',
   ),
 <<<<<<< HEAD
+<<<<<<< HEAD
   'model' => 
   array (
     'label' => 'role.model',
   ),
 =======
 >>>>>>> 2cca053 (.)
+=======
+>>>>>>> ed0944e (.)
 );
