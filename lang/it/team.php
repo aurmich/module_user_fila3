@@ -98,20 +98,14 @@ return array (
       'helper_text' => 'description',
       'placeholder' => 'description',
     ),
-    'delete' => 
+    'delete' =>
     array (
-      'label' => 'delete',
+      'label' => 'Elimina',
     ),
-<<<<<<< HEAD
-<<<<<<< HEAD
-    'layout' => 
+    'layout' =>
     array (
-      'label' => 'layout',
+      'label' => 'Layout',
     ),
-=======
->>>>>>> 2cca053 (.)
-=======
->>>>>>> ed0944e (.)
   ),
   'actions' => 
   array (

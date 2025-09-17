@@ -21,22 +21,16 @@ return array (
       'placeholder' => 'Seleziona lo stato',
       'help' => 'Indica se il permesso è attivo',
     ),
-    'created_at' => 
+    'created_at' =>
     array (
       'label' => 'Data Creazione',
       'placeholder' => 'Data di creazione',
       'help' => 'Data di creazione del permesso',
     ),
-<<<<<<< HEAD
-<<<<<<< HEAD
-    'applyFilters' => 
+    'applyFilters' =>
     array (
-      'label' => 'applyFilters',
+      'label' => 'Applica Filtri',
     ),
-=======
->>>>>>> 2cca053 (.)
-=======
->>>>>>> ed0944e (.)
   ),
   'common' => 
   array (

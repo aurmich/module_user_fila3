@@ -1,32 +1,56 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Dependencies and packages
-/vendor/
-/node_modules/
-/docs/vendor/
+# ==============================================
+# LARAXOT MODULE USER - .GITIGNORE
+# ==============================================
+# Modulo User Laraxot - Template standardizzato
+# Ultimo aggiornamento: 2025-01-06
+# ==============================================
 
-# Lock files and cache
-*.lock
-*.cache
-*.phar
-*.jar
+# ==============================================
+# DEPENDENCIES & PACKAGES
+# ==============================================
+vendor/
+node_modules/
 package-lock.json
-yarn-error.log
-npm-debug.log
+yarn.lock
 composer.lock
-.phpunit.result.cache
-.php-cs-fixer.cache
 
-# Log files
-*.log
-error_log
-
-# Build directories
-/build/
+# ==============================================
+# BUILD & COMPILED FILES
+# ==============================================
 /build
 build/
+dist/
+docs/cache/
+cache/
 
-# Laravel specific
+# ==============================================
+# CACHE & TEMPORARY FILES
+# ==============================================
+*.cache
+*.lock
+*.phar
+*.jar
+*.tmp
+*.swp
+*.swo
+*.stackdump
+*:Zone.Identifier
+v8-compile-cache-*
+.php-cs-fixer.cache
+.phpunit.result.cache
+
+# ==============================================
+# LOG FILES
+# ==============================================
+*.log
+error_log
+npm-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ==============================================
+# LARAVEL SPECIFIC
+# ==============================================
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -35,105 +59,85 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
+.env.*
+!.env.example
 
-# Database directories
-database/Factories_
-database/Factories_old
-database/Migrations_old
-
-# Local configurations
+# ==============================================
+# ENVIRONMENT & CONFIGURATION
+# ==============================================
 Homestead.yaml
 Homestead.json
 /.vagrant
-
-# IDE specific
 /.idea
 .phpintel
 
-# Git specific
-.git-blame-ignore-revs
+# ==============================================
+# GIT SPECIFIC
+# ==============================================
 .git-rewrite/
-.git-rewrite
+.git-blame-ignore-revs
 
-# Temporary and system files
-*.tmp
-*.swp
-*.swo
-*.stackdump
-*.exe
-*:Zone.Identifier
+# ==============================================
+# SYSTEM FILES
+# ==============================================
 .DS_Store
-=======
-=======
->>>>>>> ed0944e (.)
-# Dependencies
-vendor/
-node_modules/
-package-lock.json
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
-# Build and compiled files
-/build
-cache/
-docs/cache/
-
-# Cache and temporary files
-*.cache
-*.lock
-*.phar
-*.exe
-*:Zone.Identifier
-.php-cs-fixer.cache
-
-# Git related
-.git-rewrite/
-.git-blame-ignore-revs
-
-# Backup files
-<<<<<<< HEAD
->>>>>>> 2cca053 (.)
-=======
->>>>>>> ed0944e (.)
+# ==============================================
+# BACKUP FILES
+# ==============================================
 *.old
 *.old1
+*.old2
 *.backup
 *.backup.*
 *.bak
-<<<<<<< HEAD
-<<<<<<< HEAD
+*.bakcup
 *.new
 
-# Documentation and cache
-docs/phpstan/
-docs/cache/
-cache/
-
-# Development tools
+# ==============================================
+# DEVELOPMENT TOOLS
+# ==============================================
 .windsurf/
 .cursor/
-=======
-=======
->>>>>>> ed0944e (.)
+.phpstorm.meta.php
 
-# File di log
-*.log
-
-# PHPStan documentation
+# ==============================================
+# DOCUMENTATION CACHE
+# ==============================================
 docs/phpstan/
-<<<<<<< HEAD
+docs/cache/
 
-# Old directories
-resources/views/Components_old
-database/Migrations_old
-database/Seeders_old
-database/Factories_old
-database_old
+# ==============================================
+# OLD DIRECTORIES (LEGACY CLEANUP)
+# ==============================================
+resources/views/Components_old/
+database/Migrations_old/
+database/Seeders_old/
+database/Factories_old/
+database_old/
 
-# Old directories to ignore
-resources/views/Components_old
-database/Migrations_old
-database/Seeders_old
-database/Factories_old
-database_old
->>>>>>> 2cca053 (.)
-=======
->>>>>>> ed0944e (.)
+# ==============================================
+# MODULE SPECIFIC - USER
+# ==============================================
+# File di configurazione locale
+config/local.php
+config/development.php
+
+# Cache autenticazione
+storage/framework/cache/
+storage/framework/sessions/
+storage/framework/views/
+
+# File di test temporanei
+test_users.json
+user_test_data.csv
+
+# ==============================================
+# END OF USER .GITIGNORE
+# ==============================================
