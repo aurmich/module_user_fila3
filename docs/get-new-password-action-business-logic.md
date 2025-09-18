@@ -72,28 +72,16 @@ public function execute(UserContract $record): string
 
 ## Conflitti Git Risolti
 
-<<<<<<< HEAD
 ### Problema Password Generation
 ```php
 // PRIMA (con conflitti):
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed0944e (.)
 /*
 $password=Str::password(10);
 */
 //$password=trim(Str::random(10));
 //$password='Pgn7T8Bppf';
 [$password,$password_hash] = once(function () {
-    $password=trim(Str::password(10));
-<<<<<<< HEAD
-=======
-//$password=trim(Str::password(10));
-$password=app(\Modules\Xot\Actions\String\GetPronounceablePasswordAction::class)->execute();
->>>>>>> 2cca053 (.)
-=======
->>>>>>> ed0944e (.)
+    $password=app(\Modules\Xot\Actions\String\GetPronounceablePasswordAction::class)->execute();
 
 // DOPO (risolto):
 [$password,$password_hash] = once(function () {
