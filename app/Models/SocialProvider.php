@@ -92,10 +92,7 @@ class SocialProvider extends BaseModel
     }
 
     /** @return array<string, string> */
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 14629c0 (.)
     protected function casts(): array
     {
         return [

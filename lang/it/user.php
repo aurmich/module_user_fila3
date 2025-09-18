@@ -1,25 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-return array (
-  'navigation' => 
-  array (
-    'name' => 'Utenti',
-    'plural' => 'Utenti',
-    'group' => 
-    array (
-      'name' => 'Gestione Utenti',
-      'description' => 'Gestione degli utenti e dei loro permessi',
-    ),
-    'label' => 'Utenti',
-    'sort' => 26,
-    'icon' => 'user-main',
-  ),
-  'fields' => 
-  array (
-    'id' => 
-    array (
-=======
 return  [
   'navigation' => 
    [
@@ -38,606 +18,287 @@ return  [
    [
     'id' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'ID',
       'help' => 'Identificativo univoco dell\'utente',
       'tooltip' => 'ID utente',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'name' => 
-    array (
-=======
     ],
     'name' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Nome',
       'placeholder' => 'Inserisci il nome completo',
       'help' => 'Nome completo dell\'utente',
       'tooltip' => 'Nome e cognome dell\'utente',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'first_name' => 
-    array (
-=======
     ],
     'first_name' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Nome',
       'placeholder' => 'Inserisci il nome',
       'help' => 'Nome dell\'utente',
       'tooltip' => 'Nome dell\'utente',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'last_name' => 
-    array (
-=======
     ],
     'last_name' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Cognome',
       'placeholder' => 'Inserisci il cognome',
       'help' => 'Cognome dell\'utente',
       'tooltip' => 'Cognome dell\'utente',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'email' => 
-    array (
-=======
     ],
     'email' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Email',
       'placeholder' => 'Inserisci l\'indirizzo email',
       'help' => 'Indirizzo email dell\'utente',
       'tooltip' => 'Email per l\'accesso e le comunicazioni',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'password' => 
-    array (
-=======
     ],
     'password' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Password',
       'placeholder' => 'Inserisci la password',
       'help' => 'Password per l\'accesso al sistema',
       'tooltip' => 'Password di accesso',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'password_confirmation' => 
-    array (
-=======
     ],
     'password_confirmation' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Conferma Password',
       'placeholder' => 'Conferma la password',
       'help' => 'Ripeti la password per conferma',
       'tooltip' => 'Conferma della password',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'current_password' => 
-    array (
-=======
     ],
     'current_password' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Password Attuale',
       'placeholder' => 'Inserisci la password attuale',
       'help' => 'Password corrente per la verifica',
       'tooltip' => 'Password attuale',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'new_password' => 
-    array (
-=======
     ],
     'new_password' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Nuova Password',
       'placeholder' => 'Inserisci la nuova password',
       'help' => 'Nuova password desiderata',
       'tooltip' => 'Nuova password',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'role' => 
-    array (
-=======
     ],
     'role' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Ruolo',
       'placeholder' => 'Seleziona il ruolo',
       'help' => 'Ruolo dell\'utente nel sistema',
       'tooltip' => 'Ruolo e permessi',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'roles' => 
-    array (
-=======
     ],
     'roles' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Ruoli',
       'placeholder' => 'Seleziona i ruoli',
       'help' => 'Ruoli assegnati all\'utente',
       'tooltip' => 'Ruoli multipli',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'permissions' => 
-    array (
-=======
     ],
     'permissions' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Permessi',
       'placeholder' => 'Seleziona i permessi',
       'help' => 'Permessi specifici dell\'utente',
       'tooltip' => 'Permessi diretti',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'status' => 
-    array (
-=======
     ],
     'status' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Stato',
       'placeholder' => 'Seleziona lo stato',
       'help' => 'Stato dell\'account utente',
       'tooltip' => 'Stato dell\'utente',
       'helper_text' => '',
       'options' => 
-<<<<<<< HEAD
-      array (
-=======
        [
->>>>>>> 14629c0 (.)
         'active' => 'Attivo',
         'inactive' => 'Inattivo',
         'blocked' => 'Bloccato',
         'pending' => 'In Attesa',
         'suspended' => 'Sospeso',
-<<<<<<< HEAD
-      ),
-    ),
-    'type' => 
-    array (
-=======
       ],
     ],
     'type' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Tipo',
       'placeholder' => 'Seleziona il tipo',
       'help' => 'Tipo di utente',
       'tooltip' => 'Tipo di account',
       'helper_text' => '',
       'options' => 
-<<<<<<< HEAD
-      array (
-=======
        [
->>>>>>> 14629c0 (.)
         'admin' => 'Amministratore',
         'user' => 'Utente',
         'doctor' => 'Medico',
         'patient' => 'Paziente',
         'staff' => 'Personale',
-<<<<<<< HEAD
-      ),
-    ),
-    'last_login' => 
-    array (
-=======
       ],
     ],
     'last_login' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Ultimo Accesso',
       'help' => 'Data e ora dell\'ultimo accesso',
       'tooltip' => 'Ultimo login',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'created_at' => 
-    array (
-=======
     ],
     'created_at' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Data Creazione',
       'help' => 'Data di creazione dell\'account',
       'tooltip' => 'Quando è stato creato',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'updated_at' => 
-    array (
-=======
     ],
     'updated_at' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Ultima Modifica',
       'help' => 'Data dell\'ultimo aggiornamento',
       'tooltip' => 'Ultimo aggiornamento',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'avatar' => 
-    array (
-=======
     ],
     'avatar' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Avatar',
       'placeholder' => 'Carica un\'immagine',
       'help' => 'Immagine del profilo',
       'tooltip' => 'Foto profilo',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'language' => 
-    array (
-=======
     ],
     'language' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Lingua',
       'placeholder' => 'Seleziona la lingua',
       'help' => 'Lingua preferita dell\'utente',
       'tooltip' => 'Lingua interfaccia',
       'helper_text' => '',
       'options' => 
-<<<<<<< HEAD
-      array (
-=======
        [
->>>>>>> 14629c0 (.)
         'it' => 'Italiano',
         'en' => 'English',
         'es' => 'Español',
         'fr' => 'Français',
         'de' => 'Deutsch',
-<<<<<<< HEAD
-      ),
-    ),
-    'timezone' => 
-    array (
-=======
       ],
     ],
     'timezone' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Fuso Orario',
       'placeholder' => 'Seleziona il fuso orario',
       'help' => 'Fuso orario dell\'utente',
       'tooltip' => 'Zona oraria',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'password_expires_at' => 
-    array (
-=======
     ],
     'password_expires_at' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Scadenza Password',
       'help' => 'Data di scadenza della password',
       'tooltip' => 'Scadenza password',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'verified' => 
-    array (
-=======
     ],
     'verified' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Verificato',
       'help' => 'Indica se l\'email è verificata',
       'tooltip' => 'Email verificata',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'unverified' => 
-    array (
-=======
     ],
     'unverified' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Non Verificato',
       'help' => 'Indica se l\'email non è verificata',
       'tooltip' => 'Email non verificata',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'email_verified_at' => 
-    array (
-=======
     ],
     'email_verified_at' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Email Verificata il',
       'help' => 'Data di verifica dell\'email',
       'tooltip' => 'Data verifica email',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'provider' => 
-    array (
-=======
     ],
     'provider' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Provider',
       'placeholder' => 'Inserisci il nome del provider',
       'help' => 'Provider di autenticazione (es. Google, Facebook)',
       'tooltip' => 'Provider OAuth',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'provider_id' => 
-    array (
-=======
     ],
     'provider_id' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'ID Provider',
       'placeholder' => 'Inserisci l\'ID del provider',
       'help' => 'ID utente nel provider esterno',
       'tooltip' => 'ID provider esterno',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'provider_name' => 
-    array (
-=======
     ],
     'provider_name' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Nome Provider',
       'placeholder' => 'Inserisci il nome associato al provider',
       'help' => 'Nome dell\'utente nel provider',
       'tooltip' => 'Nome nel provider',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'provider_email' => 
-    array (
-=======
     ],
     'provider_email' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Email Provider',
       'placeholder' => 'Inserisci l\'email del provider',
       'help' => 'Email associata al provider',
       'tooltip' => 'Email nel provider',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'provider_avatar' => 
-    array (
-=======
     ],
     'provider_avatar' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Avatar Provider',
       'placeholder' => 'URL dell\'avatar',
       'help' => 'URL dell\'immagine profilo del provider',
       'tooltip' => 'Avatar del provider',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'uuid' => 
-    array (
-=======
     ],
     'uuid' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'UUID',
       'help' => 'Identificativo univoco universale',
       'tooltip' => 'UUID dispositivo',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'mobile_id' => 
-    array (
-=======
     ],
     'mobile_id' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Mobile ID',
       'help' => 'Identificativo del dispositivo mobile',
       'tooltip' => 'ID dispositivo mobile',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'languages' => 
-    array (
-=======
     ],
     'languages' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Lingue',
       'placeholder' => 'Seleziona le lingue',
       'help' => 'Lingue supportate dal dispositivo',
       'tooltip' => 'Lingue dispositivo',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'guard_name' => 
-    array (
-=======
     ],
     'guard_name' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Guard Name',
       'help' => 'Nome del guard di autenticazione',
       'tooltip' => 'Guard autenticazione',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'active' => 
-    array (
-=======
     ],
     'active' => 
      [
->>>>>>> 14629c0 (.)
       'label' => 'Attivo',
       'help' => 'Indica se il record è attivo',
       'tooltip' => 'Stato attivo',
       'helper_text' => '',
-<<<<<<< HEAD
-    ),
-    'resetFilters' => 
-    array (
-      'label' => 'resetFilters',
-    ),
-    'applyFilters' => 
-    array (
-      'label' => 'applyFilters',
-    ),
-    'layout' => 
-    array (
-      'label' => 'layout',
-    ),
-  ),
-  'actions' => 
-  array (
-    'create' => 
-    array (
-      'label' => 'Crea Utente',
-      'icon' => 'heroicon-o-plus',
-      'tooltip' => 'Crea un nuovo utente',
-    ),
-    'edit' => 
-    array (
-      'label' => 'Modifica Utente',
-      'icon' => 'heroicon-o-pencil',
-      'tooltip' => 'Modifica l\'utente',
-    ),
-    'delete' => 
-    array (
-      'label' => 'Elimina Utente',
-      'icon' => 'heroicon-o-trash',
-      'tooltip' => 'Elimina l\'utente',
-    ),
-    'view' => 
-    array (
-      'label' => 'Visualizza Utente',
-      'icon' => 'heroicon-o-eye',
-      'tooltip' => 'Visualizza i dettagli dell\'utente',
-    ),
-    'impersonate' => 
-    array (
-      'label' => 'Impersona Utente',
-      'icon' => 'heroicon-o-user-circle',
-      'tooltip' => 'Accedi come questo utente',
-    ),
-    'stop_impersonating' => 
-    array (
-      'label' => 'Termina Impersonificazione',
-      'icon' => 'heroicon-o-arrow-left',
-      'tooltip' => 'Torna al tuo account',
-    ),
-    'block' => 
-    array (
-      'label' => 'Blocca',
-      'icon' => 'heroicon-o-lock-closed',
-      'tooltip' => 'Blocca l\'utente',
-    ),
-    'unblock' => 
-    array (
-      'label' => 'Sblocca',
-      'icon' => 'heroicon-o-lock-open',
-      'tooltip' => 'Sblocca l\'utente',
-    ),
-    'send_reset_link' => 
-    array (
-      'label' => 'Invia Link Reset Password',
-      'icon' => 'heroicon-o-envelope',
-      'tooltip' => 'Invia link per reset password',
-    ),
-    'verify_email' => 
-    array (
-      'label' => 'Verifica Email',
-      'icon' => 'heroicon-o-check-circle',
-      'tooltip' => 'Verifica l\'email dell\'utente',
-    ),
-    'attach' => 
-    array (
-      'label' => 'Collega',
-      'icon' => 'heroicon-o-link',
-      'tooltip' => 'Collega record',
-    ),
-    'detach' => 
-    array (
-      'label' => 'Scollega',
-      'icon' => 'heroicon-o-link-slash',
-      'tooltip' => 'Scollega record',
-    ),
-    'activate' => 
-    array (
-      'label' => 'Attiva',
-      'icon' => 'heroicon-o-check',
-      'tooltip' => 'Attiva l\'utente',
-    ),
-    'deactivate' => 
-    array (
-      'label' => 'Disattiva',
-      'icon' => 'heroicon-o-x-circle',
-      'tooltip' => 'Disattiva l\'utente',
-    ),
-  ),
-  'messages' => 
-  array (
-=======
     ],
     'resetFilters' => 
      [
@@ -741,7 +402,6 @@ return  [
   ],
   'messages' => 
    [
->>>>>>> 14629c0 (.)
     'created' => 'Utente creato con successo',
     'updated' => 'Utente aggiornato con successo',
     'deleted' => 'Utente eliminato con successo',
@@ -772,15 +432,9 @@ return  [
     'email_already_taken' => 'Questa email è già in uso',
     'login_success' => 'Accesso effettuato con successo',
     'validation_error' => 'Errore di validazione',
-<<<<<<< HEAD
-  ),
-  'validation' => 
-  array (
-=======
   ],
   'validation' => 
    [
->>>>>>> 14629c0 (.)
     'required' => 'Il campo :attribute è obbligatorio',
     'email' => 'Il campo :attribute deve essere un indirizzo email valido',
     'unique' => 'Il campo :attribute è già in uso',
@@ -793,15 +447,9 @@ return  [
     'password_confirmed' => 'Le password non coincidono',
     'current_password' => 'La password attuale non è corretta',
     'password_complexity' => 'La password deve contenere almeno 8 caratteri, una lettera maiuscola, una minuscola, un numero e un carattere speciale',
-<<<<<<< HEAD
-  ),
-  'permissions' => 
-  array (
-=======
   ],
   'permissions' => 
    [
->>>>>>> 14629c0 (.)
     'view_users' => 'Visualizza utenti',
     'create_users' => 'Crea utenti',
     'edit_users' => 'Modifica utenti',
@@ -813,45 +461,15 @@ return  [
     'create_roles' => 'Crea ruoli',
     'edit_roles' => 'Modifica ruoli',
     'delete_roles' => 'Elimina ruoli',
-<<<<<<< HEAD
-  ),
-  'auth' => 
-  array (
-    'login' => 
-    array (
-=======
   ],
   'auth' => 
    [
     'login' => 
      [
->>>>>>> 14629c0 (.)
       'title' => 'Accedi',
       'subtitle' => 'Accedi al tuo account',
       'button' => 'Accedi',
       'fields' => 
-<<<<<<< HEAD
-      array (
-        'email' => 'Email',
-        'password' => 'Password',
-        'remember' => 'Ricordami',
-      ),
-      'help' => 
-      array (
-        'email' => 'Inserisci la tua email registrata',
-        'password' => 'Inserisci la tua password',
-      ),
-      'validation' => 
-      array (
-        'password' => 
-        array (
-          'complexity' => 'La password deve contenere almeno 8 caratteri, una lettera maiuscola, una minuscola, un numero e un carattere speciale',
-        ),
-      ),
-    ),
-    'register' => 
-    array (
-=======
        [
         'email' => 'Email',
         'password' => 'Password',
@@ -872,34 +490,16 @@ return  [
     ],
     'register' => 
      [
->>>>>>> 14629c0 (.)
       'title' => 'Registrati',
       'subtitle' => 'Crea un nuovo account',
       'button' => 'Registrati',
       'fields' => 
-<<<<<<< HEAD
-      array (
-=======
        [
->>>>>>> 14629c0 (.)
         'first_name' => 'Nome',
         'last_name' => 'Cognome',
         'email' => 'Email',
         'password' => 'Password',
         'password_confirmation' => 'Conferma Password',
-<<<<<<< HEAD
-      ),
-      'help' => 
-      array (
-        'email' => 'Inserisci un indirizzo email valido',
-        'password' => 'La password deve essere sicura',
-      ),
-      'success' => 'Registrazione completata con successo',
-      'error_occurred' => 'Si è verificato un errore durante la registrazione',
-    ),
-    'logout' => 
-    array (
-=======
       ],
       'help' => 
        [
@@ -911,45 +511,19 @@ return  [
     ],
     'logout' => 
      [
->>>>>>> 14629c0 (.)
       'title' => 'Logout',
       'button' => 'Esci',
       'success' => 'Logout effettuato con successo',
       'error' => 'Errore durante il logout',
       'confirmation' => 'Sei sicuro di voler uscire?',
-<<<<<<< HEAD
-    ),
-    'password_reset' => 
-    array (
-=======
     ],
     'password_reset' => 
      [
->>>>>>> 14629c0 (.)
       'title' => 'Reset Password',
       'subtitle' => 'Reimposta la tua password',
       'button' => 'Invia Link Reset',
       'confirm_button' => 'Reimposta Password',
       'email_sent' => 
-<<<<<<< HEAD
-      array (
-        'title' => 'Email inviata',
-        'message' => 'Ti abbiamo inviato un link per reimpostare la password',
-      ),
-      'email_failed' => 
-      array (
-        'title' => 'Errore invio email',
-        'message' => 'Impossibile inviare l\'email di reset',
-        'generic' => 'Si è verificato un errore',
-      ),
-      'success' => 
-      array (
-        'title' => 'Password reimpostata',
-        'message' => 'La tua password è stata reimpostata con successo',
-      ),
-      'errors' => 
-      array (
-=======
        [
         'title' => 'Email inviata',
         'message' => 'Ti abbiamo inviato un link per reimpostare la password',
@@ -967,18 +541,12 @@ return  [
       ],
       'errors' => 
        [
->>>>>>> 14629c0 (.)
         'invalid_token' => 'Token non valido',
         'invalid_user' => 'Utente non trovato',
         'generic' => 'Si è verificato un errore',
         'title' => 'Errore reset password',
-<<<<<<< HEAD
-      ),
-    ),
-=======
       ],
     ],
->>>>>>> 14629c0 (.)
     'user_not_found' => 'Utente non trovato',
     'password_fields_required' => 'Tutti i campi password sono obbligatori',
     'password_current_incorrect' => 'La password attuale non è corretta',
@@ -986,15 +554,9 @@ return  [
     'logout_error' => 'Errore durante il logout',
     'logout_title' => 'Conferma Logout',
     'logout_confirmation' => 'Sei sicuro di voler uscire?',
-<<<<<<< HEAD
-  ),
-  'profile' => 
-  array (
-=======
   ],
   'profile' => 
    [
->>>>>>> 14629c0 (.)
     'profile' => 'Profilo',
     'my_profile' => 'Il Mio Profilo',
     'subheading' => 'Gestisci le informazioni del tuo profilo',
@@ -1004,20 +566,6 @@ return  [
     'security' => 'Sicurezza',
     'notifications' => 'Notifiche',
     'preferences' => 'Preferenze',
-<<<<<<< HEAD
-  ),
-  'tenancy' => 
-  array (
-    'navigation' => 
-    array (
-      'edit' => 'Modifica Profilo Team',
-    ),
-  ),
-  'otp' => 
-  array (
-    'mail' => 
-    array (
-=======
   ],
   'tenancy' => 
    [
@@ -1030,30 +578,12 @@ return  [
    [
     'mail' => 
      [
->>>>>>> 14629c0 (.)
       'subject' => 'Codice OTP per l\'accesso',
       'greeting' => 'Ciao :name',
       'line1' => 'Il tuo codice OTP è: :code',
       'line2' => 'Questo codice scade tra :minutes minuti',
       'line3' => 'Non condividere questo codice con nessuno',
       'salutation' => 'Cordiali saluti, :app_name',
-<<<<<<< HEAD
-    ),
-    'notifications' => 
-    array (
-      'otp_expired' => 
-      array (
-        'body' => 'Il codice OTP è scaduto',
-      ),
-    ),
-    'actions' => 
-    array (
-      'send_otp_success' => 'Codice OTP inviato con successo',
-    ),
-  ),
-  'reset_password' => 
-  array (
-=======
     ],
     'notifications' => 
      [
@@ -1069,90 +599,21 @@ return  [
   ],
   'reset_password' => 
    [
->>>>>>> 14629c0 (.)
     'password_reset_subject' => 'Reset Password',
     'password_cause_of_email' => 'Hai ricevuto questa email perché abbiamo ricevuto una richiesta di reset password per il tuo account',
     'reset_password' => 'Reset Password',
     'password_if_not_requested' => 'Se non hai richiesto il reset della password, non è necessaria alcuna azione',
     'thank_you_for_using_app' => 'Grazie per utilizzare la nostra applicazione',
     'regards' => 'Cordiali saluti',
-<<<<<<< HEAD
-  ),
-  'verify_email' => 
-  array (
-=======
   ],
   'verify_email' => 
    [
->>>>>>> 14629c0 (.)
     'subject' => 'Verifica Email',
     'greeting' => 'Ciao :name',
     'line1' => 'Clicca sul pulsante qui sotto per verificare il tuo indirizzo email',
     'action' => 'Verifica Email',
     'line2' => 'Se non hai creato un account, non è necessaria alcuna azione',
     'salutation' => 'Cordiali saluti, :app_name',
-<<<<<<< HEAD
-  ),
-  'model' => 
-  array (
-    'label' => 'Utente',
-    'plural' => 'Utenti',
-    'description' => 'Gestione degli utenti del sistema',
-  ),
-  'filters' => 
-  array (
-    'status' => 
-    array (
-      'label' => 'Per Stato',
-      'tooltip' => 'Filtra per stato utente',
-    ),
-    'type' => 
-    array (
-      'label' => 'Per Tipo',
-      'tooltip' => 'Filtra per tipo utente',
-    ),
-    'role' => 
-    array (
-      'label' => 'Per Ruolo',
-      'tooltip' => 'Filtra per ruolo',
-    ),
-    'verified' => 
-    array (
-      'label' => 'Email Verificata',
-      'tooltip' => 'Mostra solo utenti con email verificata',
-    ),
-  ),
-  'bulk_actions' => 
-  array (
-    'activate_selected' => 
-    array (
-      'label' => 'Attiva Selezionati',
-      'icon' => 'heroicon-o-check',
-    ),
-    'deactivate_selected' => 
-    array (
-      'label' => 'Disattiva Selezionati',
-      'icon' => 'heroicon-o-x-circle',
-    ),
-    'delete_selected' => 
-    array (
-      'label' => 'Elimina Selezionati',
-      'icon' => 'heroicon-o-trash',
-    ),
-    'block_selected' => 
-    array (
-      'label' => 'Blocca Selezionati',
-      'icon' => 'heroicon-o-lock-closed',
-    ),
-    'unblock_selected' => 
-    array (
-      'label' => 'Sblocca Selezionati',
-      'icon' => 'heroicon-o-lock-open',
-    ),
-  ),
-  'notifications' => 
-  array (
-=======
   ],
   'model' => 
    [
@@ -1213,7 +674,6 @@ return  [
   ],
   'notifications' => 
    [
->>>>>>> 14629c0 (.)
     'created' => 'Utente creato con successo',
     'updated' => 'Utente aggiornato con successo',
     'deleted' => 'Utente eliminato con successo',
@@ -1221,12 +681,6 @@ return  [
     'email_verified' => 'Email verificata con successo',
     'otp_sent' => 'Codice OTP inviato',
     'error' => 'Si è verificato un errore',
-<<<<<<< HEAD
-  ),
-  'search_placeholder' => 'Cerca per nome, email o ruolo...',
-);
-=======
   ],
   'search_placeholder' => 'Cerca per nome, email o ruolo...',
 ];
->>>>>>> 14629c0 (.)

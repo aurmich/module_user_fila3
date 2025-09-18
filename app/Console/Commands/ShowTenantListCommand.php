@@ -32,13 +32,7 @@ class ShowTenantListCommand extends Command
     {
         $modelClass = XotData::make()->getTenantClass();
 
-<<<<<<< HEAD
-        $map = static function (Model $row) {
-            return $row->toArray();
-        };
-=======
         $map = static fn (Model $row) => $row->toArray();
->>>>>>> 14629c0 (.)
 
         $rows = $modelClass::get()->map($map);
 

@@ -22,10 +22,7 @@ class ListUsers extends BaseListUsers
 {
     protected static string $resource = UserResource::class;
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 14629c0 (.)
     public function getTableColumns(): array
     {
         return [
@@ -44,10 +41,7 @@ class ListUsers extends BaseListUsers
     /**
      * @return array<Tables\Filters\BaseFilter>
      */
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 14629c0 (.)
     public function getTableFilters(): array
     {
         return [
@@ -63,10 +57,7 @@ class ListUsers extends BaseListUsers
     /**
      * @phpstan-ignore-next-line
      */
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 14629c0 (.)
     public function getTableActions(): array
     {
         /** @phpstan-ignore-next-line */
@@ -83,10 +74,7 @@ class ListUsers extends BaseListUsers
         ];
     }
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 14629c0 (.)
     protected function getHeaderWidgets(): array
     {
         return [
@@ -97,10 +85,7 @@ class ListUsers extends BaseListUsers
     /**
      * @return array<string, Tables\Actions\BulkAction>
      */
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 14629c0 (.)
     public function getTableBulkActions(): array
     {
         return [

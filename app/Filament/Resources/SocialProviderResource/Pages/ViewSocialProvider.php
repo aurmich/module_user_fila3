@@ -18,10 +18,7 @@ class ViewSocialProvider extends \Modules\Xot\Filament\Resources\Pages\XotBaseVi
     /**
      * @return array<\Filament\Infolists\Components\Component>
      */
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 14629c0 (.)
     protected function getInfolistSchema(): array
     {
         return [

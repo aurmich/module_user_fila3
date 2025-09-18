@@ -21,10 +21,7 @@ class DomainsRelationManager extends XotBaseRelationManager
     /**
      * @return array<string, \Filament\Forms\Components\Component>
      */
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 14629c0 (.)
     public function getFormSchema(): array
     {
         return [
@@ -36,10 +33,7 @@ class DomainsRelationManager extends XotBaseRelationManager
         ];
     }
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 14629c0 (.)
     public function table(Table $table): Table
     {
         return $table

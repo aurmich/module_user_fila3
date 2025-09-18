@@ -3,10 +3,7 @@
 declare(strict_types=1);
 
 return [
-<<<<<<< HEAD
-    // ==============================================
     // NAVIGATION & STRUCTURE
-    // ==============================================
     'navigation' => [
         'label' => 'Dispositivi',
         'plural_label' => 'Dispositivi',
@@ -19,20 +16,14 @@ return [
         'badge' => 'Gestione dispositivi utente',
     ],
 
-    // ==============================================
     // MODEL INFORMATION
-    // ==============================================
     'model' => [
         'label' => 'Dispositivo',
         'plural' => 'Dispositivi',
         'description' => 'Gestione e monitoraggio dei dispositivi degli utenti',
     ],
 
-    // ==============================================
     // FIELDS - STRUTTURA ESPANSA OBBLIGATORIA
-    // ==============================================
-=======
->>>>>>> 14629c0 (.)
     'fields' => [
         'uuid' => [
             'label' => 'UUID',
@@ -126,13 +117,7 @@ return [
             'help' => 'Indica se è uno smartphone o telefono cellulare',
         ],
     ],
-<<<<<<< HEAD
-
-    // ==============================================
     // ACTIONS - STRUTTURA ESPANSA OBBLIGATORIA
-    // ==============================================
-=======
->>>>>>> 14629c0 (.)
     'actions' => [
         'create' => [
             'label' => 'Crea Dispositivo',
@@ -205,12 +190,7 @@ return [
             ],
         ],
     ],
-<<<<<<< HEAD
-
-    // ==============================================
     // SECTIONS - ORGANIZZAZIONE FORM
-    // ==============================================
-=======
     'navigation' => [
         'sort' => 50,
         'label' => 'Dispositivi',
@@ -218,39 +198,21 @@ return [
         'icon' => 'heroicon-o-device-phone-mobile',
         'badge' => 'Gestione dispositivi utente',
     ],
->>>>>>> 14629c0 (.)
     'sections' => [
         'device_info' => [
             'label' => 'Informazioni Dispositivo',
             'description' => 'Dettagli tecnici del dispositivo',
-<<<<<<< HEAD
-            'icon' => 'heroicon-o-information-circle',
-=======
->>>>>>> 14629c0 (.)
         ],
         'device_type' => [
             'label' => 'Tipo Dispositivo',
             'description' => 'Categoria e classificazione del dispositivo',
-<<<<<<< HEAD
-            'icon' => 'heroicon-o-device-phone-mobile',
-=======
->>>>>>> 14629c0 (.)
         ],
         'browser_info' => [
             'label' => 'Informazioni Browser',
             'description' => 'Dettagli del browser utilizzato',
-<<<<<<< HEAD
-            'icon' => 'heroicon-o-globe-alt',
-        ],
-    ],
-
-    // ==============================================
     // FILTERS - RICERCA E FILTRI
-    // ==============================================
-=======
         ],
     ],
->>>>>>> 14629c0 (.)
     'filters' => [
         'platform' => [
             'label' => 'Piattaforma',
@@ -279,33 +241,12 @@ return [
             ],
         ],
     ],
-<<<<<<< HEAD
-
-    // ==============================================
     // MESSAGES - FEEDBACK UTENTE
-    // ==============================================
-=======
->>>>>>> 14629c0 (.)
     'messages' => [
         'empty_state' => 'Nessun dispositivo trovato',
         'search_placeholder' => 'Cerca dispositivi...',
         'loading' => 'Caricamento dispositivi in corso...',
-<<<<<<< HEAD
-        'total_count' => 'Totale dispositivi: :count',
-        'created' => 'Dispositivo creato con successo',
-        'updated' => 'Dispositivo aggiornato con successo',
-        'deleted' => 'Dispositivo eliminato con successo',
-        'error_general' => 'Si è verificato un errore. Riprova più tardi.',
-        'error_validation' => 'Si sono verificati errori di validazione.',
-        'error_permission' => 'Non hai i permessi per eseguire questa azione.',
-        'success_operation' => 'Operazione completata con successo',
-        // Legacy support
-        'total_devices' => 'Totale dispositivi: :count',
-    ],
-
-    // ==============================================
     // VALIDATION - MESSAGGI DI VALIDAZIONE
-    // ==============================================
     'validation' => [
         'uuid_required' => 'L\'UUID è obbligatorio',
         'uuid_unique' => 'Questo UUID è già in uso',
@@ -314,9 +255,7 @@ return [
         'languages_array' => 'Le lingue devono essere un array',
     ],
 
-    // ==============================================
     // OPTIONS - OPZIONI E VALORI PREDEFINITI
-    // ==============================================
     'options' => [
         'platforms' => [
             'ios' => 'iOS',
@@ -336,8 +275,6 @@ return [
             'no' => 'No',
         ],
     ],
-=======
         'total_devices' => 'Totale dispositivi: :count',
     ],
->>>>>>> 14629c0 (.)
 ];

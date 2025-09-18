@@ -19,10 +19,7 @@ class ViewProfile extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecor
     /**
      * @return array<string, \Filament\Infolists\Components\Component>
      */
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 14629c0 (.)
     public function getInfolistSchema(): array
     {
         return [

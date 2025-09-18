@@ -37,10 +37,7 @@ class UserServiceProvider extends XotBaseServiceProvider
     protected string $module_dir = __DIR__;
     protected string $module_ns = __NAMESPACE__;
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 14629c0 (.)
     public function boot(): void
     {
         parent::boot();
@@ -51,10 +48,7 @@ class UserServiceProvider extends XotBaseServiceProvider
         $this->registerMailsNotification();
     }
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 14629c0 (.)
     public function register(): void
     {
         parent::register();
@@ -66,19 +60,9 @@ class UserServiceProvider extends XotBaseServiceProvider
      */
     protected function registerTeamModelBindings(): void
     {
-<<<<<<< HEAD
-        $this->app->bind('team_user_model', function () {
-            return \Modules\User\Models\TeamUser::class;
-        });
-
-        $this->app->bind('team_invitation_model', function () {
-            return \Modules\User\Models\TeamInvitation::class;
-        });
-=======
         $this->app->bind('team_user_model', fn () => \Modules\User\Models\TeamUser::class);
 
         $this->app->bind('team_invitation_model', fn () => \Modules\User\Models\TeamInvitation::class);
->>>>>>> 14629c0 (.)
     }
 
     public function registerMailsNotification(): void
@@ -154,13 +138,7 @@ class UserServiceProvider extends XotBaseServiceProvider
     public function registerPulse(): void
     {
         Config::set('pulse.path', 'pulse/admin');
-<<<<<<< HEAD
-        Gate::define('viewPulse', function (UserContract $user): bool {
-            return $user->hasRole('super-admin');
-        });
-=======
         Gate::define('viewPulse', fn (UserContract $user): bool => $user->hasRole('super-admin'));
->>>>>>> 14629c0 (.)
     }
 
     public function registerPasswordRules(): void

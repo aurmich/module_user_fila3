@@ -32,11 +32,7 @@ trait HasRoles
      */
     public function hasRole($roles, ?string $guard = null): bool
     {
-<<<<<<< HEAD
-        if (is_string($roles) && false !== strpos($roles, '|')) {
-=======
         if (is_string($roles) &&  str_contains($roles, '|')) {
->>>>>>> 14629c0 (.)
             $roles = explode('|', $roles);
         }
 

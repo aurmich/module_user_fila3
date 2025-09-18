@@ -1,20 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-return array (
-  'actions' => 
-  array (
-    'view' => 
-    array (
-      'label' => 'view',
-    ),
-    'delete' => 
-    array (
-      'label' => 'delete',
-    ),
-  ),
-);
-=======
 return  [
   'actions' => 
    [
@@ -28,4 +13,3 @@ return  [
     ],
   ],
 ];
->>>>>>> 14629c0 (.)

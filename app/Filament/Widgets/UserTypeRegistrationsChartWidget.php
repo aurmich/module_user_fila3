@@ -17,19 +17,13 @@ class UserTypeRegistrationsChartWidget extends XotBaseChartWidget
 
     public string $model;
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 14629c0 (.)
     public function getHeading(): ?string
     {
         return static::transClass($this->model, 'widgets.user_type_registrations_chart.heading');
     }
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 14629c0 (.)
     protected function getData(): array
     {
         // Debug: Verifica se i filtri sono disponibili
@@ -95,10 +89,7 @@ class UserTypeRegistrationsChartWidget extends XotBaseChartWidget
         }
     }
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 14629c0 (.)
     protected function getType(): string
     {
         return 'line';

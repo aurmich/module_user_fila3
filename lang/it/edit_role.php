@@ -1,22 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-return [
-    'actions' => [
-        'view' => [
-            'label' => 'Visualizza',
-        ],
-        'delete' => [
-            'label' => 'Elimina',
-        ],
-        'cancel' => [
-            'label' => 'Annulla',
-        ],
-        'save' => [
-            'label' => 'Salva',
-        ],
-    ],
-=======
 return  [
   'actions' => 
    [
@@ -37,5 +20,4 @@ return  [
       'label' => 'save',
     ],
   ],
->>>>>>> 14629c0 (.)
 ];

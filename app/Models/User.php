@@ -121,10 +121,7 @@ class User extends BaseUser
      */
     public $connection = 'user';
 
-<<<<<<< HEAD
-=======
     #[\Override]
->>>>>>> 14629c0 (.)
     public function canAccessSocialite(): bool
     {
         // return $this->role_id === Role::ROLE_ADMINISTRATOR;
