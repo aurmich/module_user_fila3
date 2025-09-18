@@ -72,6 +72,7 @@ public function execute(UserContract $record): string
 
 ## Conflitti Git Risolti
 
+<<<<<<< HEAD
 ### Problema Password Generation
 ```php
 // PRIMA (con conflitti):
@@ -101,6 +102,8 @@ $password=app(\Modules\Xot\Actions\String\GetPronounceablePasswordAction::class)
     return [$password,$password_hash];
 });
 ```
+=======
+>>>>>>> 4efd3ae9 (.)
 
 **Risoluzione:**
 - **Password Pronunciabili**: Scelta della versione con `GetPronounceablePasswordAction`

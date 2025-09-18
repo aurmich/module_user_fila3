@@ -101,12 +101,21 @@ return  [
     'delete' => 
      [
       'label' => 'delete',
+<<<<<<< HEAD
     ],
+=======
+    ),
+>>>>>>> 4efd3ae9 (.)
     'layout' => 
      [
       'label' => 'layout',
+<<<<<<< HEAD
     ],
   ],
+=======
+    ),
+  ),
+>>>>>>> 4efd3ae9 (.)
   'actions' => 
    [
     'import' => 

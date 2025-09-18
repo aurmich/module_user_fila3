@@ -10,7 +10,11 @@ return  [
     'delete' => 
      [
       'label' => 'delete',
+<<<<<<< HEAD
     ],
+=======
+    ),
+>>>>>>> 4efd3ae9 (.)
     'cancel' => 
      [
       'label' => 'cancel',
@@ -18,6 +22,12 @@ return  [
     'save' => 
      [
       'label' => 'save',
+<<<<<<< HEAD
     ],
   ],
 ];
+=======
+    ),
+  ),
+);
+>>>>>>> 4efd3ae9 (.)

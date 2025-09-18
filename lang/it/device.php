@@ -277,4 +277,8 @@ return [
     ],
         'total_devices' => 'Totale dispositivi: :count',
     ],
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> 4efd3ae9 (.)

@@ -26,12 +26,21 @@ return  [
       'label' => 'Data Creazione',
       'placeholder' => 'Data di creazione',
       'help' => 'Data di creazione del permesso',
+<<<<<<< HEAD
     ],
+=======
+    ),
+>>>>>>> 4efd3ae9 (.)
     'applyFilters' => 
      [
       'label' => 'applyFilters',
+<<<<<<< HEAD
     ],
   ],
+=======
+    ),
+  ),
+>>>>>>> 4efd3ae9 (.)
   'common' => 
    [
     'yes' => 'Sì',

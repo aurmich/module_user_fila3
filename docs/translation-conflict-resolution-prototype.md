@@ -24,7 +24,11 @@ This document describes the prototype for resolving Git conflicts in Laravel tra
 ## Resolution Algorithm
 
 ### Step 1: Parse Conflict Markers
+<<<<<<< HEAD
 - Identify `<<<<<<< HEAD`, `=======`, `>>>>>>> commit` markers
+=======
+- Identify git markers
+>>>>>>> 4efd3ae9 (.)
 - Extract HEAD version, conflicting version, and any intermediate versions
 
 ### Step 2: Parse PHP Arrays
@@ -90,7 +94,11 @@ function deepMergeTranslations($array1, $array2) {
 4. Check for proper array formatting
 
 ## File Processing Order
+<<<<<<< HEAD
 1. Process files with obvious conflicts first (`<<<<<<< HEAD` markers)
+=======
+1. Process files with obvious conflicts first (git markers)
+>>>>>>> 4efd3ae9 (.)
 2. Handle duplicate section files
 3. Validate and format all processed files
 4. Generate resolution report
