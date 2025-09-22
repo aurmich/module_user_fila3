@@ -3,10 +3,17 @@
 ## Collegamenti correlati
 - [README modulo User](./README.md)
 - [Best Practices Componenti di Autenticazione](./AUTH_COMPONENTS_BEST_PRACTICES.md)
+<<<<<<< HEAD
 - [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/LARAVEL_LOCALIZATION_USAGE.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 - [Regole Traduzioni](/laravel/Modules/Lang/docs/TRANSLATION_KEYS_RULES.md)
 - [Componenti Filament](/docs/rules/filament-components.md)
+=======
+- [Utilizzo di Laravel Localization](/laravel/Modules/Lang/project_docs/LARAVEL_LOCALIZATION_USAGE.md)
+- [Collegamenti Documentazione](/project_docs/collegamenti-documentazione.md)
+- [Regole Traduzioni](/laravel/Modules/Lang/project_docs/TRANSLATION_KEYS_RULES.md)
+- [Componenti Filament](/project_docs/rules/filament-components.md)
+>>>>>>> 079c9da7 (.)
 
 ## Panoramica
 
@@ -59,7 +66,10 @@ mount(function() {
 
 ## Utilizzo Corretto di LaravelLocalization
 
+<<<<<<< HEAD
 Per garantire la compatibilità con il sistema di localizzazione di , è importante utilizzare le funzioni del pacchetto `mcamara/laravel-localization` invece di `app()->getLocale()`:
+=======
+>>>>>>> 079c9da7 (.)
 Per garantire la compatibilità con il sistema di localizzazione di SaluteOra, è importante utilizzare le funzioni del pacchetto `mcamara/laravel-localization` invece di `app()->getLocale()`:
 
 ```php
@@ -72,7 +82,10 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 $this->redirect(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route('home')));
 ```
 
+<<<<<<< HEAD
 Questo garantisce che l'utente venga reindirizzato alla versione localizzata della home page dopo il logout, rispettando le convenzioni di  per la gestione della localizzazione.
+=======
+>>>>>>> 079c9da7 (.)
 Questo garantisce che l'utente venga reindirizzato alla versione localizzata della home page dopo il logout, rispettando le convenzioni di SaluteOra per la gestione della localizzazione.
 
 ## Template Blade con Componenti Filament
@@ -105,7 +118,10 @@ Il template Blade per il logout dovrebbe utilizzare i componenti Filament e most
 2. **Feedback Visivo**: L'utente riceve un feedback chiaro durante il processo di logout
 3. **Gestione Errori Robusta**: Gli errori vengono catturati e gestiti appropriatamente
 4. **Esperienza Utente Migliorata**: L'interfaccia è più intuitiva e reattiva
+<<<<<<< HEAD
 5. **Localizzazione Corretta**: Gli URL generati rispettano le convenzioni di  per la localizzazione
+=======
+>>>>>>> 079c9da7 (.)
 5. **Localizzazione Corretta**: Gli URL generati rispettano le convenzioni di SaluteOra per la localizzazione
 
 ## Chiavi di Traduzione per il Logout

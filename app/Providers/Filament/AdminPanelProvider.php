@@ -20,11 +20,15 @@ class AdminPanelProvider extends XotBasePanelProvider
 {
     protected string $module = 'User';
 
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 079c9da7 (.)
     public function panel(Panel $panel): Panel
     {
         $panel = parent::panel($panel);
 
+<<<<<<< HEAD
         FilamentView::registerRenderHook('panels::auth.login.form.after', static fn(): string => Blade::render(
             "@livewire('socialite.buttons')",
         ));
@@ -47,10 +51,37 @@ class AdminPanelProvider extends XotBasePanelProvider
         FilamentView::registerRenderHook('panels::user-menu.before', static fn(): string => Blade::render(
             "@livewire('team.change')",
         ));
+=======
+        FilamentView::registerRenderHook(
+            'panels::auth.login.form.after',
+            static fn (): string => Blade::render("@livewire('socialite.buttons')"),
+        );
+
+        /*-- moved into Gdpr
+        FilamentView::registerRenderHook(
+            'panels::auth.login.form.after',
+            fn (): string => Blade::render('@livewire(\'terms-of-service\')'),
+        );
+        */
+
+        /* -- moved into Notify
+        DatabaseNotifications::trigger('notifications.database-notifications-trigger');
+        FilamentView::registerRenderHook(
+            'panels::user-menu.before',
+            fn (): string => Blade::render('@livewire(\'database-notifications\')'),
+        );
+        //*/
+
+        FilamentView::registerRenderHook(
+            'panels::user-menu.before',
+            static fn (): string => Blade::render("@livewire('team.change')"),
+        );
+>>>>>>> 079c9da7 (.)
 
         FilamentView::registerRenderHook(
             'panels::user-menu.before',
             // static fn (): string => View::make('user::badges.super-admin')->render(),
+<<<<<<< HEAD
             static fn(): string => Blade::render("@livewire('profile.super-admin')"),
         );
 
@@ -60,6 +91,17 @@ class AdminPanelProvider extends XotBasePanelProvider
          * fn (): string => Blade::render('@livewire(\'team.change\')'),
          * );
          */
+=======
+            static fn (): string => Blade::render("@livewire('profile.super-admin')"),
+        );
+
+        /*
+        $panel->renderHook(
+            'panels::user-menu.before',
+            fn (): string => Blade::render('@livewire(\'team.change\')'),
+        );
+        */
+>>>>>>> 079c9da7 (.)
         // $tenantId = request()->route()->parameter('tenant');
         // $profile_url = MyProfilePage::getUrl(panel: 'admin');
         // $panel->default();
@@ -71,7 +113,11 @@ class AdminPanelProvider extends XotBasePanelProvider
         // $panel->userMenuItems([
         //     // 'account' => MenuItem::make()->url($profile_url),
         //     MenuItem::make()
+<<<<<<< HEAD
         
+=======
+        //
+>>>>>>> 079c9da7 (.)
         //         ->url(fn (): string => '#')
         //         ->icon('heroicon-m-cog-8-tooth'),
         // ]);

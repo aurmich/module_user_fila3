@@ -1,8 +1,11 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 
+=======
+>>>>>>> 079c9da7 (.)
 return [
     'fields' => [
         'name' => [
@@ -11,7 +14,10 @@ return [
             'help' => 'Il nome dell\'utente',
             'validation' => [
                 'required' => 'Il nome è obbligatorio',
+<<<<<<< HEAD
                 'max' => 'Il nome non può superare i 255 caratteri',
+=======
+>>>>>>> 079c9da7 (.)
             ],
         ],
         'email' => [
@@ -22,7 +28,10 @@ return [
                 'required' => 'L\'email è obbligatoria',
                 'email' => 'Inserisci un\'email valida',
                 'max' => 'L\'email non può superare i 255 caratteri',
+<<<<<<< HEAD
                 'unique' => 'Questa email è già registrata',
+=======
+>>>>>>> 079c9da7 (.)
             ],
         ],
         'password' => [
@@ -32,7 +41,10 @@ return [
             'validation' => [
                 'required' => 'La password è obbligatoria',
                 'min' => 'La password deve essere di almeno 8 caratteri',
+<<<<<<< HEAD
                 'max' => 'La password non può superare i 255 caratteri',
+=======
+>>>>>>> 079c9da7 (.)
             ],
         ],
         'password_confirmation' => [
@@ -43,6 +55,7 @@ return [
                 'required' => 'La conferma della password è obbligatoria',
                 'min' => 'La password deve essere di almeno 8 caratteri',
                 'max' => 'La password non può superare i 255 caratteri',
+<<<<<<< HEAD
                 'same' => 'Le password non coincidono',
             ],
         ],
@@ -50,10 +63,15 @@ return [
             'label' => 'Ricordami',
             'help' => 'Mantieni la sessione attiva',
         ],
+=======
+            ],
+        ],
+>>>>>>> 079c9da7 (.)
     ],
     'actions' => [
         'create' => [
             'label' => 'Nuovo Utente',
+<<<<<<< HEAD
             'tooltip' => 'Crea un nuovo utente',
         ],
         'edit' => [
@@ -63,18 +81,24 @@ return [
         'delete' => [
             'label' => 'Elimina',
             'tooltip' => 'Elimina l\'utente',
+=======
+>>>>>>> 079c9da7 (.)
         ],
     ],
     'teams' => [
         'personal_team' => [
             'label' => 'Team Personale',
+<<<<<<< HEAD
             'help' => 'Il team personale dell\'utente',
+=======
+>>>>>>> 079c9da7 (.)
         ],
     ],
     'devices' => [
         'fields' => [
             'uuid' => [
                 'label' => 'UUID',
+<<<<<<< HEAD
                 'help' => 'Identificativo univoco del dispositivo',
             ],
             'mobile_id' => [
@@ -88,6 +112,8 @@ return [
             'device_name' => [
                 'label' => 'Nome Dispositivo',
                 'help' => 'Il nome del dispositivo',
+=======
+>>>>>>> 079c9da7 (.)
             ],
         ],
     ],
@@ -95,6 +121,7 @@ return [
         'fields' => [
             'name' => [
                 'label' => 'Nome',
+<<<<<<< HEAD
                 'help' => 'Il nome del permesso',
             ],
             'guard_name' => [
@@ -108,6 +135,8 @@ return [
             'created_at' => [
                 'label' => 'Data Creazione',
                 'help' => 'Data di creazione del permesso',
+=======
+>>>>>>> 079c9da7 (.)
             ],
         ],
     ],
@@ -116,6 +145,7 @@ return [
             'fields' => [
                 'user' => [
                     'label' => 'Utente',
+<<<<<<< HEAD
                     'help' => 'L\'utente che ha effettuato l\'accesso',
                 ],
                 'login_at' => [
@@ -129,6 +159,8 @@ return [
                 'user_agent' => [
                     'label' => 'User Agent',
                     'help' => 'Il browser dell\'utente',
+=======
+>>>>>>> 079c9da7 (.)
                 ],
             ],
         ],

@@ -26,7 +26,10 @@ use Illuminate\Notifications\DatabaseNotification as BaseNotification;
 class Notification extends BaseNotification
 {
     use HasFactory;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 079c9da7 (.)
     /** @var string */
     protected $connection = 'user';
 

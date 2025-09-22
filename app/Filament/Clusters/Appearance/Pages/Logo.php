@@ -23,6 +23,7 @@ class Logo extends Page implements HasForms
 {
     use InteractsWithForms;
 
+<<<<<<< HEAD
     public null|array $logoData = [];
 
     protected static null|string $navigationIcon = 'heroicon-o-document-text';
@@ -32,6 +33,17 @@ class Logo extends Page implements HasForms
     protected static null|string $cluster = Appearance::class;
 
     protected static null|int $navigationSort = 1;
+=======
+    public ?array $logoData = [];
+
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+
+    protected static string $view = 'user::filament.clusters.appearance.pages.logo';
+
+    protected static ?string $cluster = Appearance::class;
+
+    protected static ?int $navigationSort = 1;
+>>>>>>> 079c9da7 (.)
 
     public function mount(): void
     {
@@ -56,8 +68,12 @@ class Logo extends Page implements HasForms
                 FileUpload::make('logo_dark'),
                 TextInput::make('logo_height')->numeric()->default(32),
                 // ])->columns(2),
+<<<<<<< HEAD
             ])
             ->columns(2)
+=======
+            ])->columns(2)
+>>>>>>> 079c9da7 (.)
             // ->model($this->getUser())
             ->statePath('logoData');
     }
@@ -67,7 +83,10 @@ class Logo extends Page implements HasForms
         try {
             $data = $this->form->getState();
             dddx($data);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 079c9da7 (.)
             // $this->handleRecordUpdate($this->getUser(), $data);
         } catch (Halt $exception) {
             dddx($exception->getMessage());
@@ -87,7 +106,13 @@ class Logo extends Page implements HasForms
     protected function getUpdateLogoFormActions(): array
     {
         return [
+<<<<<<< HEAD
             Action::make('updateLogoAction')->submit('editLogoForm'),
+=======
+            Action::make('updateLogoAction')
+
+                ->submit('editLogoForm'),
+>>>>>>> 079c9da7 (.)
         ];
     }
 

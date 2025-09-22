@@ -25,9 +25,15 @@ class UsersChartWidget extends ChartWidget implements HasForms
 
     public string $chart_id = '';
 
+<<<<<<< HEAD
     protected static null|string $pollingInterval = null;
 
     protected static null|int $sort = 2;
+=======
+    protected static ?string $pollingInterval = null;
+
+    protected static ?int $sort = 2;
+>>>>>>> 079c9da7 (.)
 
     public function getHeading(): Htmlable|string|null
     {
@@ -79,14 +85,19 @@ class UsersChartWidget extends ChartWidget implements HasForms
 
         $data = Trend::model(AuthenticationLog::class)
             ->dateColumn('login_at')
+<<<<<<< HEAD
             ->between(
                 start: $startDate,
                 end: $endDate,
             )
+=======
+            ->between(start: $startDate, end: $endDate)
+>>>>>>> 079c9da7 (.)
             ->perDay()
             // ->perMonth()
             ->count();
         /*
+<<<<<<< HEAD
          * // Update callbacks to match expected signature
          * $chartData = $data->map(function ($value) {
          * Assert::isInstanceOf($value, TrendValue::class);
@@ -99,6 +110,20 @@ class UsersChartWidget extends ChartWidget implements HasForms
          * return $value->date->format('Y-m-d');
          * })->toArray();
          */
+=======
+        // Update callbacks to match expected signature
+        $chartData = $data->map(function ($value) {
+            Assert::isInstanceOf($value, TrendValue::class);
+
+            return $value->aggregate;
+        })->toArray();
+        $chartLabels = $data->map(function ($value) {
+            Assert::isInstanceOf($value, TrendValue::class);
+
+            return $value->date->format('Y-m-d');
+        })->toArray();
+        */
+>>>>>>> 079c9da7 (.)
 
         $chartData = $data->pluck('aggregate')->toArray();
         $chartLabels = $data->pluck('date')->toArray();

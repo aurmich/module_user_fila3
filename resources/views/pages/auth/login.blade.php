@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 
@@ -15,6 +16,19 @@ middleware(['guest']);
 name('login');
 
 new class extends Component {
+=======
+use App\Models\User;
+use Illuminate\Auth\Events\Login;
+use function Laravel\Folio\{middleware, name};
+use Livewire\Attributes\Validate;
+use Livewire\Volt\Component;
+
+middleware(['guest']);
+name('login');
+
+new class extends Component
+{
+>>>>>>> 079c9da7 (.)
     #[Validate('required|email')]
     public $email = '';
 
@@ -79,4 +93,8 @@ new class extends Component {
 
     </div>
 
+<<<<<<< HEAD
 </x-layouts.main>
+=======
+</x-layouts.main>
+>>>>>>> 079c9da7 (.)

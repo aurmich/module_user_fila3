@@ -13,7 +13,10 @@ class ListTeams extends XotBaseListRecords
     // //
     protected static string $resource = TeamResource::class;
 
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 079c9da7 (.)
     public function getTableColumns(): array
     {
         return [
@@ -25,8 +28,17 @@ class ListTeams extends XotBaseListRecords
                 ->counts('users')
                 ->numeric()
                 ->sortable(),
+<<<<<<< HEAD
             'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
             'updated_at' => TextColumn::make('updated_at')->dateTime()->sortable(),
+=======
+            'created_at' => TextColumn::make('created_at')
+                ->dateTime()
+                ->sortable(),
+            'updated_at' => TextColumn::make('updated_at')
+                ->dateTime()
+                ->sortable(),
+>>>>>>> 079c9da7 (.)
         ];
     }
 }

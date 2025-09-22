@@ -30,7 +30,10 @@ enum UserType: string implements HasColor, HasIcon, HasLabel
 }
 ```
 
+<<<<<<< HEAD
 Il modulo User ha un enum generico che non rispecchia il dominio sanitario di .
+=======
+>>>>>>> 079c9da7 (.)
 Il modulo User ha un enum generico che non rispecchia il dominio sanitario di SaluteOra.
 
 **✅ Soluzione DOMAIN-DRIVEN + DRY:**
@@ -43,8 +46,11 @@ enum UserType: string implements HasColor, HasIcon, HasLabel
     case SYSTEM = 'system';
 }
 
+<<<<<<< HEAD
 // Nel modulo  - enum specifico del dominio
 enum UserType: string implements HasColor, HasIcon, HasLabel
+=======
+>>>>>>> 079c9da7 (.)
 // Nel modulo SaluteOra - enum specifico del dominio
 enum SaluteOraUserType: string implements HasColor, HasIcon, HasLabel
 {
@@ -726,10 +732,17 @@ class SecurityAlertService
 
 ## 🔗 Collegamenti
 
+<<<<<<< HEAD
 - [Spatie Permission Documentation](https://spatie.be/docs/laravel-permission)
 - [Laravel Authentication](https://laravel.com/docs/authentication)
 - [Multi-tenancy Best Practices](../../../docs/multi-tenancy-best-practices.md)
 - [Security Guidelines](../../../docs/security-guidelines.md)
+=======
+- [Spatie Permission Documentation](https://spatie.be/project_docs/laravel-permission)
+- [Laravel Authentication](https://laravel.com/project_docs/authentication)
+- [Multi-tenancy Best Practices](../../../project_docs/multi-tenancy-best-practices.md)
+- [Security Guidelines](../../../project_docs/security-guidelines.md)
+>>>>>>> 079c9da7 (.)
 
 ---
 

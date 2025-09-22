@@ -10,6 +10,17 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+>>>>>>> 079c9da7 (.)
 class PermissionsRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'permissions';
@@ -19,7 +30,10 @@ class PermissionsRelationManager extends XotBaseRelationManager
      *
      * @return array<string, \Filament\Forms\Components\Component>
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 079c9da7 (.)
     public function getFormSchema(): array
     {
         return [
@@ -33,12 +47,16 @@ class PermissionsRelationManager extends XotBaseRelationManager
     /**
      * Configura la tabella per la visualizzazione e la gestione dei permessi.
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 079c9da7 (.)
     public function table(Table $table): Table
     {
         return $table
             ->recordTitleAttribute('name')
             ->columns([
+<<<<<<< HEAD
                 Tables\Columns\TextColumn::make('name')->sortable()->searchable(),
             ])
             ->filters([]) // Aggiungi eventuali filtri qui se necessario
@@ -51,6 +69,31 @@ class PermissionsRelationManager extends XotBaseRelationManager
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make()->tooltip(__('Elimina i permessi selezionati')),
+=======
+                Tables\Columns\TextColumn::make('name')
+
+                    ->sortable()
+                    ->searchable(),
+            ])
+            ->filters([]) // Aggiungi eventuali filtri qui se necessario
+            ->headerActions([
+                Tables\Actions\CreateAction::make()
+
+                    ->tooltip(__('Crea un nuovo permesso')),
+            ])
+            ->actions([
+                Tables\Actions\EditAction::make()
+
+                    ->tooltip(__('Modifica permesso')),
+                Tables\Actions\DeleteAction::make()
+
+                    ->tooltip(__('Elimina permesso')),
+            ])
+            ->bulkActions([
+                Tables\Actions\DeleteBulkAction::make()
+
+                    ->tooltip(__('Elimina i permessi selezionati')),
+>>>>>>> 079c9da7 (.)
             ]);
     }
 }

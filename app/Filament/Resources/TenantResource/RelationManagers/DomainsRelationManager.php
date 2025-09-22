@@ -14,6 +14,17 @@ use Filament\Tables\Table;
 use Illuminate\Support\Str;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+>>>>>>> 079c9da7 (.)
 class DomainsRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'domains';
@@ -21,23 +32,34 @@ class DomainsRelationManager extends XotBaseRelationManager
     /**
      * @return array<string, \Filament\Forms\Components\Component>
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 079c9da7 (.)
     public function getFormSchema(): array
     {
         return [
             'domain' => Forms\Components\TextInput::make('domain')
                 ->required()
                 ->prefix('http(s)://')
+<<<<<<< HEAD
                 ->suffix('.' . request()->getHost())
+=======
+                ->suffix('.'.request()->getHost())
+>>>>>>> 079c9da7 (.)
                 ->maxLength(255),
         ];
     }
 
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 079c9da7 (.)
     public function table(Table $table): Table
     {
         return $table
             ->recordTitleAttribute('domain')
+<<<<<<< HEAD
             ->columns([
                 Tables\Columns\TextColumn::make('domain'),
                 Tables\Columns\TextColumn::make('full-domain')->getStateUsing(
@@ -57,5 +79,37 @@ class DomainsRelationManager extends XotBaseRelationManager
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
+=======
+            ->columns(
+                [
+                    Tables\Columns\TextColumn::make('domain'),
+                    Tables\Columns\TextColumn::make('full-domain')->getStateUsing(static fn ($record) => Str::of($record->domain)->append('.')->append(request()->getHost())),
+                ]
+            )
+            ->filters(
+                [
+                ]
+            )
+            ->headerActions(
+                [
+                    Tables\Actions\CreateAction::make(),
+                ]
+            )
+            ->actions(
+                [
+                    Tables\Actions\EditAction::make(),
+                    Tables\Actions\DeleteAction::make(),
+                ]
+            )
+            ->bulkActions(
+                [
+                    Tables\Actions\BulkActionGroup::make(
+                        [
+                            Tables\Actions\DeleteBulkAction::make(),
+                        ]
+                    ),
+                ]
+            );
+>>>>>>> 079c9da7 (.)
     }
 }

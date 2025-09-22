@@ -10,12 +10,17 @@ use Modules\User\Datas\PasswordData;
 
 class EditProfile extends BaseEditProfile
 {
+<<<<<<< HEAD
     public static null|string $title = 'Profilo Utente';
+=======
+    public static ?string $title = 'Profilo Utente';
+>>>>>>> 079c9da7 (.)
 
     /**
      * Costruisce il form schema per la pagina di modifica profilo.
      */
     public function getFormSchema(): array
+<<<<<<< HEAD
     {
         return [
             $this->getNameFormComponent(),
@@ -23,4 +28,17 @@ class EditProfile extends BaseEditProfile
             ...PasswordData::make()->getPasswordFormComponents('new_password'),
         ];
     }
+=======
+{
+    
+        
+    return [
+              
+                $this->getNameFormComponent(),
+                $this->getEmailFormComponent(),
+                ...PasswordData::make()->getPasswordFormComponents('new_password'),
+            
+      ];
+}
+>>>>>>> 079c9da7 (.)
 }

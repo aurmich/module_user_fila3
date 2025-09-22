@@ -28,7 +28,11 @@ class TeamPolicy extends UserBasePolicy
     /**
      * Determine whether the user can create models.
      */
+<<<<<<< HEAD
     public function create(UserContract $_user): bool
+=======
+    public function create(UserContract $user): bool
+>>>>>>> 079c9da7 (.)
     {
         return true;
     }

@@ -74,8 +74,14 @@ class Login extends Component implements HasForms
                 ->suffixIcon('heroicon-m-envelope')
                 ->autofocus()
                 ->live()
+<<<<<<< HEAD
                 ->afterStateUpdated(fn($_state) => $this->validateOnly('email'))
                 ->dehydrated(),
+=======
+                ->afterStateUpdated(fn ($state) => $this->validateOnly('email'))
+                ->dehydrated(),
+
+>>>>>>> 079c9da7 (.)
             TextInput::make('password')
                 ->password()
                 ->required()
@@ -86,6 +92,10 @@ class Login extends Component implements HasForms
                 ->minLength(8)
                 ->maxLength(255)
                 ->dehydrated(),
+<<<<<<< HEAD
+=======
+
+>>>>>>> 079c9da7 (.)
             Checkbox::make('remember')
                 ->label(__('Ricordami'))
                 ->default(false)
@@ -98,7 +108,12 @@ class Login extends Component implements HasForms
      */
     public function form(): Form
     {
+<<<<<<< HEAD
         return $this->makeForm()->schema($this->getFormSchema());
+=======
+        return $this->makeForm()
+            ->schema($this->getFormSchema());
+>>>>>>> 079c9da7 (.)
     }
 
     /**
@@ -140,13 +155,23 @@ class Login extends Component implements HasForms
     protected function getRedirectUrl(): RedirectResponse
     {
         $user = Auth::user();
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 079c9da7 (.)
         if (!$user) {
             return redirect()->to('/');
         }
 
         // Se l'utente ha ruoli admin, redirect al pannello appropriato
+<<<<<<< HEAD
         $adminRoles = $user->roles->filter(fn($role) => str_ends_with($role->name, '::admin'));
+=======
+        $adminRoles = $user->roles->filter(function ($role) {
+            return str_ends_with($role->name, '::admin');
+        });
+>>>>>>> 079c9da7 (.)
 
         if ($adminRoles->count() === 1) {
             // Un solo ruolo admin - redirect al modulo specifico

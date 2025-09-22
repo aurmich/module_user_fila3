@@ -3,6 +3,7 @@
 ## Collegamenti correlati
 - [README modulo User](./README.md)
 - [Convenzioni Path](./PATH_CONVENTIONS.md)
+<<<<<<< HEAD
 - [Best Practices Chiavi di Traduzione](/laravel/Modules/Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [Implementazione Header](/laravel/Modules/User/docs/HEADER_LANGUAGE_AVATAR_IMPLEMENTATION.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
@@ -14,12 +15,23 @@ Questo documento descrive come migliorare il selettore di lingua nell'header di 
 ## Utilizzo delle Bandiere SVG
 
 Le bandiere SVG sono disponibili in `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/resources/svg/flags` e sono autoregistrate come componenti Blade tramite il sistema di registrazione delle icone di Blade. Questo avviene grazie al metodo `registerBladeIcons()` nel `XotBaseServiceProvider`.
+=======
+- [Best Practices Chiavi di Traduzione](/laravel/Modules/Lang/project_docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+- [Implementazione Header](/laravel/Modules/User/project_docs/HEADER_LANGUAGE_AVATAR_IMPLEMENTATION.md)
+- [Collegamenti Documentazione](/project_docs/collegamenti-documentazione.md)
+
+## Panoramica
+
+>>>>>>> 079c9da7 (.)
 Questo documento descrive come migliorare il selettore di lingua nell'header di SaluteOra utilizzando le bandiere SVG disponibili nel modulo UI, rendendo il componente più visibile e accattivante.
 
 ## Utilizzo delle Bandiere SVG
 
 Le bandiere SVG sono disponibili in `/var/www/html/saluteora/laravel/Modules/UI/resources/svg/flags` e sono autoregistrate come componenti Blade tramite il sistema di registrazione delle icone di Blade. Questo avviene grazie al metodo `registerBladeIcons()` nel `XotBaseServiceProvider`.
+<<<<<<< HEAD
 Le bandiere SVG sono disponibili in `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/resources/svg/flags` e sono autoregistrate come componenti Blade tramite il sistema di registrazione delle icone di Blade. Questo avviene grazie al metodo `registerBladeIcons()` nel `XotBaseServiceProvider`.
+=======
+>>>>>>> 079c9da7 (.)
 
 ### Come Funziona la Registrazione
 

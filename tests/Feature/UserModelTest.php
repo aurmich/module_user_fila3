@@ -2,10 +2,23 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
+=======
+namespace Modules\User\Tests\Feature\UserModelTest;
+
+namespace Modules\User\Tests\Unit\Widgets;
+
+>>>>>>> 079c9da7 (.)
 use Modules\User\Models\Permission;
 use Modules\User\Models\Role;
 use Modules\User\Models\Team;
 use Modules\User\Models\User;
+<<<<<<< HEAD
+=======
+use Modules\User\Models\Profile;
+use Modules\User\Models\Device;
+use Modules\User\Models\AuthenticationLog;
+>>>>>>> 079c9da7 (.)
 
 beforeEach(function () {
     $this->user = User::factory()->create();
@@ -17,7 +30,11 @@ describe('User Model Creation', function () {
         $userData = [
             'name' => 'Test User',
             'first_name' => 'Test',
+<<<<<<< HEAD
             'last_name' => 'User',
+=======
+
+>>>>>>> 079c9da7 (.)
             'email' => 'test@example.com',
             'password' => bcrypt('password'),
             'lang' => 'it',
@@ -37,7 +54,13 @@ describe('User Model Creation', function () {
     });
 
     it('generates uuid for id', function () {
+<<<<<<< HEAD
         expect($this->user->id)->toBeString()->toHaveLength(36); // UUID format
+=======
+        expect($this->user->id)
+            ->toBeString()
+            ->toHaveLength(36); // UUID format
+>>>>>>> 079c9da7 (.)
     });
 
     it('uses user database connection', function () {
@@ -143,8 +166,12 @@ describe('User Relationships', function () {
     });
 
     it('can have permissions', function () {
+<<<<<<< HEAD
         expect($this->user->permissions())
             ->toBeInstanceOf(\Illuminate\Database\Eloquent\Relations\BelongsToMany::class);
+=======
+        expect($this->user->permissions())->toBeInstanceOf(\Illuminate\Database\Eloquent\Relations\BelongsToMany::class);
+>>>>>>> 079c9da7 (.)
     });
 
     it('can have profile', function () {
@@ -268,8 +295,12 @@ describe('User Scopes and Queries', function () {
         $activeUsers = User::where('is_active', true)->get();
         $inactiveUsers = User::where('is_active', false)->get();
 
+<<<<<<< HEAD
         expect($activeUsers->every(fn($user) => $user->is_active))->toBe(true);
         expect($inactiveUsers->every(fn($user) => !$user->is_active))->toBe(true);
+=======
+
+>>>>>>> 079c9da7 (.)
     });
 
     it('can filter by email verified', function () {
@@ -279,8 +310,12 @@ describe('User Scopes and Queries', function () {
         $verifiedUsers = User::whereNotNull('email_verified_at')->get();
         $unverifiedUsers = User::whereNull('email_verified_at')->get();
 
+<<<<<<< HEAD
         expect($verifiedUsers->every(fn($user) => $user->email_verified_at !== null))->toBe(true);
         expect($unverifiedUsers->every(fn($user) => $user->email_verified_at === null))->toBe(true);
+=======
+
+>>>>>>> 079c9da7 (.)
     });
 
     it('can filter by language', function () {
@@ -290,8 +325,12 @@ describe('User Scopes and Queries', function () {
         $italianUsers = User::where('lang', 'it')->get();
         $englishUsers = User::where('lang', 'en')->get();
 
+<<<<<<< HEAD
         expect($italianUsers->every(fn($user) => $user->lang === 'it'))->toBe(true);
         expect($englishUsers->every(fn($user) => $user->lang === 'en'))->toBe(true);
+=======
+
+>>>>>>> 079c9da7 (.)
     });
 });
 
@@ -322,4 +361,8 @@ describe('User Soft Deletes', function () {
 
         expect(User::withTrashed()->find($userId))->toBeNull();
     });
+<<<<<<< HEAD
 });
+=======
+
+>>>>>>> 079c9da7 (.)

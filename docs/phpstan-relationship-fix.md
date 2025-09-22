@@ -75,7 +75,10 @@ Per **tutte le relazioni Eloquent** in trait e modelli:
 ## Collegamenti
 
 - [PHPStan Template Covariance](https://phpstan.org/blog/whats-up-with-template-covariant)
+<<<<<<< HEAD
 - [Eloquent Relationships](https://laravel.com/docs/12.x/eloquent-relationships)
+=======
+>>>>>>> 079c9da7 (.)
 - [Eloquent Relationships](https://laravel.com/project_docs/12.x/eloquent-relationships)
 
 *Ultimo aggiornamento: gennaio 2025*

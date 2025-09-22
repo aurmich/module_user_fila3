@@ -124,7 +124,10 @@ done
 1. **Dati Realistici**: Non solo lorem ipsum, ma dati significativi
 2. **Relazioni**: Gestire correttamente foreign key e relazioni
 3. **Stati**: Metodi per creare istanze in stati specifici
+<<<<<<< HEAD
 4. **Localizzazione**: Dati italiani per  (CAP, città, regioni)
+=======
+>>>>>>> 079c9da7 (.)
 4. **Localizzazione**: Dati italiani per SaluteOra (CAP, città, regioni)
 5. **Variabilità**: Stati diversi per testing completo
 
@@ -146,10 +149,17 @@ done
 
 ## Collegamenti
 
+<<<<<<< HEAD
 - [Factory Audit Root](../../../docs/factory-audit-2025.md)
 - [Missing Factories Audit](./missing-factories-audit.md)
 - [Geo Factory Audit](../../Geo/docs/missing-factories-audit.md)
 - [Laravel Factory Best Practices](../../../docs/laravel-factory-best-practices.md)
+=======
+- [Factory Audit Root](../../../project_docs/factory-audit-2025.md)
+- [Missing Factories Audit](./missing-factories-audit.md)
+- [Geo Factory Audit](../../Geo/project_docs/missing-factories-audit.md)
+- [Laravel Factory Best Practices](../../../project_docs/laravel-factory-best-practices.md)
+>>>>>>> 079c9da7 (.)
 
 ---
 

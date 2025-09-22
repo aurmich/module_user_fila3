@@ -10,6 +10,10 @@ use Tests\TestCase;
 uses(TestCase::class);
 
 describe('Authentication Business Logic', function () {
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 079c9da7 (.)
     beforeEach(function () {
         // In-memory test data following CLAUDE.md guidelines - no database
         $this->userData = [
@@ -48,7 +52,11 @@ describe('Authentication Business Logic', function () {
             'description' => 'Healthcare professional with patient access',
             'permissions' => [
                 'view_patients',
+<<<<<<< HEAD
                 'create_appointments',
+=======
+                'create_appointments', 
+>>>>>>> 079c9da7 (.)
                 'update_patient_records',
                 'view_medical_history',
             ],
@@ -77,9 +85,16 @@ describe('Authentication Business Logic', function () {
     });
 
     describe('User Authentication Logic', function () {
+<<<<<<< HEAD
         it('validates user account status', function () {
             $user = (object) $this->userData;
 
+=======
+        
+        it('validates user account status', function () {
+            $user = (object) $this->userData;
+            
+>>>>>>> 079c9da7 (.)
             // Business Logic: User must be active and verified
             expect($user->is_active)->toBeTrue();
             expect($user->email_verified_at)->not->toBeNull();
@@ -88,7 +103,11 @@ describe('Authentication Business Logic', function () {
 
         it('validates email format and verification', function () {
             $user = (object) $this->userData;
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 079c9da7 (.)
             // Business Logic: Email must be valid format and verified
             expect($user->email)->toMatch('/^[^\s@]+@[^\s@]+\.[^\s@]+$/');
             expect($user->email_verified_at)->toBeInstanceOf(Carbon::class);
@@ -97,7 +116,11 @@ describe('Authentication Business Logic', function () {
 
         it('handles password security requirements', function () {
             $user = (object) $this->userData;
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 079c9da7 (.)
             // Business Logic: Password must be hashed and have expiration
             expect($user->password)->toStartWith('$2y$'); // bcrypt hash
             expect(strlen($user->password))->toBeGreaterThan(50); // Proper hash length
@@ -109,24 +132,40 @@ describe('Authentication Business Logic', function () {
             $user = (object) $this->userData;
             $maxAttempts = 5;
             $lockoutMinutes = 30;
+<<<<<<< HEAD
 
             // Business Logic: Account lockout after failed attempts
             expect($user->failed_login_attempts)->toBeLessThan($maxAttempts);
             expect($user->locked_until)->toBeNull(); // Not locked
 
+=======
+            
+            // Business Logic: Account lockout after failed attempts
+            expect($user->failed_login_attempts)->toBeLessThan($maxAttempts);
+            expect($user->locked_until)->toBeNull(); // Not locked
+            
+>>>>>>> 079c9da7 (.)
             // Simulate lockout scenario
             $userLocked = (object) array_merge($this->userData, [
                 'failed_login_attempts' => 5,
                 'locked_until' => Carbon::now()->addMinutes($lockoutMinutes),
             ]);
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 079c9da7 (.)
             expect($userLocked->failed_login_attempts)->toBe($maxAttempts);
             expect($userLocked->locked_until->isFuture())->toBeTrue();
         });
 
         it('manages session and remember tokens', function () {
             $user = (object) $this->userData;
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 079c9da7 (.)
             // Business Logic: Remember token for persistent sessions
             expect($user->remember_token)->toBeString();
             expect(strlen($user->remember_token))->toBeGreaterThan(10);
@@ -135,6 +174,7 @@ describe('Authentication Business Logic', function () {
 
         it('validates profile completeness', function () {
             $user = (object) $this->userData;
+<<<<<<< HEAD
 
             // Business Logic: User profile requirements
             expect($user->name)->not->toBeEmpty();
@@ -151,15 +191,37 @@ describe('Authentication Business Logic', function () {
             if (!empty($user->profile_photo_path))
                 $profileScore += 25;
 
+=======
+            
+            // Business Logic: User profile requirements
+            expect($user->name)->not->toBeEmpty();
+            expect($user->email)->not->toBeEmpty();
+            
+            // Optional profile fields
+            $profileScore = 0;
+            if (!empty($user->name)) $profileScore += 25;
+            if (!empty($user->email)) $profileScore += 25;
+            if ($user->email_verified_at) $profileScore += 25;
+            if (!empty($user->profile_photo_path)) $profileScore += 25;
+            
+>>>>>>> 079c9da7 (.)
             expect($profileScore)->toBeGreaterThanOrEqual(75); // Good profile
         });
     });
 
     describe('Team Management Logic', function () {
+<<<<<<< HEAD
         it('validates team ownership and membership', function () {
             $team = (object) $this->teamData;
             $user = (object) $this->userData;
 
+=======
+        
+        it('validates team ownership and membership', function () {
+            $team = (object) $this->teamData;
+            $user = (object) $this->userData;
+            
+>>>>>>> 079c9da7 (.)
             // Business Logic: User can own and belong to teams
             expect($team->user_id)->toBe($user->id); // Owner relationship
             expect($user->current_team_id)->toBe($team->id); // Active team
@@ -168,18 +230,30 @@ describe('Authentication Business Logic', function () {
 
         it('distinguishes personal vs organizational teams', function () {
             $team = (object) $this->teamData;
+<<<<<<< HEAD
 
             // Business Logic: Personal teams vs organizational teams
             expect($team->personal_team)->toBeFalse(); // This is organizational
             expect($team->name)->not->toContain('Personal'); // Org team naming
 
+=======
+            
+            // Business Logic: Personal teams vs organizational teams
+            expect($team->personal_team)->toBeFalse(); // This is organizational
+            expect($team->name)->not->toContain('Personal'); // Org team naming
+            
+>>>>>>> 079c9da7 (.)
             // Personal team would be:
             $personalTeam = (object) [
                 'name' => 'Mario Rossi (Personal)',
                 'personal_team' => true,
                 'user_id' => 1001,
             ];
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 079c9da7 (.)
             expect($personalTeam->personal_team)->toBeTrue();
             expect($personalTeam->name)->toContain('Personal');
         });
@@ -187,12 +261,20 @@ describe('Authentication Business Logic', function () {
         it('validates team settings and preferences', function () {
             $team = (object) $this->teamData;
             $settings = $team->settings;
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 079c9da7 (.)
             // Business Logic: Team settings structure
             expect($settings)->toHaveKey('timezone');
             expect($settings)->toHaveKey('language');
             expect($settings)->toHaveKey('notification_preferences');
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 079c9da7 (.)
             // Italian healthcare team defaults
             expect($settings['timezone'])->toBe('Europe/Rome');
             expect($settings['language'])->toBe('it');
@@ -203,24 +285,43 @@ describe('Authentication Business Logic', function () {
             $user = (object) $this->userData;
             $availableTeams = [2001, 2002, 2003]; // Teams user belongs to
             $newTeamId = 2002;
+<<<<<<< HEAD
 
             // Business Logic: User can switch to teams they belong to
             expect($availableTeams)->toContain($user->current_team_id);
             expect($availableTeams)->toContain($newTeamId);
 
+=======
+            
+            // Business Logic: User can switch to teams they belong to
+            expect($availableTeams)->toContain($user->current_team_id);
+            expect($availableTeams)->toContain($newTeamId);
+            
+>>>>>>> 079c9da7 (.)
             // Simulate team switch
             $userAfterSwitch = (object) array_merge($this->userData, [
                 'current_team_id' => $newTeamId,
             ]);
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 079c9da7 (.)
             expect($userAfterSwitch->current_team_id)->toBe($newTeamId);
         });
     });
 
     describe('Role-Based Access Control', function () {
+<<<<<<< HEAD
         it('validates role structure and permissions', function () {
             $role = (object) $this->roleData;
 
+=======
+        
+        it('validates role structure and permissions', function () {
+            $role = (object) $this->roleData;
+            
+>>>>>>> 079c9da7 (.)
             // Business Logic: Role must have name, guard, and permissions
             expect($role->name)->toBeString();
             expect($role->guard_name)->toBe('web');
@@ -231,6 +332,7 @@ describe('Authentication Business Logic', function () {
         it('validates healthcare-specific permissions', function () {
             $role = (object) $this->roleData;
             $healthcarePermissions = [
+<<<<<<< HEAD
                 'view_patients',
                 'create_patients',
                 'update_patients',
@@ -251,6 +353,19 @@ describe('Authentication Business Logic', function () {
             $hasPatientAccess = in_array('view_patients', $rolePermissions, strict: true);
             $hasAppointmentAccess = in_array('create_appointments', $rolePermissions, strict: true);
 
+=======
+                'view_patients', 'create_patients', 'update_patients', 'delete_patients',
+                'view_appointments', 'create_appointments', 'update_appointments', 'cancel_appointments',
+                'view_medical_history', 'create_medical_records', 'view_reports',
+                'manage_studio', 'view_statistics',
+            ];
+            
+            // Business Logic: Healthcare roles should have relevant permissions
+            $rolePermissions = $role->permissions;
+            $hasPatientAccess = in_array('view_patients', $rolePermissions);
+            $hasAppointmentAccess = in_array('create_appointments', $rolePermissions);
+            
+>>>>>>> 079c9da7 (.)
             expect($hasPatientAccess)->toBeTrue();
             expect($hasAppointmentAccess)->toBeTrue();
         });
@@ -262,10 +377,17 @@ describe('Authentication Business Logic', function () {
                 (object) ['name' => 'nurse', 'level' => 3, 'permissions' => ['view_patients']],
                 (object) ['name' => 'receptionist', 'level' => 4, 'permissions' => ['view_appointments']],
             ];
+<<<<<<< HEAD
 
             // Business Logic: Higher level roles have more permissions
             usort($roles, fn($a, $b) => $a->level <=> $b->level);
 
+=======
+            
+            // Business Logic: Higher level roles have more permissions
+            usort($roles, fn($a, $b) => $a->level <=> $b->level);
+            
+>>>>>>> 079c9da7 (.)
             expect($roles[0]->name)->toBe('admin'); // Highest level
             expect($roles[0]->permissions)->toContain('*'); // All permissions
             expect(count($roles[1]->permissions))->toBeGreaterThan(count($roles[2]->permissions));
@@ -276,6 +398,7 @@ describe('Authentication Business Logic', function () {
                 'team_2001' => ['view_patients', 'create_appointments'],
                 'team_2002' => ['view_patients'], // Limited access to other team
             ];
+<<<<<<< HEAD
 
             $currentTeam = 'team_2001';
             $otherTeam = 'team_2002';
@@ -284,6 +407,16 @@ describe('Authentication Business Logic', function () {
             $currentPermissions = $userTeamPermissions[$currentTeam];
             $otherPermissions = $userTeamPermissions[$otherTeam];
 
+=======
+            
+            $currentTeam = 'team_2001';
+            $otherTeam = 'team_2002';
+            
+            // Business Logic: Permissions can vary by team context
+            $currentPermissions = $userTeamPermissions[$currentTeam];
+            $otherPermissions = $userTeamPermissions[$otherTeam];
+            
+>>>>>>> 079c9da7 (.)
             expect(count($currentPermissions))->toBeGreaterThan(count($otherPermissions));
             expect($currentPermissions)->toContain('create_appointments');
             expect($otherPermissions)->not->toContain('create_appointments');
@@ -291,10 +424,18 @@ describe('Authentication Business Logic', function () {
     });
 
     describe('OAuth Integration Logic', function () {
+<<<<<<< HEAD
         it('validates OAuth provider configuration', function () {
             $oauth = (object) $this->oauthData;
             $supportedProviders = ['google', 'facebook', 'azure', 'github'];
 
+=======
+        
+        it('validates OAuth provider configuration', function () {
+            $oauth = (object) $this->oauthData;
+            $supportedProviders = ['google', 'facebook', 'azure', 'github'];
+            
+>>>>>>> 079c9da7 (.)
             // Business Logic: OAuth provider must be supported
             expect($supportedProviders)->toContain($oauth->provider);
             expect($oauth->provider_id)->toBeString();
@@ -303,12 +444,20 @@ describe('Authentication Business Logic', function () {
 
         it('handles OAuth token lifecycle', function () {
             $oauth = (object) $this->oauthData;
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 079c9da7 (.)
             // Business Logic: OAuth tokens have expiration
             expect($oauth->access_token)->toBeString();
             expect($oauth->refresh_token)->toBeString();
             expect($oauth->expires_at)->toBeInstanceOf(Carbon::class);
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 079c9da7 (.)
             // Token should not be expired for valid session
             expect($oauth->expires_at->isFuture())->toBeTrue();
         });
@@ -316,15 +465,25 @@ describe('Authentication Business Logic', function () {
         it('validates OAuth scope permissions', function () {
             $oauth = (object) $this->oauthData;
             $requiredScopes = ['email', 'profile'];
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 079c9da7 (.)
             // Business Logic: OAuth must have required scopes
             foreach ($requiredScopes as $scope) {
                 expect($oauth->scopes)->toContain($scope);
             }
+<<<<<<< HEAD
 
             // Additional scopes for healthcare context
             $healthcareScopes = ['openid', 'address', 'phone'];
 
+=======
+            
+            // Additional scopes for healthcare context
+            $healthcareScopes = ['openid', 'address', 'phone'];
+>>>>>>> 079c9da7 (.)
             // These would be added for healthcare-specific OAuth flows
         });
 
@@ -332,7 +491,11 @@ describe('Authentication Business Logic', function () {
             $primaryProvider = 'google';
             $fallbackProviders = ['azure', 'facebook'];
             $allProviders = array_merge([$primaryProvider], $fallbackProviders);
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 079c9da7 (.)
             // Business Logic: Must have fallback options
             expect(count($allProviders))->toBeGreaterThan(1);
             expect($allProviders[0])->toBe($primaryProvider);
@@ -340,10 +503,18 @@ describe('Authentication Business Logic', function () {
     });
 
     describe('Device Management Logic', function () {
+<<<<<<< HEAD
         it('validates device registration', function () {
             $device = (object) $this->deviceData;
             $validDeviceTypes = ['mobile', 'tablet', 'desktop', 'web'];
 
+=======
+        
+        it('validates device registration', function () {
+            $device = (object) $this->deviceData;
+            $validDeviceTypes = ['mobile', 'tablet', 'desktop', 'web'];
+            
+>>>>>>> 079c9da7 (.)
             // Business Logic: Device must be properly registered
             expect($validDeviceTypes)->toContain($device->device_type);
             expect($device->device_id)->toBeString();
@@ -352,11 +523,19 @@ describe('Authentication Business Logic', function () {
 
         it('tracks device activity and trust', function () {
             $device = (object) $this->deviceData;
+<<<<<<< HEAD
 
             // Business Logic: Device trust and activity tracking
             expect($device->last_active)->toBeInstanceOf(Carbon::class);
             expect($device->is_trusted)->toBeBool();
 
+=======
+            
+            // Business Logic: Device trust and activity tracking
+            expect($device->last_active)->toBeInstanceOf(Carbon::class);
+            expect($device->is_trusted)->toBeBool();
+            
+>>>>>>> 079c9da7 (.)
             // Device should be recently active
             $inactiveThreshold = Carbon::now()->subDays(30);
             expect($device->last_active->isAfter($inactiveThreshold))->toBeTrue();
@@ -364,7 +543,11 @@ describe('Authentication Business Logic', function () {
 
         it('validates push notification setup', function () {
             $device = (object) $this->deviceData;
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 079c9da7 (.)
             // Business Logic: Mobile devices should have push tokens
             if ($device->device_type === 'mobile') {
                 expect($device->push_token)->toBeString();
@@ -379,16 +562,27 @@ describe('Authentication Business Logic', function () {
                 ['type' => 'tablet', 'name' => 'iPad Pro'],
                 ['type' => 'web', 'name' => 'Chrome Browser'],
             ];
+<<<<<<< HEAD
 
             $maxDevices = 5;
             $currentDeviceCount = count($userDevices);
 
+=======
+            
+            $maxDevices = 5;
+            $currentDeviceCount = count($userDevices);
+            
+>>>>>>> 079c9da7 (.)
             // Business Logic: Reasonable device limits
             expect($currentDeviceCount)->toBeLessThanOrEqual($maxDevices);
         });
     });
 
     describe('Session Security Logic', function () {
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 079c9da7 (.)
         it('validates session timeout logic', function () {
             $sessionData = [
                 'started_at' => Carbon::now()->subHours(1),
@@ -396,6 +590,7 @@ describe('Authentication Business Logic', function () {
                 'timeout_minutes' => 120, // 2 hours
                 'max_lifetime_hours' => 24, // 1 day
             ];
+<<<<<<< HEAD
 
             $session = (object) $sessionData;
 
@@ -403,6 +598,15 @@ describe('Authentication Business Logic', function () {
             $timeSinceActivity = Carbon::now()->diffInMinutes($session->last_activity);
             $timeSinceStart = Carbon::now()->diffInHours($session->started_at);
 
+=======
+            
+            $session = (object) $sessionData;
+            
+            // Business Logic: Session should not exceed timeout
+            $timeSinceActivity = Carbon::now()->diffInMinutes($session->last_activity);
+            $timeSinceStart = Carbon::now()->diffInHours($session->started_at);
+            
+>>>>>>> 079c9da7 (.)
             expect($timeSinceActivity)->toBeLessThan($session->timeout_minutes);
             expect($timeSinceStart)->toBeLessThan($session->max_lifetime_hours);
         });
@@ -412,9 +616,15 @@ describe('Authentication Business Logic', function () {
                 ['id' => 'sess_1', 'device' => 'mobile', 'started' => Carbon::now()->subHour()],
                 ['id' => 'sess_2', 'device' => 'desktop', 'started' => Carbon::now()->subMinutes(30)],
             ];
+<<<<<<< HEAD
 
             $maxConcurrentSessions = 3;
 
+=======
+            
+            $maxConcurrentSessions = 3;
+            
+>>>>>>> 079c9da7 (.)
             // Business Logic: Limit concurrent sessions
             expect(count($userActiveSessions))->toBeLessThanOrEqual($maxConcurrentSessions);
         });
@@ -426,13 +636,23 @@ describe('Authentication Business Logic', function () {
                 'country' => 'Italy',
                 'is_suspicious' => false,
             ];
+<<<<<<< HEAD
 
             $attempt = (object) $loginAttempt;
 
+=======
+            
+            $attempt = (object) $loginAttempt;
+            
+>>>>>>> 079c9da7 (.)
             // Business Logic: Basic IP security validation
             expect($attempt->ip_address)->toMatch('/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/');
             expect($attempt->is_suspicious)->toBeFalse();
             expect($attempt->country)->toBe('Italy'); // Expected for Italian users
         });
     });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 079c9da7 (.)

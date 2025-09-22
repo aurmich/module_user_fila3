@@ -10,6 +10,7 @@ use Modules\User\Filament\Resources\RoleResource\Pages\CreateRole;
 use Modules\User\Filament\Resources\RoleResource\Pages\EditRole;
 use Modules\User\Filament\Resources\RoleResource\Pages\ListRoles;
 use Modules\User\Models\Role;
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 
@@ -28,12 +29,38 @@ class RoleResource extends XotBaseResource
     }
 
     #[\Override]
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource;
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
+class RoleResource extends XotBaseResource
+{
+    protected static ?string $model = Role::class;
+
+    public static function getFormSchema(): array
+    {
+        return [
+            'name' => TextInput::make('name')
+                ->required()
+                ->maxLength(255),
+            'guard_name' => TextInput::make('guard_name')
+                ->required()
+                ->maxLength(255),
+            'enabled' => Toggle::make('enabled')
+                ->required(),
+        ];
+    }
+
+>>>>>>> 079c9da7 (.)
     public static function getRelations(): array
     {
         return [];
     }
 
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 079c9da7 (.)
     public static function getPages(): array
     {
         return [

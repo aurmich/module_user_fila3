@@ -31,7 +31,11 @@ class Change extends Component
     public function mount(): void
     {
         $this->xot = XotData::make();
+<<<<<<< HEAD
         Assert::notNull($authUser = Filament::auth()->user(), '[' . __LINE__ . '][' . class_basename($this) . ']');
+=======
+        Assert::notNull($authUser = Filament::auth()->user(), '['.__LINE__.']['.class_basename($this).']');
+>>>>>>> 079c9da7 (.)
 
         // Verifica che l'utente implementi l'interfaccia UserContract
         if (!($authUser instanceof UserContract)) {
@@ -51,7 +55,11 @@ class Change extends Component
         /** @var TeamContract */
         $team = $teamClass::firstWhere(['id' => $teamId]);
 
+<<<<<<< HEAD
         if (!$this->user->switchTeam($team)) {
+=======
+        if (! $this->user->switchTeam($team)) {
+>>>>>>> 079c9da7 (.)
             abort(403);
         }
         if ($team !== null) {

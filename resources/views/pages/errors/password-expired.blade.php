@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
 declare(strict_types=1);
 
@@ -9,13 +10,22 @@ use function Laravel\Folio\middleware;
 use function Laravel\Folio\name;
 use function Laravel\Folio\render;
 use function Laravel\Folio\withTrashed;
+=======
+use Livewire\Volt\Component;
+
+use function Laravel\Folio\{withTrashed, middleware, name, render};
+>>>>>>> 079c9da7 (.)
 
 //withTrashed();
 middleware(['auth']);
 name('errors.password-expired');
 //Expression "new class extends \Livewire\Volt\Component…" on a separate line does not do anything.
 // @phpstan-ignore expr.resultUnused
+<<<<<<< HEAD
 new class() extends Component {};
+=======
+new class () extends Component {};
+>>>>>>> 079c9da7 (.)
 
 ?>
 <x-layouts.marketing>

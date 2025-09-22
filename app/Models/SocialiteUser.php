@@ -53,6 +53,10 @@ use Modules\Xot\Datas\XotData;
  */
 class SocialiteUser extends BaseModel
 {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 079c9da7 (.)
     /** @var list<string> */
     protected $fillable = [
         // 'id',

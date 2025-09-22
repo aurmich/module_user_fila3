@@ -45,6 +45,9 @@ use Illuminate\Support\Carbon;
 class TeamUser extends BaseTeamUser
 {
     use HasFactory;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 079c9da7 (.)
     protected $connection = 'user';
 }

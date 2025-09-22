@@ -8,7 +8,10 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 use Modules\User\Filament\Widgets\LoginWidget;
 use Modules\User\Models\User;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 079c9da7 (.)
 use function Pest\Laravel\assertAuthenticatedAs;
 
 uses(Tests\TestCase::class);
@@ -19,21 +22,35 @@ beforeEach(function (): void {
 
 test('it can render widget', function (): void {
     $widget = new LoginWidget();
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 079c9da7 (.)
     // Use reflection to access the protected view property
     $reflection = new \ReflectionClass($widget);
     $property = $reflection->getProperty('view');
     $property->setAccessible(true);
     $view = $property->getValue($widget);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 079c9da7 (.)
     expect($view)->toContain('pub_theme::filament.widgets.auth.login');
 });
 
 test('it has correct form schema', function (): void {
     $schema = $this->widget->getFormSchema();
+<<<<<<< HEAD
 
     expect($schema)->toHaveCount(3);
 
+=======
+    
+    expect($schema)->toHaveCount(3);
+    
+>>>>>>> 079c9da7 (.)
     // Check that the schema contains components with the expected names
     $componentNames = array_map(fn($component) => $component->getName(), $schema);
     expect($componentNames)->toContain('email');
@@ -47,7 +64,11 @@ test('it can authenticate user', function (): void {
         $this->markTestSkipped('Database not available for testing');
         return;
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 079c9da7 (.)
     /** @var \Modules\User\Models\User $user */
     $user = User::factory()->create([
         'email' => 'test@example.com',
@@ -73,7 +94,11 @@ test('it validates credentials', function (): void {
 
     // The widget should handle validation internally without throwing exceptions
     $this->widget->save();
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 079c9da7 (.)
     // Check that the widget has error messages for invalid credentials
     $errorBag = $this->widget->getErrorBag();
     expect($errorBag->isNotEmpty())->toBeTrue();
@@ -88,11 +113,19 @@ test('it requires email and password', function (): void {
 
     // The widget should handle validation internally without throwing exceptions
     $this->widget->save();
+<<<<<<< HEAD
 
     // Check that the widget has error messages for required fields
     $errorBag = $this->widget->getErrorBag();
     expect($errorBag->isNotEmpty())->toBeTrue();
 
+=======
+    
+    // Check that the widget has error messages for required fields
+    $errorBag = $this->widget->getErrorBag();
+    expect($errorBag->isNotEmpty())->toBeTrue();
+    
+>>>>>>> 079c9da7 (.)
     $errorMessages = implode(' ', $errorBag->all());
     expect($errorMessages)->toContain('email');
     expect($errorMessages)->toContain('password');

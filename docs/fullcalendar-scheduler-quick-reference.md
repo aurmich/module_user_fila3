@@ -168,7 +168,10 @@ if (app()->environment('local') && empty($licenseKey)) {
 - **Sales:** sales@fullcalendar.io
 - **Pricing:** https://fullcalendar.io/pricing/
 - **Docs:** https://fullcalendar.io/project_docs/schedulerLicenseKey
+<<<<<<< HEAD
 - **Docs:** https://fullcalendar.io/docs/schedulerLicenseKey
+=======
+>>>>>>> 079c9da7 (.)
 - **GitHub:** https://github.com/fullcalendar/fullcalendar/issues
 
 ## 🎯 Checklist Rapida
@@ -182,7 +185,10 @@ if (app()->environment('local') && empty($licenseKey)) {
 - [ ] Banner rosso rimosso
 - [ ] Funzionalità premium attive
 
+<<<<<<< HEAD
 ## 🚀  Specifico
+=======
+>>>>>>> 079c9da7 (.)
 ## 🚀 SaluteOra Specifico
 
 ### Business Hours Sanitarie

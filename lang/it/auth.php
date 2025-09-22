@@ -9,6 +9,10 @@ return [
     'throttle' => 'Troppi tentativi di accesso. Riprova fra :seconds secondi.',
     'general_error' => 'Si è verificato un errore. Riprova più tardi.',
     'unauthorized' => 'Non hai i permessi necessari per questa operazione.',
+<<<<<<< HEAD
+=======
+
+>>>>>>> 079c9da7 (.)
     // Login
     'login-via' => 'Accedi con',
     'login-failed' => 'Login fallito, riprova.',
@@ -67,21 +71,41 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
     'email' => 'Email',
     'name' => 'Nome',
     'confirm_password' => 'Conferma Password',
     // Messaggi di stato
     'logout_success' => 'Logout effettuato con successo.',
     'logout_error' => 'Si è verificato un errore durante il logout.',
+=======
+
+    'email' => 'Email',
+    'name' => 'Nome',
+    'confirm_password' => 'Conferma Password',
+
+    // Messaggi di stato
+    'logout_success' => 'Logout effettuato con successo.',
+    'logout_error' => 'Si è verificato un errore durante il logout.',
+
+>>>>>>> 079c9da7 (.)
     // Messaggi per il reset password
     'reset_password_notification_subject' => 'Reset Password Notification',
     'reset_password_notification_line_1' => 'You are receiving this email because we received a password reset request for your account.',
     'reset_password_notification_action' => 'Reset Password',
     'reset_password_notification_line_2' => 'This password reset link will expire in :count minutes.',
     'reset_password_notification_line_3' => 'If you did not request a password reset, no further action is required.',
+<<<<<<< HEAD
     'Resend Verification Email' => 'Rinvia Email di Verifica',
     'Verify Your Email Address' => 'Verifica la tua email',
     'A fresh verification link has been sent to your email address.' => 'Un nuovo link di verifica è stato inviato al tuo indirizzo email.',
+=======
+
+    'Resend Verification Email' => 'Rinvia Email di Verifica',
+    'Verify Your Email Address' => 'Verifica la tua email',
+    'A fresh verification link has been sent to your email address.' => 'Un nuovo link di verifica è stato inviato al tuo indirizzo email.',
+
+>>>>>>> 079c9da7 (.)
     'login' => [
         'title' => 'Accedi al tuo account',
         'subtitle' => 'Inserisci le tue credenziali per accedere',
@@ -92,6 +116,7 @@ return [
         'remember' => 'Ricordami',
         'email_structured' => [
             'label' => 'Email',
+<<<<<<< HEAD
             'placeholder' => 'Inserisci la tua email',
         ],
         'password_structured' => [
@@ -100,6 +125,16 @@ return [
         ],
         'remember_structured' => [
             'label' => 'Ricordami',
+=======
+            'placeholder' => 'Inserisci la tua email'
+        ],
+        'password_structured' => [
+            'label' => 'Password',
+            'placeholder' => 'Inserisci la tua password'
+        ],
+        'remember_structured' => [
+            'label' => 'Ricordami'
+>>>>>>> 079c9da7 (.)
         ],
         'submit' => 'Accedi',
         'forgot_password' => 'Password dimenticata?',
@@ -123,6 +158,10 @@ return [
         'Remember' => 'Ricordami',
         'Forgot your password?' => 'Password dimenticata?',
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 079c9da7 (.)
     // Registrazione
     'register' => [
         'title' => 'Crea un nuovo account',
@@ -143,6 +182,7 @@ return [
         // Structured version
         'name_structured' => [
             'label' => 'Nome',
+<<<<<<< HEAD
             'placeholder' => 'Inserisci il tuo nome completo',
         ],
         'email_structured' => [
@@ -158,6 +198,24 @@ return [
             'placeholder' => 'Conferma la password',
         ],
     ],
+=======
+            'placeholder' => 'Inserisci il tuo nome completo'
+        ],
+        'email_structured' => [
+            'label' => 'Email',
+            'placeholder' => 'Inserisci la tua email'
+        ],
+        'password_structured' => [
+            'label' => 'Password',
+            'placeholder' => 'Inserisci la password'
+        ],
+        'password_confirmation_structured' => [
+            'label' => 'Conferma Password',
+            'placeholder' => 'Conferma la password'
+        ],
+    ],
+
+>>>>>>> 079c9da7 (.)
     // Password dimenticata
     'forgot_password' => [
         'title' => 'Password dimenticata?',
@@ -171,9 +229,16 @@ return [
         // Structured version
         'email_structured' => [
             'label' => 'Email',
+<<<<<<< HEAD
             'placeholder' => 'Inserisci la tua email',
         ],
     ],
+=======
+            'placeholder' => 'Inserisci la tua email'
+        ],
+    ],
+
+>>>>>>> 079c9da7 (.)
     // Reset password
     'reset_password' => [
         'title' => 'Reimposta password',
@@ -201,6 +266,7 @@ return [
         // Structured version
         'email_structured' => [
             'label' => 'Email',
+<<<<<<< HEAD
             'placeholder' => 'Inserisci la tua email',
         ],
         'password_structured' => [
@@ -212,6 +278,20 @@ return [
             'placeholder' => 'Conferma la nuova password',
         ],
     ],
+=======
+            'placeholder' => 'Inserisci la tua email'
+        ],
+        'password_structured' => [
+            'label' => 'Nuova Password',
+            'placeholder' => 'Inserisci la nuova password'
+        ],
+        'password_confirmation_structured' => [
+            'label' => 'Conferma Password',
+            'placeholder' => 'Conferma la nuova password'
+        ],
+    ],
+
+>>>>>>> 079c9da7 (.)
     // Verifica Email
     'verification' => [
         'title' => 'Verifica il tuo indirizzo email',
@@ -221,6 +301,10 @@ return [
         'resend' => 'Clicca qui per richiederne un\'altra',
         'success' => 'Un nuovo link di verifica è stato inviato al tuo indirizzo email.',
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 079c9da7 (.)
     // Social Login
     'social' => [
         'title' => 'Accedi con',
@@ -229,6 +313,10 @@ return [
         'github' => 'GitHub',
         'error' => 'Si è verificato un errore con il login social.',
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 079c9da7 (.)
     // Messaggi di Errore
     'errors' => [
         'invalid_credentials' => 'Credenziali non valide.',
@@ -237,6 +325,10 @@ return [
         'too_many_attempts' => 'Troppi tentativi. Riprova più tardi.',
         'session_expired' => 'Sessione scaduta. Effettua nuovamente il login.',
     ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 079c9da7 (.)
     // Password Reset Widget - specific translations
     'password_reset' => [
         'email_placeholder' => 'Inserisci il tuo indirizzo email',
@@ -284,6 +376,10 @@ return [
             'try_again' => 'Riprova',
         ],
     ],
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 079c9da7 (.)
     // Reset Password
     'passwords' => [
         'reset' => 'La tua password è stata reimpostata!',

@@ -11,6 +11,17 @@ use Filament\Tables\Table;
 use Modules\User\Filament\Resources\DeviceResource;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+>>>>>>> 079c9da7 (.)
 class DevicesRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'devices';
@@ -26,6 +37,7 @@ class DevicesRelationManager extends XotBaseRelationManager
     /**
      * @return array<string, \Filament\Forms\Components\Component>
      */
+<<<<<<< HEAD
     #[\Override]
     public function getFormSchema(): array
     {
@@ -35,6 +47,17 @@ class DevicesRelationManager extends XotBaseRelationManager
     }
 
     #[\Override]
+=======
+    public function getFormSchema(): array
+    {
+        return [
+            'device' => TextInput::make('device')
+                ->required()
+                ->maxLength(255),
+        ];
+    }
+
+>>>>>>> 079c9da7 (.)
     public function table(Table $table): Table
     {
         $table = DeviceResource::table($table);

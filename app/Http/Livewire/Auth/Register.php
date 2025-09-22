@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Http\Livewire\Auth;
 
+<<<<<<< HEAD
 use Filament\Forms\ComponentContainer;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
@@ -12,6 +13,16 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password as PasswordRule;
 use Livewire\Component;
 use Modules\Xot\Datas\XotData;
+=======
+use Livewire\Component;
+use Modules\Xot\Datas\XotData;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\RedirectResponse;
+use Filament\Forms\ComponentContainer;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Validation\Rules\Password as PasswordRule;
+>>>>>>> 079c9da7 (.)
 
 /**
  * @property ComponentContainer $form
@@ -66,17 +77,29 @@ class Register extends Component
     public function render(): mixed
     {
         // Copy the view templates to the pub_theme location
+<<<<<<< HEAD
         app(\Modules\Xot\Actions\File\ViewCopyAction::class)
             ->execute('user::livewire.auth.register', 'pub_theme::livewire.auth.register');
         app(\Modules\Xot\Actions\File\ViewCopyAction::class)->execute('user::layouts.auth', 'pub_theme::layouts.auth');
         app(\Modules\Xot\Actions\File\ViewCopyAction::class)->execute('user::layouts.base', 'pub_theme::layouts.base');
 
+=======
+        app(\Modules\Xot\Actions\File\ViewCopyAction::class)->execute('user::livewire.auth.register', 'pub_theme::livewire.auth.register');
+        app(\Modules\Xot\Actions\File\ViewCopyAction::class)->execute('user::layouts.auth', 'pub_theme::layouts.auth');
+        app(\Modules\Xot\Actions\File\ViewCopyAction::class)->execute('user::layouts.base', 'pub_theme::layouts.base');
+        
+>>>>>>> 079c9da7 (.)
         /**
          * @phpstan-var view-string
          */
         $view = 'pub_theme::livewire.auth.register';
 
         // Return view with layout - Livewire specific implementation
+<<<<<<< HEAD
         return view($view)->extends('pub_theme::layouts.auth');
+=======
+        return view($view)
+            ->extends('pub_theme::layouts.auth');
+>>>>>>> 079c9da7 (.)
     }
 }

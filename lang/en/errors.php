@@ -64,4 +64,8 @@ return [
             'description' => 'The entered value is too short.',
         ],
     ],
+<<<<<<< HEAD
 ];
+=======
+]; 
+>>>>>>> 079c9da7 (.)

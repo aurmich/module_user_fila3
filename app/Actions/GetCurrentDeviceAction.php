@@ -20,7 +20,11 @@ class GetCurrentDeviceAction
     /**
      * Execute the action.
      */
+<<<<<<< HEAD
     public function execute(null|string $mobile_id = null): Device
+=======
+    public function execute(?string $mobile_id = null): Device
+>>>>>>> 079c9da7 (.)
     {
         $agent = new Agent();
 

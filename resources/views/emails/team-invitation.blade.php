@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 079c9da7 (.)
 @component('mail::message')
 {{ __('You have been invited to join the :team team!', ['team' => $invitation->team->name]) }}
 

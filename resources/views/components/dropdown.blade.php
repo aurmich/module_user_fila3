@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 079c9da7 (.)
 @props(['align' => 'right', 'width' => '48', 'contentClasses' => 'py-1 bg-white'])
 
 @php
@@ -45,4 +48,8 @@ switch ($width) {
             {{ $content }}
         </div>
     </div>
+<<<<<<< HEAD
 </div>
+=======
+</div> 
+>>>>>>> 079c9da7 (.)

@@ -10,7 +10,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * Team Permission Model
+<<<<<<< HEAD
  *
+=======
+ * 
+>>>>>>> 079c9da7 (.)
  * Represents a permission assigned to a user within a team context.
  *
  * @property string $id
@@ -29,6 +33,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  */
 class TeamPermission extends Model
 {
+<<<<<<< HEAD
     /**
      * The database connection that should be used by the model.
      *
@@ -40,6 +45,19 @@ class TeamPermission extends Model
      * The attributes that are mass assignable.
      *
      * @var list<string>
+=======
+    /** 
+     * The database connection that should be used by the model.
+     *
+     * @var string 
+     */
+    protected $connection = 'user';
+
+    /** 
+     * The attributes that are mass assignable.
+     *
+     * @var list<string> 
+>>>>>>> 079c9da7 (.)
      */
     protected $fillable = [
         'team_id',

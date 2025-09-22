@@ -22,7 +22,11 @@ class UserResource extends XotBaseResource
 {
     // protected static ?string $model = \Modules\Xot\Datas\XotData::make()->getUserClass();
 
+<<<<<<< HEAD
     protected static null|string $navigationIcon = 'heroicon-o-users';
+=======
+    protected static ?string $navigationIcon = 'heroicon-o-users';
+>>>>>>> 079c9da7 (.)
 
     // Static property Modules\User\Filament\Resources\UserResource::$enablePasswordUpdates is never read, only written.
     // private static bool|\Closure $enablePasswordUpdates = true;
@@ -39,11 +43,15 @@ class UserResource extends XotBaseResource
     //    static::$extendFormCallback = $callback;
     // }
 
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 079c9da7 (.)
     public static function getFormSchema(): array
     {
         return [
             'section01' => Section::make([
+<<<<<<< HEAD
                 'name' => TextInput::make('name')->required(),
                 'email' => TextInput::make('email')->required()->unique(ignoreRecord: true),
                 'password' => TextInput::make('password')
@@ -59,6 +67,27 @@ class UserResource extends XotBaseResource
 
                     return $record->created_at->diffForHumans();
                 }),
+=======
+                'name' => TextInput::make('name')
+                    ->required(),
+                'email' => TextInput::make('email')
+                    ->required()
+                    ->unique(ignoreRecord: true),
+                'password' => TextInput::make('password')
+                    ->password()
+                    ->dehydrateStateUsing(fn ($state) => ! empty($state) ? Hash::make($state) : null)
+                    ->required(fn ($livewire) => $livewire instanceof Pages\CreateUser),
+            ])->columnSpan(8),
+            'section02' => Section::make([
+                'created_at' => Placeholder::make('created_at')
+                    ->content(static function ($record) {
+                        if ($record === null || $record->created_at === null) {
+                            return new HtmlString('&mdash;');
+                        }
+                        
+                        return $record->created_at->diffForHumans();
+                    }),
+>>>>>>> 079c9da7 (.)
             ])->columnSpan(4),
         ];
     }
@@ -69,6 +98,7 @@ class UserResource extends XotBaseResource
     // }
 
     /*
+<<<<<<< HEAD
      * public static function getModel(): string
      * {
      * return config('filament-user-resource.model');
@@ -76,6 +106,14 @@ class UserResource extends XotBaseResource
      */
 
     #[\Override]
+=======
+    public static function getModel(): string
+    {
+        return config('filament-user-resource.model');
+    }
+    */
+
+>>>>>>> 079c9da7 (.)
     public function hasCombinedRelationManagerTabsWithContent(): bool
     {
         return true;

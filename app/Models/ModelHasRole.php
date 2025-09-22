@@ -69,7 +69,10 @@ class ModelHasRole extends BaseMorphPivot
     }
 
     /** @return array<string, string> */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 079c9da7 (.)
     protected function casts(): array
     {
         return [
@@ -83,6 +86,10 @@ class ModelHasRole extends BaseMorphPivot
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
             'deleted_at' => 'datetime',
+<<<<<<< HEAD
+=======
+
+>>>>>>> 079c9da7 (.)
             'updated_by' => 'string',
             'created_by' => 'string',
             'deleted_by' => 'string',

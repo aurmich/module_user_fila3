@@ -10,14 +10,20 @@ use Modules\User\Filament\Resources\FeatureResource\Pages\CreateFeature;
 use Modules\User\Filament\Resources\FeatureResource\Pages\EditFeature;
 use Modules\User\Filament\Resources\FeatureResource\Pages\ListFeatures;
 use Modules\User\Models\Feature;
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+=======
+use Modules\Xot\Filament\Resources\XotBaseResource;
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+>>>>>>> 079c9da7 (.)
 
 /**
  * @property Feature $record
  */
 class FeatureResource extends XotBaseResource
 {
+<<<<<<< HEAD
     protected static null|string $model = Feature::class;
 
     #[\Override]
@@ -31,12 +37,33 @@ class FeatureResource extends XotBaseResource
     }
 
     #[\Override]
+=======
+    protected static ?string $model = Feature::class;
+
+    public static function getFormSchema(): array
+    {
+        return [
+            'name' => TextInput::make('name')
+                ->required()
+                ->maxLength(255),
+            'type' => TextInput::make('type')
+                ->required()
+                ->maxLength(255),
+            'active' => Toggle::make('active')
+                ->required(),
+        ];
+    }
+
+>>>>>>> 079c9da7 (.)
     public static function getRelations(): array
     {
         return [];
     }
 
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 079c9da7 (.)
     public static function getPages(): array
     {
         return [

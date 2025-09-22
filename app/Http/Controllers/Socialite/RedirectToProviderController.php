@@ -22,7 +22,11 @@ class RedirectToProviderController extends Controller
     /**
      * Undocumented function.
      */
+<<<<<<< HEAD
     public function __invoke(Request $_request, string $provider): RedirectResponse
+=======
+    public function __invoke(Request $request, string $provider): RedirectResponse
+>>>>>>> 079c9da7 (.)
     {
         // if (! app(IsProviderConfiguredAction::class)->execute($provider)) {
         //    throw ProviderNotConfigured::make($provider);
@@ -31,6 +35,7 @@ class RedirectToProviderController extends Controller
 
         $scopes = App(GetProviderScopesAction::class)->execute($provider);
         $socialiteProvider = Socialite::with($provider);
+<<<<<<< HEAD
         if (!is_object($socialiteProvider)) {
             throw new \Exception('wip');
         }
@@ -40,5 +45,18 @@ class RedirectToProviderController extends Controller
         }
 
         return $socialiteProvider->scopes($scopes)->redirect();
+=======
+        if (! is_object($socialiteProvider)) {
+            throw new \Exception('wip');
+        }
+
+        if (! method_exists($socialiteProvider, 'scopes')) {
+            throw new \Exception('wip');
+        }
+
+        return $socialiteProvider
+            ->scopes($scopes)
+            ->redirect();
+>>>>>>> 079c9da7 (.)
     }
 }

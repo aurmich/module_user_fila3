@@ -51,7 +51,10 @@ use Modules\Xot\Datas\XotData;
 class DeviceUser extends BasePivot
 {
     use HasFactory;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 079c9da7 (.)
     /** @var list<string> */
     protected $fillable = [
         'id',
@@ -94,7 +97,10 @@ class DeviceUser extends BasePivot
     }
 
     /** @return array<string, string> */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 079c9da7 (.)
     protected function casts(): array
     {
         return [
@@ -106,12 +112,24 @@ class DeviceUser extends BasePivot
             // 'locales' => 'array',
             'push_notifications_token' => 'string',
             'push_notifications_enabled' => 'boolean',
+<<<<<<< HEAD
             'updated_by' => 'string',
             'created_by' => 'string',
             'deleted_by' => 'string',
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
             'deleted_at' => 'datetime',
+=======
+
+            'updated_by' => 'string',
+            'created_by' => 'string',
+            'deleted_by' => 'string',
+
+            'created_at' => 'datetime',
+            'updated_at' => 'datetime',
+            'deleted_at' => 'datetime',
+
+>>>>>>> 079c9da7 (.)
             'login_at' => 'datetime',
             'logout_at' => 'datetime',
         ];

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # LoginWidget Translation Audit - 2025-01-06
 
 ## Audit Overview
@@ -13,6 +14,8 @@ Il `LoginWidget` utilizzava le seguenti traduzioni nel namespace `user::messages
 // Traduzioni utilizzate nel LoginWidget
 __('user::messages.credentials_incorrect')
 __('user::messages.login_success')
+=======
+>>>>>>> 079c9da7 (.)
 # LoginWidget Translation Audit - Gennaio 2025
 
 ## Obiettivo
@@ -27,6 +30,7 @@ Il `LoginWidget` (`/Modules/User/app/Filament/Widgets/LoginWidget.php`) utilizza
 // Linee 112, 127, 146, 149, 155
 __('user::messages.credentials_incorrect')
 __('user::messages.login_success') 
+<<<<<<< HEAD
 # LoginWidget Translation Audit - 2025-01-06
 
 ## Audit Overview
@@ -42,10 +46,13 @@ Il `LoginWidget` utilizzava le seguenti traduzioni nel namespace `user::messages
 // Traduzioni utilizzate nel LoginWidget
 __('user::messages.credentials_incorrect')
 __('user::messages.login_success')
+=======
+>>>>>>> 079c9da7 (.)
 __('user::messages.validation_error')
 __('user::messages.login_error')
 ```
 
+<<<<<<< HEAD
 ### File Mancante
 - **File**: `Modules/User/lang/{locale}/messages.php`
 - **Stato**: Non esisteva in nessuna lingua
@@ -58,6 +65,8 @@ __('user::messages.login_error')
 3. `laravel/Modules/User/lang/de/messages.php` - Traduzioni tedesche
 
 ### Struttura Implementata
+=======
+>>>>>>> 079c9da7 (.)
 ### Stato Pre-Audit
 - ❌ File `messages.php` **non esisteva** in nessuna lingua
 - ✅ File `auth.php` esistenti ma con chiavi diverse
@@ -69,6 +78,7 @@ __('user::messages.login_error')
 Creati i seguenti file di traduzione mancanti:
 
 #### Italiano (`/Modules/User/lang/it/messages.php`)
+<<<<<<< HEAD
 ### File Mancante
 - **File**: `Modules/User/lang/{locale}/messages.php`
 - **Stato**: Non esisteva in nessuna lingua
@@ -81,11 +91,14 @@ Creati i seguenti file di traduzione mancanti:
 3. `laravel/Modules/User/lang/de/messages.php` - Traduzioni tedesche
 
 ### Struttura Implementata
+=======
+>>>>>>> 079c9da7 (.)
 ```php
 return [
     // Messaggi di autenticazione per LoginWidget
     'credentials_incorrect' => 'Le credenziali inserite non sono corrette.',
     'login_success' => 'Accesso effettuato con successo.',
+<<<<<<< HEAD
     'login_error' => 'Si è verificato un errore durante l\'accesso.',
     'validation_error' => 'Errore di validazione.',
     
@@ -192,6 +205,8 @@ Questo audit dimostra l'importanza di:
 4. **Collegamenti**: documentazione interconnessa per facilità di navigazione
 
 *Ultimo aggiornamento: 2025-01-06*
+=======
+>>>>>>> 079c9da7 (.)
     'login_error' => 'Si è verificato un errore durante l\'accesso. Riprova più tardi.',
     'validation_error' => 'Errore di validazione.',
     // ... 60+ altre chiavi per completezza
@@ -222,6 +237,12 @@ return [
 ];
 ```
 
+<<<<<<< HEAD
+=======
+## Collegamenti
+- [Widget Translation Rules](widget-translation-rules.md)
+- [Root Translation Guidelines](../../../../project_docs/translation-standards.md)
+>>>>>>> 079c9da7 (.)
 ### 2. Struttura Completa delle Traduzioni
 Ogni file `messages.php` include categorie complete di messaggi:
 
@@ -358,6 +379,7 @@ Il pattern può essere applicato a tutti i widget del sistema per garantire cons
 **File modificati**: 3 (it/messages.php, en/messages.php, de/messages.php)  
 **Translation keys aggiunte**: 60+ per lingua  
 **LoginWidget status**: ✅ Fully functional in all languages
+<<<<<<< HEAD
 **LoginWidget status**: ✅ Fully functional in all languages
     'login_error' => 'Si è verificato un errore durante l\'accesso.',
     'validation_error' => 'Errore di validazione.',
@@ -466,3 +488,5 @@ Questo audit dimostra l'importanza di:
 
 *Ultimo aggiornamento: 2025-01-06*
 **LoginWidget status**: ✅ Fully functional in all languages
+=======
+>>>>>>> 079c9da7 (.)

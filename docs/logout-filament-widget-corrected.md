@@ -1,17 +1,29 @@
 # Implementazione Corretta del Logout con Widget Filament
 
 ## Collegamenti correlati
+<<<<<<< HEAD
 - [Documentazione centrale](/docs/README.md)
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
+=======
+- [Documentazione centrale](/project_docs/README.md)
+- [Collegamenti documentazione](/project_docs/collegamenti-documentazione.md)
+>>>>>>> 079c9da7 (.)
 - [Implementazione Auth Pages](AUTH_PAGES_IMPLEMENTATION.md)
 - [Implementazione Logout](LOGOUT_BLADE_IMPLEMENTATION.md)
 - [Analisi Errore Logout](LOGOUT_BLADE_ERROR_ANALYSIS.md)
 - [Struttura Widget](WIDGETS_STRUCTURE.md)
+<<<<<<< HEAD
 - [Documentazione Auth Tema One](/laravel/Themes/One/docs/AUTH.md)
 
 ## Introduzione
 
 Questo documento descrive l'implementazione corretta del logout utilizzando un widget Filament, rispettando le convenzioni di  e la struttura di `XotBaseWidget`. L'approccio con widget Filament è particolarmente utile quando si desidera mantenere una pagina di conferma per il logout.
+=======
+- [Documentazione Auth Tema One](/laravel/Themes/One/project_docs/AUTH.md)
+
+## Introduzione
+
+>>>>>>> 079c9da7 (.)
 Questo documento descrive l'implementazione corretta del logout utilizzando un widget Filament, rispettando le convenzioni di SaluteOra e la struttura di `XotBaseWidget`. L'approccio con widget Filament è particolarmente utile quando si desidera mantenere una pagina di conferma per il logout.
 
 ## Errore Comune da Evitare
@@ -231,7 +243,10 @@ name('logout');
    - Implementare il metodo astratto `getFormSchema()` invece di tentare di sovrascrivere `form()`
    - Utilizzare correttamente i componenti Filament
 
+<<<<<<< HEAD
 2. **Convenzioni di  per i Widget**:
+=======
+>>>>>>> 079c9da7 (.)
 2. **Convenzioni di SaluteOra per i Widget**:
    - Namespace corretto: `Modules\User\Filament\Widgets`
    - Path della vista: `filament.widgets.auth.logout` (senza namespace del modulo per l'utilizzo diretto nelle Blade)
@@ -251,7 +266,10 @@ name('logout');
 2. **Coerenza UI**: Utilizza i componenti UI nativi di Filament, garantendo coerenza visiva.
 3. **Manutenibilità**: Separa chiaramente la logica dalla presentazione.
 4. **Estensibilità**: Facilmente estensibile per aggiungere funzionalità aggiuntive.
+<<<<<<< HEAD
 5. **Conformità alle convenzioni**: Segue le convenzioni di  per i widget Filament.
+=======
+>>>>>>> 079c9da7 (.)
 5. **Conformità alle convenzioni**: Segue le convenzioni di SaluteOra per i widget Filament.
 
 ## Alternativa: Logout Immediato

@@ -1,8 +1,11 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 
+=======
+>>>>>>> 079c9da7 (.)
 return [
     'login' => 'Accedi',
     'register' => 'Registrati',
@@ -19,3 +22,7 @@ return [
     'already_registered' => 'Già registrato?',
     'not_registered' => 'Non sei registrato?',
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 079c9da7 (.)

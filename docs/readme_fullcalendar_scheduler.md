@@ -2,7 +2,10 @@
 
 ## 🎯 Obiettivo
 
+<<<<<<< HEAD
 Questa documentazione è stata creata per risolvere i problemi comuni relativi alle licenze FullCalendar Scheduler nel progetto <nome progetto>, basandosi sulla ricerca approfondita della documentazione ufficiale di FullCalendar e dei problemi noti nella community.
+=======
+>>>>>>> 079c9da7 (.)
 Questa documentazione è stata creata per risolvere i problemi comuni relativi alle licenze FullCalendar Scheduler nel progetto SaluteOra, basandosi sulla ricerca approfondita della documentazione ufficiale di FullCalendar e dei problemi noti nella community.
 
 ## 📚 Documenti Creati
@@ -12,7 +15,10 @@ Questa documentazione è stata creata per risolvere i problemi comuni relativi a
 - **400+ righe** di documentazione dettagliata
 - Copertura completa di tutti i problemi noti
 - Soluzioni specifiche per Laravel/Filament
+<<<<<<< HEAD
 - Best practices per ambiente sanitario <nome progetto>
+=======
+>>>>>>> 079c9da7 (.)
 - Best practices per ambiente sanitario SaluteOra
 
 ### 2. **Riferimento Rapido**
@@ -71,7 +77,10 @@ private function getFullCalendarPlugin(): FilamentFullCalendarPlugin
             'dayGrid', 'timeGrid', 'list', 'interaction',
             'resourceTimeline', 'resourceDayGrid', // Premium
         ],
+<<<<<<< HEAD
         // Configurazioni <nome progetto> specifiche...
+=======
+>>>>>>> 079c9da7 (.)
         // Configurazioni SaluteOra specifiche...
     ]);
 }
@@ -99,7 +108,10 @@ FULLCALENDAR_CACHE_TTL=300
 FULLCALENDAR_MAX_EVENTS=100
 ```
 
+<<<<<<< HEAD
 ## 🏥 Specifiche <nome progetto>
+=======
+>>>>>>> 079c9da7 (.)
 ## 🏥 Specifiche SaluteOra
 
 ### Business Hours Sanitarie
@@ -187,7 +199,10 @@ Log::info('FullCalendar configured', [
 ✅ **Configurazione incompleta** - Setup completo fornito
 ✅ **Bug versioning** - Soluzioni per v5.x e v6.x
 ✅ **Ambiente-specific** - Gestione produzione/sviluppo
+<<<<<<< HEAD
 ✅ **<nome progetto> integration** - Configurazioni sanitarie specifiche
+=======
+>>>>>>> 079c9da7 (.)
 ✅ **SaluteOra integration** - Configurazioni sanitarie specifiche
 
 ### Benefici
@@ -214,13 +229,19 @@ Log::info('FullCalendar configured', [
 ### Quando Aggiornare
 - Nuove versioni FullCalendar con breaking changes
 - Nuovi bug noti nella community
+<<<<<<< HEAD
 - Modifiche architettura <nome progetto>
+=======
+>>>>>>> 079c9da7 (.)
 - Modifiche architettura SaluteOra
 - Nuovi requisiti sanitari/legali
 
 ### Come Aggiornare
 1. Verificare issue GitHub FullCalendar
+<<<<<<< HEAD
 2. Testare soluzioni in ambiente <nome progetto>
+=======
+>>>>>>> 079c9da7 (.)
 2. Testare soluzioni in ambiente SaluteOra
 3. Aggiornare documenti pertinenti
 4. Aggiornare questo README
@@ -231,5 +252,8 @@ Log::info('FullCalendar configured', [
 **Ultima modifica**: Gennaio 2025  
 **Versione FullCalendar**: v6.1.17  
 **Versione Filament**: v3.x  
+<<<<<<< HEAD
 **Progetto**: <nome progetto> Multi-Tenant Healthcare Platform 
+=======
+>>>>>>> 079c9da7 (.)
 **Progetto**: SaluteOra Multi-Tenant Healthcare Platform 

@@ -12,7 +12,11 @@ class Verify extends Component
 {
     public function resend(): void
     {
+<<<<<<< HEAD
         Assert::notNull($user = Auth::user(), '[' . __LINE__ . '][' . class_basename($this) . ']');
+=======
+        Assert::notNull($user = Auth::user(), '['.__LINE__.']['.class_basename($this).']');
+>>>>>>> 079c9da7 (.)
         if ($user->hasVerifiedEmail()) {
             redirect(route('home'));
         }
@@ -26,8 +30,12 @@ class Verify extends Component
 
     public function render(): \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
     {
+<<<<<<< HEAD
         app(\Modules\Xot\Actions\File\ViewCopyAction::class)
             ->execute('user::livewire.auth.verify', 'pub_theme::livewire.auth.verify');
+=======
+        app(\Modules\Xot\Actions\File\ViewCopyAction::class)->execute('user::livewire.auth.verify', 'pub_theme::livewire.auth.verify');
+>>>>>>> 079c9da7 (.)
         app(\Modules\Xot\Actions\File\ViewCopyAction::class)->execute('user::layouts.auth', 'pub_theme::layouts.auth');
         app(\Modules\Xot\Actions\File\ViewCopyAction::class)->execute('user::layouts.base', 'pub_theme::layouts.base');
         /**
@@ -35,6 +43,11 @@ class Verify extends Component
          */
         $view = 'pub_theme::livewire.auth.verify';
 
+<<<<<<< HEAD
         return view($view)->extends('pub_theme::layouts.auth');
+=======
+        return view($view)
+            ->extends('pub_theme::layouts.auth');
+>>>>>>> 079c9da7 (.)
     }
 }

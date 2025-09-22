@@ -10,16 +10,26 @@ use Modules\User\Models\User;
 
 /**
  * Notification Factory
+<<<<<<< HEAD
  *
  * Factory for creating Notification model instances for testing and seeding.
  *
+=======
+ * 
+ * Factory for creating Notification model instances for testing and seeding.
+ * 
+>>>>>>> 079c9da7 (.)
  * @extends Factory<Notification>
  */
 class NotificationFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> 079c9da7 (.)
      * @var class-string<Notification>
      */
     protected $model = Notification::class;
@@ -58,7 +68,11 @@ class NotificationFactory extends Factory
      */
     public function unread(): static
     {
+<<<<<<< HEAD
         return $this->state(fn(array $_attributes): array => [
+=======
+        return $this->state(fn (array $attributes): array => [
+>>>>>>> 079c9da7 (.)
             'read_at' => null,
         ]);
     }
@@ -70,7 +84,11 @@ class NotificationFactory extends Factory
      */
     public function read(): static
     {
+<<<<<<< HEAD
         return $this->state(fn(array $_attributes): array => [
+=======
+        return $this->state(fn (array $attributes): array => [
+>>>>>>> 079c9da7 (.)
             'read_at' => $this->faker->dateTimeBetween('-1 month', 'now'),
         ]);
     }
@@ -83,12 +101,17 @@ class NotificationFactory extends Factory
      */
     public function forUser(User $user): static
     {
+<<<<<<< HEAD
         return $this->state(fn(array $_attributes): array => [
+=======
+        return $this->state(fn (array $attributes): array => [
+>>>>>>> 079c9da7 (.)
             'notifiable_type' => User::class,
             'notifiable_id' => $user->id,
         ]);
     }
 
+<<<<<<< HEAD
     /**
      * Create notification with high priority.
      *
@@ -112,6 +135,29 @@ class NotificationFactory extends Factory
             ),
         ]);
     }
+=======
+         /**
+      * Create notification with high priority.
+      *
+      * @return static
+      */
+     public function highPriority(): static
+     {
+         return $this->state(fn (array $attributes): array => [
+             'data' => array_merge(
+                 is_array($attributes['data'] ?? null) ? $attributes['data'] : [
+                     'title' => $this->faker->sentence(4),
+                     'message' => $this->faker->text(200),
+                     'action_url' => $this->faker->optional()->url(),
+                     'priority' => 'medium',
+                 ],
+                 [
+                     'priority' => 'high',
+                 ]
+             ),
+         ]);
+     }
+>>>>>>> 079c9da7 (.)
 
     /**
      * Create notification with specific type.
@@ -121,8 +167,16 @@ class NotificationFactory extends Factory
      */
     public function ofType(string $type): static
     {
+<<<<<<< HEAD
         return $this->state(fn(array $_attributes): array => [
             'type' => $type,
         ]);
     }
 }
+=======
+        return $this->state(fn (array $attributes): array => [
+            'type' => $type,
+        ]);
+    }
+}
+>>>>>>> 079c9da7 (.)

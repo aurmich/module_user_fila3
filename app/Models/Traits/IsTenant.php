@@ -4,11 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Traits;
 
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
+=======
+>>>>>>> 079c9da7 (.)
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Modules\User\Contracts\TeamContract;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
+<<<<<<< HEAD
+=======
+use Illuminate\Database\Eloquent\Model;
+>>>>>>> 079c9da7 (.)
 
 /**
  * Undocumented trait.
@@ -19,7 +26,11 @@ trait IsTenant
 {
     /**
      * Get all users associated with this tenant.
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> 079c9da7 (.)
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<\Illuminate\Database\Eloquent\Model&\Modules\Xot\Contracts\UserContract, static>
      */
     public function users(): BelongsToMany
@@ -30,15 +41,24 @@ trait IsTenant
         // $this->setConnection('mysql');
         /** @var class-string<\Illuminate\Database\Eloquent\Model&\Modules\Xot\Contracts\UserContract> $userClass */
         return $this->belongsToManyX($userClass, null, 'tenant_id', 'user_id');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 079c9da7 (.)
         // ->as('membership')
     }
 
     /*
      * Method to create a belongsToMany relationship.
+<<<<<<< HEAD
      *
      * @template TRelatedModel of \Illuminate\Database\Eloquent\Model
      *
+=======
+     * 
+     * @template TRelatedModel of \Illuminate\Database\Eloquent\Model
+     * 
+>>>>>>> 079c9da7 (.)
      * @param class-string<TRelatedModel> $related The related model class
      * @param string|null $table The pivot table name
      * @param string $foreignPivotKey The foreign key in pivot table
@@ -46,6 +66,7 @@ trait IsTenant
      * @param string|null $parentKey The parent key
      * @param string|null $relatedKey The related key
      * @param string|null $relation The relation name
+<<<<<<< HEAD
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<TRelatedModel, static>
      *
@@ -61,4 +82,21 @@ trait IsTenant
      * return $this->belongsToMany($related, $table, $foreignPivotKey, $relatedPivotKey, $parentKey, $relatedKey, $relation);
      * }
      */
+=======
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany<TRelatedModel, static>
+     
+    public function belongsToManyX(
+        string $related,
+        ?string $table = null,
+        ?string $foreignPivotKey = 'tenant_id',
+        ?string $relatedPivotKey = 'user_id',
+        ?string $parentKey = null,
+        ?string $relatedKey = null,
+        ?string $relation = null
+    ): BelongsToMany {
+        return $this->belongsToMany($related, $table, $foreignPivotKey, $relatedPivotKey, $parentKey, $relatedKey, $relation);
+    }
+        */
+>>>>>>> 079c9da7 (.)
 }

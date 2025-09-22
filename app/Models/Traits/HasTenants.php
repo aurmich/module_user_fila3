@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Models\Traits;
 
 use Filament\Panel;
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
@@ -18,6 +19,21 @@ use Modules\Xot\Datas\XotData;
  *
  * Provides tenant functionality for User models implementing multi-tenancy.
  *
+=======
+use Modules\Xot\Datas\XotData;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\Model;
+use Modules\User\Contracts\TeamContract;
+use Modules\Xot\Actions\Panel\ApplyTenancyToPanelAction;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+
+/**
+ * Trait HasTenants
+ * 
+ * Provides tenant functionality for User models implementing multi-tenancy.
+ * 
+>>>>>>> 079c9da7 (.)
  * @property TeamContract $currentTeam
  */
 trait HasTenants
@@ -36,6 +52,7 @@ trait HasTenants
     /**
      * Get tenants for the given panel.
      *
+<<<<<<< HEAD
      * @param \Filament\Panel $_panel
      * @return array<\Illuminate\Database\Eloquent\Model>|\Illuminate\Support\Collection<int, \Illuminate\Database\Eloquent\Model>
      */
@@ -44,6 +61,16 @@ trait HasTenants
         /** @var \Illuminate\Support\Collection<int, \Illuminate\Database\Eloquent\Model> $tenants */
         $tenants = $this->tenants;
 
+=======
+     * @param \Filament\Panel $panel
+     * @return array<\Illuminate\Database\Eloquent\Model>|\Illuminate\Support\Collection<int, \Illuminate\Database\Eloquent\Model>
+     */
+    public function getTenants(Panel $panel): array|Collection
+    {
+        /** @var \Illuminate\Support\Collection<int, \Illuminate\Database\Eloquent\Model> $tenants */
+        $tenants = $this->tenants;
+        
+>>>>>>> 079c9da7 (.)
         return $tenants;
     }
 

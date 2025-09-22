@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Gestione degli Utenti in 
 
 ## Panoramica
@@ -7,6 +8,8 @@ Questo documento descrive il sistema di gestione degli utenti in , con particola
 ## Tipi di Utenti
 
  supporta diversi tipi di utenti, ciascuno con caratteristiche e funzionalità specifiche:
+=======
+>>>>>>> 079c9da7 (.)
 # Gestione degli Utenti in SaluteOra
 
 ## Panoramica
@@ -25,14 +28,21 @@ SaluteOra supporta diversi tipi di utenti, ciascuno con caratteristiche e funzio
 
 ### Single Table Inheritance (STI)
 
+<<<<<<< HEAD
  utilizza il pattern Single Table Inheritance tramite il pacchetto `parental` per gestire diversi tipi di utenti in un'unica tabella `users`. Questo approccio offre diversi vantaggi:
+=======
+>>>>>>> 079c9da7 (.)
 SaluteOra utilizza il pattern Single Table Inheritance tramite il pacchetto `parental` per gestire diversi tipi di utenti in un'unica tabella `users`. Questo approccio offre diversi vantaggi:
 
 - **Efficienza del Database**: Tutti gli utenti sono memorizzati in un'unica tabella
 - **Flessibilità**: Facile aggiunta di nuovi tipi di utenti
 - **Polimorfismo**: Trattare diversi tipi di utenti in modo uniforme quando necessario
 
+<<<<<<< HEAD
 Per una documentazione dettagliata sul pattern di ereditarietà, consulta il [Pattern di Ereditarietà dei Modelli](/docs/model-inheritance-patterns.md).
+=======
+Per una documentazione dettagliata sul pattern di ereditarietà, consulta il [Pattern di Ereditarietà dei Modelli](/project_docs/model-inheritance-patterns.md).
+>>>>>>> 079c9da7 (.)
 
 ### Struttura dei Modelli
 
@@ -48,7 +58,11 @@ BaseUser (Modules\User\Models\BaseUser)
 
 ### Campi del Database
 
+<<<<<<< HEAD
 La tabella `users` contiene campi comuni a tutti i tipi di utenti, oltre a campi specifici per ciascun tipo. Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md).
+=======
+La tabella `users` contiene campi comuni a tutti i tipi di utenti, oltre a campi specifici per ciascun tipo. Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/project_docs/DATABASE_FIELD_MAPPING.md).
+>>>>>>> 079c9da7 (.)
 
 ## Registrazione degli Utenti
 
@@ -75,19 +89,31 @@ I dottori devono passare attraverso un processo di moderazione:
 7. Invio email di approvazione/rifiuto
 8. Accesso al sistema (se approvato)
 
+<<<<<<< HEAD
 Per una documentazione dettagliata sul processo di registrazione dei dottori, consulta il [Processo di Registrazione dei Dottori](/laravel/Modules/Patient/docs/DOCTOR_REGISTRATION_PROCESS.md).
+=======
+Per una documentazione dettagliata sul processo di registrazione dei dottori, consulta il [Processo di Registrazione dei Dottori](/laravel/Modules/Patient/project_docs/DOCTOR_REGISTRATION_PROCESS.md).
+>>>>>>> 079c9da7 (.)
 
 ## Gestione dei File
 
 Gli utenti possono caricare vari tipi di file, come avatar, certificazioni e documenti. Questi file sono gestiti tramite il componente `FileUpload` di Filament e memorizzati nel database come percorsi o array JSON.
 
+<<<<<<< HEAD
 Per una documentazione dettagliata sulla gestione dei file, consulta la [Gestione dei File Upload in Filament](/docs/filament-file-uploads.md).
+=======
+Per una documentazione dettagliata sulla gestione dei file, consulta la [Gestione dei File Upload in Filament](/project_docs/filament-file-uploads.md).
+>>>>>>> 079c9da7 (.)
 
 ## Best Practices
 
 ### 1. Utilizzo dei Campi Corretti
 
+<<<<<<< HEAD
 Assicurarsi di utilizzare i campi corretti per ciascun tipo di utente, come documentato nella [Mappatura dei Campi Database](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md).
+=======
+Assicurarsi di utilizzare i campi corretti per ciascun tipo di utente, come documentato nella [Mappatura dei Campi Database](/laravel/Modules/Patient/project_docs/DATABASE_FIELD_MAPPING.md).
+>>>>>>> 079c9da7 (.)
 
 ### 2. Gestione degli Stati
 
@@ -114,8 +140,16 @@ $request->validate([
 
 ## Documentazione Correlata
 
+<<<<<<< HEAD
 - [Pattern di Ereditarietà dei Modelli](/docs/model-inheritance-patterns.md)
 - [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md)
 - [Processo di Registrazione dei Dottori](/laravel/Modules/Patient/docs/DOCTOR_REGISTRATION_PROCESS.md)
 - [Gestione dei File Upload in Filament](/docs/filament-file-uploads.md)
 - [Migrazioni del Database](/docs/database-migrations.md)
+=======
+- [Pattern di Ereditarietà dei Modelli](/project_docs/model-inheritance-patterns.md)
+- [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/project_docs/DATABASE_FIELD_MAPPING.md)
+- [Processo di Registrazione dei Dottori](/laravel/Modules/Patient/project_docs/DOCTOR_REGISTRATION_PROCESS.md)
+- [Gestione dei File Upload in Filament](/project_docs/filament-file-uploads.md)
+- [Migrazioni del Database](/project_docs/database-migrations.md)
+>>>>>>> 079c9da7 (.)

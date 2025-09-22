@@ -24,8 +24,12 @@ class Confirm extends Component
 
     public function render(): \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
     {
+<<<<<<< HEAD
         app(\Modules\Xot\Actions\File\ViewCopyAction::class)
             ->execute('user::livewire.auth.passwords.confirm', 'pub_theme::livewire.auth.passwords.confirm');
+=======
+        app(\Modules\Xot\Actions\File\ViewCopyAction::class)->execute('user::livewire.auth.passwords.confirm', 'pub_theme::livewire.auth.passwords.confirm');
+>>>>>>> 079c9da7 (.)
         app(\Modules\Xot\Actions\File\ViewCopyAction::class)->execute('user::layouts.auth', 'pub_theme::layouts.auth');
         app(\Modules\Xot\Actions\File\ViewCopyAction::class)->execute('user::layouts.base', 'pub_theme::layouts.base');
 
@@ -34,6 +38,11 @@ class Confirm extends Component
          */
         $view = 'pub_theme::livewire.auth.passwords.confirm';
 
+<<<<<<< HEAD
         return view($view)->extends('pub_theme::layouts.auth');
+=======
+        return view($view)
+            ->extends('pub_theme::layouts.auth');
+>>>>>>> 079c9da7 (.)
     }
 }

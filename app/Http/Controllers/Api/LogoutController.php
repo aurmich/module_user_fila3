@@ -29,13 +29,22 @@ class LogoutController extends XotBaseController
      */
     public function __invoke(Request $request): JsonResponse
     {
+<<<<<<< HEAD
         Assert::notNull($user = $request->user(), '[' . __LINE__ . '][' . class_basename($this) . ']');
 
+=======
+        Assert::notNull($user = $request->user(), '['.__LINE__.']['.class_basename($this).']');
+        
+>>>>>>> 079c9da7 (.)
         // Verificare che l'utente implementi l'interfaccia UserContract
         if (!($user instanceof \Modules\Xot\Contracts\UserContract)) {
             throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia UserContract');
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 079c9da7 (.)
         app(LogoutUserAction::class)->execute($user);
 
         // TODO: Implement token cleanup logic here
@@ -61,10 +70,20 @@ class LogoutController extends XotBaseController
         //     'session' => session()->all(),
         // ]);
 
+<<<<<<< HEAD
         return JsonResponseData::from([
             'message' => 'logout succefully',
             // 'data' => $user->toArray(),
             'data' => session()->all(),
         ])->response();
+=======
+        return JsonResponseData::from(
+            [
+                'message' => 'logout succefully',
+                // 'data' => $user->toArray(),
+                'data' => session()->all(),
+            ]
+        )->response();
+>>>>>>> 079c9da7 (.)
     }
 }

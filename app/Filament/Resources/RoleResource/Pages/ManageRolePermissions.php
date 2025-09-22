@@ -10,15 +10,32 @@ use Filament\Resources\Pages\ManageRelatedRecords;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Modules\User\Filament\Resources\RoleResource;
+<<<<<<< HEAD
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
+=======
+
+
+
+
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
+
+
+
+
+>>>>>>> 079c9da7 (.)
 class ManageRolePermissions extends ManageRelatedRecords
 {
     protected static string $resource = RoleResource::class;
 
     protected static string $relationship = 'permissions';
 
+<<<<<<< HEAD
     protected static null|string $navigationIcon = 'heroicon-o-rectangle-stack';
+=======
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+>>>>>>> 079c9da7 (.)
 
     public static function getNavigationLabel(): string
     {
@@ -26,11 +43,25 @@ class ManageRolePermissions extends ManageRelatedRecords
     }
 
     public function getFormSchema(): array
+<<<<<<< HEAD
     {
         return [
             Forms\Components\TextInput::make('name')->required()->maxLength(255),
         ];
     }
+=======
+{
+
+
+    return [
+
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
+
+      ];
+}
+>>>>>>> 079c9da7 (.)
 
     public function table(Table $table): Table
     {
@@ -39,7 +70,12 @@ class ManageRolePermissions extends ManageRelatedRecords
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
             ])
+<<<<<<< HEAD
             ->filters([])
+=======
+            ->filters([
+            ])
+>>>>>>> 079c9da7 (.)
             ->headerActions([
                 Tables\Actions\CreateAction::make(),
                 Tables\Actions\AssociateAction::make(),

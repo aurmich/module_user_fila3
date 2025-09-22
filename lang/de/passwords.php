@@ -1,8 +1,11 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 
+=======
+>>>>>>> 079c9da7 (.)
 return [
     'reset' => 'La tua password è stata reimpostata.',
     'sent' => 'Ti abbiamo inviato un’email con il link per reimpostare la password.',

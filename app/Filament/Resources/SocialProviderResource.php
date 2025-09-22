@@ -18,12 +18,19 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
  */
 class SocialProviderResource extends XotBaseResource
 {
+<<<<<<< HEAD
     protected static null|string $model = SocialProvider::class;
+=======
+    protected static ?string $model = SocialProvider::class;
+>>>>>>> 079c9da7 (.)
 
     /**
      * @return array<string, \Filament\Forms\Components\Component>
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 079c9da7 (.)
     public static function getFormSchema(): array
     {
         return [
@@ -32,24 +39,41 @@ class SocialProviderResource extends XotBaseResource
                 ->maxLength(255)
                 ->placeholder(static::trans('fields.name.placeholder'))
                 ->helperText(static::trans('fields.name.helper_text')),
+<<<<<<< HEAD
             'scopes' => KeyValue::make('scopes')
                 // ->placeholder(static::trans('fields.scopes.placeholder'))
                 ->helperText(static::trans('fields.scopes.helper_text')),
+=======
+
+            'scopes' => KeyValue::make('scopes')
+                // ->placeholder(static::trans('fields.scopes.placeholder'))
+                ->helperText(static::trans('fields.scopes.helper_text')),
+
+>>>>>>> 079c9da7 (.)
             'client_id' => TextInput::make('client_id')
                 ->required()
                 ->maxLength(255)
                 ->placeholder(static::trans('fields.client_id.placeholder'))
                 ->helperText(static::trans('fields.client_id.helper_text')),
+<<<<<<< HEAD
+=======
+
+>>>>>>> 079c9da7 (.)
             'client_secret' => TextInput::make('client_secret')
                 ->required()
                 ->maxLength(1024)
                 ->placeholder(static::trans('fields.client_secret.placeholder'))
                 ->helperText(static::trans('fields.client_secret.helper_text')),
+<<<<<<< HEAD
+=======
+
+>>>>>>> 079c9da7 (.)
             'redirect' => TextInput::make('redirect')
                 ->required()
                 ->maxLength(255)
                 ->placeholder(static::trans('fields.redirect.placeholder'))
                 ->helperText(static::trans('fields.redirect.helper_text')),
+<<<<<<< HEAD
             'parameters' => KeyValue::make('parameters')
                 // ->placeholder(static::trans('fields.parameters.placeholder'))
                 ->helperText(static::trans('fields.parameters.helper_text')),
@@ -58,6 +82,26 @@ class SocialProviderResource extends XotBaseResource
             'active' => Toggle::make('active')->helperText(static::trans('fields.active.helper_text')),
             'socialite' => Toggle::make('socialite')->helperText(static::trans('fields.socialite.helper_text')),
             'enabled' => Toggle::make('enabled'),
+=======
+
+            'parameters' => KeyValue::make('parameters')
+                // ->placeholder(static::trans('fields.parameters.placeholder'))
+                ->helperText(static::trans('fields.parameters.helper_text')),
+
+            'additional_params' => Textarea::make('additional_params'),
+
+            'stateless' => Toggle::make('stateless')
+                ->helperText(static::trans('fields.stateless.helper_text')),
+
+            'active' => Toggle::make('active')
+                ->helperText(static::trans('fields.active.helper_text')),
+
+            'socialite' => Toggle::make('socialite')
+                ->helperText(static::trans('fields.socialite.helper_text')),
+
+            'enabled' => Toggle::make('enabled'),
+
+>>>>>>> 079c9da7 (.)
             'svg' => Textarea::make('svg')
                 ->columnSpanFull()
                 ->placeholder(static::trans('fields.svg.placeholder'))
@@ -65,6 +109,7 @@ class SocialProviderResource extends XotBaseResource
         ];
     }
 
+<<<<<<< HEAD
     #[\Override]
     public static function getRelations(): array
     {
@@ -72,6 +117,14 @@ class SocialProviderResource extends XotBaseResource
     }
 
     #[\Override]
+=======
+    public static function getRelations(): array
+    {
+        return [
+        ];
+    }
+
+>>>>>>> 079c9da7 (.)
     public static function getPages(): array
     {
         return [

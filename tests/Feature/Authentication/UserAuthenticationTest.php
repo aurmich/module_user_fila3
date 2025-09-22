@@ -2,12 +2,23 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
+=======
+namespace Modules\User\Tests\Feature\Authentication\UserAuthenticationTest;
+
+namespace Modules\User\Tests\Unit\Widgets;
+
+>>>>>>> 079c9da7 (.)
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Laravel\Passport\Passport;
 use Modules\User\Models\Permission;
 use Modules\User\Models\Role;
 use Modules\User\Models\User;
+<<<<<<< HEAD
+=======
+use Modules\User\Models\AuthenticationLog;
+>>>>>>> 079c9da7 (.)
 
 beforeEach(function () {
     $this->user = User::factory()->create([
@@ -25,7 +36,11 @@ describe('User Authentication', function () {
         ]);
 
         expect($result)->toBe(true);
+<<<<<<< HEAD
         expect(Auth::user()?->id)->toBe($this->user->id);
+=======
+        expect(Auth::user()->id)->toBe($this->user->id);
+>>>>>>> 079c9da7 (.)
     });
 
     it('cannot authenticate with invalid password', function () {
@@ -104,11 +119,15 @@ describe('User Password Management', function () {
             'password_expires_at' => $expirationDate,
         ]);
 
+<<<<<<< HEAD
         expect(
             $this
                 ->user->fresh()
                 ->password_expires_at->toDateString(),
         )
+=======
+        expect($this->user->fresh()->password_expires_at->toDateString())
+>>>>>>> 079c9da7 (.)
             ->toBe($expirationDate->toDateString());
     });
 });
@@ -125,7 +144,13 @@ describe('User Remember Token', function () {
         $token = Str::random(60);
         $this->user->update(['remember_token' => $token]);
 
+<<<<<<< HEAD
         $user = User::where('email', $this->user->email)->where('remember_token', $token)->first();
+=======
+        $user = User::where('email', $this->user->email)
+            ->where('remember_token', $token)
+            ->first();
+>>>>>>> 079c9da7 (.)
 
         expect($user)->not->toBeNull();
         expect($user->id)->toBe($this->user->id);
@@ -265,8 +290,12 @@ describe('User Authentication Logging', function () {
     });
 
     it('can get latest authentication log', function () {
+<<<<<<< HEAD
         expect($this->user->latestAuthentication())
             ->toBeInstanceOf(\Illuminate\Database\Eloquent\Relations\HasOne::class);
+=======
+        expect($this->user->latestAuthentication())->toBeInstanceOf(\Illuminate\Database\Eloquent\Relations\HasOne::class);
+>>>>>>> 079c9da7 (.)
     });
 });
 
@@ -322,4 +351,8 @@ describe('User Two Factor Authentication', function () {
         // Should handle OTP requirement
         expect($user->is_otp)->toBe(true);
     });
+<<<<<<< HEAD
 });
+=======
+
+>>>>>>> 079c9da7 (.)

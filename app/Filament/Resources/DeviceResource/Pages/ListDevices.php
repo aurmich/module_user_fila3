@@ -21,6 +21,7 @@ class ListDevices extends XotBaseListRecords
     /**
      * @return array<string, \Filament\Tables\Columns\Column>
      */
+<<<<<<< HEAD
     #[\Override]
     public function getTableColumns(): array
     {
@@ -39,4 +40,44 @@ class ListDevices extends XotBaseListRecords
             'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
         ];
     }
+=======
+    public function getTableColumns(): array
+    {
+        return [
+            'uuid' => TextColumn::make('uuid')
+                ->searchable()
+                ->sortable(),
+            'mobile_id' => TextColumn::make('mobile_id')
+                ->searchable()
+                ->sortable(),
+            'device' => TextColumn::make('device')
+                ->searchable()
+                ->sortable(),
+            'platform' => TextColumn::make('platform')
+                ->searchable()
+                ->sortable(),
+            'browser' => TextColumn::make('browser')
+                ->searchable()
+                ->sortable(),
+            'version' => TextColumn::make('version')
+                ->searchable()
+                ->sortable(),
+            'is_robot' => IconColumn::make('is_robot')
+                ->boolean(),
+            'is_desktop' => IconColumn::make('is_desktop')
+                ->boolean(),
+            'is_mobile' => IconColumn::make('is_mobile')
+                ->boolean(),
+            'is_tablet' => IconColumn::make('is_tablet')
+                ->boolean(),
+            'is_phone' => IconColumn::make('is_phone')
+                ->boolean(),
+            'created_at' => TextColumn::make('created_at')
+                ->dateTime()
+                ->sortable(),
+        ];
+    }
+
+    
+>>>>>>> 079c9da7 (.)
 }

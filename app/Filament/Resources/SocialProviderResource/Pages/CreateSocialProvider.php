@@ -7,6 +7,11 @@ namespace Modules\User\Filament\Resources\SocialProviderResource\Pages;
 use Modules\User\Filament\Resources\SocialProviderResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 079c9da7 (.)
 class CreateSocialProvider extends \Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord
 {
     protected static string $resource = SocialProviderResource::class;

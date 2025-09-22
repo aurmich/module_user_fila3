@@ -44,6 +44,7 @@ class LogoutWidget extends XotBaseWidget
      *
      * @return array<string, \Filament\Forms\Components\Component>
      */
+<<<<<<< HEAD
     #[\Override]
     public function getFormSchema(): array
     {
@@ -54,6 +55,18 @@ class LogoutWidget extends XotBaseWidget
         }
         return [
             'logout_message' => View::make($view)->columnSpanFull(),
+=======
+    public function getFormSchema(): array
+    {
+        $view='filament.widgets.auth.logout-message';
+        //@phpstan-ignore-next-line
+        if(!view()->exists($view)){
+            throw new \Exception('View '.$view.' not found');
+        }
+        return [
+            'logout_message' => View::make($view)
+                ->columnSpanFull(),
+>>>>>>> 079c9da7 (.)
         ];
     }
 
@@ -62,7 +75,10 @@ class LogoutWidget extends XotBaseWidget
      *
      * @return array<\Filament\Actions\Action>
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 079c9da7 (.)
     public function getFormActions(): array
     {
         return [
@@ -107,7 +123,11 @@ class LogoutWidget extends XotBaseWidget
             ->color('danger')
             ->size('lg')
             ->extraAttributes(['class' => 'w-full justify-center'])
+<<<<<<< HEAD
             ->action($this->logout(...));
+=======
+            ->action(fn () => $this->logout());
+>>>>>>> 079c9da7 (.)
     }
 
     /**
@@ -189,8 +209,15 @@ class LogoutWidget extends XotBaseWidget
      */
     protected function redirectAfterLogout(): void
     {
+<<<<<<< HEAD
         redirect($this->getLocalizedHomeUrl())->with('success', __('user::auth.logout_success'))->send();
         exit();
+=======
+        redirect($this->getLocalizedHomeUrl())
+            ->with('success', __('user::auth.logout_success'))
+            ->send();
+        exit;
+>>>>>>> 079c9da7 (.)
     }
 
     /**
@@ -205,4 +232,8 @@ class LogoutWidget extends XotBaseWidget
             'description' => __('user::auth.logout_confirmation'),
         ];
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 079c9da7 (.)

@@ -14,11 +14,15 @@ class ListRoles extends XotBaseListRecords
 {
     protected static string $resource = RoleResource::class;
 
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 079c9da7 (.)
     public function getTableColumns(): array
     {
         return [
             'id' => TextColumn::make('id'),
+<<<<<<< HEAD
             'name' => TextColumn::make('name')->searchable()->sortable(),
             // Tables\Columns\TextColumn::make('role'),
             'guard_name' => TextColumn::make('guard_name')->searchable()->sortable(),
@@ -27,6 +31,21 @@ class ListRoles extends XotBaseListRecords
     }
 
     #[\Override]
+=======
+            'name' => TextColumn::make('name')
+                ->searchable()
+                ->sortable(),
+            // Tables\Columns\TextColumn::make('role'),
+            'guard_name' => TextColumn::make('guard_name')
+                ->searchable()
+                ->sortable(),
+            'team_id' => TextColumn::make('team.name')
+                ->searchable()
+                ->sortable(),
+        ];
+    }
+
+>>>>>>> 079c9da7 (.)
     public function getTableFilters(): array
     {
         return [

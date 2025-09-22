@@ -74,7 +74,11 @@ interface HasTeamsContract
     /**
      * Get the user's "personal" team.
      */
+<<<<<<< HEAD
     public function personalTeam(): null|TeamContract;
+=======
+    public function personalTeam(): ?TeamContract;
+>>>>>>> 079c9da7 (.)
 
     /**
      * Determine if the user owns the given team.
@@ -89,7 +93,11 @@ interface HasTeamsContract
     /**
      * Get the role that the user has on the team.
      */
+<<<<<<< HEAD
     public function teamRole(TeamContract $teamContract): null|Role;
+=======
+    public function teamRole(TeamContract $teamContract): ?Role;
+>>>>>>> 079c9da7 (.)
 
     /**
      * Determine if the user has the given role on the given team.

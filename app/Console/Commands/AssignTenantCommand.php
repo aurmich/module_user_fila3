@@ -32,7 +32,14 @@ class AssignTenantCommand extends Command
      *
      * @return void
      */
+<<<<<<< HEAD
     
+=======
+    public function __construct()
+    {
+        parent::__construct();
+    }
+>>>>>>> 079c9da7 (.)
 
     /**
      * Execute the console command.
@@ -47,28 +54,51 @@ class AssignTenantCommand extends Command
         $tenantClass = $xot->getTenantClass();
 
         /** @var array<int|string, string>|\Illuminate\Support\Collection<int|string, string> */
+<<<<<<< HEAD
         $opts = $tenantClass::all()->pluck('name', 'id')->toArray();
+=======
+        $opts = $tenantClass::all()
+            ->pluck('name', 'id')
+            ->toArray();
+>>>>>>> 079c9da7 (.)
 
         $rows = multiselect(
             label: 'What tenant',
             options: $opts,
             required: true,
             scroll: 10,
+<<<<<<< HEAD
         // validate: function (array $values) {
         //  return ! \in_array(\count($values), [1, 2], false)
         //    ? 'A maximum of two'
         //  : null;
         // }
+=======
+            // validate: function (array $values) {
+            //  return ! \in_array(\count($values), [1, 2], false)
+            //    ? 'A maximum of two'
+            //  : null;
+            // }
+>>>>>>> 079c9da7 (.)
         );
 
         $user->tenants()->sync($rows);
         /*
+<<<<<<< HEAD
          * foreach ($rows as $row) {
          * $role = Role::firstOrCreate(['name' => $row]);
          * $user->assignRole($role);
          * }
          */
         $this->info(implode(', ', $rows) . ' assigned to ' . $email);
+=======
+        foreach ($rows as $row) {
+            $role = Role::firstOrCreate(['name' => $row]);
+            $user->assignRole($role);
+        }
+        */
+        $this->info(implode(', ', $rows).' assigned to '.$email);
+>>>>>>> 079c9da7 (.)
     }
 
     /**

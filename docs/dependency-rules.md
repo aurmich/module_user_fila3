@@ -3,6 +3,7 @@
 ## Principle (MANDATORY)
 - Base modules MUST NOT depend on specific/domain modules.
 - Allowed dependencies for `Modules/User`: `Modules/Xot`, `Modules/UI`, other base/intermediate modules.
+<<<<<<< HEAD
 - Forbidden: any import from `Modules/`, `Modules/Patient`, `Modules/Doctor`, etc.
 
 ## Symptoms of violations
@@ -11,6 +12,8 @@
 
 ## Remediation options
 - Option A (move): Move feature-specific classes into the domain module (e.g., ``) and update namespaces.
+=======
+>>>>>>> 079c9da7 (.)
 - Forbidden: any import from `Modules/SaluteOra`, `Modules/Patient`, `Modules/Doctor`, etc.
 
 ## Symptoms of violations

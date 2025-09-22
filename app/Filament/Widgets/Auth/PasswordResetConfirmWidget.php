@@ -26,11 +26,19 @@ use Webmozart\Assert\Assert;
  */
 class PasswordResetConfirmWidget extends XotBaseWidget
 {
+<<<<<<< HEAD
     public null|array $data = [];
     public null|string $token = null;
     public null|string $email = null;
     public string $currentState = 'form'; // form, success, error, expired
     public null|string $errorMessage = null;
+=======
+    public ?array $data = [];
+    public ?string $token = null;
+    public ?string $email = null;
+    public string $currentState = 'form'; // form, success, error, expired
+    public ?string $errorMessage = null;
+>>>>>>> 079c9da7 (.)
 
     /**
      * @phpstan-ignore-next-line
@@ -40,7 +48,11 @@ class PasswordResetConfirmWidget extends XotBaseWidget
     /**
      * Mount the widget with token and optional email.
      */
+<<<<<<< HEAD
     public function mount(null|string $token = null, null|string $email = null): void
+=======
+    public function mount(?string $token = null, ?string $email = null): void
+>>>>>>> 079c9da7 (.)
     {
         $this->token = $token;
         $this->email = $email;
@@ -56,7 +68,10 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      *
      * @return array<string, mixed>
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 079c9da7 (.)
     public function getFormSchema(): array
     {
         return [
@@ -68,6 +83,10 @@ class PasswordResetConfirmWidget extends XotBaseWidget
                 ->disabled('form' !== $this->currentState)
                 ->extraInputAttributes(['class' => 'text-center'])
                 ->suffixIcon('heroicon-o-envelope'),
+<<<<<<< HEAD
+=======
+
+>>>>>>> 079c9da7 (.)
             'password' => Forms\Components\TextInput::make('password')
                 ->password()
                 ->required()
@@ -76,6 +95,10 @@ class PasswordResetConfirmWidget extends XotBaseWidget
                 ->disabled('form' !== $this->currentState)
                 ->extraInputAttributes(['class' => 'text-center'])
                 ->suffixIcon('heroicon-o-key'),
+<<<<<<< HEAD
+=======
+
+>>>>>>> 079c9da7 (.)
             'password_confirmation' => Forms\Components\TextInput::make('password_confirmation')
                 ->password()
                 ->required()
@@ -112,7 +135,11 @@ class PasswordResetConfirmWidget extends XotBaseWidget
                     $user->save();
 
                     event(new PasswordReset($user));
+<<<<<<< HEAD
                 },
+=======
+                }
+>>>>>>> 079c9da7 (.)
             );
 
             if (Password::PASSWORD_RESET === $response) {
@@ -127,14 +154,22 @@ class PasswordResetConfirmWidget extends XotBaseWidget
 
                 // Auto-login the user after successful password reset
                 // $user = \Modules\Xot\Datas\XotData::make()->getUserClass()::where('email', $data['email'])->first();
+<<<<<<< HEAD
                 Assert::string($email = $data['email'], __FILE__ . ':' . __LINE__ . ' - ' . class_basename(__CLASS__));
+=======
+                Assert::string($email = $data['email']);
+>>>>>>> 079c9da7 (.)
                 $user = \Modules\Xot\Datas\XotData::make()->getUserByEmail($email);
                 // if ($user) {
                 Auth::guard()->login($user);
                 // }
 
                 // Redirect after a short delay to show success message
+<<<<<<< HEAD
                 $this->js('setTimeout(() => { window.location.href = "' . route('login') . '"; }, 3000);');
+=======
+                $this->js('setTimeout(() => { window.location.href = "'.route('login').'"; }, 3000);');
+>>>>>>> 079c9da7 (.)
             } else {
                 /* @phpstan-ignore argument.type */
                 $this->handleResetError($response);
@@ -189,7 +224,11 @@ class PasswordResetConfirmWidget extends XotBaseWidget
     /**
      * Get the error message if any.
      */
+<<<<<<< HEAD
     public function getErrorMessage(): null|string
+=======
+    public function getErrorMessage(): ?string
+>>>>>>> 079c9da7 (.)
     {
         return $this->errorMessage;
     }
@@ -199,7 +238,11 @@ class PasswordResetConfirmWidget extends XotBaseWidget
      */
     public function shouldShowForm(): bool
     {
+<<<<<<< HEAD
         return in_array($this->currentState, ['form', 'loading'], strict: true);
+=======
+        return in_array($this->currentState, ['form', 'loading']);
+>>>>>>> 079c9da7 (.)
     }
 
     /**

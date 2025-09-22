@@ -10,7 +10,10 @@ namespace Modules\User\Http\Controllers\Socialite;
 
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Controller;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
+=======
+>>>>>>> 079c9da7 (.)
 use Illuminate\Support\Facades\Request;
 use Modules\User\Actions\Socialite\IsProviderConfiguredAction;
 use Modules\User\Actions\Socialite\IsRegistrationEnabledAction;
@@ -27,13 +30,21 @@ use Modules\User\Events\RegistrationNotEnabled;
 use Modules\User\Events\UserNotAllowed;
 use Modules\User\Exceptions\ProviderNotConfigured;
 use Modules\Xot\Datas\XotData;
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Facades\Auth;
+>>>>>>> 079c9da7 (.)
 
 class ProcessCallbackController extends Controller
 {
     /**
      * Undocumented function.
      */
+<<<<<<< HEAD
     public function __invoke(Request $_request, string $provider): RedirectResponse
+=======
+    public function __invoke(Request $request, string $provider): RedirectResponse
+>>>>>>> 079c9da7 (.)
     {
         // See if provider exists
         // if (! app(IsProviderConfiguredAction::class)->execute($provider)) {
@@ -48,7 +59,11 @@ class ProcessCallbackController extends Controller
         }
 
         // Verify if user is allowed
+<<<<<<< HEAD
         if (!app(IsUserAllowedAction::class)->execute($oauthUser)) {
+=======
+        if (! app(IsUserAllowedAction::class)->execute($oauthUser)) {
+>>>>>>> 079c9da7 (.)
             UserNotAllowed::dispatch($oauthUser);
 
             return app(RedirectToLoginAction::class)->execute('auth.user-not-allowed');
@@ -62,15 +77,28 @@ class ProcessCallbackController extends Controller
                 return app(RedirectToLoginAction::class)->execute('auth.user-not-allowed');
             }
             // Associate default roles to the existing "real" user, if needed
+<<<<<<< HEAD
             app(SetDefaultRolesBySocialiteUserAction::class, [
                 'provider' => $provider,
             ])->execute($socialiteUserObj, $oauthUser);
+=======
+            app(
+                SetDefaultRolesBySocialiteUserAction::class,
+                [
+                    'provider' => $provider,
+                ]
+            )->execute($socialiteUserObj, $oauthUser);
+>>>>>>> 079c9da7 (.)
 
             return app(LoginUserAction::class)->execute($socialiteUser);
         }
 
         // See if registration is allowed
+<<<<<<< HEAD
         if (!app(IsRegistrationEnabledAction::class)->execute()) {
+=======
+        if (! app(IsRegistrationEnabledAction::class)->execute()) {
+>>>>>>> 079c9da7 (.)
             RegistrationNotEnabled::dispatch($provider, $oauthUser);
 
             return app(RedirectToLoginAction::class)->execute('auth.registration-not-enabled');
@@ -99,7 +127,11 @@ class ProcessCallbackController extends Controller
         $authUser = Auth::user();
         if ($authUser !== null && method_exists($authUser, 'canAccessSocialite') && !$authUser->canAccessSocialite()) {
             return redirect()->route(
+<<<<<<< HEAD
                 optional(Auth::check()) ? 'filament.user.pages.dashboard' : 'filament.user.auth.login',
+=======
+                optional(Auth::check()) ? 'filament.user.pages.dashboard' : 'filament.user.auth.login'
+>>>>>>> 079c9da7 (.)
             );
         }
 

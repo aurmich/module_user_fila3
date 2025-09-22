@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 079c9da7 (.)
 @props([
     'level' => 'success',
 ])
@@ -26,7 +29,10 @@ declare(strict_types=1);
     {{-- Action Button --}}
     @isset($actionText)
         <?php
+<<<<<<< HEAD
 
+=======
+>>>>>>> 079c9da7 (.)
         // @phpstan-ignore variable.undefined
         $color = match ($level) {
             'success', 'error' => $level,
