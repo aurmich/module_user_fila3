@@ -5,10 +5,16 @@ declare(strict_types=1);
 namespace Modules\User\Models\Policies;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\User\Models\Extra;
 use Modules\Xot\Contracts\UserContract;
 =======
+=======
+>>>>>>> 10cce5c4 (.)
 use Modules\User\Contracts\UserContract;
+=======
+use Modules\Xot\Contracts\UserContract;
+>>>>>>> e5f94125 (.)
 use Modules\User\Models\Extra;
 >>>>>>> 079c9da7 (.)
 
@@ -32,7 +38,11 @@ class ExtraPolicy extends UserBasePolicy
 =======
     public function view(UserContract $user, Extra $extra): bool
     {
+<<<<<<< HEAD
         return $user->id === $extra->user_id ||
+=======
+        return $user->hasPermissionTo('extra.view') || 
+>>>>>>> e5f94125 (.)
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }
@@ -55,7 +65,11 @@ class ExtraPolicy extends UserBasePolicy
 =======
     public function update(UserContract $user, Extra $extra): bool
     {
+<<<<<<< HEAD
         return $user->id === $extra->user_id ||
+=======
+        return $user->hasPermissionTo('extra.update') || 
+>>>>>>> e5f94125 (.)
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }
@@ -70,7 +84,11 @@ class ExtraPolicy extends UserBasePolicy
 =======
     public function delete(UserContract $user, Extra $extra): bool
     {
+<<<<<<< HEAD
         return $user->id === $extra->user_id ||
+=======
+        return $user->hasPermissionTo('extra.delete') || 
+>>>>>>> e5f94125 (.)
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }
@@ -85,8 +103,16 @@ class ExtraPolicy extends UserBasePolicy
 =======
     public function restore(UserContract $user, Extra $extra): bool
     {
+<<<<<<< HEAD
         return $user->hasRole('super-admin');
+<<<<<<< HEAD
 >>>>>>> 079c9da7 (.)
+=======
+=======
+        return $user->hasPermissionTo('extra.restore') || 
+               $user->hasRole('super-admin');
+>>>>>>> e5f94125 (.)
+>>>>>>> 10cce5c4 (.)
     }
 
     /**
@@ -95,9 +121,18 @@ class ExtraPolicy extends UserBasePolicy
     public function forceDelete(UserContract $user, Extra $extra): bool
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $user->hasPermissionTo('extra.force-delete') || $user->hasRole('super-admin');
 =======
+=======
+>>>>>>> 10cce5c4 (.)
         return $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }
 }
+=======
+        return $user->hasPermissionTo('extra.force-delete') || 
+               $user->hasRole('super-admin');
+    }
+}
+>>>>>>> e5f94125 (.)

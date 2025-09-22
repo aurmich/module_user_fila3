@@ -5,10 +5,16 @@ declare(strict_types=1);
 namespace Modules\User\Models\Policies;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\User\Models\ModelHasRole;
 use Modules\Xot\Contracts\UserContract;
 =======
+=======
+>>>>>>> 10cce5c4 (.)
 use Modules\User\Contracts\UserContract;
+=======
+use Modules\Xot\Contracts\UserContract;
+>>>>>>> e5f94125 (.)
 use Modules\User\Models\ModelHasRole;
 >>>>>>> 079c9da7 (.)
 
@@ -32,8 +38,16 @@ class ModelHasRolePolicy extends UserBasePolicy
 =======
     public function view(UserContract $user, ModelHasRole $modelHasRole): bool
     {
+<<<<<<< HEAD
         return $user->hasRole('super-admin');
+<<<<<<< HEAD
 >>>>>>> 079c9da7 (.)
+=======
+=======
+        return $user->hasPermissionTo('model-has-role.view') || 
+               $user->hasRole('super-admin');
+>>>>>>> e5f94125 (.)
+>>>>>>> 10cce5c4 (.)
     }
 
     /**
@@ -54,8 +68,16 @@ class ModelHasRolePolicy extends UserBasePolicy
 =======
     public function update(UserContract $user, ModelHasRole $modelHasRole): bool
     {
+<<<<<<< HEAD
         return $user->hasRole('super-admin');
+<<<<<<< HEAD
 >>>>>>> 079c9da7 (.)
+=======
+=======
+        return $user->hasPermissionTo('model-has-role.update') || 
+               $user->hasRole('super-admin');
+>>>>>>> e5f94125 (.)
+>>>>>>> 10cce5c4 (.)
     }
 
     /**
@@ -68,8 +90,16 @@ class ModelHasRolePolicy extends UserBasePolicy
 =======
     public function delete(UserContract $user, ModelHasRole $modelHasRole): bool
     {
+<<<<<<< HEAD
         return $user->hasRole('super-admin');
+<<<<<<< HEAD
 >>>>>>> 079c9da7 (.)
+=======
+=======
+        return $user->hasPermissionTo('model-has-role.delete') || 
+               $user->hasRole('super-admin');
+>>>>>>> e5f94125 (.)
+>>>>>>> 10cce5c4 (.)
     }
 
     /**
@@ -82,8 +112,16 @@ class ModelHasRolePolicy extends UserBasePolicy
 =======
     public function restore(UserContract $user, ModelHasRole $modelHasRole): bool
     {
+<<<<<<< HEAD
         return $user->hasRole('super-admin');
+<<<<<<< HEAD
 >>>>>>> 079c9da7 (.)
+=======
+=======
+        return $user->hasPermissionTo('model-has-role.restore') || 
+               $user->hasRole('super-admin');
+>>>>>>> e5f94125 (.)
+>>>>>>> 10cce5c4 (.)
     }
 
     /**
@@ -92,9 +130,18 @@ class ModelHasRolePolicy extends UserBasePolicy
     public function forceDelete(UserContract $user, ModelHasRole $modelHasRole): bool
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $user->hasPermissionTo('model-has-role.force-delete') || $user->hasRole('super-admin');
 =======
+=======
+>>>>>>> 10cce5c4 (.)
         return $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }
 }
+=======
+        return $user->hasPermissionTo('model-has-role.force-delete') || 
+               $user->hasRole('super-admin');
+    }
+}
+>>>>>>> e5f94125 (.)

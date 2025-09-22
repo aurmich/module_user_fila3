@@ -5,11 +5,19 @@ declare(strict_types=1);
 namespace Modules\User\Models\Policies;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\User\Models\AuthenticationLog;
 use Modules\Xot\Contracts\UserContract;
 =======
 
 >>>>>>> 079c9da7 (.)
+=======
+
+=======
+use Modules\Xot\Contracts\UserContract;
+use Modules\User\Models\AuthenticationLog;
+>>>>>>> e5f94125 (.)
+>>>>>>> 10cce5c4 (.)
 
 class AuthenticationLogPolicy extends UserBasePolicy
 {
@@ -27,13 +35,19 @@ class AuthenticationLogPolicy extends UserBasePolicy
     public function view(UserContract $user, AuthenticationLog $authenticationLog): bool
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return (
             $user->hasPermissionTo('authentication-log.view') ||
             $user->id === $authenticationLog->authenticatable_id ||
             $user->hasRole('super-admin')
         );
 =======
+=======
+>>>>>>> 10cce5c4 (.)
 
+=======
+        return $user->hasPermissionTo('authentication-log.view') || 
+>>>>>>> e5f94125 (.)
                $user->id === $authenticationLog->authenticatable_id ||
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
@@ -57,7 +71,11 @@ class AuthenticationLogPolicy extends UserBasePolicy
 =======
     public function update(UserContract $user, AuthenticationLog $authenticationLog): bool
     {
+<<<<<<< HEAD
 
+=======
+        return $user->hasPermissionTo('authentication-log.update') || 
+>>>>>>> e5f94125 (.)
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }
@@ -72,7 +90,11 @@ class AuthenticationLogPolicy extends UserBasePolicy
 =======
     public function delete(UserContract $user, AuthenticationLog $authenticationLog): bool
     {
+<<<<<<< HEAD
 
+=======
+        return $user->hasPermissionTo('authentication-log.delete') || 
+>>>>>>> e5f94125 (.)
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }
@@ -87,7 +109,11 @@ class AuthenticationLogPolicy extends UserBasePolicy
 =======
     public function restore(UserContract $user, AuthenticationLog $authenticationLog): bool
     {
+<<<<<<< HEAD
 
+=======
+        return $user->hasPermissionTo('authentication-log.restore') || 
+>>>>>>> e5f94125 (.)
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }
@@ -98,9 +124,15 @@ class AuthenticationLogPolicy extends UserBasePolicy
     public function forceDelete(UserContract $user, AuthenticationLog $authenticationLog): bool
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $user->hasPermissionTo('authentication-log.force-delete') || $user->hasRole('super-admin');
 =======
+=======
+>>>>>>> 10cce5c4 (.)
 
+=======
+        return $user->hasPermissionTo('authentication-log.force-delete') || 
+>>>>>>> e5f94125 (.)
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Modulo User
 
 ## Introduzione
@@ -248,14 +249,17 @@ Il modulo User fornisce funzionalità di autenticazione e autorizzazione attrave
 - Sistema ruoli e permessi
 - Profili utente personalizzabili
 - Interfaccia Filament
+=======
+# Modulo User - Sistema di Gestione Utenti e Autenticazione
+>>>>>>> e5f94125 (.)
 
 ## Panoramica
-Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli utenti nell'applicazione. È strettamente integrato con altri moduli come Xot, Lang, e Notify.
 
-### Versione HEAD
+Il modulo User gestisce l'autenticazione, autorizzazione e gestione degli utenti per l'applicazione Laraxot PTVX. Fornisce un sistema completo di gestione utenti con supporto per ruoli, permessi, team e tenant, integrato con Filament per l'amministrazione.
 
-## Collegamenti Principali
+## Caratteristiche Principali
 
+<<<<<<< HEAD
 ### Documentazione Core
 - [Architettura del Modulo](structure.md)
 - [Configurazione Passport](passport.md)
@@ -328,172 +332,777 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli u
 - [PHPStan Fixes](./phpstan_fixes.md)
 - [PHPStan Level 9](./PHPSTAN_LEVEL9_FIXES.md)
 - [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md)
+=======
+- **Gestione Utenti**: CRUD completo per utenti e profili
+- **Sistema Ruoli**: Gestione ruoli e permessi con Spatie Laravel Permission
+- **Gestione Team**: Supporto per team e organizzazioni
+- **Multi-Tenant**: Supporto per applicazioni multi-tenant
+- **Autenticazione**: Sistema di autenticazione robusto e sicuro
+- **Integrazione Filament**: Interfacce amministrative complete
+>>>>>>> e5f94125 (.)
 
 ## Struttura del Modulo
-
-## Regola fondamentale sulle migration
-
-> **Tutte le migration che riguardano tabelle, colonne o relazioni di un modulo devono essere SEMPRE nella cartella `database/migrations` del modulo stesso (es: `Modules/User/database/migrations/`).**
-> Mettere migration in `laravel/database/migrations` è un errore grave che rompe la modularità, il rollback e la chiarezza del progetto.
-> Vedi dettagli e motivazione in [PATH_CONVENTIONS.md](./PATH_CONVENTIONS.md).
 
 ```
 Modules/User/
 ├── app/
-│   ├── Models/
-│   │   ├── User.php
-│   │   ├── OauthAccessToken.php
-│   │   ├── OauthAuthCode.php
-│   │   ├── OauthClient.php
-│   │   ├── OauthPersonalAccessClient.php
-│   │   └── OauthRefreshToken.php
-│   ├── Providers/
-│   │   ├── Traits/
-│   │   │   ├── HasPassportConfiguration.php
-│   │   │   └── HasSocialiteConfiguration.php
-│   │   ├── UserServiceProvider.php
-│   │   ├── EventServiceProvider.php
-│   │   ├── RouteServiceProvider.php
-│   │   └── Filament/
-│   │       └── AdminPanelProvider.php
 │   ├── Filament/
 │   │   ├── Resources/
-│   │   │   └── UserResource.php
-│   │   ├── Widgets/
-│   │   │   ├── Auth/
-│   │   │   │   ├── LoginWidget.php
-
-│   │   │   │   └── SocialLoginWidget.php
-│   │   │   └── User/
-│   │   │       ├── UserStatsWidget.php
-│   │   │       └── UserActivityWidget.php
+│   │   │   ├── UserResource.php
+│   │   │   ├── RoleResource.php
+│   │   │   ├── PermissionResource.php
+│   │   │   └── TeamResource.php
 │   │   └── Pages/
-│   │       └── Auth/
-│   │           ├── LoginPage.php
-│   │           └── RegisterPage.php
-│   └── Http/
-│       └── Controllers/
-│           └── Auth/
+│   │       └── Profile.php
+│   ├── Models/
+│   │   ├── User.php
+│   │   ├── Role.php
+│   │   ├── Permission.php
+│   │   ├── Team.php
+│   │   └── Profile.php
+│   ├── Traits/
+│   │   ├── HasRoles.php
+│   │   ├── HasTeams.php
+│   │   └── HasTenants.php
+│   └── Providers/
+│       └── UserServiceProvider.php
 ├── config/
-│   └── auth.php
 ├── database/
-│   └── migrations/
-└── resources/
-    └── views/
-        └── pages/
-            └── auth/
+├── docs/
+├── lang/
+├── resources/
+└── tests/
 ```
 
-## Dipendenze Principali
+## Componenti Principali
 
-### Moduli
-- **Xot**: Fornisce le classi base e l'infrastruttura core
-- **Lang**: Gestione delle traduzioni
-- **Notify**: Sistema di notifiche
-- **UI**: Componenti di interfaccia utente
+### User Model
 
-### Pacchetti
-- Laravel Passport
-- Laravel Socialite
-- Spatie Permission
-- Filament
+Modello principale per la gestione degli utenti:
 
-## Best Practices
-
-### 1. Estensione delle Classi
 ```php
-// ❌ NON FARE QUESTO
-use Filament\Widgets\Widget;
-class LoginForm extends Widget { ... }
-
-// ✅ FARE QUESTO
-use Modules\Xot\Filament\Widgets\XotBaseWidget;
-class LoginWidget extends XotBaseWidget { ... }
-```
-
-### 2. Gestione delle Traduzioni
-```php
-// ❌ NON FARE QUESTO
-->label('Sorgente')
-
-// ✅ FARE QUESTO
-->label(['label' => 'Sorgente'])
-```
-
-### 3. Configurazione dei Provider
-```php
-// In Modules/User/app/Providers/UserServiceProvider.php
-use Modules\User\Providers\Traits\HasPassportConfiguration;
-
-class UserServiceProvider extends XotBaseServiceProvider
+class User extends Authenticatable
 {
-    use HasPassportConfiguration;
+    use HasApiTokens, HasFactory, Notifiable, HasRoles, HasTeams, HasTenants;
 
-    public function boot(): void
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'email_verified_at',
+        'is_active',
+        'preferred_locale',
+    ];
+
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+        'is_active' => 'boolean',
+        'password' => 'hashed',
+    ];
+
+    public function profile()
     {
-        $this->configurePassport();
+        return $this->hasOne(Profile::class);
     }
+
+    public function teams()
+    {
+        return $this->belongsToMany(Team::class, 'team_user')
+                    ->withPivot('role')
+                    ->withTimestamps();
+    }
+}
+```
+
+### Role e Permission Models
+
+Gestione ruoli e permessi con Spatie:
+
+```php
+class Role extends \Spatie\Permission\Models\Role
+{
+    protected $fillable = [
+        'name',
+        'guard_name',
+        'display_name',
+        'description',
+        'is_system',
+    ];
+
+    protected $casts = [
+        'is_system' => 'boolean',
+    ];
+
+    public function permissions()
+    {
+        return $this->belongsToMany(Permission::class, 'role_has_permissions');
+    }
+}
+
+class Permission extends \Spatie\Permission\Models\Permission
+{
+    protected $fillable = [
+        'name',
+        'guard_name',
+        'display_name',
+        'description',
+        'module',
+    ];
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class, 'role_has_permissions');
+    }
+}
+```
+
+### Team Model
+
+Gestione team e organizzazioni:
+
+```php
+class Team extends Model
+{
+    protected $fillable = [
+        'name',
+        'slug',
+        'description',
+        'is_personal',
+        'is_active',
+        'owner_id',
+    ];
+
+    protected $casts = [
+        'is_personal' => 'boolean',
+        'is_active' => 'boolean',
+    ];
+
+    public function owner()
+    {
+        return $this->belongsTo(User::class, 'owner_id');
+    }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'team_user')
+                    ->withPivot('role')
+                    ->withTimestamps();
+    }
+}
+```
+
+## Traits e Funzionalità
+
+### HasRoles Trait
+
+Gestione ruoli e permessi:
+
+```php
+trait HasRoles
+{
+    use \Spatie\Permission\Traits\HasRoles;
+
+    public function hasPermissionTo($permission): bool
+    {
+        if (is_string($permission)) {
+            $permission = app(Permission::class)->findByName($permission);
+        }
+
+        return $this->hasDirectPermission($permission) ||
+               $this->hasPermissionViaRole($permission);
+    }
+
+    public function hasAnyRole($roles): bool
+    {
+        if (is_string($roles)) {
+            return $this->hasRole($roles);
+        }
+
+        if (is_array($roles)) {
+            return $this->hasAnyRole($roles);
+        }
+
+        return $roles->contains($this);
+    }
+}
+```
+
+### HasTeams Trait
+
+Gestione team e organizzazioni:
+
+```php
+trait HasTeams
+{
+    public function teams()
+    {
+        return $this->belongsToMany(Team::class, 'team_user')
+                    ->withPivot('role')
+                    ->withTimestamps();
+    }
+
+    public function belongsToTeam(Team|int $team): bool
+    {
+        $teamId = $team instanceof Team ? $team->id : $team;
+        
+        return $this->teams()->where('team_id', $teamId)->exists();
+    }
+
+    public function getCurrentTeam(): ?Team
+    {
+        return $this->teams()->where('id', session('current_team_id'))->first();
+    }
+}
+```
+
+### HasTenants Trait
+
+Supporto multi-tenant:
+
+```php
+trait HasTenants
+{
+    public function tenants()
+    {
+        return $this->belongsToMany(Tenant::class, 'tenant_user')
+                    ->withPivot('role')
+                    ->withTimestamps();
+    }
+
+    public function scopeBelongsToTenant(Builder $query, Tenant|int $tenant): Builder
+    {
+        $tenantId = $tenant instanceof Tenant ? $tenant->id : $tenant;
+        
+        return $query->whereHas('tenants', function (Builder $query) use ($tenantId): void {
+            $query->where('tenant_id', $tenantId);
+        });
+    }
+}
+```
+
+## Configurazione
+
+### Configurazione Base
+
+```php
+// config/auth.php
+return [
+    'defaults' => [
+        'guard' => 'web',
+        'passwords' => 'users',
+    ],
+
+    'guards' => [
+        'web' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+        'api' => [
+            'driver' => 'sanctum',
+            'provider' => 'users',
+        ],
+    ],
+
+    'providers' => [
+        'users' => [
+            'driver' => 'eloquent',
+            'model' => \Modules\User\Models\User::class,
+        ],
+    ],
+];
+```
+
+### Configurazione Ruoli
+
+```php
+// config/permission.php
+return [
+    'models' => [
+        'permission' => \Modules\User\Models\Permission::class,
+        'role' => \Modules\User\Models\Role::class,
+    ],
+
+    'table_names' => [
+        'roles' => 'roles',
+        'permissions' => 'permissions',
+        'model_has_permissions' => 'model_has_permissions',
+        'model_has_roles' => 'model_has_roles',
+        'role_has_permissions' => 'role_has_permissions',
+    ],
+];
+```
+
+### Environment Variables
+
+```env
+# Autenticazione
+AUTH_DRIVER=session
+AUTH_PROVIDER=users
+AUTH_PASSWORD_TIMEOUT=10800
+
+# Team e Tenant
+TEAM_ENABLED=true
+TENANT_ENABLED=true
+TENANT_DEFAULT=main
+
+# Sicurezza
+PASSWORD_TIMEOUT=10800
+SESSION_LIFETIME=120
+SESSION_SECURE_COOKIE=true
+```
+
+## Utilizzo
+
+### Gestione Utenti
+
+```php
+// Creazione utente
+$user = User::create([
+    'name' => 'Mario Rossi',
+    'email' => 'mario@example.com',
+    'password' => Hash::make('password'),
+]);
+
+// Assegnazione ruoli
+$user->assignRole('admin');
+
+// Verifica permessi
+if ($user->can('edit-users')) {
+    // Logica per modificare utenti
+}
+
+// Verifica ruoli
+if ($user->hasRole('manager')) {
+    // Logica per manager
+}
+```
+
+### Gestione Team
+
+```php
+// Creazione team
+$team = Team::create([
+    'name' => 'Team Sviluppo',
+    'description' => 'Team per lo sviluppo software',
+    'owner_id' => $user->id,
+]);
+
+// Aggiunta utente al team
+$team->users()->attach($user->id, ['role' => 'member']);
+
+// Verifica appartenenza
+if ($user->belongsToTeam($team)) {
+    // Logica per membri del team
+}
+```
+
+### Gestione Permessi
+
+```php
+// Creazione permesso
+$permission = Permission::create([
+    'name' => 'edit-users',
+    'display_name' => 'Modifica Utenti',
+    'description' => 'Permette di modificare gli utenti',
+    'module' => 'user',
+]);
+
+// Assegnazione permesso al ruolo
+$role = Role::findByName('admin');
+$role->givePermissionTo($permission);
+
+// Verifica permesso
+if ($user->hasPermissionTo('edit-users')) {
+    // Logica per modificare utenti
+}
+```
+
+## Integrazione Filament
+
+### UserResource
+
+Gestione utenti nell'interfaccia Filament:
+
+```php
+class UserResource extends XotBaseResource
+{
+    protected static ?string $model = User::class;
+    protected static ?string $navigationIcon = 'heroicon-o-users';
+    protected static ?string $navigationGroup = 'Gestione Utenti';
+
+    public static function getFormSchema(): array
+    {
+        return [
+            Forms\Components\Section::make('Informazioni Base')
+                ->schema([
+                    Forms\Components\TextInput::make('name')
+                        ->required()
+                        ->maxLength(255),
+                    Forms\Components\TextInput::make('email')
+                        ->email()
+                        ->required()
+                        ->maxLength(255)
+                        ->unique(ignoreRecord: true),
+                    Forms\Components\TextInput::make('password')
+                        ->password()
+                        ->required(fn (string $context): bool => $context === 'create')
+                        ->minLength(8),
+                ]),
+
+            Forms\Components\Section::make('Ruoli e Permessi')
+                ->schema([
+                    Forms\Components\Select::make('roles')
+                        ->multiple()
+                        ->relationship('roles', 'display_name')
+                        ->preload(),
+                ]),
+        ];
+    }
+
+    public static function getTableColumns(): array
+    {
+        return [
+            Tables\Columns\TextColumn::make('name')
+                ->searchable()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('email')
+                ->searchable()
+                ->sortable(),
+            Tables\Columns\IconColumn::make('is_active')
+                ->boolean()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('created_at')
+                ->dateTime()
+                ->sortable()
+                ->toggleable(isToggledHiddenByDefault: true),
+        ];
+    }
+}
+```
+
+### TeamResource
+
+Gestione team nell'interfaccia Filament:
+
+```php
+class TeamResource extends XotBaseResource
+{
+    protected static ?string $model = Team::class;
+    protected static ?string $navigationIcon = 'heroicon-o-user-group';
+    protected static ?string $navigationGroup = 'Gestione Utenti';
+
+    public static function getFormSchema(): array
+    {
+        return [
+            Forms\Components\TextInput::make('name')
+                ->required()
+                ->maxLength(255),
+            Forms\Components\TextInput::make('slug')
+                ->required()
+                ->maxLength(255)
+                ->unique(ignoreRecord: true),
+            Forms\Components\Textarea::make('description')
+                ->maxLength(65535)
+                ->columnSpanFull(),
+            Forms\Components\Toggle::make('is_active')
+                ->required(),
+        ];
+    }
+}
+```
+
+## Sicurezza
+
+### Autenticazione
+
+```php
+// Middleware di autenticazione
+Route::middleware(['auth'])->group(function () {
+    Route::get('/profile', [ProfileController::class, 'show']);
+    Route::put('/profile', [ProfileController::class, 'update']);
+});
+
+// Verifica autenticazione
+if (auth()->check()) {
+    $user = auth()->user();
+    // Logica per utenti autenticati
+}
+```
+
+### Autorizzazione
+
+```php
+// Verifica permessi
+if (auth()->user()->can('delete-users')) {
+    // Logica per eliminare utenti
+}
+
+// Verifica ruoli
+if (auth()->user()->hasRole('admin')) {
+    // Logica per amministratori
+}
+
+// Policy personalizzate
+if (auth()->user()->can('update', $user)) {
+    // Logica per aggiornare utente specifico
+}
+```
+
+### Rate Limiting
+
+```php
+// Rate limiting per login
+Route::post('/login', [AuthController::class, 'login'])
+    ->middleware('throttle:5,1');
+
+// Rate limiting per registrazione
+Route::post('/register', [AuthController::class, 'register'])
+    ->middleware('throttle:3,1');
+```
+
+## Testing
+
+### Test Unitari
+
+```php
+// Test creazione utente
+it('creates user with valid data', function () {
+    $userData = [
+        'name' => 'Test User',
+        'email' => 'test@example.com',
+        'password' => 'password123',
+    ];
+
+    $user = User::create($userData);
+
+    expect($user->name)->toBe('Test User');
+    expect($user->email)->toBe('test@example.com');
+    expect(Hash::check('password123', $user->password))->toBeTrue();
+});
+
+// Test assegnazione ruoli
+it('assigns role to user', function () {
+    $user = User::factory()->create();
+    $role = Role::create(['name' => 'test-role']);
+
+    $user->assignRole($role);
+
+    expect($user->hasRole('test-role'))->toBeTrue();
+});
+```
+
+### Test Feature
+
+```php
+// Test autenticazione
+it('authenticates user with valid credentials', function () {
+    $user = User::factory()->create([
+        'password' => Hash::make('password123'),
+    ]);
+
+    $response = $this->post('/login', [
+        'email' => $user->email,
+        'password' => 'password123',
+    ]);
+
+    $response->assertRedirect('/dashboard');
+    $this->assertAuthenticated();
+});
+
+// Test autorizzazione
+it('denies access to unauthorized users', function () {
+    $user = User::factory()->create();
+    $this->actingAs($user);
+
+    $response = $this->get('/admin/users');
+
+    $response->assertForbidden();
+});
+```
+
+### Test di Copertura
+
+```bash
+# Test unitari
+php artisan test Modules/User/tests/Unit
+
+# Test feature
+php artisan test Modules/User/tests/Feature
+
+# Test Pest
+./vendor/bin/pest Modules/User/tests
+```
+
+## Performance
+
+### Ottimizzazioni
+
+1. **Eager Loading**: Carica relazioni quando necessario
+2. **Caching**: Cache per ruoli e permessi
+3. **Indici Database**: Indici ottimizzati per query frequenti
+4. **Lazy Loading**: Carica componenti solo quando necessario
+
+### Query Optimization
+
+```php
+// Eager loading per evitare N+1
+$users = User::with(['roles', 'permissions', 'teams'])->get();
+
+// Query ottimizzate per ruoli
+$adminUsers = User::whereHas('roles', function ($query) {
+    $query->where('name', 'admin');
+})->get();
+
+// Cache per permessi
+$permissions = Cache::remember('user_permissions_' . $userId, 3600, function () use ($userId) {
+    return User::find($userId)->getAllPermissions();
+});
+```
+
+## Monitoraggio e Logging
+
+### Log Autenticazione
+
+```php
+// Log tentativi di login
+Log::info('User login attempt', [
+    'email' => $request->email,
+    'ip' => $request->ip(),
+    'user_agent' => $request->userAgent(),
+]);
+
+// Log cambiamenti ruoli
+Log::info('User role changed', [
+    'user_id' => $user->id,
+    'old_roles' => $oldRoles,
+    'new_roles' => $newRoles,
+    'changed_by' => auth()->id(),
+]);
+```
+
+### Metriche
+
+- Numero utenti attivi
+- Tentativi di login falliti
+- Cambiamenti ruoli e permessi
+- Performance query utenti
+
+## Troubleshooting
+
+### Problemi Comuni
+
+1. **Utenti Non Autenticati**
+   - Verificare middleware auth
+   - Controllare configurazione session
+   - Verificare database connection
+
+2. **Permessi Non Funzionanti**
+   - Controllare cache permessi
+   - Verificare assegnazione ruoli
+   - Controllare guard configuration
+
+3. **Team Non Visualizzati**
+   - Verificare relazioni database
+   - Controllare pivot table
+   - Verificare middleware team
+
+### Debug
+
+```php
+// Debug autenticazione
+config(['auth.debug' => true]);
+
+// Debug permessi
+Log::debug('User permissions', [
+    'user_id' => $user->id,
+    'roles' => $user->roles->pluck('name'),
+    'permissions' => $user->getAllPermissions()->pluck('name'),
+]);
+
+// Verifica configurazione
+dd(config('auth'), config('permission'));
+```
+
+## Integrazione con Altri Moduli
+
+### Registrazione Modulo
+
+```php
+// Nel ServiceProvider del modulo
+public function boot(): void
+{
+    parent::boot();
+    
+    // Registra policy
+    Gate::policy(User::class, UserPolicy::class);
+    
+    // Registra middleware
+    Route::pushMiddlewareToGroup('web', CheckTeamAccess::class);
+}
+```
+
+### Utilizzo Cross-Module
+
+```php
+// In qualsiasi modulo
+if (auth()->user()->can('manage-users')) {
+    // Logica per gestire utenti
+}
+
+// Verifica team
+if (auth()->user()->belongsToTeam($team)) {
+    // Logica per membri del team
 }
 ```
 
 ## Roadmap
 
-### Prossime Feature
-1. Miglioramento della gestione dei token OAuth
-2. Integrazione con nuovi provider social
-3. Ottimizzazione delle performance
+### Funzionalità Future
 
-### Miglioramenti Pianificati
-1. Refactoring del sistema di autenticazione
-2. Miglioramento della gestione dei profili
-3. Ottimizzazione delle query
+- [ ] Autenticazione a due fattori
+- [ ] Social login (Google, Facebook, etc.)
+- [ ] Gestione sessioni avanzata
+- [ ] Audit trail completo
+- [ ] Integrazione LDAP/Active Directory
+- [ ] Sistema di notifiche avanzato
 
-## Contribuire
+### Miglioramenti
 
-### Setup Sviluppo
-1. Clona il repository
-2. Installa le dipendenze
-3. Configura l'ambiente
-4. Esegui i test
+- [ ] Performance optimization
+- [ ] Advanced caching
+- [ ] Real-time updates
+- [ ] Analytics avanzate
+- [ ] API REST completa
 
-### Convenzioni di Codice
-- Seguire PSR-12
-- Utilizzare type hints
-- Documentare il codice
-- Scrivere test unitari
+## Contributi
 
-### Processo di Pull Request
-1. Crea un branch feature
-2. Implementa le modifiche
-3. Aggiungi i test
-4. Aggiorna la documentazione
-5. Crea la PR
+### Sviluppo
 
-## Troubleshooting
+1. Fork del repository
+2. Creazione branch feature
+3. Implementazione funzionalità
+4. Test completi
+5. Pull request con documentazione
 
-### Problemi Comuni
-1. Conflitti di autenticazione
-2. Problemi di performance
-3. Errori di configurazione
+### Standard di Codice
 
-### Soluzioni
-1. Verifica la configurazione
-2. Controlla i log
-3. Consulta la documentazione
+- PSR-12 coding standards
+- PHPStan livello 9+
+- Test coverage >90%
+- Documentazione PHPDoc completa
 
-## Riferimenti
+## Licenza
 
-### Documentazione
-- [Laravel Passport](https://laravel.com/docs/12.x/passport)
-- [Laravel Socialite](https://laravel.com/docs/12.x/socialite)
-- [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel)
-- [Filament](https://filamentphp.com/docs)
+Questo modulo è rilasciato sotto la licenza MIT. Vedi il file LICENSE per i dettagli.
 
-### Collegamenti Interni
-- [Xot Base Classes](../Xot/docs/base-classes.md)
-- [Lang Integration](../Lang/docs/lang-link.md)
-- [Notify Setup](../Notify/docs/README.md)
+## Supporto
 
+<<<<<<< HEAD
 ## Changelog
 
 ### [1.0.0] - 2024-03-20
@@ -602,60 +1211,42 @@ class UserServiceProvider extends XotBaseServiceProvider
 * [README.md](../../../Cms/docs/components/README.md)
 * [README.md](../../../../Themes/Two/docs/README.md)
 * [README.md](../../../../Themes/One/docs/README.md)
+=======
+Per supporto tecnico o domande:
+>>>>>>> e5f94125 (.)
 
+- **Issues**: GitHub Issues
+- **Documentazione**: Questa documentazione
+- **Wiki**: Wiki del progetto
+- **Chat**: Canale Slack/Teams
 
 ---
 
-## Moderazione Utente Generica dal Modulo User
+*Ultimo aggiornamento: {{ date('Y-m-d') }}*
 
-### Premessa e Neutralità
-In questo modulo, la gestione della moderazione non deve mai fare riferimento a ruoli o tipi specifici (es. "dentista", "paziente"). Tutti i tipi di utente sono rappresentati come varianti (type/parental) del modello User, secondo il pattern Single Table Inheritance (STI) o Parental, utilizzando SEMPRE la colonna `type` (vedi [tighten/parental](https://github.com/tighten/parental)). Questo garantisce la massima riusabilità del modulo User in qualsiasi progetto.
+## Risoluzione Conflitti Git
 
-### Architettura proposta
-- **Model**: User è la base, ogni tipo di utente (es. admin, operator, specialist, ...), è un parental/type di User. La colonna di discriminazione è SEMPRE `type`.
-- **Enum/ModelStates**: Lo stato di moderazione è gestito tramite enum o Spatie Model States, utilizzando SEMPRE la colonna `state` (vedi [spatie/laravel-model-states](https://spatie.be/docs/laravel-model-states/v2/working-with-states)), con valori come `pending`, `approved`, `rejected`, applicabile a qualunque tipo di utente.
-- **Action**: Azioni queueable (spatie/laravel-queueable-action) per approve/reject, generiche e parametrizzate sul tipo di utente.
-- **Notifiche**: Notifiche di stato centralizzate, con template e destinatari dinamici in base al type.
-- **UI**: Pannello Filament unico per la moderazione, con filtri per type e stato.
-- **Policy**: Policy centralizzate per la moderazione, con possibilità di override per type specifici.
-- **Eventi/Listener**: Eventi per transizioni di stato, listener per notifiche e logging, generici e riutilizzabili.
+### Problemi Identificati
 
-### Flusso Moderazione Utente (Generico)
-1. **Registrazione**: L'utente si registra tramite wizard unico, che raccoglie i dati base e quelli specifici del type. Il campo `type` viene valorizzato secondo la variante.
-2. **Stato iniziale**: L'utente viene creato in stato `pending` (moderazione richiesta), valorizzando la colonna `state`.
-3. **Moderazione**: Un moderatore visualizza la richiesta, può approvare o rifiutare (UI e azioni generiche).
-4. **Transizione di stato**: Azione queueable aggiorna la colonna `state`, invia notifica, logga l'evento (tutto generico).
-5. **Notifica**: L'utente riceve email con esito e, se approvato, link per completare la registrazione (template dinamico).
-6. **Completamento**: L'utente può accedere e completare i dati solo se approvato.
+Durante l'aggiornamento del modulo sono stati risolti conflitti Git nei seguenti file di test:
 
-### Percentuali di riuso logica
-- Azioni di moderazione: **90%**
-- Gestione stati: **100%**
-- Notifiche: **80%**
-- UI Filament: **80%**
-- Eventi/listener: **90%**
-- Policy: **80%**
+- `tests/Pest.php` - Configurazione principale Pest ✅ RISOLTO
+- `tests/Unit/UserTest.php` - Test unitari del modello User ✅ RISOLTO
+- `tests/Unit/ChangeTypeCommandTest.php` - Test del comando ChangeType ✅ RISOLTO
+- `tests/Unit/Models/UserTest.php` - Test specifici del modello User ✅ RISOLTO
+- `tests/Unit/UserModelTest.php` - Test estesi del modello User ✅ RISOLTO
+- `tests/Feature/Filament/Pages/CreateUserTest.php` - Test delle pagine Filament ✅ RISOLTO
+- `tests/Feature/Filament/Actions/ChangePasswordActionTest.php` - Test delle azioni ✅ RISOLTO
+- `tests/Feature/UserCommandIntegrationTest.php` - Test di integrazione comandi ✅ RISOLTO
 
-### Dettagli implementativi
-- **Wizard di registrazione**: Unico, con step dinamici in base al type (pattern strategy/factory per step specifici). Il campo `type` è centrale.
-- **ModerationAction**: Un'unica action queueable, che riceve l'istanza User e il type, e applica la logica di moderazione aggiornando la colonna `state`.
-- **Enum/ModelStates**: Enum generico (UserState) con metodi helper per label, colore, icona, ecc., sempre mappato su `state`.
-- **Notifiche**: Classe base Notification, con metodi overridabili per type specifici.
-- **UI Filament**: Resource/Panel unico, con filtri per type e stato, e policy generiche.
-- **Policy**: Policy generica UserModerationPolicy, con possibilità di override tramite strategy pattern.
-- **Eventi/Listener**: Eventi generici (UserApproved, UserRejected, ecc.), listener che gestiscono notifiche e side-effect.
-- **Documentazione**: Tutte le transizioni di stato, policy e override vanno documentate in modo neutro e generico.
-- **Test**: Test end-to-end che coprano il flusso per tutti i type, senza riferimenti a ruoli specifici.
+### Soluzioni Implementate
 
-### Esempio di struttura
-- `User.php` (modello base, con type/parental e state)
-- `UserState.php` (enum generico, mappato su `state`)
-- `ModerationAction.php` (action queueable generica)
-- `UserModerationNotification.php` (notifica base)
-- `UserModerationPolicy.php` (policy generica)
-- `UserModerationResource.php` (Filament resource/panel generico)
-- `UserApproved.php`, `UserRejected.php` (eventi generici)
+1. **Rimozione duplicazioni**: Eliminati blocchi di codice duplicato causati da merge
+2. **Consolidamento logica**: Mantenuta la logica di test più recente e completa
+3. **Verifica coerenza**: Controllata la coerenza tra tutti i file di test
+4. **Aggiornamento documentazione**: Documentate le modifiche e le best practices
 
+<<<<<<< HEAD
 ### Vantaggi
 - Massima riusabilità del modulo User in qualsiasi progetto
 - Facilità di estensione per nuovi type/ruoli
@@ -953,4 +1544,10 @@ Schema::table('teams', function (Blueprint $table) {
   - **Regola**: docs_project solo per documentazione generale del progetto, file specifici di moduli nelle rispettive cartelle docs
 
 ## Collegamenti
+=======
+### Prevenzione Futura
+>>>>>>> e5f94125 (.)
 
+- Utilizzare sempre `git pull --rebase` per evitare merge commits
+- Verificare i conflitti prima di ogni commit
+- Mantenere la struttura dei test coerente e documentata

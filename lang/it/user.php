@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
 declare(strict_types=1);
 
@@ -757,6 +758,10 @@ return [
 
 >>>>>>> 42fc572 (.)
 =======
+=======
+declare(strict_types=1);
+
+>>>>>>> e5f94125 (.)
 return array (
   'navigation' => 
   array (
@@ -1187,6 +1192,10 @@ return array (
     'password_reset_success' => 'Password reimpostata con successo',
     'password_reset_error' => 'Errore durante il reset della password',
     'email_already_taken' => 'Questa email è già in uso',
+<<<<<<< HEAD
+=======
+    // Added keys for LoginWidget
+>>>>>>> e5f94125 (.)
     'login_success' => 'Accesso effettuato con successo',
     'validation_error' => 'Errore di validazione',
   ),

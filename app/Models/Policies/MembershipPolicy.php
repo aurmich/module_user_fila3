@@ -5,11 +5,19 @@ declare(strict_types=1);
 namespace Modules\User\Models\Policies;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\User\Models\Membership;
 use Modules\Xot\Contracts\UserContract;
 =======
 
 >>>>>>> 079c9da7 (.)
+=======
+
+=======
+use Modules\Xot\Contracts\UserContract;
+use Modules\User\Models\Membership;
+>>>>>>> e5f94125 (.)
+>>>>>>> 10cce5c4 (.)
 
 class MembershipPolicy extends UserBasePolicy
 {
@@ -27,13 +35,19 @@ class MembershipPolicy extends UserBasePolicy
     public function view(UserContract $user, Membership $membership): bool
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return (
             $user->hasPermissionTo('membership.view') ||
             $user->id === $membership->user_id ||
             $user->hasRole('super-admin')
         );
 =======
+=======
+>>>>>>> 10cce5c4 (.)
 
+=======
+        return $user->hasPermissionTo('membership.view') || 
+>>>>>>> e5f94125 (.)
                $user->id === $membership->user_id ||
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
@@ -57,7 +71,11 @@ class MembershipPolicy extends UserBasePolicy
 =======
     public function update(UserContract $user, Membership $membership): bool
     {
+<<<<<<< HEAD
 
+=======
+        return $user->hasPermissionTo('membership.update') || 
+>>>>>>> e5f94125 (.)
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }
@@ -72,7 +90,11 @@ class MembershipPolicy extends UserBasePolicy
 =======
     public function delete(UserContract $user, Membership $membership): bool
     {
+<<<<<<< HEAD
 
+=======
+        return $user->hasPermissionTo('membership.delete') || 
+>>>>>>> e5f94125 (.)
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }
@@ -87,7 +109,11 @@ class MembershipPolicy extends UserBasePolicy
 =======
     public function restore(UserContract $user, Membership $membership): bool
     {
+<<<<<<< HEAD
 
+=======
+        return $user->hasPermissionTo('membership.restore') || 
+>>>>>>> e5f94125 (.)
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }
@@ -98,9 +124,15 @@ class MembershipPolicy extends UserBasePolicy
     public function forceDelete(UserContract $user, Membership $membership): bool
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $user->hasPermissionTo('membership.force-delete') || $user->hasRole('super-admin');
 =======
+=======
+>>>>>>> 10cce5c4 (.)
 
+=======
+        return $user->hasPermissionTo('membership.force-delete') || 
+>>>>>>> e5f94125 (.)
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }
