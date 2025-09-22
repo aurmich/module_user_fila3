@@ -61,16 +61,12 @@ use Modules\User\Tests\TestCase;
 |
 */
 
-<<<<<<< HEAD
 uses(
     TestCase::class,
     DatabaseTransactions::class, // ✅ CORRETTO - Rollback automatico
     WithFaker::class,
 )->in('Feature', 'Unit');
 
-=======
-pest()->extend(TestCase::class)
->>>>>>> e5f94125 (.)
     ->in('Feature', 'Unit');
 
 /*

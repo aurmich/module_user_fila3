@@ -6,15 +6,15 @@ namespace Modules\User\Models\Policies;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class ProfileTeamPolicy extends UserBasePolicy
 {
 =======
 =======
 >>>>>>> 10cce5c4 (.)
-use Modules\User\Contracts\UserContract;
 =======
-use Modules\Xot\Contracts\UserContract;
->>>>>>> e5f94125 (.)
+>>>>>>> 8b2de289 (.)
+use Modules\User\Contracts\UserContract;
 use Modules\User\Models\ProfileTeam;
 
 class ProfileTeamPolicy extends UserBasePolicy
@@ -32,16 +32,9 @@ class ProfileTeamPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, ProfileTeam $profileTeam): bool
     {
-<<<<<<< HEAD
         return $user->id === $profileTeam->user_id ||
             $user->teams->contains($profileTeam->team_id) ||
             $user->hasRole('super-admin');
-=======
-        return $user->hasPermissionTo('profile-team.view') || 
-               $user->id === $profileTeam->user_id ||
-               $user->teams->contains($profileTeam->team_id) ||
-               $user->hasRole('super-admin');
->>>>>>> e5f94125 (.)
     }
 
     /**
@@ -57,13 +50,8 @@ class ProfileTeamPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, ProfileTeam $profileTeam): bool
     {
-<<<<<<< HEAD
         return $user->id === $profileTeam->user_id ||
             $user->hasRole('super-admin');
-=======
-        return $user->hasPermissionTo('profile-team.update') || 
-               $user->hasRole('super-admin');
->>>>>>> e5f94125 (.)
     }
 
     /**
@@ -71,13 +59,8 @@ class ProfileTeamPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, ProfileTeam $profileTeam): bool
     {
-<<<<<<< HEAD
         return $user->id === $profileTeam->user_id ||
             $user->hasRole('super-admin');
-=======
-        return $user->hasPermissionTo('profile-team.delete') || 
-               $user->hasRole('super-admin');
->>>>>>> e5f94125 (.)
     }
 
     /**
@@ -85,12 +68,7 @@ class ProfileTeamPolicy extends UserBasePolicy
      */
     public function restore(UserContract $user, ProfileTeam $profileTeam): bool
     {
-<<<<<<< HEAD
         return $user->hasRole('super-admin');
-=======
-        return $user->hasPermissionTo('profile-team.restore') || 
-               $user->hasRole('super-admin');
->>>>>>> e5f94125 (.)
     }
 
     /**
@@ -98,14 +76,7 @@ class ProfileTeamPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, ProfileTeam $profileTeam): bool
     {
-<<<<<<< HEAD
         return $user->hasRole('super-admin');
     }
 >>>>>>> 079c9da7 (.)
 }
-=======
-        return $user->hasPermissionTo('profile-team.force-delete') || 
-               $user->hasRole('super-admin');
-    }
-}
->>>>>>> e5f94125 (.)

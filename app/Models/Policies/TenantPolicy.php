@@ -6,6 +6,7 @@ namespace Modules\User\Models\Policies;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\User\Models\Tenant;
 use Modules\Xot\Contracts\UserContract;
 
@@ -73,15 +74,13 @@ class TenantPolicy extends UserBasePolicy
 =======
 =======
 >>>>>>> 10cce5c4 (.)
-use Modules\User\Contracts\UserContract;
 =======
-use Modules\Xot\Contracts\UserContract;
->>>>>>> e5f94125 (.)
+>>>>>>> 8b2de289 (.)
+use Modules\User\Contracts\UserContract;
 use Modules\User\Models\Tenant;
 
 class TenantPolicy extends UserBasePolicy
 {
-<<<<<<< HEAD
 	/**
 	 * Determine whether the user can view any models.
 	 */
@@ -138,6 +137,7 @@ class TenantPolicy extends UserBasePolicy
 	{
 		return $user->hasRole('super-admin');
 	}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 079c9da7 (.)
 =======
@@ -205,4 +205,6 @@ class TenantPolicy extends UserBasePolicy
     }
 >>>>>>> e5f94125 (.)
 >>>>>>> 10cce5c4 (.)
+=======
+>>>>>>> 8b2de289 (.)
 }

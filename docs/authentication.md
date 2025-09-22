@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Architettura Autenticazione
 
 ## Overview
@@ -82,6 +83,8 @@ app/Filament/Widgets/
 =======
 =======
 >>>>>>> 10cce5c4 (.)
+=======
+>>>>>>> 8b2de289 (.)
 # Autenticazione in Predict
 
 ## Panoramica
@@ -212,6 +215,7 @@ Route::middleware('guest')->group(function () {
 ## Implementazioni Specifiche
 
 ### Logout con Volt e Folio
+<<<<<<< HEAD
 Per dettagli sull'implementazione del logout utilizzando Volt e Folio, consultare la [documentazione del modulo User](../laravel/Modules/User/project_docs/VOLT_FOLIO_LOGOUT_ERROR.md). 
 <<<<<<< HEAD
 >>>>>>> 079c9da7 (.)
@@ -373,3 +377,6 @@ if ($request->bearerToken()) {
 *Ultimo aggiornamento: giugno 2025*
 >>>>>>> e5f94125 (.)
 >>>>>>> 10cce5c4 (.)
+=======
+Per dettagli sull'implementazione del logout utilizzando Volt e Folio, consultare la [documentazione del modulo User](../laravel/Modules/User/project_docs/VOLT_FOLIO_LOGOUT_ERROR.md). 
+>>>>>>> 8b2de289 (.)

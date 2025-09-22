@@ -6,6 +6,7 @@ namespace Modules\User\Models\Policies;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\User\Models\PasswordReset;
 use Modules\Xot\Contracts\UserContract;
 =======
@@ -18,6 +19,9 @@ use Modules\Xot\Contracts\UserContract;
 use Modules\User\Models\PasswordReset;
 >>>>>>> e5f94125 (.)
 >>>>>>> 10cce5c4 (.)
+=======
+
+>>>>>>> 8b2de289 (.)
 
 class PasswordResetPolicy extends UserBasePolicy
 {
@@ -36,6 +40,7 @@ class PasswordResetPolicy extends UserBasePolicy
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return (
             $user->hasPermissionTo('password-reset.view') ||
             $user->email === $passwordReset->email ||
@@ -44,10 +49,9 @@ class PasswordResetPolicy extends UserBasePolicy
 =======
 =======
 >>>>>>> 10cce5c4 (.)
-
 =======
-        return $user->hasPermissionTo('password-reset.view') || 
->>>>>>> e5f94125 (.)
+>>>>>>> 8b2de289 (.)
+
                $user->email === $passwordReset->email ||
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
@@ -71,11 +75,7 @@ class PasswordResetPolicy extends UserBasePolicy
 =======
     public function update(UserContract $user, PasswordReset $passwordReset): bool
     {
-<<<<<<< HEAD
 
-=======
-        return $user->hasPermissionTo('password-reset.update') || 
->>>>>>> e5f94125 (.)
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }
@@ -90,11 +90,7 @@ class PasswordResetPolicy extends UserBasePolicy
 =======
     public function delete(UserContract $user, PasswordReset $passwordReset): bool
     {
-<<<<<<< HEAD
 
-=======
-        return $user->hasPermissionTo('password-reset.delete') || 
->>>>>>> e5f94125 (.)
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }
@@ -109,11 +105,7 @@ class PasswordResetPolicy extends UserBasePolicy
 =======
     public function restore(UserContract $user, PasswordReset $passwordReset): bool
     {
-<<<<<<< HEAD
 
-=======
-        return $user->hasPermissionTo('password-reset.restore') || 
->>>>>>> e5f94125 (.)
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }
@@ -125,14 +117,14 @@ class PasswordResetPolicy extends UserBasePolicy
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $user->hasPermissionTo('password-reset.force-delete') || $user->hasRole('super-admin');
 =======
 =======
 >>>>>>> 10cce5c4 (.)
-
 =======
-        return $user->hasPermissionTo('password-reset.force-delete') || 
->>>>>>> e5f94125 (.)
+>>>>>>> 8b2de289 (.)
+
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }

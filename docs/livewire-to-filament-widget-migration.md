@@ -169,7 +169,7 @@ class LoginWidget extends XotBaseWidget
 
 ```blade
 {{-- Uso corretto nei layout --}}
-<x-pub_theme::blocks.forms.login-card 
+<x-pub_theme::forms.login-card 
     title="Accedi al portale"
     subtitle="Area riservata cittadini"
     widgetClass="\Modules\User\Filament\Widgets\Auth\LoginWidget"

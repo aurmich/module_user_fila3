@@ -6,6 +6,7 @@ namespace Modules\User\Models\Policies;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\User\Models\OauthAccessToken;
 use Modules\Xot\Contracts\UserContract;
 =======
@@ -18,6 +19,9 @@ use Modules\Xot\Contracts\UserContract;
 use Modules\User\Models\OauthAccessToken;
 >>>>>>> e5f94125 (.)
 >>>>>>> 10cce5c4 (.)
+=======
+
+>>>>>>> 8b2de289 (.)
 
 class OauthAccessTokenPolicy extends UserBasePolicy
 {
@@ -36,6 +40,7 @@ class OauthAccessTokenPolicy extends UserBasePolicy
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return (
             $user->hasPermissionTo('oauth-access-token.view') ||
             $user->id === $oauthAccessToken->user_id ||
@@ -44,10 +49,9 @@ class OauthAccessTokenPolicy extends UserBasePolicy
 =======
 =======
 >>>>>>> 10cce5c4 (.)
-
 =======
-        return $user->hasPermissionTo('oauth-access-token.view') || 
->>>>>>> e5f94125 (.)
+>>>>>>> 8b2de289 (.)
+
                $user->id === $oauthAccessToken->user_id ||
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
@@ -71,11 +75,7 @@ class OauthAccessTokenPolicy extends UserBasePolicy
 =======
     public function update(UserContract $user, OauthAccessToken $oauthAccessToken): bool
     {
-<<<<<<< HEAD
 
-=======
-        return $user->hasPermissionTo('oauth-access-token.update') || 
->>>>>>> e5f94125 (.)
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }
@@ -87,6 +87,7 @@ class OauthAccessTokenPolicy extends UserBasePolicy
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return (
             $user->hasPermissionTo('oauth-access-token.delete') ||
             $user->id === $oauthAccessToken->user_id ||
@@ -95,10 +96,9 @@ class OauthAccessTokenPolicy extends UserBasePolicy
 =======
 =======
 >>>>>>> 10cce5c4 (.)
-
 =======
-        return $user->hasPermissionTo('oauth-access-token.delete') || 
->>>>>>> e5f94125 (.)
+>>>>>>> 8b2de289 (.)
+
                $user->id === $oauthAccessToken->user_id ||
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
@@ -114,11 +114,7 @@ class OauthAccessTokenPolicy extends UserBasePolicy
 =======
     public function restore(UserContract $user, OauthAccessToken $oauthAccessToken): bool
     {
-<<<<<<< HEAD
 
-=======
-        return $user->hasPermissionTo('oauth-access-token.restore') || 
->>>>>>> e5f94125 (.)
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }
@@ -130,14 +126,14 @@ class OauthAccessTokenPolicy extends UserBasePolicy
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $user->hasPermissionTo('oauth-access-token.force-delete') || $user->hasRole('super-admin');
 =======
 =======
 >>>>>>> 10cce5c4 (.)
-
 =======
-        return $user->hasPermissionTo('oauth-access-token.force-delete') || 
->>>>>>> e5f94125 (.)
+>>>>>>> 8b2de289 (.)
+
                $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }

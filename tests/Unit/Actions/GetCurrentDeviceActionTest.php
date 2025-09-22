@@ -22,19 +22,11 @@ class GetCurrentDeviceActionTest extends TestCase
 use Modules\User\Actions\GetCurrentDeviceAction;
 use Modules\User\Models\Device;
 use Tests\TestCase;
-<<<<<<< HEAD
-=======
-use Illuminate\Foundation\Testing\RefreshDatabase;
->>>>>>> e5f94125 (.)
 use Jenssegers\Agent\Agent;
 use Mockery;
 
 class GetCurrentDeviceActionTest extends TestCase
 {
-<<<<<<< HEAD
-=======
-    use RefreshDatabase;
->>>>>>> e5f94125 (.)
 
     private GetCurrentDeviceAction $action;
 >>>>>>> 079c9da7 (.)
@@ -45,16 +37,15 @@ class GetCurrentDeviceActionTest extends TestCase
         parent::setUp();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->action = new GetCurrentDeviceAction();
 =======
 >>>>>>> 079c9da7 (.)
 =======
 >>>>>>> 10cce5c4 (.)
-
 =======
-        $this->action = new GetCurrentDeviceAction();
-        
->>>>>>> e5f94125 (.)
+>>>>>>> 8b2de289 (.)
+
         // Mock the Agent class
         $this->mockAgent = Mockery::mock(Agent::class);
     }
@@ -145,11 +136,7 @@ class GetCurrentDeviceActionTest extends TestCase
     {
         // Arrange
         $mobileId = 'unique-mobile-identifier-123';
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> e5f94125 (.)
         $deviceData = [
             'device' => 'Android Phone',
             'platform' => 'Android',
@@ -218,6 +205,7 @@ class GetCurrentDeviceActionTest extends TestCase
         // Act & Assert
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         expect(fn() => $this->action->execute($emptyMobileId))
 =======
         expect(fn () => $this->action->execute($emptyMobileId))
@@ -228,6 +216,9 @@ class GetCurrentDeviceActionTest extends TestCase
         expect(fn() => $this->action->execute($emptyMobileId))
 >>>>>>> e5f94125 (.)
 >>>>>>> 10cce5c4 (.)
+=======
+        expect(fn () => $this->action->execute($emptyMobileId))
+>>>>>>> 8b2de289 (.)
             ->toThrow(\InvalidArgumentException::class, 'L\'ID mobile non può essere vuoto');
     }
 

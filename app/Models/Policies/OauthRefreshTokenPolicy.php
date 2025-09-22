@@ -6,15 +6,15 @@ namespace Modules\User\Models\Policies;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\User\Models\OauthRefreshToken;
 use Modules\Xot\Contracts\UserContract;
 =======
 =======
 >>>>>>> 10cce5c4 (.)
-use Modules\User\Contracts\UserContract;
 =======
-use Modules\Xot\Contracts\UserContract;
->>>>>>> e5f94125 (.)
+>>>>>>> 8b2de289 (.)
+use Modules\User\Contracts\UserContract;
 use Modules\User\Models\OauthRefreshToken;
 >>>>>>> 079c9da7 (.)
 
@@ -38,8 +38,8 @@ class OauthRefreshTokenPolicy extends UserBasePolicy
 =======
     public function view(UserContract $user, OauthRefreshToken $oauthRefreshToken): bool
     {
-<<<<<<< HEAD
         return $user->hasRole('super-admin');
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 079c9da7 (.)
 =======
@@ -48,6 +48,8 @@ class OauthRefreshTokenPolicy extends UserBasePolicy
                $user->hasRole('super-admin');
 >>>>>>> e5f94125 (.)
 >>>>>>> 10cce5c4 (.)
+=======
+>>>>>>> 8b2de289 (.)
     }
 
     /**
@@ -68,8 +70,8 @@ class OauthRefreshTokenPolicy extends UserBasePolicy
 =======
     public function update(UserContract $user, OauthRefreshToken $oauthRefreshToken): bool
     {
-<<<<<<< HEAD
         return $user->hasRole('super-admin');
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 079c9da7 (.)
 =======
@@ -78,6 +80,8 @@ class OauthRefreshTokenPolicy extends UserBasePolicy
                $user->hasRole('super-admin');
 >>>>>>> e5f94125 (.)
 >>>>>>> 10cce5c4 (.)
+=======
+>>>>>>> 8b2de289 (.)
     }
 
     /**
@@ -90,8 +94,8 @@ class OauthRefreshTokenPolicy extends UserBasePolicy
 =======
     public function delete(UserContract $user, OauthRefreshToken $oauthRefreshToken): bool
     {
-<<<<<<< HEAD
         return $user->hasRole('super-admin');
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 079c9da7 (.)
 =======
@@ -100,6 +104,8 @@ class OauthRefreshTokenPolicy extends UserBasePolicy
                $user->hasRole('super-admin');
 >>>>>>> e5f94125 (.)
 >>>>>>> 10cce5c4 (.)
+=======
+>>>>>>> 8b2de289 (.)
     }
 
     /**
@@ -112,8 +118,8 @@ class OauthRefreshTokenPolicy extends UserBasePolicy
 =======
     public function restore(UserContract $user, OauthRefreshToken $oauthRefreshToken): bool
     {
-<<<<<<< HEAD
         return $user->hasRole('super-admin');
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 079c9da7 (.)
 =======
@@ -122,6 +128,8 @@ class OauthRefreshTokenPolicy extends UserBasePolicy
                $user->hasRole('super-admin');
 >>>>>>> e5f94125 (.)
 >>>>>>> 10cce5c4 (.)
+=======
+>>>>>>> 8b2de289 (.)
     }
 
     /**
@@ -131,17 +139,14 @@ class OauthRefreshTokenPolicy extends UserBasePolicy
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $user->hasPermissionTo('oauth-refresh-token.force-delete') || $user->hasRole('super-admin');
 =======
 =======
 >>>>>>> 10cce5c4 (.)
+=======
+>>>>>>> 8b2de289 (.)
         return $user->hasRole('super-admin');
 >>>>>>> 079c9da7 (.)
     }
 }
-=======
-        return $user->hasPermissionTo('oauth-refresh-token.force-delete') || 
-               $user->hasRole('super-admin');
-    }
-}
->>>>>>> e5f94125 (.)

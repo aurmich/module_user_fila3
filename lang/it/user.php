@@ -1,6 +1,6 @@
 <?php
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 <<<<<<< HEAD
@@ -762,6 +762,8 @@ return [
 declare(strict_types=1);
 
 >>>>>>> e5f94125 (.)
+=======
+>>>>>>> 8b2de289 (.)
 return array (
   'navigation' => 
   array (
@@ -1192,10 +1194,6 @@ return array (
     'password_reset_success' => 'Password reimpostata con successo',
     'password_reset_error' => 'Errore durante il reset della password',
     'email_already_taken' => 'Questa email è già in uso',
-<<<<<<< HEAD
-=======
-    // Added keys for LoginWidget
->>>>>>> e5f94125 (.)
     'login_success' => 'Accesso effettuato con successo',
     'validation_error' => 'Errore di validazione',
   ),
@@ -1450,5 +1448,8 @@ return array (
   ),
   'search_placeholder' => 'Cerca per nome, email o ruolo...',
 );
+<<<<<<< HEAD
 >>>>>>> 199538c (.)
 >>>>>>> 079c9da7 (.)
+=======
+>>>>>>> 8b2de289 (.)

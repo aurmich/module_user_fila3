@@ -1,9 +1,14 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 
+=======
+declare(strict_types=1);
+
+>>>>>>> 8b2de289 (.)
 return [
     'fields' => [
         'email' => [
@@ -11,21 +16,30 @@ return [
             'placeholder' => 'Inserisci la tua email',
             'help' => 'Inserisci l\'indirizzo email con cui ti sei registrato',
             'description' => 'Indirizzo email per l\'accesso',
+<<<<<<< HEAD
             'helper_text' => 'email',
+=======
+>>>>>>> 8b2de289 (.)
         ],
         'password' => [
             'label' => 'Password',
             'placeholder' => 'Inserisci la tua password',
             'help' => 'Inserisci la password del tuo account',
             'description' => 'Password per l\'accesso',
+<<<<<<< HEAD
             'helper_text' => 'password',
+=======
+>>>>>>> 8b2de289 (.)
         ],
         'remember' => [
             'label' => 'Ricordami',
             'placeholder' => 'Mantieni la sessione attiva',
             'help' => 'Seleziona per mantenere la sessione attiva per 30 giorni',
             'description' => 'Opzione per ricordare l\'accesso',
+<<<<<<< HEAD
             'helper_text' => 'remember',
+=======
+>>>>>>> 8b2de289 (.)
         ],
     ],
     'actions' => [
@@ -46,6 +60,7 @@ return [
         'errors_title' => 'Si sono verificati degli errori',
     ],
 ];
+<<<<<<< HEAD
 =======
 return array (
   'fields' => 
@@ -97,3 +112,5 @@ return array (
   ),
 );
 >>>>>>> 079c9da7 (.)
+=======
+>>>>>>> 8b2de289 (.)

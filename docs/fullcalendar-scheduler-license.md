@@ -17,9 +17,12 @@ FullCalendar Scheduler requires a valid license key for use in production enviro
    - Available for purchase from [FullCalendar's pricing page](https://fullcalendar.io/pricing/)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Configuration in 
 =======
 >>>>>>> 079c9da7 (.)
+=======
+>>>>>>> 8b2de289 (.)
 ## Configuration in SaluteOra
 
 ### Setting the License Key

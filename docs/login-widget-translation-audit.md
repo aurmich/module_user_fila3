@@ -378,6 +378,7 @@ Il pattern può essere applicato a tutti i widget del sistema per garantire cons
 **Audit completato**: Gennaio 2025  
 **File modificati**: 3 (it/messages.php, en/messages.php, de/messages.php)  
 **Translation keys aggiunte**: 60+ per lingua  
+<<<<<<< HEAD
 **LoginWidget status**: ✅ Fully functional in all languages
 <<<<<<< HEAD
 **LoginWidget status**: ✅ Fully functional in all languages
@@ -490,3 +491,6 @@ Questo audit dimostra l'importanza di:
 **LoginWidget status**: ✅ Fully functional in all languages
 =======
 >>>>>>> 079c9da7 (.)
+=======
+**LoginWidget status**: ✅ Fully functional in all languages
+>>>>>>> 8b2de289 (.)

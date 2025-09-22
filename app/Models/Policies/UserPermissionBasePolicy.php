@@ -11,6 +11,7 @@ namespace Modules\User\Models\Policies;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Auth\Access\HandlesAuthorization;
 use Illuminate\Support\Str;
 use Modules\User\Models\Permission;
@@ -28,6 +29,9 @@ use Modules\Xot\Contracts\UserContract;
 use Illuminate\Auth\Access\HandlesAuthorization;
 >>>>>>> e5f94125 (.)
 >>>>>>> 10cce5c4 (.)
+=======
+
+>>>>>>> 8b2de289 (.)
 
 // use Modules\Xot\Datas\XotData;
 
@@ -60,8 +64,8 @@ abstract class UserPermissionBasePolicy
 =======
     public function before(UserContract $user, string $ability): ?bool
     {
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 079c9da7 (.)
 =======
@@ -89,6 +93,8 @@ abstract class UserPermissionBasePolicy
         
 >>>>>>> e5f94125 (.)
 >>>>>>> 10cce5c4 (.)
+=======
+>>>>>>> 8b2de289 (.)
 
         return null;
     }
