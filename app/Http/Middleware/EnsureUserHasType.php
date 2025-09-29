@@ -43,8 +43,13 @@ class EnsureUserHasType
     {
 <<<<<<< HEAD
         $userType = $request->user()?->type;
+<<<<<<< HEAD
 
         if ($userType instanceof \BackedEnum && $userType->value === $type) {
+=======
+       
+        if ($userType instanceof \BackedEnum && $userType->value == $type) {
+>>>>>>> 20edf4e0 (.)
             return $next($request);
         }
 

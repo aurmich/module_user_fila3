@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -23,6 +24,11 @@ return [
         'description' => 'Gestione e monitoraggio dei dispositivi degli utenti',
     ],
     // FIELDS - STRUTTURA ESPANSA OBBLIGATORIA
+=======
+declare(strict_types=1);
+
+return [
+>>>>>>> 20edf4e0 (.)
     'fields' => [
         'uuid' => [
             'label' => 'UUID',
@@ -116,7 +122,10 @@ return [
             'help' => 'Indica se è uno smartphone o telefono cellulare',
         ],
     ],
+<<<<<<< HEAD
     // ACTIONS - STRUTTURA ESPANSA OBBLIGATORIA
+=======
+>>>>>>> 20edf4e0 (.)
     'actions' => [
         'create' => [
             'label' => 'Crea Dispositivo',
@@ -189,7 +198,17 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
     // SECTIONS - ORGANIZZAZIONE FORM
+=======
+    'navigation' => [
+        'sort' => 50,
+        'label' => 'Dispositivi',
+        'group' => 'Sicurezza',
+        'icon' => 'heroicon-o-device-phone-mobile',
+        'badge' => 'Gestione dispositivi utente',
+    ],
+>>>>>>> 20edf4e0 (.)
     'sections' => [
         'device_info' => [
             'label' => 'Informazioni Dispositivo',
@@ -202,7 +221,10 @@ return [
         'browser_info' => [
             'label' => 'Informazioni Browser',
             'description' => 'Dettagli del browser utilizzato',
+<<<<<<< HEAD
             // FILTERS - RICERCA E FILTRI
+=======
+>>>>>>> 20edf4e0 (.)
         ],
     ],
     'filters' => [
@@ -233,11 +255,15 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
     // MESSAGES - FEEDBACK UTENTE
+=======
+>>>>>>> 20edf4e0 (.)
     'messages' => [
         'empty_state' => 'Nessun dispositivo trovato',
         'search_placeholder' => 'Cerca dispositivi...',
         'loading' => 'Caricamento dispositivi in corso...',
+<<<<<<< HEAD
         // VALIDATION - MESSAGGI DI VALIDAZIONE
         'validation' => [
             'uuid_required' => 'L\'UUID è obbligatorio',
@@ -361,3 +387,8 @@ return array (
   ),
 );
 >>>>>>> 079c9da7 (.)
+=======
+        'total_devices' => 'Totale dispositivi: :count',
+    ],
+];
+>>>>>>> 20edf4e0 (.)

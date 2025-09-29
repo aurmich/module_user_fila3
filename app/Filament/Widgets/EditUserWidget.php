@@ -93,7 +93,7 @@ class EditUserWidget extends XotBaseWidget
     public string $resource;
     public string $model;
     public string $action;
-    public Model $record;
+    public ?Model $record;
 
     /**
      * @phpstan-ignore-next-line
@@ -189,7 +189,8 @@ class EditUserWidget extends XotBaseWidget
 =======
     public function getFormFill(): array
     {
-        $model = $this->record ?? $this->getFormModel();
+        //$model = $this->record ?? $this->getFormModel();
+        $model = $this->record;
         
 >>>>>>> 079c9da7 (.)
         // Se il modello ha un ID, significa che è stato trovato nel database

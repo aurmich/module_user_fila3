@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Hash;
 use Modules\Xot\Contracts\UserContract;
 >>>>>>> 079c9da7 (.)
 use Spatie\QueueableAction\QueueableAction;
+use Modules\Xot\Actions\String\GetPronounceablePasswordAction;
 
 class GetNewPasswordAction
 {
@@ -48,16 +49,16 @@ class GetNewPasswordAction
     {
         //$user = XotData::make()->getUserByEmail($record->email);
         $user=$record;
-        /*
-        $password=Str::password(10);
-        $user->update([
-            'password' => Hash::make($password),
-        ]);
-        */
+        
         //$password=trim(Str::random(10));
         //$password='Pgn7T8Bppf';
         [$password,$password_hash] = once(function () {
+<<<<<<< HEAD
             $password=trim(Str::random(10));
+=======
+            //$password=trim(Str::password(10));
+            $password=app(GetPronounceablePasswordAction::class)->execute();
+>>>>>>> 20edf4e0 (.)
             $password_hash=Hash::make($password);
             return [$password,$password_hash];
         });
