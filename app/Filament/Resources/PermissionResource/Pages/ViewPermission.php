@@ -15,17 +15,6 @@ class ViewPermission extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRe
     /**
      * @return array<string, \Filament\Infolists\Components\Component>
      */
-<<<<<<< HEAD
-    #[\Override]
-    public function getInfolistSchema(): array
-    {
-        return [
-            'name' => TextEntry::make('name')->label(__('user::permission.fields.name.label')),
-            'guard_name' => TextEntry::make('guard_name')->label(__('user::permission.fields.guard_name.label')),
-            'active' => TextEntry::make('active')
-                ->label(__('user::permission.fields.active.label'))
-                ->formatStateUsing(fn($state): string => $state ? __('user::common.yes') : __('user::common.no')),
-=======
     public function getInfolistSchema(): array
     {
         return [
@@ -36,7 +25,6 @@ class ViewPermission extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRe
             'active' => TextEntry::make('active')
                 ->label(__('user::permission.fields.active.label'))
                 ->formatStateUsing(fn ($state): string => $state ? __('user::common.yes') : __('user::common.no')),
->>>>>>> 079c9da7 (.)
             'created_at' => TextEntry::make('created_at')
                 ->label(__('user::permission.fields.created_at.label'))
                 ->dateTime(),

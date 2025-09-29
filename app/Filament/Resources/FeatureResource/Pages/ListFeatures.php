@@ -20,18 +20,6 @@ class ListFeatures extends XotBaseListRecords
     /**
      * @return array<string, \Filament\Tables\Columns\Column>
      */
-<<<<<<< HEAD
-    #[\Override]
-    public function getTableColumns(): array
-    {
-        return [
-            'name' => TextColumn::make('name')->searchable()->sortable(),
-            'type' => TextColumn::make('type')->searchable()->sortable(),
-            'active' => IconColumn::make('active')->boolean(),
-            'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
-        ];
-    }
-=======
     public function getTableColumns(): array
     {
         return [
@@ -50,5 +38,4 @@ class ListFeatures extends XotBaseListRecords
     }
 
    
->>>>>>> 079c9da7 (.)
 }

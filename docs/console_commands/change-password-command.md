@@ -370,10 +370,7 @@ php artisan test --filter=ChangePasswordCommandIntegrationTest
 
 
 
-<<<<<<< HEAD
 
 
 
 
-=======
->>>>>>> 079c9da7 (.)

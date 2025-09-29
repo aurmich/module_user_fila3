@@ -33,14 +33,10 @@ class AssignTeamCommand extends Command
      *
      * @return void
      */
-<<<<<<< HEAD
-    
-=======
     public function __construct()
     {
         parent::__construct();
     }
->>>>>>> 079c9da7 (.)
 
     /**
      * Execute the console command.
@@ -56,50 +52,29 @@ class AssignTeamCommand extends Command
         $teamClass = $xot->getTeamClass();
 
         /** @var array<int|string, string>|\Illuminate\Support\Collection<int|string, string> */
-<<<<<<< HEAD
-        $opts = $teamClass::pluck('name', 'id')->toArray();
-=======
         $opts = $teamClass::pluck('name', 'id')
             ->toArray();
->>>>>>> 079c9da7 (.)
 
         $rows = multiselect(
             label: 'What teams',
             options: $opts,
             required: true,
             scroll: 10,
-<<<<<<< HEAD
-        // validate: function (array $values) {
-        //  return ! \in_array(\count($values), [1, 2], false)
-        //    ? 'A maximum of two'
-        //  : null;
-        // }
-=======
             // validate: function (array $values) {
             //  return ! \in_array(\count($values), [1, 2], false)
             //    ? 'A maximum of two'
             //  : null;
             // }
->>>>>>> 079c9da7 (.)
         );
 
         $user->teams()->sync($rows);
         /*
-<<<<<<< HEAD
-         * foreach ($rows as $row) {
-         * $role = Role::firstOrCreate(['name' => $row]);
-         * $user->assignRole($role);
-         * }
-         */
-        $this->info('Teams :' . implode(', ', $rows) . ' assigned to ' . $email);
-=======
         foreach ($rows as $row) {
             $role = Role::firstOrCreate(['name' => $row]);
             $user->assignRole($role);
         }
         */
         $this->info('Teams :'.implode(', ', $rows).' assigned to '.$email);
->>>>>>> 079c9da7 (.)
 
         $rows = $user->teams()->get()->toArray();
 
@@ -112,11 +87,7 @@ class AssignTeamCommand extends Command
             $this->newLine();
         } else {
             $this->newLine();
-<<<<<<< HEAD
-            $this->warn('⚡ No teams [' . $teamClass . ']');
-=======
             $this->warn('⚡ No teams ['.$teamClass.']');
->>>>>>> 079c9da7 (.)
             $this->newLine();
         }
     }

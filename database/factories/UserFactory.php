@@ -45,11 +45,7 @@ class UserFactory extends Factory
      */
     public function active(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes) => [
-=======
         return $this->state(fn (array $attributes) => [
->>>>>>> 079c9da7 (.)
             'is_active' => true,
         ]);
     }
@@ -59,11 +55,7 @@ class UserFactory extends Factory
      */
     public function inactive(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes) => [
-=======
         return $this->state(fn (array $attributes) => [
->>>>>>> 079c9da7 (.)
             'is_active' => false,
         ]);
     }
@@ -73,11 +65,7 @@ class UserFactory extends Factory
      */
     public function unverified(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes) => [
-=======
         return $this->state(fn (array $attributes) => [
->>>>>>> 079c9da7 (.)
             'email_verified_at' => null,
         ]);
     }

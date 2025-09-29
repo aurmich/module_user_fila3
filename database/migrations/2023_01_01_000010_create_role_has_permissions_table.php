@@ -8,31 +8,14 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /*
  * Class CreateModelHasRolesTable.
  */
-<<<<<<< HEAD
-return new class extends XotBaseMigration {
-=======
 return new class extends XotBaseMigration
 {
->>>>>>> 079c9da7 (.)
     /**
      * Run the migrations.
      */
     public function up(): void
     {
         // -- CREATE --
-<<<<<<< HEAD
-        $this->tableCreate(static function (Blueprint $table): void {
-            $table->id();
-            $table->unsignedBigInteger('permission_id');
-            $table->unsignedBigInteger('role_id');
-        });
-        // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
-            $this->updateTimestamps($table);
-
-            // $this->updateUser($table);
-        });
-=======
         $this->tableCreate(
             static function (Blueprint $table): void {
                 $table->id();
@@ -47,6 +30,5 @@ return new class extends XotBaseMigration
                 // $this->updateUser($table);
             }
         );
->>>>>>> 079c9da7 (.)
     }
 };

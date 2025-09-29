@@ -1,20 +1,9 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-use Illuminate\Support\Facades\Http;
-use Livewire\Volt\Component;
-
-use function Laravel\Folio\middleware;
-use function Laravel\Folio\name;
-=======
 use Illuminate\Support\Facades\Http;
 
 use function Laravel\Folio\{middleware, name};
 use Livewire\Volt\Component;
->>>>>>> 079c9da7 (.)
 
 name('learn');
 middleware(['auth', 'verified']);

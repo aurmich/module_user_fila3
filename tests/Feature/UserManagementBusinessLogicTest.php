@@ -4,15 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Feature;
 
-<<<<<<< HEAD
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Facades\Hash;
-use Modules\User\Models\Permission;
-use Modules\User\Models\Profile;
-use Modules\User\Models\Role;
-use Modules\User\Models\User;
-use Tests\TestCase;
-=======
 use Modules\User\Models\User;
 use Modules\User\Models\Profile;
 use Modules\User\Models\Role;
@@ -20,7 +11,6 @@ use Modules\User\Models\Permission;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
->>>>>>> 079c9da7 (.)
 
 class UserManagementBusinessLogicTest extends TestCase
 {
@@ -640,7 +630,4 @@ class UserManagementBusinessLogicTest extends TestCase
         $this->assertEquals('dark', $user->fresh()->preferences['theme']);
     }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 079c9da7 (.)

@@ -4,17 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Http\Volt;
 
-<<<<<<< HEAD
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Auth;
-use Volt\Routing\Attribute\Post;
-
-/*
- * Attribute class Volt\Routing\Attribute\Post does not exist.
- *
- * #[Post('/logout', name: 'logout', middleware: ['web', 'auth'])]
- */
-=======
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
 use Volt\Routing\Attribute\Post;
@@ -24,7 +13,6 @@ Attribute class Volt\Routing\Attribute\Post does not exist.
 
 #[Post('/logout', name: 'logout', middleware: ['web', 'auth'])]
 */
->>>>>>> 079c9da7 (.)
 final class LogoutAction
 {
     public function __invoke(): RedirectResponse

@@ -11,26 +11,16 @@ use Modules\User\Models\User;
 
 /**
  * OauthAccessToken Factory
-<<<<<<< HEAD
- *
- * Factory for creating OauthAccessToken model instances for testing and seeding.
- *
-=======
  * 
  * Factory for creating OauthAccessToken model instances for testing and seeding.
  * 
->>>>>>> 079c9da7 (.)
  * @extends Factory<OauthAccessToken>
  */
 class OauthAccessTokenFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 079c9da7 (.)
      * @var class-string<OauthAccessToken>
      */
     protected $model = OauthAccessToken::class;
@@ -47,21 +37,9 @@ class OauthAccessTokenFactory extends Factory
             'user_id' => User::factory(),
             'client_id' => OauthClient::factory(),
             'name' => $this->faker->optional()->words(2, true),
-<<<<<<< HEAD
-            'scopes' => $this->faker->optional()->randomElements(
-                [
-                    'read',
-                    'write',
-                    'admin',
-                    'user',
-                ],
-                $this->faker->numberBetween(1, 3),
-            ),
-=======
             'scopes' => $this->faker->optional()->randomElements([
                 'read', 'write', 'admin', 'user'
             ], $this->faker->numberBetween(1, 3)),
->>>>>>> 079c9da7 (.)
             'revoked' => $this->faker->boolean(10), // 10% revoked
             'expires_at' => $this->faker->dateTimeBetween('now', '+1 year'),
         ];
@@ -74,11 +52,7 @@ class OauthAccessTokenFactory extends Factory
      */
     public function revoked(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> 079c9da7 (.)
             'revoked' => true,
         ]);
     }
@@ -90,11 +64,7 @@ class OauthAccessTokenFactory extends Factory
      */
     public function active(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> 079c9da7 (.)
             'revoked' => false,
             'expires_at' => $this->faker->dateTimeBetween('+1 day', '+1 year'),
         ]);
@@ -108,11 +78,7 @@ class OauthAccessTokenFactory extends Factory
      */
     public function forUser(User $user): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> 079c9da7 (.)
             'user_id' => $user->id,
         ]);
     }
@@ -125,11 +91,7 @@ class OauthAccessTokenFactory extends Factory
      */
     public function forClient(OauthClient $client): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> 079c9da7 (.)
             'client_id' => $client->id,
         ]);
     }
@@ -142,16 +104,8 @@ class OauthAccessTokenFactory extends Factory
      */
     public function withScopes(array $scopes): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-            'scopes' => $scopes,
-        ]);
-    }
-}
-=======
         return $this->state(fn (array $attributes): array => [
             'scopes' => $scopes,
         ]);
     }
 }
->>>>>>> 079c9da7 (.)

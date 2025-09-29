@@ -1,3 +1,20 @@
+# User Module Documentation
+
+**Ultima modifica**: 2025-01-15  
+**Status**: ✅ Syntax Errors Fixed, ✅ PHPStan Analysis completata, ✅ Documentazione consolidata
+
+## 🎯 Panoramica
+
+Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli utenti nel framework Laraxot.
+
+## 📚 Collegamenti alla Documentazione Core
+
+- **[Xot Module Documentation](../Xot/docs/README.md)** - Framework core e convenzioni
+- **[Laraxot Conventions](../Xot/docs/laraxot-conventions.md)** - Regole di sviluppo e tipizzazione
+- **[Laraxot Framework](../Xot/docs/laraxot-framework.md)** - Architettura e pattern
+- **[Module Namespace Rules](../Xot/docs/module-namespace-rules.md)** - Regole namespace e migrazioni
+- **[Best Practices](../Xot/docs/best-practices.md)** - Best practices generali
+- **[Useful Links](../Xot/docs/useful-links.md)** - Link utili per lo sviluppo
 # Modulo User
 
 ## Introduzione
@@ -109,17 +126,23 @@ User/
 - [Filosofia Comandi Console](./console_commands/console_commands_philosophy.md)
 
 ## Collegamenti Bidirezionali
-- [Modulo Xot](../Xot/project_docs/README.md)
-- [Modulo Patient](../Patient/project_docs/README.md)
-- [Modulo Dental](../Dental/project_docs/README.md)
+- [Modulo Xot](../Xot/docs/README.md)
+- [Modulo Patient](../Patient/docs/README.md)
+- [Modulo Dental](../Dental/docs/README.md)
 - [Linee guida Actions](./actions.mdc)
 - [Linee guida Activitylog](./activitylog.mdc)
 
+## 🏗️ Architettura Framework
+
+### Regole Base XotBase
+- **Policies**: Estendono sempre `UserBasePolicy` (MAI direttamente Filament)
+- **Resources**: Estendono sempre `XotBaseResource`
+- **Models**: Estendono sempre `BaseModel` con tipizzazione rigorosa
 ## Vedi Anche
-- [Documentazione Principale](../../project_docs/INDEX.md)
-- [Architettura Moduli](../../project_docs/architecture/modules-structure.md)
-- [Convenzioni di Nomenclatura](../../project_docs/standards/file_naming_conventions.md)
-- [Struttura del Progetto](../Xot/project_docs/architecture/struttura-progetto.md)
+- [Documentazione Principale](../../docs/INDEX.md)
+- [Architettura Moduli](../../docs/architecture/modules-structure.md)
+- [Convenzioni di Nomenclatura](../../docs/standards/file_naming_conventions.md)
+- [Struttura del Progetto](../Xot/docs/architecture/struttura-progetto.md)
 
 > **Collegamenti correlati**
 > - [README.md documentazione generale](../../../docs/README.md)
@@ -266,9 +289,9 @@ Il modulo User gestisce l'autenticazione, l'autorizzazione e la gestione degli u
 - [Bottlenecks](bottlenecks.md)
 
 ### Integrazioni
-- [Integrazione con Xot](../Xot/project_docs/README.md)
-- [Integrazione con Lang](../Lang/project_docs/README.md)
-- [Integrazione con Notify](../Notify/project_docs/README.md)
+- [Integrazione con Xot](../Xot/docs/README.md)
+- [Integrazione con Lang](../Lang/docs/README.md)
+- [Integrazione con Notify](../Notify/docs/README.md)
 
 ### Autenticazione
 - [Login Personalizzato](custom_login.md)
@@ -519,10 +542,8 @@ class UserServiceProvider extends XotBaseServiceProvider
 
 - Errori di traduzione 
 ## Collegamenti
-- [Indice Documentazione](../../../project_docs/INDEX.md)
+- [Indice Documentazione](../../../docs/INDEX.md)
 - [README Principale](../../../README.md)
-- [API Reference](../project_docs/api.md)
-- [Changelog](../project_docs/CHANGELOG.md) 
 - [API Reference](../docs/api.md)
 - [Changelog](../docs/CHANGELOG.md) 
 ## Collegamenti tra versioni di README.md
@@ -941,6 +962,7 @@ Schema::table('teams', function (Blueprint $table) {
 - [ ] La documentazione tecnica è aggiornata
 - [ ] I comandi artisan sono lanciati dal path corretto o con namespace modulo
 
+
 ## Aggiornamenti Recenti
 
 ### 16 Gennaio 2025
@@ -964,8 +986,6 @@ Schema::table('teams', function (Blueprint $table) {
 
 ## Collegamenti
 
-<<<<<<< HEAD
-=======
 ### Documentazione Traduzioni
 - [Translation Device Improvements](./translation-device-improvements.md) - Miglioramenti file traduzioni dispositivi
 ## Aggiornamenti Recenti
@@ -988,4 +1008,3 @@ Schema::table('teams', function (Blueprint $table) {
 *User Module Documentation - Framework Laraxot*
 ## Collegamenti
 
->>>>>>> 20edf4e0 (.)

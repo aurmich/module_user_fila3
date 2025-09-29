@@ -31,23 +31,13 @@ final class EmailDomainAnalyzer
 
     public function hasUnrecognizedDomain(): bool
     {
-<<<<<<< HEAD
-        return !$this->hasFirstPartyDomain() && !$this->hasClientDomain();
-=======
         return ! $this->hasFirstPartyDomain() && ! $this->hasClientDomain();
->>>>>>> 079c9da7 (.)
     }
 
     public function hasFirstPartyDomain(): bool
     {
         if (!isset($this->ssoUser)) {
-<<<<<<< HEAD
-            throw new \RuntimeException(
-                'L\'utente SSO non è stato impostato. Utilizzare setUser() prima di chiamare questo metodo.',
-            );
-=======
             throw new \RuntimeException('L\'utente SSO non è stato impostato. Utilizzare setUser() prima di chiamare questo metodo.');
->>>>>>> 079c9da7 (.)
         }
 
         $email = $this->ssoUser->getEmail();
@@ -69,13 +59,7 @@ final class EmailDomainAnalyzer
     public function hasClientDomain(): bool
     {
         if (!isset($this->ssoUser)) {
-<<<<<<< HEAD
-            throw new \RuntimeException(
-                'L\'utente SSO non è stato impostato. Utilizzare setUser() prima di chiamare questo metodo.',
-            );
-=======
             throw new \RuntimeException('L\'utente SSO non è stato impostato. Utilizzare setUser() prima di chiamare questo metodo.');
->>>>>>> 079c9da7 (.)
         }
 
         $email = $this->ssoUser->getEmail();
@@ -94,11 +78,7 @@ final class EmailDomainAnalyzer
         return $emailDomain === $configDomain;
     }
 
-<<<<<<< HEAD
-    private function firstPartyDomain(): null|string
-=======
     private function firstPartyDomain(): ?string
->>>>>>> 079c9da7 (.)
     {
         $res = config(sprintf('services.%s.email_domains.first_party.tld', $this->ssoProvider));
         if (!is_string($res) && $res !== null) {
@@ -107,11 +87,7 @@ final class EmailDomainAnalyzer
         return $res;
     }
 
-<<<<<<< HEAD
-    private function clientDomain(): null|string
-=======
     private function clientDomain(): ?string
->>>>>>> 079c9da7 (.)
     {
         $domain = config(sprintf('services.%s.email_domains.client.tld', $this->ssoProvider));
         if (!is_string($domain) && $domain !== null) {

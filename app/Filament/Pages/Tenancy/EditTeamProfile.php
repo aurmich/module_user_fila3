@@ -16,14 +16,6 @@ class EditTeamProfile extends EditTenantProfile
     }
 
     public function getFormSchema(): array
-<<<<<<< HEAD
-    {
-        return [
-            TextInput::make('name'),
-            // ...
-        ];
-    }
-=======
 {
     
         
@@ -34,5 +26,4 @@ class EditTeamProfile extends EditTenantProfile
                 
       ];
 }
->>>>>>> 079c9da7 (.)
 }

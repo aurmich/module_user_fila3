@@ -10,39 +10,18 @@ use Filament\Resources\Concerns\Translatable;
 use Illuminate\Database\Eloquent\Collection;
 use Modules\User\Filament\Resources\BaseProfileResource\Pages;
 use Modules\User\Models\BaseProfile;
-<<<<<<< HEAD
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-
-=======
-use Modules\Xot\Filament\Resources\XotBaseResource;
-
-
-
 
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
-
-
-
-
->>>>>>> 079c9da7 (.)
 abstract class BaseProfileResource extends XotBaseResource
 {
     use Translatable;
 
-<<<<<<< HEAD
-    protected static null|string $model = BaseProfile::class;
-
-    protected static null|string $navigationIcon = 'heroicon-o-users';
-
-    #[\Override]
-=======
     protected static ?string $model = BaseProfile::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-users';
 
->>>>>>> 079c9da7 (.)
     public static function getFormSchema(): array
     {
         return [
@@ -68,22 +47,12 @@ abstract class BaseProfileResource extends XotBaseResource
         ];
     }
 
-<<<<<<< HEAD
-    #[\Override]
-    public static function getRelations(): array
-    {
-        return [];
-    }
-
-    #[\Override]
-=======
     public static function getRelations(): array
     {
         return [
         ];
     }
 
->>>>>>> 079c9da7 (.)
     public static function getPages(): array
     {
         return [

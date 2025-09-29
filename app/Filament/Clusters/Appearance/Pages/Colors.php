@@ -22,17 +22,6 @@ class Colors extends Page implements HasForms
 {
     use InteractsWithForms;
 
-<<<<<<< HEAD
-    public null|array $data = [];
-
-    protected static null|string $navigationIcon = 'heroicon-o-document-text';
-
-    protected static string $view = 'user::filament.clusters.appearance.pages.colors';
-
-    protected static null|string $cluster = Appearance::class;
-
-    protected static null|int $navigationSort = 3;
-=======
     public ?array $data = [];
 
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
@@ -42,7 +31,6 @@ class Colors extends Page implements HasForms
     protected static ?string $cluster = Appearance::class;
 
     protected static ?int $navigationSort = 3;
->>>>>>> 079c9da7 (.)
 
     public function mount(): void
     {
@@ -68,15 +56,9 @@ class Colors extends Page implements HasForms
                 ColorPicker::make('button_text_color'),
                 ColorPicker::make('input_text_color'),
                 ColorPicker::make('input_border_color'),
-<<<<<<< HEAD
-                // ])->columns(2),
-            ])
-            ->columns(3)
-=======
 
                 // ])->columns(2),
             ])->columns(3)
->>>>>>> 079c9da7 (.)
             // ->model($this->getUser())
             ->statePath('data');
     }
@@ -86,10 +68,6 @@ class Colors extends Page implements HasForms
         try {
             $data = $this->form->getState();
             dddx($data);
-<<<<<<< HEAD
-
-=======
->>>>>>> 079c9da7 (.)
             // $this->handleRecordUpdate($this->getUser(), $data);
         } catch (Halt $exception) {
             dddx($exception->getMessage());
@@ -109,13 +87,9 @@ class Colors extends Page implements HasForms
     protected function getUpdateFormActions(): array
     {
         return [
-<<<<<<< HEAD
-            Action::make('updateAction')->submit('editForm'),
-=======
             Action::make('updateAction')
 
                 ->submit('editForm'),
->>>>>>> 079c9da7 (.)
         ];
     }
 

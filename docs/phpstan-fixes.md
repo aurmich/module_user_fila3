@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Correzioni PHPStan Livello 7 - Modulo User
 
 Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo User e le relative soluzioni implementate.
@@ -52,10 +50,6 @@ Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` ut
 
 ---
 
-=======
->>>>>>> 079c9da7 (.)
-=======
->>>>>>> 8b2de289 (.)
 # PHPStan Fixes and Type System Improvements
 
 ## Overview
@@ -239,12 +233,4 @@ After applying fixes:
 - The `view-string` type is a PHPStan-specific type for view template paths
 - Safe functions provide exception-throwing alternatives to standard PHP functions
 - All Filament components should extend XotBase classes for consistency
-<<<<<<< HEAD
-<<<<<<< HEAD
 - Type system improvements enhance code reliability and maintainability 
-=======
-- Type system improvements enhance code reliability and maintainability 
->>>>>>> 079c9da7 (.)
-=======
-- Type system improvements enhance code reliability and maintainability 
->>>>>>> 8b2de289 (.)

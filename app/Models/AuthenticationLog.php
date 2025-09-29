@@ -66,10 +66,6 @@ class AuthenticationLog extends BaseModel
     ];
 
     /** @return array<string, string> */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> 079c9da7 (.)
     protected function casts(): array
     {
         return [

@@ -34,14 +34,10 @@ class AssignRoleCommand extends Command
      *
      * @return void
      */
-<<<<<<< HEAD
-    
-=======
     public function __construct()
     {
         parent::__construct();
     }
->>>>>>> 079c9da7 (.)
 
     /**
      * Execute the console command.
@@ -55,32 +51,20 @@ class AssignRoleCommand extends Command
         /**
          * @var array<string, string>
          */
-<<<<<<< HEAD
-        $opts = Role::all()->pluck('name', 'name')->toArray();
-=======
         $opts = Role::all()
             ->pluck('name', 'name')
             ->toArray();
->>>>>>> 079c9da7 (.)
 
         $rows = multiselect(
             label: 'What roles',
             options: $opts,
             required: true,
             scroll: 10,
-<<<<<<< HEAD
-        // validate: function (array $values) {
-        //  return ! \in_array(\count($values), [1, 2], false)
-        //    ? 'A maximum of two'
-        //  : null;
-        // }
-=======
             // validate: function (array $values) {
             //  return ! \in_array(\count($values), [1, 2], false)
             //    ? 'A maximum of two'
             //  : null;
             // }
->>>>>>> 079c9da7 (.)
         );
 
         foreach ($rows as $row) {
@@ -88,11 +72,7 @@ class AssignRoleCommand extends Command
             $user->assignRole($role);
         }
 
-<<<<<<< HEAD
-        $this->info(implode(', ', $rows) . ' assigned to ' . $email);
-=======
         $this->info(implode(', ', $rows).' assigned to '.$email);
->>>>>>> 079c9da7 (.)
     }
 
     /**

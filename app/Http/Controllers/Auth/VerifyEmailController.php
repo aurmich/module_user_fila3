@@ -29,20 +29,6 @@ class VerifyEmailController extends Controller
         if ($routeHash === null) {
             throw new \InvalidArgumentException('Hash di verifica mancante');
         }
-<<<<<<< HEAD
-
-        $stringRouteHash = is_string($routeHash) ? $routeHash : '';
-
-        // Utilizziamo getEmailForVerification() solo se disponibile
-        $userEmail = method_exists($user, 'getEmailForVerification')
-            ? $user->getEmailForVerification()
-            : ($user->email ?? '');
-
-        if (!hash_equals(sha1($userEmail), $stringRouteHash)) {
-            throw new AuthorizationException();
-        }
-
-=======
         
         $stringRouteHash = is_string($routeHash) ? $routeHash : '';
         
@@ -55,16 +41,11 @@ class VerifyEmailController extends Controller
             throw new AuthorizationException();
         }
         
->>>>>>> 079c9da7 (.)
         // Verifichiamo l'email solo se il metodo esiste
         if (method_exists($user, 'hasVerifiedEmail') && $user->hasVerifiedEmail()) {
             return redirect()->intended(Filament::getUrl());
         }
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 079c9da7 (.)
         // Contrassegna l'email come verificata solo se il metodo esiste
         if (method_exists($user, 'markEmailAsVerified')) {
             $user->markEmailAsVerified();
@@ -77,10 +58,6 @@ class VerifyEmailController extends Controller
 
         event(new Verified($user));
 
-<<<<<<< HEAD
-        return redirect()->intended(route('dashboard', absolute: false) . '?verified=1');
-=======
         return redirect()->intended(route('dashboard', absolute: false).'?verified=1');
->>>>>>> 079c9da7 (.)
     }
 }

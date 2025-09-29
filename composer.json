@@ -44,13 +44,7 @@
         "socialiteproviders/auth0": "*",
         "spatie/laravel-personal-data-export": "*"
     },
-<<<<<<< HEAD
-    "require-dev": {
-        "phpstan/phpstan": "^2.1"
-    },
-=======
     "require-dev": {},
->>>>>>> 079c9da7 (.)
     "repositories": [
         {
             "type": "path",
@@ -87,8 +81,4 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 079c9da7 (.)

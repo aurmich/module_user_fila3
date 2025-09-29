@@ -4,27 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\User\Models;
 
-<<<<<<< HEAD
-use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\HasManyThrough;
-=======
->>>>>>> 079c9da7 (.)
 use Modules\User\Contracts\UserContract;
 use Modules\User\Database\Factories\ProfileFactory;
 use Modules\User\Models\Pivots\DeviceProfile;
 use Modules\User\Models\Pivots\ProfileTeam;
 use Modules\Xot\Contracts\ProfileContract;
-<<<<<<< HEAD
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
-use Spatie\Permission\Traits\HasRoles;
-use Spatie\SchemalessAttributes\SchemalessAttributesTrait as HasSchemalessAttributes;
-
-/**
- * User Profile Model
- *
-=======
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -36,7 +20,6 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 /**
  * User Profile Model
  * 
->>>>>>> 079c9da7 (.)
  * Represents a user profile with relationships to devices, teams, and roles.
  *
  * @property int $id

@@ -104,11 +104,7 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
 
     /**
      * Ottiene l'URL dell'avatar dell'utente.
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 079c9da7 (.)
      * @return string L'URL dell'avatar
      */
     public function getAvatarUrl(): string
@@ -129,29 +125,19 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         return $avatar;
 
         // https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80
-<<<<<<< HEAD
-=======
 
->>>>>>> 079c9da7 (.)
         // in caso eseguire php artisan module:publish
         // dddx($this);
         // dddx(asset('blog/img/no_user.webp'));
         //    return asset('modules/blog/img/no_user.webp');
         // }
-<<<<<<< HEAD
-=======
 
->>>>>>> 079c9da7 (.)
         // return $this->getFirstMediaUrl();
     }
 
     /**
      * Ottiene la lingua dell'utente.
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 079c9da7 (.)
      * @return string Il codice della lingua
      */
     public function getUserLang(): string
@@ -173,23 +159,11 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
     }
 
     /** @return array<string, string> */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> 079c9da7 (.)
     protected function casts(): array
     {
         return [
             'id' => 'string',
             'uuid' => 'string',
-<<<<<<< HEAD
-            'created_at' => 'datetime',
-            'updated_at' => 'datetime',
-            'deleted_at' => 'datetime',
-            'updated_by' => 'string',
-            'created_by' => 'string',
-            'deleted_by' => 'string',
-=======
 
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
@@ -199,7 +173,6 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
             'created_by' => 'string',
             'deleted_by' => 'string',
 
->>>>>>> 079c9da7 (.)
             'is_active' => 'boolean',
             'extra' => SchemalessAttributes::class,
         ];

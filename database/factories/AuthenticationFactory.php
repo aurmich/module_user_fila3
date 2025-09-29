@@ -11,11 +11,8 @@ use Modules\User\Models\User;
 /**
  * Authentication Factory
  *
-<<<<<<< HEAD
  * Factory for creating Authentication model instances for testing and seeding.
  *
-=======
->>>>>>> 079c9da7 (.)
  * @extends Factory<Authentication>
  */
 class AuthenticationFactory extends Factory
@@ -41,18 +38,12 @@ class AuthenticationFactory extends Factory
             'type' => $this->faker->randomElement(['login', 'logout', 'password_reset', 'email_verification']),
             'ip_address' => $this->faker->ipv4(),
             'user_agent' => $this->faker->userAgent(),
-<<<<<<< HEAD
-            'location' => $this->faker->optional(0.7)->city() . ', ' . $this->faker->optional(0.7)->country(),
+            'location' => $this->faker->optional(0.7)->city().', '.$this->faker->optional(0.7)->country(),
             'login_successful' => $loginSuccessful,
             'login_at' => $loginAt,
             'logout_at' => $loginSuccessful && $this->faker->boolean(60)
                 ? $this->faker->dateTimeBetween($loginAt, 'now')
                 : null,
-=======
-            'login_successful' => $loginSuccessful,
-            'login_at' => $loginAt,
-            'logout_at' => $loginSuccessful ? $this->faker->dateTimeBetween($loginAt, 'now') : null,
->>>>>>> 079c9da7 (.)
             'authenticatable_type' => User::class,
             'authenticatable_id' => User::factory(),
         ];
@@ -63,11 +54,7 @@ class AuthenticationFactory extends Factory
      */
     public function successful(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> 079c9da7 (.)
             'login_successful' => true,
         ]);
     }
@@ -77,11 +64,7 @@ class AuthenticationFactory extends Factory
      */
     public function failed(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> 079c9da7 (.)
             'login_successful' => false,
             'logout_at' => null,
         ]);
@@ -92,11 +75,7 @@ class AuthenticationFactory extends Factory
      */
     public function login(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> 079c9da7 (.)
             'type' => 'login',
         ]);
     }
@@ -106,11 +85,7 @@ class AuthenticationFactory extends Factory
      */
     public function logout(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> 079c9da7 (.)
             'type' => 'logout',
             'logout_at' => $this->faker->dateTimeBetween('-1 month', 'now'),
         ]);
@@ -121,11 +96,7 @@ class AuthenticationFactory extends Factory
      */
     public function forUser(User $user): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> 079c9da7 (.)
             'authenticatable_type' => User::class,
             'authenticatable_id' => $user->id,
         ]);

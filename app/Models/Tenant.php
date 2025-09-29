@@ -27,10 +27,4 @@ use Modules\Xot\Contracts\UserContract;
  * @mixin IdeHelperTenant
  * @mixin \Eloquent
  */
-<<<<<<< HEAD
-class Tenant extends BaseTenant
-{
-}
-=======
 class Tenant extends BaseTenant {}
->>>>>>> 079c9da7 (.)

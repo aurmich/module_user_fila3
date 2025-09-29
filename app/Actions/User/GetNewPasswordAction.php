@@ -4,45 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\User\Actions\User;
 
-<<<<<<< HEAD
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
-use Modules\User\Models\User;
-use Modules\Xot\Actions\String\GetPronounceablePasswordAction;
-use Modules\Xot\Contracts\UserContract;
-use Modules\Xot\Datas\XotData;
-=======
 use Illuminate\Support\Str;
 use Modules\User\Models\User;
 use Modules\Xot\Datas\XotData;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Modules\Xot\Contracts\UserContract;
->>>>>>> 079c9da7 (.)
 use Spatie\QueueableAction\QueueableAction;
 use Modules\Xot\Actions\String\GetPronounceablePasswordAction;
 
 class GetNewPasswordAction
 {
-<<<<<<< HEAD
-    use QueueableAction;
-
-    public function execute(UserContract $record): string
-    {
-        //$user = XotData::make()->getUserByEmail($record->email);
-        $user = $record;
-
-        //$password=trim(Str::random(10));
-        //$password='Pgn7T8Bppf';
-        [$password, $password_hash] = once(function () {
-            //$password=trim(Str::password(10));
-            $password = app(GetPronounceablePasswordAction::class)->execute();
-            $password_hash = Hash::make($password);
-            return [$password, $password_hash];
-        });
-
-=======
     use QueueableAction; 
     
     public function execute(UserContract $record): string
@@ -53,36 +25,23 @@ class GetNewPasswordAction
         //$password=trim(Str::random(10));
         //$password='Pgn7T8Bppf';
         [$password,$password_hash] = once(function () {
-<<<<<<< HEAD
-            $password=trim(Str::random(10));
-=======
             //$password=trim(Str::password(10));
             $password=app(GetPronounceablePasswordAction::class)->execute();
->>>>>>> 20edf4e0 (.)
             $password_hash=Hash::make($password);
             return [$password,$password_hash];
         });
          
->>>>>>> 079c9da7 (.)
         $user->forceFill([
             //'password' => Hash::make($password),
             //'password' => '$2y$12$mFdQg0jwDMG2FjemQo9y5u2SbC1G0xSNKS3gQnFO5CQ109YWHTAtG',
             'password' => $password_hash,
         ])->save();
         /*
-<<<<<<< HEAD
-         * $user->update([
-         * 'password' => $password,
-         * ]);
-         */
-
-=======
         $user->update([
             'password' => $password,
         ]);
        */
         
->>>>>>> 079c9da7 (.)
         return $password;
     }
 }

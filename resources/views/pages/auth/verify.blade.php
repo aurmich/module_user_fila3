@@ -1,21 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-use Illuminate\Auth\Events\Verified;
-use Illuminate\Support\Facades\Auth;
-use Livewire\Volt\Component;
-
-use function Laravel\Folio\middleware;
-use function Laravel\Folio\name;
-
-middleware(['auth', 'throttle:6,1']);
-name('verification.notice');
-
-new class extends Component {
-=======
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Support\Facades\Auth;
 use function Laravel\Folio\{middleware, name};
@@ -26,7 +10,6 @@ name('verification.notice');
 
 new class extends Component
 {
->>>>>>> 079c9da7 (.)
     public function resend()
     {
         $user = auth()->user();
@@ -94,8 +77,4 @@ new class extends Component
         </div>
     </div>
 
-<<<<<<< HEAD
 </x-layouts.main>
-=======
-</x-layouts.main>
->>>>>>> 079c9da7 (.)

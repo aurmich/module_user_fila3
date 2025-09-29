@@ -1,66 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# ==============================================
-# LARAXOT MODULE USER - .GITIGNORE
-# ==============================================
-# Modulo User Laraxot - Template standardizzato
-# Ultimo aggiornamento: 2025-01-06
-# ==============================================
-
-# ==============================================
-# DEPENDENCIES & PACKAGES
-# ==============================================
-vendor/
-/vendor/
-node_modules/
-/node_modules/
-/docs/vendor/
-package-lock.json
-yarn.lock
-yarn-error.log
-composer.lock
-
-# ==============================================
-# BUILD & COMPILED FILES
-# ==============================================
-/build
-/build/
-build/
-dist/
-docs/cache/
-cache/
-
-# ==============================================
-# CACHE & TEMPORARY FILES
-# ==============================================
-*.cache
-*.lock
-*.phar
-*.jar
-*.tmp
-*.swp
-*.swo
-*.stackdump
-*.exe
-*:Zone.Identifier
-v8-compile-cache-*
-.php-cs-fixer.cache
-.phpunit.result.cache
-
-# ==============================================
-# LOG FILES
-# ==============================================
-*.log
-error_log
-npm-debug.log*
-npm-debug.log
-yarn-error.log*
-lerna-debug.log*
-
-# ==============================================
-# LARAVEL SPECIFIC
-# ==============================================
-=======
 # Dependencies and packages
 /vendor/
 /node_modules/
@@ -88,7 +25,6 @@ error_log
 build/
 
 # Laravel specific
->>>>>>> 20edf4e0 (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -97,103 +33,6 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
-<<<<<<< HEAD
-.env.*
-!.env.example
-
-# ==============================================
-# ENVIRONMENT & CONFIGURATION
-# ==============================================
-Homestead.yaml
-Homestead.json
-/.vagrant
-/.idea
-.phpintel
-
-# ==============================================
-# GIT SPECIFIC
-# ==============================================
-.git-rewrite/
-.git-rewrite
-.git-blame-ignore-revs
-
-# ==============================================
-# SYSTEM FILES
-# ==============================================
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# ==============================================
-# BACKUP FILES
-# ==============================================
-*.old
-*.old1
-*.old2
-*.backup
-*.backup.*
-*.bak
-*.bakcup
-*.new
-
-# ==============================================
-# DEVELOPMENT TOOLS
-# ==============================================
-.windsurf/
-.cursor/
-.phpstorm.meta.php
-
-# ==============================================
-# DOCUMENTATION CACHE
-# ==============================================
-docs/phpstan/
-docs/cache/
-
-# ==============================================
-# OLD DIRECTORIES (LEGACY CLEANUP)
-# ==============================================
-resources/views/Components_old/
-resources/views/Components_old
-database/Migrations_old/
-database/Migrations_old
-database/Seeders_old/
-database/Seeders_old
-database/Factories_old/
-database/Factories_old
-database/Factories_
-database_old/
-database_old
-
-# ==============================================
-# MODULE SPECIFIC - USER
-# ==============================================
-# File di configurazione locale
-config/local.php
-config/development.php
-
-# Cache autenticazione
-storage/framework/cache/
-storage/framework/sessions/
-storage/framework/views/
-
-# File di test temporanei
-test_users.json
-user_test_data.csv
-
-# ==============================================
-# END OF USER .GITIGNORE
-# ==============================================
-
-# 🚫 File specifici del progetto
-*.fila2
-laravel
-public_html
-=======
-=======
 
 # Database directories
 database/Factories_
@@ -222,7 +61,6 @@ Homestead.json
 *.exe
 *:Zone.Identifier
 .DS_Store
->>>>>>> 20edf4e0 (.)
 # Dependencies
 vendor/
 node_modules/
@@ -249,6 +87,7 @@ docs/cache/
 *.old
 *.old1
 *.backup
+*.backup.*
 *.bak
 *.new
 
@@ -266,9 +105,6 @@ cache/
 
 # PHPStan documentation
 docs/phpstan/
-<<<<<<< HEAD
->>>>>>> 079c9da7 (.)
-=======
 
 # Old directories
 resources/views/Components_old
@@ -283,4 +119,3 @@ database/Migrations_old
 database/Seeders_old
 database/Factories_old
 database_old
->>>>>>> 20edf4e0 (.)

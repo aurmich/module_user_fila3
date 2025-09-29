@@ -18,11 +18,7 @@ use Webmozart\Assert\Assert;
 
 /**
  * Class Permission.
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> 079c9da7 (.)
  * Extends Spatie's Permission model to interact with the permission system.
  *
  * @property string                                                                    $id
@@ -128,7 +124,4 @@ class Permission extends SpatiePermission
         return app(\Modules\Xot\Actions\Factory\GetFactoryAction::class)->execute(static::class);
     }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 079c9da7 (.)

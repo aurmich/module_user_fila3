@@ -169,7 +169,7 @@ class LoginWidget extends XotBaseWidget
 
 ```blade
 {{-- Uso corretto nei layout --}}
-<x-pub_theme::forms.login-card 
+<x-pub_theme::blocks.forms.login-card 
     title="Accedi al portale"
     subtitle="Area riservata cittadini"
     widgetClass="\Modules\User\Filament\Widgets\Auth\LoginWidget"
@@ -195,11 +195,7 @@ class LoginWidget extends XotBaseWidget
 
 - [best-practices/filament-widgets.md](best-practices/filament-widgets.md)
 - [login_filament_widget_error.md](login_filament_widget_error.md)
-<<<<<<< HEAD
 - [../../Themes/Sixteen/docs/login-agid-correct-implementation.md](../../Themes/Sixteen/docs/login-agid-correct-implementation.md)
-=======
-- [../../Themes/Sixteen/project_docs/login-agid-correct-implementation.md](../../Themes/Sixteen/project_docs/login-agid-correct-implementation.md)
->>>>>>> 079c9da7 (.)
 
 ---
 

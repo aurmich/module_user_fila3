@@ -4,15 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\User\Contracts;
 
-<<<<<<< HEAD
-use Modules\User\Contracts\TeamContract;
-use Modules\User\Models\Role;
-use Modules\User\Models\Team;
-=======
 use Modules\User\Models\Team;
 use Modules\User\Contracts\TeamContract;
 use Modules\User\Models\Role;
->>>>>>> 079c9da7 (.)
 use Modules\Xot\Contracts\UserContract;
 
 /**
@@ -23,12 +17,7 @@ interface HasTeamsAndUserContract extends HasTeamsContract, UserContract
     /**
      * Ottiene il ruolo dell'utente nel team
      */
-<<<<<<< HEAD
-    #[\Override]
-    public function teamRole(TeamContract $team): null|Role;
-=======
     public function teamRole(TeamContract $team): ?Role;
->>>>>>> 079c9da7 (.)
 
     /**
      * Verifica se l'utente può rimuovere un membro dal team

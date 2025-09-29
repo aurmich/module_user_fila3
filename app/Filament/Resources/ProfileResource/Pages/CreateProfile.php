@@ -6,21 +6,9 @@ namespace Modules\User\Filament\Resources\ProfileResource\Pages;
 
 use Modules\User\Filament\Resources\ProfileResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
-<<<<<<< HEAD
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
-
-=======
-
-
-
 
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
-
-
-
-
->>>>>>> 079c9da7 (.)
 class CreateProfile extends \Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord
 {
     protected static string $resource = ProfileResource::class;

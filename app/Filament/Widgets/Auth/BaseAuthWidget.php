@@ -9,11 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 abstract class BaseAuthWidget extends Widget
 {
-<<<<<<< HEAD
-    public null|array $data = [];
-=======
     public ?array $data = [];
->>>>>>> 079c9da7 (.)
 
     public function mount(): void
     {

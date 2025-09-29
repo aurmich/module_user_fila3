@@ -11,26 +11,16 @@ use Modules\User\Models\User;
 
 /**
  * Membership Factory
-<<<<<<< HEAD
- *
- * Factory for creating Membership model instances for testing and seeding.
- *
-=======
  * 
  * Factory for creating Membership model instances for testing and seeding.
  * 
->>>>>>> 079c9da7 (.)
  * @extends Factory<Membership>
  */
 class MembershipFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 079c9da7 (.)
      * @var class-string<Membership>
      */
     protected $model = Membership::class;
@@ -58,11 +48,7 @@ class MembershipFactory extends Factory
      */
     public function forTeam(Team $team): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> 079c9da7 (.)
             'team_id' => $team->id,
         ]);
     }
@@ -75,11 +61,7 @@ class MembershipFactory extends Factory
      */
     public function forUser(User $user): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> 079c9da7 (.)
             'user_id' => $user->id,
         ]);
     }
@@ -91,11 +73,7 @@ class MembershipFactory extends Factory
      */
     public function admin(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> 079c9da7 (.)
             'role' => 'admin',
         ]);
     }
@@ -107,11 +85,7 @@ class MembershipFactory extends Factory
      */
     public function editor(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> 079c9da7 (.)
             'role' => 'editor',
         ]);
     }
@@ -123,11 +97,7 @@ class MembershipFactory extends Factory
      */
     public function member(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
         return $this->state(fn (array $attributes): array => [
->>>>>>> 079c9da7 (.)
             'role' => 'member',
         ]);
     }
@@ -139,16 +109,8 @@ class MembershipFactory extends Factory
      */
     public function viewer(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-            'role' => 'viewer',
-        ]);
-    }
-}
-=======
         return $this->state(fn (array $attributes): array => [
             'role' => 'viewer',
         ]);
     }
 }
->>>>>>> 079c9da7 (.)

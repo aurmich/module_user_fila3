@@ -36,19 +36,11 @@ class MyProfilePage extends Page implements HasForms
     // class MyProfilePage extends EditProfile
     use InteractsWithForms;
 
-<<<<<<< HEAD
-    public null|array $profileData = [];
-
-    public null|array $passwordData = [];
-
-    protected static null|string $navigationIcon = 'heroicon-o-document-text';
-=======
     public ?array $profileData = [];
 
     public ?array $passwordData = [];
 
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
->>>>>>> 079c9da7 (.)
 
     protected static string $view = 'user::filament.pages.my-profile';
 
@@ -77,12 +69,8 @@ class MyProfilePage extends Page implements HasForms
                     ->aside()
                     ->description('Update your account\'s profile information and email address.')
                     ->schema([
-<<<<<<< HEAD
-                        Forms\Components\TextInput::make('name')->required(),
-=======
                         Forms\Components\TextInput::make('name')
                             ->required(),
->>>>>>> 079c9da7 (.)
                         Forms\Components\TextInput::make('email')
                             ->email()
                             ->required()
@@ -105,23 +93,6 @@ class MyProfilePage extends Page implements HasForms
                             ->password()
                             ->required()
                             ->currentPassword(),
-<<<<<<< HEAD
-                        PasswordData::make()
-                            ->getPasswordFormComponent('new_password')
-                            ->dehydrateStateUsing(fn (string $value): string => Hash::make($value))
-                            ->live(debounce: 500),
-                        // ->same('passwordConfirmation')
-                        /*
-                         * Forms\Components\TextInput::make('password')
-                         * ->password()
-                         * ->required()
-                         * ->rule(Password::default())
-                         * ->autocomplete('new-password')
-                         * ->dehydrateStateUsing(fn ($state): string => Hash::make($state))
-                         * ->live(debounce: 500)
-                         * ->same('passwordConfirmation'),
-                         */
-=======
                         PasswordData::make()->getPasswordFormComponent('new_password')
                             ->dehydrateStateUsing(fn ($state): string => Hash::make($state))
                             ->live(debounce: 500)
@@ -137,7 +108,6 @@ class MyProfilePage extends Page implements HasForms
                             ->live(debounce: 500)
                             ->same('passwordConfirmation'),
                         */
->>>>>>> 079c9da7 (.)
                         Forms\Components\TextInput::make('passwordConfirmation')
                             ->password()
                             ->required()
@@ -153,15 +123,8 @@ class MyProfilePage extends Page implements HasForms
     {
         $user = Filament::auth()->user();
 
-<<<<<<< HEAD
-        if (!($user instanceof Model)) {
-            throw new \Exception(
-                'The authenticated user object must be an Eloquent model to allow the profile page to update it.',
-            );
-=======
         if (! $user instanceof Model) {
             throw new \Exception('The authenticated user object must be an Eloquent model to allow the profile page to update it.');
->>>>>>> 079c9da7 (.)
         }
 
         return $user;
@@ -177,11 +140,7 @@ class MyProfilePage extends Page implements HasForms
         return __('user::profile.my_profile');
     }
 
-<<<<<<< HEAD
-    public function getSubheading(): null|string
-=======
     public function getSubheading(): ?string
->>>>>>> 079c9da7 (.)
     {
         return __('user::profile.subheading') ?? null;
     }
@@ -203,19 +162,12 @@ class MyProfilePage extends Page implements HasForms
     public function getFormSchema(): array
     {
         return [
-<<<<<<< HEAD
-            Forms\Components\TextInput::make('name')->autofocus()->required(),
-            Forms\Components\TextInput::make('email')->required(),
-        ];
-
-=======
             Forms\Components\TextInput::make('name')
                 ->autofocus()
                 ->required(),
             Forms\Components\TextInput::make('email')
                 ->required(),
         ];
->>>>>>> 079c9da7 (.)
         // Nota: i seguenti commenti sono stati rimossi perché non sono applicabili al metodo getFormSchema()
         // ->statePath('data')
         // ->model(auth()->user());
@@ -245,18 +197,10 @@ class MyProfilePage extends Page implements HasForms
         }
 
         if (request()->hasSession() && array_key_exists('password', $data)) {
-<<<<<<< HEAD
-            request()
-                ->session()
-                ->put([
-                    'password_hash_' . Filament::getAuthGuard() => $data['password'],
-                ]);
-=======
             request()->session()->put([
                 'password_hash_'.Filament::getAuthGuard() => $data['password'],
             
             ]);
->>>>>>> 079c9da7 (.)
         }
 
         $this->editPasswordForm->fill();
@@ -283,31 +227,13 @@ class MyProfilePage extends Page implements HasForms
     protected function getFormActions(): array
     {
         return [
-<<<<<<< HEAD
-            Action::make('Update')->color('primary')->submit('Update'),
-=======
             Action::make('Update')
                 ->color('primary')
                 ->submit('Update'),
->>>>>>> 079c9da7 (.)
         ];
     }
 
     /*
-<<<<<<< HEAD
-     * public function update()
-     * {
-     * auth()->user()->update(
-     * $this->form->getState()
-     * );
-     *
-     * Notification::make()
-     * ->title('Profile updated!')
-     * ->success()
-     * ->send();
-     * }
-     */
-=======
     public function update()
     {
         auth()->user()->update(
@@ -320,31 +246,22 @@ class MyProfilePage extends Page implements HasForms
             ->send();
     }
     */
->>>>>>> 079c9da7 (.)
 
     protected function getUpdateProfileFormActions(): array
     {
         return [
-<<<<<<< HEAD
-            Action::make('updateProfileAction')->submit('editProfileForm'),
-=======
             Action::make('updateProfileAction')
 
                 ->submit('editProfileForm'),
->>>>>>> 079c9da7 (.)
         ];
     }
 
     protected function getUpdatePasswordFormActions(): array
     {
         return [
-<<<<<<< HEAD
-            Action::make('updatePasswordAction')->submit('editPasswordForm'),
-=======
             Action::make('updatePasswordAction')
 
                 ->submit('editPasswordForm'),
->>>>>>> 079c9da7 (.)
         ];
     }
 

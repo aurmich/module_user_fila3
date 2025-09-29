@@ -4,24 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Modules\User\Models\PasswordReset;
 use Modules\Xot\Contracts\UserContract;
-=======
-
->>>>>>> 079c9da7 (.)
-=======
-
-=======
-use Modules\Xot\Contracts\UserContract;
-use Modules\User\Models\PasswordReset;
->>>>>>> e5f94125 (.)
->>>>>>> 10cce5c4 (.)
-=======
-
->>>>>>> 8b2de289 (.)
 
 class PasswordResetPolicy extends UserBasePolicy
 {
@@ -38,23 +22,9 @@ class PasswordResetPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, PasswordReset $passwordReset): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return (
-            $user->hasPermissionTo('password-reset.view') ||
-            $user->email === $passwordReset->email ||
-            $user->hasRole('super-admin')
-        );
-=======
-=======
->>>>>>> 10cce5c4 (.)
-=======
->>>>>>> 8b2de289 (.)
-
+        return $user->hasPermissionTo('password-reset.view') ||
                $user->email === $passwordReset->email ||
                $user->hasRole('super-admin');
->>>>>>> 079c9da7 (.)
     }
 
     /**
@@ -68,46 +38,28 @@ class PasswordResetPolicy extends UserBasePolicy
     /**
      * Determine whether the user can update the model.
      */
-<<<<<<< HEAD
-    public function update(UserContract $user, PasswordReset $_passwordReset): bool
-    {
-        return $user->hasPermissionTo('password-reset.update') || $user->hasRole('super-admin');
-=======
     public function update(UserContract $user, PasswordReset $passwordReset): bool
     {
-
+        return $user->hasPermissionTo('password-reset.update') ||
                $user->hasRole('super-admin');
->>>>>>> 079c9da7 (.)
     }
 
     /**
      * Determine whether the user can delete the model.
      */
-<<<<<<< HEAD
-    public function delete(UserContract $user, PasswordReset $_passwordReset): bool
-    {
-        return $user->hasPermissionTo('password-reset.delete') || $user->hasRole('super-admin');
-=======
     public function delete(UserContract $user, PasswordReset $passwordReset): bool
     {
-
+        return $user->hasPermissionTo('password-reset.delete') ||
                $user->hasRole('super-admin');
->>>>>>> 079c9da7 (.)
     }
 
     /**
      * Determine whether the user can restore the model.
      */
-<<<<<<< HEAD
-    public function restore(UserContract $user, PasswordReset $_passwordReset): bool
-    {
-        return $user->hasPermissionTo('password-reset.restore') || $user->hasRole('super-admin');
-=======
     public function restore(UserContract $user, PasswordReset $passwordReset): bool
     {
-
+        return $user->hasPermissionTo('password-reset.restore') ||
                $user->hasRole('super-admin');
->>>>>>> 079c9da7 (.)
     }
 
     /**
@@ -115,17 +67,7 @@ class PasswordResetPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, PasswordReset $passwordReset): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return $user->hasPermissionTo('password-reset.force-delete') || $user->hasRole('super-admin');
-=======
-=======
->>>>>>> 10cce5c4 (.)
-=======
->>>>>>> 8b2de289 (.)
-
+        return $user->hasPermissionTo('password-reset.force-delete') ||
                $user->hasRole('super-admin');
->>>>>>> 079c9da7 (.)
     }
 }

@@ -10,11 +10,7 @@ use Modules\User\Models\OauthRefreshToken;
 
 /**
  * OauthRefreshToken Factory
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> 079c9da7 (.)
  * @extends Factory<OauthRefreshToken>
  */
 class OauthRefreshTokenFactory extends Factory
@@ -25,7 +21,6 @@ class OauthRefreshTokenFactory extends Factory
     {
         return [
             'id' => $this->faker->sha256(),
-<<<<<<< HEAD
             'access_token_id' => fn() => OauthAccessToken::create([
                 'id' => $this->faker->sha256(),
                 'user_id' => null,
@@ -35,9 +30,6 @@ class OauthRefreshTokenFactory extends Factory
                 'revoked' => false,
                 'expires_at' => $this->faker->dateTimeBetween('+1 month', '+6 months'),
             ])->id,
-=======
-            'access_token_id' => OauthAccessToken::factory(),
->>>>>>> 079c9da7 (.)
             'revoked' => $this->faker->boolean(5),
             'expires_at' => $this->faker->dateTimeBetween('+1 month', '+6 months'),
         ];

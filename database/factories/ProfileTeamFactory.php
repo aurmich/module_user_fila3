@@ -11,11 +11,7 @@ use Modules\User\Models\Team;
 
 /**
  * ProfileTeam Factory
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> 079c9da7 (.)
  * @extends Factory<ProfileTeam>
  */
 class ProfileTeamFactory extends Factory

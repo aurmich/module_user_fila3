@@ -19,10 +19,6 @@ class IsProviderConfiguredAction
      */
     public function execute(string $provider): bool
     {
-<<<<<<< HEAD
-        return config()->has('services.' . $provider);
-=======
         return config()->has('services.'.$provider);
->>>>>>> 079c9da7 (.)
     }
 }

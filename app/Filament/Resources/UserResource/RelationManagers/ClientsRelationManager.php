@@ -15,17 +15,6 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
->>>>>>> 079c9da7 (.)
 class ClientsRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'clients';
@@ -33,17 +22,6 @@ class ClientsRelationManager extends XotBaseRelationManager
     /**
      * @return array<string, \Filament\Forms\Components\Component>
      */
-<<<<<<< HEAD
-    #[\Override]
-    public function getFormSchema(): array
-    {
-        return [
-            'name' => TextInput::make('name')->required()->maxLength(255),
-        ];
-    }
-
-    #[\Override]
-=======
     public function getFormSchema(): array
     {
         return [
@@ -53,32 +31,10 @@ class ClientsRelationManager extends XotBaseRelationManager
         ];
     }
 
->>>>>>> 079c9da7 (.)
     public function table(Table $table): Table
     {
         return $table
             ->recordTitleAttribute('name')
-<<<<<<< HEAD
-            ->columns([
-                TextColumn::make('name'),
-            ])
-            ->filters([])
-            ->headerActions([
-                CreateAction::make(),
-            ])
-            ->actions([
-                EditAction::make(),
-                DeleteAction::make(),
-            ])
-            ->bulkActions([
-                BulkActionGroup::make([
-                    DeleteBulkAction::make(),
-                ]),
-            ])
-            ->emptyStateActions([
-                // {{ tableEmptyStateActions }}
-            ]);
-=======
             ->columns(
                 [
                     TextColumn::make('name'),
@@ -113,6 +69,5 @@ class ClientsRelationManager extends XotBaseRelationManager
                     // {{ tableEmptyStateActions }}
                 ]
             );
->>>>>>> 079c9da7 (.)
     }
 }

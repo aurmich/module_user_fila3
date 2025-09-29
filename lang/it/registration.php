@@ -9,10 +9,7 @@ return [
         'icon' => 'heroicon-o-user-plus',
         'sort' => 50,
     ],
-<<<<<<< HEAD
-=======
 
->>>>>>> 079c9da7 (.)
     'pages' => [
         'registration' => [
             'title' => 'Registrazione Utente',
@@ -25,10 +22,7 @@ return [
             'description' => 'Segui la procedura guidata per completare la registrazione',
         ],
     ],
-<<<<<<< HEAD
-=======
 
->>>>>>> 079c9da7 (.)
     'steps' => [
         'personal_info' => [
             'label' => 'Dati Personali',
@@ -91,10 +85,7 @@ return [
             'help' => 'Compila le informazioni necessarie per la pre-visita',
         ],
     ],
-<<<<<<< HEAD
-=======
 
->>>>>>> 079c9da7 (.)
     'fields' => [
         'name' => [
             'label' => 'Nome',
@@ -252,10 +243,7 @@ return [
             'help' => 'Eventuali annotazioni del team di moderazione',
         ],
     ],
-<<<<<<< HEAD
-=======
 
->>>>>>> 079c9da7 (.)
     'actions' => [
         'register' => [
             'label' => 'Registrati',
@@ -280,10 +268,7 @@ return [
             'error' => 'Errore durante il salvataggio della bozza',
         ],
     ],
-<<<<<<< HEAD
-=======
 
->>>>>>> 079c9da7 (.)
     'messages' => [
         'welcome' => 'Benvenuto nella procedura di registrazione',
         'step_completed' => 'Passaggio completato con successo',

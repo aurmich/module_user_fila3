@@ -26,27 +26,16 @@ class DeleteAccount extends Component
         if (!$user) {
             $this->dispatch('toast', [
                 'message' => 'Utente non trovato',
-<<<<<<< HEAD
-                'type' => 'error',
-=======
                 'type' => 'error'
->>>>>>> 079c9da7 (.)
             ]);
             return;
         }
 
         // Assicuriamoci che sia del tipo corretto per l'action
-<<<<<<< HEAD
-        if (!($user instanceof UserContract)) {
-            $this->dispatch('toast', [
-                'message' => 'Tipo di utente non supportato',
-                'type' => 'error',
-=======
         if (!$user instanceof UserContract) {
             $this->dispatch('toast', [
                 'message' => 'Tipo di utente non supportato',
                 'type' => 'error'
->>>>>>> 079c9da7 (.)
             ]);
             return;
         }
@@ -56,11 +45,7 @@ class DeleteAccount extends Component
         if (!$result['success']) {
             $this->dispatch('toast', [
                 'message' => $result['message'],
-<<<<<<< HEAD
-                'type' => 'error',
-=======
                 'type' => 'error'
->>>>>>> 079c9da7 (.)
             ]);
             $this->reset(['delete_confirm_password']);
             return;

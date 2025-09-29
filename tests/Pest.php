@@ -2,52 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-use Modules\User\Tests\TestCase;
-
-/*
- * |--------------------------------------------------------------------------
- * | Test Case
- * |--------------------------------------------------------------------------
- * |
- * | The closure you provide to your test functions is always bound to a specific PHPUnit test
- * | case class. By default, that class is "PHPUnit\Framework\TestCase". Of course, you may
- * | need to change it using the "pest()" function to bind a different classes or traits.
- * |
- */
-
-pest()->extend(TestCase::class)->in('Feature', 'Unit');
-
-/*
- * |--------------------------------------------------------------------------
- * | Expectations
- * |--------------------------------------------------------------------------
- * |
- * | When you're writing tests, you often need to check that values meet certain conditions. The
- * | "expect()" function gives you access to a set of "expectations" methods that you can use
- * | to assert different things. Of course, you may extend the Expectation API at any time.
- * |
- */
-
-expect()->extend('toBeUser', fn() => $this->toBeInstanceOf(\Modules\User\Models\User::class));
-
-expect()->extend('toBeTeam', fn() => $this->toBeInstanceOf(\Modules\User\Models\Team::class));
-
-expect()->extend('toBeProfile', fn() => $this->toBeInstanceOf(\Modules\User\Models\Profile::class));
-
-/*
- * |--------------------------------------------------------------------------
- * | Functions
- * |--------------------------------------------------------------------------
- * |
- * | While Pest is very powerful out-of-the-box, you may have some testing code specific to your
- * | project that you don't want to repeat in every file. Here you can also expose helpers as
- * | global functions to help you to reduce the number of lines of code in your test files.
- * |
- */
-=======
-use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Foundation\Testing\WithFaker;
 use Modules\User\Tests\TestCase;
 
 /*
@@ -61,12 +15,7 @@ use Modules\User\Tests\TestCase;
 |
 */
 
-uses(
-    TestCase::class,
-    DatabaseTransactions::class, // ✅ CORRETTO - Rollback automatico
-    WithFaker::class,
-)->in('Feature', 'Unit');
-
+pest()->extend(TestCase::class)
     ->in('Feature', 'Unit');
 
 /*
@@ -74,7 +23,9 @@ uses(
 | Expectations
 |--------------------------------------------------------------------------
 |
-| Here you may define your custom expectations to be used in your tests.
+| When you're writing tests, you often need to check that values meet certain conditions. The
+| "expect()" function gives you access to a set of "expectations" methods that you can use
+| to assert different things. Of course, you may extend the Expectation API at any time.
 |
 */
 
@@ -82,20 +33,12 @@ expect()->extend('toBeUser', function () {
     return $this->toBeInstanceOf(\Modules\User\Models\User::class);
 });
 
-expect()->extend('toHaveProperty', function (string $property) {
-    return expect(property_exists($this->value, $property))->toBeTrue();
+expect()->extend('toBeTeam', function () {
+    return $this->toBeInstanceOf(\Modules\User\Models\Team::class);
 });
 
-expect()->extend('toHaveRole', function (string $roleName) {
-    return expect($this->value->hasRole($roleName))->toBeTrue();
-});
-
-expect()->extend('toHavePermission', function (string $permissionName) {
-    return expect($this->value->hasPermissionTo($permissionName))->toBeTrue();
-});
-
-expect()->extend('toHaveTeamRole', function (\Modules\User\Models\Team $team, string $role) {
-    return expect($this->value->hasTeamRole($team, $role))->toBeTrue();
+expect()->extend('toBeProfile', function () {
+    return $this->toBeInstanceOf(\Modules\User\Models\Profile::class);
 });
 
 /*
@@ -103,10 +46,11 @@ expect()->extend('toHaveTeamRole', function (\Modules\User\Models\Team $team, st
 | Functions
 |--------------------------------------------------------------------------
 |
-| Here you may define your custom helper functions to be used in your tests.
+| While Pest is very powerful out-of-the-box, you may have some testing code specific to your
+| project that you don't want to repeat in every file. Here you can also expose helpers as
+| global functions to help you to reduce the number of lines of code in your test files.
 |
 */
->>>>>>> 079c9da7 (.)
 
 function createUser(array $attributes = []): \Modules\User\Models\User
 {
@@ -118,19 +62,6 @@ function makeUser(array $attributes = []): \Modules\User\Models\User
     return \Modules\User\Models\User::factory()->make($attributes);
 }
 
-<<<<<<< HEAD
-=======
-function createRole(array $attributes = []): \Modules\User\Models\Role
-{
-    return \Modules\User\Models\Role::factory()->create($attributes);
-}
-
-function createPermission(array $attributes = []): \Modules\User\Models\Permission
-{
-    return \Modules\User\Models\Permission::factory()->create($attributes);
-}
-
->>>>>>> 079c9da7 (.)
 function createTeam(array $attributes = []): \Modules\User\Models\Team
 {
     return \Modules\User\Models\Team::factory()->create($attributes);
@@ -140,16 +71,3 @@ function createProfile(array $attributes = []): \Modules\User\Models\Profile
 {
     return \Modules\User\Models\Profile::factory()->create($attributes);
 }
-<<<<<<< HEAD
-=======
-
-function createTenant(array $attributes = []): \Modules\User\Models\Tenant
-{
-    return \Modules\User\Models\Tenant::factory()->create($attributes);
-}
-
-function createAuthenticationLog(array $attributes = []): \Modules\User\Models\AuthenticationLog
-{
-    return \Modules\User\Models\AuthenticationLog::factory()->create($attributes);
-}
->>>>>>> 079c9da7 (.)

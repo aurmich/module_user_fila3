@@ -15,28 +15,6 @@ use Modules\User\Filament\Resources\PermissionResource\Pages\CreatePermission;
 use Modules\User\Filament\Resources\PermissionResource\Pages\EditPermission;
 use Modules\User\Filament\Resources\PermissionResource\Pages\ListPermissions;
 use Modules\User\Models\Permission;
-<<<<<<< HEAD
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
-use Modules\Xot\Filament\Resources\XotBaseResource;
-
-class PermissionResource extends XotBaseResource
-{
-    protected static null|string $navigationIcon = 'heroicon-o-lock-closed';
-
-    protected static null|string $model = Permission::class;
-
-    #[\Override]
-    public static function getFormSchema(): array
-    {
-        return [
-            'name' => TextInput::make('name')->required()->maxLength(255),
-            'guard_name' => TextInput::make('guard_name')->required()->maxLength(255),
-            'active' => Toggle::make('active')->required(),
-        ];
-    }
-
-    #[\Override]
-=======
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
@@ -60,16 +38,11 @@ class PermissionResource extends XotBaseResource
         ];
     }
 
->>>>>>> 079c9da7 (.)
     public static function getRelations(): array
     {
         return [];
     }
 
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> 079c9da7 (.)
     public static function getPages(): array
     {
         return [

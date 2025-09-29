@@ -1,22 +1,9 @@
 <?php
-<<<<<<< HEAD
-
-=======
->>>>>>> 079c9da7 (.)
 declare(strict_types=1);
 
 namespace Modules\User\Filament\Widgets\Auth;
 
 use Filament\Forms;
-<<<<<<< HEAD
-use Filament\Forms\ComponentContainer;
-use Filament\Forms\Form;
-use Illuminate\Support\Facades\Auth;
-use Modules\Xot\Filament\Widgets\XotBaseWidget;
-
-/**
- *
-=======
 use Filament\Forms\Form;
 use Illuminate\Support\Facades\Auth;
 use Filament\Forms\ComponentContainer;
@@ -24,7 +11,6 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 /**
  * 
->>>>>>> 079c9da7 (.)
  * LoginWidget: Widget di login conforme alle regole Windsurf/Xot.
  * - Estende XotBaseWidget
  * - Usa solo componenti Filament importati
@@ -36,32 +22,12 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
  */
 class LoginWidget extends XotBaseWidget
 {
-<<<<<<< HEAD
-    public null|array $data = [];
-=======
     public ?array $data = [];
->>>>>>> 079c9da7 (.)
 
     /**
      * Blade view del widget nel modulo User.
      * IMPORTANTE: quando il widget viene usato con @livewire() direttamente nelle Blade,
      * il path deve essere senza il namespace del modulo (senza "user::").
-<<<<<<< HEAD
-     *
-     * @see \Modules\User\docs\WIDGETS_STRUCTURE.md - Sezione B
-     * @var view-string
-     * @phpstan-ignore property.defaultValue
-     */
-    protected static string $view = 'pub_theme::filament.widgets.auth.login';
-
-    #[\Override]
-    public function getFormSchema(): array
-    {
-        return [
-            Forms\Components\TextInput::make('email')->email()->required(),
-            Forms\Components\TextInput::make('password')->password()->required(),
-            Forms\Components\Checkbox::make('remember'),
-=======
      * 
      * @see \Modules\User\docs\WIDGETS_STRUCTURE.md - Sezione B
      * @var view-string
@@ -82,7 +48,6 @@ class LoginWidget extends XotBaseWidget
 
             Forms\Components\Checkbox::make('remember')
                 ,
->>>>>>> 079c9da7 (.)
         ];
     }
 
@@ -94,11 +59,7 @@ class LoginWidget extends XotBaseWidget
             'email' => is_string($data['email'] ?? null) ? $data['email'] : '',
             'password' => is_string($data['password'] ?? null) ? $data['password'] : '',
         ];
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 079c9da7 (.)
         if (Auth::attempt($credentials)) {
             session()->regenerate();
             redirect()->intended('/');

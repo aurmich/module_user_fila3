@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> 079c9da7 (.)
 <div>
     <form wire:submit="login" class="space-y-6">
         <!-- Email -->

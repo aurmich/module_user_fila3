@@ -1,13 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-use App\Models\User;
-use Filament\Forms\Components\Checkbox;
-use Filament\Forms\Components\TextInput;
-=======
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -15,36 +7,19 @@ use Illuminate\Auth\Events\Registered;
 use Livewire\Volt\Component;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Checkbox;
->>>>>>> 079c9da7 (.)
 use Filament\Forms\Components\Wizard;
 use Filament\Forms\Components\Wizard\Step;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Form;
-<<<<<<< HEAD
-use Illuminate\Auth\Events\Registered;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\HtmlString;
-use Livewire\Attributes\Validate;
-use Livewire\Volt\Component;
-
-use function Laravel\Folio\middleware;
-use function Laravel\Folio\name;
-=======
 use Illuminate\Support\HtmlString;
 use Livewire\Attributes\Validate;
 use function Laravel\Folio\{middleware, name};
->>>>>>> 079c9da7 (.)
 
 middleware(['guest']);
 name('register');
 
-<<<<<<< HEAD
-new class extends Component {
-=======
 new class extends Component
 {
->>>>>>> 079c9da7 (.)
     #[Validate('required')]
     public $name = '';
 

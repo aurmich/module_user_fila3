@@ -23,11 +23,7 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
  */
 class PasswordResetWidget extends XotBaseWidget
 {
-<<<<<<< HEAD
-    public null|array $data = [];
-=======
     public ?array $data = [];
->>>>>>> 079c9da7 (.)
     public bool $emailSent = false;
 
     /**
@@ -38,10 +34,6 @@ class PasswordResetWidget extends XotBaseWidget
     /**
      * Get the form schema for password reset.
      */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> 079c9da7 (.)
     public function getFormSchema(): array
     {
         return [
@@ -51,18 +43,6 @@ class PasswordResetWidget extends XotBaseWidget
                 ->autocomplete('email')
                 ->maxLength(255)
                 ->extraInputAttributes(['class' => 'text-center']),
-<<<<<<< HEAD
-            'error_display' => Forms\Components\Placeholder::make('error_display')
-                ->label('')
-                ->content(function ($_get) {
-                    $error = Session::get('error');
-
-                    if ($error && is_string($error)) {
-                        $str =
-                            '<div class="text-red-600 font-medium bg-red-50 p-3 rounded-md border border-red-200">' .
-                            $error .
-                            '</div>';
-=======
 
             'error_display' => Forms\Components\Placeholder::make('error_display')
                 ->label('')
@@ -71,7 +51,6 @@ class PasswordResetWidget extends XotBaseWidget
 
                     if ($error && is_string($error)) {
                         $str = '<div class="text-red-600 font-medium bg-red-50 p-3 rounded-md border border-red-200">'.$error.'</div>';
->>>>>>> 079c9da7 (.)
 
                         return new HtmlString($str);
                     }
@@ -108,28 +87,13 @@ class PasswordResetWidget extends XotBaseWidget
             // Clear the form
             $this->form->fill();
         } else {
-<<<<<<< HEAD
-            Session::flash('error', trans('user::errors.' . $response . '.label'));
-=======
             Session::flash('error', trans('user::errors.'.$response.'.label'));
->>>>>>> 079c9da7 (.)
             Notification::make()
                 ->title(__('user::auth.password_reset.email_failed.title'))
                 ->body(trans($response))
                 ->danger()
                 ->send();
         }
-<<<<<<< HEAD
-
-        /*} catch (\Exception $e) {
-         * Notification::make()
-         * ->title(__('user::auth.password_reset.email_failed.title'))
-         * ->body(__('user::auth.password_reset.email_failed.generic'))
-         * ->danger()
-         * ->send();
-         * }
-         */
-=======
         /*} catch (\Exception $e) {
             Notification::make()
                 ->title(__('user::auth.password_reset.email_failed.title'))
@@ -138,7 +102,6 @@ class PasswordResetWidget extends XotBaseWidget
                 ->send();
         }
                 */
->>>>>>> 079c9da7 (.)
     }
 
     /**

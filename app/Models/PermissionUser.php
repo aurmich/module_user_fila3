@@ -14,10 +14,4 @@ namespace Modules\User\Models;
  * @mixin IdeHelperPermissionUser
  * @mixin \Eloquent
  */
-<<<<<<< HEAD
-class PermissionUser extends ModelHasPermission
-{
-}
-=======
 class PermissionUser extends ModelHasPermission {}
->>>>>>> 079c9da7 (.)

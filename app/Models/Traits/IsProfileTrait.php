@@ -63,17 +63,10 @@ trait IsProfileTrait
      * Utilizza prima i dati del profilo, altrimenti ricade sul nome dell'utente.
      *
      * @param string|null $value Il valore attuale dell'attributo
-<<<<<<< HEAD
-     *
-     * @return string|null Il nome completo dell'utente
-     */
-    public function getFullNameAttribute(null|string $value): null|string
-=======
      * 
      * @return string|null Il nome completo dell'utente
      */
     public function getFullNameAttribute(?string $value): ?string
->>>>>>> 079c9da7 (.)
     {
         if ($value !== null) {
             return $value;
@@ -97,17 +90,10 @@ trait IsProfileTrait
      * Se non presente nel profilo, lo recupera dall'utente collegato.
      *
      * @param string|null $value Il valore attuale dell'attributo
-<<<<<<< HEAD
-     *
-     * @return string|null Il nome dell'utente
-     */
-    public function getFirstNameAttribute(null|string $value): null|string
-=======
      * 
      * @return string|null Il nome dell'utente
      */
     public function getFirstNameAttribute(?string $value): ?string
->>>>>>> 079c9da7 (.)
     {
         if ($value !== null) {
             return $value;
@@ -132,17 +118,10 @@ trait IsProfileTrait
      * Se non presente nel profilo, lo recupera dall'utente collegato.
      *
      * @param string|null $value Il valore attuale dell'attributo
-<<<<<<< HEAD
-     *
-     * @return string|null Il cognome dell'utente
-     */
-    public function getLastNameAttribute(null|string $value): null|string
-=======
      * 
      * @return string|null Il cognome dell'utente
      */
     public function getLastNameAttribute(?string $value): ?string
->>>>>>> 079c9da7 (.)
     {
         if ($value !== null) {
             return $value;
@@ -196,11 +175,7 @@ trait IsProfileTrait
      * Se l'utente non è super-admin, assegna super-admin e rimuove negate-super-admin.
      *
      * @throws \Exception Se l'utente non è disponibile
-<<<<<<< HEAD
-     *
-=======
      * 
->>>>>>> 079c9da7 (.)
      * @return void
      */
     public function toggleSuperAdmin(): void
@@ -295,11 +270,6 @@ trait IsProfileTrait
         return $tokens;
     }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 079c9da7 (.)
     /**
      * Get the user's user_name.
      * Ottiene il nome utente dal modello utente collegato.
@@ -308,15 +278,6 @@ trait IsProfileTrait
      */
     protected function userName(): Attribute
     {
-<<<<<<< HEAD
-        return Attribute::make(get: function (): null|string {
-            $user = $this->user;
-            if ($user === null) {
-                return null;
-            }
-            return $user->name;
-        });
-=======
         return Attribute::make(
             get: function (): ?string {
                 $user = $this->user;
@@ -326,7 +287,6 @@ trait IsProfileTrait
                 return $user->name;
             }
         );
->>>>>>> 079c9da7 (.)
     }
 
     /**
@@ -337,13 +297,6 @@ trait IsProfileTrait
      */
     protected function avatar(): Attribute
     {
-<<<<<<< HEAD
-        return Attribute::make(get: function (): string {
-            $value = $this->getFirstMediaUrl('avatar');
-
-            return $value;
-        });
-=======
         return Attribute::make(
             get: function (): string {
                 $value = $this->getFirstMediaUrl('avatar');
@@ -351,6 +304,5 @@ trait IsProfileTrait
                 return $value;
             }
         );
->>>>>>> 079c9da7 (.)
     }
 }

@@ -7,21 +7,9 @@ namespace Modules\User\Filament\Resources\TeamResource\Pages;
 use Filament\Actions\DeleteAction;
 use Filament\Pages\Actions\ViewAction;
 use Modules\User\Filament\Resources\TeamResource;
-<<<<<<< HEAD
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
-
-=======
-
-
-
 
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
-
-
-
-
->>>>>>> 079c9da7 (.)
 class EditTeam extends \Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord
 {
     // //

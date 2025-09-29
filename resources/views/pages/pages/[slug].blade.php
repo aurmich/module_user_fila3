@@ -1,23 +1,9 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-use Illuminate\Support\Arr;
-use Illuminate\View\View;
-use Modules\Cms\Models\Page;
-
-use function Laravel\Folio\middleware;
-use function Laravel\Folio\name;
-use function Laravel\Folio\render;
-use function Laravel\Folio\withTrashed;
-=======
 use Modules\Cms\Models\Page;
 use Illuminate\Support\Arr;
 use Illuminate\View\View;
 use function Laravel\Folio\{withTrashed,middleware, name,render};
->>>>>>> 079c9da7 (.)
 
 withTrashed();
 name('page_slug.view');
@@ -28,17 +14,6 @@ render(function (View $view, string $slug) {
     $page = Page::firstWhere(['slug' => $slug]);
 
     /*
-<<<<<<< HEAD
-     * if (!$page) {
-     * abort(404);
-     * // Prova a cercare la pagina nella lingua predefinita
-     * $page = Page::firstWhere(['slug' => $slug, 'locale' => config('app.fallback_locale', 'en')]);
-     * }
-     */
-    return $view->with('page', $page);
-});
-
-=======
     if (!$page) {
         abort(404);
         // Prova a cercare la pagina nella lingua predefinita
@@ -49,7 +24,6 @@ render(function (View $view, string $slug) {
 });
 
 
->>>>>>> 079c9da7 (.)
 ?>
 <x-layouts.marketing>
 

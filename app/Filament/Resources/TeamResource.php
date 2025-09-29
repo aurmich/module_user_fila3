@@ -15,19 +15,12 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class TeamResource extends XotBaseResource
 {
-<<<<<<< HEAD
-=======
     
->>>>>>> 079c9da7 (.)
     /**
      * Get the model class name for this resource.
      *
      * @return class-string<\Illuminate\Database\Eloquent\Model>
      */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> 079c9da7 (.)
     public static function getModel(): string
     {
         $xot = XotData::make();
@@ -36,17 +29,6 @@ class TeamResource extends XotBaseResource
         return $xot->getTeamClass();
     }
 
-<<<<<<< HEAD
-    #[\Override]
-    public static function getFormSchema(): array
-    {
-        return [
-            'name' => TextInput::make('name')->required()->maxLength(255),
-            'display_name' => TextInput::make('display_name')->maxLength(255),
-            'description' => TextInput::make('description')->maxLength(255),
-        ];
-    }
-=======
     public static function getFormSchema(): array
     {
         return [
@@ -61,5 +43,4 @@ class TeamResource extends XotBaseResource
     }
 
    
->>>>>>> 079c9da7 (.)
 }

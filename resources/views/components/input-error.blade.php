@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> 079c9da7 (.)
 @props(['messages'])
 
 @if ($messages)
@@ -14,8 +6,4 @@ declare(strict_types=1);
             <li>{{ $message }}</li>
         @endforeach
     </ul>
-<<<<<<< HEAD
-@endif
-=======
 @endif 
->>>>>>> 079c9da7 (.)

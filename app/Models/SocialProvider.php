@@ -79,10 +79,7 @@ class SocialProvider extends BaseModel
         'active' => 'boolean',
         'socialite' => 'boolean',
         'svg' => 'string',
-<<<<<<< HEAD
-=======
 
->>>>>>> 079c9da7 (.)
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
         'created_by' => 'string',
@@ -95,10 +92,6 @@ class SocialProvider extends BaseModel
     }
 
     /** @return array<string, string> */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> 079c9da7 (.)
     protected function casts(): array
     {
         return [

@@ -2,21 +2,15 @@
 
 ## Panoramica
 
-<<<<<<< HEAD
 Il widget di registrazione del dottore (`RegistrationWidget.php`) è un componente fondamentale nel processo di registrazione degli odontoiatri in . Questo documento descrive la sua implementazione corretta e come deve essere integrato con il sistema di gestione degli stati tramite `spatie/laravel-model-states`.
-=======
->>>>>>> 079c9da7 (.)
 Il widget di registrazione del dottore (`RegistrationWidget.php`) è un componente fondamentale nel processo di registrazione degli odontoiatri in SaluteOra. Questo documento descrive la sua implementazione corretta e come deve essere integrato con il sistema di gestione degli stati tramite `spatie/laravel-model-states`.
 
 ## Posizione del File
 
 ```
-<<<<<<< HEAD
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php
 /var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php
-=======
->>>>>>> 079c9da7 (.)
 /var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php
 ```
 
@@ -201,11 +195,8 @@ class MailTemplatesTableSeeder extends Seeder
             ],
             [
                 'subject' => [
-<<<<<<< HEAD
                     'it' => 'Registrazione in attesa di moderazione - ',
                     'en' => 'Registration pending moderation - '
-=======
->>>>>>> 079c9da7 (.)
                     'it' => 'Registrazione in attesa di moderazione - SaluteOra',
                     'en' => 'Registration pending moderation - SaluteOra'
                 ],
@@ -213,14 +204,11 @@ class MailTemplatesTableSeeder extends Seeder
                     'it' => '<p>Gentile {{ full_name }},</p>
 <p>La tua richiesta di registrazione è stata ricevuta e sarà esaminata dal nostro team.</p>
 <p>Riceverai un\'email quando la tua registrazione sarà stata moderata.</p>
-<<<<<<< HEAD
 <p>Cordiali saluti,<br>Il team di </p>',
                     'en' => '<p>Dear {{ full_name }},</p>
 <p>Your registration request has been received and will be reviewed by our team.</p>
 <p>You will receive an email when your registration has been moderated.</p>
 <p>Best regards,<br>The  Team</p>'
-=======
->>>>>>> 079c9da7 (.)
 <p>Cordiali saluti,<br>Il team di SaluteOra</p>',
                     'en' => '<p>Dear {{ full_name }},</p>
 <p>Your registration request has been received and will be reviewed by our team.</p>
@@ -235,10 +223,7 @@ La tua richiesta di registrazione è stata ricevuta e sarà esaminata dal nostro
 Riceverai un\'email quando la tua registrazione sarà stata moderata.
 
 Cordiali saluti,
-<<<<<<< HEAD
 Il team di ',
-=======
->>>>>>> 079c9da7 (.)
 Il team di SaluteOra',
                     'en' => 'Dear {{ full_name }},
 
@@ -247,10 +232,7 @@ Your registration request has been received and will be reviewed by our team.
 You will receive an email when your registration has been moderated.
 
 Best regards,
-<<<<<<< HEAD
 The  Team'
-=======
->>>>>>> 079c9da7 (.)
 The SaluteOra Team'
                 ]
             ]
@@ -271,16 +253,11 @@ The SaluteOra Team'
 
 ## Collegamenti Bidirezionali
 
-<<<<<<< HEAD
 - [Email Doctor Registration](/var/www/html/_bases/base_techplanner_fila3_mono/docs/email-doctor-registration.md)
 - [Registrazione Odontoiatra](/var/www/html/_bases/base_techplanner_fila3_mono/docs/roadmap_frontoffice/13-registrazione-odontoiatra.md)
 - [DoctorResource](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Patient/app/Filament/Resources/DoctorResource.php)
 - [RegistrationWidget](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php)
 - [Email Doctor Registration](/var/www/html/saluteora/docs/email-doctor-registration.md)
 - [Registrazione Odontoiatra](/var/www/html/saluteora/docs/roadmap_frontoffice/13-registrazione-odontoiatra.md)
-=======
-- [Email Doctor Registration](/var/www/html/saluteora/project_docs/email-doctor-registration.md)
-- [Registrazione Odontoiatra](/var/www/html/saluteora/project_docs/roadmap_frontoffice/13-registrazione-odontoiatra.md)
->>>>>>> 079c9da7 (.)
 - [DoctorResource](/var/www/html/saluteora/laravel/Modules/Patient/app/Filament/Resources/DoctorResource.php)
 - [RegistrationWidget](/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php)

@@ -9,21 +9,9 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Modules\User\Filament\Resources\RoleResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
-<<<<<<< HEAD
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
-
-=======
-
-
-
 
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
-
-
-
-
->>>>>>> 079c9da7 (.)
 class CreateRole extends \Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord
 {
     // //
@@ -33,23 +21,10 @@ class CreateRole extends \Modules\Xot\Filament\Resources\Pages\XotBaseCreateReco
 
     protected function mutateFormDataBeforeCreate(array $data): array
     {
-<<<<<<< HEAD
-        $this->permissions = collect($data)
-            ->filter(
-                static fn($_permission, $key): bool => (
-                    !in_array($key, ['name', 'guard_name', 'select_all'], false) && Str::contains($key, '_')
-                ),
-            )
-            ->keys();
-
-        $res = Arr::only($data, ['name', 'guard_name', 'team_id']);
-        if (!isset($res['team_id'])) {
-=======
         $this->permissions = collect($data)->filter(static fn ($permission, $key): bool => ! in_array($key, ['name', 'guard_name', 'select_all'], false) && Str::contains($key, '_'))->keys();
 
         $res = Arr::only($data, ['name', 'guard_name', 'team_id']);
         if (! isset($res['team_id'])) {
->>>>>>> 079c9da7 (.)
             $res['team_id'] = null;
         }
 
@@ -58,22 +33,6 @@ class CreateRole extends \Modules\Xot\Filament\Resources\Pages\XotBaseCreateReco
 
     /*
      *  Modules\User\Filament\Resources\RoleResource\Pages\CreateRole::afterCreate does not exist.
-<<<<<<< HEAD
-     *
-     * private function afterCreate(): void {
-     * $permissionModels = collect();
-     * $this->permissions->each(function ($permission) use ($permissionModels): void {
-     * $permissionModels->push(Utils::getPermissionModel()::firstOrCreate([
-     *
-     * 'name' => $permission,
-     * 'guard_name' => $this->data['guard_name'],
-     * ]));
-     * });
-     *
-     * $this->record->syncPermissions($permissionModels);
-     * }
-     */
-=======
 
     private function afterCreate(): void {
         $permissionModels = collect();
@@ -88,5 +47,4 @@ class CreateRole extends \Modules\Xot\Filament\Resources\Pages\XotBaseCreateReco
         $this->record->syncPermissions($permissionModels);
     }
     */
->>>>>>> 079c9da7 (.)
 }

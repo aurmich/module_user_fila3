@@ -1,20 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-return [
-    'actions' => [
-        'view' => [
-            'label' => 'view',
-        ],
-        'delete' => [
-            'label' => 'delete',
-        ],
-    ],
-];
-=======
 return array (
   'actions' => 
   array (
@@ -28,4 +13,3 @@ return array (
     ),
   ),
 );
->>>>>>> 079c9da7 (.)

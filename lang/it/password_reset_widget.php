@@ -1,19 +1,4 @@
 <?php
-<<<<<<< HEAD
-
-declare(strict_types=1);
-
-return [
-    'fields' => [
-        'email' => [
-            'label' => 'email',
-            'placeholder' => 'email',
-            'helper_text' => '',
-            'description' => 'email',
-        ],
-    ],
-];
-=======
 declare(strict_types=1);
 
 return array (
@@ -28,4 +13,3 @@ return array (
     ),
   ),
 );
->>>>>>> 079c9da7 (.)

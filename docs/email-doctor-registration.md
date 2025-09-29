@@ -2,10 +2,7 @@
 
 ## Panoramica del Processo
 
-<<<<<<< HEAD
 Nel sistema , l'invio dell'email al dottore con il link per continuare la registrazione è un passaggio cruciale che avviene dopo la moderazione della richiesta iniziale. Questo documento descrive in dettaglio dove e come avviene questo processo utilizzando `SpatieEmail` e `spatie/laravel-model-states`.
-=======
->>>>>>> 079c9da7 (.)
 Nel sistema SaluteOra, l'invio dell'email al dottore con il link per continuare la registrazione è un passaggio cruciale che avviene dopo la moderazione della richiesta iniziale. Questo documento descrive in dettaglio dove e come avviene questo processo utilizzando `SpatieEmail` e `spatie/laravel-model-states`.
 
 ## Architettura del Sistema
@@ -108,11 +105,8 @@ MailTemplate::firstOrCreate(
     // Valori da inserire se non viene trovato un record corrispondente
     [
         'subject' => [
-<<<<<<< HEAD
             'it' => 'Registrazione {{ status }} - ',
             'en' => 'Registration {{ status }} - '
-=======
->>>>>>> 079c9da7 (.)
             'it' => 'Registrazione {{ status }} - SaluteOra',
             'en' => 'Registration {{ status }} - SaluteOra'
         ],
@@ -124,10 +118,7 @@ MailTemplate::firstOrCreate(
 {% else %}
 <p>{{ rejection_reason }}</p>
 {% endif %}
-<<<<<<< HEAD
 <p>Cordiali saluti,<br>Il team di </p>',
-=======
->>>>>>> 079c9da7 (.)
 <p>Cordiali saluti,<br>Il team di SaluteOra</p>',
             'en' => '<p>Dear {{ full_name }},</p>
 <p>Your registration request has been {{ status_text_en }}.</p>
@@ -136,10 +127,7 @@ MailTemplate::firstOrCreate(
 {% else %}
 <p>{{ rejection_reason_en }}</p>
 {% endif %}
-<<<<<<< HEAD
 <p>Best regards,<br>The  Team</p>'
-=======
->>>>>>> 079c9da7 (.)
 <p>Best regards,<br>The SaluteOra Team</p>'
         ],
         'text_template' => [
@@ -154,10 +142,7 @@ Per continuare la registrazione, visita il seguente link: {{ continue_url }}
 {% endif %}
 
 Cordiali saluti,
-<<<<<<< HEAD
 Il team di ',
-=======
->>>>>>> 079c9da7 (.)
 Il team di SaluteOra',
             'en' => 'Dear {{ full_name }},
 
@@ -170,10 +155,7 @@ To continue with your registration, visit the following link: {{ continue_url }}
 {% endif %}
 
 Best regards,
-<<<<<<< HEAD
 The  Team'
-=======
->>>>>>> 079c9da7 (.)
 The SaluteOra Team'
         ]
     ]
@@ -301,7 +283,6 @@ class MailTemplatesTableSeeder extends Seeder
             // Valori da inserire se non trovato
             [
                 'subject' => [
-<<<<<<< HEAD
                     'it' => 'Registrazione {{ status }} - ',
                     'en' => 'Registration {{ status }} - '
                 ],
@@ -312,8 +293,6 @@ class MailTemplatesTableSeeder extends Seeder
                 'text_template' => [
                     'it' => 'Gentile {{ full_name }},\n\nLa tua richiesta di registrazione è stata {{ status_text }}.\n\n{% if is_approved %}\nPer continuare la registrazione, visita il seguente link: {{ continue_url }}\n{% else %}\n{{ rejection_reason }}\n{% endif %}\n\nCordiali saluti,\nIl team di ',
                     'en' => 'Dear {{ full_name }},\n\nYour registration request has been {{ status_text_en }}.\n\n{% if is_approved %}\nTo continue with your registration, visit the following link: {{ continue_url }}\n{% else %}\n{{ rejection_reason_en }}\n{% endif %}\n\nBest regards,\nThe  Team'
-=======
->>>>>>> 079c9da7 (.)
                     'it' => 'Registrazione {{ status }} - SaluteOra',
                     'en' => 'Registration {{ status }} - SaluteOra'
                 ],
@@ -381,12 +360,9 @@ Questo URL viene incluso nell'email solo se la moderazione è stata approvata.
 
 Il template dell'email si trova in:
 ```
-<<<<<<< HEAD
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Patient/resources/views/emails/doctor-registration-moderated.blade.php
 /var/www/html/saluteora/laravel/Modules/Patient/resources/views/emails/doctor-registration-moderated.blade.php
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Patient/resources/views/emails/doctor-registration-moderated.blade.php
-=======
->>>>>>> 079c9da7 (.)
 /var/www/html/saluteora/laravel/Modules/Patient/resources/views/emails/doctor-registration-moderated.blade.php
 ```
 
@@ -442,12 +418,9 @@ Il template visualizza:
 Il processo di registrazione iniziale del dottore utilizza il widget di registrazione generico che si trova in:
 
 ```
-<<<<<<< HEAD
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php
 /var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php
 /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php
-=======
->>>>>>> 079c9da7 (.)
 /var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php
 ```
 
@@ -472,10 +445,7 @@ Per inviare correttamente le email di registrazione, è fondamentale raccogliere
 
 ## Conclusione
 
-<<<<<<< HEAD
 Il processo di invio dell'email al dottore con il link per continuare la registrazione è un componente ben progettato del sistema , che garantisce:
-=======
->>>>>>> 079c9da7 (.)
 Il processo di invio dell'email al dottore con il link per continuare la registrazione è un componente ben progettato del sistema SaluteOra, che garantisce:
 
 1. **Sicurezza**: Utilizzo di token univoci e validazione

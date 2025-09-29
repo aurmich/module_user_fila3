@@ -30,22 +30,7 @@ class PermissionFactory extends Factory
     public function definition(): array
     {
         $actions = ['create', 'read', 'update', 'delete', 'manage', 'view', 'edit'];
-<<<<<<< HEAD
-        $resources = [
-            'users',
-            'posts',
-            'comments',
-            'pages',
-            'settings',
-            'reports',
-            'analytics',
-            'teams',
-            'roles',
-            'permissions',
-        ];
-=======
         $resources = ['users', 'posts', 'comments', 'pages', 'settings', 'reports', 'analytics', 'teams', 'roles', 'permissions'];
->>>>>>> 079c9da7 (.)
 
         $action = SafeStringCastAction::cast($this->faker->randomElement($actions));
         $resource = SafeStringCastAction::cast($this->faker->randomElement($resources));
@@ -64,18 +49,8 @@ class PermissionFactory extends Factory
      */
     public function forResource(string $resource): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes) => [
-            'name' =>
-
-                    SafeStringCastAction::cast($this->faker->randomElement(['create', 'read', 'update', 'delete'])) .
-                    ' ' .
-                    $resource
-                ,
-=======
         return $this->state(fn (array $attributes) => [
             'name' => SafeStringCastAction::cast($this->faker->randomElement(['create', 'read', 'update', 'delete'])) . ' ' . $resource,
->>>>>>> 079c9da7 (.)
         ]);
     }
 
@@ -86,17 +61,8 @@ class PermissionFactory extends Factory
      */
     public function read(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes) => [
-            'name' =>
-
-                    'read ' .
-                    SafeStringCastAction::cast($this->faker->randomElement(['users', 'posts', 'comments', 'pages']))
-                ,
-=======
         return $this->state(fn (array $attributes) => [
             'name' => 'read ' . SafeStringCastAction::cast($this->faker->randomElement(['users', 'posts', 'comments', 'pages'])),
->>>>>>> 079c9da7 (.)
         ]);
     }
 
@@ -107,18 +73,8 @@ class PermissionFactory extends Factory
      */
     public function write(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes) => [
-            'name' =>
-
-                    SafeStringCastAction::cast($this->faker->randomElement(['create', 'update', 'delete'])) .
-                    ' ' .
-                    SafeStringCastAction::cast($this->faker->randomElement(['users', 'posts', 'comments', 'pages']))
-                ,
-=======
         return $this->state(fn (array $attributes) => [
             'name' => SafeStringCastAction::cast($this->faker->randomElement(['create', 'update', 'delete'])) . ' ' . SafeStringCastAction::cast($this->faker->randomElement(['users', 'posts', 'comments', 'pages'])),
->>>>>>> 079c9da7 (.)
         ]);
     }
 
@@ -129,22 +85,8 @@ class PermissionFactory extends Factory
      */
     public function admin(): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes) => [
-            'name' =>
-
-                    'manage ' .
-                    SafeStringCastAction::cast($this->faker->randomElement([
-                        'users',
-                        'system',
-                        'settings',
-                        'permissions',
-                    ]))
-                ,
-=======
         return $this->state(fn (array $attributes) => [
             'name' => 'manage ' . SafeStringCastAction::cast($this->faker->randomElement(['users', 'system', 'settings', 'permissions'])),
->>>>>>> 079c9da7 (.)
         ]);
     }
 
@@ -156,11 +98,7 @@ class PermissionFactory extends Factory
      */
     public function withGuard(string $guard): static
     {
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes) => [
-=======
         return $this->state(fn (array $attributes) => [
->>>>>>> 079c9da7 (.)
             'guard_name' => $guard,
         ]);
     }

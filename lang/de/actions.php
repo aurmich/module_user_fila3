@@ -1,11 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-=======
->>>>>>> 079c9da7 (.)
 return [
     'attach_user' => 'Collega Utente',
     'associate_user' => 'Associa Utente',

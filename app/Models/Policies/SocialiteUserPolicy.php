@@ -4,19 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Modules\User\Models\SocialiteUser;
 use Modules\Xot\Contracts\UserContract;
-=======
-=======
->>>>>>> 10cce5c4 (.)
-=======
->>>>>>> 8b2de289 (.)
-use Modules\User\Contracts\UserContract;
-use Modules\User\Models\SocialiteUser;
->>>>>>> 079c9da7 (.)
 
 class SocialiteUserPolicy extends UserBasePolicy
 {
@@ -33,31 +22,9 @@ class SocialiteUserPolicy extends UserBasePolicy
      */
     public function view(UserContract $user, SocialiteUser $socialiteUser): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return (
-            $user->hasPermissionTo('socialite-user.view') ||
-            $user->id === $socialiteUser->user_id ||
-            $user->hasRole('super-admin')
-        );
-=======
-        return $user->id === $socialiteUser->user_id ||
-            $user->hasRole('super-admin');
->>>>>>> 079c9da7 (.)
-=======
-        return $user->id === $socialiteUser->user_id ||
-            $user->hasRole('super-admin');
-=======
-        return $user->hasPermissionTo('socialite-user.view') || 
+        return $user->hasPermissionTo('socialite-user.view') ||
                $user->id === $socialiteUser->user_id ||
                $user->hasRole('super-admin');
->>>>>>> e5f94125 (.)
->>>>>>> 10cce5c4 (.)
-=======
-        return $user->id === $socialiteUser->user_id ||
-            $user->hasRole('super-admin');
->>>>>>> 8b2de289 (.)
     }
 
     /**
@@ -73,31 +40,9 @@ class SocialiteUserPolicy extends UserBasePolicy
      */
     public function update(UserContract $user, SocialiteUser $socialiteUser): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return (
-            $user->hasPermissionTo('socialite-user.update') ||
-            $user->id === $socialiteUser->user_id ||
-            $user->hasRole('super-admin')
-        );
-=======
-        return $user->id === $socialiteUser->user_id ||
-            $user->hasRole('super-admin');
->>>>>>> 079c9da7 (.)
-=======
-        return $user->id === $socialiteUser->user_id ||
-            $user->hasRole('super-admin');
-=======
-        return $user->hasPermissionTo('socialite-user.update') || 
+        return $user->hasPermissionTo('socialite-user.update') ||
                $user->id === $socialiteUser->user_id ||
                $user->hasRole('super-admin');
->>>>>>> e5f94125 (.)
->>>>>>> 10cce5c4 (.)
-=======
-        return $user->id === $socialiteUser->user_id ||
-            $user->hasRole('super-admin');
->>>>>>> 8b2de289 (.)
     }
 
     /**
@@ -105,55 +50,18 @@ class SocialiteUserPolicy extends UserBasePolicy
      */
     public function delete(UserContract $user, SocialiteUser $socialiteUser): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return (
-            $user->hasPermissionTo('socialite-user.delete') ||
-            $user->id === $socialiteUser->user_id ||
-            $user->hasRole('super-admin')
-        );
-=======
-        return $user->id === $socialiteUser->user_id ||
-            $user->hasRole('super-admin');
->>>>>>> 079c9da7 (.)
-=======
-        return $user->id === $socialiteUser->user_id ||
-            $user->hasRole('super-admin');
-=======
-        return $user->hasPermissionTo('socialite-user.delete') || 
+        return $user->hasPermissionTo('socialite-user.delete') ||
                $user->id === $socialiteUser->user_id ||
                $user->hasRole('super-admin');
->>>>>>> e5f94125 (.)
->>>>>>> 10cce5c4 (.)
-=======
-        return $user->id === $socialiteUser->user_id ||
-            $user->hasRole('super-admin');
->>>>>>> 8b2de289 (.)
     }
 
     /**
      * Determine whether the user can restore the model.
      */
-<<<<<<< HEAD
-    public function restore(UserContract $user, SocialiteUser $_socialiteUser): bool
-    {
-        return $user->hasPermissionTo('socialite-user.restore') || $user->hasRole('super-admin');
-=======
     public function restore(UserContract $user, SocialiteUser $socialiteUser): bool
     {
-        return $user->hasRole('super-admin');
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 079c9da7 (.)
-=======
-=======
-        return $user->hasPermissionTo('socialite-user.restore') || 
+        return $user->hasPermissionTo('socialite-user.restore') ||
                $user->hasRole('super-admin');
->>>>>>> e5f94125 (.)
->>>>>>> 10cce5c4 (.)
-=======
->>>>>>> 8b2de289 (.)
     }
 
     /**
@@ -161,22 +69,7 @@ class SocialiteUserPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, SocialiteUser $socialiteUser): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return $user->hasPermissionTo('socialite-user.force-delete') || $user->hasRole('super-admin');
-=======
-        return $user->hasRole('super-admin');
->>>>>>> 079c9da7 (.)
-=======
-        return $user->hasRole('super-admin');
-=======
-        return $user->hasPermissionTo('socialite-user.force-delete') || 
+        return $user->hasPermissionTo('socialite-user.force-delete') ||
                $user->hasRole('super-admin');
->>>>>>> e5f94125 (.)
->>>>>>> 10cce5c4 (.)
-=======
-        return $user->hasRole('super-admin');
->>>>>>> 8b2de289 (.)
     }
 }

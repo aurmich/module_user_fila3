@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> 079c9da7 (.)
 @props([
     'label' => null,
     'id' => null,
@@ -29,8 +21,4 @@ declare(strict_types=1);
     @error($wireModel)
         <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
     @enderror
-<<<<<<< HEAD
 </div>
-=======
-</div>
->>>>>>> 079c9da7 (.)

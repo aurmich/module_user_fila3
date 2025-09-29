@@ -2,12 +2,9 @@
 
 ## 🚨 REGOLA CRITICA RISPETTATA 🚨
 
-<<<<<<< HEAD
 **NON è stato modificato** `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/phpstan.neon`
 **NON è stato modificato** `/var/www/html/_bases/base_saluteora/laravel/phpstan.neon`
 **NON è stato modificato** `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/phpstan.neon`
-=======
->>>>>>> 079c9da7 (.)
 **NON è stato modificato** `/var/www/html/_bases/base_saluteora/laravel/phpstan.neon`
 
 ## Problema Identificato
@@ -229,13 +226,8 @@ array<string, mixed> $attributes
 
 ## Collegamenti
 
-<<<<<<< HEAD
 - [Xot - PHPStan Missing Array Types](../Xot/docs/phpstan-missing-array-types-fixes.md)
 - [Xot - PHPStan Critical Rules](../Xot/docs/phpstan-critical-rules.md)
-=======
-- [Xot - PHPStan Missing Array Types](../Xot/project_docs/phpstan-missing-array-types-fixes.md)
-- [Xot - PHPStan Critical Rules](../Xot/project_docs/phpstan-critical-rules.md)
->>>>>>> 079c9da7 (.)
 - [docs_project - PHPStan Intouchable Rule](../../../docs_project/phpstan-intouchable-rule.md)
 
 ---

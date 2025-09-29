@@ -50,10 +50,4 @@ namespace Modules\User\Models;
  * @mixin IdeHelperTeam
  * @mixin \Eloquent
  */
-<<<<<<< HEAD
-class Team extends BaseTeam
-{
-}
-=======
 class Team extends BaseTeam {}
->>>>>>> 079c9da7 (.)

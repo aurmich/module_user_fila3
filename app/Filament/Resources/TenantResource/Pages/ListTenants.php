@@ -20,14 +20,6 @@ class ListTenants extends XotBaseListRecords
     /**
      * Definisce le colonne della tabella per la lista tenant.
      */
-<<<<<<< HEAD
-    #[\Override]
-    public function getTableColumns(): array
-    {
-        return [
-            'id' => TextColumn::make('id')->searchable()->sortable(),
-            'name' => TextColumn::make('name')->searchable(),
-=======
     public function getTableColumns(): array
     {
         return [
@@ -38,7 +30,6 @@ class ListTenants extends XotBaseListRecords
             'name' => TextColumn::make('name')
                 ->searchable(),
 
->>>>>>> 079c9da7 (.)
             'slug' => TextColumn::make('slug')
                 ->default(function ($record) {
                     if ($record === null) {

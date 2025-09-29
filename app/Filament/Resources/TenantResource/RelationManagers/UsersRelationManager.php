@@ -16,22 +16,11 @@ class UsersRelationManager extends XotBaseRelationManager
 
     protected static string $relationship = 'users';
 
-<<<<<<< HEAD
-    protected static null|string $recordTitleAttribute = 'name';
-=======
     protected static ?string $recordTitleAttribute = 'name';
->>>>>>> 079c9da7 (.)
 
     /**
      * @return array<Forms\Components\Component>
      */
-<<<<<<< HEAD
-    #[\Override]
-    public function getFormSchema(): array
-    {
-        return [
-            Forms\Components\TextInput::make('name')->required()->maxLength(255),
-=======
     public function getFormSchema(): array
     {
         return [
@@ -39,25 +28,11 @@ class UsersRelationManager extends XotBaseRelationManager
                 ->required()
                 ->maxLength(255),
 
->>>>>>> 079c9da7 (.)
             Forms\Components\TextInput::make('email')
                 ->email()
                 ->required()
                 ->unique(ignoreRecord: true)
                 ->maxLength(255),
-<<<<<<< HEAD
-            Forms\Components\DateTimePicker::make('email_verified_at')->nullable(),
-            Forms\Components\TextInput::make('password')
-                ->password()
-                ->required(fn($context) => $context === 'create')
-                ->minLength(8)
-                ->same('password_confirmation')
-                ->dehydrated(filled(...))
-                ->dehydrateStateUsing(bcrypt(...)),
-            Forms\Components\TextInput::make('password_confirmation')
-                ->password()
-                ->required(fn($context) => $context === 'create')
-=======
 
             Forms\Components\DateTimePicker::make('email_verified_at')
                 ->nullable(),
@@ -73,7 +48,6 @@ class UsersRelationManager extends XotBaseRelationManager
             Forms\Components\TextInput::make('password_confirmation')
                 ->password()
                 ->required(fn ($context) => $context === 'create')
->>>>>>> 079c9da7 (.)
                 ->minLength(8),
         ];
     }
@@ -81,13 +55,6 @@ class UsersRelationManager extends XotBaseRelationManager
     /**
      * @return array<string, \Filament\Tables\Columns\Column>
      */
-<<<<<<< HEAD
-    #[\Override]
-    public function getTableColumns(): array
-    {
-        return [
-            'id' => TextColumn::make('id')->sortable()->toggleable(),
-=======
     public function getTableColumns(): array
     {
         return [
@@ -95,39 +62,26 @@ class UsersRelationManager extends XotBaseRelationManager
                 ->sortable()
                 ->toggleable(),
 
->>>>>>> 079c9da7 (.)
             'name' => TextColumn::make('name')
                 ->searchable()
                 ->sortable()
                 ->toggleable(),
-<<<<<<< HEAD
-=======
 
->>>>>>> 079c9da7 (.)
             'email' => TextColumn::make('email')
                 ->searchable()
                 ->sortable()
                 ->toggleable(),
-<<<<<<< HEAD
-=======
 
->>>>>>> 079c9da7 (.)
             'email_verified_at' => TextColumn::make('email_verified_at')
                 ->dateTime()
                 ->sortable()
                 ->toggleable(),
-<<<<<<< HEAD
-=======
 
->>>>>>> 079c9da7 (.)
             'created_at' => TextColumn::make('created_at')
                 ->dateTime()
                 ->sortable()
                 ->toggleable(),
-<<<<<<< HEAD
-=======
 
->>>>>>> 079c9da7 (.)
             'updated_at' => TextColumn::make('updated_at')
                 ->dateTime()
                 ->sortable()

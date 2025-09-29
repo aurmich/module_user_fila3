@@ -2,13 +2,8 @@
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
-<<<<<<< HEAD
 - [Implementazione Header con Selettore Lingua](/laravel/Modules/User/docs/HEADER_LANGUAGE_SELECTOR_WITH_FLAGS.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
-=======
-- [Implementazione Header con Selettore Lingua](/laravel/Modules/User/project_docs/HEADER_LANGUAGE_SELECTOR_WITH_FLAGS.md)
-- [Collegamenti Documentazione](/project_docs/collegamenti-documentazione.md)
->>>>>>> 079c9da7 (.)
 
 ## Panoramica
 
@@ -16,10 +11,7 @@ Questo documento descrive l'implementazione degli avatar utente , con particolar
 
 ## Struttura degli Avatar SVG
 
-<<<<<<< HEAD
 Gli avatar SVG sono posizionati nella directory `/laravel/Modules/UI/resources/svg/avatars/` seguendo le convenzioni di  per i componenti SVG. Sono stati creati quattro avatar predefiniti con design simpatici e colorati:
-=======
->>>>>>> 079c9da7 (.)
 Gli avatar SVG sono posizionati nella directory `/laravel/Modules/UI/resources/svg/avatars/` seguendo le convenzioni di SaluteOra per i componenti SVG. Sono stati creati quattro avatar predefiniti con design simpatici e colorati:
 
 1. **default-1.svg**: Avatar con sfondo viola e silhouette semplice
@@ -27,10 +19,7 @@ Gli avatar SVG sono posizionati nella directory `/laravel/Modules/UI/resources/s
 3. **default-3.svg**: Avatar con sfondo rosa e espressione vivace
 4. **default-4.svg**: Avatar con sfondo arancione e espressione sorpresa
 
-<<<<<<< HEAD
 Questi avatar vengono registrati automaticamente come componenti Blade con il prefisso `ui-avatars` grazie al sistema di registrazione delle icone di .
-=======
->>>>>>> 079c9da7 (.)
 Questi avatar vengono registrati automaticamente come componenti Blade con il prefisso `ui-avatars` grazie al sistema di registrazione delle icone di SaluteOra.
 
 ## Componente Avatar
@@ -128,13 +117,7 @@ Il sistema di avatar può essere esteso in futuro per includere:
 
 ## Riferimenti
 
-<<<<<<< HEAD
 - [Documentazione SVG](https://developer.mozilla.org/en-US/docs/Web/SVG)
 - [Blade Components Documentation](https://laravel.com/docs/10.x/blade#components)
 - [Architettura Modulare ](/docs/architettura-modulare.md)
 - [Architettura Modulare SaluteOra](/docs/architettura-modulare.md)
-=======
-- [Documentazione SVG](https://developer.mozilla.org/en-US/project_docs/Web/SVG)
-- [Blade Components Documentation](https://laravel.com/project_docs/10.x/blade#components)
-- [Architettura Modulare SaluteOra](/project_docs/architettura-modulare.md)
->>>>>>> 079c9da7 (.)

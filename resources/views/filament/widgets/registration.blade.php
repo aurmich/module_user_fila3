@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> 079c9da7 (.)
 <x-filament::widget>
     <x-filament::section>
         <form wire:submit="register">
@@ -19,8 +11,4 @@ declare(strict_types=1);
             </x-filament::button>
         </form>
     </x-filament::section>
-<<<<<<< HEAD
-</x-filament::widget>
-=======
 </x-filament::widget> 
->>>>>>> 079c9da7 (.)

@@ -1,11 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-
-=======
->>>>>>> 079c9da7 (.)
 namespace Modules\User\Http\Middleware;
 
 use Closure;
@@ -22,23 +16,12 @@ class EnsureRegistrationEnabled
      */
     public function handle(Request $request, Closure $next): Response
     {
-<<<<<<< HEAD
-        $enabled = Config::boolean('auth.registration_enabled', true);
-        // Controlla se la registrazione è disabilitata
-        if (!$enabled) {
-            return redirect()->route('pages.view', ['slug' => 'register_disabled']);
-=======
         $enabled=Config::boolean('auth.registration_enabled', true);
         // Controlla se la registrazione è disabilitata
         if (!$enabled) {
             return redirect()->route('pages.view', ['slug'=>'register_disabled']);
->>>>>>> 079c9da7 (.)
         }
 
         return $next($request);
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 079c9da7 (.)

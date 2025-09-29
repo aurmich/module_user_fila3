@@ -37,26 +37,17 @@ class CreateTenantCommand extends Command
         $name = text(
             label: 'What is name of tenant?',
             placeholder: 'E.g. Tabacchi belli',
-<<<<<<< HEAD
-        // default: $user->name,
-        // hint: 'This will be displayed on your profile.'
-=======
             // default: $user->name,
             // hint: 'This will be displayed on your profile.'
->>>>>>> 079c9da7 (.)
         );
 
         $modelClass::create([
             'name' => $name,
         ]);
 
-<<<<<<< HEAD
-        $map = static fn(Model $row) => $row->toArray();
-=======
         $map = static function (Model $row) {
             return $row->toArray();
         };
->>>>>>> 079c9da7 (.)
 
         $rows = $modelClass::get()->map($map);
 
@@ -70,11 +61,7 @@ class CreateTenantCommand extends Command
             $this->newLine();
         } else {
             $this->newLine();
-<<<<<<< HEAD
-            $this->warn('⚡ No Tenants [' . $modelClass . ']');
-=======
             $this->warn('⚡ No Tenants ['.$modelClass.']');
->>>>>>> 079c9da7 (.)
             $this->newLine();
         }
     }

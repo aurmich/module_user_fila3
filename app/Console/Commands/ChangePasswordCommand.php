@@ -6,22 +6,14 @@ namespace Modules\User\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Hash;
-<<<<<<< HEAD
-=======
 
 use function Laravel\Prompts\password;
 
->>>>>>> 079c9da7 (.)
 use Modules\User\Datas\PasswordData;
 use Modules\User\Events\NewPasswordSet;
 use Modules\Xot\Datas\XotData;
 use Webmozart\Assert\Assert;
 
-<<<<<<< HEAD
-use function Laravel\Prompts\password;
-
-=======
->>>>>>> 079c9da7 (.)
 class ChangePasswordCommand extends Command
 {
     protected $signature = 'user:change-password';
@@ -40,15 +32,7 @@ class ChangePasswordCommand extends Command
         }
 
         // Ensure we fetched a persisted user and not a transient instance to avoid accidental insert
-<<<<<<< HEAD
-        if (!$user->exists()) {
-            Assert::false(
-                $user->exists(),
-                __FILE__ . ':' . __LINE__ . ' - ' . class_basename(__CLASS__) . ' - User model should exist in database before password change'
-            );
-=======
         if (null == $user || ! $user->exists) {
->>>>>>> 079c9da7 (.)
             $this->error('User not found or not persisted. Please create the user first (name, email, type, etc.).');
 
             return;
@@ -65,17 +49,10 @@ class ChangePasswordCommand extends Command
         $pwd_data = PasswordData::make();
         $passwordExpiryDateTime = now()->addDays($pwd_data->expires_in);
         /*
-<<<<<<< HEAD
-         * $user->is_otp = false;
-         * $user->password = Hash::make($password);
-         * $user->save();
-         */
-=======
         $user->is_otp = false;
         $user->password = Hash::make($password);
         $user->save();
         */
->>>>>>> 079c9da7 (.)
         $user = tap($user)->update([
             'password_expires_at' => $passwordExpiryDateTime,
             'is_otp' => false,

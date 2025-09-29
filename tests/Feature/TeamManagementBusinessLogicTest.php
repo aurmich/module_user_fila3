@@ -4,16 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Feature;
 
-<<<<<<< HEAD
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Modules\User\Models\Membership;
-use Modules\User\Models\Team;
-use Modules\User\Models\TeamInvitation;
-use Modules\User\Models\TeamPermission;
-use Modules\User\Models\TeamUser;
-use Modules\User\Models\User;
-use Tests\TestCase;
-=======
 use Modules\User\Models\Team;
 use Modules\User\Models\User;
 use Modules\User\Models\TeamUser;
@@ -22,7 +12,6 @@ use Modules\User\Models\TeamInvitation;
 use Modules\User\Models\Membership;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
->>>>>>> 079c9da7 (.)
 
 class TeamManagementBusinessLogicTest extends TestCase
 {
@@ -656,7 +645,4 @@ class TeamManagementBusinessLogicTest extends TestCase
         ]);
     }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 079c9da7 (.)

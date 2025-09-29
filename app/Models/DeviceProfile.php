@@ -6,11 +6,7 @@ namespace Modules\User\Models;
 
 /**
  * DeviceProfile Model
-<<<<<<< HEAD
- *
-=======
  * 
->>>>>>> 079c9da7 (.)
  * Represents the relationship between a device and a user profile.
  * Extends the base DeviceUser model to add specific functionality.
  *

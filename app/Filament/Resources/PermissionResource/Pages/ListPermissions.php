@@ -14,16 +14,10 @@ use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Collection;
 use Modules\User\Filament\Resources\PermissionResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-<<<<<<< HEAD
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
-use Webmozart\Assert\Assert;
-
-=======
 use Webmozart\Assert\Assert;
 
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
->>>>>>> 079c9da7 (.)
 class ListPermissions extends XotBaseListRecords
 {
     protected static string $resource = PermissionResource::class;
@@ -31,16 +25,6 @@ class ListPermissions extends XotBaseListRecords
     /**
      * @return array<string, Tables\Columns\Column>
      */
-<<<<<<< HEAD
-    #[\Override]
-    public function getTableColumns(): array
-    {
-        return [
-            'name' => TextColumn::make('name')->searchable()->sortable(),
-            'guard_name' => TextColumn::make('guard_name')->searchable()->sortable(),
-            'active' => IconColumn::make('active')->boolean(),
-            'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
-=======
     public function getTableColumns(): array
     {
         return [
@@ -55,17 +39,12 @@ class ListPermissions extends XotBaseListRecords
             'created_at' => TextColumn::make('created_at')
                 ->dateTime()
                 ->sortable(),
->>>>>>> 079c9da7 (.)
         ];
     }
 
     /**
      * @return array<string, Tables\Filters\BaseFilter>
      */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> 079c9da7 (.)
     public function getTableFilters(): array
     {
         return [
@@ -82,10 +61,6 @@ class ListPermissions extends XotBaseListRecords
     /**
      * @return array<string, Tables\Actions\Action|Tables\Actions\ActionGroup>
      */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> 079c9da7 (.)
     public function getTableActions(): array
     {
         return [
@@ -98,10 +73,6 @@ class ListPermissions extends XotBaseListRecords
     /**
      * @return array<string, \Filament\Actions\Action>
      */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> 079c9da7 (.)
     protected function getHeaderActions(): array
     {
         return [
@@ -112,10 +83,6 @@ class ListPermissions extends XotBaseListRecords
     /**
      * @return array<string, BulkAction>
      */
-<<<<<<< HEAD
-    #[\Override]
-=======
->>>>>>> 079c9da7 (.)
     public function getTableBulkActions(): array
     {
         Assert::classExists($roleModel = config('permission.models.role'));
@@ -123,26 +90,6 @@ class ListPermissions extends XotBaseListRecords
         return [
             'delete' => DeleteBulkAction::make(),
             'attach_role' => BulkAction::make('Attach Role')
-<<<<<<< HEAD
-                ->action(static function (Collection $collection, array $data): void {
-                    foreach ($collection as $record) {
-                        // Verifichiamo che $record sia un'istanza di Model prima di procedere
-                        Assert::isInstanceOf(
-                            $record,
-                            \Illuminate\Database\Eloquent\Model::class,
-                            '[' . __LINE__ . '][' . __CLASS__ . ']',
-                        );
-
-                        // Poi verifichiamo che il modello abbia il metodo roles() prima di chiamarlo
-                        if (method_exists($record, 'roles')) {
-                            $record->roles()->sync($data['role']);
-                            $record->save();
-                        }
-                    }
-                })
-                ->form([
-                    Select::make('role')->options($roleModel::query()->pluck('name', 'id'))->required(),
-=======
                 ->action(
                     static function (Collection $collection, array $data): void {
                         foreach ($collection as $record) {
@@ -161,7 +108,6 @@ class ListPermissions extends XotBaseListRecords
                     Select::make('role')
                         ->options($roleModel::query()->pluck('name', 'id'))
                         ->required(),
->>>>>>> 079c9da7 (.)
                 ])
                 ->deselectRecordsAfterCompletion(),
         ];

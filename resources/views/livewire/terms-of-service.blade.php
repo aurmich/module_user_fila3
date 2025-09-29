@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> 079c9da7 (.)
 <div>
     @if ($text != null)
         <div>
@@ -16,8 +8,4 @@ declare(strict_types=1);
             {{ $text }}
         </div>
     @endif
-<<<<<<< HEAD
 </div>
-=======
-</div>
->>>>>>> 079c9da7 (.)

@@ -22,26 +22,12 @@ class RegisterOauthUserAction
     {
         $socialiteUser = DB::transaction(static function () use ($provider, $oauthUser) {
             // Create a user
-<<<<<<< HEAD
-            $user = app(CreateUserAction::class)->execute(
-                provider: $provider,
-                oauthUser: $oauthUser,
-            );
-
-            // Create a new socialite user instance
-            return app(CreateSocialiteUserAction::class)->execute(
-                provider: $provider,
-                oauthUser: $oauthUser,
-                user: $user,
-            );
-=======
             $user = app(CreateUserAction::class)
                 ->execute(provider: $provider, oauthUser: $oauthUser);
 
             // Create a new socialite user instance
             return app(CreateSocialiteUserAction::class)
                 ->execute(provider: $provider, oauthUser: $oauthUser, user: $user);
->>>>>>> 079c9da7 (.)
         });
         // Dispatch the registered event
         Registered::dispatch($socialiteUser);

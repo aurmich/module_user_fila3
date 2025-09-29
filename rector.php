@@ -10,17 +10,11 @@ use Rector\TypeDeclaration\Rector\ClassMethod\ReturnTypeFromStrictScalarReturnEx
 use RectorLaravel\Set\LaravelSetList;
 
 return static function (RectorConfig $rectorConfig): void {
-<<<<<<< HEAD
-    $rectorConfig->paths([
-        __DIR__,
-    ]);
-=======
     $rectorConfig->paths(
         [
             __DIR__,
         ]
     );
->>>>>>> 079c9da7 (.)
 
     // register a single rule
     // $rectorConfig->rule(InlineConstructorDefaultToPropertyRector::class);
@@ -29,36 +23,6 @@ return static function (RectorConfig $rectorConfig): void {
     //    ReturnTypeFromStrictNativeCallRector::class,
     //    ReturnTypeFromStrictScalarReturnExprRector::class,
     // ]);
-<<<<<<< HEAD
-    $rectorConfig->rules([
-        ReturnTypeFromStrictNativeCallRector::class,
-        ReturnTypeFromStrictScalarReturnExprRector::class,
-    ]);
-
-    // define sets of rules
-    $rectorConfig->sets([
-        PHPUnitLevelSetList::UP_TO_PHPUNIT_100,
-        // SetList::DEAD_CODE,
-        // SetList::CODE_QUALITY,
-        LevelSetList::UP_TO_PHP_81,
-        LaravelSetList::LARAVEL_100,
-        // SetList::NAMING, // error on injection
-        // SetList::TYPE_DECLARATION,  //------------------------ vedere cosa fa
-        // SetList::CODING_STYLE,
-        // SetList::PRIVATIZATION, //error "final class"
-        // SetList::EARLY_RETURN,
-        // SetList::INSTANCEOF,
-    ]);
-
-    $rectorConfig->skip([
-        // testdummy files
-        '*/build',
-        '*/docs',
-        '*/vendor',
-        './vendor/',
-        __DIR__ . '/vendor',
-    ]);
-=======
     $rectorConfig->rules(
         [
             ReturnTypeFromStrictNativeCallRector::class,
@@ -94,7 +58,6 @@ return static function (RectorConfig $rectorConfig): void {
             __DIR__.'/vendor',
         ]
     );
->>>>>>> 079c9da7 (.)
 
     $rectorConfig->importNames();
 };

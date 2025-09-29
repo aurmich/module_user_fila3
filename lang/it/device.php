@@ -1,34 +1,8 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
-    // NAVIGATION & STRUCTURE
-    'navigation' => [
-        'label' => 'Dispositivi',
-        'plural_label' => 'Dispositivi',
-        'group' => [
-            'name' => 'Sicurezza',
-            'description' => 'Gestione dispositivi e sicurezza',
-        ],
-        'sort' => 50,
-        'icon' => 'heroicon-o-device-phone-mobile',
-        'badge' => 'Gestione dispositivi utente',
-    ],
-    // MODEL INFORMATION
-    'model' => [
-        'label' => 'Dispositivo',
-        'plural' => 'Dispositivi',
-        'description' => 'Gestione e monitoraggio dei dispositivi degli utenti',
-    ],
-    // FIELDS - STRUTTURA ESPANSA OBBLIGATORIA
-=======
-declare(strict_types=1);
-
-return [
->>>>>>> 20edf4e0 (.)
     'fields' => [
         'uuid' => [
             'label' => 'UUID',
@@ -122,10 +96,6 @@ return [
             'help' => 'Indica se è uno smartphone o telefono cellulare',
         ],
     ],
-<<<<<<< HEAD
-    // ACTIONS - STRUTTURA ESPANSA OBBLIGATORIA
-=======
->>>>>>> 20edf4e0 (.)
     'actions' => [
         'create' => [
             'label' => 'Crea Dispositivo',
@@ -198,9 +168,6 @@ return [
             ],
         ],
     ],
-<<<<<<< HEAD
-    // SECTIONS - ORGANIZZAZIONE FORM
-=======
     'navigation' => [
         'sort' => 50,
         'label' => 'Dispositivi',
@@ -208,7 +175,6 @@ return [
         'icon' => 'heroicon-o-device-phone-mobile',
         'badge' => 'Gestione dispositivi utente',
     ],
->>>>>>> 20edf4e0 (.)
     'sections' => [
         'device_info' => [
             'label' => 'Informazioni Dispositivo',
@@ -221,10 +187,6 @@ return [
         'browser_info' => [
             'label' => 'Informazioni Browser',
             'description' => 'Dettagli del browser utilizzato',
-<<<<<<< HEAD
-            // FILTERS - RICERCA E FILTRI
-=======
->>>>>>> 20edf4e0 (.)
         ],
     ],
     'filters' => [
@@ -255,140 +217,10 @@ return [
             ],
         ],
     ],
-<<<<<<< HEAD
-    // MESSAGES - FEEDBACK UTENTE
-=======
->>>>>>> 20edf4e0 (.)
     'messages' => [
         'empty_state' => 'Nessun dispositivo trovato',
         'search_placeholder' => 'Cerca dispositivi...',
         'loading' => 'Caricamento dispositivi in corso...',
-<<<<<<< HEAD
-        // VALIDATION - MESSAGGI DI VALIDAZIONE
-        'validation' => [
-            'uuid_required' => 'L\'UUID è obbligatorio',
-            'uuid_unique' => 'Questo UUID è già in uso',
-            'platform_required' => 'La piattaforma è obbligatoria',
-            'device_required' => 'Il nome del dispositivo è obbligatorio',
-            'languages_array' => 'Le lingue devono essere un array',
-        ],
-        // OPTIONS - OPZIONI E VALORI PREDEFINITI
-        'options' => [
-            'platforms' => [
-                'ios' => 'iOS',
-                'android' => 'Android',
-                'windows' => 'Windows',
-                'linux' => 'Linux',
-                'macos' => 'macOS',
-            ],
-            'device_types' => [
-                'desktop' => 'Desktop',
-                'mobile' => 'Mobile',
-                'tablet' => 'Tablet',
-                'phone' => 'Telefono',
-            ],
-            'boolean_options' => [
-                'yes' => 'Sì',
-                'no' => 'No',
-            ],
-        ],
         'total_devices' => 'Totale dispositivi: :count',
     ],
 ];
-=======
-return array (
-  'fields' => 
-  array (
-    'uuid' => 
-    array (
-      'label' => 'UUID',
-      'placeholder' => 'Inserisci l\'UUID del dispositivo',
-      'help' => 'Identificativo univoco del dispositivo',
-    ),
-    'mobile_id' => 
-    array (
-      'label' => 'Mobile ID',
-      'placeholder' => 'Inserisci l\'ID mobile',
-      'help' => 'Identificativo mobile del dispositivo',
-    ),
-    'languages' => 
-    array (
-      'label' => 'Lingue',
-      'placeholder' => 'Aggiungi una lingua',
-      'help' => 'Seleziona o digita i codici delle lingue (es. it, en, es)',
-    ),
-    'device' => 
-    array (
-      'label' => 'Nome Dispositivo',
-      'placeholder' => 'Inserisci il nome del dispositivo',
-      'help' => 'Nome del dispositivo',
-    ),
-    'platform' => 
-    array (
-      'label' => 'Piattaforma',
-      'placeholder' => 'Inserisci la piattaforma',
-      'help' => 'Piattaforma del dispositivo',
-    ),
-    'browser' => 
-    array (
-      'label' => 'Browser',
-      'placeholder' => 'Inserisci il browser',
-      'help' => 'Browser utilizzato',
-    ),
-    'version' => 
-    array (
-      'label' => 'Versione',
-      'placeholder' => 'Inserisci la versione',
-      'help' => 'Versione del browser o sistema',
-    ),
-    'is_robot' => 
-    array (
-      'label' => 'È Robot',
-      'placeholder' => 'Seleziona se è un robot',
-      'help' => 'Indica se il dispositivo è un robot',
-    ),
-    'robot' => 
-    array (
-      'label' => 'Robot',
-      'placeholder' => 'Inserisci il tipo di robot',
-      'help' => 'Tipo di robot se applicabile',
-    ),
-    'is_desktop' => 
-    array (
-      'label' => 'È Desktop',
-      'placeholder' => 'Seleziona se è desktop',
-      'help' => 'Indica se è un dispositivo desktop',
-    ),
-    'is_mobile' => 
-    array (
-      'label' => 'È Mobile',
-      'placeholder' => 'Seleziona se è mobile',
-      'help' => 'Indica se è un dispositivo mobile',
-    ),
-    'is_tablet' => 
-    array (
-      'label' => 'È Tablet',
-      'placeholder' => 'Seleziona se è tablet',
-      'help' => 'Indica se è un tablet',
-    ),
-    'is_phone' => 
-    array (
-      'label' => 'È Telefono',
-      'placeholder' => 'Seleziona se è telefono',
-      'help' => 'Indica se è un telefono',
-    ),
-  ),
-  'navigation' => 
-  array (
-    'sort' => 50,
-    'label' => 'Dispositivi',
-    'group' => 'Sicurezza',
-    'icon' => 'heroicon-o-device-phone-mobile',
-  ),
-);
->>>>>>> 079c9da7 (.)
-=======
-        'total_devices' => 'Totale dispositivi: :count',
-    ],
-];
->>>>>>> 20edf4e0 (.)

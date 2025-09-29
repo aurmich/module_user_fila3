@@ -56,7 +56,7 @@
 - `x-input-label`
 - `x-input-error`
 - `x-primary-button`
-- `x-utilities.secondary-button`
+- `x-secondary-button`
 - `x-danger-button`
 
 ### 3. Componenti Filament NON Disponibili

@@ -4,18 +4,6 @@ declare(strict_types=1);
 
 return [
     /*
-<<<<<<< HEAD
-     * |--------------------------------------------------------------------------
-     * | Messaggi di validazione
-     * |--------------------------------------------------------------------------
-     * |
-     * | Le seguenti righe contengono i messaggi di errore predefiniti utilizzati
-     * | dalla classe di validazione. Alcune di queste regole hanno più versioni,
-     * | come le regole di dimensione. Sentiti libero di modificare ciascuno di
-     * | questi messaggi.
-     * |
-     */
-=======
     |--------------------------------------------------------------------------
     | Messaggi di validazione
     |--------------------------------------------------------------------------
@@ -26,7 +14,6 @@ return [
     | questi messaggi.
     |
     */
->>>>>>> 079c9da7 (.)
 
     'accepted' => 'Il campo :attribute deve essere accettato.',
     'active_url' => 'Il campo :attribute non è un URL valido.',
@@ -116,19 +103,13 @@ return [
         'symbols' => 'Il campo :attribute deve contenere almeno un simbolo.',
         'uncompromised' => 'Il :attribute fornito è apparso in una violazione di dati. Scegli un :attribute diverso, per favore.',
     ],
-<<<<<<< HEAD
-=======
 
->>>>>>> 079c9da7 (.)
     'password.letters' => 'Il campo :attribute deve contenere almeno una lettera.',
     'password.mixed' => 'Il campo :attribute deve contenere almeno una lettera maiuscola e una minuscola.',
     'password.numbers' => 'Il campo :attribute deve contenere almeno un numero.',
     'password.symbols' => 'Il campo :attribute deve contenere almeno un simbolo.',
     'password.uncompromised' => 'Il :attribute fornito è apparso in una violazione di dati. Scegli un :attribute diverso, per favore.',
-<<<<<<< HEAD
-=======
 
->>>>>>> 079c9da7 (.)
     'present' => 'Il campo :attribute deve essere presente.',
     'regex' => 'Il formato del campo :attribute non è valido.',
     'required' => 'Il campo :attribute è obbligatorio.',
@@ -152,18 +133,6 @@ return [
     'uploaded' => 'Il campo :attribute non è riuscito a caricare.',
     'url' => 'Il formato del campo :attribute non è valido.',
     'uuid' => 'Il campo :attribute deve essere un UUID valido.',
-<<<<<<< HEAD
-    /*
-     * |--------------------------------------------------------------------------
-     * | Personalizzazione degli attributi
-     * |--------------------------------------------------------------------------
-     * |
-     * | Qui puoi specificare attributi personalizzati per i messaggi di validazione
-     * | utilizzando la convenzione "attribute.rule" per nominare le linee. Questo
-     * | rende facile specificare un messaggio di attributo personalizzato.
-     * |
-     */
-=======
 
     /*
     |--------------------------------------------------------------------------
@@ -175,15 +144,11 @@ return [
     | rende facile specificare un messaggio di attributo personalizzato.
     |
     */
->>>>>>> 079c9da7 (.)
 
     'attributes' => [
         'data.password' => 'zu',
     ],
-<<<<<<< HEAD
-=======
 
->>>>>>> 079c9da7 (.)
     'email_already_taken' => 'Questa email è già utilizzata da un altro utente.',
     'password_confirmation' => 'La conferma della password non corrisponde.',
     'password_current_required' => 'La password attuale è richiesta.',

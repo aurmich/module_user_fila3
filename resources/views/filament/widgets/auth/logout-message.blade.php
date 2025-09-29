@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> 079c9da7 (.)
 <div class="text-center">
     <h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900">
         {{ __('Sei sicuro di voler uscire?') }}

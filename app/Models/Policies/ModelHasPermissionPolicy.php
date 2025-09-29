@@ -4,19 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Policies;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Modules\User\Models\ModelHasPermission;
 use Modules\Xot\Contracts\UserContract;
-=======
-=======
->>>>>>> 10cce5c4 (.)
-=======
->>>>>>> 8b2de289 (.)
-use Modules\User\Contracts\UserContract;
-use Modules\User\Models\ModelHasPermission;
->>>>>>> 079c9da7 (.)
 
 class ModelHasPermissionPolicy extends UserBasePolicy
 {
@@ -31,25 +20,10 @@ class ModelHasPermissionPolicy extends UserBasePolicy
     /**
      * Determine whether the user can view the model.
      */
-<<<<<<< HEAD
-    public function view(UserContract $user, ModelHasPermission $_modelHasPermission): bool
-    {
-        return $user->hasPermissionTo('model-has-permission.view') || $user->hasRole('super-admin');
-=======
     public function view(UserContract $user, ModelHasPermission $modelHasPermission): bool
     {
-        return $user->hasRole('super-admin');
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 079c9da7 (.)
-=======
-=======
-        return $user->hasPermissionTo('model-has-permission.view') || 
+        return $user->hasPermissionTo('model-has-permission.view') ||
                $user->hasRole('super-admin');
->>>>>>> e5f94125 (.)
->>>>>>> 10cce5c4 (.)
-=======
->>>>>>> 8b2de289 (.)
     }
 
     /**
@@ -63,73 +37,28 @@ class ModelHasPermissionPolicy extends UserBasePolicy
     /**
      * Determine whether the user can update the model.
      */
-<<<<<<< HEAD
-    public function update(UserContract $user, ModelHasPermission $_modelHasPermission): bool
-    {
-        return $user->hasPermissionTo('model-has-permission.update') || $user->hasRole('super-admin');
-=======
     public function update(UserContract $user, ModelHasPermission $modelHasPermission): bool
     {
-        return $user->hasRole('super-admin');
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 079c9da7 (.)
-=======
-=======
-        return $user->hasPermissionTo('model-has-permission.update') || 
+        return $user->hasPermissionTo('model-has-permission.update') ||
                $user->hasRole('super-admin');
->>>>>>> e5f94125 (.)
->>>>>>> 10cce5c4 (.)
-=======
->>>>>>> 8b2de289 (.)
     }
 
     /**
      * Determine whether the user can delete the model.
      */
-<<<<<<< HEAD
-    public function delete(UserContract $user, ModelHasPermission $_modelHasPermission): bool
-    {
-        return $user->hasPermissionTo('model-has-permission.delete') || $user->hasRole('super-admin');
-=======
     public function delete(UserContract $user, ModelHasPermission $modelHasPermission): bool
     {
-        return $user->hasRole('super-admin');
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 079c9da7 (.)
-=======
-=======
-        return $user->hasPermissionTo('model-has-permission.delete') || 
+        return $user->hasPermissionTo('model-has-permission.delete') ||
                $user->hasRole('super-admin');
->>>>>>> e5f94125 (.)
->>>>>>> 10cce5c4 (.)
-=======
->>>>>>> 8b2de289 (.)
     }
 
     /**
      * Determine whether the user can restore the model.
      */
-<<<<<<< HEAD
-    public function restore(UserContract $user, ModelHasPermission $_modelHasPermission): bool
-    {
-        return $user->hasPermissionTo('model-has-permission.restore') || $user->hasRole('super-admin');
-=======
     public function restore(UserContract $user, ModelHasPermission $modelHasPermission): bool
     {
-        return $user->hasRole('super-admin');
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 079c9da7 (.)
-=======
-=======
-        return $user->hasPermissionTo('model-has-permission.restore') || 
+        return $user->hasPermissionTo('model-has-permission.restore') ||
                $user->hasRole('super-admin');
->>>>>>> e5f94125 (.)
->>>>>>> 10cce5c4 (.)
-=======
->>>>>>> 8b2de289 (.)
     }
 
     /**
@@ -137,16 +66,7 @@ class ModelHasPermissionPolicy extends UserBasePolicy
      */
     public function forceDelete(UserContract $user, ModelHasPermission $modelHasPermission): bool
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return $user->hasPermissionTo('model-has-permission.force-delete') || $user->hasRole('super-admin');
-=======
-=======
->>>>>>> 10cce5c4 (.)
-=======
->>>>>>> 8b2de289 (.)
-        return $user->hasRole('super-admin');
->>>>>>> 079c9da7 (.)
+        return $user->hasPermissionTo('model-has-permission.force-delete') ||
+               $user->hasRole('super-admin');
     }
 }

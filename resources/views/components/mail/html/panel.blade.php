@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-?>
-=======
->>>>>>> 079c9da7 (.)
 <table class="panel" width="100%" cellpadding="0" cellspacing="0" role="presentation">
 <tr>
 <td class="panel-content">
@@ -19,7 +11,4 @@ declare(strict_types=1);
 </td>
 </tr>
 </table>
-<<<<<<< HEAD
-=======
 
->>>>>>> 079c9da7 (.)

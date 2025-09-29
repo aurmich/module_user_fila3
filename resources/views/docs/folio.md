@@ -150,10 +150,7 @@ Le pagine Folio si integrano con il modulo CMS attraverso:
 ## Supporto
 
 Per assistenza tecnica, contattare:
-<<<<<<< HEAD
 - Email: support@<nome progetto>.com
 - Documentazione: https://docs.<nome progetto>.com 
-=======
->>>>>>> 079c9da7 (.)
 - Email: support@saluteora.com
 - Documentazione: https://docs.saluteora.com 
